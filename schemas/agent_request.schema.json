@@ -1,0 +1,504 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent rendering operations v0",
+  "description": "Reviewed public DTO contract; UTF-8 byte lengths, aggregate budgets, finite ranges, permissions, references, revisions and integrity require Rust semantic validation. Settings show the supported agent profile. This does not describe private Session layout.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": 0
+    },
+    "operation": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "inspect"
+            }
+          },
+          "required": [
+            "method"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "export"
+            }
+          },
+          "required": [
+            "method"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "import_glb"
+            },
+            "bytes": {
+              "$ref": "#/$defs/bytes"
+            },
+            "policy": {
+              "$ref": "#/$defs/policy"
+            },
+            "settings": {
+              "$ref": "#/$defs/settings"
+            },
+            "base_revision": {
+              "$ref": "#/$defs/revision"
+            },
+            "idempotency_key": {
+              "$ref": "#/$defs/key"
+            }
+          },
+          "required": [
+            "method",
+            "bytes",
+            "policy",
+            "settings",
+            "base_revision",
+            "idempotency_key"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "import_scene"
+            },
+            "json": {
+              "type": "object"
+            },
+            "buffers": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/bytes"
+              }
+            },
+            "policy": {
+              "$ref": "#/$defs/policy"
+            },
+            "settings": {
+              "$ref": "#/$defs/settings"
+            },
+            "base_revision": {
+              "$ref": "#/$defs/revision"
+            },
+            "idempotency_key": {
+              "$ref": "#/$defs/key"
+            }
+          },
+          "required": [
+            "method",
+            "json",
+            "buffers",
+            "policy",
+            "settings",
+            "base_revision",
+            "idempotency_key"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "branch"
+            },
+            "branch": {
+              "$ref": "#/$defs/branch"
+            },
+            "base_revision": {
+              "$ref": "#/$defs/revision"
+            }
+          },
+          "required": [
+            "method",
+            "branch",
+            "base_revision"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "inspect_branch"
+            },
+            "branch": {
+              "$ref": "#/$defs/branch"
+            }
+          },
+          "required": [
+            "method",
+            "branch"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "discard"
+            },
+            "branch": {
+              "$ref": "#/$defs/branch"
+            }
+          },
+          "required": [
+            "method",
+            "branch"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "modify"
+            },
+            "branch": {
+              "$ref": "#/$defs/branch"
+            },
+            "base_revision": {
+              "$ref": "#/$defs/revision"
+            },
+            "idempotency_key": {
+              "$ref": "#/$defs/key"
+            },
+            "edits": {
+              "$ref": "#/$defs/edits"
+            },
+            "max_added_bytes": {
+              "$ref": "#/$defs/budget"
+            }
+          },
+          "required": [
+            "method",
+            "branch",
+            "base_revision",
+            "idempotency_key",
+            "edits",
+            "max_added_bytes"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "preview"
+            },
+            "branch": {
+              "$ref": "#/$defs/branch"
+            },
+            "revision": {
+              "$ref": "#/$defs/revision"
+            }
+          },
+          "required": [
+            "method",
+            "branch",
+            "revision"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "prepare_commit"
+            },
+            "branch": {
+              "$ref": "#/$defs/branch"
+            },
+            "revision": {
+              "$ref": "#/$defs/revision"
+            },
+            "idempotency_key": {
+              "$ref": "#/$defs/key"
+            },
+            "max_added_bytes": {
+              "$ref": "#/$defs/budget"
+            }
+          },
+          "required": [
+            "method",
+            "branch",
+            "revision",
+            "idempotency_key",
+            "max_added_bytes"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "commit"
+            },
+            "branch": {
+              "$ref": "#/$defs/branch"
+            },
+            "revision": {
+              "$ref": "#/$defs/revision"
+            },
+            "idempotency_key": {
+              "$ref": "#/$defs/key"
+            },
+            "max_added_bytes": {
+              "$ref": "#/$defs/budget"
+            }
+          },
+          "required": [
+            "method",
+            "branch",
+            "revision",
+            "idempotency_key",
+            "max_added_bytes"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "version",
+    "operation"
+  ],
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{32}$"
+    },
+    "revision": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "key": {
+      "type": "string",
+      "minLength": 16,
+      "maxLength": 128
+    },
+    "branch": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "bytes": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "maxItems": 4194304
+    },
+    "budget": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 18446744073709551615
+    },
+    "light": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "position": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "intensity": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        }
+      },
+      "required": [
+        "position",
+        "intensity"
+      ]
+    },
+    "camera": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "position": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "target": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "up": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "vertical_fov_radians": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "exclusiveMaximum": 3.141592653589793
+        }
+      },
+      "required": [
+        "position",
+        "target",
+        "up",
+        "vertical_fov_radians"
+      ]
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "allow_lambertian": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "allow_lambertian"
+      ]
+    },
+    "settings": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 128
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 128
+        },
+        "samples": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        },
+        "max_depth": {
+          "const": 1
+        },
+        "max_bytes": {
+          "$ref": "#/$defs/budget"
+        },
+        "environment": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "light": {
+          "$ref": "#/$defs/light"
+        },
+        "camera": {
+          "$ref": "#/$defs/camera"
+        }
+      },
+      "required": [
+        "width",
+        "height",
+        "samples",
+        "seed",
+        "max_depth",
+        "max_bytes",
+        "environment",
+        "light",
+        "camera"
+      ]
+    },
+    "material_edit": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "material": {
+          "$ref": "#/$defs/id"
+        },
+        "base_color": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "emission": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        }
+      },
+      "required": [
+        "material",
+        "base_color",
+        "emission"
+      ]
+    },
+    "edits": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "materials": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/material_edit"
+          },
+          "maxItems": 64
+        },
+        "light": {
+          "$ref": "#/$defs/light"
+        },
+        "environment": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        }
+      },
+      "required": [
+        "materials",
+        "light",
+        "environment"
+      ]
+    }
+  }
+}

@@ -4,14 +4,36 @@ use render_core::{
     storage::{native::*, *},
     *,
 };
+mod agent_workflow;
 mod job_host;
 use std::{
     fs,
-    io::{self, BufRead, Write},
+    io::{self, BufRead, Read, Write},
     path::Path,
     sync::atomic::AtomicBool,
     time::Instant,
 };
+
+fn control_line(reader: &mut impl BufRead) -> Result<Option<String>> {
+    const LIMIT: u64 = 16 * 1024 * 1024;
+    let mut bytes = Vec::new();
+    let read = reader
+        .take(LIMIT + 1)
+        .read_until(b'\n', &mut bytes)
+        .map_err(|e| Error::new("io", e.to_string()))?;
+    if read == 0 {
+        return Ok(None);
+    }
+    if read as u64 > LIMIT {
+        return Err(Error::new(
+            "budget",
+            "control stream exceeds 16 MiB; connection closed",
+        ));
+    }
+    String::from_utf8(bytes)
+        .map(Some)
+        .map_err(|e| Error::new("encoding", e.to_string()))
+}
 
 fn write(path: impl AsRef<Path>, bytes: impl AsRef<[u8]>) -> Result<()> {
     fs::write(path, bytes).map_err(|e| Error::new("io", e.to_string()))
@@ -47,6 +69,54 @@ fn main() {
 fn run() -> Result<()> {
     let args = std::env::args().skip(1).collect::<Vec<_>>();
     match args.first().map(String::as_str) {
+        Some("agent") => {
+            let root = Path::new(
+                args.get(1)
+                    .map(String::as_str)
+                    .unwrap_or("artifacts/agent-project"),
+            );
+            let mut store = NativeStore::open(root)?;
+            let document =
+                recover(&store.load()?)?.unwrap_or(Document::new(Snapshot::empty(Id(1)))?);
+            let mut session = agent::Session::new(document);
+            let mut input = io::stdin().lock();
+            while let Some(line) = control_line(&mut input)? {
+                let result = if line.len() > 16 * 1024 * 1024 {
+                    Err(Error::new("budget", "control limit 16 MiB"))
+                } else {
+                    serde_json::from_str(&line)
+                        .map_err(Error::from)
+                        .and_then(|r| {
+                            session.dispatch_durable(
+                                &mut store,
+                                &Principal {
+                                    id: "local-stdin".into(),
+                                    can_write: true,
+                                },
+                                r,
+                            )
+                        })
+                };
+                println!("{}", serde_json::to_string(&result)?);
+                io::stdout()
+                    .flush()
+                    .map_err(|e| Error::new("io", e.to_string()))?;
+            }
+            Ok(())
+        }
+        Some("agent-workflow") => agent_workflow::run(
+            Path::new(
+                args.get(1)
+                    .map(String::as_str)
+                    .unwrap_or("fixtures/khronos-box/Box.glb"),
+            ),
+            Path::new(
+                args.get(2)
+                    .map(String::as_str)
+                    .unwrap_or("artifacts/m05/native"),
+            ),
+            args.iter().any(|a| a == "--gpu"),
+        ),
         Some("demo") => demo(
             Path::new(args.get(1).map(String::as_str).unwrap_or("artifacts/demo")),
             args.iter().any(|a| a == "--gpu"),
@@ -88,13 +158,18 @@ fn run() -> Result<()> {
         ),
         _ => Err(Error::new(
             "usage",
-            "render-host demo [directory] [--gpu] | verify [directory] [--gpu] | kernel | api <project> | jobs <project> | serve [web-root] [port]",
+            "render-host agent <project> | agent-workflow [GLB] [output] [--gpu] | demo [directory] [--gpu] | verify [directory] [--gpu] | kernel | api <project> | jobs <project> | serve [web-root] [port]",
         )),
     }
 }
 #[derive(serde::Deserialize)]
-#[serde(tag = "method", rename_all = "snake_case")]
+#[serde(tag = "method", rename_all = "snake_case", deny_unknown_fields)]
 enum JobRequest {
+    SubmitInput {
+        id: Id,
+        input: Box<jobs::RenderInput>,
+        budget: jobs::Budget,
+    },
     Submit {
         id: Id,
         settings: Settings,
@@ -112,8 +187,8 @@ enum JobRequest {
 }
 fn jobs_api(root: &Path) -> Result<()> {
     let host = job_host::JobHost::open(root, fixtures::demo()?)?;
-    for line in io::stdin().lock().lines() {
-        let line = line.map_err(|e| Error::new("io", e.to_string()))?;
+    let mut input = io::stdin().lock();
+    while let Some(line) = control_line(&mut input)? {
         let result = (|| -> Result<serde_json::Value> {
             match serde_json::from_str::<JobRequest>(&line)? {
                 JobRequest::Submit {
@@ -126,6 +201,9 @@ fn jobs_api(root: &Path) -> Result<()> {
                     settings,
                     budget,
                 )?)?),
+                JobRequest::SubmitInput { id, input, budget } => Ok(serde_json::to_value(
+                    host.submit_input("local-stdin", id, *input, budget)?,
+                )?),
                 JobRequest::Cancel { id } => {
                     Ok(serde_json::to_value(host.cancel("local-stdin", id)?)?)
                 }
@@ -394,8 +472,8 @@ fn api(root: &Path) -> Result<()> {
         id: "local-stdin".into(),
         can_write: true,
     };
-    for line in io::stdin().lock().lines() {
-        let line = line.map_err(|e| Error::new("io", e.to_string()))?;
+    let mut input = io::stdin().lock();
+    while let Some(line) = control_line(&mut input)? {
         let result = (|| {
             let request: Request = serde_json::from_str(&line)?;
             durable_execute(&mut store, &mut doc, &principal, &request)

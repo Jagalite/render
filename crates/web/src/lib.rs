@@ -12,6 +12,191 @@ mod browser {
     fn js(e: impl std::fmt::Display) -> JsValue {
         JsValue::from_str(&e.to_string())
     }
+    /// Local browser agent client. GPU completion rechecks the pinned branch;
+    /// cancellation is acknowledged separately from device submission completion.
+    #[wasm_bindgen]
+    pub struct BrowserAgent {
+        session: std::rc::Rc<std::cell::RefCell<agent::Session>>,
+        cancelled: std::sync::Arc<AtomicBool>,
+        busy: std::rc::Rc<std::cell::Cell<bool>>,
+    }
+    fn agent_principal() -> Principal {
+        Principal {
+            id: "local-browser-agent".into(),
+            can_write: true,
+        }
+    }
+    fn agent_name(name: &str) -> std::result::Result<(), JsValue> {
+        if name.is_empty()
+            || name.len() > 64
+            || !name
+                .bytes()
+                .all(|b| b.is_ascii_alphanumeric() || b == b'-' || b == b'_')
+        {
+            return Err(js(
+                "project name must be 1..64 ASCII letters, digits, hyphens or underscores",
+            ));
+        }
+        Ok(())
+    }
+    #[wasm_bindgen]
+    impl BrowserAgent {
+        #[wasm_bindgen(constructor)]
+        pub fn new(id: &str) -> std::result::Result<BrowserAgent, JsValue> {
+            let document = BrowserDocument::new(id)?.document;
+            Ok(Self::from_document(document))
+        }
+        pub fn import_json(json: &str) -> std::result::Result<BrowserAgent, JsValue> {
+            if json.len() > 16 * 1024 * 1024 {
+                return Err(js("agent export exceeds 16 MiB"));
+            }
+            Ok(Self::from_document(
+                BrowserDocument::import_json(json)?.document,
+            ))
+        }
+        pub fn dispatch(&self, json: &str) -> std::result::Result<String, JsValue> {
+            let bytes = self
+                .session
+                .borrow_mut()
+                .dispatch_wire(&agent_principal(), json.as_bytes())
+                .map_err(js)?;
+            String::from_utf8(bytes).map_err(js)
+        }
+        pub fn export_json(&self) -> std::result::Result<String, JsValue> {
+            String::from_utf8(canonical(self.session.borrow().document()).map_err(js)?).map_err(js)
+        }
+        pub fn cancel_preview(&self) -> bool {
+            self.cancelled
+                .store(true, std::sync::atomic::Ordering::Release);
+            self.busy.get()
+        }
+        pub fn preview_gpu(
+            &self,
+            branch: &str,
+            revision: &str,
+        ) -> std::result::Result<js_sys::Promise, JsValue> {
+            if self.busy.replace(true) {
+                return Err(js("one GPU preview per agent session"));
+            }
+            struct Guard(std::rc::Rc<std::cell::Cell<bool>>);
+            impl Drop for Guard {
+                fn drop(&mut self) {
+                    self.0.set(false);
+                }
+            }
+            let guard = Guard(self.busy.clone());
+            self.cancelled
+                .store(false, std::sync::atomic::Ordering::Release);
+            let (snapshot, settings) = self
+                .session
+                .borrow()
+                .render_input(&agent_principal(), branch, revision)
+                .map_err(js)?;
+            let session = self.session.clone();
+            let cancelled = self.cancelled.clone();
+            let branch = branch.to_owned();
+            // Admission and cancellation registration happen before returning
+            // the Promise, so an immediate cancellation cannot be lost.
+            Ok(future_to_promise(async move {
+                let _guard = guard;
+                let scene = Evaluator::default().evaluate(&snapshot).map_err(js)?;
+                let mut gpu = render_gpu::Renderer::new().await.map_err(js)?;
+                let image = gpu
+                    .render(&scene, &settings, 0, &cancelled)
+                    .await
+                    .map_err(js)?;
+                if cancelled.load(std::sync::atomic::Ordering::Acquire) {
+                    return Err(js("cancelled: preview discarded"));
+                }
+                let result = session
+                    .borrow_mut()
+                    .record_render(&agent_principal(), &branch, &image)
+                    .map_err(js)?;
+                Ok(JsValue::from_str(
+                    &serde_json::to_string(&result).map_err(js)?,
+                ))
+            }))
+        }
+        /// Web Lock plus compare-and-publish. Null expected_document_digest creates a
+        /// new named project; overwrite requires its exact stored document digest.
+        pub async fn save(
+            &self,
+            name: &str,
+            expected_document_digest: Option<String>,
+            abort: bool,
+        ) -> std::result::Result<String, JsValue> {
+            agent_name(name)?;
+            let document = self.session.borrow().document().clone();
+            let revision = document.snapshot().revision().map_err(js)?;
+            let document_digest = digest(&canonical(&document).map_err(js)?);
+            let name = format!("agent-{name}.json");
+            let root = root().await?;
+            let callback =
+                Closure::<dyn FnMut(JsValue) -> js_sys::Promise>::new(move |_: JsValue| {
+                    let root = root.clone();
+                    let name = name.clone();
+                    let doc = document.clone();
+                    let expected = expected_document_digest.clone();
+                    future_to_promise(async move {
+                        match file(&root, &name, false).await {
+                            Ok(_) => {
+                                let saved = load(&root, &name).await?;
+                                if expected.as_deref()
+                                    != Some(digest(&canonical(&saved).map_err(js)?).as_str())
+                                {
+                                    return Err(js("conflict: stored project state changed"));
+                                }
+                            }
+                            Err(error) => {
+                                let kind =
+                                    js_sys::Reflect::get(&error, &JsValue::from_str("name"))?
+                                        .as_string();
+                                if kind.as_deref() != Some("NotFoundError") {
+                                    return Err(error);
+                                }
+                                if expected.is_some() {
+                                    return Err(js("conflict: expected project is missing"));
+                                }
+                            }
+                        }
+                        let envelope = Envelope::new(0, None, &doc).map_err(js)?;
+                        write(&root, &name, &canonical(&envelope).map_err(js)?, abort).await?;
+                        Ok(JsValue::UNDEFINED)
+                    })
+                });
+            let navigator = web_sys::window().ok_or_else(|| js("window"))?.navigator();
+            let locks = js_sys::Reflect::get(&navigator, &JsValue::from_str("locks"))?;
+            let request: js_sys::Function =
+                js_sys::Reflect::get(&locks, &JsValue::from_str("request"))?.dyn_into()?;
+            let promise: js_sys::Promise = request
+                .call2(
+                    &locks,
+                    &JsValue::from_str("render-agent-storage-v0"),
+                    callback.as_ref(),
+                )?
+                .dyn_into()?;
+            JsFuture::from(promise).await?;
+            drop(callback);
+            Ok(serde_json::json!({"revision":revision,"document_digest":document_digest,"published":!abort,"storage_class":"OPFS close + Web Lock; browser-managed persistence"}).to_string())
+        }
+        pub async fn load(name: &str) -> std::result::Result<BrowserAgent, JsValue> {
+            agent_name(name)?;
+            let root = root().await?;
+            Ok(Self::from_document(
+                load(&root, &format!("agent-{name}.json")).await?,
+            ))
+        }
+    }
+    impl BrowserAgent {
+        fn from_document(document: Document) -> Self {
+            Self {
+                session: std::rc::Rc::new(std::cell::RefCell::new(agent::Session::new(document))),
+                cancelled: std::sync::Arc::new(AtomicBool::new(false)),
+                busy: std::rc::Rc::new(std::cell::Cell::new(false)),
+            }
+        }
+    }
+
     /// General browser API; the conformance UI is only one client of this core.
     #[wasm_bindgen]
     pub struct BrowserDocument {

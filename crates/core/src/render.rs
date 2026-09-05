@@ -315,7 +315,8 @@ impl Scene {
         hit
     }
 }
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+#[serde(deny_unknown_fields)]
 pub struct Camera {
     pub position: [f64; 3],
     pub target: [f64; 3],
@@ -356,12 +357,14 @@ impl Camera {
         })
     }
 }
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+#[serde(deny_unknown_fields)]
 pub struct PointLight {
     pub position: [f64; 3],
     pub intensity: [f32; 3],
 }
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+#[serde(deny_unknown_fields)]
 pub struct Settings {
     pub width: u32,
     pub height: u32,

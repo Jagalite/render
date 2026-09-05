@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "status": "partial_static_profile",
+  "scope": "All feature families requested after the M00-M04 foundation; staged input-to-render delivery.",
+  "priority_order": [
+    "INPUT-01",
+    "INPUT-02",
+    "INPUT-03",
+    "INPUT-04",
+    "INPUT-05",
+    "INPUT-06"
+  ],
+  "priority_policy": "Proposed dependency-led order; scoped Blender static input can proceed after its static scene/material dependencies. Existing milestone dependencies still apply.",
+  "architecture": "docs/architecture.md",
+  "capabilities": "planning/feature_matrix.json",
+  "common_done": [
+    "A licensed or independently authored external input fixture",
+    "A native import-save-reopen-render workflow",
+    "Browser-local evaluation/render validation within a published budget",
+    "Typed failures and explicit losses; immutable authored revisions on failure",
+    "Resource measurements, dependency/provenance inventory and truthful capability axes"
+  ],
+  "tracks": [
+    {
+      "id": "INPUT-01",
+      "title": "Complete static glTF/GLB scenes",
+      "milestones": [
+        "M05",
+        "M13"
+      ],
+      "depends_on": [],
+      "deliverables": [
+        "GLB container and glTF resource bundles with bounded Rust decoding",
+        "Indexed/nonindexed geometry, multiple primitives and meshes, accessor strides, normalized and sparse attributes",
+        "Selected scene, hierarchy, shared instances, matrix/TRS transforms and camera semantics",
+        "Source normals, UV sets and material assignments retained through conversion",
+        "Rust PNG/JPEG texture decoding with explicit color roles, samplers and alpha handling"
+      ],
+      "acceptance": [
+        "Import, persist, reopen and render licensed external multi-object fixtures through native and browser APIs",
+        "Verify node world transforms, bounds, instance sharing and per-primitive material assignment against known values",
+        "Reject malformed offsets, cycles, missing resources and excessive allocations without committed changes",
+        "Retain source identity and report unsupported extensions or intentional losses"
+      ],
+      "qualification": "Static scene completeness also depends on INPUT-02 for core PBR material evaluation. Reading or preserving a field is not rendering support.",
+      "status": "partially_implemented_profile",
+      "implemented_profile": "gltf2-static-lambertian-v0",
+      "evidence": [
+        "evidence/m05/agent_workflow_report.json",
+        "evidence/m05/browser_workflow_report.json"
+      ]
+    },
+    {
+      "id": "INPUT-02",
+      "title": "glTF PBR and richer surface shaders",
+      "milestones": [
+        "M07"
+      ],
+      "depends_on": [
+        "INPUT-01"
+      ],
+      "deliverables": [
+        "Metallic/roughness surface scattering and supported dielectric/conductor models",
+        "Base-color, metallic/roughness, normal, emissive and occlusion texture semantics",
+        "Alpha modes, single/double-sided behavior and explicitly scoped layered/transmission profiles",
+        "Matching CPU and Rust-generated GPU material evaluation with explicit approximation policies"
+      ],
+      "acceptance": [
+        "Analytic Fresnel, energy/PDF, white-furnace and sample-distribution checks",
+        "Matched native/browser GPU and CPU images within declared tolerances",
+        "Reference scenes demonstrate material differences, normal maps, transparency and multiple UV roles",
+        "Unknown shader nodes are reported individually and retained safely where possible"
+      ],
+      "qualification": "Core glTF materials and named extensions are separate capabilities. Blender node graphs require explicitly supported node semantics.",
+      "status": "planned"
+    },
+    {
+      "id": "INPUT-03",
+      "title": "Animated and rigged scenes",
+      "milestones": [
+        "M08"
+      ],
+      "depends_on": [
+        "INPUT-01",
+        "INPUT-02"
+      ],
+      "deliverables": [
+        "Typed clips and channels with stepped, linear and cubic interpolation",
+        "Quaternion rotation, rest/bind transforms and stable joint hierarchy",
+        "Linear blend skinning, morph targets and explicit topology/weight validation",
+        "Immutable evaluation at rational times, random frame access and sequence rendering"
+      ],
+      "acceptance": [
+        "Import, save/reopen and render a rigged external character sequence without Blender",
+        "Verify interpolation, bind/rest poses and deformed positions against analytic fixtures",
+        "Render frames out of order and check that pose state does not leak between requests",
+        "Exercise cancellation, budgets and native/browser equivalence"
+      ],
+      "qualification": "Animation/skin file import does not imply control-rig, IK, driver or retargeting support; those retain named M08 subgates.",
+      "status": "planned"
+    },
+    {
+      "id": "INPUT-04",
+      "title": "Renderable curves and hair",
+      "milestones": [
+        "M07",
+        "M08"
+      ],
+      "depends_on": [
+        "INPUT-02"
+      ],
+      "deliverables": [
+        "Authored curves/strands with basis, radius and local identities",
+        "Evaluated curve intersections or explicitly bounded tessellation",
+        "Named hair scattering profile and generated GPU support",
+        "Strand deformation at evaluated times"
+      ],
+      "acceptance": [
+        "Save/reload/render a groom with visible strand radii and supported shading",
+        "Check geometric approximation bounds and energy/sampling behavior",
+        "Measure memory and intersection costs on declared strand counts",
+        "Prove native/browser local rendering for the published budget profile"
+      ],
+      "qualification": "Loading points or drawing line widgets does not complete the hair-rendering gate. Hair dynamics remain a separate M11 capability.",
+      "status": "planned"
+    },
+    {
+      "id": "INPUT-05",
+      "title": "Renderable volumes",
+      "milestones": [
+        "M07",
+        "M11"
+      ],
+      "depends_on": [
+        "INPUT-02"
+      ],
+      "deliverables": [
+        "Sparse typed fields with density, emission and index-to-world semantics",
+        "Rust-owned volume input profiles and bounded paging",
+        "Transmittance, scattering/phase sampling and volumetric lighting on CPU/GPU"
+      ],
+      "acceptance": [
+        "Render an imported density/emission fixture after native save/reload",
+        "Validate homogeneous-slab transmittance and heterogeneous convergence",
+        "Verify sparse memory behavior, cancellation and budget rejection",
+        "Match native/browser images under declared statistical tolerances"
+      ],
+      "qualification": "Volume rendering is distinct from smoke/liquid simulation. No OpenVDB computational runtime is permitted.",
+      "status": "planned"
+    },
+    {
+      "id": "INPUT-06",
+      "title": "Native Blender file profiles",
+      "milestones": [
+        "M13"
+      ],
+      "depends_on": [
+        "INPUT-01",
+        "INPUT-02"
+      ],
+      "deliverables": [
+        "Versioned Rust .blend reader with explicit supported file versions and encodings",
+        "Static scene hierarchy, meshes, transforms, cameras and supported materials",
+        "Source-preserving handling and per-feature diagnostics for unknown data",
+        "Progressively integrate supported animation, hair, volume and modifier semantics as their native evaluators ship"
+      ],
+      "acceptance": [
+        "Read, persist and render licensed .blend fixtures without a Blender process or conversion service",
+        "Publish a version-by-feature corpus including negative and malformed files",
+        "Compare geometry, transforms and supported outputs against development reference data",
+        "Never treat preserved node/modifier/driver bytes as evaluated behavior"
+      ],
+      "qualification": "Arbitrary .blend fidelity, embedded Python and unrestricted add-on execution are not promised. Animated, hair and volume profiles additionally depend on INPUT-03/04/05; procedural modifiers depend on M06.",
+      "status": "planned"
+    }
+  ]
+}

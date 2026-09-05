@@ -1,0 +1,88 @@
+{
+  "status": "validated_local_alpha",
+  "milestone": "M05",
+  "profile": "agent-rendering-v0",
+  "scene_import": "gltf2-static-lambertian-v0",
+  "abi_version": 1,
+  "operation_version": 0,
+  "snapshot_versions": [
+    0,
+    1
+  ],
+  "validated_hosts": {
+    "native": "macOS ARM64 / Apple M1 / Metal",
+    "browser": "Chrome/152.0.7977.76 / WebGPU",
+    "linux_windows": "compile-only; no runtime or ABI conformance claim"
+  },
+  "capabilities": {
+    "external_static_scene_workflow": "validated external Khronos Box GLB; indexed hierarchy, source materials, three protected variants, inspect passes, select, persist and retry",
+    "native_jobs": "durable pinned CPU inputs, idempotent submissions, cancellation, bounded events, reconnect, output-budget failure; max 256 retained jobs",
+    "browser": "shared Rust semantic API, async WebGPU preview/cancellation, document-digest CAS under Web Locks, OPFS quota/abort/unclosed-write recovery, explicit export",
+    "narrow_abi": "Python ctypes full variant workflow and independent compiled C11 table/lifecycle/ownership checks; trusted synchronous memory-only ABI",
+    "source_materials": "explicit opt-in Lambertian conversion; metallic 0, roughness 1, opaque untextured materials; geometric normals; two-sided",
+    "document": "selected rendering intent authored transactionally in version 1; v0 remains readable; geometry and camera protected during variant edits"
+  },
+  "limits": {
+    "source_bytes": 4194304,
+    "source_nodes": 64,
+    "source_meshes": 64,
+    "source_materials": 64,
+    "primitives": 64,
+    "total_points_and_corners": 20000,
+    "import_commands": 256,
+    "canonical_snapshot_bytes": 8388608,
+    "agent_entities": 192,
+    "live_variants": 3,
+    "preview_width": 128,
+    "preview_height": 128,
+    "preview_samples": 64,
+    "preview_bounces": 1,
+    "control_bytes": 16777216,
+    "abi_live_handles": 128,
+    "abi_response_bytes": 33554432
+  },
+  "exclusions": [
+    "complete INPUT-01 static scene support",
+    "input cameras, textures, full PBR and glTF extensions",
+    "animation, rigs, morphs, hair, volumes and blend files",
+    "serialized transient branch workspaces",
+    "durable browser job execution or remote rendering service",
+    "general visual editor, automatic merges, plugin execution or tenant isolation"
+  ],
+  "validation": {
+    "native_tests": 48,
+    "wasm_tests": 38
+  },
+  "numerical_gates": {
+    "linear_rgb_rmse_max": 0.02,
+    "object_id_mismatches_max_per_image": 4,
+    "native_measured_rmse": [
+      1.6855163736225967e-08,
+      1.7452707545050624e-08,
+      1.5580437830059428e-08
+    ],
+    "browser_measured_rmse": [
+      5.805417838762091e-09,
+      5.805417838762091e-09,
+      5.805417838762091e-09
+    ]
+  },
+  "resources": {
+    "native_workflow_seconds": 3.7915785,
+    "native_process": {
+      "maximum resident set size": 33292288,
+      "peak memory footprint": 16139840
+    },
+    "browser_workflow_seconds": 0.07189999999850988,
+    "note": "Debug native workflow process; measured host only. Output admission charges are not total RSS or VRAM measurements."
+  },
+  "dependencies": "No new runtime dependencies; unmodified Cesium CC-BY-4.0 fixture attribution in fixtures/khronos-box. Dependency inventory includes transitive features and platform exceptions.",
+  "evidence": [
+    "agent_workflow_report.json",
+    "abi_v1_conformance.json",
+    "native_client_report.json",
+    "browser_workflow_report.json",
+    "validation_report.json",
+    "dependency_inventory.json"
+  ]
+}

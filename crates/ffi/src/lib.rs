@@ -1,4 +1,4 @@
-//! Trusted in-process ABI alpha. The only unsafe operations copy caller-owned
+//! Trusted in-process ABI v1 (v0 negotiation retained). The only unsafe operations copy caller-owned
 //! byte slices; scene mutation remains in the safe transactional core.
 use render_core::{document::*, *};
 use serde::Deserialize;
@@ -7,7 +7,7 @@ use std::{
     sync::{Mutex, OnceLock},
 };
 enum Entry {
-    Engine(Box<Document>),
+    Engine(Box<agent::Session>),
     Buffer(Vec<u8>),
 }
 struct Slot {
@@ -20,6 +20,22 @@ struct Registry {
 }
 impl Registry {
     fn insert(&mut self, entry: Entry) -> u64 {
+        let live = self.slots.iter().filter(|s| s.entry.is_some()).count();
+        let used: usize = self
+            .slots
+            .iter()
+            .filter_map(|s| match &s.entry {
+                Some(Entry::Buffer(b)) => Some(b.len()),
+                _ => None,
+            })
+            .sum();
+        let added = match &entry {
+            Entry::Buffer(b) => b.len(),
+            _ => 0,
+        };
+        if live >= 128 || used.saturating_add(added) > 32 * 1024 * 1024 {
+            return 0;
+        }
         if let Some((index, slot)) = self
             .slots
             .iter_mut()
@@ -71,6 +87,7 @@ enum ApiRequest {
     Inspect,
     Execute { request: Request },
     Registry,
+    Agent { request: agent::Request },
 }
 extern "C" fn create(high: u64, low: u64) -> u64 {
     boundary(0, || {
@@ -82,7 +99,7 @@ extern "C" fn create(high: u64, low: u64) -> u64 {
         let Ok(mut registry) = registry().lock() else {
             return 0;
         };
-        registry.insert(Entry::Engine(Box::new(doc)))
+        registry.insert(Entry::Engine(Box::new(agent::Session::new(doc))))
     })
 }
 extern "C" fn destroy(handle: u64) -> i32 {
@@ -115,15 +132,22 @@ unsafe extern "C" fn request(handle: u64, input: *const u8, length: u64) -> u64 
             let query: ApiRequest = serde_json::from_slice(bytes)?;
             match query {
                 ApiRequest::Inspect => Ok(
-                    serde_json::json!({"revision":doc.snapshot().revision()?,"snapshot":doc.snapshot(),"durability":"memory-only ABI alpha"}),
+                    serde_json::json!({"revision":doc.document().snapshot().revision()?,"snapshot":doc.document().snapshot(),"durability":"memory-only local ABI"}),
                 ),
-                ApiRequest::Execute { request } => Ok(serde_json::to_value(doc.execute(
+                ApiRequest::Execute { request } => Ok(serde_json::to_value(doc.execute_root(
                     &Principal {
                         id: "trusted-native-client".into(),
                         can_write: true,
                     },
                     &request,
                 )?)?),
+                ApiRequest::Agent { request } => doc.dispatch(
+                    &Principal {
+                        id: "trusted-native-client".into(),
+                        can_write: true,
+                    },
+                    request,
+                ),
                 ApiRequest::Registry => Ok(serde_json::to_value(render_core::api::registry())?),
             }
         })();
@@ -191,9 +215,19 @@ pub struct ApiTable {
     pub response_read: unsafe extern "C" fn(u64, *mut u8, u64) -> i32,
     pub release: extern "C" fn(u64) -> i32,
 }
-static API: ApiTable = ApiTable {
+static API_V0: ApiTable = ApiTable {
     struct_size: std::mem::size_of::<ApiTable>() as u32,
     abi_version: 0,
+    create,
+    destroy,
+    request,
+    response_size,
+    response_read,
+    release,
+};
+static API_V1: ApiTable = ApiTable {
+    struct_size: std::mem::size_of::<ApiTable>() as u32,
+    abi_version: 1,
     create,
     destroy,
     request,
@@ -204,10 +238,15 @@ static API: ApiTable = ApiTable {
 /// Returns a process-lifetime immutable function table or null for incompatible ABI/size.
 #[unsafe(no_mangle)]
 pub extern "C" fn render_entry(version: u32, minimum_size: u32) -> *const ApiTable {
-    if version != 0 || minimum_size > API.struct_size {
+    let table = match version {
+        0 => &API_V0,
+        1 => &API_V1,
+        _ => return std::ptr::null(),
+    };
+    if minimum_size > table.struct_size {
         std::ptr::null()
     } else {
-        &API
+        table
     }
 }
 
@@ -236,6 +275,7 @@ mod tests {
         assert_eq!(response_size(buffer), 0);
         assert_eq!(destroy(engine), 0);
         assert_eq!(destroy(engine), -1);
-        assert!(render_entry(1, 0).is_null());
+        assert!(render_entry(2, 0).is_null());
+        assert!(!render_entry(1, 0).is_null());
     }
 }

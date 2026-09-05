@@ -1,0 +1,62 @@
+{
+  "aborted_write_preserves_root": true,
+  "analytic_plane_max_error": 2.9802322387695312e-8,
+  "analytic_plane_tolerance": 0.000001,
+  "browser_storage_class": "origin-managed; atomic close; user export required for backup",
+  "budget_rejection": true,
+  "cancel_after_submit": true,
+  "cancel_before_submit": true,
+  "cancelled_render_ms_including_pack_submit_drain": 2,
+  "core": {
+    "branch_isolation": true,
+    "document_roundtrip": true,
+    "geometry_cache": true,
+    "idempotent_retry": true,
+    "nonmanifold": true
+  },
+  "cpu_gpu_rmse": 3.2975377698595155e-8,
+  "device": {
+    "adapter": "",
+    "backend": "BrowserWebGpu",
+    "hardware_ray_required": false,
+    "max_buffer_bytes": 268435456,
+    "max_storage_binding_bytes": 134217728,
+    "max_workgroups": 65535
+  },
+  "device_destroy_rejected": true,
+  "device_recreated_equal": true,
+  "gpu_over_limit_allocation_rejected": true,
+  "local_export_roundtrip": true,
+  "opfs_roundtrip": true,
+  "progressive_max_error": 1.1920928955078125e-7,
+  "raster_coverage": true,
+  "revision": "sha256:834ffc4d00643ffaa701d82a56dc97f4bf7c10570dee4bb27b2efd793c3ab619",
+  "shared_memory_required": false,
+  "status": "passed",
+  "worker": {
+    "core": {
+      "branch_isolation": true,
+      "document_roundtrip": true,
+      "geometry_cache": true,
+      "idempotent_retry": true,
+      "nonmanifold": true
+    },
+    "cpu_gpu_max_error": 1.1920928955078125e-7,
+    "execution": "dedicated module worker",
+    "shared_memory": false,
+    "status": "passed"
+  },
+  "external_browser_api": true,
+  "storage_quota": {
+    "committed_root_unchanged": true,
+    "error": "QuotaExceededError"
+  },
+  "tab_reload_preserves_unclosed_root": true,
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/152.0.7977.76",
+    "revision": "@0d89dfa2dd7c1ec4b8a14b9f303f887bb63b6174",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+    "jsVersion": "15.2.124.19"
+  }
+}

@@ -1,0 +1,292 @@
+{
+  "base_commit": "5b2cc8f9e416ff8780c270b5f471a2fec9b742db",
+  "branch": "feat/agent-rendering-m05",
+  "scope": "Maintained implementation, fixture and public schema inputs. This is a working-tree change, not a new commit. Generated wasm/bindings hashes are recorded in dependency_inventory.json.",
+  "files": [
+    {
+      "path": "Cargo.lock",
+      "bytes": 34093,
+      "sha256": "78908d01abf57b449d76e712f11cbfc69bb83a5eecb865eb26063b355e555158"
+    },
+    {
+      "path": "Cargo.toml",
+      "bytes": 864,
+      "sha256": "30f2bf6f877b47d7cf3ff8c091be20db9ed0002087c0cb61fbc1756e12bccf21"
+    },
+    {
+      "path": "crates/core/Cargo.toml",
+      "bytes": 360,
+      "sha256": "6fdb8f9dfbeedd1d546cfed9784e42ebde78085b62d2020ccdfd9861745e4f0a"
+    },
+    {
+      "path": "crates/core/src/agent.rs",
+      "bytes": 23356,
+      "sha256": "d75e49e4198d387502b5597d06a985a778a39d368f4739dd3c92bec6d5642bba"
+    },
+    {
+      "path": "crates/core/src/api.rs",
+      "bytes": 2998,
+      "sha256": "fe4764db5842557ed8127f1ec81ff050ec3647ac7af8ef9fbda74b6f4f199f61"
+    },
+    {
+      "path": "crates/core/src/document.rs",
+      "bytes": 22953,
+      "sha256": "11859f21fc0bf7faeacf8115ff897f5db97ad86b1bbca3062e182f5fc96ee407"
+    },
+    {
+      "path": "crates/core/src/fixtures.rs",
+      "bytes": 7430,
+      "sha256": "4c5ab6a5bf801ead0079094e5dae19c8a7cfc6fab9c7d23f59e8e4a7a98fcb6b"
+    },
+    {
+      "path": "crates/core/src/geometry.rs",
+      "bytes": 11813,
+      "sha256": "6fc46e4cb9bc267555b900512de44f4b339af5f3a037e19c5d2fa58197f550ab"
+    },
+    {
+      "path": "crates/core/src/gltf_scene.rs",
+      "bytes": 21835,
+      "sha256": "7dcba6a1d9ab9cce18ac8f1616fe93682b4b9ba2903366c107100a5f9480df3d"
+    },
+    {
+      "path": "crates/core/src/imaging.rs",
+      "bytes": 2843,
+      "sha256": "9af32e4fbb2cffe48a8d682a7f1f3eb4c054776d45dd2d9860a2254577f91cd8"
+    },
+    {
+      "path": "crates/core/src/interchange.rs",
+      "bytes": 12803,
+      "sha256": "2e499ccf24246ab3b94b48877d26659685de386fca7ba8e68478ead5f08d8aa8"
+    },
+    {
+      "path": "crates/core/src/jobs.rs",
+      "bytes": 6361,
+      "sha256": "c5cc0dd83c0702932751d8580fbdae8441dcd1f80068bf2cf220df20c7bbeba6"
+    },
+    {
+      "path": "crates/core/src/lib.rs",
+      "bytes": 4120,
+      "sha256": "f926e5a01fa252c11c4a673464b755a3c70c9b03e3ee8866d62430721946e43b"
+    },
+    {
+      "path": "crates/core/src/mesh_codec.rs",
+      "bytes": 5680,
+      "sha256": "8422e06b65486334da9bbcc14d44a2ee7e3514f2f6ede7f7ab6ec034d2faacf8"
+    },
+    {
+      "path": "crates/core/src/render.rs",
+      "bytes": 20690,
+      "sha256": "08b55ee38d98a40c9201ef602cc62ee2cff4246e23933e5a3a3c24b5b4390f69"
+    },
+    {
+      "path": "crates/core/src/storage.rs",
+      "bytes": 13143,
+      "sha256": "b2ed8f37fa83859fb5132988467afc63bc5c3bb6884d9edbad603bb1286a5e21"
+    },
+    {
+      "path": "crates/core/src/topology.rs",
+      "bytes": 9420,
+      "sha256": "282a772af1d906ec43be65918a2e603ba3b18405bd8db54364b5021dc41578bf"
+    },
+    {
+      "path": "crates/core/src/uploads.rs",
+      "bytes": 3439,
+      "sha256": "958a2423431e990de0a306ef9180d9d0712147fed2980b1e28e0ba94238fc091"
+    },
+    {
+      "path": "crates/core/tests/agent_workflow.rs",
+      "bytes": 21300,
+      "sha256": "0bebdf067b89d8f6d3e2e618f3f41b7d47951ad7ab5313eaa1a12a0f943de404"
+    },
+    {
+      "path": "crates/core/tests/conformance.rs",
+      "bytes": 36138,
+      "sha256": "73aef1e29afe16db341906c5a15aafb1427421bdb287a360b2384e4b466c8601"
+    },
+    {
+      "path": "crates/ffi/Cargo.toml",
+      "bytes": 311,
+      "sha256": "a73a443608037a9c7c9b2991e5e0aeca27385cf38605cf21f41a2ddd2946a9d3"
+    },
+    {
+      "path": "crates/ffi/src/lib.rs",
+      "bytes": 9381,
+      "sha256": "b59de77908f143ee5f5a3124605e6da45f45ee1265b6a5e06e7cb40609ad7590"
+    },
+    {
+      "path": "crates/gpu/Cargo.toml",
+      "bytes": 300,
+      "sha256": "f73279bba9986ee5744d4370b06ac628b43aa562c5dd481e8a5efdc51b8f742e"
+    },
+    {
+      "path": "crates/gpu/src/lib.rs",
+      "bytes": 21188,
+      "sha256": "79ad78349491143d729400262ff4458ac6aaa56df9001b8ccb3a8ce1a026d50a"
+    },
+    {
+      "path": "crates/gpu/src/raster.rs",
+      "bytes": 10716,
+      "sha256": "0cb5ffc4f1f06eb4925567ccedfd5c613d4e47ab37439e92f1f435c0921c0419"
+    },
+    {
+      "path": "crates/host/Cargo.toml",
+      "bytes": 347,
+      "sha256": "74296656ace7267550cbe7cec5f6064c3a5ca9b4f15219f85d79306d7981cacf"
+    },
+    {
+      "path": "crates/host/examples/m00.rs",
+      "bytes": 10306,
+      "sha256": "00479cea5899706b5924dc2ed72a1547bc3cc5e1dc9837846db54ec3948c48b1"
+    },
+    {
+      "path": "crates/host/src/agent_workflow.rs",
+      "bytes": 10197,
+      "sha256": "1f2a5173652aadac3f5cec51c5377780487df1052c13c790c398e531d544524e"
+    },
+    {
+      "path": "crates/host/src/job_host.rs",
+      "bytes": 19565,
+      "sha256": "6c2046136b6b9fdaf85c2cf19b85f10587ecc53ed86e9f85435d83c737b041dc"
+    },
+    {
+      "path": "crates/host/src/main.rs",
+      "bytes": 20367,
+      "sha256": "d574c781e6e45946774ebf910e5ff5ddb65cc6f21dce2f9e2830aca18f919eaf"
+    },
+    {
+      "path": "crates/kernel/Cargo.toml",
+      "bytes": 199,
+      "sha256": "7cd2433582517c87a99ac064763b6c98134e0d54bff643712bdcd81189eeeba8"
+    },
+    {
+      "path": "crates/kernel/src/lib.rs",
+      "bytes": 10626,
+      "sha256": "ec11cab4aa678d0624c693d1f33bb25bbfb407826f7ef7b6e4fb922e6fee3a8c"
+    },
+    {
+      "path": "crates/kernel/src/path.rs",
+      "bytes": 23895,
+      "sha256": "7e9474d4c22c26bc6433b1716fc383b5bcf65d5d1093e2e8ba7ab0f77776f677"
+    },
+    {
+      "path": "crates/web/Cargo.toml",
+      "bytes": 890,
+      "sha256": "855c7eb86ec57d8cb0cfd940234e124e0888e123c88d1893bd570b03396ad2bf"
+    },
+    {
+      "path": "crates/web/src/lib.rs",
+      "bytes": 31683,
+      "sha256": "868c12bb6baea7dae98b3e5d5c2473ca4975addbc09923b8b7841dbe207339a1"
+    },
+    {
+      "path": "fixtures/khronos-box/Box.glb",
+      "bytes": 1664,
+      "sha256": "ed52f7192b8311d700ac0ce80644e3852cd01537e4d62241b9acba023da3d54e"
+    },
+    {
+      "path": "fixtures/khronos-box/Box.gltf",
+      "bytes": 2898,
+      "sha256": "4a0d69eecfce0672a50b71dc218cbacec6c53fe2445040c235c6314b1b2c41b9"
+    },
+    {
+      "path": "fixtures/khronos-box/Box0.bin",
+      "bytes": 648,
+      "sha256": "3266a8e39b9f425b3341cbe5eec7849f44310256bfa651e6b8b40c85ce0ccafb"
+    },
+    {
+      "path": "fixtures/khronos-box/README.md",
+      "bytes": 735,
+      "sha256": "d3a4a518baf3c9fffd7e49c8d92faf1ad3e2ebed203177a75abb5c4c3a0c973b"
+    },
+    {
+      "path": "fixtures/khronos-box/provenance.json",
+      "bytes": 1143,
+      "sha256": "1b9bb83865ddd3f8c3d700f0c8f241ef9b4414ad923571e3dde0c863b1332199"
+    },
+    {
+      "path": "include/render.h",
+      "bytes": 648,
+      "sha256": "380987343c0217414598d37622442c6de11314ea445d7a966ab289b0ca482b0d"
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "bytes": 123,
+      "sha256": "e69b917f97a114b87388e17a0fe30540d213288af076d192fe4ab3dbfbd3a6c7"
+    },
+    {
+      "path": "schemas/agent_request.schema.json",
+      "bytes": 11425,
+      "sha256": "fd0b318fddcbe5e68c60e3d6c715f425fa9574c3783b91d54bced748c496653a"
+    },
+    {
+      "path": "schemas/material_edit_request.schema.json",
+      "bytes": 2564,
+      "sha256": "511f3544362ed2e757e4c297b1d05be073b79c7ad4cff80717391e1019fbebf5"
+    },
+    {
+      "path": "scripts/abi-v1-client.c",
+      "bytes": 1865,
+      "sha256": "5b22628e54a3eb1d340fd233b4563a00c7a309d85be817d8ead903b08bd7a5b6"
+    },
+    {
+      "path": "scripts/agent-browser-conformance.mjs",
+      "bytes": 8872,
+      "sha256": "028e1f0d30d468f7515eb88812176a63299e90112f0f6d8d84255d791e912d9f"
+    },
+    {
+      "path": "scripts/agent-ffi-conformance.py",
+      "bytes": 5775,
+      "sha256": "ae583eece7ac8c0723f18bc68b4b7382e0e7c6108142532ad41837cced5bc7fc"
+    },
+    {
+      "path": "scripts/agent-native-client.py",
+      "bytes": 3292,
+      "sha256": "b43814743c18bbed2ccc613a204fddbd89fc0193d22e7068709c53ee71f08a92"
+    },
+    {
+      "path": "scripts/browser-conformance.mjs",
+      "bytes": 4693,
+      "sha256": "1cee1b5afe37ad241546f822e1c0805a6d7466ef9001567a93164ff917178e7a"
+    },
+    {
+      "path": "scripts/build-web.sh",
+      "bytes": 439,
+      "sha256": "0184487ce90e38c0868bad2b764c33e9537bfaa73baddbce2c41bc5c88d0c149"
+    },
+    {
+      "path": "scripts/dependency-audit.py",
+      "bytes": 3812,
+      "sha256": "8bec6dba162c4bf60f0a2448fd3b034d4a8758ce40fa23851e6776da9b367329"
+    },
+    {
+      "path": "scripts/ffi-conformance.py",
+      "bytes": 2769,
+      "sha256": "3f74535740e18b4414ae0407a8c07559d13394a7bd34536bf707c22cd5185fc5"
+    },
+    {
+      "path": "scripts/generate-abi-header.py",
+      "bytes": 1317,
+      "sha256": "20178a9b6c431513d0bcd0119c04887e0ff19f89b7a5cc5e7231d853f467292a"
+    },
+    {
+      "path": "scripts/summarize-evidence.py",
+      "bytes": 8907,
+      "sha256": "e1fc9194bf6e9d59da42eb9ae443507155daef252bf090ed7cbebedf333f2f3d"
+    },
+    {
+      "path": "scripts/validate-agent.py",
+      "bytes": 3438,
+      "sha256": "58faafa6e73f3c667ec44627d19e2d9515343d4d151bc7b663128cb92fa5dc6d"
+    },
+    {
+      "path": "scripts/validate-foundation.py",
+      "bytes": 3373,
+      "sha256": "0ef477d30b7d6b34b88348432683eb73657fb20d04151e107402af0487aec6e0"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 879,
+      "sha256": "5738b3e52866a4596a726085c794d7f3b1cd0fe59f3e7308ce696336ac8f2e54"
+    }
+  ]
+}

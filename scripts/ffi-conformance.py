@@ -13,7 +13,7 @@ class Table(c.Structure):
     _fields_ = [('size', c.c_uint32), ('version', c.c_uint32), ('create', Create), ('destroy', Destroy), ('request', Request), ('response_size', Size), ('read', Read), ('release', Destroy)]
 lib.render_entry.argtypes = [c.c_uint32, c.c_uint32]
 lib.render_entry.restype = c.POINTER(Table)
-assert not lib.render_entry(1, c.sizeof(Table))
+assert not lib.render_entry(2, c.sizeof(Table))
 api = lib.render_entry(0, c.sizeof(Table)).contents
 assert api.size == c.sizeof(Table)
 engine = api.create(1, 2)
@@ -35,7 +35,7 @@ receipt = request({'method':'execute','request':payload})['Ok']
 assert receipt == request({'method':'execute','request':payload})['Ok']
 assert receipt['durable'] is False
 assert request({'method':'inspect'})['Ok']['snapshot']['entities'][0]['name'] == 'From external client'
-assert len(request({'method':'registry'})['Ok']) == 10
+assert {'put_mesh', 'set_render_settings', 'agent.branch', 'agent.commit'} <= {op['name'] for op in request({'method':'registry'})['Ok']}
 assert api.destroy(engine) == 0
 assert api.destroy(engine) == -1
 report = {'status':'passed','abi_version':0,'independent_client':'Python ctypes','checks':['version negotiation','structure size','buffer ownership','capacity bounds','released buffer','create/inspect/transaction','idempotent retry','stale engine','registry'],'durability':'memory-only alpha'}

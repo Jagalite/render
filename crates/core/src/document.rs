@@ -256,6 +256,8 @@ pub struct Snapshot {
     pub meshes: BTreeMap<String, Arc<Mesh>>,
     pub materials: BTreeMap<Id, Material>,
     pub layers: Vec<Layer>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub render_settings: Option<crate::render::Settings>,
 }
 impl Snapshot {
     pub fn empty(document_id: Id) -> Self {
@@ -266,6 +268,7 @@ impl Snapshot {
             meshes: BTreeMap::new(),
             materials: BTreeMap::new(),
             layers: vec![],
+            render_settings: None,
         }
     }
     pub fn revision(&self) -> Result<String> {
@@ -273,8 +276,11 @@ impl Snapshot {
         Ok(digest(&canonical(self)?))
     }
     pub fn validate(&self) -> Result<()> {
-        if self.version != 0 {
+        if self.version > 1 || (self.version == 0) != self.render_settings.is_none() {
             return Err(Error::new("schema_version", "unsupported document version"));
+        }
+        if let Some(settings) = &self.render_settings {
+            settings.validate()?;
         }
         for (key, m) in &self.meshes {
             if &m.content_id()? != key {
@@ -376,6 +382,9 @@ impl Snapshot {
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 #[serde(tag = "operation", rename_all = "snake_case", deny_unknown_fields)]
 pub enum Command {
+    SetRenderSettings {
+        settings: crate::render::Settings,
+    },
     PutMesh {
         mesh: Mesh,
     },
@@ -656,6 +665,11 @@ fn apply(s: &mut Snapshot, c: &Command) -> Result<()> {
             .ok_or_else(|| Error::new("not_found", "entity does not exist"))
     }
     match c {
+        Command::SetRenderSettings { settings } => {
+            settings.validate()?;
+            s.render_settings = Some(settings.clone());
+            s.version = 1;
+        }
         Command::PutMesh { mesh } => {
             let id = mesh.content_id()?;
             s.meshes.insert(id, Arc::new(mesh.clone()));

@@ -9,7 +9,14 @@ pub struct Operation {
     pub cancellation: &'static str,
 }
 pub fn registry() -> Vec<Operation> {
-    vec![
+    let mut operations = vec![
+        Operation {
+            name: "set_render_settings",
+            version: 0,
+            mutation: true,
+            effects: "atomically author camera, lighting and bounded render settings",
+            cancellation: "before commit",
+        },
         Operation {
             name: "inspect",
             version: 0,
@@ -80,5 +87,7 @@ pub fn registry() -> Vec<Operation> {
             effects: "replace or append named sparse override layer",
             cancellation: "before commit",
         },
-    ]
+    ];
+    operations.extend(crate::agent::registry());
+    operations
 }

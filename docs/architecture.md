@@ -3,7 +3,7 @@
 
 **Specification version:** 0.1 — proposed baseline  
 **Prepared:** September 5, 2026  
-**Implementation status:** Planning only; milestones and performance targets are not completed or measured.  
+**Implementation status:** Experimental M00–M05 foundation and agent-rendering profile delivered; current tested profiles and later gates are recorded in `planning/milestones.json`, `docs/agent_alpha.md` and `evidence/m05/README.md`.
 **Product direction:** Agent-native, browser-capable, native desktop, fully Rust application implementation.  
 **Working name:** “Rust-native 3D Platform”; crate names in this document are illustrative.
 
@@ -555,6 +555,8 @@ Remote execution remains opt-in. Local browser create/save/render workflows must
 
 Make the native document the source of truth. Implement Rust import/export adapters with explicit format/version profiles, supported features, approximation rules and loss reports. Initial interchange targets can be glTF/GLB and OBJ with limited material scope; retain source assets and conversion reports. Interchange support is a matrix, not an extension-name checkbox.
 
+The requested expansion beyond the foundation is tracked in `planning/input_support.json` and `docs/input_support.md`: complete static scenes, richer materials, animation/rigs, hair, volumes and native `.blend` profiles. Each track requires an import-save-reopen-render workflow and native/browser evidence before capability status changes. Existing milestone dependencies and the Rust runtime boundary continue to apply.
+
 Later support selected USD/USDA, MaterialX, Alembic-style caches, volume formats, and `.blend` subsets where justified. These are native implementations, not wrappers around the corresponding C++ libraries. Full USD composition or arbitrary `.blend` evaluation is not an implied requirement of reading a mesh from such a file.
 
 ### 21.2 `.blend` limits
@@ -870,4 +872,3 @@ Architecture choices, milestone definitions and numerical targets are original r
 **[S17] Blender source — DEG_depsgraph_query.hh, reviewed pinned commit.** Authored/evaluated data and dependency queries. https://github.com/blender/blender/blob/52f4f930332e5fe8a3e0bb33648a1b1672acdf06/source/blender/depsgraph/DEG_depsgraph_query.hh
 
 **[S18] Blender — License.** Blender’s GPL licensing statement. https://www.blender.org/about/license/
-

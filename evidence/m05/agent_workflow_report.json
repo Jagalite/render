@@ -1,0 +1,210 @@
+{
+  "chosen": "green",
+  "gpu_exercised": true,
+  "import": {
+    "receipt": {
+      "base_revision": "sha256:00b1f6fa454448ecde919a4425e0c8801d84f1a15b770d04faf506acfeffc9b3",
+      "command_count": 6,
+      "delta_digest": "sha256:6840399ca0e3bfb6831c0fc26e3d8e0177a41d0e33493e2348320d4c592dfa66",
+      "document_id": "000000000000000000000000000001f4",
+      "durable": false,
+      "revision": "sha256:bab1795336cc8eab09b2dd42d29fcdbf0c2a09ec2c195d2168c61aadc9921536"
+    },
+    "report": {
+      "instances": 1,
+      "losses": [
+        "Opt-in Lambertian conversion omits glTF dielectric specular; renderer is two-sided and uses geometric normals. No PBR fidelity claim.",
+        "Names are retained; extras and generator metadata are not authored components. Only the selected scene is imported."
+      ],
+      "profile": "gltf2-static-lambertian-v0",
+      "source_digest": "sha256:9ae3455df37634941468a6e7f462b19c92b92270b7a92077b29ad5345416f86e",
+      "source_materials": {
+        "0": "814bfde4b8b685dbdfc174e0c4ba8d1b"
+      },
+      "source_nodes": {
+        "0": "f3f113e15a2c14a8caa18a7605c5ada3",
+        "1": "6e182179e42ea6229c13c8654e8372ee"
+      },
+      "unique_meshes": 1
+    }
+  },
+  "input_digest": "sha256:ed52f7192b8311d700ac0ce80644e3852cd01537e4d62241b9acba023da3d54e",
+  "job_reconnect": true,
+  "lost_ack_retry": true,
+  "profile": "gltf2-static-lambertian-v0",
+  "protected_digest": "sha256:b70443167b8439c2c5884fdd8df9aada85ed354f7e59caaa64bf0cd5158de671",
+  "receipt": {
+    "base_revision": "sha256:bab1795336cc8eab09b2dd42d29fcdbf0c2a09ec2c195d2168c61aadc9921536",
+    "command_count": 2,
+    "delta_digest": "sha256:f7f0b29a94b5e0b1baf914477969b631d1e842120e903483ceae2fabc0f42064",
+    "document_id": "000000000000000000000000000001f4",
+    "durable": true,
+    "revision": "sha256:2efa6f57808b7d00d83e73fb23acd2688eb3c8fec779ef04ba5c81b5addbcc5e"
+  },
+  "recovery": true,
+  "root_revision_before": "sha256:bab1795336cc8eab09b2dd42d29fcdbf0c2a09ec2c195d2168c61aadc9921536",
+  "seconds": 3.7915785,
+  "selection_rule": "highest mean green channel; deterministic test objective, not an aesthetic judgement",
+  "status": "passed",
+  "variants": [
+    {
+      "cpu_receipt": {
+        "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light",
+        "backend": "cpu-f64-diffuse-v0",
+        "color_space": "linear-sRGB",
+        "height": 64,
+        "output_digest": "sha256:81e82bcc5eb0d271c45854b8d5b57f934d4c9a5fe94e5b6c2948189afdf90d72",
+        "revision": "sha256:cf9f77387ef88c9ebd392e40ca21b6dd7ac8ad2c5c10ad2f1ee2cd7a199cf7ac",
+        "samples": 16,
+        "seed": 42,
+        "settings_digest": "sha256:d6231269140916a342ae79b0f1c94ea79a9ea2fb255a8e3e861038d1fc7f6980",
+        "width": 64
+      },
+      "gpu": {
+        "linear_rmse": 1.6855163736225967e-8,
+        "object_mismatches": 0,
+        "receipt": {
+          "approximation": "finite depth 1; two-sided Lambertian; nearest repeat textures; start sample 0; camera-relative f32",
+          "backend": "gpu-f32-diffuse-v0/Metal",
+          "color_space": "linear-sRGB",
+          "height": 64,
+          "output_digest": "sha256:f2f345a1d472484f7319f33a2876fde8eba157d039080bd48ffd68d9215c22fb",
+          "revision": "sha256:cf9f77387ef88c9ebd392e40ca21b6dd7ac8ad2c5c10ad2f1ee2cd7a199cf7ac",
+          "samples": 16,
+          "seed": 42,
+          "settings_digest": "sha256:d6231269140916a342ae79b0f1c94ea79a9ea2fb255a8e3e861038d1fc7f6980",
+          "width": 64
+        }
+      },
+      "inspection": {
+        "mean_linear_rgb": [
+          0.17309205036508502,
+          0.11921928851961638,
+          0.11341760608729601
+        ],
+        "pixel_count": 4096,
+        "visible_pixels": 1181
+      },
+      "job_id": "000000000000000000000000000003e8",
+      "job_state": "Succeeded",
+      "output_admission_bytes": 262144,
+      "protected_digest": "sha256:b70443167b8439c2c5884fdd8df9aada85ed354f7e59caaa64bf0cd5158de671",
+      "resumed_events": [
+        {
+          "job": "000000000000000000000000000003e8",
+          "sequence": 3,
+          "state": "Succeeded"
+        }
+      ],
+      "revision": "sha256:cf9f77387ef88c9ebd392e40ca21b6dd7ac8ad2c5c10ad2f1ee2cd7a199cf7ac",
+      "snapshot_json_bytes": 3895,
+      "variant": "warm"
+    },
+    {
+      "cpu_receipt": {
+        "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light",
+        "backend": "cpu-f64-diffuse-v0",
+        "color_space": "linear-sRGB",
+        "height": 64,
+        "output_digest": "sha256:e25e1f02c5045ff44b429eaf4a32efb60ba7858c28361646153e0c83c8e31f51",
+        "revision": "sha256:2efa6f57808b7d00d83e73fb23acd2688eb3c8fec779ef04ba5c81b5addbcc5e",
+        "samples": 16,
+        "seed": 42,
+        "settings_digest": "sha256:5d791c02c000d387b15c9db8639ce8cdbc63f82f7748ca9d735f475c4f1ab799",
+        "width": 64
+      },
+      "gpu": {
+        "linear_rmse": 1.7452707545050624e-8,
+        "object_mismatches": 0,
+        "receipt": {
+          "approximation": "finite depth 1; two-sided Lambertian; nearest repeat textures; start sample 0; camera-relative f32",
+          "backend": "gpu-f32-diffuse-v0/Metal",
+          "color_space": "linear-sRGB",
+          "height": 64,
+          "output_digest": "sha256:b26addd3f39fbfbed2d6c5e61096f4b32baeabaac53277e78812285a724692c5",
+          "revision": "sha256:2efa6f57808b7d00d83e73fb23acd2688eb3c8fec779ef04ba5c81b5addbcc5e",
+          "samples": 16,
+          "seed": 42,
+          "settings_digest": "sha256:5d791c02c000d387b15c9db8639ce8cdbc63f82f7748ca9d735f475c4f1ab799",
+          "width": 64
+        }
+      },
+      "inspection": {
+        "mean_linear_rgb": [
+          0.11443727634832612,
+          0.16798841809577425,
+          0.11826235766511672
+        ],
+        "pixel_count": 4096,
+        "visible_pixels": 1181
+      },
+      "job_id": "000000000000000000000000000003e9",
+      "job_state": "Succeeded",
+      "output_admission_bytes": 262144,
+      "protected_digest": "sha256:b70443167b8439c2c5884fdd8df9aada85ed354f7e59caaa64bf0cd5158de671",
+      "resumed_events": [
+        {
+          "job": "000000000000000000000000000003e9",
+          "sequence": 7,
+          "state": "Succeeded"
+        }
+      ],
+      "revision": "sha256:2efa6f57808b7d00d83e73fb23acd2688eb3c8fec779ef04ba5c81b5addbcc5e",
+      "snapshot_json_bytes": 3896,
+      "variant": "green"
+    },
+    {
+      "cpu_receipt": {
+        "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light",
+        "backend": "cpu-f64-diffuse-v0",
+        "color_space": "linear-sRGB",
+        "height": 64,
+        "output_digest": "sha256:750ae39b52e2ec98553c86bad83a778619219e89c7afad94e7664cd4bda46f7e",
+        "revision": "sha256:9bd62c4e7b78bb60f2bfa5065e31a76dc05963cf6659fe5bbbc0bebb2b8bd0fb",
+        "samples": 16,
+        "seed": 42,
+        "settings_digest": "sha256:b41d6c6b7d2a1f4432b93184c3a1d1bda20f6d21d0ffb45e0269b49fc9f6efb8",
+        "width": 64
+      },
+      "gpu": {
+        "linear_rmse": 1.5580437830059428e-8,
+        "object_mismatches": 0,
+        "receipt": {
+          "approximation": "finite depth 1; two-sided Lambertian; nearest repeat textures; start sample 0; camera-relative f32",
+          "backend": "gpu-f32-diffuse-v0/Metal",
+          "color_space": "linear-sRGB",
+          "height": 64,
+          "output_digest": "sha256:d79ab558a96976d2adeb82f0bc099027277e3389a367285b1659479347dd5542",
+          "revision": "sha256:9bd62c4e7b78bb60f2bfa5065e31a76dc05963cf6659fe5bbbc0bebb2b8bd0fb",
+          "samples": 16,
+          "seed": 42,
+          "settings_digest": "sha256:b41d6c6b7d2a1f4432b93184c3a1d1bda20f6d21d0ffb45e0269b49fc9f6efb8",
+          "width": 64
+        }
+      },
+      "inspection": {
+        "mean_linear_rgb": [
+          0.11487466137214142,
+          0.12296220930147683,
+          0.17148749781699735
+        ],
+        "pixel_count": 4096,
+        "visible_pixels": 1181
+      },
+      "job_id": "000000000000000000000000000003ea",
+      "job_state": "Succeeded",
+      "output_admission_bytes": 262144,
+      "protected_digest": "sha256:b70443167b8439c2c5884fdd8df9aada85ed354f7e59caaa64bf0cd5158de671",
+      "resumed_events": [
+        {
+          "job": "000000000000000000000000000003ea",
+          "sequence": 11,
+          "state": "Succeeded"
+        }
+      ],
+      "revision": "sha256:9bd62c4e7b78bb60f2bfa5065e31a76dc05963cf6659fe5bbbc0bebb2b8bd0fb",
+      "snapshot_json_bytes": 3895,
+      "variant": "cool"
+    }
+  ]
+}

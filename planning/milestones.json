@@ -1,7 +1,7 @@
 {
   "spec_version": "0.1",
   "prepared": "2026-09-05",
-  "implementation_status": "foundation_m00_m04_completed",
+  "implementation_status": "foundation_and_agent_alpha_m00_m05_completed",
   "milestones": [
     {
       "id": "M00",
@@ -179,7 +179,7 @@
     {
       "id": "M05",
       "title": "Agent-rendering alpha and narrow ABI v1",
-      "status": "planned",
+      "status": "completed",
       "dependencies": [
         "M04"
       ],
@@ -201,7 +201,16 @@
         "No stable version of every future domain operation"
       ],
       "calendar_estimate": null,
-      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence.",
+      "completion_scope": "Trusted local static Lambertian scene workflow, three restricted variants, native durable jobs and selection, browser GPU/OPFS recovery, narrow ABI v1 with Python and C clients. Transient branches, no remote tenants or durable browser job worker.",
+      "evidence": [
+        "evidence/m05/agent_workflow_report.json",
+        "evidence/m05/abi_v1_conformance.json",
+        "evidence/m05/alpha_capability_matrix.json",
+        "evidence/m05/browser_workflow_report.json",
+        "evidence/m05/native_client_report.json",
+        "evidence/m05/validation_report.json"
+      ]
     },
     {
       "id": "M06",

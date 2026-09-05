@@ -1,8 +1,10 @@
 //! Platform-independent authored state, transactions, geometry and reference rendering.
+pub mod agent;
 pub mod api;
 pub mod document;
 pub mod fixtures;
 pub mod geometry;
+pub mod gltf_scene;
 pub mod imaging;
 pub mod interchange;
 pub mod jobs;

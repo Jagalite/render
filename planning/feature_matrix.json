@@ -1,6 +1,6 @@
 {
   "spec_version": "0.1",
-  "status": "foundation_profiles_validated",
+  "status": "foundation_and_agent_alpha_profiles_validated",
   "features": [
     {
       "id": "scene",
@@ -11,14 +11,14 @@
         "M05",
         "M13"
       ],
-      "qualification": "Polygon document/instance/layer foundation v0; no full editor or advanced geometry.",
+      "qualification": "Typed polygon scene/layer foundation plus bounded static glTF/GLB hierarchy, shared geometry and authored render settings; no full editor.",
       "capability_axes": {
         "native_authoring": "implemented_api_v0",
         "native_evaluation": "implemented_polygon_profile",
         "final_render": "implemented_diffuse_profile",
         "preview": "implemented_approximate_raster",
         "human_editing": "planned_M09",
-        "import": "canonical_json_and_scoped_mesh_codecs",
+        "import": "canonical_json_OBJ_mesh_and_gltf2_static_lambertian_scene_v0",
         "export": "canonical_json_and_native_package"
       },
       "platform_profiles": {
@@ -28,7 +28,8 @@
       "evidence": [
         "evidence/m00-m04/document_conformance.json",
         "evidence/m00-m04/geometry_invariants.json",
-        "evidence/m00-m04/roundtrip_report.json"
+        "evidence/m00-m04/roundtrip_report.json",
+        "evidence/m05/agent_workflow_report.json"
       ]
     },
     {
@@ -39,10 +40,10 @@
       "broader_gates": [
         "M05"
       ],
-      "qualification": "Trusted local API and ABI alpha v0. Native durable jobs; ABI v1 remains M05.",
+      "qualification": "Trusted local API operations v0, narrow ABI v1, three restricted variants and native durable pinned jobs; no remote multi-tenant service.",
       "capability_axes": {
         "native_authoring": "implemented_transactions_v0",
-        "native_evaluation": "implemented_inspect_candidates",
+        "native_evaluation": "inspect_branch_and_protected_digest",
         "final_render": "implemented_native_cpu_jobs",
         "preview": "implemented_candidates_and_render_api",
         "human_editing": "planned_M09",
@@ -51,13 +52,16 @@
       },
       "platform_profiles": {
         "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
-        "browser_local": "validated_document_candidates_render_export; shared_job_state_machine_only; no_durable_browser_job_worker"
+        "browser_local": "validated_restricted_variants_GPU_cancellation_OPFS_CAS_export_recovery; no_durable_browser_job_worker"
       },
       "evidence": [
         "evidence/m00-m04/api_conformance.json",
         "evidence/m00-m04/durability_faults.json",
         "evidence/m00-m04/abi_conformance.json",
-        "evidence/m00-m04/job_host_conformance.json"
+        "evidence/m00-m04/job_host_conformance.json",
+        "evidence/m05/abi_v1_conformance.json",
+        "evidence/m05/native_client_report.json",
+        "evidence/m05/browser_workflow_report.json"
       ]
     },
     {
@@ -370,48 +374,55 @@
       "broader_gates": [
         "M13"
       ],
-      "qualification": "OBJ polygons/corner UVs/loose lines; glTF 2.0 mesh-only nonindexed static triangles; explicit unsupported features and losses.",
+      "qualification": "Existing OBJ/glTF mesh codecs plus bounded indexed static scene/GLB profile; opt-in Lambertian loss; input cameras/textures/PBR/animation/extensions rejected.",
       "capability_axes": {
         "native_authoring": "not_applicable_adapter",
-        "native_evaluation": "implemented_mesh_conversion",
+        "native_evaluation": "validated_static_hierarchy_and_shared_geometry",
         "final_render": "supported_imported_mesh_profile",
         "preview": "supported_imported_mesh_profile",
         "human_editing": "planned_M09",
-        "import": "implemented_named_OBJ_glTF_PPM_profiles",
+        "import": "OBJ_mesh_and_gltf2_static_lambertian_scene_v0",
         "export": "implemented_named_OBJ_glTF_profiles"
       },
       "platform_profiles": {
         "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
-        "browser_local": "shared_WASM_codec_conformance; no_browser_file_picker_workflow"
+        "browser_local": "validated_external_GLB_via_Rust_bindings_and_WebGPU; no_file_picker_UI"
       },
       "evidence": [
-        "evidence/m00-m04/interchange_profile_report.json"
+        "evidence/m00-m04/interchange_profile_report.json",
+        "evidence/m05/agent_workflow_report.json",
+        "evidence/m05/browser_workflow_report.json"
       ]
     },
     {
       "id": "collaboration",
       "family": "Collaboration and plugins",
-      "status": "planned",
+      "status": "implemented_experimental_profile",
       "first_useful_gate": "M05",
       "broader_gates": [
         "M13"
       ],
-      "qualification": "Branch/revision checks and reviewed merge rules",
+      "qualification": "Local owner-scoped ephemeral branches, protected edits and conservative revision/storage conflicts; no automatic merge, remote collaboration or plugins.",
       "capability_axes": {
-        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
-        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
-        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
-        "preview": "unimplemented_or_not_applicable_to_be_resolved",
-        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
-        "import": "unimplemented_or_not_applicable_to_be_resolved",
-        "export": "unimplemented_or_not_applicable_to_be_resolved"
+        "native_authoring": "restricted_material_lighting_variants",
+        "native_evaluation": "protected_property_digest_and_exact_revision",
+        "final_render": "pinned_native_jobs",
+        "preview": "CPU_and_browser_GPU",
+        "human_editing": "planned_M09",
+        "import": "not_applicable",
+        "export": "selected_document_only_transient_branches_omitted"
       },
       "platform_profiles": {
-        "native_desktop": "planned",
-        "browser_local": "planned_with_explicit_resource_limits"
+        "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
+        "browser_local": "validated_chromium_WebGPU_and_OPFS"
       },
-      "evidence": []
+      "evidence": [
+        "evidence/m05/agent_workflow_report.json",
+        "evidence/m05/browser_workflow_report.json",
+        "evidence/m05/native_client_report.json"
+      ]
     }
   ],
-  "profile_document": "docs/implementation.md"
+  "profile_document": "docs/implementation.md",
+  "agent_profile_document": "docs/agent_alpha.md"
 }

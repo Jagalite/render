@@ -1,6 +1,6 @@
 /* Generated from crates/ffi/src/lib.rs. Do not edit. */
-#ifndef RENDER_ABI_ALPHA_H
-#define RENDER_ABI_ALPHA_H
+#ifndef RENDER_ABI_H
+#define RENDER_ABI_H
 #include <stdint.h>
 #ifdef __cplusplus
 extern "C" {

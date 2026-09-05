@@ -163,20 +163,78 @@ impl JobHost {
             snapshot: inner.doc.snapshot().clone(),
             settings,
         };
+        Self::submit_locked(&mut inner, principal, id, input, budget)?;
+        let _ = self.wake.send(());
+        Ok(id)
+    }
+    /// Trusted local host accepts a validated pinned branch; the root remains
+    /// unchanged and the input is durably captured in the job record.
+    pub fn submit_input(
+        &self,
+        principal: &str,
+        id: Id,
+        input: RenderInput,
+        budget: Budget,
+    ) -> Result<Id> {
+        input.snapshot.validate()?;
+        input.settings.validate()?;
+        if canonical(&input)?.len() > 16 * 1024 * 1024 {
+            return Err(Error::new("budget", "pinned input exceeds 16 MiB"));
+        }
+        let mut inner = self
+            .inner
+            .lock()
+            .map_err(|_| Error::new("host", "host lock poisoned"))?;
+        Self::submit_locked(&mut inner, principal, id, input, budget)?;
+        let _ = self.wake.send(());
+        Ok(id)
+    }
+    fn submit_locked(
+        inner: &mut Inner,
+        principal: &str,
+        id: Id,
+        input: RenderInput,
+        budget: Budget,
+    ) -> Result<()> {
+        if let Some(e) = &inner.error {
+            return Err(e.clone());
+        }
+        if input.settings.samples > budget.max_samples
+            || input.settings.max_bytes > budget.max_bytes
+        {
+            return Err(Error::new("admission", "render settings exceed job budget"));
+        }
+        if let Some(old) = inner.doc.jobs().jobs.get(&id) {
+            if old.principal != principal
+                || canonical(&old.render_input)? != canonical(&Some(&input))?
+                || canonical(&old.budget)? != canonical(&budget)?
+            {
+                return Err(Error::new(
+                    "idempotency_mismatch",
+                    "job ID already used with different input or owner",
+                ));
+            }
+            return Ok(());
+        }
+        if inner.doc.jobs().jobs.len() >= 256 {
+            return Err(Error::new(
+                "budget",
+                "local host retains at most 256 jobs; archive the project to reclaim history",
+            ));
+        }
         let job = Job {
             id,
             principal: principal.into(),
-            revision: inner.doc.snapshot().revision()?,
+            revision: input.snapshot.revision()?,
             state: State::Accepted,
             budget,
             artifacts: vec![],
             diagnostic: None,
             render_input: Some(input),
         };
-        let Inner { doc, store, .. } = &mut *inner;
-        let accepted = durable_update(store, doc, |d| d.jobs_mut().submit(job))?;
-        let _ = self.wake.send(());
-        Ok(accepted)
+        let Inner { doc, store, .. } = inner;
+        durable_update(store, doc, |d| d.jobs_mut().submit(job))?;
+        Ok(())
     }
     pub fn cancel(&self, principal: &str, id: Id) -> Result<State> {
         let mut inner = self
@@ -245,13 +303,20 @@ fn run(root: &Path, job: &Job, cancel: impl FnMut() -> bool) -> Result<Vec<Strin
     let image = render(&scene, &input.settings, cancel)?;
     let ppm = image.ppm();
     let receipt = canonical(&image.receipt)?;
-    if (ppm.len() + receipt.len()) as u64 > job.budget.max_output_bytes {
+    let passes = canonical(
+        &serde_json::json!({"depth_meters":image.depth,"normals_world":image.normals,"object_ids":image.objects,"linear_rgb":image.linear}),
+    )?;
+    if (ppm.len() + receipt.len() + passes.len()) as u64 > job.budget.max_output_bytes {
         return Err(Error::new("budget", "artifact exceeds job output budget"));
     }
     let folder = root.join("artifacts");
     fs::create_dir_all(&folder).map_err(|e| Error::new("io", e.to_string()))?;
     let mut artifacts = vec![];
-    for (extension, bytes) in [("ppm", ppm), ("receipt.json", receipt)] {
+    for (extension, bytes) in [
+        ("ppm", ppm),
+        ("receipt.json", receipt),
+        ("passes.json", passes),
+    ] {
         let path = folder.join(format!("{:032x}.{extension}", job.id.0));
         let staging = PathBuf::from(format!("{}.pending", path.display()));
         fs::write(&staging, bytes).map_err(|e| Error::new("io", e.to_string()))?;
@@ -270,6 +335,95 @@ fn run(root: &Path, job: &Job, cancel: impl FnMut() -> bool) -> Result<Vec<Strin
 #[cfg(test)]
 mod tests {
     use super::*;
+    #[test]
+    fn pinned_variant_jobs_reject_changed_retries_and_recover_terminal_events() {
+        let root = std::env::temp_dir().join(format!("render-m05-jobs-{}", std::process::id()));
+        let initial = fixtures::demo().unwrap();
+        let mut variant = initial.clone();
+        let edit = fixtures::request(
+            &variant,
+            "job:variant:000001",
+            vec![document::Command::Rename {
+                entity: Id(4),
+                name: "pinned branch".into(),
+            }],
+        )
+        .unwrap();
+        variant.execute(&fixtures::principal(), &edit).unwrap();
+        let mut settings = fixtures::settings();
+        settings.width = 8;
+        settings.height = 8;
+        settings.samples = 1;
+        let input = RenderInput {
+            snapshot: variant.snapshot().clone(),
+            settings: settings.clone(),
+        };
+        let budget = Budget {
+            max_wall_ms: 10000,
+            max_bytes: settings.max_bytes,
+            max_samples: 1,
+            max_output_bytes: 1,
+        };
+        let host = JobHost::open(&root, initial.clone()).unwrap();
+        let mut excess = input.clone();
+        excess.settings.samples = 2;
+        assert_eq!(
+            host.submit_input("p", Id(70), excess, budget.clone())
+                .unwrap_err()
+                .code,
+            "admission"
+        );
+        assert!(host.status("p", Id(70)).is_err());
+        host.submit_input("p", Id(71), input.clone(), budget.clone())
+            .unwrap();
+        assert_eq!(
+            host.submit_input("other", Id(71), input.clone(), budget.clone())
+                .unwrap_err()
+                .code,
+            "idempotency_mismatch"
+        );
+        let mut changed = input.clone();
+        changed.settings.seed += 1;
+        assert_eq!(
+            host.submit_input("p", Id(71), changed, budget.clone())
+                .unwrap_err()
+                .code,
+            "idempotency_mismatch"
+        );
+        let deadline = Instant::now() + Duration::from_secs(10);
+        loop {
+            if host.status("p", Id(71)).unwrap().state.terminal() {
+                break;
+            }
+            assert!(Instant::now() < deadline);
+            thread::sleep(Duration::from_millis(5));
+        }
+        let job = host.status("p", Id(71)).unwrap();
+        assert_eq!(job.state, State::Failed);
+        assert!(job.diagnostic.unwrap().contains("budget"));
+        assert!(job.artifacts.is_empty());
+        assert_eq!(job.revision, variant.snapshot().revision().unwrap());
+        let events = host.events("p", None).unwrap();
+        let cursor = events.last().unwrap().sequence;
+        host.submit_input("p", Id(71), input.clone(), budget.clone())
+            .unwrap();
+        assert!(host.events("p", Some(cursor)).unwrap().is_empty());
+        drop(host);
+        let saved = recover(&NativeStore::open(&root).unwrap().load().unwrap())
+            .unwrap()
+            .unwrap();
+        assert_eq!(
+            saved.snapshot().revision().unwrap(),
+            initial.snapshot().revision().unwrap()
+        );
+        let reopened = JobHost::open(&root, initial).unwrap();
+        reopened.submit_input("p", Id(71), input, budget).unwrap();
+        assert_eq!(reopened.status("p", Id(71)).unwrap().state, State::Failed);
+        assert!(reopened.events("p", Some(cursor)).unwrap().is_empty());
+        drop(reopened);
+        fs::remove_dir_all(root).unwrap();
+    }
+
     #[test]
     fn jobs_pin_the_document_written_through_the_project_api() {
         let root = std::env::temp_dir().join(format!("render-job-api-{}", std::process::id()));
@@ -350,7 +504,7 @@ mod tests {
             let job = host.status("p", Id(10)).unwrap();
             if job.state.terminal() {
                 assert_eq!(job.state, State::Succeeded);
-                assert_eq!(job.artifacts.len(), 2);
+                assert_eq!(job.artifacts.len(), 3);
                 break;
             }
             assert!(Instant::now() < deadline);

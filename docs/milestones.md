@@ -62,6 +62,8 @@ Implement Rust-authored generated kernels, software GPU traversal, progressive a
 
 An agent creates a project, branches three variants, modifies only permitted lighting/material properties, previews, renders, inspects passes, chooses a variant and commits. Test budget limits, retries, interrupted streams and conflicting edits. Freeze only the small ABI/transport core proven by independent clients; operations retain their own versions. Publish feature profiles, receipts and local browser export/recovery behavior. This is the first recommended public alpha.
 
+**Implemented profile:** M05 is validated for trusted local clients with the bounded static Lambertian scene importer, restricted variants, native jobs, browser GPU previews/save/recovery and narrow ABI v1. See [the profile](agent_alpha.md) and [evidence](../evidence/m05/README.md). Full input support and later authoring domains retain their own gates.
+
 ## 26. Milestones M06–M10: authoring and interactive creation
 
 ### M06 — Modeling kernel and procedural geometry

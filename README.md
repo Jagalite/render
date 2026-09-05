@@ -1,12 +1,15 @@
 # Rust-native 3D Platform
 
-**Experimental foundation · September 2026 · API/storage/ABI v0**
+**Experimental agent-rendering alpha · September 2026 · narrow ABI v1**
 
 An independent, fully Rust creative platform with agent-native operations, browser/native execution, rendering before rich interactive editing, and staged major-Blender-feature coverage. No Blender, Cycles, or other non-Rust computational runtime is used as a planned production shortcut.
 
 ## Start here
 
-- [Build, run, API contracts and supported profiles](docs/implementation.md)
+- [Agent workflow, ABI v1 and supported input profile](docs/agent_alpha.md)
+- [M05 validation evidence](evidence/m05/README.md)
+- [Build, run, foundation contracts and supported profiles](docs/implementation.md)
+- [Planned input, material, animation and Blender support](docs/input_support.md)
 - [M00–M04 validation evidence and qualifications](evidence/m00-m04/README.md)
 - [Complete architecture specification](docs/architecture.md)
 - [Milestones and release gates](docs/milestones.md)
@@ -20,10 +23,11 @@ An independent, fully Rust creative platform with agent-native operations, brows
 - `planning/feature_matrix.json`: capability status by feature family and compatibility axis.
 - `planning/initial_backlog.json`: first 12 implementation tasks and dependencies.
 - `schemas/material_edit_request.schema.json`: narrow illustrative request schema.
+- `schemas/agent_request.schema.json`: implemented agent operations v0 wire contract.
 - `examples/`: positive/negative example requests with validation caveats.
 - `planning/document_validation_report.json`: document-shape and planning-graph checks performed while preparing this package.
 
-The Rust workspace implements document transactions, native durability and jobs, a CPU renderer, generated portable GPU kernels, scoped OBJ/glTF interchange, and browser-local execution. The supported profile is intentionally narrow: polygonal scenes, Lambertian surfaces, point/environment lighting, and an approximate raster preview. See the evidence for runtime hosts, measurements and exclusions. M05–M14 remain planned.
+The Rust workspace implements restricted agent variants, bounded static GLB/glTF scene import, document transactions, native durability and jobs, a CPU renderer, generated portable GPU kernels, scoped OBJ/glTF interchange, and browser-local execution. The supported profile is intentionally narrow: polygonal scenes, Lambertian surfaces, point/environment lighting, and an approximate raster preview. See the evidence for runtime hosts, measurements and exclusions. M00–M05 are complete within their published profiles; M06–M14 remain planned. Full static glTF/PBR and the broader input families remain in the input plan.
 
 ```sh
 cargo test --workspace --locked

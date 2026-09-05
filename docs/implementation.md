@@ -1,6 +1,6 @@
 # Rust foundation implementation
 
-The repository now contains a working experimental implementation across the M00–M04 domains. The original architecture remains the requirements source. Milestone evidence and remaining qualifications are recorded in `evidence/m00-m04/`; the implementation is not a complete creative suite or an ABI v1 release.
+The repository contains an experimental M00–M05 implementation. This guide describes the foundation; [the agent alpha guide](agent_alpha.md) specifies the added scene importer, restricted variants, authored render settings, browser recovery and narrow ABI v1. The original architecture remains the requirements source. Evidence is in `evidence/m00-m04/` and `evidence/m05/`; this is not a complete creative suite.
 
 ## Build and run
 
@@ -51,7 +51,7 @@ The WebGPU flag permits headless test adapter use; it is not a production browse
 | `render-gpu` | Camera-relative scene packing, shared geometry buffers, software BVH traversal, diffuse transport, progressive accumulation, raster preview and readback |
 | `render-host` | CLI, local transport, native durable job worker, artifact output and static development server |
 | `render-web` | Browser document API, local conformance application, OPFS adapter and dedicated worker |
-| `render-ffi` | Small trusted C-compatible ABI alpha; exported table and generation-checked engine/result handles |
+| `render-ffi` | Small trusted C-compatible ABI v1; exported table and generation-checked engine/result handles |
 
 The authoring engine exposes snapshots immutably. Transactions are the mutation path. Candidate snapshots and receipts cannot be replaced by callers. Layer visibility uses the last override for each entity; hiding a composed instance does not erase its authored geometry reference. Editing handles include arena ownership and generations. GPU handles never enter persistent authored state.
 
@@ -85,7 +85,7 @@ Transactions retain resolved commands, receipts, base/result revisions and delta
 
 The native job host shares the exact project root used by the CLI transaction API. An OS worker lease rejects concurrent job hosts before recovery; it is released after the worker joins. Legacy job-only packages containing a nested `journal/` require explicitly opening that directory. The native job host returns accepted IDs, persists queued/running/terminal state and resumable bounded events, and renders pinned snapshots outside the state lock. Cancellation is acknowledged separately from completion. Queued cancellation releases admission capacity immediately; repeated cancellation does not append duplicate transition events. Interrupted running jobs become failed with an explicit retry diagnostic on reopen. Queue admission, per-principal limits, wall-time checks, sample/memory/output budgets and artifact receipts are enforced. Files written before a cancelled terminal transition can remain unreferenced artifacts; no automatic destructive garbage collection runs.
 
-## API and ABI alpha
+## Foundation API and narrow ABI
 
 `render-host api <project>` reads newline-delimited `Request` JSON and returns serialized structured results. A request has `version: 0`, `base_revision`, `idempotency_key`, `commands`, and `max_added_bytes`. `render-core::api::registry()` describes the ten supported query/mutation entries. `render-host jobs <project>` accepts `submit`, `cancel`, `status`, and `events` messages. Both local transports authenticate as a trusted local principal; these commands are not exposed as an unauthenticated remote service.
 
@@ -93,10 +93,10 @@ The earlier bundled material-edit schema remains an illustrative design draft. T
 
 Browser bindings expose `BrowserDocument` create/import/export/revision/execute/prepare/inspect_candidate/commit/discard/branch and `render_document`. External JavaScript is a client language; it does not implement application semantics.
 
-`include/render.h` is generated from the Rust ABI table. `render_entry(0, sizeof(RenderApi))` negotiates version/size. Results are engine-owned immutable buffers copied into caller-owned storage and explicitly released. Handles reject stale generations and wrong kinds. Caller pointers must be valid for their lengths; this ABI is trusted, process-local, memory-only and not a sandbox. Calls serialize under the registry lock. No callbacks into clients occur. Unwinds are caught; a poisoned registry is unusable and requires process restart. Abort/fatal memory faults are outside unwind containment. ABI v1 remains M05.
+`include/render.h` is generated from the Rust ABI table. `render_entry(0, sizeof(RenderApi))` negotiates version/size. Results are engine-owned immutable buffers copied into caller-owned storage and explicitly released. Handles reject stale generations and wrong kinds. Caller pointers must be valid for their lengths; this ABI is trusted, process-local, memory-only and not a sandbox. Calls serialize under the registry lock. No callbacks into clients occur. Unwinds are caught; a poisoned registry is unusable and requires process restart. Abort/fatal memory faults are outside unwind containment. M05 adds `render_entry(1, sizeof(RenderApi))` with v0 retained; the complete [v1 contract](agent_alpha.md#narrow-abi-v1) defines ownership, limits and independent-client evidence.
 
 ## Provenance and evidence limits
 
 Project code is independently authored Rust. No Blender/Cycles implementation was ported or linked. Test scripts, comparative hecs usage and generated browser bindings are classified separately from the bundled runtime. Dependency/license expressions and environmental links are recorded by the audit; the project itself has not yet selected a distribution license.
 
-Validated runtime hosts are Apple M1/macOS and Chromium WebGPU. Other native targets need their own runtime evidence. The comparison is an experiment with the named workloads and machines, not a universal speed, memory, topology-robustness or production-readiness claim. M05–M14 remain future work.
+Validated runtime hosts are Apple M1/macOS and Chromium WebGPU. Other native targets need their own runtime evidence. The comparison is an experiment with the named workloads and machines, not a universal speed, memory, topology-robustness or production-readiness claim. M05 now has its own validated agent profile; M06–M14 remain future work.

@@ -1,6 +1,6 @@
 # API, ABI and agent contracts
 
-Proposed contracts, not implemented APIs.
+Architectural contracts. The implemented M05 subset, operation versions and platform limits are specified in [the agent alpha guide](agent_alpha.md); broader capabilities below remain requirements.
 
 ## 11. Semantic API, transactions, and asynchronous jobs
 

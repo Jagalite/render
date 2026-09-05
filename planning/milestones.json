@@ -1,0 +1,426 @@
+{
+  "spec_version": "0.1",
+  "prepared": "2026-09-05",
+  "implementation_status": "documentation_only",
+  "milestones": [
+    {
+      "id": "M00",
+      "title": "Architecture and Rust-only feasibility spikes",
+      "status": "planned",
+      "dependencies": [],
+      "owner_role": "Architecture lead + graphics + verification",
+      "acceptance_criteria": [
+        "Compare chunked typed tables against a generic ECS candidate using load, traversal, small/wide edit and branch workloads.",
+        "Validate radial-handle topology with loose, non-manifold and degenerate test data.",
+        "Generate intersection and scattering GPU kernels from Rust-owned definitions; execute in native and browser hosts.",
+        "Prototype native/browser durable storage with interrupted writes.",
+        "Audit enabled dependencies and native runtime links."
+      ],
+      "required_evidence": [
+        "benchmark_results.json",
+        "kernel_cross_target_report.json",
+        "storage_recovery_report.json",
+        "dependency_inventory.json",
+        "accepted_ADRs.md"
+      ],
+      "exclusions": [
+        "No full editor",
+        "No general-purpose Rust-to-GPU compiler",
+        "No global stable API freeze"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+    },
+    {
+      "id": "M01",
+      "title": "Document and geometry core",
+      "status": "planned",
+      "dependencies": [
+        "M00"
+      ],
+      "owner_role": "Document + geometry",
+      "acceptance_criteria": [
+        "Persistent IDs survive rename, reparent and save/reload.",
+        "Instances share versioned geometry assets without accidental realization.",
+        "Native/WASM fixtures preserve UV seams, loose geometry, n-gons and supported non-manifold structure.",
+        "Revision/branch behavior shares unchanged chunks.",
+        "Invalid indices, attribute lengths, reference cycles and inverse-requiring singular operations are rejected with typed errors."
+      ],
+      "required_evidence": [
+        "document_conformance.json",
+        "geometry_invariants.json",
+        "roundtrip_report.json"
+      ],
+      "exclusions": [
+        "No interactive modeling suite",
+        "No arbitrary .blend support"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+    },
+    {
+      "id": "M02",
+      "title": "Transactions, API/ABI alpha and durable jobs",
+      "status": "planned",
+      "dependencies": [
+        "M01"
+      ],
+      "owner_role": "API + storage + security",
+      "acceptance_criteria": [
+        "Duplicate live idempotency keys with equal payload return one accepted result.",
+        "Different payload with the same live key is rejected.",
+        "Stale/conflicting writes cannot partially modify committed state.",
+        "Crash injection recovers the last valid advertised durable root.",
+        "In-process and wire clients produce equivalent accepted deltas.",
+        "Jobs/events support bounded queues, resumable event cursors and explicit cancellation states."
+      ],
+      "required_evidence": [
+        "api_conformance.json",
+        "idempotency_faults.json",
+        "durability_faults.json",
+        "abi_alpha_contract.md"
+      ],
+      "exclusions": [
+        "No ABI v1 claim yet",
+        "No universal automatic merge"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+    },
+    {
+      "id": "M03",
+      "title": "CPU renderer and initial native interchange",
+      "status": "planned",
+      "dependencies": [
+        "M02"
+      ],
+      "owner_role": "Rendering + shading + interchange",
+      "acceptance_criteria": [
+        "Render a scene constructed entirely through the native API with no Blender/Cycles process or library.",
+        "Validate camera, triangle/BVH, instance, surface, lighting, texture and color behavior.",
+        "Run analytic, energy, PDF and statistical image tests.",
+        "Export a render receipt with immutable input/version/seed metadata.",
+        "Round-trip declared static glTF/OBJ subsets with explicit loss reports."
+      ],
+      "required_evidence": [
+        "renderer_cpu_conformance.json",
+        "reference_images_manifest.json",
+        "interchange_profile_report.json"
+      ],
+      "exclusions": [
+        "No Cycles reuse",
+        "No complete shader-node parity",
+        "No media codec parity"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+    },
+    {
+      "id": "M04",
+      "title": "Portable GPU renderer and browser-local execution",
+      "status": "planned",
+      "dependencies": [
+        "M03"
+      ],
+      "owner_role": "GPU + native/web platforms",
+      "acceptance_criteria": [
+        "Rust-authored kernels execute on a native GPU and browser WebGPU target.",
+        "Software GPU traversal works without hardware ray-query requirements.",
+        "Matched CPU/GPU and independent analytic tests meet their declared numerical/statistical tolerances.",
+        "Progressive render and preview respect negotiated resource profiles.",
+        "Device loss, allocation failure and cancellation do not corrupt authored revisions."
+      ],
+      "required_evidence": [
+        "cross_backend_report.json",
+        "device_capability_manifest.json",
+        "gpu_fault_report.json"
+      ],
+      "exclusions": [
+        "No universal browser/device capacity claim",
+        "No mandatory native-only acceleration"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+    },
+    {
+      "id": "M05",
+      "title": "Agent-rendering alpha and narrow ABI v1",
+      "status": "planned",
+      "dependencies": [
+        "M04"
+      ],
+      "owner_role": "Integration + API + verification",
+      "acceptance_criteria": [
+        "Inspect/create/branch/modify/render/verify/commit completes without GUI or Blender.",
+        "Three lighting/material variants preserve the protected geometry digest.",
+        "Budgets, retries, disconnects, event resumption and conflicts pass fault tests.",
+        "Independent supported clients pass the proposed narrow ABI v1 contract.",
+        "Local browser save/export/recovery works under the published profile."
+      ],
+      "required_evidence": [
+        "agent_workflow_report.json",
+        "abi_v1_conformance.json",
+        "alpha_capability_matrix.json"
+      ],
+      "exclusions": [
+        "No general Blender replacement claim",
+        "No stable version of every future domain operation"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+    },
+    {
+      "id": "M06",
+      "title": "Modeling kernel and procedural geometry",
+      "status": "planned",
+      "dependencies": [
+        "M02"
+      ],
+      "owner_role": "Geometry + procedural evaluation",
+      "acceptance_criteria": [
+        "A named modeling/operator set supports a coherent asset-authoring workflow.",
+        "All operators specify degeneracy, attribute-transfer and topology-correspondence behavior.",
+        "Field/node execution and equivalent direct operations agree for supported semantics.",
+        "Procedural assets survive native save/reload.",
+        "Geometry growth and local/wide edit amplification are measured."
+      ],
+      "required_evidence": [
+        "modeling_conformance.json",
+        "procedural_conformance.json",
+        "topology_mapping_report.json"
+      ],
+      "exclusions": [
+        "No unqualified all-modifiers support",
+        "No exact CAD-kernel claim"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+    },
+    {
+      "id": "M07",
+      "title": "Materials, rendering breadth and geometry families",
+      "status": "planned",
+      "dependencies": [
+        "M05"
+      ],
+      "owner_role": "Shading + graphics + geometry",
+      "acceptance_criteria": [
+        "Curves, points, hair and supported sparse volumes have demonstrated authored/evaluated/rendered workflows.",
+        "Supported advanced scattering/displacement/baking/pass capabilities have reference tests.",
+        "Denoising and color profiles are Rust-native and declared by backend.",
+        "Unknown or unsupported material/geometry features produce explicit diagnostics."
+      ],
+      "required_evidence": [
+        "render_feature_conformance.json",
+        "geometry_family_report.json",
+        "color_profile_vectors.json"
+      ],
+      "exclusions": [
+        "No implicit full MaterialX/Blender equivalence",
+        "No motion-blur authoring completion before M08"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+    },
+    {
+      "id": "M08",
+      "title": "Animation, rigs and deformation",
+      "status": "planned",
+      "dependencies": [
+        "M06",
+        "M07"
+      ],
+      "owner_role": "Animation + numerics",
+      "acceptance_criteria": [
+        "Clips, channels, constraints/IK, skinning and morph targets produce a complete animated-character sequence.",
+        "Bind/rest pose, interpolation, scale/shear and random timeline evaluation tests pass.",
+        "Solver failures expose causal diagnostics.",
+        "Supported rigid/deforming motion blur uses explicit shutter/time semantics."
+      ],
+      "required_evidence": [
+        "animation_conformance.json",
+        "rig_solver_report.json",
+        "motion_blur_report.json"
+      ],
+      "exclusions": [
+        "No all-constraints or retargeting parity claim"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+    },
+    {
+      "id": "M09",
+      "title": "Shared interactive editor",
+      "status": "planned",
+      "dependencies": [
+        "M05",
+        "M06",
+        "M08"
+      ],
+      "owner_role": "UX/editor + platform",
+      "acceptance_criteria": [
+        "Object, mesh, material/node and timeline workflows use public operations.",
+        "Equivalent gestures and programmatic requests produce equivalent accepted deltas.",
+        "Text/keyboard, scaling, accessibility and supported tablet input have test evidence.",
+        "Expensive work remains cancellable and visible without privileged mutations."
+      ],
+      "required_evidence": [
+        "editor_workflow_report.json",
+        "interaction_api_equivalence.json",
+        "accessibility_report.json"
+      ],
+      "exclusions": [
+        "No private editor mutation bypass",
+        "No UI-first substitute for missing algorithms"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+    },
+    {
+      "id": "M10",
+      "title": "UVs, painting, sculpting and retopology",
+      "status": "planned",
+      "dependencies": [
+        "M09"
+      ],
+      "owner_role": "Sculpt/paint + geometry + imaging",
+      "acceptance_criteria": [
+        "UV unwrap/packing preserves corner seams and constraints.",
+        "Texture painting/baking supports sparse tile updates and explicit color roles.",
+        "Multiresolution and declared dynamic-topology workflows preserve valid state and report correspondence loss.",
+        "Long gestures support recovery and practical undo.",
+        "Local stroke/retopology operations meet measured locality and resource budgets."
+      ],
+      "required_evidence": [
+        "uv_paint_report.json",
+        "sculpt_locality_report.json",
+        "gesture_recovery_report.json"
+      ],
+      "exclusions": [
+        "No automatic identity preservation through arbitrary remeshing"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+    },
+    {
+      "id": "M11",
+      "title": "Simulation families",
+      "status": "planned",
+      "dependencies": [
+        "M06",
+        "M07",
+        "M08"
+      ],
+      "owner_role": "Simulation + numerics",
+      "acceptance_criteria": [
+        "Rigid-body, cloth/soft-body, particle/hair, smoke/fire and liquid/meshing subgates each produce a native workflow.",
+        "Analytic/limiting, convergence and stability tests match declared physical models.",
+        "Checkpoint lineage, parameter invalidation and random seeking are correct.",
+        "Budgets and preview/final profile differences are explicit."
+      ],
+      "required_evidence": [
+        "simulation_family_conformance.json",
+        "checkpoint_report.json",
+        "solver_numerics.json"
+      ],
+      "exclusions": [
+        "No non-Rust solver fallback",
+        "No universal bitwise simulation reproducibility"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+    },
+    {
+      "id": "M12",
+      "title": "Compositing, drawing, media and tracking",
+      "status": "planned",
+      "dependencies": [
+        "M07",
+        "M08",
+        "M09"
+      ],
+      "owner_role": "Imaging + drawing + media + tracking",
+      "acceptance_criteria": [
+        "M12A: a typed compositor performs a complete mask/key/grade/pass-combination workflow.",
+        "M12B: timed stroke/fill/layer content is edited and rendered in mixed 2D/3D.",
+        "M12C: sequences/audio are assembled, retimed and exported under approved Rust codec profiles.",
+        "M12D: a camera solve and reconstruction have synthetic-ground-truth and failure diagnostics.",
+        "All subtracks preserve time/color/alpha/coordinate semantics."
+      ],
+      "required_evidence": [
+        "compositor_report.json",
+        "drawing_report.json",
+        "editorial_audio_report.json",
+        "tracking_report.json"
+      ],
+      "exclusions": [
+        "No FFmpeg/OS-codec baseline shortcut",
+        "No schema-only subgate completion"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+    },
+    {
+      "id": "M13",
+      "title": "Interoperability, collaboration and extension hardening",
+      "status": "planned",
+      "dependencies": [
+        "M05",
+        "M06"
+      ],
+      "owner_role": "Interchange + security + API",
+      "acceptance_criteria": [
+        "Expanded format/version/feature profiles include tested loss reports and safe unknown-data handling.",
+        "Native .blend/USD/MaterialX subsets, where included, run without external reference applications.",
+        "Concurrent branches and reviewed merge rules do not silently overwrite changes.",
+        "Plugin permissions, hostile inputs and tenant boundaries pass adversarial tests.",
+        "Supported old clients pass upgrade/downgrade conformance."
+      ],
+      "required_evidence": [
+        "interchange_matrix.json",
+        "collaboration_conflicts.json",
+        "plugin_security_report.json",
+        "client_compatibility.json"
+      ],
+      "exclusions": [
+        "No arbitrary .blend fidelity",
+        "No Python add-on runtime compatibility",
+        "No arbitrary topology CRDT guarantee"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+    },
+    {
+      "id": "M14",
+      "title": "Major-suite conformance and production readiness",
+      "status": "planned",
+      "dependencies": [
+        "M10",
+        "M11",
+        "M12",
+        "M13"
+      ],
+      "owner_role": "Release + all subsystem maintainers",
+      "acceptance_criteria": [
+        "Every published major feature-family workflow passes end-to-end conformance.",
+        "No unresolved release-blocking data-loss, correctness or security defect.",
+        "Language/dependency, platform/backend capability and recovery reports are published.",
+        "Performance profiles, known limitations and migration/export procedures are available.",
+        "Named maintainer roles own the supported capability surfaces."
+      ],
+      "required_evidence": [
+        "release_conformance.json",
+        "release_dependency_inventory.json",
+        "supported_feature_matrix.json",
+        "known_limits.md",
+        "migration_guide.md"
+      ],
+      "exclusions": [
+        "Not every Blender command or add-on",
+        "No unmeasured universal superiority claim"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "scope": "JSON schema shape checks only; no engine implementation or semantic execution was tested.",
+  "schema_valid": true,
+  "positive_example_valid": true,
+  "negative_example_rejected": true,
+  "negative_error": "1.5 is greater than the maximum of 1",
+  "milestone_dependency_graph_acyclic": true,
+  "milestone_count": 15,
+  "initial_backlog_dependency_graph_acyclic": true,
+  "initial_backlog_task_count": 12,
+  "docx_page_count": 32,
+  "docx_internal_navigation_resolves": true,
+  "docx_pages_visually_reviewed": 32,
+  "standalone_markdown_matches_canonical": true,
+  "implementation_tests_run": false
+}

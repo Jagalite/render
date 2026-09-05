@@ -1,0 +1,398 @@
+{
+  "spec_version": "0.1",
+  "status": "planning_only",
+  "features": [
+    {
+      "id": "scene",
+      "family": "Scene/asset assembly",
+      "status": "planned",
+      "first_useful_gate": "M01",
+      "broader_gates": [
+        "M05",
+        "M13"
+      ],
+      "qualification": "Stable IDs, layers, instances, typed attributes",
+      "capability_axes": {
+        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
+        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
+        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
+        "preview": "unimplemented_or_not_applicable_to_be_resolved",
+        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
+        "import": "unimplemented_or_not_applicable_to_be_resolved",
+        "export": "unimplemented_or_not_applicable_to_be_resolved"
+      },
+      "platform_profiles": {
+        "native_desktop": "planned",
+        "browser_local": "planned_with_explicit_resource_limits"
+      },
+      "evidence": []
+    },
+    {
+      "id": "api",
+      "family": "Semantic API/ABI and jobs",
+      "status": "planned",
+      "first_useful_gate": "M02",
+      "broader_gates": [
+        "M05"
+      ],
+      "qualification": "Narrow ABI v1; operation schemas independently versioned",
+      "capability_axes": {
+        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
+        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
+        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
+        "preview": "unimplemented_or_not_applicable_to_be_resolved",
+        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
+        "import": "unimplemented_or_not_applicable_to_be_resolved",
+        "export": "unimplemented_or_not_applicable_to_be_resolved"
+      },
+      "platform_profiles": {
+        "native_desktop": "planned",
+        "browser_local": "planned_with_explicit_resource_limits"
+      },
+      "evidence": []
+    },
+    {
+      "id": "render",
+      "family": "CPU/GPU rendering",
+      "status": "planned",
+      "first_useful_gate": "M03",
+      "broader_gates": [
+        "M04",
+        "M07",
+        "M08"
+      ],
+      "qualification": "Backend capabilities and approximation policy",
+      "capability_axes": {
+        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
+        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
+        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
+        "preview": "unimplemented_or_not_applicable_to_be_resolved",
+        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
+        "import": "unimplemented_or_not_applicable_to_be_resolved",
+        "export": "unimplemented_or_not_applicable_to_be_resolved"
+      },
+      "platform_profiles": {
+        "native_desktop": "planned",
+        "browser_local": "planned_with_explicit_resource_limits"
+      },
+      "evidence": []
+    },
+    {
+      "id": "modeling",
+      "family": "Mesh modeling and modifiers",
+      "status": "planned",
+      "first_useful_gate": "M06",
+      "broader_gates": [
+        "M09",
+        "M10"
+      ],
+      "qualification": "Operator-specific topology and degeneracy restrictions",
+      "capability_axes": {
+        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
+        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
+        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
+        "preview": "unimplemented_or_not_applicable_to_be_resolved",
+        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
+        "import": "unimplemented_or_not_applicable_to_be_resolved",
+        "export": "unimplemented_or_not_applicable_to_be_resolved"
+      },
+      "platform_profiles": {
+        "native_desktop": "planned",
+        "browser_local": "planned_with_explicit_resource_limits"
+      },
+      "evidence": []
+    },
+    {
+      "id": "procedural",
+      "family": "Geometry nodes and fields",
+      "status": "planned",
+      "first_useful_gate": "M06",
+      "broader_gates": [
+        "M08",
+        "M11"
+      ],
+      "qualification": "Field domains, explicit solver/state islands",
+      "capability_axes": {
+        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
+        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
+        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
+        "preview": "unimplemented_or_not_applicable_to_be_resolved",
+        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
+        "import": "unimplemented_or_not_applicable_to_be_resolved",
+        "export": "unimplemented_or_not_applicable_to_be_resolved"
+      },
+      "platform_profiles": {
+        "native_desktop": "planned",
+        "browser_local": "planned_with_explicit_resource_limits"
+      },
+      "evidence": []
+    },
+    {
+      "id": "geometry",
+      "family": "Curves, points, hair and volumes",
+      "status": "planned",
+      "first_useful_gate": "M07",
+      "broader_gates": [
+        "M09",
+        "M11"
+      ],
+      "qualification": "Representation does not imply evaluated/rendered support",
+      "capability_axes": {
+        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
+        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
+        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
+        "preview": "unimplemented_or_not_applicable_to_be_resolved",
+        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
+        "import": "unimplemented_or_not_applicable_to_be_resolved",
+        "export": "unimplemented_or_not_applicable_to_be_resolved"
+      },
+      "platform_profiles": {
+        "native_desktop": "planned",
+        "browser_local": "planned_with_explicit_resource_limits"
+      },
+      "evidence": []
+    },
+    {
+      "id": "materials",
+      "family": "Materials, textures and baking",
+      "status": "planned",
+      "first_useful_gate": "M03",
+      "broader_gates": [
+        "M07",
+        "M10"
+      ],
+      "qualification": "Named shading and color profiles",
+      "capability_axes": {
+        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
+        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
+        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
+        "preview": "unimplemented_or_not_applicable_to_be_resolved",
+        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
+        "import": "unimplemented_or_not_applicable_to_be_resolved",
+        "export": "unimplemented_or_not_applicable_to_be_resolved"
+      },
+      "platform_profiles": {
+        "native_desktop": "planned",
+        "browser_local": "planned_with_explicit_resource_limits"
+      },
+      "evidence": []
+    },
+    {
+      "id": "animation",
+      "family": "Animation and rigging",
+      "status": "planned",
+      "first_useful_gate": "M08",
+      "broader_gates": [
+        "M09",
+        "M14"
+      ],
+      "qualification": "Named clips, constraint and deformation profiles",
+      "capability_axes": {
+        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
+        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
+        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
+        "preview": "unimplemented_or_not_applicable_to_be_resolved",
+        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
+        "import": "unimplemented_or_not_applicable_to_be_resolved",
+        "export": "unimplemented_or_not_applicable_to_be_resolved"
+      },
+      "platform_profiles": {
+        "native_desktop": "planned",
+        "browser_local": "planned_with_explicit_resource_limits"
+      },
+      "evidence": []
+    },
+    {
+      "id": "sculpt",
+      "family": "UV, paint, sculpt and retopology",
+      "status": "planned",
+      "first_useful_gate": "M10",
+      "broader_gates": [
+        "M14"
+      ],
+      "qualification": "Correspondence loss and sparse update policies",
+      "capability_axes": {
+        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
+        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
+        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
+        "preview": "unimplemented_or_not_applicable_to_be_resolved",
+        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
+        "import": "unimplemented_or_not_applicable_to_be_resolved",
+        "export": "unimplemented_or_not_applicable_to_be_resolved"
+      },
+      "platform_profiles": {
+        "native_desktop": "planned",
+        "browser_local": "planned_with_explicit_resource_limits"
+      },
+      "evidence": []
+    },
+    {
+      "id": "simulation",
+      "family": "Simulation families",
+      "status": "planned",
+      "first_useful_gate": "M11",
+      "broader_gates": [
+        "M14"
+      ],
+      "qualification": "Independent solver-family acceptance",
+      "capability_axes": {
+        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
+        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
+        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
+        "preview": "unimplemented_or_not_applicable_to_be_resolved",
+        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
+        "import": "unimplemented_or_not_applicable_to_be_resolved",
+        "export": "unimplemented_or_not_applicable_to_be_resolved"
+      },
+      "platform_profiles": {
+        "native_desktop": "planned",
+        "browser_local": "planned_with_explicit_resource_limits"
+      },
+      "evidence": []
+    },
+    {
+      "id": "compositor",
+      "family": "Compositing",
+      "status": "planned",
+      "first_useful_gate": "M12",
+      "broader_gates": [
+        "M14"
+      ],
+      "qualification": "M12A; typed image/color/alpha/time",
+      "capability_axes": {
+        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
+        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
+        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
+        "preview": "unimplemented_or_not_applicable_to_be_resolved",
+        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
+        "import": "unimplemented_or_not_applicable_to_be_resolved",
+        "export": "unimplemented_or_not_applicable_to_be_resolved"
+      },
+      "platform_profiles": {
+        "native_desktop": "planned",
+        "browser_local": "planned_with_explicit_resource_limits"
+      },
+      "evidence": []
+    },
+    {
+      "id": "drawing",
+      "family": "2D/3D drawing",
+      "status": "planned",
+      "first_useful_gate": "M12",
+      "broader_gates": [
+        "M14"
+      ],
+      "qualification": "M12B; editable stroke intent retained",
+      "capability_axes": {
+        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
+        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
+        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
+        "preview": "unimplemented_or_not_applicable_to_be_resolved",
+        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
+        "import": "unimplemented_or_not_applicable_to_be_resolved",
+        "export": "unimplemented_or_not_applicable_to_be_resolved"
+      },
+      "platform_profiles": {
+        "native_desktop": "planned",
+        "browser_local": "planned_with_explicit_resource_limits"
+      },
+      "evidence": []
+    },
+    {
+      "id": "media",
+      "family": "Video/audio sequencing",
+      "status": "planned",
+      "first_useful_gate": "M12",
+      "broader_gates": [
+        "M14"
+      ],
+      "qualification": "M12C; codec coverage separate from timeline capability",
+      "capability_axes": {
+        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
+        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
+        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
+        "preview": "unimplemented_or_not_applicable_to_be_resolved",
+        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
+        "import": "unimplemented_or_not_applicable_to_be_resolved",
+        "export": "unimplemented_or_not_applicable_to_be_resolved"
+      },
+      "platform_profiles": {
+        "native_desktop": "planned",
+        "browser_local": "planned_with_explicit_resource_limits"
+      },
+      "evidence": []
+    },
+    {
+      "id": "tracking",
+      "family": "Motion tracking and reconstruction",
+      "status": "planned",
+      "first_useful_gate": "M12",
+      "broader_gates": [
+        "M14"
+      ],
+      "qualification": "M12D; actual solve required",
+      "capability_axes": {
+        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
+        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
+        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
+        "preview": "unimplemented_or_not_applicable_to_be_resolved",
+        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
+        "import": "unimplemented_or_not_applicable_to_be_resolved",
+        "export": "unimplemented_or_not_applicable_to_be_resolved"
+      },
+      "platform_profiles": {
+        "native_desktop": "planned",
+        "browser_local": "planned_with_explicit_resource_limits"
+      },
+      "evidence": []
+    },
+    {
+      "id": "interchange",
+      "family": "Native file interoperability",
+      "status": "planned",
+      "first_useful_gate": "M03",
+      "broader_gates": [
+        "M13"
+      ],
+      "qualification": "Per-format/version/feature profiles; no external runtime",
+      "capability_axes": {
+        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
+        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
+        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
+        "preview": "unimplemented_or_not_applicable_to_be_resolved",
+        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
+        "import": "unimplemented_or_not_applicable_to_be_resolved",
+        "export": "unimplemented_or_not_applicable_to_be_resolved"
+      },
+      "platform_profiles": {
+        "native_desktop": "planned",
+        "browser_local": "planned_with_explicit_resource_limits"
+      },
+      "evidence": []
+    },
+    {
+      "id": "collaboration",
+      "family": "Collaboration and plugins",
+      "status": "planned",
+      "first_useful_gate": "M05",
+      "broader_gates": [
+        "M13"
+      ],
+      "qualification": "Branch/revision checks and reviewed merge rules",
+      "capability_axes": {
+        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
+        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
+        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
+        "preview": "unimplemented_or_not_applicable_to_be_resolved",
+        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
+        "import": "unimplemented_or_not_applicable_to_be_resolved",
+        "export": "unimplemented_or_not_applicable_to_be_resolved"
+      },
+      "platform_profiles": {
+        "native_desktop": "planned",
+        "browser_local": "planned_with_explicit_resource_limits"
+      },
+      "evidence": []
+    }
+  ]
+}

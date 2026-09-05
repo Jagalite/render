@@ -1,0 +1,134 @@
+{
+  "spec_version": "0.1",
+  "status": "planned",
+  "tasks": [
+    {
+      "id": "T001",
+      "title": "Establish workspace and runtime dependency gate",
+      "depends_on": [],
+      "owner_role": "Foundation",
+      "acceptance": "Inventory the transitive native linkage and generated-artifact exceptions on native/WASM builds.",
+      "status": "planned"
+    },
+    {
+      "id": "T002",
+      "title": "Specify IDs, units, time and error taxonomy",
+      "depends_on": [
+        "T001"
+      ],
+      "owner_role": "Schema",
+      "acceptance": "Show identity stability under rename/reparent and rational-time conversion test cases.",
+      "status": "planned"
+    },
+    {
+      "id": "T003",
+      "title": "Build canonical mesh and attribute fixtures",
+      "depends_on": [
+        "T002"
+      ],
+      "owner_role": "Geometry",
+      "acceptance": "Include UV seams, loose edges, n-gons, non-manifold adjacency, degenerate and malformed inputs.",
+      "status": "planned"
+    },
+    {
+      "id": "T004",
+      "title": "Compare radial arena topology with alternatives",
+      "depends_on": [
+        "T003"
+      ],
+      "owner_role": "Geometry",
+      "acceptance": "Measure local edits/traversal/memory and reject representations losing required topology.",
+      "status": "planned"
+    },
+    {
+      "id": "T005",
+      "title": "Compare typed chunked revisions, flat tables and ECS",
+      "depends_on": [
+        "T002"
+      ],
+      "owner_role": "Document",
+      "acceptance": "Benchmark load, read, branch, single-property and wide topology changes.",
+      "status": "planned"
+    },
+    {
+      "id": "T006",
+      "title": "Prototype Rust-owned GPU kernel generation",
+      "depends_on": [
+        "T001"
+      ],
+      "owner_role": "Graphics",
+      "acceptance": "Run traversal/scattering kernels on native and browser, with independent analytic tests.",
+      "status": "planned"
+    },
+    {
+      "id": "T007",
+      "title": "Specify transactional/idempotent request behavior",
+      "depends_on": [
+        "T002"
+      ],
+      "owner_role": "API",
+      "acceptance": "Define prepare/commit semantics, authentication scope, retention and conflict/fault tests.",
+      "status": "planned"
+    },
+    {
+      "id": "T008",
+      "title": "Prototype native crash-consistent storage",
+      "depends_on": [
+        "T005",
+        "T007"
+      ],
+      "owner_role": "Storage",
+      "acceptance": "Inject termination at each publication step; recover the last advertised durable revision.",
+      "status": "planned"
+    },
+    {
+      "id": "T009",
+      "title": "Prototype browser storage and execution",
+      "depends_on": [
+        "T005",
+        "T006",
+        "T007"
+      ],
+      "owner_role": "Platform",
+      "acceptance": "Exercise worker/nonshared mode, quota failure, interrupted writes and local export.",
+      "status": "planned"
+    },
+    {
+      "id": "T010",
+      "title": "Build reference CPU intersection and scattering kernels",
+      "depends_on": [
+        "T003"
+      ],
+      "owner_role": "Rendering",
+      "acceptance": "Prove ray edge cases, PDF consistency and energy behavior, without external renderers.",
+      "status": "planned"
+    },
+    {
+      "id": "T011",
+      "title": "Review and accept representation ADRs",
+      "depends_on": [
+        "T004",
+        "T005",
+        "T006",
+        "T008",
+        "T009",
+        "T010"
+      ],
+      "owner_role": "Architecture",
+      "acceptance": "Record comparative evidence, consequences and revisit triggers; reject unproven permanent constraints.",
+      "status": "planned"
+    },
+    {
+      "id": "T012",
+      "title": "Implement a first API-owned scene/render vertical slice",
+      "depends_on": [
+        "T007",
+        "T010",
+        "T011"
+      ],
+      "owner_role": "Integration",
+      "acceptance": "Create/save/reload/render a textured instanced scene with a reproducibility receipt.",
+      "status": "planned"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "test": "binary_mesh_chunks_preserve_precision_and_reject_truncation",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "native_mesh_chunks_deduplicate_and_detect_corruption",
+      "native": "passed",
+      "wasm": "native_only"
+    },
+    {
+      "test": "shared_browser_suite",
+      "native": "passed",
+      "wasm": "passed"
+    }
+  ],
+  "sources": [
+    "validation_report.json",
+    "logs/native_tests.txt",
+    "logs/wasm_tests.txt"
+  ],
+  "test_source": "../../crates/core/tests/conformance.rs"
+}

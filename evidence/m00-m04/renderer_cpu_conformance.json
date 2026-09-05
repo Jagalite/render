@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "test": "renderer_reuses_geometry_after_transform",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "triangle_bvh_and_parallel_slab_analytic",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "diffuse_energy_pdf_and_sample_mean",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "empty_scene_environment_is_analytic",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "diffuse_plane_radiance_matches_analytic_solution",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "unsupported_scattering_is_diagnosed",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "render_reproducibility_and_color_boundaries",
+      "native": "passed",
+      "wasm": "passed"
+    }
+  ],
+  "sources": [
+    "validation_report.json",
+    "logs/native_tests.txt",
+    "logs/wasm_tests.txt"
+  ],
+  "test_source": "../../crates/core/tests/conformance.rs"
+}

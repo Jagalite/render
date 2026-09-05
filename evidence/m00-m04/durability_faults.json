@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "test": "durable_failure_quota_recovery_and_idempotency",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "journal_sequence_is_checked",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "native_publication_fault_boundaries",
+      "native": "passed",
+      "wasm": "native_only"
+    },
+    {
+      "test": "process_termination_recovers_committed_root",
+      "native": "passed",
+      "wasm": "native_only"
+    },
+    {
+      "test": "native_mesh_chunks_deduplicate_and_detect_corruption",
+      "native": "passed",
+      "wasm": "native_only"
+    },
+    {
+      "test": "durable_retry_publishes_to_the_requested_store",
+      "native": "passed",
+      "wasm": "passed"
+    }
+  ],
+  "sources": [
+    "validation_report.json",
+    "logs/native_tests.txt",
+    "logs/wasm_tests.txt"
+  ],
+  "test_source": "../../crates/core/tests/conformance.rs",
+  "native_process_termination_boundaries": [
+    "AfterWrite",
+    "AfterFileSync",
+    "AfterRename",
+    "AfterDirectorySync"
+  ],
+  "acknowledgment_policy": "Before rename: old root; after rename: new valid root may exist despite lost acknowledgment. Recover and retry the same key."
+}

@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "test": "identity_and_rational_time",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "canonical_order_independent_of_table_layout",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "snapshots_copy_only_changed_entity_chunk",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "negative_shear_parent_and_layer_semantics",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "ordered_transform_channels_and_external_texture",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "shared_browser_suite",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "later_layer_restores_hidden_geometry",
+      "native": "passed",
+      "wasm": "passed"
+    }
+  ],
+  "sources": [
+    "validation_report.json",
+    "logs/native_tests.txt",
+    "logs/wasm_tests.txt"
+  ],
+  "test_source": "../../crates/core/tests/conformance.rs"
+}

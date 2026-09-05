@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "test": "retries_wire_permissions_and_budgets",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "durable_failure_quota_recovery_and_idempotency",
+      "native": "passed",
+      "wasm": "passed"
+    }
+  ],
+  "sources": [
+    "validation_report.json",
+    "logs/native_tests.txt",
+    "logs/wasm_tests.txt"
+  ],
+  "test_source": "../../crates/core/tests/conformance.rs"
+}

@@ -1,6 +1,6 @@
 # Architecture decision register
 
-All decisions are **proposed baselines**, subject to their evidence gates. See the full specification for consequences.
+The initial proposals are preserved below. M00–M04 decisions, supporting measurements, accepted limitations and revisit triggers are recorded in [accepted foundation ADRs](../evidence/m00-m04/accepted_ADRs.md). Decisions outside the demonstrated foundation remain proposed. See the full specification for consequences.
 
 ## ADR-001 — Fully Rust production implementation
 
@@ -97,4 +97,3 @@ All decisions are **proposed baselines**, subject to their evidence gates. See t
 **Rejected baseline:** Editor-only mutable state paths.
 
 **Revisit trigger:** A measured interaction bottleneck requires a faster transport, not bypassing semantics.
-

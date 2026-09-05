@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "abi_version": 0,
+  "independent_client": "Python ctypes",
+  "checks": [
+    "version negotiation",
+    "structure size",
+    "buffer ownership",
+    "capacity bounds",
+    "released buffer",
+    "create/inspect/transaction",
+    "idempotent retry",
+    "stale engine",
+    "registry"
+  ],
+  "durability": "memory-only alpha"
+}

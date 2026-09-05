@@ -1,81 +1,94 @@
 {
   "spec_version": "0.1",
-  "status": "planning_only",
+  "status": "foundation_profiles_validated",
   "features": [
     {
       "id": "scene",
       "family": "Scene/asset assembly",
-      "status": "planned",
+      "status": "implemented_experimental_profile",
       "first_useful_gate": "M01",
       "broader_gates": [
         "M05",
         "M13"
       ],
-      "qualification": "Stable IDs, layers, instances, typed attributes",
+      "qualification": "Polygon document/instance/layer foundation v0; no full editor or advanced geometry.",
       "capability_axes": {
-        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
-        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
-        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
-        "preview": "unimplemented_or_not_applicable_to_be_resolved",
-        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
-        "import": "unimplemented_or_not_applicable_to_be_resolved",
-        "export": "unimplemented_or_not_applicable_to_be_resolved"
+        "native_authoring": "implemented_api_v0",
+        "native_evaluation": "implemented_polygon_profile",
+        "final_render": "implemented_diffuse_profile",
+        "preview": "implemented_approximate_raster",
+        "human_editing": "planned_M09",
+        "import": "canonical_json_and_scoped_mesh_codecs",
+        "export": "canonical_json_and_native_package"
       },
       "platform_profiles": {
-        "native_desktop": "planned",
-        "browser_local": "planned_with_explicit_resource_limits"
+        "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
+        "browser_local": "validated_chromium_webgpu_wasm_core; negotiated_resource_limits"
       },
-      "evidence": []
+      "evidence": [
+        "evidence/m00-m04/document_conformance.json",
+        "evidence/m00-m04/geometry_invariants.json",
+        "evidence/m00-m04/roundtrip_report.json"
+      ]
     },
     {
       "id": "api",
       "family": "Semantic API/ABI and jobs",
-      "status": "planned",
+      "status": "implemented_experimental_profile",
       "first_useful_gate": "M02",
       "broader_gates": [
         "M05"
       ],
-      "qualification": "Narrow ABI v1; operation schemas independently versioned",
+      "qualification": "Trusted local API and ABI alpha v0. Native durable jobs; ABI v1 remains M05.",
       "capability_axes": {
-        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
-        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
-        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
-        "preview": "unimplemented_or_not_applicable_to_be_resolved",
-        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
-        "import": "unimplemented_or_not_applicable_to_be_resolved",
-        "export": "unimplemented_or_not_applicable_to_be_resolved"
+        "native_authoring": "implemented_transactions_v0",
+        "native_evaluation": "implemented_inspect_candidates",
+        "final_render": "implemented_native_cpu_jobs",
+        "preview": "implemented_candidates_and_render_api",
+        "human_editing": "planned_M09",
+        "import": "version_0_requests_and_staged_mesh_uploads",
+        "export": "receipts_deltas_events_and_document"
       },
       "platform_profiles": {
-        "native_desktop": "planned",
-        "browser_local": "planned_with_explicit_resource_limits"
+        "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
+        "browser_local": "validated_document_candidates_render_export; shared_job_state_machine_only; no_durable_browser_job_worker"
       },
-      "evidence": []
+      "evidence": [
+        "evidence/m00-m04/api_conformance.json",
+        "evidence/m00-m04/durability_faults.json",
+        "evidence/m00-m04/abi_conformance.json",
+        "evidence/m00-m04/job_host_conformance.json"
+      ]
     },
     {
       "id": "render",
       "family": "CPU/GPU rendering",
-      "status": "planned",
+      "status": "implemented_experimental_profile",
       "first_useful_gate": "M03",
       "broader_gates": [
         "M04",
         "M07",
         "M08"
       ],
-      "qualification": "Backend capabilities and approximation policy",
+      "qualification": "CPU bounded finite-depth diffuse; GPU one-bounce diffuse; approximate raster. Oversized and unsupported profiles reject explicitly.",
       "capability_axes": {
-        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
-        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
-        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
-        "preview": "unimplemented_or_not_applicable_to_be_resolved",
-        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
-        "import": "unimplemented_or_not_applicable_to_be_resolved",
-        "export": "unimplemented_or_not_applicable_to_be_resolved"
+        "native_authoring": "implemented_scene_settings_v0",
+        "native_evaluation": "implemented_triangle_and_instance_bvh",
+        "final_render": "implemented_cpu_and_gpu_diffuse_profiles",
+        "preview": "implemented_approximate_raster",
+        "human_editing": "planned_M09",
+        "import": "scoped_mesh_and_ppm_texture",
+        "export": "ppm_pfm_passes_receipts"
       },
       "platform_profiles": {
-        "native_desktop": "planned",
-        "browser_local": "planned_with_explicit_resource_limits"
+        "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
+        "browser_local": "validated_chromium_webgpu_wasm_core; negotiated_resource_limits"
       },
-      "evidence": []
+      "evidence": [
+        "evidence/m00-m04/renderer_cpu_conformance.json",
+        "evidence/m00-m04/cross_backend_report.json",
+        "evidence/m00-m04/gpu_fault_report.json"
+      ]
     },
     {
       "id": "modeling",
@@ -155,27 +168,30 @@
     {
       "id": "materials",
       "family": "Materials, textures and baking",
-      "status": "planned",
+      "status": "implemented_experimental_profile",
       "first_useful_gate": "M03",
       "broader_gates": [
         "M07",
         "M10"
       ],
-      "qualification": "Named shading and color profiles",
+      "qualification": "Lambertian albedo/emission with nearest repeat textures. Rendering requires metallic=0, roughness=1. Baking and advanced shading remain planned.",
       "capability_axes": {
-        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
-        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
-        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
-        "preview": "unimplemented_or_not_applicable_to_be_resolved",
-        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
-        "import": "unimplemented_or_not_applicable_to_be_resolved",
-        "export": "unimplemented_or_not_applicable_to_be_resolved"
+        "native_authoring": "implemented_material_v0",
+        "native_evaluation": "implemented_lambertian",
+        "final_render": "implemented_lambertian",
+        "preview": "implemented_flat_approximation",
+        "human_editing": "planned_M09",
+        "import": "ppm_srgb_textures",
+        "export": "canonical_material_json"
       },
       "platform_profiles": {
-        "native_desktop": "planned",
-        "browser_local": "planned_with_explicit_resource_limits"
+        "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
+        "browser_local": "validated_chromium_webgpu_wasm_core; negotiated_resource_limits"
       },
-      "evidence": []
+      "evidence": [
+        "evidence/m00-m04/renderer_cpu_conformance.json",
+        "evidence/m00-m04/cross_backend_report.json"
+      ]
     },
     {
       "id": "animation",
@@ -349,26 +365,28 @@
     {
       "id": "interchange",
       "family": "Native file interoperability",
-      "status": "planned",
+      "status": "implemented_experimental_profile",
       "first_useful_gate": "M03",
       "broader_gates": [
         "M13"
       ],
-      "qualification": "Per-format/version/feature profiles; no external runtime",
+      "qualification": "OBJ polygons/corner UVs/loose lines; glTF 2.0 mesh-only nonindexed static triangles; explicit unsupported features and losses.",
       "capability_axes": {
-        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
-        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
-        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
-        "preview": "unimplemented_or_not_applicable_to_be_resolved",
-        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
-        "import": "unimplemented_or_not_applicable_to_be_resolved",
-        "export": "unimplemented_or_not_applicable_to_be_resolved"
+        "native_authoring": "not_applicable_adapter",
+        "native_evaluation": "implemented_mesh_conversion",
+        "final_render": "supported_imported_mesh_profile",
+        "preview": "supported_imported_mesh_profile",
+        "human_editing": "planned_M09",
+        "import": "implemented_named_OBJ_glTF_PPM_profiles",
+        "export": "implemented_named_OBJ_glTF_profiles"
       },
       "platform_profiles": {
-        "native_desktop": "planned",
-        "browser_local": "planned_with_explicit_resource_limits"
+        "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
+        "browser_local": "shared_WASM_codec_conformance; no_browser_file_picker_workflow"
       },
-      "evidence": []
+      "evidence": [
+        "evidence/m00-m04/interchange_profile_report.json"
+      ]
     },
     {
       "id": "collaboration",
@@ -394,5 +412,6 @@
       },
       "evidence": []
     }
-  ]
+  ],
+  "profile_document": "docs/implementation.md"
 }

@@ -1,0 +1,542 @@
+{
+  "build_ms": {
+    "chunked": 5.9832920000000005,
+    "flat": 1.430458,
+    "hecs": 2.8362499999999997
+  },
+  "limitations": [
+    "wall-clock measurements; no allocator instrumentation",
+    "hecs component cloning reconstructs runtime handles; persistent IDs are preserved",
+    "small nonmanifold topology fixture; not the five-million-corner stress gate"
+  ],
+  "profile": {
+    "architecture": "aarch64",
+    "entities": 10000,
+    "hecs_version": "0.10.5",
+    "optimized": true,
+    "os": "macos",
+    "repetitions": 20
+  },
+  "radial": {
+    "construction_ms": 0.018666000000000002,
+    "dense_scan_ms": 0.063583,
+    "manifold_candidate_accepts": false,
+    "nonmanifold_faces": 3,
+    "radial_adjacency_ms": 0.007958999999999999
+  },
+  "samples": [
+    {
+      "chunked": {
+        "branch_ms": 0.220125,
+        "edit_ms": 0.02775,
+        "traverse_ms": 0.112875,
+        "wide_ms": 4.354,
+        "wide_topology_references_ms": 1.9376669999999998
+      },
+      "flat": {
+        "branch_ms": 1.82775,
+        "edit_ms": 0.000625,
+        "traverse_ms": 0.030750000000000003,
+        "wide_ms": 0.7885,
+        "wide_topology_references_ms": 0.836042
+      },
+      "hecs": {
+        "branch_ms": 3.533042,
+        "edit_ms": 0.0006670000000000001,
+        "traverse_ms": 0.028209,
+        "wide_ms": 0.597792,
+        "wide_topology_references_ms": 0.796666
+      }
+    },
+    {
+      "chunked": {
+        "branch_ms": 0.2205,
+        "edit_ms": 0.020458,
+        "traverse_ms": 0.034625,
+        "wide_ms": 3.141166,
+        "wide_topology_references_ms": 1.580084
+      },
+      "flat": {
+        "branch_ms": 1.206083,
+        "edit_ms": 0.000792,
+        "traverse_ms": 0.0195,
+        "wide_ms": 0.51975,
+        "wide_topology_references_ms": 0.623709
+      },
+      "hecs": {
+        "branch_ms": 2.663625,
+        "edit_ms": 0.000958,
+        "traverse_ms": 0.026250000000000002,
+        "wide_ms": 0.5866250000000001,
+        "wide_topology_references_ms": 0.7511249999999999
+      }
+    },
+    {
+      "chunked": {
+        "branch_ms": 0.108375,
+        "edit_ms": 0.0155,
+        "traverse_ms": 0.04,
+        "wide_ms": 3.143584,
+        "wide_topology_references_ms": 1.5341669999999998
+      },
+      "flat": {
+        "branch_ms": 1.402084,
+        "edit_ms": 0.0006670000000000001,
+        "traverse_ms": 0.029124999999999998,
+        "wide_ms": 0.5894999999999999,
+        "wide_topology_references_ms": 0.62625
+      },
+      "hecs": {
+        "branch_ms": 2.394916,
+        "edit_ms": 0.000541,
+        "traverse_ms": 0.022167,
+        "wide_ms": 0.554875,
+        "wide_topology_references_ms": 0.648292
+      }
+    },
+    {
+      "chunked": {
+        "branch_ms": 0.131167,
+        "edit_ms": 0.035709,
+        "traverse_ms": 0.033583,
+        "wide_ms": 2.7534159999999996,
+        "wide_topology_references_ms": 1.3215
+      },
+      "flat": {
+        "branch_ms": 1.202875,
+        "edit_ms": 0.000458,
+        "traverse_ms": 0.031792,
+        "wide_ms": 0.454542,
+        "wide_topology_references_ms": 0.532
+      },
+      "hecs": {
+        "branch_ms": 2.5399160000000003,
+        "edit_ms": 0.007,
+        "traverse_ms": 0.027625,
+        "wide_ms": 0.451041,
+        "wide_topology_references_ms": 0.5535829999999999
+      }
+    },
+    {
+      "chunked": {
+        "branch_ms": 0.087709,
+        "edit_ms": 0.011625,
+        "traverse_ms": 0.015375000000000002,
+        "wide_ms": 2.3700829999999997,
+        "wide_topology_references_ms": 1.641667
+      },
+      "flat": {
+        "branch_ms": 1.043541,
+        "edit_ms": 0.000583,
+        "traverse_ms": 0.017124999999999998,
+        "wide_ms": 0.453083,
+        "wide_topology_references_ms": 0.55
+      },
+      "hecs": {
+        "branch_ms": 2.109083,
+        "edit_ms": 0.0022919999999999998,
+        "traverse_ms": 0.036125,
+        "wide_ms": 0.458791,
+        "wide_topology_references_ms": 0.556084
+      }
+    },
+    {
+      "chunked": {
+        "branch_ms": 0.089292,
+        "edit_ms": 0.010459,
+        "traverse_ms": 0.040417,
+        "wide_ms": 2.487375,
+        "wide_topology_references_ms": 1.5464579999999999
+      },
+      "flat": {
+        "branch_ms": 1.361875,
+        "edit_ms": 0.0006659999999999999,
+        "traverse_ms": 0.019167,
+        "wide_ms": 0.525875,
+        "wide_topology_references_ms": 0.661208
+      },
+      "hecs": {
+        "branch_ms": 2.4745,
+        "edit_ms": 0.000958,
+        "traverse_ms": 0.027834,
+        "wide_ms": 0.5827920000000001,
+        "wide_topology_references_ms": 0.645959
+      }
+    },
+    {
+      "chunked": {
+        "branch_ms": 0.109083,
+        "edit_ms": 0.012291,
+        "traverse_ms": 0.021958,
+        "wide_ms": 2.9562910000000002,
+        "wide_topology_references_ms": 1.548875
+      },
+      "flat": {
+        "branch_ms": 1.193541,
+        "edit_ms": 0.000458,
+        "traverse_ms": 0.019458,
+        "wide_ms": 0.5345420000000001,
+        "wide_topology_references_ms": 0.625625
+      },
+      "hecs": {
+        "branch_ms": 2.4247919999999996,
+        "edit_ms": 0.0015,
+        "traverse_ms": 0.024457999999999997,
+        "wide_ms": 0.528459,
+        "wide_topology_references_ms": 0.644458
+      }
+    },
+    {
+      "chunked": {
+        "branch_ms": 0.093375,
+        "edit_ms": 0.016375,
+        "traverse_ms": 0.031875,
+        "wide_ms": 2.6692500000000003,
+        "wide_topology_references_ms": 1.315
+      },
+      "flat": {
+        "branch_ms": 1.0847090000000001,
+        "edit_ms": 0.0005,
+        "traverse_ms": 0.040083999999999995,
+        "wide_ms": 0.477042,
+        "wide_topology_references_ms": 0.533208
+      },
+      "hecs": {
+        "branch_ms": 2.2039579999999996,
+        "edit_ms": 0.001083,
+        "traverse_ms": 0.021167,
+        "wide_ms": 0.450542,
+        "wide_topology_references_ms": 0.899125
+      }
+    },
+    {
+      "chunked": {
+        "branch_ms": 0.10612500000000001,
+        "edit_ms": 0.013417,
+        "traverse_ms": 0.047459,
+        "wide_ms": 3.625,
+        "wide_topology_references_ms": 1.5437910000000001
+      },
+      "flat": {
+        "branch_ms": 1.434125,
+        "edit_ms": 0.000958,
+        "traverse_ms": 0.038541000000000006,
+        "wide_ms": 0.5852080000000001,
+        "wide_topology_references_ms": 0.63375
+      },
+      "hecs": {
+        "branch_ms": 2.458958,
+        "edit_ms": 0.00125,
+        "traverse_ms": 0.025417000000000002,
+        "wide_ms": 0.528542,
+        "wide_topology_references_ms": 0.6456670000000001
+      }
+    },
+    {
+      "chunked": {
+        "branch_ms": 0.1015,
+        "edit_ms": 0.012084,
+        "traverse_ms": 0.043708000000000004,
+        "wide_ms": 3.1029999999999998,
+        "wide_topology_references_ms": 1.339083
+      },
+      "flat": {
+        "branch_ms": 1.593458,
+        "edit_ms": 0.001,
+        "traverse_ms": 0.038167,
+        "wide_ms": 0.527542,
+        "wide_topology_references_ms": 0.548083
+      },
+      "hecs": {
+        "branch_ms": 2.516208,
+        "edit_ms": 0.00125,
+        "traverse_ms": 0.024708,
+        "wide_ms": 0.453458,
+        "wide_topology_references_ms": 0.722625
+      }
+    },
+    {
+      "chunked": {
+        "branch_ms": 0.088792,
+        "edit_ms": 0.010542,
+        "traverse_ms": 0.016125,
+        "wide_ms": 2.343417,
+        "wide_topology_references_ms": 1.667875
+      },
+      "flat": {
+        "branch_ms": 0.9975419999999999,
+        "edit_ms": 0.00029099999999999997,
+        "traverse_ms": 0.021584,
+        "wide_ms": 0.452292,
+        "wide_topology_references_ms": 0.658791
+      },
+      "hecs": {
+        "branch_ms": 2.527208,
+        "edit_ms": 0.001333,
+        "traverse_ms": 0.057374999999999995,
+        "wide_ms": 0.555292,
+        "wide_topology_references_ms": 0.6773750000000001
+      }
+    },
+    {
+      "chunked": {
+        "branch_ms": 0.103167,
+        "edit_ms": 0.012041999999999999,
+        "traverse_ms": 0.0315,
+        "wide_ms": 3.059583,
+        "wide_topology_references_ms": 1.852834
+      },
+      "flat": {
+        "branch_ms": 1.1872079999999998,
+        "edit_ms": 0.000542,
+        "traverse_ms": 0.026542,
+        "wide_ms": 0.5467500000000001,
+        "wide_topology_references_ms": 0.766667
+      },
+      "hecs": {
+        "branch_ms": 2.518333,
+        "edit_ms": 0.001083,
+        "traverse_ms": 0.025792,
+        "wide_ms": 0.541167,
+        "wide_topology_references_ms": 0.809667
+      }
+    },
+    {
+      "chunked": {
+        "branch_ms": 0.105417,
+        "edit_ms": 0.011667,
+        "traverse_ms": 0.018292,
+        "wide_ms": 2.751542,
+        "wide_topology_references_ms": 1.5367499999999998
+      },
+      "flat": {
+        "branch_ms": 1.3619999999999999,
+        "edit_ms": 0.000417,
+        "traverse_ms": 0.019375,
+        "wide_ms": 0.52325,
+        "wide_topology_references_ms": 0.7006249999999999
+      },
+      "hecs": {
+        "branch_ms": 2.401833,
+        "edit_ms": 0.000833,
+        "traverse_ms": 0.023625,
+        "wide_ms": 0.535958,
+        "wide_topology_references_ms": 0.6514580000000001
+      }
+    },
+    {
+      "chunked": {
+        "branch_ms": 0.089625,
+        "edit_ms": 0.010209,
+        "traverse_ms": 0.015709,
+        "wide_ms": 2.535792,
+        "wide_topology_references_ms": 1.373125
+      },
+      "flat": {
+        "branch_ms": 0.9958750000000001,
+        "edit_ms": 0.00025,
+        "traverse_ms": 0.014709,
+        "wide_ms": 0.45237499999999997,
+        "wide_topology_references_ms": 0.539917
+      },
+      "hecs": {
+        "branch_ms": 2.04425,
+        "edit_ms": 0.000875,
+        "traverse_ms": 0.018167,
+        "wide_ms": 0.45825,
+        "wide_topology_references_ms": 0.56575
+      }
+    },
+    {
+      "chunked": {
+        "branch_ms": 0.094625,
+        "edit_ms": 0.00975,
+        "traverse_ms": 0.036042,
+        "wide_ms": 2.8635,
+        "wide_topology_references_ms": 1.324916
+      },
+      "flat": {
+        "branch_ms": 1.0752089999999999,
+        "edit_ms": 0.000542,
+        "traverse_ms": 0.050167,
+        "wide_ms": 0.46037500000000003,
+        "wide_topology_references_ms": 0.5379579999999999
+      },
+      "hecs": {
+        "branch_ms": 2.6395,
+        "edit_ms": 0.001084,
+        "traverse_ms": 0.032458,
+        "wide_ms": 0.509292,
+        "wide_topology_references_ms": 0.5730000000000001
+      }
+    },
+    {
+      "chunked": {
+        "branch_ms": 0.09112500000000001,
+        "edit_ms": 0.010292,
+        "traverse_ms": 0.016125,
+        "wide_ms": 2.361667,
+        "wide_topology_references_ms": 1.350667
+      },
+      "flat": {
+        "branch_ms": 0.9902500000000001,
+        "edit_ms": 0.000292,
+        "traverse_ms": 0.01575,
+        "wide_ms": 0.447625,
+        "wide_topology_references_ms": 0.717958
+      },
+      "hecs": {
+        "branch_ms": 2.263042,
+        "edit_ms": 0.0012920000000000002,
+        "traverse_ms": 0.050124999999999996,
+        "wide_ms": 0.78875,
+        "wide_topology_references_ms": 0.574625
+      }
+    },
+    {
+      "chunked": {
+        "branch_ms": 0.10975,
+        "edit_ms": 0.013042,
+        "traverse_ms": 0.057374999999999995,
+        "wide_ms": 3.429625,
+        "wide_topology_references_ms": 2.248542
+      },
+      "flat": {
+        "branch_ms": 1.635167,
+        "edit_ms": 0.0038330000000000005,
+        "traverse_ms": 0.029042000000000002,
+        "wide_ms": 0.523666,
+        "wide_topology_references_ms": 0.65525
+      },
+      "hecs": {
+        "branch_ms": 2.6795,
+        "edit_ms": 0.001916,
+        "traverse_ms": 0.06966699999999999,
+        "wide_ms": 1.3372080000000002,
+        "wide_topology_references_ms": 1.5005000000000002
+      }
+    },
+    {
+      "chunked": {
+        "branch_ms": 0.102167,
+        "edit_ms": 0.01275,
+        "traverse_ms": 0.024791,
+        "wide_ms": 2.762292,
+        "wide_topology_references_ms": 1.622042
+      },
+      "flat": {
+        "branch_ms": 1.156417,
+        "edit_ms": 0.0005,
+        "traverse_ms": 0.027042,
+        "wide_ms": 0.526625,
+        "wide_topology_references_ms": 0.6275000000000001
+      },
+      "hecs": {
+        "branch_ms": 2.489042,
+        "edit_ms": 0.00175,
+        "traverse_ms": 0.040791999999999995,
+        "wide_ms": 0.536875,
+        "wide_topology_references_ms": 0.656042
+      }
+    },
+    {
+      "chunked": {
+        "branch_ms": 0.107042,
+        "edit_ms": 0.012,
+        "traverse_ms": 0.022583,
+        "wide_ms": 2.81725,
+        "wide_topology_references_ms": 1.537583
+      },
+      "flat": {
+        "branch_ms": 1.1715829999999998,
+        "edit_ms": 0.000334,
+        "traverse_ms": 0.018334,
+        "wide_ms": 0.530459,
+        "wide_topology_references_ms": 0.671875
+      },
+      "hecs": {
+        "branch_ms": 2.49075,
+        "edit_ms": 0.001042,
+        "traverse_ms": 0.023541,
+        "wide_ms": 0.529625,
+        "wide_topology_references_ms": 0.646709
+      }
+    },
+    {
+      "chunked": {
+        "branch_ms": 0.116,
+        "edit_ms": 0.0125,
+        "traverse_ms": 0.0435,
+        "wide_ms": 3.9021250000000003,
+        "wide_topology_references_ms": 1.562625
+      },
+      "flat": {
+        "branch_ms": 1.158208,
+        "edit_ms": 0.000458,
+        "traverse_ms": 0.020584,
+        "wide_ms": 0.522375,
+        "wide_topology_references_ms": 0.646542
+      },
+      "hecs": {
+        "branch_ms": 2.372167,
+        "edit_ms": 0.0007080000000000001,
+        "traverse_ms": 0.023417,
+        "wide_ms": 0.5306249999999999,
+        "wide_topology_references_ms": 0.706541
+      }
+    }
+  ],
+  "status": "measured",
+  "topology_workload": {
+    "binary_load_ms": 4.394875000000001,
+    "binary_mesh_bytes": 1287343,
+    "connectivity_capacity_bytes_excluding_mesh_and_allocator": 14543880,
+    "corners": 40000,
+    "dense_wide_move_and_validation_ms": 2.952959,
+    "edit_commit_validation_ms": 7.419167,
+    "edit_conversion_ms": 11.576457999999999,
+    "evaluated_triangulation_ms": 3.7734579999999998,
+    "faces": 10000,
+    "local_move_ms": 0.001083,
+    "triangles": 20000,
+    "wide_move_ms": 0.20149999999999998,
+    "wide_result_equal": true
+  },
+  "wide_topology": {
+    "from_faces": 1,
+    "geometry_shared": true,
+    "instances": 10000,
+    "original_branch_unchanged": true,
+    "replacement_asset_build_ms": 0.006,
+    "scope": "asset replacement and reference updates, not a general modeling operator",
+    "to_faces": 2
+  },
+  "sharing_measurement": {
+    "flat": {
+      "branch_ms": 5.930042,
+      "single_edit_us": 4.041
+    },
+    "generic_ecs_comparison": "run cargo run --release -p render-host --example m00; representation_comparison.json",
+    "memory_allocated_bytes": "not measured; sharing counts only",
+    "profile": {
+      "build": "see validation command; debug unless --release",
+      "entities": 10000,
+      "host": "aarch64",
+      "os": "macos"
+    },
+    "radial": {
+      "construction_us": 82.916,
+      "manifold_only_accepts": false,
+      "max_incident_faces": 3
+    },
+    "status": "supplemental sharing measurement",
+    "typed_chunked": {
+      "branch_ms": 2.600792,
+      "build_ms": 161.801917,
+      "chunks": 157,
+      "shared_chunks_after_edit": 156,
+      "single_edit_us": 42.458
+    }
+  },
+  "process_resource_log": "logs/representation_benchmark.txt"
+}

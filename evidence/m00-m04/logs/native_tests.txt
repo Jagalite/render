@@ -1,0 +1,122 @@
+    Blocking waiting for file lock on artifact directory
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/crates/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.57s
+     Running unittests src/lib.rs (target/debug/deps/render_core-3d4cd576ee34b54c)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/conformance.rs (target/debug/deps/conformance-91867c114d9c2940)
+
+running 35 tests
+test cancelled_jobs_release_queue_capacity_and_retries_preserve_events ... ok
+test concave_polygon_area_and_degeneracy ... ok
+test canonical_order_independent_of_table_layout ... ok
+test empty_scene_environment_is_analytic ... ok
+test diffuse_energy_pdf_and_sample_mean ... ok
+test identity_and_rational_time ... ok
+test jobs_events_cancellation_and_recovery ... ok
+test foreign_edit_handle_and_hostile_accessor_are_rejected ... ok
+test malformed_topology_rejected ... ok
+test diffuse_plane_radiance_matches_analytic_solution ... ok
+test mesh_preserves_seams_and_loose_elements ... ok
+test journal_sequence_is_checked ... ok
+test durable_host_metadata_cannot_be_overwritten_by_stale_snapshot ... ok
+test obj_and_gltf_profiles_roundtrip ... ok
+test ordered_transform_channels_and_external_texture ... ok
+test durable_retry_publishes_to_the_requested_store ... ok
+test negative_shear_parent_and_layer_semantics ... ok
+test radial_nonmanifold_and_generation_safety ... ok
+test later_layer_restores_hidden_geometry ... ok
+test binary_mesh_chunks_preserve_precision_and_reject_truncation ... ok
+test durable_failure_quota_recovery_and_idempotency ... ok
+test render_reproducibility_and_color_boundaries ... ok
+test snapshots_copy_only_changed_entity_chunk ... ok
+test staged_upload_permissions_checksums_and_budget ... ok
+test storage_crash_child ... ok
+test renderer_reuses_geometry_after_transform ... ok
+test triangle_bvh_and_parallel_slab_analytic ... ok
+test shared_browser_suite ... ok
+test retries_wire_permissions_and_budgets ... ok
+test transactions_are_atomic_and_revision_checked ... ok
+test unsupported_scattering_is_diagnosed ... ok
+
+running 1 test
+test native_mesh_chunks_deduplicate_and_detect_corruption ... ok
+
+running 1 test
+
+running 1 test
+test native_publication_fault_boundaries ... ok
+
+running 1 test
+test process_termination_recovers_committed_root ... ok
+test prepared_noop_candidates_cannot_overfill_retention ... ok
+
+test result: ok. 35 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 11.87s
+
+     Running unittests src/lib.rs (target/debug/deps/render_ffi-1af3f5743127fa7b)
+
+running 1 test
+test tests::lifecycle_and_stale_buffers ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/render_gpu-c1746ab4c88794fc)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/render_host-712c48d1bc22bd34)
+
+running 3 tests
+test job_host::tests::second_host_cannot_recover_an_active_worker ... ok
+test job_host::tests::jobs_pin_the_document_written_through_the_project_api ... ok
+test job_host::tests::durable_jobs_survive_reopen_and_cancel ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.47s
+
+     Running unittests src/lib.rs (target/debug/deps/render_kernel-599c3950728f35ef)
+
+running 1 test
+test path::tests::generated_traversal_and_shading_validate ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running unittests src/lib.rs (target/debug/deps/render_web-3b5775c23dadc656)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests render_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+   Doc-tests render_ffi
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests render_gpu
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests render_kernel
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests render_web
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

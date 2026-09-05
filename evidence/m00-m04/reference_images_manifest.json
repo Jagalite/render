@@ -1,0 +1,45 @@
+{
+  "artifacts": [
+    {
+      "path": "reference.ppm",
+      "bytes": 4621,
+      "sha256": "5682ac54f8b2694b2f90eef779aba4c34c383b09ec8359c4b0d492d69319845d",
+      "role": "observed output; analytic tests are the oracle, not an auto-updated golden"
+    },
+    {
+      "path": "reference.pfm",
+      "bytes": 18446,
+      "sha256": "0ce59a1f249fc1091a4afddb17d2e31e2c910680f358ca924ef0c1b468bcd09b",
+      "role": "observed output; analytic tests are the oracle, not an auto-updated golden"
+    },
+    {
+      "path": "gpu.ppm",
+      "bytes": 4621,
+      "sha256": "5682ac54f8b2694b2f90eef779aba4c34c383b09ec8359c4b0d492d69319845d",
+      "role": "observed output; analytic tests are the oracle, not an auto-updated golden"
+    },
+    {
+      "path": "gpu.pfm",
+      "bytes": 18446,
+      "sha256": "8cf037330b17fadee0922042f22bca988bc2afbeb3606b2bfda35838536370bf",
+      "role": "observed output; analytic tests are the oracle, not an auto-updated golden"
+    },
+    {
+      "path": "raster.ppm",
+      "bytes": 4621,
+      "sha256": "b8ef942f05c220e82edd29571f633387dbead65fdaca9cbb8852d8f24c332be7",
+      "role": "observed output; analytic tests are the oracle, not an auto-updated golden"
+    },
+    {
+      "path": "browser.png",
+      "bytes": 197565,
+      "sha256": "b462d623d1c0b578125efc3b98ab20d8e8acd677a5b253cd61ca94fc85c12e37",
+      "role": "observed output; analytic tests are the oracle, not an auto-updated golden"
+    }
+  ],
+  "fixture": "crates/core/src/fixtures.rs::demo",
+  "commands": [
+    "target/debug/render-host verify artifacts/evidence --gpu",
+    "node scripts/browser-conformance.mjs"
+  ]
+}

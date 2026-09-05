@@ -1,12 +1,12 @@
 {
   "spec_version": "0.1",
   "prepared": "2026-09-05",
-  "implementation_status": "documentation_only",
+  "implementation_status": "foundation_m00_m04_completed",
   "milestones": [
     {
       "id": "M00",
       "title": "Architecture and Rust-only feasibility spikes",
-      "status": "planned",
+      "status": "completed",
       "dependencies": [],
       "owner_role": "Architecture lead + graphics + verification",
       "acceptance_criteria": [
@@ -29,12 +29,20 @@
         "No global stable API freeze"
       ],
       "calendar_estimate": null,
-      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence.",
+      "completion_scope": "Measured typed/flat/hecs scene storage and radial/dense/manifold admissibility; generated transport kernels; native/browser storage faults; dependency audit and accepted foundation ADRs.",
+      "evidence": [
+        "evidence/m00-m04/benchmark_results.json",
+        "evidence/m00-m04/kernel_cross_target_report.json",
+        "evidence/m00-m04/storage_recovery_report.json",
+        "evidence/m00-m04/dependency_inventory.json",
+        "evidence/m00-m04/accepted_ADRs.md"
+      ]
     },
     {
       "id": "M01",
       "title": "Document and geometry core",
-      "status": "planned",
+      "status": "completed",
       "dependencies": [
         "M00"
       ],
@@ -56,12 +64,18 @@
         "No arbitrary .blend support"
       ],
       "calendar_estimate": null,
-      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence.",
+      "completion_scope": "Typed immutable document/geometry v0; planar simple polygons, dense typed attributes, f32/f64 positions, shared geometry, ordered/affine transforms, sparse override layers, native binary mesh roots.",
+      "evidence": [
+        "evidence/m00-m04/document_conformance.json",
+        "evidence/m00-m04/geometry_invariants.json",
+        "evidence/m00-m04/roundtrip_report.json"
+      ]
     },
     {
       "id": "M02",
       "title": "Transactions, API/ABI alpha and durable jobs",
-      "status": "planned",
+      "status": "completed",
       "dependencies": [
         "M01"
       ],
@@ -85,12 +99,20 @@
         "No universal automatic merge"
       ],
       "calendar_estimate": null,
-      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence.",
+      "completion_scope": "Trusted local transaction and wire clients; bounded uploads/jobs/events; native durable job host and recovery; independently exercised memory-only ABI alpha v0. No ABI v1 or remote multi-tenant service.",
+      "evidence": [
+        "evidence/m00-m04/api_conformance.json",
+        "evidence/m00-m04/idempotency_faults.json",
+        "evidence/m00-m04/durability_faults.json",
+        "evidence/m00-m04/abi_alpha_contract.md",
+        "evidence/m00-m04/job_host_conformance.json"
+      ]
     },
     {
       "id": "M03",
       "title": "CPU renderer and initial native interchange",
-      "status": "planned",
+      "status": "completed",
       "dependencies": [
         "M02"
       ],
@@ -113,12 +135,18 @@
         "No media codec parity"
       ],
       "calendar_estimate": null,
-      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence.",
+      "completion_scope": "CPU Lambertian/point-light/constant-environment/nearest-texture renderer with bounded finite depth, analytic tests and image/pass receipts; scoped OBJ and glTF static mesh-only codecs.",
+      "evidence": [
+        "evidence/m00-m04/renderer_cpu_conformance.json",
+        "evidence/m00-m04/reference_images_manifest.json",
+        "evidence/m00-m04/interchange_profile_report.json"
+      ]
     },
     {
       "id": "M04",
       "title": "Portable GPU renderer and browser-local execution",
-      "status": "planned",
+      "status": "completed",
       "dependencies": [
         "M03"
       ],
@@ -140,7 +168,13 @@
         "No mandatory native-only acceleration"
       ],
       "calendar_estimate": null,
-      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence.",
+      "completion_scope": "One-bounce GPU diffuse profile, software BVH traversal, progressive batches and approximate raster; Metal and browser WebGPU including worker; pre/post-submit cancellation, over-limit allocation and explicit device destroy/recreate.",
+      "evidence": [
+        "evidence/m00-m04/cross_backend_report.json",
+        "evidence/m00-m04/device_capability_manifest.json",
+        "evidence/m00-m04/gpu_fault_report.json"
+      ]
     },
     {
       "id": "M05",
@@ -422,5 +456,8 @@
       "calendar_estimate": null,
       "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
     }
-  ]
+  ],
+  "evidence_root": "evidence/m00-m04",
+  "completion_profile": "Experimental foundation v0; macOS Metal and browser WebGPU runtime; Linux/Windows compile only; see evidence README for exact limits.",
+  "implementation_review": "evidence/m00-m04/review.md"
 }

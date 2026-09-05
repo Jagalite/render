@@ -1,6 +1,6 @@
 # Milestones and release gates
 
-This is a focused extract of the canonical architecture specification. All states are planned.
+This is a focused extract of the canonical architecture specification. Current implementation status and evidence are in `planning/milestones.json` and `evidence/m00-m04/README.md`; the acceptance criteria below remain the release gates.
 
 ## 24. Milestone map and release definitions
 
@@ -133,7 +133,7 @@ Do not assign a completion date until M00 establishes the most consequential ris
 | Native file interchange | M03 | M13 | Format/version/feature-level loss reporting |
 | Collaboration/plugins | M05 basics | M13 | No automatic arbitrary topology merging |
 
-The detailed machine-readable matrix contains planned states only. Update status per tested capability; do not mark a feature supported because its data type exists.
+The detailed machine-readable matrix records tested profiles and remaining planned features. Update status per tested capability; do not mark a feature supported because its data type exists.
 
 ### 28.1 Compatibility axes
 

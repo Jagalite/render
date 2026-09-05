@@ -1,6 +1,6 @@
 {
   "spec_version": "0.1",
-  "status": "planned",
+  "status": "completed_for_foundation_profile",
   "tasks": [
     {
       "id": "T001",
@@ -8,7 +8,10 @@
       "depends_on": [],
       "owner_role": "Foundation",
       "acceptance": "Inventory the transitive native linkage and generated-artifact exceptions on native/WASM builds.",
-      "status": "planned"
+      "status": "completed",
+      "evidence": [
+        "evidence/m00-m04/dependency_inventory.json"
+      ]
     },
     {
       "id": "T002",
@@ -18,7 +21,10 @@
       ],
       "owner_role": "Schema",
       "acceptance": "Show identity stability under rename/reparent and rational-time conversion test cases.",
-      "status": "planned"
+      "status": "completed",
+      "evidence": [
+        "evidence/m00-m04/document_conformance.json"
+      ]
     },
     {
       "id": "T003",
@@ -28,7 +34,10 @@
       ],
       "owner_role": "Geometry",
       "acceptance": "Include UV seams, loose edges, n-gons, non-manifold adjacency, degenerate and malformed inputs.",
-      "status": "planned"
+      "status": "completed",
+      "evidence": [
+        "evidence/m00-m04/geometry_invariants.json"
+      ]
     },
     {
       "id": "T004",
@@ -38,7 +47,10 @@
       ],
       "owner_role": "Geometry",
       "acceptance": "Measure local edits/traversal/memory and reject representations losing required topology.",
-      "status": "planned"
+      "status": "completed",
+      "evidence": [
+        "evidence/m00-m04/benchmark_results.json"
+      ]
     },
     {
       "id": "T005",
@@ -48,7 +60,10 @@
       ],
       "owner_role": "Document",
       "acceptance": "Benchmark load, read, branch, single-property and wide topology changes.",
-      "status": "planned"
+      "status": "completed",
+      "evidence": [
+        "evidence/m00-m04/benchmark_results.json"
+      ]
     },
     {
       "id": "T006",
@@ -58,7 +73,10 @@
       ],
       "owner_role": "Graphics",
       "acceptance": "Run traversal/scattering kernels on native and browser, with independent analytic tests.",
-      "status": "planned"
+      "status": "completed",
+      "evidence": [
+        "evidence/m00-m04/kernel_cross_target_report.json"
+      ]
     },
     {
       "id": "T007",
@@ -68,7 +86,10 @@
       ],
       "owner_role": "API",
       "acceptance": "Define prepare/commit semantics, authentication scope, retention and conflict/fault tests.",
-      "status": "planned"
+      "status": "completed",
+      "evidence": [
+        "evidence/m00-m04/api_conformance.json"
+      ]
     },
     {
       "id": "T008",
@@ -79,7 +100,10 @@
       ],
       "owner_role": "Storage",
       "acceptance": "Inject termination at each publication step; recover the last advertised durable revision.",
-      "status": "planned"
+      "status": "completed",
+      "evidence": [
+        "evidence/m00-m04/storage_recovery_report.json"
+      ]
     },
     {
       "id": "T009",
@@ -91,7 +115,10 @@
       ],
       "owner_role": "Platform",
       "acceptance": "Exercise worker/nonshared mode, quota failure, interrupted writes and local export.",
-      "status": "planned"
+      "status": "completed",
+      "evidence": [
+        "evidence/m00-m04/browser_conformance.json"
+      ]
     },
     {
       "id": "T010",
@@ -101,7 +128,10 @@
       ],
       "owner_role": "Rendering",
       "acceptance": "Prove ray edge cases, PDF consistency and energy behavior, without external renderers.",
-      "status": "planned"
+      "status": "completed",
+      "evidence": [
+        "evidence/m00-m04/renderer_cpu_conformance.json"
+      ]
     },
     {
       "id": "T011",
@@ -116,7 +146,10 @@
       ],
       "owner_role": "Architecture",
       "acceptance": "Record comparative evidence, consequences and revisit triggers; reject unproven permanent constraints.",
-      "status": "planned"
+      "status": "completed",
+      "evidence": [
+        "evidence/m00-m04/accepted_ADRs.md"
+      ]
     },
     {
       "id": "T012",
@@ -128,7 +161,11 @@
       ],
       "owner_role": "Integration",
       "acceptance": "Create/save/reload/render a textured instanced scene with a reproducibility receipt.",
-      "status": "planned"
+      "status": "completed",
+      "evidence": [
+        "evidence/m00-m04/reference_images_manifest.json"
+      ]
     }
-  ]
+  ],
+  "qualification": "Named experimental profiles only. Topology benchmark measures mesh conversion, moves, and shared asset replacement; general modeling operators remain M06. Memory evidence distinguishes connectivity capacities from whole-process RSS."
 }

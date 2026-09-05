@@ -1,0 +1,27 @@
+[workspace]
+members = ["crates/core", "crates/kernel", "crates/gpu", "crates/host", "crates/web", "crates/ffi"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+publish = false
+
+[workspace.dependencies]
+render-core = { path = "crates/core" }
+render-kernel = { path = "crates/kernel" }
+render-gpu = { path = "crates/gpu" }
+serde = { version = "=1.0.228", features = ["derive", "rc"] }
+serde_json = { version = "=1.0.145", features = ["float_roundtrip"] }
+glam = { version = "=0.30.10", features = ["serde"] }
+sha2 = "=0.10.9"
+wgpu = { version = "=26.0.1", default-features = false, features = ["std", "metal", "vulkan", "dx12", "webgpu", "wgsl"] }
+naga = { version = "=26.0.0", features = ["wgsl-in", "wgsl-out"] }
+pollster = "=0.4.0"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = "warn"

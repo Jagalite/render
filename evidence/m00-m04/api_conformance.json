@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "test": "transactions_are_atomic_and_revision_checked",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "retries_wire_permissions_and_budgets",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "staged_upload_permissions_checksums_and_budget",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "jobs_events_cancellation_and_recovery",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "durable_host_metadata_cannot_be_overwritten_by_stale_snapshot",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "prepared_noop_candidates_cannot_overfill_retention",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "cancelled_jobs_release_queue_capacity_and_retries_preserve_events",
+      "native": "passed",
+      "wasm": "passed"
+    }
+  ],
+  "sources": [
+    "validation_report.json",
+    "logs/native_tests.txt",
+    "logs/wasm_tests.txt"
+  ],
+  "test_source": "../../crates/core/tests/conformance.rs"
+}

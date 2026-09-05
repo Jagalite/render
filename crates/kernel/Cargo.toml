@@ -1,0 +1,10 @@
+[package]
+name = "render-kernel"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+[dependencies]
+naga.workspace = true
+render-core.workspace = true
+[lints]
+workspace = true

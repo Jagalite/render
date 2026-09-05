@@ -1,0 +1,27 @@
+{
+  "native": {
+    "adapter": "Apple M1",
+    "backend": "Metal",
+    "hardware_ray_required": false,
+    "max_buffer_bytes": 268435456,
+    "max_storage_binding_bytes": 134217728,
+    "max_workgroups": 65535
+  },
+  "browser": {
+    "adapter": "",
+    "backend": "BrowserWebGpu",
+    "hardware_ray_required": false,
+    "max_buffer_bytes": 268435456,
+    "max_storage_binding_bytes": 134217728,
+    "max_workgroups": 65535
+  },
+  "browser_version": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/152.0.7977.76",
+    "revision": "@0d89dfa2dd7c1ec4b8a14b9f303f887bb63b6174",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+    "jsVersion": "15.2.124.19"
+  },
+  "other_native_targets": "Linux and Windows compile only",
+  "profile": "baseline negotiated WebGPU limits; no hardware ray queries; oversized dispatches/buffers rejected"
+}

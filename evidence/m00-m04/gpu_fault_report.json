@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "native": {
+    "cancel_before_submit": true,
+    "cancel_after_submit": true,
+    "gpu_over_limit_allocation_rejected": true,
+    "memory_admission_rejected": true,
+    "explicit_device_destroy_rejected": true,
+    "device_recreated_equal": true
+  },
+  "browser": {
+    "cancel_before_submit": true,
+    "cancel_after_submit": true,
+    "gpu_over_limit_allocation_rejected": true,
+    "budget_rejection": true,
+    "device_destroy_rejected": true,
+    "device_recreated_equal": true
+  },
+  "limits": "Submitted cancellation discards completed results; no hardware preemption. Explicit device destroy/recreate; no spontaneous driver reset or physical VRAM exhaustion."
+}

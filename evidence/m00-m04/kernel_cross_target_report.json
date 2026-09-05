@@ -1,0 +1,95 @@
+{
+  "status": "passed",
+  "generator": "Rust render-kernel expression/statement IR; Naga validation",
+  "native": {
+    "analytic_plane_max_error": 2.9802322387695312e-08,
+    "analytic_plane_tolerance": 1e-06,
+    "cancel_after_submit": true,
+    "cancel_before_submit": true,
+    "cancelled_render_ms_including_pack_submit_drain": 2.923583,
+    "cpu_gpu_rmse": 3.475805702251173e-08,
+    "device": {
+      "adapter": "Apple M1",
+      "backend": "Metal",
+      "hardware_ray_required": false,
+      "max_buffer_bytes": 268435456,
+      "max_storage_binding_bytes": 134217728,
+      "max_workgroups": 65535
+    },
+    "device_recreated_equal": true,
+    "driver_loss_injection": "not performed",
+    "explicit_device_destroy_rejected": true,
+    "gpu_ms_including_upload_readback": 30.54825,
+    "gpu_over_limit_allocation_rejected": true,
+    "max_channel_error": 2.086162567138672e-07,
+    "memory_admission_rejected": true,
+    "progressive_max_error": 1.7881393432617188e-07,
+    "raster_coverage_and_clear_color": true,
+    "rmse_tolerance": 0.035,
+    "shader_digest": "sha256:055f89744ae0518d37d18c60cb351857e4bc711e1f4d97b19cab5ad35e504bcc",
+    "status": "passed",
+    "transform_reuses_geometry_upload": true
+  },
+  "browser": {
+    "aborted_write_preserves_root": true,
+    "analytic_plane_max_error": 2.9802322387695312e-08,
+    "analytic_plane_tolerance": 1e-06,
+    "browser_storage_class": "origin-managed; atomic close; user export required for backup",
+    "budget_rejection": true,
+    "cancel_after_submit": true,
+    "cancel_before_submit": true,
+    "cancelled_render_ms_including_pack_submit_drain": 2,
+    "core": {
+      "branch_isolation": true,
+      "document_roundtrip": true,
+      "geometry_cache": true,
+      "idempotent_retry": true,
+      "nonmanifold": true
+    },
+    "cpu_gpu_rmse": 3.2975377698595155e-08,
+    "device": {
+      "adapter": "",
+      "backend": "BrowserWebGpu",
+      "hardware_ray_required": false,
+      "max_buffer_bytes": 268435456,
+      "max_storage_binding_bytes": 134217728,
+      "max_workgroups": 65535
+    },
+    "device_destroy_rejected": true,
+    "device_recreated_equal": true,
+    "gpu_over_limit_allocation_rejected": true,
+    "local_export_roundtrip": true,
+    "opfs_roundtrip": true,
+    "progressive_max_error": 1.1920928955078125e-07,
+    "raster_coverage": true,
+    "revision": "sha256:834ffc4d00643ffaa701d82a56dc97f4bf7c10570dee4bb27b2efd793c3ab619",
+    "shared_memory_required": false,
+    "status": "passed",
+    "worker": {
+      "core": {
+        "branch_isolation": true,
+        "document_roundtrip": true,
+        "geometry_cache": true,
+        "idempotent_retry": true,
+        "nonmanifold": true
+      },
+      "cpu_gpu_max_error": 1.1920928955078125e-07,
+      "execution": "dedicated module worker",
+      "shared_memory": false,
+      "status": "passed"
+    },
+    "external_browser_api": true,
+    "storage_quota": {
+      "committed_root_unchanged": true,
+      "error": "QuotaExceededError"
+    },
+    "tab_reload_preserves_unclosed_root": true,
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/152.0.7977.76",
+      "revision": "@0d89dfa2dd7c1ec4b8a14b9f303f887bb63b6174",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+      "jsVersion": "15.2.124.19"
+    }
+  }
+}

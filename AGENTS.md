@@ -1,6 +1,6 @@
 # Implementation-agent contract
 
-This package is a proposed plan, not a functioning code repository. Apply these rules when creating the implementation.
+This repository contains an experimental foundation implementation. Apply these rules to implementation and to any further milestone work.
 
 ## Authority and architecture
 

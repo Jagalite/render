@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rust 3D Platform — foundation conformance</title>
+<style>
+body { max-width: 960px; margin: 48px auto; padding: 24px; background: #161b22; color: #dae3ed; font: 16px system-ui; }
+canvas { width: 576px; max-width: 100%; image-rendering: pixelated; border: 1px solid #536373; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.5; }
+</style>
+<h1>Rust 3D Platform</h1>
+<p>Local browser rendering and storage conformance. The shared Rust core creates the scene and validates its output.</p>
+<canvas id="image" aria-label="Rendered scene with two textured pyramids on a ground plane"></canvas>
+<pre id="report" data-status="running">Running browser conformance…</pre>
+<script type="module" src="pkg/bootstrap.js"></script>
+</html>

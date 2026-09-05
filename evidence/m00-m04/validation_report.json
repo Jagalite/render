@@ -1,0 +1,202 @@
+{
+  "started_utc": "2026-09-05T19:25:27.498011+00:00",
+  "scope": "Native macOS runtime; WASM core in Node; Linux/Windows compile only. GPU/browser reports separate. Review fixes included.",
+  "checks": [
+    {
+      "name": "native_tests",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": null,
+      "timing_note": "Completed immediately before the remaining closeout checks; total elapsed time was not captured.",
+      "log": "logs/native_tests.txt"
+    },
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8831552499996178,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "native_clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 10.993268541000361,
+      "log": "logs/native_clippy.txt"
+    },
+    {
+      "name": "wasm_clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "-p",
+        "render-web",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 7.155753917000766,
+      "log": "logs/wasm_clippy.txt"
+    },
+    {
+      "name": "wasm_tests",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 22.59642570899996,
+      "log": "logs/wasm_tests.txt"
+    },
+    {
+      "name": "linux_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-unknown-linux-gnu",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 4.90088091600046,
+      "log": "logs/linux_check.txt"
+    },
+    {
+      "name": "windows_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-pc-windows-msvc",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 6.055838458998551,
+      "log": "logs/windows_check.txt"
+    },
+    {
+      "name": "native_build",
+      "command": [
+        "cargo",
+        "build",
+        "-p",
+        "render-host",
+        "-p",
+        "render-ffi",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 16.194391625000208,
+      "log": "logs/native_build.txt"
+    },
+    {
+      "name": "abi_header",
+      "command": [
+        "python3",
+        "scripts/generate-abi-header.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.27152749999913794,
+      "log": "logs/abi_header.txt"
+    },
+    {
+      "name": "independent_ffi",
+      "command": [
+        "python3",
+        "scripts/ffi-conformance.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.5106606669996836,
+      "log": "logs/independent_ffi.txt"
+    },
+    {
+      "name": "web_build",
+      "command": [
+        "sh",
+        "scripts/build-web.sh"
+      ],
+      "exit_code": 0,
+      "seconds": 56.98211329200058,
+      "log": "logs/web_build.txt"
+    },
+    {
+      "name": "dependency_audit",
+      "command": [
+        "python3",
+        "scripts/dependency-audit.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.3468409999986761,
+      "log": "logs/dependency_audit.txt"
+    },
+    {
+      "name": "benchmark_build",
+      "command": [
+        "cargo",
+        "build",
+        "--release",
+        "-p",
+        "render-host",
+        "--example",
+        "m00",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 25.335786124998776,
+      "log": "logs/benchmark_build.txt"
+    },
+    {
+      "name": "representation_benchmark",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/release/examples/m00"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8944412919991009,
+      "log": "logs/representation_benchmark.txt"
+    }
+  ],
+  "status": "passed"
+}

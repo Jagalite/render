@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "test": "job_host::tests::durable_jobs_survive_reopen_and_cancel",
+      "native": "passed",
+      "wasm": "native_only"
+    },
+    {
+      "test": "job_host::tests::second_host_cannot_recover_an_active_worker",
+      "native": "passed",
+      "wasm": "native_only"
+    },
+    {
+      "test": "job_host::tests::jobs_pin_the_document_written_through_the_project_api",
+      "native": "passed",
+      "wasm": "native_only"
+    }
+  ],
+  "sources": [
+    "validation_report.json",
+    "logs/native_tests.txt",
+    "logs/wasm_tests.txt"
+  ],
+  "test_source": "../../crates/core/tests/conformance.rs"
+}

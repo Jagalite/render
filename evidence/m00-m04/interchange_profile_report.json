@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "test": "obj_and_gltf_profiles_roundtrip",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "foreign_edit_handle_and_hostile_accessor_are_rejected",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "ordered_transform_channels_and_external_texture",
+      "native": "passed",
+      "wasm": "passed"
+    }
+  ],
+  "sources": [
+    "validation_report.json",
+    "logs/native_tests.txt",
+    "logs/wasm_tests.txt"
+  ],
+  "test_source": "../../crates/core/tests/conformance.rs",
+  "profiles": [
+    "OBJ polygons, UV corners, loose lines; negative indices on import",
+    "glTF 2.0 mesh-only, nonindexed triangles, f32 POSITION/TEXCOORD_0, caller-supplied binary",
+    "PPM P6 display sRGB to linear texture"
+  ],
+  "exclusions": [
+    "general scene/material fidelity",
+    "animation, skinning, sparse/indexed glTF, required extensions",
+    "external URI fetching"
+  ]
+}

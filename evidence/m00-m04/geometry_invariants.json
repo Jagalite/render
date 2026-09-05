@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "test": "mesh_preserves_seams_and_loose_elements",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "malformed_topology_rejected",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "concave_polygon_area_and_degeneracy",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "radial_nonmanifold_and_generation_safety",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "test": "foreign_edit_handle_and_hostile_accessor_are_rejected",
+      "native": "passed",
+      "wasm": "passed"
+    }
+  ],
+  "sources": [
+    "validation_report.json",
+    "logs/native_tests.txt",
+    "logs/wasm_tests.txt"
+  ],
+  "test_source": "../../crates/core/tests/conformance.rs"
+}

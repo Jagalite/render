@@ -1,0 +1,177 @@
+{
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "4e2f0624ab45948659053418d56c0cd2e7d4c5bb34b9f0f2dc165317eca30d75"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "f9d112ec76376488ab5693a92a8cbbad470e13e0a3327b3af2d6b2465a270634"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "78908d01abf57b449d76e712f11cbfc69bb83a5eecb865eb26063b355e555158"
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "30f2bf6f877b47d7cf3ff8c091be20db9ed0002087c0cb61fbc1756e12bccf21"
+    },
+    {
+      "path": "crates/core/Cargo.toml",
+      "sha256": "6fdb8f9dfbeedd1d546cfed9784e42ebde78085b62d2020ccdfd9861745e4f0a"
+    },
+    {
+      "path": "crates/core/src/api.rs",
+      "sha256": "d249cacc81b5f07872676344f93e3b4d23f62b094a7132827756c3e7741deeb1"
+    },
+    {
+      "path": "crates/core/src/document.rs",
+      "sha256": "fa1c66ae3b03e7f2e2d21615c34cecc36492580c45e67bde2b7f6fdee9f7797f"
+    },
+    {
+      "path": "crates/core/src/fixtures.rs",
+      "sha256": "4c5ab6a5bf801ead0079094e5dae19c8a7cfc6fab9c7d23f59e8e4a7a98fcb6b"
+    },
+    {
+      "path": "crates/core/src/geometry.rs",
+      "sha256": "6fc46e4cb9bc267555b900512de44f4b339af5f3a037e19c5d2fa58197f550ab"
+    },
+    {
+      "path": "crates/core/src/imaging.rs",
+      "sha256": "9af32e4fbb2cffe48a8d682a7f1f3eb4c054776d45dd2d9860a2254577f91cd8"
+    },
+    {
+      "path": "crates/core/src/interchange.rs",
+      "sha256": "2e499ccf24246ab3b94b48877d26659685de386fca7ba8e68478ead5f08d8aa8"
+    },
+    {
+      "path": "crates/core/src/jobs.rs",
+      "sha256": "c5cc0dd83c0702932751d8580fbdae8441dcd1f80068bf2cf220df20c7bbeba6"
+    },
+    {
+      "path": "crates/core/src/lib.rs",
+      "sha256": "f973247a96a6b6aff44e8e626368d324eb234ca0e22a869895bc9c85f6ab926e"
+    },
+    {
+      "path": "crates/core/src/mesh_codec.rs",
+      "sha256": "8422e06b65486334da9bbcc14d44a2ee7e3514f2f6ede7f7ab6ec034d2faacf8"
+    },
+    {
+      "path": "crates/core/src/render.rs",
+      "sha256": "8ee2c05cc35ba52f771b321688d66af754d6d2fbdff36ae02fd1f6e0399c8d27"
+    },
+    {
+      "path": "crates/core/src/storage.rs",
+      "sha256": "b2ed8f37fa83859fb5132988467afc63bc5c3bb6884d9edbad603bb1286a5e21"
+    },
+    {
+      "path": "crates/core/src/topology.rs",
+      "sha256": "282a772af1d906ec43be65918a2e603ba3b18405bd8db54364b5021dc41578bf"
+    },
+    {
+      "path": "crates/core/src/uploads.rs",
+      "sha256": "958a2423431e990de0a306ef9180d9d0712147fed2980b1e28e0ba94238fc091"
+    },
+    {
+      "path": "crates/core/tests/conformance.rs",
+      "sha256": "73aef1e29afe16db341906c5a15aafb1427421bdb287a360b2384e4b466c8601"
+    },
+    {
+      "path": "crates/ffi/Cargo.toml",
+      "sha256": "a73a443608037a9c7c9b2991e5e0aeca27385cf38605cf21f41a2ddd2946a9d3"
+    },
+    {
+      "path": "crates/ffi/src/lib.rs",
+      "sha256": "c9a1c4548672bcc4392582bb71c39234713bd0b13ef14d321da8e8bbb6255c1e"
+    },
+    {
+      "path": "crates/gpu/Cargo.toml",
+      "sha256": "f73279bba9986ee5744d4370b06ac628b43aa562c5dd481e8a5efdc51b8f742e"
+    },
+    {
+      "path": "crates/gpu/src/lib.rs",
+      "sha256": "79ad78349491143d729400262ff4458ac6aaa56df9001b8ccb3a8ce1a026d50a"
+    },
+    {
+      "path": "crates/gpu/src/raster.rs",
+      "sha256": "0cb5ffc4f1f06eb4925567ccedfd5c613d4e47ab37439e92f1f435c0921c0419"
+    },
+    {
+      "path": "crates/host/Cargo.toml",
+      "sha256": "74296656ace7267550cbe7cec5f6064c3a5ca9b4f15219f85d79306d7981cacf"
+    },
+    {
+      "path": "crates/host/examples/m00.rs",
+      "sha256": "00479cea5899706b5924dc2ed72a1547bc3cc5e1dc9837846db54ec3948c48b1"
+    },
+    {
+      "path": "crates/host/src/job_host.rs",
+      "sha256": "6ea310432363fe7280f566ccd8a7afa325f1c3bd648c38b6d6a522e87b5190b8"
+    },
+    {
+      "path": "crates/host/src/main.rs",
+      "sha256": "b1f94dca7c68c95e3cac73fbdee30a3139eb3a828abe3388e47ee0dd3a9111cb"
+    },
+    {
+      "path": "crates/kernel/Cargo.toml",
+      "sha256": "7cd2433582517c87a99ac064763b6c98134e0d54bff643712bdcd81189eeeba8"
+    },
+    {
+      "path": "crates/kernel/src/lib.rs",
+      "sha256": "ec11cab4aa678d0624c693d1f33bb25bbfb407826f7ef7b6e4fb922e6fee3a8c"
+    },
+    {
+      "path": "crates/kernel/src/path.rs",
+      "sha256": "7e9474d4c22c26bc6433b1716fc383b5bcf65d5d1093e2e8ba7ab0f77776f677"
+    },
+    {
+      "path": "crates/web/Cargo.toml",
+      "sha256": "855c7eb86ec57d8cb0cfd940234e124e0888e123c88d1893bd570b03396ad2bf"
+    },
+    {
+      "path": "crates/web/src/lib.rs",
+      "sha256": "eaa6f18b89d77e68458a5bdd810f1eaedae540b8d0b60411938d5a67f31d1345"
+    },
+    {
+      "path": "include/render.h",
+      "sha256": "ef034beb3b8c5ebe0540655605705a0ca7c9690843e4419ed211a1c3a793763f"
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "sha256": "e69b917f97a114b87388e17a0fe30540d213288af076d192fe4ab3dbfbd3a6c7"
+    },
+    {
+      "path": "scripts/browser-conformance.mjs",
+      "sha256": "1cee1b5afe37ad241546f822e1c0805a6d7466ef9001567a93164ff917178e7a"
+    },
+    {
+      "path": "scripts/build-web.sh",
+      "sha256": "0184487ce90e38c0868bad2b764c33e9537bfaa73baddbce2c41bc5c88d0c149"
+    },
+    {
+      "path": "scripts/dependency-audit.py",
+      "sha256": "8bec6dba162c4bf60f0a2448fd3b034d4a8758ce40fa23851e6776da9b367329"
+    },
+    {
+      "path": "scripts/ffi-conformance.py",
+      "sha256": "c20f42306c772d348f23491763a0f6f238effa70d3d4fff19ef9ca206ba73a77"
+    },
+    {
+      "path": "scripts/generate-abi-header.py",
+      "sha256": "43c933ae12db6bb3908be9472c116fb5c9efc912da5bd41d3155beacf0562aff"
+    },
+    {
+      "path": "scripts/summarize-evidence.py",
+      "sha256": "e1fc9194bf6e9d59da42eb9ae443507155daef252bf090ed7cbebedf333f2f3d"
+    },
+    {
+      "path": "scripts/validate-foundation.py",
+      "sha256": "0ef477d30b7d6b34b88348432683eb73657fb20d04151e107402af0487aec6e0"
+    },
+    {
+      "path": "web/index.html",
+      "sha256": "5738b3e52866a4596a726085c794d7f3b1cd0fe59f3e7308ce696336ac8f2e54"
+    }
+  ],
+  "purpose": "identifies implementation inputs used for these runs; not a release signature"
+}

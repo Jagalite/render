@@ -1,0 +1,34 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/crates/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1m 46s
+     Running tests/alpha_gltf.rs (target/debug/deps/alpha_gltf-b781cff6c9a70cac)
+
+running 7 tests
+test exhausted_alpha_camera_interval_with_media_returns_environment ... FAILED
+test initial_perspective_near_clip_is_not_replaced_by_continuation_epsilon ... FAILED
+test alpha_invalid_inputs_and_failed_transactions_leave_document_unchanged ... ok
+test alpha_continuation_preserves_camera_clip_and_orthographic_primary_depth ... ok
+test alpha_layers_and_single_double_sided_backfaces_preserve_coverage ... ok
+test imported_linear_alpha_mask_blend_and_opaque_have_analytic_coverage ... ok
+test alpha_factor_cutoff_boundaries_and_defaults_are_preserved ... ok
+
+failures:
+
+---- exhausted_alpha_camera_interval_with_media_returns_environment stdout ----
+
+thread 'exhausted_alpha_camera_interval_with_media_returns_environment' (3368621) panicked at crates/core/tests/alpha_gltf.rs:392:67:
+called `Result::unwrap()` on an `Err` value: Error { code: "ray", stage: "validation", message: "media requires a finite unit world ray and ordered nonnegative bounds", retryable: false, context: {} }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- initial_perspective_near_clip_is_not_replaced_by_continuation_epsilon stdout ----
+
+thread 'initial_perspective_near_clip_is_not_replaced_by_continuation_epsilon' (3368623) panicked at crates/core/tests/alpha_gltf.rs:413:5:
+assertion failed: image.linear.iter().all(|p| *p == [0., 1., 0.])
+
+
+failures:
+    exhausted_alpha_camera_interval_with_media_returns_environment
+    initial_perspective_near_clip_is_not_replaced_by_continuation_epsilon
+
+test result: FAILED. 5 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.22s
+
+error: test failed, to rerun pass `-p render-core --test alpha_gltf`

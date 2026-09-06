@@ -1,0 +1,62 @@
+{
+  "source_checkpoint": "5416cfa",
+  "scattering_sha256": "33e6a39336004f5ad4f1eace6ee47e95f3c74c2217ac7d053a074953db732bd4",
+  "perspective_expected_visible_pixels": 0,
+  "perspective_actual_visible_pixels": 64,
+  "orthographic_expected_constant_depth": 3,
+  "orthographic_actual_depth_range": [
+    3.005012035369873,
+    3.2517149448394775
+  ],
+  "orthographic_max_error": 0.25171494483947754,
+  "commands": [
+    [
+      "target/debug/render-host",
+      "project",
+      "artifacts/alpha-baseline/run-20260906T050222Z/project",
+      "artifacts/alpha-baseline/run-20260906T050222Z/init.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "artifacts/alpha-baseline/run-20260906T050222Z/project",
+      "artifacts/alpha-baseline/run-20260906T050222Z/inspect-empty.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "artifacts/alpha-baseline/run-20260906T050222Z/project",
+      "artifacts/alpha-baseline/run-20260906T050222Z/author.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "artifacts/alpha-baseline/run-20260906T050222Z/project",
+      "artifacts/alpha-baseline/run-20260906T050222Z/inspect.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "artifacts/alpha-baseline/run-20260906T050222Z/project",
+      "artifacts/alpha-baseline/run-20260906T050222Z/perspective.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "artifacts/alpha-baseline/run-20260906T050222Z/project",
+      "artifacts/alpha-baseline/run-20260906T050222Z/orthographic-settings.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "artifacts/alpha-baseline/run-20260906T050222Z/project",
+      "artifacts/alpha-baseline/run-20260906T050222Z/inspect-ortho.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "artifacts/alpha-baseline/run-20260906T050222Z/project",
+      "artifacts/alpha-baseline/run-20260906T050222Z/orthographic.request.json"
+    ]
+  ]
+}

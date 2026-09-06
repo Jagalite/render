@@ -1,0 +1,63 @@
+/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/camera-regression
+{
+  "source_checkpoint": "working alpha implementation",
+  "scattering_sha256": "9a9ec0e43be60ef3b97b4f2dea42af696c673c41ebf65d68bfd9a63890a14ee1",
+  "perspective_expected_visible_pixels": 0,
+  "perspective_actual_visible_pixels": 0,
+  "orthographic_expected_constant_depth": 3,
+  "orthographic_actual_depth_range": [
+    3.0,
+    3.0
+  ],
+  "orthographic_max_error": 0.0,
+  "commands": [
+    [
+      "target/debug/render-host",
+      "project",
+      "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/camera-regression/project",
+      "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/camera-regression/init.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/camera-regression/project",
+      "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/camera-regression/inspect-empty.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/camera-regression/project",
+      "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/camera-regression/author.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/camera-regression/project",
+      "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/camera-regression/inspect.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/camera-regression/project",
+      "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/camera-regression/perspective.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/camera-regression/project",
+      "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/camera-regression/orthographic-settings.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/camera-regression/project",
+      "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/camera-regression/inspect-ortho.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/camera-regression/project",
+      "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/camera-regression/orthographic.request.json"
+    ]
+  ]
+}

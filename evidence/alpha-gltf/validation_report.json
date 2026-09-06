@@ -1,0 +1,256 @@
+{
+  "status": "passed",
+  "scope": "macOS ARM64 CPU/Metal, Rust Wasm in Node, Chrome WebGPU/OPFS; Linux and Windows compile only",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5262921660032589,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "alpha_regressions",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "alpha_gltf",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 268.81365016700147,
+      "log": "logs/alpha_regressions.txt"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 65.97984708299919,
+      "log": "logs/clippy.txt"
+    },
+    {
+      "name": "native_tests",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 886.906462125,
+      "log": "logs/native_tests.txt"
+    },
+    {
+      "name": "wasm_tests",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 967.8386124579993,
+      "log": "logs/wasm_tests.txt"
+    },
+    {
+      "name": "linux_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-unknown-linux-gnu",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 186.18901583299885,
+      "log": "logs/linux_check.txt"
+    },
+    {
+      "name": "windows_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-pc-windows-msvc",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 12.568403625002247,
+      "log": "logs/windows_check.txt"
+    },
+    {
+      "name": "browser_clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "-p",
+        "render-web",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 17.172671207998064,
+      "log": "logs/browser_clippy.txt"
+    },
+    {
+      "name": "native_build",
+      "command": [
+        "cargo",
+        "build",
+        "-p",
+        "render-host",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 6.843294208003499,
+      "log": "logs/native_build.txt"
+    },
+    {
+      "name": "browser_build",
+      "command": [
+        "sh",
+        "scripts/build-web.sh"
+      ],
+      "exit_code": 0,
+      "seconds": 111.50013845800277,
+      "log": "logs/browser_build.txt"
+    },
+    {
+      "name": "camera_regression",
+      "command": [
+        "python3",
+        "scripts/alpha-camera-workflow.py",
+        "artifacts/alpha-gltf/run-20260906T054824Z/camera-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 6.864546625001822,
+      "log": "logs/camera_regression.txt"
+    },
+    {
+      "name": "dependency_audit",
+      "command": [
+        "python3",
+        "scripts/dependency-audit.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8723534170057974,
+      "log": "logs/dependency_audit.txt"
+    },
+    {
+      "name": "animated_regression",
+      "command": [
+        "python3",
+        "scripts/animated-gltf-workflow.py",
+        "artifacts/alpha-gltf/run-20260906T054824Z/animated-regression",
+        "--gpu"
+      ],
+      "exit_code": 0,
+      "seconds": 17.475835790995916,
+      "log": "logs/animated_regression.txt"
+    },
+    {
+      "name": "shutter_regression",
+      "command": [
+        "python3",
+        "scripts/gpu-shutter-workflow.py",
+        "artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 12.962087916996097,
+      "log": "logs/shutter_regression.txt"
+    },
+    {
+      "name": "sparse_regression",
+      "command": [
+        "python3",
+        "scripts/sparse-gltf-workflow.py",
+        "artifacts/alpha-gltf/run-20260906T054824Z/sparse-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 6.096698041998025,
+      "log": "logs/sparse_regression.txt"
+    },
+    {
+      "name": "alpha_workflow",
+      "command": [
+        "python3",
+        "scripts/alpha-gltf-workflow.py",
+        "artifacts/alpha-gltf/run-20260906T054824Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 5.410080667003058,
+      "log": "logs/alpha_workflow.txt"
+    },
+    {
+      "name": "browser_workflow",
+      "command": [
+        "node",
+        "scripts/alpha-gltf-browser.mjs",
+        "artifacts/alpha-gltf/run-20260906T054824Z/workflow"
+      ],
+      "exit_code": 1,
+      "seconds": 0.5885986249995767,
+      "log": "logs/browser_workflow.txt"
+    }
+  ],
+  "build_environment": {
+    "CARGO_NET_OFFLINE": "true",
+    "CARGO_BUILD_JOBS": "2",
+    "CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUNNER": "wasm-bindgen-test-runner"
+  },
+  "followup_checks": [
+    {
+      "name": "browser_workflow_final",
+      "command": [
+        "node",
+        "scripts/alpha-gltf-browser.mjs",
+        "artifacts/alpha-gltf/run-20260906T054824Z/workflow"
+      ],
+      "exit_code": 0,
+      "log": "logs/browser_workflow_final.txt",
+      "script_sha256": "de62332fec4cca707ca69f9768565a8701a0f800f9a8d1f7a77efd997821c63b"
+    }
+  ],
+  "resolved_failures": {
+    "browser_workflow": "browser_workflow_final"
+  },
+  "development_note": "Initial browser client expected stale_revision from a second import; existing BrowserAgent requires an empty import target and returns import_target first. Final client checks that admission error plus separate stale render and branch mutation rejection. Rust code and tested Wasm were unchanged.",
+  "native_test_count": 115,
+  "wasm_test_count": 96
+}

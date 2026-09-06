@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "comparisons": [
+    {
+      "variant": "mask",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "object_mismatches": 0,
+      "depth_and_normals_exact": true
+    },
+    {
+      "variant": "blend",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "object_mismatches": 0,
+      "depth_and_normals_exact": true
+    },
+    {
+      "variant": "opaque",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "object_mismatches": 0,
+      "depth_and_normals_exact": true
+    }
+  ]
+}

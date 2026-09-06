@@ -1,0 +1,54 @@
+{
+  "status": "interrupted_for_fix",
+  "scope": "macOS ARM64 CPU/Metal, Rust Wasm in Node, Chrome WebGPU/OPFS; Linux and Windows compile only",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3800576249996084,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 17.470411083995714,
+      "log": "logs/clippy.txt"
+    },
+    {
+      "name": "native_tests",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 598.5133344579954,
+      "log": "logs/native_tests.txt"
+    }
+  ],
+  "build_environment": {
+    "CARGO_NET_OFFLINE": "true",
+    "CARGO_BUILD_JOBS": "2",
+    "CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUNNER": "wasm-bindgen-test-runner"
+  },
+  "reason": "Review found exhausted primary alpha interval with media and unconditional primary near clamp; stopped owned validator before modifying source. 113 native tests passed; Wasm build incomplete."
+}

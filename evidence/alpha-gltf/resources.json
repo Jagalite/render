@@ -1,0 +1,41 @@
+{
+  "scope": "32x16, 64 samples, depth1, two original triangles pairs and 4x1 RGBA; process RSS is not a benchmark or allocator limit",
+  "observations": [
+    {
+      "name": "mask-import",
+      "seconds": 0.12766349999583326,
+      "maximum resident set size": 16367616,
+      "peak memory footprint": 2802752
+    },
+    {
+      "name": "mask-render",
+      "seconds": 0.5067813749992638,
+      "maximum resident set size": 17907712,
+      "peak memory footprint": 3163200
+    },
+    {
+      "name": "blend-import",
+      "seconds": 0.22623074999864912,
+      "maximum resident set size": 16351232,
+      "peak memory footprint": 2786368
+    },
+    {
+      "name": "blend-render",
+      "seconds": 0.46134095799789065,
+      "maximum resident set size": 17907712,
+      "peak memory footprint": 3163200
+    },
+    {
+      "name": "opaque-import",
+      "seconds": 0.11471691699989606,
+      "maximum resident set size": 16285696,
+      "peak memory footprint": 2786368
+    },
+    {
+      "name": "opaque-render",
+      "seconds": 0.3961001249990659,
+      "maximum resident set size": 17776640,
+      "peak memory footprint": 3048512
+    }
+  ]
+}

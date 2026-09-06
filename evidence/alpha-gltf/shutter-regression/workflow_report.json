@@ -1,0 +1,255 @@
+{
+  "status": "passed",
+  "profile": "gpu-f32-animation-v0",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/requests/000-init.json"
+      ],
+      "seconds": 0.7985119159930036,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/requests/001-inspect.json"
+      ],
+      "seconds": 0.026193916994088795,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "import",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/requests/002-import.json"
+      ],
+      "seconds": 1.0285852909946698,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/requests/003-inspect.json"
+      ],
+      "seconds": 0.08120829099789262,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "cpu-frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/requests/004-cpu-frame.json"
+      ],
+      "seconds": 1.757152040998335,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20627456,
+        "peak memory footprint": 5112960
+      }
+    },
+    {
+      "name": "gpu-frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/requests/005-gpu-frame.json"
+      ],
+      "seconds": 1.9717622499956633,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36634624,
+        "peak memory footprint": 11912832
+      }
+    },
+    {
+      "name": "gpu-sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/requests/006-gpu-sequence.json"
+      ],
+      "seconds": 3.832565209006134,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 37388288,
+        "peak memory footprint": 12994176
+      }
+    },
+    {
+      "name": "archive",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/requests/007-archive.json"
+      ],
+      "seconds": 0.3205003749972093,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restore",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/restored",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/requests/008-restore.json"
+      ],
+      "seconds": 0.2830152909955359,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restored-frame",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/restored",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/requests/009-restored-frame.json"
+      ],
+      "seconds": 1.133652999997139,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "stale",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/requests/010-stale.json"
+      ],
+      "seconds": 0.01777708400186384,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "invalid",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/requests/011-invalid.json"
+      ],
+      "seconds": 0.2000724999961676,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "limited",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/requests/012-limited.json"
+      ],
+      "seconds": 0.22479062499769498,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "partial",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/requests/013-partial.json"
+      ],
+      "seconds": 0.8106197909946786,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "unchanged",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/alpha-gltf/run-20260906T054824Z/shutter-regression/requests/014-unchanged.json"
+      ],
+      "seconds": 0.023975332995178178,
+      "exit_code": 0,
+      "expected_error": null
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "revision": "sha256:1980ec2bf4ec22f8159c11f8f4bc8703f2f608b72b2dbfa2ec52c01948a0cf68",
+  "clip": "15c77c8677038a00d22b7921d37af01e",
+  "settings": {
+    "width": 64,
+    "height": 64,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.15,
+      0.15,
+      0.15
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        30,
+        30,
+        30
+      ]
+    },
+    "camera": {
+      "position": [
+        1,
+        1,
+        5
+      ],
+      "target": [
+        0,
+        1,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65
+    }
+  },
+  "gpu_comparison": {
+    "linear_rmse": 4.59514983409537e-09,
+    "object_mismatches": 0
+  },
+  "partial_frames": 1
+}

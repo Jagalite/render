@@ -44,12 +44,13 @@
       ],
       "qualification": "Static scene completeness also depends on INPUT-02 for core PBR material evaluation. Reading or preserving a field is not rendering support.",
       "status": "partially_implemented_profile",
-      "implemented_profile": "gltf2-static-pbr-v0; gltf2-sparse-uv0-v1 accessor capability",
+      "implemented_profile": "gltf2-static-pbr-v0; gltf2-sparse-uv0-v1 accessor capability; gltf2-alpha-cpu-v1 MASK/BLEND import",
       "evidence": [
         "evidence/m05/agent_workflow_report.json",
         "evidence/m05/browser_workflow_report.json",
         "evidence/static-pbr/README.md",
-        "evidence/sparse-gltf/README.md"
+        "evidence/sparse-gltf/README.md",
+        "evidence/alpha-gltf/README.md"
       ],
       "remaining_scope": "Additional UV sets, vertex colors and broader scene inputs remain unsupported; sparse accessors and normalized UV0/skin weights are supported."
     },
@@ -76,13 +77,14 @@
       ],
       "qualification": "Core glTF materials and named extensions are separate capabilities. Blender node graphs require explicitly supported node semantics.",
       "status": "partially_implemented_profile",
-      "implemented_profile": "glTF opaque CPU/Metal/WebGPU finite-depth 1–16 transport plus native-authored extended Rust CPU surfaces",
+      "implemented_profile": "glTF opaque CPU/Metal/WebGPU finite-depth 1\u201316 transport plus native-authored extended Rust CPU surfaces; gltf2-alpha-cpu-v1 MASK/BLEND import",
       "evidence": [
         "evidence/static-pbr/README.md",
         "evidence/m06-m08/README.md",
-        "evidence/multibounce-pbr/README.md"
+        "evidence/multibounce-pbr/README.md",
+        "evidence/alpha-gltf/README.md"
       ],
-      "remaining_scope": "Imported glTF alpha/extensions, multiple UV sets and extended GPU scattering remain unsupported."
+      "remaining_scope": "Source material extensions, multiple UV sets and extended GPU scattering remain unsupported; MASK/BLEND imports use the named native/browser Rust CPU profile."
     },
     {
       "id": "INPUT-03",

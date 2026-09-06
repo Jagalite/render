@@ -57,3 +57,7 @@ on Metal/WebGPU through the CLI and browser APIs; see [acceptance evidence](evid
 
 [Sparse glTF and normalized UV0 inputs](docs/gltf_accessors.md) now convert through
 the shared native/browser importer into existing typed geometry and animation.
+
+[glTF MASK/BLEND alpha](docs/gltf_alpha.md) is validated through native/browser
+Rust CPU import, rendering and recovery; [evidence](evidence/alpha-gltf/README.md)
+records exact passes and the corrected camera clipping/depth cases.

@@ -28,7 +28,7 @@ with tempfile.TemporaryDirectory(prefix='render-alpha-fixture-') as d:
         assert p.read_bytes()==(output/p.name).read_bytes()
         fixtures.append({'path':str(p),'sha256':sha(p),'reproduced_exactly':True})
     write('fixture_integrity.json',fixtures)
-tracked=subprocess.check_output(['git','ls-files'],text=True).splitlines()
+tracked=subprocess.check_output(['git','ls-tree','-r','--name-only','2fc718f'],text=True).splitlines()
 fixture_integrity=[]
 for name in tracked:
     if name.startswith('fixtures/'):

@@ -1,0 +1,9 @@
+file:///Volumes/seed2/Projects/render/scripts/alpha-gltf-browser.mjs:12
+const evaluate=async expression=>{const r=await command('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw new Error(JSON.stringify(r.exceptionDetails));return r.result.value;};
+                                                                                                                                                          ^
+
+Error: {"exceptionId":4,"text":"Uncaught (in promise) Error: stale import rejected","lineNumber":0,"columnNumber":0,"exception":{"type":"object","subtype":"error","className":"Error","description":"Error: stale import rejected\n    at check (<anonymous>:2:77)\n    at <anonymous>:8:130","objectId":"-106541566979535419.4.1"}}
+    at evaluate (file:///Volumes/seed2/Projects/render/scripts/alpha-gltf-browser.mjs:12:155)
+    at async file:///Volumes/seed2/Projects/render/scripts/alpha-gltf-browser.mjs:19:15
+
+Node.js v23.5.0

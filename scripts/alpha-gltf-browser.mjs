@@ -23,14 +23,16 @@ try {
   const args={bytes:Array.from(atob(asset),c=>c.charCodeAt(0)),policy:{allow_approximations:true},settings,base_revision:call('inspect').revision,idempotency_key:'alpha:browser:0001'};
   const imported=call('import_pbr_glb',args);check(JSON.stringify(call('import_pbr_glb',args))===JSON.stringify(imported),'retry identity');
   const state=call('inspect'),before=d.export_json();let stale=false;
-  try{call('import_pbr_glb',{...args,idempotency_key:'alpha:stale:00001'});}catch(e){stale=String(e).includes('stale_revision');}check(stale,'stale import rejected');
+  try{call('import_pbr_glb',{...args,idempotency_key:'alpha:stale:00001'});}catch(e){stale=String(e);}check(String(stale).includes('import_target'),'nonempty import rejected: '+stale);
+  let staleRender=false;try{call('render_root_cpu',{revision:args.base_revision});}catch(e){staleRender=String(e).includes('stale_revision');}check(staleRender,'stale render rejected');
+  let staleBranch=false;try{call('branch',{branch:'old-base',base_revision:args.base_revision});}catch(e){staleBranch=String(e).includes('conflict');}check(staleBranch,'stale branch mutation rejected');
   const project='alpha-'+name+'-'+Date.now();await d.save(project,undefined,false);const restored=await m.BrowserAgent.load(project);check(restored.export_json()===before,'OPFS state roundtrip');
   call('branch',{branch:'alpha',base_revision:state.revision});
   const cpu=call('preview',{branch:'alpha',revision:state.revision});let gpuUnsupported=false;
   try{await d.preview_gpu('alpha',state.revision);}catch(e){gpuUnsupported=String(e).includes('unsupported_profile');}check(gpuUnsupported===(name!=='opaque'),'truthful GPU alpha support');
   const restoredCall=(method,args={})=>JSON.parse(restored.dispatch(JSON.stringify({version:0,operation:{method,...args}})));restoredCall('branch',{branch:'alpha',base_revision:state.revision});
   const again=restoredCall('preview',{branch:'alpha',revision:state.revision});check(JSON.stringify(again.passes)===JSON.stringify(cpu.passes),'restored render');
-  check(d.export_json()===before,'immutable root');results.push({name,revision:state.revision,opfs_restored:true,stale_rejected:true,gpu_unsupported:gpuUnsupported,cpu:cpu.passes});restored.free();d.free();
+  check(d.export_json()===before,'immutable root');results.push({name,revision:state.revision,opfs_restored:true,nonempty_import_error:String(stale),stale_render_rejected:staleRender,stale_branch_rejected:staleBranch,gpu_unsupported:gpuUnsupported,cpu:cpu.passes});restored.free();d.free();
  }
  const d=new m.BrowserAgent('00000000000000000000000000002648');const before=d.export_json();const call=(method,args={})=>JSON.parse(d.dispatch(JSON.stringify({version:0,operation:{method,...args}})));let malformed=false;
  try{call('import_pbr_scene',{json:${JSON.stringify(bad)},buffers:[Array.from(atob(${JSON.stringify(bin)}),c=>c.charCodeAt(0))],images:[],policy:{allow_approximations:true},settings,base_revision:call('inspect').revision,idempotency_key:'alpha:browser:bad:01'});}catch(e){malformed=String(e).includes('gltf_scene');}

@@ -574,3 +574,29 @@ derivatives and 1,041 footprints, but 144 native/Wasm f32 logarithms differed. T
 shared f64 path matches every observed native LOD. The retained numeric fixture,
 Decimal64 rounding check and public-sampler test preserve this evidence. Full
 native output preservation and exact painted CPU parity remain acceptance gates.
+
+## ADR-038 — Disposable packed geometry buffers accept bounded aligned updates
+
+**Decision:** Retain an exact byte shadow beside the renderer-owned GPU
+geometry buffer. Reuse identical bytes, patch contiguous changed 16-byte records
+for same-size sparse changes, rewrite dense/fragmented changes in place, and allocate
+on size changes. Stop collecting ranges after 257 disjoint regions or 75 percent
+changed bytes. This bounds planner memory and queue calls; it is not a measured
+optimal policy. Packed formats, shaders and persistent snapshots stay unchanged.
+
+**Integration review:** The buffer also contains texture/material/media descriptors;
+metrics name packed-buffer bytes, rather than pretending every byte is a vertex.
+Full host evaluation, packing and comparison remain measurable global costs. The
+shadow adds retained host memory. Statistics describe admitted work, including
+later-cancelled frames, and stay separate from persistent render receipts. Preserve
+pre-admission failure behavior, validation/OOM scopes, device-loss rejection and
+post-submit cancellation draining. Existing frame/sequence consumers retain a
+Renderer and can use this cache without a new document mutation path.
+
+**Acceptance boundary:** Compare one persistent renderer against fresh renderers on
+unchanged scenes, local point edits, recovery, resize and pipeline switches. Require
+native/browser output, negative/cancellation/stale tests, byte counts, representation
+costs and unchanged prior artifacts/dependencies/shaders. This prerequisite does not
+qualify localized sculpting; spatial queries, sparse displacement/mask chunks and
+affected-region evaluation remain separate. See the candidate contract under
+`planning/engine-progress/gpu-geometry-updates-contract.md`.

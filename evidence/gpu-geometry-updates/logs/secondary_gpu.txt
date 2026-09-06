@@ -1,0 +1,14 @@
+    Finished `test` profile [unoptimized] target(s) in 0.79s
+     Running tests/secondary_textures_gpu.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/secondary_textures_gpu-f9161c8678a6c097)
+
+running 1 test
+extended=false filter=Nearest cpu_gpu_rmse=0.00000005505841692483966
+extended=false filter=LinearMipLinear cpu_gpu_rmse=0.00000005505841692483966
+extended=true filter=Nearest cpu_gpu_rmse=0.00000005868810323695894
+extended=true filter=LinearMipLinear cpu_gpu_rmse=0.00000005868810323695894
+extended=false filter=Nearest cpu_gpu_rmse=0.00000005505841692483966
+extended=false filter=LinearMipLinear cpu_gpu_rmse=0.00000005505841692483966
+test secondary_emitter_filters_match_cpu_and_reuse_both_gpu_profiles ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.76s
+

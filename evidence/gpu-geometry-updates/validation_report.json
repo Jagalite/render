@@ -1,0 +1,1132 @@
+{
+  "status": "passed",
+  "scope": "macOS ARM64 CPU/Metal, Rust Wasm in Node, Chrome WebGPU/OPFS; Linux and Windows compile only",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6810144580085762,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 7.190283332995023,
+      "log": "logs/clippy.txt"
+    },
+    {
+      "name": "browser_clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "-p",
+        "render-web",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 1.5597209590050625,
+      "log": "logs/browser_clippy.txt"
+    },
+    {
+      "name": "native_build",
+      "command": [
+        "cargo",
+        "build",
+        "-p",
+        "render-host",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 3.8682538340071915,
+      "log": "logs/native_build.txt"
+    },
+    {
+      "name": "gpu_update_native",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_geometry_updates",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 4.966958374992828,
+      "log": "logs/gpu_update_native.txt"
+    },
+    {
+      "name": "gpu_update_resource",
+      "command": [
+        "python3",
+        "scripts/measure-gpu-geometry-updates.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z"
+      ],
+      "exit_code": 0,
+      "seconds": 3.554985291993944,
+      "log": "logs/gpu_update_resource.txt"
+    },
+    {
+      "name": "browser_build",
+      "command": [
+        "sh",
+        "scripts/build-web.sh"
+      ],
+      "exit_code": 0,
+      "seconds": 2.516574249995756,
+      "log": "logs/browser_build.txt"
+    },
+    {
+      "name": "gpu_update_browser",
+      "command": [
+        "node",
+        "scripts/gpu-geometry-updates-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/gpu-update-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.245321333000902,
+      "log": "logs/gpu_update_browser.txt"
+    },
+    {
+      "name": "gpu_update_cross",
+      "command": [
+        "python3",
+        "scripts/compare-gpu-geometry-updates.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/gpu-update-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04055758299364243,
+      "log": "logs/gpu_update_cross.txt"
+    },
+    {
+      "name": "srgb8_numeric_source",
+      "command": [
+        "python3",
+        "scripts/validate-srgb8-compat.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/srgb8_numeric_source.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.39488870798959397,
+      "log": "logs/srgb8_numeric_source.txt"
+    },
+    {
+      "name": "mip_lod_numeric_source",
+      "command": [
+        "python3",
+        "scripts/validate-paint-mip-lod.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/mip_lod_numeric_source.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.09601258399197832,
+      "log": "logs/mip_lod_numeric_source.txt"
+    },
+    {
+      "name": "paint_native",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "tiled_painting",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 23.582656833998044,
+      "log": "logs/paint_native.txt"
+    },
+    {
+      "name": "independent_source_validation",
+      "command": [
+        "node",
+        "scripts/validate-gltf-fixtures.cjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/source-validation"
+      ],
+      "exit_code": 0,
+      "seconds": 0.2863817920006113,
+      "log": "logs/independent_source_validation.txt"
+    },
+    {
+      "name": "paint_workflow",
+      "command": [
+        "python3",
+        "scripts/tiled-painting-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 56.497573959000874,
+      "log": "logs/paint_workflow.txt"
+    },
+    {
+      "name": "paint_schema",
+      "command": [
+        "python3",
+        "scripts/validate-tiled-painting-schema.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.2313882920134347,
+      "log": "logs/paint_schema.txt"
+    },
+    {
+      "name": "paint_browser",
+      "command": [
+        "node",
+        "scripts/tiled-painting-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.9083544580062153,
+      "log": "logs/paint_browser.txt"
+    },
+    {
+      "name": "paint_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-tiled-painting-browser.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.040117458993336186,
+      "log": "logs/paint_cross_platform.txt"
+    },
+    {
+      "name": "wasm_tests",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 116.61208233400248,
+      "log": "logs/wasm_tests.txt"
+    },
+    {
+      "name": "native_tests",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 311.32505699999456,
+      "log": "logs/native_tests.txt"
+    },
+    {
+      "name": "uv_workflow",
+      "command": [
+        "python3",
+        "scripts/uv-authoring-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 3.8619150839949725,
+      "log": "logs/uv_workflow.txt"
+    },
+    {
+      "name": "uv_schema",
+      "command": [
+        "python3",
+        "scripts/validate-uv-authoring-schema.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.14337862499814946,
+      "log": "logs/uv_schema.txt"
+    },
+    {
+      "name": "uv_browser",
+      "command": [
+        "node",
+        "scripts/uv-authoring-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.4127735000074608,
+      "log": "logs/uv_browser.txt"
+    },
+    {
+      "name": "uv_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-uv-authoring-browser.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03307166699960362,
+      "log": "logs/uv_cross_platform.txt"
+    },
+    {
+      "name": "blend_workflow",
+      "command": [
+        "python3",
+        "scripts/blend-static-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 64.77488737499516,
+      "log": "logs/blend_workflow.txt"
+    },
+    {
+      "name": "blend_reference",
+      "command": [
+        "python3",
+        "scripts/compare-blend-reference.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.14619770800345577,
+      "log": "logs/blend_reference.txt"
+    },
+    {
+      "name": "blend_schema",
+      "command": [
+        "python3",
+        "scripts/validate-blend-schema.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 56.79148604199872,
+      "log": "logs/blend_schema.txt"
+    },
+    {
+      "name": "blend_browser",
+      "command": [
+        "node",
+        "scripts/blend-static-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 3.4715337090019602,
+      "log": "logs/blend_browser.txt"
+    },
+    {
+      "name": "blend_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-blend-browser.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.4229157079971628,
+      "log": "logs/blend_cross_platform.txt"
+    },
+    {
+      "name": "gpu_dielectric",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_dielectric",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 9.304978250002023,
+      "log": "logs/gpu_dielectric.txt"
+    },
+    {
+      "name": "gpu_surfaces",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_surfaces",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 4.15032341699407,
+      "log": "logs/gpu_surfaces.txt"
+    },
+    {
+      "name": "secondary_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "secondary_textures_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 2.109163625005749,
+      "log": "logs/secondary_gpu.txt"
+    },
+    {
+      "name": "gpu_alpha",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_alpha",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 7.585423541997443,
+      "log": "logs/gpu_alpha.txt"
+    },
+    {
+      "name": "gltf_export_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gltf_export_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 1.3810657919966616,
+      "log": "logs/gltf_export_gpu.txt"
+    },
+    {
+      "name": "vertex_colors_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "vertex_colors_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 1.7530247920076363,
+      "log": "logs/vertex_colors_gpu.txt"
+    },
+    {
+      "name": "named_uv_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "named_uv_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 2.134507915994618,
+      "log": "logs/named_uv_gpu.txt"
+    },
+    {
+      "name": "morph_frame_regressions",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "morph_frames",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 6.344610583008034,
+      "log": "logs/morph_frame_regressions.txt"
+    },
+    {
+      "name": "morph_frame_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "morph_frames_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 1.919118208999862,
+      "log": "logs/morph_frame_gpu.txt"
+    },
+    {
+      "name": "linux_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-unknown-linux-gnu",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 8.146037334008724,
+      "log": "logs/linux_check.txt"
+    },
+    {
+      "name": "windows_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-pc-windows-msvc",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 8.790036209000391,
+      "log": "logs/windows_check.txt"
+    },
+    {
+      "name": "camera_regression",
+      "command": [
+        "python3",
+        "scripts/alpha-camera-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/camera-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 43.00420820800355,
+      "log": "logs/camera_regression.txt"
+    },
+    {
+      "name": "dependency_audit",
+      "command": [
+        "python3",
+        "scripts/dependency-audit.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8307038329949137,
+      "log": "logs/dependency_audit.txt"
+    },
+    {
+      "name": "animated_regression",
+      "command": [
+        "python3",
+        "scripts/animated-gltf-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/animated-regression",
+        "--gpu"
+      ],
+      "exit_code": 0,
+      "seconds": 5.117072916997131,
+      "log": "logs/animated_regression.txt"
+    },
+    {
+      "name": "shutter_regression",
+      "command": [
+        "python3",
+        "scripts/gpu-shutter-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/shutter-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 3.501579874995514,
+      "log": "logs/shutter_regression.txt"
+    },
+    {
+      "name": "sparse_regression",
+      "command": [
+        "python3",
+        "scripts/sparse-gltf-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/sparse-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 5.277832624997245,
+      "log": "logs/sparse_regression.txt"
+    },
+    {
+      "name": "alpha_workflow",
+      "command": [
+        "python3",
+        "scripts/alpha-gltf-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/alpha-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 5.511394957997254,
+      "log": "logs/alpha_workflow.txt"
+    },
+    {
+      "name": "alpha_browser",
+      "command": [
+        "node",
+        "scripts/alpha-gltf-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/alpha-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7079674160049763,
+      "log": "logs/alpha_browser.txt"
+    },
+    {
+      "name": "alpha_shutter_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/alpha-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 4.023683541992796,
+      "log": "logs/alpha_shutter_workflow.txt"
+    },
+    {
+      "name": "alpha_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/alpha-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6185864169965498,
+      "log": "logs/alpha_shutter_browser.txt"
+    },
+    {
+      "name": "named_uv_regression",
+      "command": [
+        "python3",
+        "scripts/named-uv-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/named-uv-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 1.6226575830078218,
+      "log": "logs/named_uv_regression.txt"
+    },
+    {
+      "name": "named_uv_browser",
+      "command": [
+        "node",
+        "scripts/named-uv-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/named-uv-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6945374159986386,
+      "log": "logs/named_uv_browser.txt"
+    },
+    {
+      "name": "named_uv_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-named-uv-browser.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/named-uv-regression",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/named_uv_cross_platform.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04320866698981263,
+      "log": "logs/named_uv_cross_platform.txt"
+    },
+    {
+      "name": "morph_workflow",
+      "command": [
+        "python3",
+        "scripts/morph-frames-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/morph-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 5.871104207995813,
+      "log": "logs/morph_workflow.txt"
+    },
+    {
+      "name": "morph_browser",
+      "command": [
+        "node",
+        "scripts/morph-frames-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/morph-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5099146659922553,
+      "log": "logs/morph_browser.txt"
+    },
+    {
+      "name": "vertex_color_workflow",
+      "command": [
+        "python3",
+        "scripts/vertex-colors-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/vertex-color-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 7.386398457994801,
+      "log": "logs/vertex_color_workflow.txt"
+    },
+    {
+      "name": "vertex_color_browser",
+      "command": [
+        "node",
+        "scripts/vertex-colors-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/vertex-color-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.48253725000540726,
+      "log": "logs/vertex_color_browser.txt"
+    },
+    {
+      "name": "export_workflow",
+      "command": [
+        "python3",
+        "scripts/gltf-export-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 27.8912974170089,
+      "log": "logs/export_workflow.txt"
+    },
+    {
+      "name": "export_schema",
+      "command": [
+        "python3",
+        "scripts/validate-gltf-export-schema.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z"
+      ],
+      "exit_code": 0,
+      "seconds": 0.18117966699355748,
+      "log": "logs/export_schema.txt"
+    },
+    {
+      "name": "export_source_validation",
+      "command": [
+        "node",
+        "scripts/validate-exported-glbs.cjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.12801066700194497,
+      "log": "logs/export_source_validation.txt"
+    },
+    {
+      "name": "export_browser",
+      "command": [
+        "node",
+        "scripts/gltf-export-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.1424411250045523,
+      "log": "logs/export_browser.txt"
+    },
+    {
+      "name": "secondary_workflow",
+      "command": [
+        "python3",
+        "scripts/secondary-textures-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/secondary-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 13.57079800000065,
+      "log": "logs/secondary_workflow.txt"
+    },
+    {
+      "name": "secondary_browser",
+      "command": [
+        "node",
+        "scripts/secondary-textures-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/secondary-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6727417080110172,
+      "log": "logs/secondary_browser.txt"
+    },
+    {
+      "name": "surface_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-surfaces-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/surface-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 20.212390667002182,
+      "log": "logs/surface_workflow.txt"
+    },
+    {
+      "name": "surface_browser",
+      "command": [
+        "node",
+        "scripts/gpu-surfaces-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/surface-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7833516670070821,
+      "log": "logs/surface_browser.txt"
+    },
+    {
+      "name": "conductor_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/conductor-shutter",
+        "{\"kind\": \"conductor\", \"eta\": [0.2, 0.9, 1.1], \"k\": [3, 2, 1.5]}"
+      ],
+      "exit_code": 0,
+      "seconds": 3.9292986249929527,
+      "log": "logs/conductor_shutter.txt"
+    },
+    {
+      "name": "conductor_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/conductor-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5031668749870732,
+      "log": "logs/conductor_shutter_browser.txt"
+    },
+    {
+      "name": "coated_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/coated-shutter",
+        "{\"kind\": \"coated\", \"weight\": 0.7, \"ior\": 1.5, \"roughness\": 0.25}"
+      ],
+      "exit_code": 0,
+      "seconds": 5.066869375004899,
+      "log": "logs/coated_shutter.txt"
+    },
+    {
+      "name": "coated_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/coated-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.504857166990405,
+      "log": "logs/coated_shutter_browser.txt"
+    },
+    {
+      "name": "dielectric_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-dielectric-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/dielectric-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 52.68590545900224,
+      "log": "logs/dielectric_workflow.txt"
+    },
+    {
+      "name": "dielectric_browser",
+      "command": [
+        "node",
+        "scripts/gpu-dielectric-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/dielectric-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.2658569170016563,
+      "log": "logs/dielectric_browser.txt"
+    },
+    {
+      "name": "dielectric_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/dielectric-shutter",
+        "{\"kind\": \"dielectric\", \"ior\": 1.5}"
+      ],
+      "exit_code": 0,
+      "seconds": 5.265539457992418,
+      "log": "logs/dielectric_shutter.txt"
+    },
+    {
+      "name": "dielectric_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/dielectric-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5017369579873048,
+      "log": "logs/dielectric_shutter_browser.txt"
+    },
+    {
+      "name": "volume_workflow",
+      "command": [
+        "python3",
+        "scripts/volume-import-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/volume-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 25.288364583000657,
+      "log": "logs/volume_workflow.txt"
+    },
+    {
+      "name": "volume_schema",
+      "command": [
+        "python3",
+        "scripts/validate-volume-import-schema.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/volume-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 7.6762671250035055,
+      "log": "logs/volume_schema.txt"
+    },
+    {
+      "name": "volume_browser",
+      "command": [
+        "node",
+        "scripts/volume-import-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/volume-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7983736250025686,
+      "log": "logs/volume_browser.txt"
+    },
+    {
+      "name": "hair_workflow",
+      "command": [
+        "python3",
+        "scripts/hair-import-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/hair-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 10.097655749996193,
+      "log": "logs/hair_workflow.txt"
+    },
+    {
+      "name": "hair_schema",
+      "command": [
+        "python3",
+        "scripts/validate-hair-import-schema.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/hair-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.28355283400742337,
+      "log": "logs/hair_schema.txt"
+    },
+    {
+      "name": "hair_browser",
+      "command": [
+        "node",
+        "scripts/hair-import-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/hair-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5315364999987651,
+      "log": "logs/hair_browser.txt"
+    },
+    {
+      "name": "geometry_regression",
+      "command": [
+        "target/debug/render-host",
+        "geometry-workflow",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/geometry-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5120050830009859,
+      "log": "logs/geometry_regression.txt"
+    },
+    {
+      "name": "groom_regression",
+      "command": [
+        "target/debug/render-host",
+        "groom-workflow",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/groom-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.47626112498983275,
+      "log": "logs/groom_regression.txt"
+    },
+    {
+      "name": "curve_color_workflow",
+      "command": [
+        "python3",
+        "scripts/curve-colors-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 27.062765791008133,
+      "log": "logs/curve_color_workflow.txt"
+    },
+    {
+      "name": "curve_color_schema",
+      "command": [
+        "python3",
+        "scripts/validate-curve-colors-schema.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.35316112500731833,
+      "log": "logs/curve_color_schema.txt"
+    },
+    {
+      "name": "curve_color_glb_validation",
+      "command": [
+        "node",
+        "scripts/validate-exported-glbs.cjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.16305299999658018,
+      "log": "logs/curve_color_glb_validation.txt"
+    },
+    {
+      "name": "curve_color_browser",
+      "command": [
+        "node",
+        "scripts/curve-colors-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.122745250002481,
+      "log": "logs/curve_color_browser.txt"
+    },
+    {
+      "name": "media_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_media",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 5.201620292005828,
+      "log": "logs/media_gpu.txt"
+    },
+    {
+      "name": "media_exact_rays",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-gpu",
+        "--locked",
+        "--offline",
+        "half_open_unit_cells",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5640659170021536,
+      "log": "logs/media_exact_rays.txt"
+    },
+    {
+      "name": "media_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-media-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/media-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 46.33623616700061,
+      "log": "logs/media_workflow.txt"
+    },
+    {
+      "name": "media_browser",
+      "command": [
+        "node",
+        "scripts/gpu-media-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/media-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.3929156660014996,
+      "log": "logs/media_browser.txt"
+    },
+    {
+      "name": "media_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-media-shutter-workflow.py",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/media-shutter",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/media-workflow/homogeneous-archive/document/document.json"
+      ],
+      "exit_code": 0,
+      "seconds": 2.5085822499968344,
+      "log": "logs/media_shutter.txt"
+    },
+    {
+      "name": "media_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-media-shutter-browser.mjs",
+        "artifacts/gpu-geometry-updates/run-20260906T223449Z/media-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.41734087499207817,
+      "log": "logs/media_shutter_browser.txt"
+    }
+  ],
+  "build_environment": {
+    "CARGO_NET_OFFLINE": "true",
+    "CARGO_BUILD_JOBS": "2",
+    "CARGO_INCREMENTAL": "0",
+    "CARGO_PROFILE_DEV_DEBUG": "0",
+    "CARGO_PROFILE_TEST_DEBUG": "0",
+    "CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUNNER": "wasm-bindgen-test-runner",
+    "RENDER_TEST_ORIGIN": "http://127.0.0.1:8782"
+  },
+  "native_test_count": 217,
+  "wasm_test_count": 188
+}

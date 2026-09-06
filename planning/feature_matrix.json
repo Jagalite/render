@@ -98,7 +98,7 @@
         "M07",
         "M08"
       ],
-      "qualification": "Opaque PBR/diffuse paths at depth 1\u201316 on CPU/Metal/WebGPU, with primary mipmaps and secondary LOD0; Rust CPU extended scattering/media, imaging products; exact-time CPU/Metal/WebGPU shutter frames and streaming sequences. Explicit unsupported GPU material/media profiles. Stable named UV bindings across CPU/GPU textures, CPU alpha, displacement and baking. GPU Principled alpha uses a separate generated kernel to retain exact opaque results; bounded alpha failures survive shutter accumulation. Native-authored conductor and single-interface coat now render on Metal/WebGPU with shared alpha, textures and shutter/sequence semantics; gpu-f32-conductor-coat-v1. GPU ideal dielectric Fresnel/Snell/TIR radiance transport is validated as gpu-f32-dielectric-v1; bounded zero-scattering RGB media now renders on Metal/WebGPU with ordinary opaque PBR surfaces; joint alpha/advanced surface profiles remain unsupported.",
+      "qualification": "Opaque PBR/diffuse paths at depth 1\u201316 on CPU/Metal/WebGPU, with primary mipmaps and secondary LOD0; Rust CPU extended scattering/media, imaging products; exact-time CPU/Metal/WebGPU shutter frames and streaming sequences. Explicit unsupported GPU material/media profiles. Stable named UV bindings across CPU/GPU textures, CPU alpha, displacement and baking. GPU Principled alpha uses a separate generated kernel to retain exact opaque results; bounded alpha failures survive shutter accumulation. Native-authored conductor and single-interface coat now render on Metal/WebGPU with shared alpha, textures and shutter/sequence semantics; gpu-f32-conductor-coat-v1. GPU ideal dielectric Fresnel/Snell/TIR radiance transport is validated as gpu-f32-dielectric-v1; bounded zero-scattering RGB media now renders on Metal/WebGPU with ordinary opaque PBR surfaces; joint alpha/advanced surface profiles remain unsupported. Packed geometry buffers retain allocations for same-size edits, patch bounded changed byte ranges, and report dense fallback and host shadow costs; gpu-buffer-updates-v1. Full host packing remains global.",
       "capability_axes": {
         "native_authoring": "ordinary_revision_checked_typed_transactions",
         "native_evaluation": "named_Rust_profiles_in_docs/m07_m08.md",
@@ -125,7 +125,8 @@
         "evidence/gpu-alpha/README.md",
         "evidence/gpu-surfaces/README.md",
         "evidence/gpu-dielectric/README.md",
-        "evidence/gpu-media/README.md"
+        "evidence/gpu-media/README.md",
+        "evidence/gpu-geometry-updates/README.md"
       ]
     },
     {

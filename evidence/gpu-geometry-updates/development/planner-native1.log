@@ -1,0 +1,15 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-geometry-updates/crates/core)
+   Compiling render-kernel v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-geometry-updates/crates/kernel)
+   Compiling render-gpu v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-geometry-updates/crates/gpu)
+    Finished `test` profile [unoptimized] target(s) in 26.10s
+     Running unittests src/lib.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/render_gpu-c36156f3f97f42c2)
+
+running 5 tests
+test media::tests::half_open_unit_cells_and_sparse_holes_execute_on_device ... ignored, requires real GPU; exact half-open media-ray contract
+test upload::tests::float_bits_are_compared_without_numeric_equality_or_nan_rules ... ok
+test upload::tests::local_writes_reconstruct_exact_bytes_and_preserve_distant_rows ... ok
+test upload::tests::first_resize_dense_and_fragmented_inputs_have_explicit_costs ... ok
+test upload::tests::every_small_dirty_pattern_reconstructs_the_target ... ok
+
+test result: ok. 4 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

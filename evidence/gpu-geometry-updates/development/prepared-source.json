@@ -1,0 +1,22 @@
+{
+  "status": "prepared_not_integrated_or_gpu_tested",
+  "source_gpu_lib_sha256": "fef534a26dff2251cc64e952100748125f0c286d5ab4ad3ea3bdcaeed5a63848",
+  "source_baseline": "be20d1f; painting does not change GPU crate",
+  "prepared_gpu_lib_sha256": "dee3298dfc4c3ebeb58bf7ff48275d0aa42dc7c3867c263d6e494925bd87b4ee",
+  "prepared_upload_sha256": "97d3b23a5d1ec664d7ebc4c7f38a9a3d3be1b365817aaa317170f402fa75bcc5",
+  "standalone_planner_tests": 4,
+  "fixture": {
+    "points": 289,
+    "triangles": 512,
+    "local_changed_points": 1,
+    "sha256": "65051c3f5aca28c0929503b47f798ea2bc5de88cf7961b22cea2aeee051ddc9f"
+  },
+  "remaining": [
+    "Create candidate branch after painting integration",
+    "Copy prepared files only after source hash check and format",
+    "Integration tests with persistent and fresh native GPU renderer",
+    "Real browser sequence/cache workflow",
+    "Resources, compatibility, failure/cancellation and dependency evidence",
+    "Documentation and integration review"
+  ]
+}

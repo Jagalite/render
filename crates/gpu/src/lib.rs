@@ -2,6 +2,7 @@
 mod media;
 mod raster;
 mod sequence;
+mod upload;
 use render_core::{
     Error, Result, canonical, digest,
     render::{Geometry, Image, RenderReceipt, Scene, Settings},
@@ -14,6 +15,10 @@ use std::{
         atomic::{AtomicBool, Ordering},
     },
     task::Poll,
+};
+pub use upload::{
+    Kind as GeometryUploadKind, Report as GeometryUploadReport,
+    Statistics as GeometryUploadStatistics,
 };
 use wgpu::util::DeviceExt;
 
@@ -33,6 +38,10 @@ struct FrameTarget<'a> {
     preserve_passes: bool,
     readback: bool,
 }
+struct GeometryCache {
+    buffer: wgpu::Buffer,
+    shadow: Vec<u8>,
+}
 pub struct Renderer {
     device: wgpu::Device,
     queue: wgpu::Queue,
@@ -43,7 +52,8 @@ pub struct Renderer {
     media_pipeline: Option<wgpu::ComputePipeline>,
     pub capabilities: Capabilities,
     lost: Arc<AtomicBool>,
-    geometry_cache: Option<(String, wgpu::Buffer)>,
+    geometry_cache: Option<GeometryCache>,
+    geometry_upload_statistics: GeometryUploadStatistics,
     pub geometry_uploads: u64,
 }
 fn fail(code: &str, e: impl std::fmt::Display) -> Error {
@@ -590,6 +600,7 @@ impl Renderer {
             capabilities,
             lost,
             geometry_cache: None,
+            geometry_upload_statistics: GeometryUploadStatistics::default(),
             geometry_uploads: 0,
         })
     }
@@ -716,6 +727,16 @@ impl Renderer {
         }
         self.media_pipeline = Some(pipeline);
         Ok(())
+    }
+    /// Disposable cache observations, including work on later-cancelled frames.
+    /// Host packing remains global; transfer counts do not imply CPU locality.
+    pub fn geometry_upload_statistics(&self) -> GeometryUploadStatistics {
+        let mut statistics = self.geometry_upload_statistics.clone();
+        statistics.retained_shadow_bytes = self
+            .geometry_cache
+            .as_ref()
+            .map_or(0, |c| c.shadow.len() as u64);
+        statistics
     }
     pub fn destroy(&mut self) {
         self.lost.store(true, Ordering::Release);
@@ -855,18 +876,41 @@ impl Renderer {
         self.device.push_error_scope(wgpu::ErrorFilter::OutOfMemory);
         self.device.push_error_scope(wgpu::ErrorFilter::Validation);
         let geometry_bytes = bytes(&p.geometry);
-        let key = digest(&geometry_bytes);
-        if self.geometry_cache.as_ref().is_none_or(|(k, _)| k != &key) {
-            let b = self
-                .device
-                .create_buffer_init(&wgpu::util::BufferInitDescriptor {
-                    label: Some("shared geometry and texels"),
-                    contents: &geometry_bytes,
-                    usage: wgpu::BufferUsages::STORAGE,
+        let plan = upload::plan(
+            self.geometry_cache.as_ref().map(|c| c.shadow.as_slice()),
+            &geometry_bytes,
+        );
+        match plan.kind {
+            GeometryUploadKind::Allocate => {
+                let buffer = self
+                    .device
+                    .create_buffer_init(&wgpu::util::BufferInitDescriptor {
+                        label: Some("shared geometry and texels"),
+                        contents: &geometry_bytes,
+                        usage: wgpu::BufferUsages::STORAGE | wgpu::BufferUsages::COPY_DST,
+                    });
+                self.geometry_cache = Some(GeometryCache {
+                    buffer,
+                    shadow: geometry_bytes,
                 });
-            self.geometry_cache = Some((key, b));
-            self.geometry_uploads += 1;
+                self.geometry_uploads += 1;
+            }
+            GeometryUploadKind::Patch | GeometryUploadKind::Rewrite => {
+                let cache = self.geometry_cache.as_mut().expect("same-size cache");
+                for range in &plan.ranges {
+                    self.queue.write_buffer(
+                        &cache.buffer,
+                        range.start as u64,
+                        &geometry_bytes[range.clone()],
+                    );
+                }
+                cache.shadow = geometry_bytes;
+                self.geometry_uploads += 1;
+            }
+            GeometryUploadKind::Reuse => {}
         }
+        self.geometry_upload_statistics
+            .observe(&plan, p.geometry.len() * 16);
         let texture_buffer = self
             .device
             .create_buffer_init(&wgpu::util::BufferInitDescriptor {
@@ -907,7 +951,7 @@ impl Renderer {
             usage: wgpu::BufferUsages::MAP_READ | wgpu::BufferUsages::COPY_DST,
             mapped_at_creation: false,
         });
-        let geometry = &self.geometry_cache.as_ref().expect("uploaded").1;
+        let geometry = &self.geometry_cache.as_ref().expect("uploaded").buffer;
         let buffers = [geometry, &instance_buffer, &params, output, &texture_buffer];
         let entries = buffers
             .iter()

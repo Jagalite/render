@@ -1,0 +1,224 @@
+{
+  "status": "passed",
+  "profile": "gpu-buffer-updates-v1",
+  "native_wasm_cpu_exact": true,
+  "upload_decisions_and_counts_identical": true,
+  "comparisons": [
+    {
+      "name": "base",
+      "backend": "cpu",
+      "cpu_rmse": 0.0,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "base",
+      "backend": "gpu",
+      "cpu_rmse": 2.810475800870924e-08,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "repeat",
+      "backend": "cpu",
+      "cpu_rmse": 0.0,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "repeat",
+      "backend": "gpu",
+      "cpu_rmse": 2.810475800870924e-08,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "local",
+      "backend": "cpu",
+      "cpu_rmse": 0.0,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "local",
+      "backend": "gpu",
+      "cpu_rmse": 2.8304648475505845e-08,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "local-repeat",
+      "backend": "cpu",
+      "cpu_rmse": 0.0,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "local-repeat",
+      "backend": "gpu",
+      "cpu_rmse": 2.8304648475505845e-08,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "undo",
+      "backend": "cpu",
+      "cpu_rmse": 0.0,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "undo",
+      "backend": "gpu",
+      "cpu_rmse": 2.810475800870924e-08,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "dense",
+      "backend": "cpu",
+      "cpu_rmse": 0.0,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "dense",
+      "backend": "gpu",
+      "cpu_rmse": 2.7471384970451406e-08,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "dense-repeat",
+      "backend": "cpu",
+      "cpu_rmse": 0.0,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "dense-repeat",
+      "backend": "gpu",
+      "cpu_rmse": 2.7471384970451406e-08,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "dense-undo",
+      "backend": "cpu",
+      "cpu_rmse": 0.0,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "dense-undo",
+      "backend": "gpu",
+      "cpu_rmse": 2.810475800870924e-08,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "resize",
+      "backend": "cpu",
+      "cpu_rmse": 0.0,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "resize",
+      "backend": "gpu",
+      "cpu_rmse": 2.810475800870924e-08,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "resize-repeat",
+      "backend": "cpu",
+      "cpu_rmse": 0.0,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "resize-repeat",
+      "backend": "gpu",
+      "cpu_rmse": 2.810475800870924e-08,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "camera",
+      "backend": "cpu",
+      "cpu_rmse": 0.0,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "camera",
+      "backend": "gpu",
+      "cpu_rmse": 2.707250761566429e-08,
+      "metal_max_error": 1.1920928955078125e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "material",
+      "backend": "cpu",
+      "cpu_rmse": 0.0,
+      "metal_max_error": 1.7881393432617188e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    },
+    {
+      "name": "material",
+      "backend": "gpu",
+      "cpu_rmse": 2.3032588282630274e-08,
+      "metal_max_error": 1.7881393432617188e-07,
+      "depth_max_error": 0.0,
+      "normal_max_error": 0.0,
+      "object_ids_identical": true
+    }
+  ]
+}

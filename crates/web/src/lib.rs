@@ -1,5 +1,7 @@
 //! Rust-owned browser application and storage adapter.
 #[cfg(target_arch = "wasm32")]
+mod gpu_updates;
+#[cfg(target_arch = "wasm32")]
 mod browser {
     use render_core::{document::*, render::*, storage::Envelope, *};
     use std::sync::atomic::AtomicBool;

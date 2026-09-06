@@ -1,0 +1,6 @@
+{
+  "reason": "Cargo runs integration tests from the package directory; the first relative output path resolved under crates/host. Future evidence calls use an absolute path.",
+  "original": "crates/host/artifacts/gpu-geometry-updates/native1",
+  "retained": "artifacts/gpu-geometry-updates/native1",
+  "contents_changed": false
+}

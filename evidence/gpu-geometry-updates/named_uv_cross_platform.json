@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "comparisons": [
+    {
+      "backend": "cpu",
+      "linear_rmse": 0.0,
+      "max_depth_error": 0.0,
+      "max_normal_error": 0.0,
+      "object_mismatches": 0
+    },
+    {
+      "backend": "gpu",
+      "linear_rmse": 4.674914099609268e-05,
+      "max_depth_error": 0.0,
+      "max_normal_error": 0.0001494884490966797,
+      "object_mismatches": 0
+    }
+  ]
+}

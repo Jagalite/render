@@ -1,0 +1,9 @@
+
+running 4 tests
+test tests::float_bits_are_compared_without_numeric_equality_or_nan_rules ... ok
+test tests::local_writes_reconstruct_exact_bytes_and_preserve_distant_rows ... ok
+test tests::first_resize_dense_and_fragmented_inputs_have_explicit_costs ... ok
+test tests::every_small_dirty_pattern_reconstructs_the_target ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

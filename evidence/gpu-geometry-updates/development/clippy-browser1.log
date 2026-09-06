@@ -1,0 +1,71 @@
+    Checking render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-geometry-updates/crates/core)
+    Checking render-kernel v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-geometry-updates/crates/kernel)
+    Checking render-gpu v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-geometry-updates/crates/gpu)
+    Checking render-web v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-geometry-updates/crates/web)
+error[E0432]: unresolved import `serde`
+ --> crates/web/src/gpu_updates.rs:3:5
+  |
+3 | use serde::Deserialize;
+  |     ^^^^^ use of unresolved module or unlinked crate `serde`
+  |
+  = help: if you wanted to use a crate named `serde`, use `cargo add serde` to add it to your `Cargo.toml`
+
+error: cannot find attribute `serde` in this scope
+ --> crates/web/src/gpu_updates.rs:7:3
+  |
+7 | #[serde(deny_unknown_fields)]
+  |   ^^^^^
+  |
+help: `serde` is an attribute that can be used by the derive macros `Deserialize` and `Serialize`, you might be missing a `derive` attribute
+  |
+8 + #[derive(Deserialize, Serialize)]
+9 | struct Input {
+  |
+
+error: cannot find attribute `serde` in this scope
+  --> crates/web/src/gpu_updates.rs:14:3
+   |
+14 | #[serde(deny_unknown_fields)]
+   |   ^^^^^
+   |
+help: `serde` is an attribute that can be used by the derive macros `Deserialize` and `Serialize`, you might be missing a `derive` attribute
+   |
+15 + #[derive(Deserialize, Serialize)]
+16 | struct Request {
+   |
+
+error[E0277]: the trait bound `gpu_updates::Request: serde::Deserialize<'de>` is not satisfied
+    --> crates/web/src/gpu_updates.rs:44:28
+     |
+  44 |     let request: Request = serde_json::from_str(json).map_err(js)?;
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^ unsatisfied trait bound
+     |
+help: the trait `serde_core::de::Deserialize<'_>` is not implemented for `gpu_updates::Request`
+    --> crates/web/src/gpu_updates.rs:15:1
+     |
+  15 | struct Request {
+     | ^^^^^^^^^^^^^^
+     = note: for local types consider adding `#[derive(serde::Deserialize)]` to your `gpu_updates::Request` type
+     = note: for types from other crates check whether the crate offers a `serde` feature flag
+     = help: the following other types implement trait `serde_core::de::Deserialize<'de>`:
+               &'a [u8]
+               &'a str
+               ()
+               (T,)
+               (T0, T1)
+               (T0, T1, T2)
+               (T0, T1, T2, T3)
+               (T0, T1, T2, T3, T4)
+             and 320 others
+note: required by a bound in `serde_json::from_str`
+    --> /Users/jagatranvo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_json-1.0.145/src/de.rs:2699:8
+     |
+2697 | pub fn from_str<'a, T>(s: &'a str) -> Result<T>
+     |        -------- required by a bound in this function
+2698 | where
+2699 |     T: de::Deserialize<'a>,
+     |        ^^^^^^^^^^^^^^^^^^^ required by this bound in `from_str`
+
+Some errors have detailed explanations: E0277, E0432.
+For more information about an error, try `rustc --explain E0277`.
+error: could not compile `render-web` (lib) due to 4 previous errors

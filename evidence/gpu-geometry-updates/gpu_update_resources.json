@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "seconds": 3.5059317910054233,
+  "maximum_resident_set_bytes": 49266688,
+  "executable": {
+    "path": "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/gpu_geometry_updates-8dccc20e95514037",
+    "bytes": 31084336,
+    "sha256": "13a5ca52d3b46651bdea5a5259f4e5cda20bef26a6f6bccd46b67b1faca7eaaf"
+  },
+  "scope": "Observed macOS conformance process, including fixture transactions, evaluation, CPU renders, multiple fresh GPU adapters and artifact serialization; excludes Cargo compilation and is not a performance benchmark or allocator cap."
+}

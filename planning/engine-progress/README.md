@@ -5,8 +5,8 @@ working on feasible remaining steps. M09 interactive editor remains deferred.
 Each completed increment requires implementation, native/browser workflow evidence,
 negative/cancellation/stale checks, resource/provenance records and documentation.
 
-Current completed increment: tiled texture painting, masks/layers, checkpoint recovery and explicit image baking; evidence/tiled-painting.
-Next engine subgate: localized sculpt authoring, spatial queries and sparse displacement/mask chunks.
+Current completed increment: bounded GPU geometry-buffer updates and resource observations; evidence/gpu-geometry-updates.
+Next engine subgate: revision-pinned spatial queries and sparse sculpt displacement/mask chunks.
 
 | Order | Increment | Status |
 |---|---|---|
@@ -157,3 +157,14 @@ explicit PNG baking, named UV material binding, old-client rejection, archive/OP
 recovery and CPU/Metal/WebGPU output passed. 1880 prior
 render/pass/receipt files remain byte identical. No Cargo or shader changes.
 M10 and the M09 interactive dependency remain open.
+
+GPU geometry update prerequisite: 89 acceptance checks,
+217 native tests and 188 Wasm tests.
+The 12-case actual GPU workflow demonstrates sparse patches,
+exact reuse, dense fallback, resize, cancellation and device recreation. Native
+and browser upload decisions/counts agree, and fresh/reused GPU outputs are exact.
+All 1896 prior render/pass/receipt files and
+210 prior fixtures remain unchanged. No new package,
+feature or shader is introduced; the web adapter adds a direct Wasm serde edge.
+M10 sculpting still requires localized spatial queries, sparse chunks and affected
+region evaluation; current host packing remains global.

@@ -95,3 +95,9 @@ and publish through ordinary transactions. Editable canvas assets remain distinc
 from rendered images and shared materials. `schemas/tiled_painting.schema.json` and
 [the painting contract](tiled_painting.md) specify wire shape and semantics. The
 existing narrow ABI is unchanged; browser stroke admission remains synchronous.
+
+`Renderer::geometry_upload_statistics()` observes disposable packed-buffer work
+without changing persisted receipts. The bounded Wasm
+`gpu_geometry_update_conformance` diagnostic consumes canonical documents and pinned
+revisions to check renderer/cache behavior. See [GPU geometry updates](gpu_geometry_updates.md)
+for the input limits and resource accounting; ordinary mutation/job APIs are unchanged.

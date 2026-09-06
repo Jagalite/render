@@ -1,0 +1,125 @@
+{
+  "scope": "Logical serialized/packed payload bytes and retained shadow, not allocator sizes or a process peak; GPU staging, driver allocations, canonical/evaluated meshes and Vec metadata are additional.",
+  "observations": [
+    {
+      "name": "base",
+      "canonical_document_bytes": 136361,
+      "packed_host_record_bytes": 102352,
+      "serialized_host_bytes": 102352,
+      "prior_retained_shadow_bytes": 0,
+      "logical_host_bytes_at_comparison": 204704,
+      "retained_shadow_after_bytes": 102352,
+      "uploaded_gpu_bytes": 102352
+    },
+    {
+      "name": "repeat",
+      "canonical_document_bytes": 136361,
+      "packed_host_record_bytes": 102352,
+      "serialized_host_bytes": 102352,
+      "prior_retained_shadow_bytes": 102352,
+      "logical_host_bytes_at_comparison": 307056,
+      "retained_shadow_after_bytes": 102352,
+      "uploaded_gpu_bytes": 0
+    },
+    {
+      "name": "local",
+      "canonical_document_bytes": 270464,
+      "packed_host_record_bytes": 102352,
+      "serialized_host_bytes": 102352,
+      "prior_retained_shadow_bytes": 102352,
+      "logical_host_bytes_at_comparison": 307056,
+      "retained_shadow_after_bytes": 102352,
+      "uploaded_gpu_bytes": 528
+    },
+    {
+      "name": "local-repeat",
+      "canonical_document_bytes": 270464,
+      "packed_host_record_bytes": 102352,
+      "serialized_host_bytes": 102352,
+      "prior_retained_shadow_bytes": 102352,
+      "logical_host_bytes_at_comparison": 307056,
+      "retained_shadow_after_bytes": 102352,
+      "uploaded_gpu_bytes": 0
+    },
+    {
+      "name": "undo",
+      "canonical_document_bytes": 136361,
+      "packed_host_record_bytes": 102352,
+      "serialized_host_bytes": 102352,
+      "prior_retained_shadow_bytes": 102352,
+      "logical_host_bytes_at_comparison": 307056,
+      "retained_shadow_after_bytes": 102352,
+      "uploaded_gpu_bytes": 528
+    },
+    {
+      "name": "dense",
+      "canonical_document_bytes": 404563,
+      "packed_host_record_bytes": 102352,
+      "serialized_host_bytes": 102352,
+      "prior_retained_shadow_bytes": 102352,
+      "logical_host_bytes_at_comparison": 307056,
+      "retained_shadow_after_bytes": 102352,
+      "uploaded_gpu_bytes": 102352
+    },
+    {
+      "name": "dense-repeat",
+      "canonical_document_bytes": 404563,
+      "packed_host_record_bytes": 102352,
+      "serialized_host_bytes": 102352,
+      "prior_retained_shadow_bytes": 102352,
+      "logical_host_bytes_at_comparison": 307056,
+      "retained_shadow_after_bytes": 102352,
+      "uploaded_gpu_bytes": 0
+    },
+    {
+      "name": "dense-undo",
+      "canonical_document_bytes": 136361,
+      "packed_host_record_bytes": 102352,
+      "serialized_host_bytes": 102352,
+      "prior_retained_shadow_bytes": 102352,
+      "logical_host_bytes_at_comparison": 307056,
+      "retained_shadow_after_bytes": 102352,
+      "uploaded_gpu_bytes": 102352
+    },
+    {
+      "name": "resize",
+      "canonical_document_bytes": 404964,
+      "packed_host_record_bytes": 102624,
+      "serialized_host_bytes": 102624,
+      "prior_retained_shadow_bytes": 102352,
+      "logical_host_bytes_at_comparison": 307600,
+      "retained_shadow_after_bytes": 102624,
+      "uploaded_gpu_bytes": 102624
+    },
+    {
+      "name": "resize-repeat",
+      "canonical_document_bytes": 404964,
+      "packed_host_record_bytes": 102624,
+      "serialized_host_bytes": 102624,
+      "prior_retained_shadow_bytes": 102624,
+      "logical_host_bytes_at_comparison": 307872,
+      "retained_shadow_after_bytes": 102624,
+      "uploaded_gpu_bytes": 0
+    },
+    {
+      "name": "camera",
+      "canonical_document_bytes": 406319,
+      "packed_host_record_bytes": 102624,
+      "serialized_host_bytes": 102624,
+      "prior_retained_shadow_bytes": 102624,
+      "logical_host_bytes_at_comparison": 307872,
+      "retained_shadow_after_bytes": 102624,
+      "uploaded_gpu_bytes": 0
+    },
+    {
+      "name": "material",
+      "canonical_document_bytes": 407452,
+      "packed_host_record_bytes": 102624,
+      "serialized_host_bytes": 102624,
+      "prior_retained_shadow_bytes": 102624,
+      "logical_host_bytes_at_comparison": 307872,
+      "retained_shadow_after_bytes": 102624,
+      "uploaded_gpu_bytes": 0
+    }
+  ]
+}

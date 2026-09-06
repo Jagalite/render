@@ -1,0 +1,1475 @@
+{
+  "files": [
+    {
+      "path": "evidence/gpu-geometry-updates/README.md",
+      "bytes": 3201,
+      "sha256": "38b1f01100da327aebe07a69de0a7042705172ad2ce07f0039253a5005745657"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/collection.json",
+      "bytes": 161,
+      "sha256": "3dbd374c3dfd54a76762faa45f52068ca8c6b6263b9d79d92e82fc246dda43ce"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/cross_platform.json",
+      "bytes": 2645,
+      "sha256": "28855eaf1650b0243f444eb7cfaa6a0a08ae8cfede70fcb1000c62db26a52896"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/curve_color_cross_platform.json",
+      "bytes": 2355,
+      "sha256": "a8b5db0e23fc2aa262a4a65dd6bf6c2b5e5078d84ef9b4c509c3a1ff1d8e8ed0"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/dependency_delta.json",
+      "bytes": 2310,
+      "sha256": "4bb1ce6b21b85977350be5b0379bc8b5d5d5beb225df684c5c5d87edb0bfa746"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/dependency_inventory.json",
+      "bytes": 68192,
+      "sha256": "2f67452d0f4fe4852e6378767305176713a00d984a2d2f095fefd7052c315ae5"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/acceptance1.log",
+      "bytes": 1884,
+      "sha256": "bb38afb87a3467d322260f3a9d8a555ee722df8db62e263b5afde42e1007900c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/browser-build2.log",
+      "bytes": 535,
+      "sha256": "85c47854d18ffb78799997ee434cc683829e4631b0c97eec3ae77f475ee616fc"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/browser1.log",
+      "bytes": 5603,
+      "sha256": "7d6a613cd4114a05e5c03be12ce31151cdac469428bfb73c9d59788778fd8d92"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/cargo-metadata-after-serde.json",
+      "bytes": 728215,
+      "sha256": "036e41eda6aa461760e06f6303c20d6e221d20c53d23cbf395d6d3c057048517"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/clippy-browser1.log",
+      "bytes": 3109,
+      "sha256": "eae1c471cd1789a489b35539e518bded8938f01aeb8b0239e65be14052833092"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/clippy-browser2.log",
+      "bytes": 176,
+      "sha256": "c8653dc76b84aaadd24c0e4ffed2d169a45b730c71ae968ea4992ce2f9993afc"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/clippy-native1.log",
+      "bytes": 767,
+      "sha256": "754f1e8290a73fa4460d0e92add736e58b8cc7f87f615cc4194560f09c038ca7"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/collection1.log",
+      "bytes": 110,
+      "sha256": "1aa0d1900781d40c3fa4c76b739cdbdbf23197f84a8cb9db2ed732073aae96dc"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/compare1.log",
+      "bytes": 3523,
+      "sha256": "5755ef06e477073ed13e2c97c984ae1e8f15aa8dc436986104a022864712955d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/finalize-manifests.py",
+      "bytes": 1313,
+      "sha256": "da6de6d32d39840184a24503db252835e6fce30a6a38755d88ebdb03c6c828d7"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/generate-fixture.py",
+      "bytes": 1467,
+      "sha256": "8f6b6700c0f96e05125049eb3bc73df11ee3991cbe5a782938d4bea0a32d4ce1"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/geometry-upload-planner-test.log",
+      "bytes": 425,
+      "sha256": "2641d3c40eddbe6f2a6a87e831d9992c193b0ebcfd39b86aa9e47dbfe3ea85f5"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/geometry_upload_candidate.rs",
+      "bytes": 4559,
+      "sha256": "545ec103bd3b90f95e2144566b791f8c19f4d65dbf8041911af85c4f5e3cfc25"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/native-gpu1.log",
+      "bytes": 5751,
+      "sha256": "62f86c7634f42c5500995ad12cc6f41004b8f895e9c96b3a4d64c0b0a2e548c4"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/native-gpu2.log",
+      "bytes": 7201,
+      "sha256": "c28e1ec975931ff6e4b8d29aa0e7406f3c296d30b4cc3569d8c41fc52b80213e"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/output-relocation.json",
+      "bytes": 331,
+      "sha256": "42a7d11c5c11f5ff8cf14f81fecb429d139101c1b62da158b9e88c15c0528a03"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/planner-native1.log",
+      "bytes": 1154,
+      "sha256": "0b5f98e12721bdf50348adde20a10fc5b14e1882b14f911713a2bd44f5b085b5"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/prepared-gpu-lib.rs",
+      "bytes": 47611,
+      "sha256": "dee3298dfc4c3ebeb58bf7ff48275d0aa42dc7c3867c263d6e494925bd87b4ee"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/prepared-source.json",
+      "bytes": 1001,
+      "sha256": "2ddbb27e2cd1e22aeaf75ef5c82310a64e2de3ace6a871d5860aa23e65b408c3"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/prepared-upload.rs",
+      "bytes": 6144,
+      "sha256": "97d3b23a5d1ec664d7ebc4c7f38a9a3d3be1b365817aaa317170f402fa75bcc5"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/qualify-docs.py",
+      "bytes": 8212,
+      "sha256": "68e4ee045c66320e77893dd670efe4c51f3ff7b283239c460ac7c03eef5df6f3"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/development/sculpt-next-contract.md",
+      "bytes": 7997,
+      "sha256": "26ac7312a7c2cf841d963c64e98219151adf253eb7b614aa5b090100a5824a65"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/dielectric_cross_platform.json",
+      "bytes": 7459,
+      "sha256": "2347bc7ea3945fde14e55e4c49e30e1242070fd14f11f70624fddfc9178dad70"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/fixture_reproduction.json",
+      "bytes": 200,
+      "sha256": "b1d7e7776acc704fa5c9882ce3b4fbfad9fa101102767135791109b58969f902"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/base/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "4c439ff428d0168639940df05dee11137fb46069d1e1893c0fb54f50485bc099"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/base/document.json",
+      "bytes": 136361,
+      "sha256": "fafd70a68b11e60a7061f2e1bedd21883e62c11b4e224a83822b4732cd34b33c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/base/image.pfm",
+      "bytes": 3086,
+      "sha256": "1b67f04f17fda330ad78d8001454aefb3e3639b1456abd9906c67d43aa95370b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/base/passes.json",
+      "bytes": 13581,
+      "sha256": "58929c54fbbb941cf3f174b3b7e251e8f52000e17a8bc4b671ab2cb7d95c12bc"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/base/receipt.json",
+      "bytes": 495,
+      "sha256": "3ef9a7f3c193f78a0d184cddf3ca8af5cb5a5242493e517b9695f39eee679846"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/camera/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "d47ef647ff0a9273709123f0007f986f80468e44cd26be508507b45dea87b474"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/camera/document.json",
+      "bytes": 406319,
+      "sha256": "144d1bdfe0c98f8e2837bdcf1b0da99b95567ca7bf8c48a6897a0b4770740368"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/camera/image.pfm",
+      "bytes": 3086,
+      "sha256": "2d4336b81655c24ddd7849598841f5ffefa6be947def759339fcf64418a7320f"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/camera/passes.json",
+      "bytes": 13251,
+      "sha256": "5c7111906fe2529ce6146d6b52e1b9254ecaaadfe8684545761970b9f24c64d0"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/camera/receipt.json",
+      "bytes": 495,
+      "sha256": "f622f0e979da5661116eb6748cd134c6919368b252bdba0c94de3bff9dafaedf"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/dense/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "06a4f7b6f6f877b3b5f61f9cc35933f083c744f8b7d9e41811deb2379fbc7aa3"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/dense/document.json",
+      "bytes": 404563,
+      "sha256": "b3b3d51623bd017bc8f1c00d6e910e7c66990a647247b9cb54f90dbcf2679b8c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/dense/image.pfm",
+      "bytes": 3086,
+      "sha256": "7a46c4bb8b14454be7c4baa4ab0f20a136c2d568fa427717052b2ff0f5c7723b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/dense/passes.json",
+      "bytes": 13581,
+      "sha256": "78899452bbb7b0a41ce0d8ffee5c21c29351f3d94a3ced0dc2eec4bb5452219d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/dense/receipt.json",
+      "bytes": 495,
+      "sha256": "c5e80c4a5a1ae12e81113c86bdf0b3919fdcf866d206279f812618bfdcef4dbb"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/dense-repeat/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "06a4f7b6f6f877b3b5f61f9cc35933f083c744f8b7d9e41811deb2379fbc7aa3"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/dense-repeat/document.json",
+      "bytes": 404563,
+      "sha256": "b3b3d51623bd017bc8f1c00d6e910e7c66990a647247b9cb54f90dbcf2679b8c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/dense-repeat/image.pfm",
+      "bytes": 3086,
+      "sha256": "7a46c4bb8b14454be7c4baa4ab0f20a136c2d568fa427717052b2ff0f5c7723b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/dense-repeat/passes.json",
+      "bytes": 13581,
+      "sha256": "78899452bbb7b0a41ce0d8ffee5c21c29351f3d94a3ced0dc2eec4bb5452219d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/dense-repeat/receipt.json",
+      "bytes": 495,
+      "sha256": "c5e80c4a5a1ae12e81113c86bdf0b3919fdcf866d206279f812618bfdcef4dbb"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/dense-undo/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "4c439ff428d0168639940df05dee11137fb46069d1e1893c0fb54f50485bc099"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/dense-undo/document.json",
+      "bytes": 136361,
+      "sha256": "fafd70a68b11e60a7061f2e1bedd21883e62c11b4e224a83822b4732cd34b33c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/dense-undo/image.pfm",
+      "bytes": 3086,
+      "sha256": "1b67f04f17fda330ad78d8001454aefb3e3639b1456abd9906c67d43aa95370b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/dense-undo/passes.json",
+      "bytes": 13581,
+      "sha256": "58929c54fbbb941cf3f174b3b7e251e8f52000e17a8bc4b671ab2cb7d95c12bc"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/dense-undo/receipt.json",
+      "bytes": 495,
+      "sha256": "3ef9a7f3c193f78a0d184cddf3ca8af5cb5a5242493e517b9695f39eee679846"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/local/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "9151a6692e0cae2ef892160605544b4328609d2b2d586f7991f30b7ed9ce7110"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/local/document.json",
+      "bytes": 270464,
+      "sha256": "85dbebc57754b3d4191c5a2b426e1275d0beba8bc79c4ece61f629a6c76aa900"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/local/image.pfm",
+      "bytes": 3086,
+      "sha256": "d9640fffea4a9d064d03dd14082fc80cf1e5131916d05545a0faec076a6f3979"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/local/passes.json",
+      "bytes": 13733,
+      "sha256": "5fabacee8c952530ec4105b6e64778cef499b7085021d8d6d2e3eea748ed3fa7"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/local/receipt.json",
+      "bytes": 495,
+      "sha256": "1451ce9127fbeb86b20dc522de786d67da4f9d5f986e55adb1b39169f30b52ce"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/local-repeat/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "9151a6692e0cae2ef892160605544b4328609d2b2d586f7991f30b7ed9ce7110"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/local-repeat/document.json",
+      "bytes": 270464,
+      "sha256": "85dbebc57754b3d4191c5a2b426e1275d0beba8bc79c4ece61f629a6c76aa900"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/local-repeat/image.pfm",
+      "bytes": 3086,
+      "sha256": "d9640fffea4a9d064d03dd14082fc80cf1e5131916d05545a0faec076a6f3979"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/local-repeat/passes.json",
+      "bytes": 13733,
+      "sha256": "5fabacee8c952530ec4105b6e64778cef499b7085021d8d6d2e3eea748ed3fa7"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/local-repeat/receipt.json",
+      "bytes": 495,
+      "sha256": "1451ce9127fbeb86b20dc522de786d67da4f9d5f986e55adb1b39169f30b52ce"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/material/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "594e4d602eb55f00ee58a959e782660994ed65604d55967784a4028b149ac38b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/material/document.json",
+      "bytes": 407452,
+      "sha256": "71f513a6b2ff640e8a16c8570bf269b5a0862c0cd1e7979d899eb459808f9d92"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/material/image.pfm",
+      "bytes": 3086,
+      "sha256": "eadb019b2e3b774306055ca83547c918f144da8c73c0d2ea0ec14c5a3afb457a"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/material/passes.json",
+      "bytes": 13251,
+      "sha256": "5c7111906fe2529ce6146d6b52e1b9254ecaaadfe8684545761970b9f24c64d0"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/material/receipt.json",
+      "bytes": 495,
+      "sha256": "85f56910803f17bdb678fcb578728a85d011a9168992e3b92ffc7f5879eb0d03"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/native_report.json",
+      "bytes": 9442,
+      "sha256": "6905b67097c8b57b140e78ca8933426a9d1e0956dc5b940474269677a399b687"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/repeat/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "4c439ff428d0168639940df05dee11137fb46069d1e1893c0fb54f50485bc099"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/repeat/document.json",
+      "bytes": 136361,
+      "sha256": "fafd70a68b11e60a7061f2e1bedd21883e62c11b4e224a83822b4732cd34b33c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/repeat/image.pfm",
+      "bytes": 3086,
+      "sha256": "1b67f04f17fda330ad78d8001454aefb3e3639b1456abd9906c67d43aa95370b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/repeat/passes.json",
+      "bytes": 13581,
+      "sha256": "58929c54fbbb941cf3f174b3b7e251e8f52000e17a8bc4b671ab2cb7d95c12bc"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/repeat/receipt.json",
+      "bytes": 495,
+      "sha256": "3ef9a7f3c193f78a0d184cddf3ca8af5cb5a5242493e517b9695f39eee679846"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/resize/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "4c439ff428d0168639940df05dee11137fb46069d1e1893c0fb54f50485bc099"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/resize/document.json",
+      "bytes": 404964,
+      "sha256": "6eed45ec1ebdd33d54fcca4afa74d6742b3b23e6d7230b3b3fa5e23ccbdcfaed"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/resize/image.pfm",
+      "bytes": 3086,
+      "sha256": "1b67f04f17fda330ad78d8001454aefb3e3639b1456abd9906c67d43aa95370b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/resize/passes.json",
+      "bytes": 13581,
+      "sha256": "58929c54fbbb941cf3f174b3b7e251e8f52000e17a8bc4b671ab2cb7d95c12bc"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/resize/receipt.json",
+      "bytes": 495,
+      "sha256": "ef8fb52599c282affcab0f4c87df66166f4d401ec4b633e7ebacb8093039fef4"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/resize-repeat/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "4c439ff428d0168639940df05dee11137fb46069d1e1893c0fb54f50485bc099"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/resize-repeat/document.json",
+      "bytes": 404964,
+      "sha256": "6eed45ec1ebdd33d54fcca4afa74d6742b3b23e6d7230b3b3fa5e23ccbdcfaed"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/resize-repeat/image.pfm",
+      "bytes": 3086,
+      "sha256": "1b67f04f17fda330ad78d8001454aefb3e3639b1456abd9906c67d43aa95370b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/resize-repeat/passes.json",
+      "bytes": 13581,
+      "sha256": "58929c54fbbb941cf3f174b3b7e251e8f52000e17a8bc4b671ab2cb7d95c12bc"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/resize-repeat/receipt.json",
+      "bytes": 495,
+      "sha256": "ef8fb52599c282affcab0f4c87df66166f4d401ec4b633e7ebacb8093039fef4"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/undo/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "4c439ff428d0168639940df05dee11137fb46069d1e1893c0fb54f50485bc099"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/undo/document.json",
+      "bytes": 136361,
+      "sha256": "fafd70a68b11e60a7061f2e1bedd21883e62c11b4e224a83822b4732cd34b33c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/undo/image.pfm",
+      "bytes": 3086,
+      "sha256": "1b67f04f17fda330ad78d8001454aefb3e3639b1456abd9906c67d43aa95370b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/undo/passes.json",
+      "bytes": 13581,
+      "sha256": "58929c54fbbb941cf3f174b3b7e251e8f52000e17a8bc4b671ab2cb7d95c12bc"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-resource-workflow/undo/receipt.json",
+      "bytes": 495,
+      "sha256": "3ef9a7f3c193f78a0d184cddf3ca8af5cb5a5242493e517b9695f39eee679846"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/base/browser-cpu.json",
+      "bytes": 27025,
+      "sha256": "84d2ae7bb772aa664fcc6247ee6a9b65d63052c8c2359b4996e366524a622b04"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/base/browser-gpu.json",
+      "bytes": 27013,
+      "sha256": "e223d978ec103ac873db2db5a592225cfde112f10a907f58b16a8af56aa70d1d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/base/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "4c439ff428d0168639940df05dee11137fb46069d1e1893c0fb54f50485bc099"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/base/document.json",
+      "bytes": 136361,
+      "sha256": "fafd70a68b11e60a7061f2e1bedd21883e62c11b4e224a83822b4732cd34b33c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/base/image.pfm",
+      "bytes": 3086,
+      "sha256": "1b67f04f17fda330ad78d8001454aefb3e3639b1456abd9906c67d43aa95370b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/base/passes.json",
+      "bytes": 13581,
+      "sha256": "58929c54fbbb941cf3f174b3b7e251e8f52000e17a8bc4b671ab2cb7d95c12bc"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/base/receipt.json",
+      "bytes": 495,
+      "sha256": "3ef9a7f3c193f78a0d184cddf3ca8af5cb5a5242493e517b9695f39eee679846"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/browser_report.json",
+      "bytes": 9932,
+      "sha256": "3b920d3193f3b2a545d6fd35014198a3f84545603c78efb488fe0c30ee7cb7ef"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/camera/browser-cpu.json",
+      "bytes": 26707,
+      "sha256": "89a059c0e6b876e870acf0cfd79931b79bcdf80f6d1557096d4e9f593e946e78"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/camera/browser-gpu.json",
+      "bytes": 26698,
+      "sha256": "a4dd5766276e1aa032fde3fb33d54b8ef7b2b98490fc843ef9a082aeaaf930c1"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/camera/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "d47ef647ff0a9273709123f0007f986f80468e44cd26be508507b45dea87b474"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/camera/document.json",
+      "bytes": 406319,
+      "sha256": "144d1bdfe0c98f8e2837bdcf1b0da99b95567ca7bf8c48a6897a0b4770740368"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/camera/image.pfm",
+      "bytes": 3086,
+      "sha256": "2d4336b81655c24ddd7849598841f5ffefa6be947def759339fcf64418a7320f"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/camera/passes.json",
+      "bytes": 13251,
+      "sha256": "5c7111906fe2529ce6146d6b52e1b9254ecaaadfe8684545761970b9f24c64d0"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/camera/receipt.json",
+      "bytes": 495,
+      "sha256": "f622f0e979da5661116eb6748cd134c6919368b252bdba0c94de3bff9dafaedf"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/cross_platform.json",
+      "bytes": 5923,
+      "sha256": "28f0d0dcd0f7a6dc50c426bc2d92c3c67a28c0cd78c3d763ebfb698bedfcd1c1"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense/browser-cpu.json",
+      "bytes": 27560,
+      "sha256": "84fea826c46fc20614ab38707b37cffd41a96447700a5c368c14288c53f4e22c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense/browser-gpu.json",
+      "bytes": 27548,
+      "sha256": "65b2d8ba76076bd1401339404b785a8638f4c9e975ff0033a661010e97d9a2ca"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "06a4f7b6f6f877b3b5f61f9cc35933f083c744f8b7d9e41811deb2379fbc7aa3"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense/document.json",
+      "bytes": 404563,
+      "sha256": "b3b3d51623bd017bc8f1c00d6e910e7c66990a647247b9cb54f90dbcf2679b8c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense/image.pfm",
+      "bytes": 3086,
+      "sha256": "7a46c4bb8b14454be7c4baa4ab0f20a136c2d568fa427717052b2ff0f5c7723b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense/passes.json",
+      "bytes": 13581,
+      "sha256": "78899452bbb7b0a41ce0d8ffee5c21c29351f3d94a3ced0dc2eec4bb5452219d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense/receipt.json",
+      "bytes": 495,
+      "sha256": "c5e80c4a5a1ae12e81113c86bdf0b3919fdcf866d206279f812618bfdcef4dbb"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense-repeat/browser-cpu.json",
+      "bytes": 27560,
+      "sha256": "84fea826c46fc20614ab38707b37cffd41a96447700a5c368c14288c53f4e22c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense-repeat/browser-gpu.json",
+      "bytes": 27548,
+      "sha256": "65b2d8ba76076bd1401339404b785a8638f4c9e975ff0033a661010e97d9a2ca"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense-repeat/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "06a4f7b6f6f877b3b5f61f9cc35933f083c744f8b7d9e41811deb2379fbc7aa3"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense-repeat/document.json",
+      "bytes": 404563,
+      "sha256": "b3b3d51623bd017bc8f1c00d6e910e7c66990a647247b9cb54f90dbcf2679b8c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense-repeat/image.pfm",
+      "bytes": 3086,
+      "sha256": "7a46c4bb8b14454be7c4baa4ab0f20a136c2d568fa427717052b2ff0f5c7723b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense-repeat/passes.json",
+      "bytes": 13581,
+      "sha256": "78899452bbb7b0a41ce0d8ffee5c21c29351f3d94a3ced0dc2eec4bb5452219d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense-repeat/receipt.json",
+      "bytes": 495,
+      "sha256": "c5e80c4a5a1ae12e81113c86bdf0b3919fdcf866d206279f812618bfdcef4dbb"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense-undo/browser-cpu.json",
+      "bytes": 27025,
+      "sha256": "84d2ae7bb772aa664fcc6247ee6a9b65d63052c8c2359b4996e366524a622b04"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense-undo/browser-gpu.json",
+      "bytes": 27013,
+      "sha256": "e223d978ec103ac873db2db5a592225cfde112f10a907f58b16a8af56aa70d1d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense-undo/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "4c439ff428d0168639940df05dee11137fb46069d1e1893c0fb54f50485bc099"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense-undo/document.json",
+      "bytes": 136361,
+      "sha256": "fafd70a68b11e60a7061f2e1bedd21883e62c11b4e224a83822b4732cd34b33c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense-undo/image.pfm",
+      "bytes": 3086,
+      "sha256": "1b67f04f17fda330ad78d8001454aefb3e3639b1456abd9906c67d43aa95370b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense-undo/passes.json",
+      "bytes": 13581,
+      "sha256": "58929c54fbbb941cf3f174b3b7e251e8f52000e17a8bc4b671ab2cb7d95c12bc"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/dense-undo/receipt.json",
+      "bytes": 495,
+      "sha256": "3ef9a7f3c193f78a0d184cddf3ca8af5cb5a5242493e517b9695f39eee679846"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/local/browser-cpu.json",
+      "bytes": 27193,
+      "sha256": "72e85216bcca9aedc8c35d6de10be1a3a0a082fe43b999eea70eeccf6e24688b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/local/browser-gpu.json",
+      "bytes": 27182,
+      "sha256": "00abb4f6c0561ff2050dfbcd719139a1103978cd9c498fb34f4a25e4c6dfb27d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/local/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "9151a6692e0cae2ef892160605544b4328609d2b2d586f7991f30b7ed9ce7110"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/local/document.json",
+      "bytes": 270464,
+      "sha256": "85dbebc57754b3d4191c5a2b426e1275d0beba8bc79c4ece61f629a6c76aa900"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/local/image.pfm",
+      "bytes": 3086,
+      "sha256": "d9640fffea4a9d064d03dd14082fc80cf1e5131916d05545a0faec076a6f3979"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/local/passes.json",
+      "bytes": 13733,
+      "sha256": "5fabacee8c952530ec4105b6e64778cef499b7085021d8d6d2e3eea748ed3fa7"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/local/receipt.json",
+      "bytes": 495,
+      "sha256": "1451ce9127fbeb86b20dc522de786d67da4f9d5f986e55adb1b39169f30b52ce"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/local-repeat/browser-cpu.json",
+      "bytes": 27193,
+      "sha256": "72e85216bcca9aedc8c35d6de10be1a3a0a082fe43b999eea70eeccf6e24688b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/local-repeat/browser-gpu.json",
+      "bytes": 27182,
+      "sha256": "00abb4f6c0561ff2050dfbcd719139a1103978cd9c498fb34f4a25e4c6dfb27d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/local-repeat/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "9151a6692e0cae2ef892160605544b4328609d2b2d586f7991f30b7ed9ce7110"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/local-repeat/document.json",
+      "bytes": 270464,
+      "sha256": "85dbebc57754b3d4191c5a2b426e1275d0beba8bc79c4ece61f629a6c76aa900"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/local-repeat/image.pfm",
+      "bytes": 3086,
+      "sha256": "d9640fffea4a9d064d03dd14082fc80cf1e5131916d05545a0faec076a6f3979"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/local-repeat/passes.json",
+      "bytes": 13733,
+      "sha256": "5fabacee8c952530ec4105b6e64778cef499b7085021d8d6d2e3eea748ed3fa7"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/local-repeat/receipt.json",
+      "bytes": 495,
+      "sha256": "1451ce9127fbeb86b20dc522de786d67da4f9d5f986e55adb1b39169f30b52ce"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/material/browser-cpu.json",
+      "bytes": 26930,
+      "sha256": "83d43939f299d2e9f5b13b69f85088bf9cfcdde9ee3794e9fea066a6b1c9f5d9"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/material/browser-gpu.json",
+      "bytes": 26924,
+      "sha256": "6aa618e63b7704f755e67d420a56977738106b1355568b0356b9b625fe955662"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/material/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "594e4d602eb55f00ee58a959e782660994ed65604d55967784a4028b149ac38b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/material/document.json",
+      "bytes": 407452,
+      "sha256": "71f513a6b2ff640e8a16c8570bf269b5a0862c0cd1e7979d899eb459808f9d92"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/material/image.pfm",
+      "bytes": 3086,
+      "sha256": "eadb019b2e3b774306055ca83547c918f144da8c73c0d2ea0ec14c5a3afb457a"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/material/passes.json",
+      "bytes": 13251,
+      "sha256": "5c7111906fe2529ce6146d6b52e1b9254ecaaadfe8684545761970b9f24c64d0"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/material/receipt.json",
+      "bytes": 495,
+      "sha256": "85f56910803f17bdb678fcb578728a85d011a9168992e3b92ffc7f5879eb0d03"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/native_report.json",
+      "bytes": 9442,
+      "sha256": "6905b67097c8b57b140e78ca8933426a9d1e0956dc5b940474269677a399b687"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/repeat/browser-cpu.json",
+      "bytes": 27025,
+      "sha256": "84d2ae7bb772aa664fcc6247ee6a9b65d63052c8c2359b4996e366524a622b04"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/repeat/browser-gpu.json",
+      "bytes": 27013,
+      "sha256": "e223d978ec103ac873db2db5a592225cfde112f10a907f58b16a8af56aa70d1d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/repeat/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "4c439ff428d0168639940df05dee11137fb46069d1e1893c0fb54f50485bc099"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/repeat/document.json",
+      "bytes": 136361,
+      "sha256": "fafd70a68b11e60a7061f2e1bedd21883e62c11b4e224a83822b4732cd34b33c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/repeat/image.pfm",
+      "bytes": 3086,
+      "sha256": "1b67f04f17fda330ad78d8001454aefb3e3639b1456abd9906c67d43aa95370b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/repeat/passes.json",
+      "bytes": 13581,
+      "sha256": "58929c54fbbb941cf3f174b3b7e251e8f52000e17a8bc4b671ab2cb7d95c12bc"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/repeat/receipt.json",
+      "bytes": 495,
+      "sha256": "3ef9a7f3c193f78a0d184cddf3ca8af5cb5a5242493e517b9695f39eee679846"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/resize/browser-cpu.json",
+      "bytes": 27025,
+      "sha256": "84d2ae7bb772aa664fcc6247ee6a9b65d63052c8c2359b4996e366524a622b04"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/resize/browser-gpu.json",
+      "bytes": 27013,
+      "sha256": "e223d978ec103ac873db2db5a592225cfde112f10a907f58b16a8af56aa70d1d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/resize/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "4c439ff428d0168639940df05dee11137fb46069d1e1893c0fb54f50485bc099"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/resize/document.json",
+      "bytes": 404964,
+      "sha256": "6eed45ec1ebdd33d54fcca4afa74d6742b3b23e6d7230b3b3fa5e23ccbdcfaed"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/resize/image.pfm",
+      "bytes": 3086,
+      "sha256": "1b67f04f17fda330ad78d8001454aefb3e3639b1456abd9906c67d43aa95370b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/resize/passes.json",
+      "bytes": 13581,
+      "sha256": "58929c54fbbb941cf3f174b3b7e251e8f52000e17a8bc4b671ab2cb7d95c12bc"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/resize/receipt.json",
+      "bytes": 495,
+      "sha256": "ef8fb52599c282affcab0f4c87df66166f4d401ec4b633e7ebacb8093039fef4"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/resize-repeat/browser-cpu.json",
+      "bytes": 27025,
+      "sha256": "84d2ae7bb772aa664fcc6247ee6a9b65d63052c8c2359b4996e366524a622b04"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/resize-repeat/browser-gpu.json",
+      "bytes": 27013,
+      "sha256": "e223d978ec103ac873db2db5a592225cfde112f10a907f58b16a8af56aa70d1d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/resize-repeat/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "4c439ff428d0168639940df05dee11137fb46069d1e1893c0fb54f50485bc099"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/resize-repeat/document.json",
+      "bytes": 404964,
+      "sha256": "6eed45ec1ebdd33d54fcca4afa74d6742b3b23e6d7230b3b3fa5e23ccbdcfaed"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/resize-repeat/image.pfm",
+      "bytes": 3086,
+      "sha256": "1b67f04f17fda330ad78d8001454aefb3e3639b1456abd9906c67d43aa95370b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/resize-repeat/passes.json",
+      "bytes": 13581,
+      "sha256": "58929c54fbbb941cf3f174b3b7e251e8f52000e17a8bc4b671ab2cb7d95c12bc"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/resize-repeat/receipt.json",
+      "bytes": 495,
+      "sha256": "ef8fb52599c282affcab0f4c87df66166f4d401ec4b633e7ebacb8093039fef4"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/tested_native_gpu.json",
+      "bytes": 228,
+      "sha256": "3ac43a6bc8490e61c95e3a8cf8848dad096375d55253b5215ea5792062d69abd"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/undo/browser-cpu.json",
+      "bytes": 27025,
+      "sha256": "84d2ae7bb772aa664fcc6247ee6a9b65d63052c8c2359b4996e366524a622b04"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/undo/browser-gpu.json",
+      "bytes": 27013,
+      "sha256": "e223d978ec103ac873db2db5a592225cfde112f10a907f58b16a8af56aa70d1d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/undo/cpu.pfm",
+      "bytes": 3086,
+      "sha256": "4c439ff428d0168639940df05dee11137fb46069d1e1893c0fb54f50485bc099"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/undo/document.json",
+      "bytes": 136361,
+      "sha256": "fafd70a68b11e60a7061f2e1bedd21883e62c11b4e224a83822b4732cd34b33c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/undo/image.pfm",
+      "bytes": 3086,
+      "sha256": "1b67f04f17fda330ad78d8001454aefb3e3639b1456abd9906c67d43aa95370b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/undo/passes.json",
+      "bytes": 13581,
+      "sha256": "58929c54fbbb941cf3f174b3b7e251e8f52000e17a8bc4b671ab2cb7d95c12bc"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu-update-workflow/undo/receipt.json",
+      "bytes": 495,
+      "sha256": "3ef9a7f3c193f78a0d184cddf3ca8af5cb5a5242493e517b9695f39eee679846"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/gpu_update_resources.json",
+      "bytes": 596,
+      "sha256": "ef61dd32f4e3ac106fa5a607af04ba93dee201671e74d24f5ec7f38903af780e"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/hair_cross_platform.json",
+      "bytes": 2029,
+      "sha256": "5a6156ff5bae49526dc622f759f5bc315f743be4c9facd5602883323ac886368"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/implementation_manifest.json",
+      "bytes": 94311,
+      "sha256": "78d872d1730686579d13d2c6e4c9cdda62e6219d08875b2bbb09d50c8b699a4e"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/alpha_browser.txt",
+      "bytes": 1254,
+      "sha256": "4aade834015a5bbed213effe0c3d0b1591f090083911aa069c006fff172d7f3d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/alpha_shutter_browser.txt",
+      "bytes": 548,
+      "sha256": "f3410061e5eace496ae7a9e7b98f463d366331d717b2735364a7a41df2183abe"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/alpha_shutter_workflow.txt",
+      "bytes": 374,
+      "sha256": "faaae06b4fcc52bdfec0960d620099683a979a66219debd23fa9710df0f252b8"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/alpha_workflow.txt",
+      "bytes": 911,
+      "sha256": "f9ebc0c135c1f0015ab4a15b7a18814e68ec9d488d2ead82e075d630d5cce436"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/animated_regression.txt",
+      "bytes": 561,
+      "sha256": "70473303244419a8b544008ce23c6483a9e4d137068031ed0b9e9ff87dece1ac"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/blend_browser.txt",
+      "bytes": 149,
+      "sha256": "93ec50e5c565d14b88dd8f42945d07c57af428688e467dd7e554869999d784ea"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/blend_cross_platform.txt",
+      "bytes": 1473,
+      "sha256": "bff84ebe826fc7cfc362a02fb1bb8aeac71c3a9fbf38bc2df9ad974da583d57c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/blend_reference.txt",
+      "bytes": 612,
+      "sha256": "564962bd8e612f4b791d54c2edac828bbaf1ae4c34ec98d774b1fce0a1fe59bb"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/blend_schema.txt",
+      "bytes": 49,
+      "sha256": "c8dea7f77f5068ec11bb3a062f29e73d3095f8a59bc8d383fe9c155552ec664a"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/blend_workflow.txt",
+      "bytes": 3979,
+      "sha256": "98688351d9cf277d99308fa1049bbb75a86967059ed9b2c6ccdedc82dbf333ea"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/browser_build.txt",
+      "bytes": 62,
+      "sha256": "61e08e71d51567fc1704a94bec90db7ca6313b32351aa24fcc7ffc4a89e2599d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/browser_clippy.txt",
+      "bytes": 60,
+      "sha256": "6d6c6e473517a2e59fcae18269468424d45c30d9ab1954afedb557c03f0cfd24"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/camera_regression.txt",
+      "bytes": 3719,
+      "sha256": "c1d6093975428cf8fb541f6bd6852280d7685e625009b4723eb4c69e46565b7c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/clippy.txt",
+      "bytes": 178,
+      "sha256": "0d140fa94f44d39368bdcbc14a3b5346946ffe1382c4e23f94555b534df2f8e9"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/coated_shutter.txt",
+      "bytes": 374,
+      "sha256": "faaae06b4fcc52bdfec0960d620099683a979a66219debd23fa9710df0f252b8"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/coated_shutter_browser.txt",
+      "bytes": 548,
+      "sha256": "f3410061e5eace496ae7a9e7b98f463d366331d717b2735364a7a41df2183abe"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/conductor_shutter.txt",
+      "bytes": 374,
+      "sha256": "faaae06b4fcc52bdfec0960d620099683a979a66219debd23fa9710df0f252b8"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/conductor_shutter_browser.txt",
+      "bytes": 548,
+      "sha256": "f3410061e5eace496ae7a9e7b98f463d366331d717b2735364a7a41df2183abe"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/curve_color_browser.txt",
+      "bytes": 10243,
+      "sha256": "ab993db72d62953fb12b35b951e266d6d12e1dc4ae3836b838fdbe5847a8e714"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/curve_color_glb_validation.txt",
+      "bytes": 1001,
+      "sha256": "ff64d8ac32ab148d367ef4047ae62d17381e963b6696b9394b551f7bc1c6a7da"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/curve_color_schema.txt",
+      "bytes": 32,
+      "sha256": "88309c2259d3be51e3287ea74ea3469a5eaabeff08c6cf1e86f05df82128fc09"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/curve_color_workflow.txt",
+      "bytes": 4157,
+      "sha256": "ccaa988800ebe5e20cc485628d6149b49c86cfd978794863d9586343127e7326"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/dependency_audit.txt",
+      "bytes": 144,
+      "sha256": "a3c1e12000c74ae9b80b0103028fc84712a042d1c840670d7b52eb14f5d0d15c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/dielectric_browser.txt",
+      "bytes": 2082,
+      "sha256": "288b264e5f697afe600dfa5e4b2c066e258e2451fd9da960972e1a2b4604a929"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/dielectric_shutter.txt",
+      "bytes": 374,
+      "sha256": "faaae06b4fcc52bdfec0960d620099683a979a66219debd23fa9710df0f252b8"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/dielectric_shutter_browser.txt",
+      "bytes": 548,
+      "sha256": "f3410061e5eace496ae7a9e7b98f463d366331d717b2735364a7a41df2183abe"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/dielectric_workflow.txt",
+      "bytes": 13028,
+      "sha256": "c09a6d732f70390f24937f785eea9ab0fe21df0cfbe19c5b79710c71510729cf"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/export_browser.txt",
+      "bytes": 2729,
+      "sha256": "bf37d27d7dcfe0d078f3558d24858f65f986faf801cd710fd7f56b41fbbb488d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/export_schema.txt",
+      "bytes": 52,
+      "sha256": "43c672ff7a066efe55047e2786c06f6b0dcd4c92dc8afdd9c8282b3561613bad"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/export_source_validation.txt",
+      "bytes": 1381,
+      "sha256": "27af8fc5caf2010197bd95696811681d457cfa8e3d19078ffca033e07017f510"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/export_workflow.txt",
+      "bytes": 5091,
+      "sha256": "0ef2a640a4c47059f2505b1cbbf33606ba019a659c752ffba175d04c2574711d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/format.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/geometry_regression.txt",
+      "bytes": 102,
+      "sha256": "a206726981572e89af3ac5b67af71d7a04fe337bacf93bad06228b3551f1c84d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/gltf_export_gpu.txt",
+      "bytes": 727,
+      "sha256": "53a578a86520957583deefac31c2a749bb8842ee4b0a6dceb6ac449a99b9645e"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/gpu_alpha.txt",
+      "bytes": 3046,
+      "sha256": "6d9d7626174afc5ce23f74343948b720a19c7875b252e16978aefa41c00596ad"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/gpu_dielectric.txt",
+      "bytes": 2318,
+      "sha256": "5af5377c2c70936c6597a2d9930267ab94a30ffb5d5b2cd3df91928e32020006"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/gpu_resource_process.txt",
+      "bytes": 6865,
+      "sha256": "14e05a628ea534d54ec4f70bc41a5516dada3f5bcdbf03306473deb906f4c28f"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/gpu_resource_time.txt",
+      "bytes": 777,
+      "sha256": "b8f2406bed9fdea66404c26526a5b26a999432e98122b52c1083500103c7cfe9"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/gpu_surfaces.txt",
+      "bytes": 3649,
+      "sha256": "486a6a636f34f196e016bd6e6af0664407976c757df63e321108b49f5b804961"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/gpu_update_browser.txt",
+      "bytes": 7061,
+      "sha256": "56b9d3daa8b61537f6fede0b2c1b72be3c93d2844342cc9cb4763eb4c2bf057e"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/gpu_update_cross.txt",
+      "bytes": 4659,
+      "sha256": "0493c8bd694ccb40145db57e964be397252cb35a4a35552434faa27c720fe23b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/gpu_update_native.txt",
+      "bytes": 7082,
+      "sha256": "64b7f998d96a6187896f435c4d3994b25bdb46b693d5c6515b675be28ea8cb08"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/gpu_update_resource.txt",
+      "bytes": 568,
+      "sha256": "00caa5fedb30d0497b1d0982441d43bb50b89c4960a80225180273e0394ccedc"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/groom_regression.txt",
+      "bytes": 99,
+      "sha256": "e961f4466989c4539386a4719e7356330284b9e2dbc97d3a81b8d7e0a35e1a65"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/hair_browser.txt",
+      "bytes": 8319,
+      "sha256": "ccab3cc0e048f1f449e95bce650222b8e3681ed03ad6e16408b8db875f473419"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/hair_schema.txt",
+      "bytes": 32,
+      "sha256": "0ab86858e1a9a8c34dbd156c0c2b59674a6f96bbdba2d832f9e91016a00975fa"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/hair_workflow.txt",
+      "bytes": 2389,
+      "sha256": "75c7f88b1e13e920ed26cb1465c7efc0980e016b9b32ddb87f9c8aa1fae5b59e"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/independent_source_validation.txt",
+      "bytes": 57,
+      "sha256": "69ecec41f35bd6e14c1fcd0e85b31608f7106d1ddccfc59b27acda19ac77a212"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/linux_check.txt",
+      "bytes": 534,
+      "sha256": "eaa8213ec18d6d304b70f195397d1a93ed7f427ef546b5905de9627409b5c69a"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/media_browser.txt",
+      "bytes": 3662,
+      "sha256": "c6dfa187d1a24378384c4c970fa277bc2cd5af70d87322346047d2df688c7e95"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/media_exact_rays.txt",
+      "bytes": 392,
+      "sha256": "c008e875a6de784b774cbfff22c4ac98be1f37b9ae1f010000f2d3bb3d0d9e54"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/media_gpu.txt",
+      "bytes": 2902,
+      "sha256": "71fe7bcdfd30f74388b79aa3ed38af1bd73981a9279ec49f6648c43d283e0843"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/media_shutter.txt",
+      "bytes": 260,
+      "sha256": "1f2dea9ef109d23b5dde106954b1c872151cc9f96e7d5ee47700b124db82465c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/media_shutter_browser.txt",
+      "bytes": 552,
+      "sha256": "241f8b463b72a2b64841b3e542585282ceca949ac3ab470b407a8bb610f3fde0"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/media_workflow.txt",
+      "bytes": 11196,
+      "sha256": "05a107da7f55c787e7e1f7f53e457606a37524ad167216fb9e447af14a506306"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/mip_lod_numeric_source.txt",
+      "bytes": 323,
+      "sha256": "b51f54d9b0f8e414c3992bc9c3f0bd9dd4bf98202914695cf853c848104fa58d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/morph_browser.txt",
+      "bytes": 922,
+      "sha256": "6d9469136a6d37780a5ad617fe354146d68a9fea751df4092b993f0f4f7ad15c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/morph_frame_gpu.txt",
+      "bytes": 2394,
+      "sha256": "d83405f6fed3395acaef03a47ef08ba65a5f80a048b35bd9d7ef9a472a62194f"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/morph_frame_regressions.txt",
+      "bytes": 906,
+      "sha256": "4f65f6b3908bcd5c8dc56a5d24bf07eae2f8c48e4d1df6d815768002413de17f"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/morph_workflow.txt",
+      "bytes": 730,
+      "sha256": "f46a8096b9c855589c3b8d3a6551f12f61ce057de16e5f78e429e615756fd8d7"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/named_uv_browser.txt",
+      "bytes": 685,
+      "sha256": "d0a75a1ac67cc07c04dbc4f99dad68f7dd1fd1959d4114ef490a44a6c2a2001d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/named_uv_cross_platform.txt",
+      "bytes": 391,
+      "sha256": "e6ed56486c7ebb7ecf686b2c80adc3933bfa1b0ab9daf946a8e89cd66b07cbe1"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/named_uv_gpu.txt",
+      "bytes": 376,
+      "sha256": "60d3a2521310490f18385d2b0f1a43d0eecf1ffe44ce94220c63f6334b199b2a"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/named_uv_regression.txt",
+      "bytes": 399,
+      "sha256": "39611bf80563e02b72e641874fde17327d4678df96cee107045b54a627945f83"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/native_build.txt",
+      "bytes": 60,
+      "sha256": "0ae9d3c454d4f9053da72af6e1e02f1df28fd9802d6f22e66fdf6e21693b97fe"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/native_tests.txt",
+      "bytes": 33110,
+      "sha256": "c6d0b36b3079acf07e661a6a13fcddd71375ff12b51ddc03b8a79107614ff22f"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/paint_browser.txt",
+      "bytes": 12629,
+      "sha256": "dfeffffe61b596aa11c164f03418c2c7c3a976034df443fef5bfcbd2f769a713"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/paint_cross_platform.txt",
+      "bytes": 497,
+      "sha256": "5ed17981380923a2d2230b9b9881e4b1d6967530631c58147020c82fa504106f"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/paint_native.txt",
+      "bytes": 1676,
+      "sha256": "080c3275c766b809a49e41c42d2609d08a0f5770bb1d126cabc86ec3d7ad0398"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/paint_schema.txt",
+      "bytes": 460,
+      "sha256": "c228459cf082e1b231cb94c36442896010d8e3670a8f46baa14fd43f1701adcc"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/paint_workflow.txt",
+      "bytes": 878,
+      "sha256": "a950212a0df16e9f93613b91179182d9f1d184f242e619c74afc1c87171cc6cc"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/secondary_browser.txt",
+      "bytes": 933,
+      "sha256": "9159d548b9cc5ef4edf44440b6a34773e82ce78275abd471f6101aec2b8dcf79"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/secondary_gpu.txt",
+      "bytes": 845,
+      "sha256": "250b768cca4d45240209e7f2b9b13fc2f2a6fac341311183833ae67449ac6473"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/secondary_workflow.txt",
+      "bytes": 1837,
+      "sha256": "2e7fa4c778c2c443432292c01a7713e0bcbb3a02bf0bc1f002f6feee226aa93e"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/shutter_regression.txt",
+      "bytes": 299,
+      "sha256": "2d9245f16a7dc84af96418c07079800c5c46689a72ee44558ffa86a190b6a6c4"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/sparse_regression.txt",
+      "bytes": 1215,
+      "sha256": "18296276fb276eabab26cf5f90ea109838085fda7f88d9a70d916e5d958b2866"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/srgb8_numeric_source.txt",
+      "bytes": 624,
+      "sha256": "04703cdad474f80fed74aec95397ccdc7ed9db5e7b94a68c4c099990616cd55c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/surface_browser.txt",
+      "bytes": 977,
+      "sha256": "11dfe63c31261bcd3a202a61f75c1b0dffc562f4f7754202b6f692ffa2532b65"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/surface_workflow.txt",
+      "bytes": 4649,
+      "sha256": "78886b0234c4ea8f2f280ba86f2f15fc35d5626418e452a5e8ec72ddd49dc0a3"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/uv_browser.txt",
+      "bytes": 8721,
+      "sha256": "a7b2c378270f45dfc46eae80212489005226a2e8e1d54b069953d1db1b54877a"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/uv_cross_platform.txt",
+      "bytes": 248,
+      "sha256": "083785349b98daae78d6146b1a4f3868adf01a34baab77e9e304d537de286e9e"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/uv_schema.txt",
+      "bytes": 401,
+      "sha256": "e61f0fe0f37c6c68a6e5df908b7636844cae5873c11ee47373c1c7cdaae1b65c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/uv_workflow.txt",
+      "bytes": 550,
+      "sha256": "2a11cb4f557aeda2e8a89fc25cb33b21f325a46a7b44c93883fa9b0ff8cd71e8"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/vertex_color_browser.txt",
+      "bytes": 1780,
+      "sha256": "e36b97001e158ac84d76857dc3bf242b3bd0f11dd9e56d3814bc4f155953d912"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/vertex_color_workflow.txt",
+      "bytes": 1339,
+      "sha256": "0dba317827c8e26856731b6f91837421c068655c8fc9c2a7cdc38223d52aa106"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/vertex_colors_gpu.txt",
+      "bytes": 1014,
+      "sha256": "7f3eab86eb241f660c06db1e8cc95752ef3cbc8cda0969aa01c7512b23abe475"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/volume_browser.txt",
+      "bytes": 7122,
+      "sha256": "0deaa3b3b6a6f6ed1e5ee07879554f94e4d527ff9c27de813d6fce010458f7bf"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/volume_schema.txt",
+      "bytes": 39,
+      "sha256": "c3d4ac026f61145165003a74118b7d361dfbb5e2b8664fd24e865bc7c429eb7a"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/volume_workflow.txt",
+      "bytes": 2803,
+      "sha256": "627b0f49f01e2e7c6af533e4fc1b1b586faffdf7ae4937b24eaa5818e8fb3c61"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/wasm_tests.txt",
+      "bytes": 27299,
+      "sha256": "9c1600f4d2ca78ea819ed060ff0eba96de5377f6f3dd72922599aee91e50aa4b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/logs/windows_check.txt",
+      "bytes": 534,
+      "sha256": "45e22876542b547bc1cdba3ea6bd1818b0d9f68cf0d19157a0c679805b2e33a4"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/media_cross_platform.json",
+      "bytes": 14442,
+      "sha256": "e67d9822cdabcd9876fd84003837244359b734cad813c0d8166f1e5fd8413c00"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/mip_lod_numeric_source.json",
+      "bytes": 341,
+      "sha256": "170c1c1e38468e56baa70ad71ea382314974cbb56e4f5cdca8f4b5306b3a386a"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/named_uv_cross_platform.json",
+      "bytes": 390,
+      "sha256": "692d502f89131226a21fa11f98396ee6fcf8fda4f3f71f0724bd15280a0da208"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/original_fixture_integrity.json",
+      "bytes": 35755,
+      "sha256": "3bff5195c61e0f1f1a4b2eab060dddcef398b650f9ea3155439c93450b3bdf5d"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/path.alpha.generated.wgsl",
+      "bytes": 28669,
+      "sha256": "82177b8262a499bad4e9997fe15d04975b9635e0817ea4caeeb38d713a0648dc"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/path.dielectric.generated.wgsl",
+      "bytes": 34354,
+      "sha256": "afa6f881610497e4c8cdf63f6a28c10ff2a243a23c4f23dcac7aae5179130eea"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/path.generated.wgsl",
+      "bytes": 24720,
+      "sha256": "e0bae9a561867ddc4622b68e9d52635ce3d380bbf6f4aeb109e63b46c8d89247"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/path.media.generated.wgsl",
+      "bytes": 28975,
+      "sha256": "e373ef0db23254a1266473bb64b3a351c6b0c1261e435a8ca0867d08b4b3881b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/path.surfaces.generated.wgsl",
+      "bytes": 32168,
+      "sha256": "cf5b558cef24671d760df416ccd1b82b7b8166bc26dbf2dfd4e2d3d616808f07"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/render_regressions.json",
+      "bytes": 363373,
+      "sha256": "4d5a2f148ae28f72ab4cbaf4b6cec092270ef58c18fb6a1cda482aabd56ff26b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/representation_costs.json",
+      "bytes": 4232,
+      "sha256": "69b244e147c106193459146678944a870a602b5e39b8c19b2b47e7a50cad1b8c"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/schema_validation.json",
+      "bytes": 1931,
+      "sha256": "af6a817d977d174994928cfd1f53dd33b14bc618472897e432271a8c83564b86"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/secondary_cross_platform.json",
+      "bytes": 3330,
+      "sha256": "3c6865c052106e8972bc316ffe48e48d9a16c41a37962448222c5b1c1411d2e2"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/shader_provenance.json",
+      "bytes": 1560,
+      "sha256": "69cf485848b7080a229a3a3913cf2678bc9b63b2bca4979b8f324148a7ca4f51"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/source_integrity.json",
+      "bytes": 19860,
+      "sha256": "45abfc384dc637a64dc8dc42cc9609bd420047bec9196f013192dcfc31415789"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/source_manifest.json",
+      "bytes": 88457,
+      "sha256": "acf2f0e20c85cefb8203d2e33f5643f040400c80d11c47ad1bde01c08539c84b"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/srgb8_numeric_source.json",
+      "bytes": 742,
+      "sha256": "8a8af2fb190a9ee3d45714dceef7bd78a3c0a58d456d4930360faea1b9694623"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/surface_cross_platform.json",
+      "bytes": 2751,
+      "sha256": "d53bc7639c1f06ec604078a4c1db2af9ebad92ad4ef3706832467e6a5aeafa44"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/tested_package.json",
+      "bytes": 841,
+      "sha256": "9f46f5099265b96e46ea1e327fc3d8887ae7c049efe7134b949a61b725ecd8e3"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/validation_report.json",
+      "bytes": 29815,
+      "sha256": "7fec5a45262b85afd94143085715ea0596b542f06c5ed4c75d5635b986078116"
+    },
+    {
+      "path": "evidence/gpu-geometry-updates/volume_cross_platform.json",
+      "bytes": 1171,
+      "sha256": "51f6a5f07deb2b375dc6760c575ca6b20996d1da8e913190c19d9f05704905de"
+    }
+  ],
+  "bytes": 10191026
+}

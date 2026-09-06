@@ -373,6 +373,12 @@
           "id": "tiled-painting",
           "status": "validated_experimental_profile",
           "evidence": "evidence/tiled-painting/README.md"
+        },
+        {
+          "id": "gpu-geometry-updates",
+          "status": "validated_experimental_profile",
+          "scope": "renderer_prerequisite_for_local_sculpting",
+          "evidence": "evidence/gpu-geometry-updates/README.md"
         }
       ],
       "remaining": "Projected painting and broader baking, sculpting, masks/face sets/symmetry, multiresolution, remesh, retopology and the deferred M09 interactive demonstration."

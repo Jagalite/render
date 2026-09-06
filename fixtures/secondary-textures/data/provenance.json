@@ -1,0 +1,72 @@
+{
+  "license": "CC0-1.0",
+  "authorship": "Original quad pair and directly encoded 32x32 black/white checker",
+  "oracle": "Camera z1 looks down at untextured floor; emitter z2 is only seen after scattering. With no propagated secondary derivatives, minification filter changes must not change pixels. Primary observation of the emitter must still honor minification.",
+  "artifacts": [
+    {
+      "file": "checker.png",
+      "bytes": 109,
+      "sha256": "edbe1a8db9ee8da40abcd58d6b4706b55e20edde79782bea6ae5e06abf615cf1"
+    },
+    {
+      "file": "mask-mip.bin",
+      "bytes": 249,
+      "sha256": "be39345e1ef9d961218ba067a1d5057524403600ca71604c1325e266b30f297c"
+    },
+    {
+      "file": "mask-mip.glb",
+      "bytes": 1820,
+      "sha256": "dc34f1ef33ed778b6c682111438d98b5d508a630df254782b03be303c58c2442"
+    },
+    {
+      "file": "mask-mip.gltf",
+      "bytes": 2963,
+      "sha256": "06757e5d5bfdfb917675557e914ed4e2ec87d1c3b03e9fc29e13b5b986ba9aa8"
+    },
+    {
+      "file": "mask-nearest.bin",
+      "bytes": 249,
+      "sha256": "be39345e1ef9d961218ba067a1d5057524403600ca71604c1325e266b30f297c"
+    },
+    {
+      "file": "mask-nearest.glb",
+      "bytes": 1820,
+      "sha256": "f66e8c9415a663af7f19c7d1e62eec9b31a5041e7562d8f10fa06b1edb8beb04"
+    },
+    {
+      "file": "mask-nearest.gltf",
+      "bytes": 2967,
+      "sha256": "53232fdf43469acd5a7b34d0c19e44f32566280b3f2fd60cba29b9a51204cebb"
+    },
+    {
+      "file": "opaque-mip.bin",
+      "bytes": 249,
+      "sha256": "be39345e1ef9d961218ba067a1d5057524403600ca71604c1325e266b30f297c"
+    },
+    {
+      "file": "opaque-mip.glb",
+      "bytes": 1824,
+      "sha256": "6561bc0067da9c9dc37b299ffae4af0711ccef40f9f21ceb807dbfb52e1cb6ae"
+    },
+    {
+      "file": "opaque-mip.gltf",
+      "bytes": 2967,
+      "sha256": "5d67e0dc028d8dceb0710fd745b77f3b16663de29c07adaaca96f5a7b1a2489f"
+    },
+    {
+      "file": "opaque-nearest.bin",
+      "bytes": 249,
+      "sha256": "be39345e1ef9d961218ba067a1d5057524403600ca71604c1325e266b30f297c"
+    },
+    {
+      "file": "opaque-nearest.glb",
+      "bytes": 1824,
+      "sha256": "f8d4b4070416ee7125297adc085cba3e0b20e9a67e819c9fa41bc1ea8de9b334"
+    },
+    {
+      "file": "opaque-nearest.gltf",
+      "bytes": 2971,
+      "sha256": "4c6a198d5785a05c790a6f4dd5a5cdb6c125f88b1081daf050860241559a7806"
+    }
+  ]
+}

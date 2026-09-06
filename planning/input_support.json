@@ -95,7 +95,7 @@
         "evidence/gltf-export/README.md",
         "evidence/gpu-alpha/README.md"
       ],
-      "remaining_scope": "Source material extensions, richer GPU BSDFs and sparse media remain unsupported on GPU. GPU Principled alpha is validated; secondary extended-CPU texture footprint parity is the next transport correction. Named UV selection applies across render, alpha, displacement and bake consumers.",
+      "remaining_scope": "Source material extensions, richer GPU BSDFs and sparse media remain unsupported on GPU. GPU Principled alpha and shared secondary base-level texture sampling are validated. Named UV selection applies across render, alpha, displacement and bake consumers.",
       "export_profile": "gltf2-evaluated-pbr-export-v1; selected evaluated surface/pose with embedded resources and explicit authoring/render-recipe losses"
     },
     {

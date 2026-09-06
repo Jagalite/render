@@ -1,0 +1,89 @@
+{
+  "scope": "8x8, 32 samples, depth2; five native-authored surface models, nearest versus mip filtering, CPU plus two supported GPU models; individual process observations are not a benchmark or allocator limit",
+  "observations": [
+    {
+      "name": "opaque-nearest-cpu",
+      "seconds": 0.06657816699589603,
+      "maximum resident set size": 17399808,
+      "peak memory footprint": 3064896
+    },
+    {
+      "name": "opaque-nearest-gpu",
+      "seconds": 0.14514366700313985,
+      "maximum resident set size": 33882112,
+      "peak memory footprint": 11060864
+    },
+    {
+      "name": "opaque-mip-cpu",
+      "seconds": 0.06965329199738335,
+      "maximum resident set size": 17448960,
+      "peak memory footprint": 3114048
+    },
+    {
+      "name": "opaque-mip-gpu",
+      "seconds": 0.14234474999830127,
+      "maximum resident set size": 33865728,
+      "peak memory footprint": 11028032
+    },
+    {
+      "name": "principled-nearest-cpu",
+      "seconds": 0.07484112499514595,
+      "maximum resident set size": 17481728,
+      "peak memory footprint": 3179648
+    },
+    {
+      "name": "principled-nearest-gpu",
+      "seconds": 0.23100866700406186,
+      "maximum resident set size": 35045376,
+      "peak memory footprint": 12322432
+    },
+    {
+      "name": "principled-mip-cpu",
+      "seconds": 0.0785845420032274,
+      "maximum resident set size": 17694720,
+      "peak memory footprint": 3392640
+    },
+    {
+      "name": "principled-mip-gpu",
+      "seconds": 0.21737562499765772,
+      "maximum resident set size": 35028992,
+      "peak memory footprint": 12306048
+    },
+    {
+      "name": "coated-nearest-cpu",
+      "seconds": 0.08256391700706445,
+      "maximum resident set size": 17743872,
+      "peak memory footprint": 3441792
+    },
+    {
+      "name": "coated-mip-cpu",
+      "seconds": 0.08592125000723172,
+      "maximum resident set size": 17858560,
+      "peak memory footprint": 3556480
+    },
+    {
+      "name": "conductor-nearest-cpu",
+      "seconds": 0.09049850000883453,
+      "maximum resident set size": 17874944,
+      "peak memory footprint": 3572864
+    },
+    {
+      "name": "conductor-mip-cpu",
+      "seconds": 0.10185020900098607,
+      "maximum resident set size": 18055168,
+      "peak memory footprint": 3753088
+    },
+    {
+      "name": "dielectric-nearest-cpu",
+      "seconds": 0.09922133300278801,
+      "maximum resident set size": 18055168,
+      "peak memory footprint": 3753088
+    },
+    {
+      "name": "dielectric-mip-cpu",
+      "seconds": 0.11684666700602975,
+      "maximum resident set size": 18219008,
+      "peak memory footprint": 3916928
+    }
+  ]
+}

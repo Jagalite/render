@@ -1,0 +1,17 @@
+   Compiling render-core v0.1.0 (/private/tmp/render-secondary-textures-20260906/crates/core)
+   Compiling render-kernel v0.1.0 (/private/tmp/render-secondary-textures-20260906/crates/kernel)
+   Compiling render-gpu v0.1.0 (/private/tmp/render-secondary-textures-20260906/crates/gpu)
+   Compiling render-host v0.1.0 (/private/tmp/render-secondary-textures-20260906/crates/host)
+error: float literals must have an integer part
+  --> crates/host/tests/secondary_textures_gpu.rs:65:26
+   |
+65 |             assert!(rmse<.002);
+   |                          ^^^^
+   |
+help: must have an integer part
+   |
+65 |             assert!(rmse<0.002);
+   |                          +
+
+error: could not compile `render-host` (test "secondary_textures_gpu") due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

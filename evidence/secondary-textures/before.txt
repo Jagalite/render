@@ -1,0 +1,25 @@
+   Compiling render-core v0.1.0 (/private/tmp/render-secondary-textures-20260906/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 9.24s
+     Running tests/secondary_textures.rs (target/debug/deps/secondary_textures-27917946800ccca2)
+
+running 2 tests
+test directly_visible_emitter_retains_primary_minification_and_cancel_budget_checks ... ok
+test secondary_only_emitter_is_invariant_to_minification_filter_in_all_surface_models ... FAILED
+
+failures:
+
+---- secondary_only_emitter_is_invariant_to_minification_filter_in_all_surface_models stdout ----
+
+thread 'secondary_only_emitter_is_invariant_to_minification_filter_in_all_surface_models' (4043650) panicked at crates/core/tests/secondary_textures.rs:114:9:
+assertion `left == right` failed: secondary LOD0 invariant for Some(Principled)
+  left: 0.13204649
+ right: 0.0
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    secondary_only_emitter_is_invariant_to_minification_filter_in_all_surface_models
+
+test result: FAILED. 1 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.12s
+
+error: test failed, to rerun pass `-p render-core --test secondary_textures`

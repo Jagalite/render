@@ -1,0 +1,981 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "rgba-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgba",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/000-rgba-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02098170798853971
+    },
+    {
+      "name": "rgba-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgba",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/001-rgba-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007285707994014956
+    },
+    {
+      "name": "rgba-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgba",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/002-rgba-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.033720124993124045,
+      "resources": {
+        "maximum resident set size": 16269312,
+        "peak memory footprint": 2901056
+      }
+    },
+    {
+      "name": "rgba-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgba",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/003-rgba-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02203891600947827
+    },
+    {
+      "name": "rgba-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgba",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/004-rgba-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016884625001694076
+    },
+    {
+      "name": "rgba-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgba",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/005-rgba-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06185583300248254,
+      "resources": {
+        "maximum resident set size": 17498112,
+        "peak memory footprint": 3163200
+      }
+    },
+    {
+      "name": "rgba-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgba",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/006-rgba-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1254426249943208,
+      "resources": {
+        "maximum resident set size": 33685504,
+        "peak memory footprint": 10864192
+      }
+    },
+    {
+      "name": "rgba-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgba",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/007-rgba-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.02015075000235811
+    },
+    {
+      "name": "rgba-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgba",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/008-rgba-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03140016598626971
+    },
+    {
+      "name": "rgba-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgba-restored",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/009-rgba-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03236250000190921
+    },
+    {
+      "name": "rgba-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgba-restored",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/010-rgba-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06193112500477582
+    },
+    {
+      "name": "rgba-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgba",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/011-rgba-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013658249998115934
+    },
+    {
+      "name": "rgb-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgb",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/012-rgb-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.023610083997482434
+    },
+    {
+      "name": "rgb-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgb",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/013-rgb-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006821249990025535
+    },
+    {
+      "name": "rgb-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgb",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/014-rgb-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06193024999811314,
+      "resources": {
+        "maximum resident set size": 16220160,
+        "peak memory footprint": 2868288
+      }
+    },
+    {
+      "name": "rgb-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgb",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/015-rgb-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02398945800086949
+    },
+    {
+      "name": "rgb-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgb",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/016-rgb-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0140161659946898
+    },
+    {
+      "name": "rgb-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgb",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/017-rgb-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05868412500421982,
+      "resources": {
+        "maximum resident set size": 17498112,
+        "peak memory footprint": 3163200
+      }
+    },
+    {
+      "name": "rgb-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgb",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/018-rgb-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1381352079915814,
+      "resources": {
+        "maximum resident set size": 33751040,
+        "peak memory footprint": 10929792
+      }
+    },
+    {
+      "name": "rgb-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgb",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/019-rgb-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.02165462500124704
+    },
+    {
+      "name": "rgb-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgb",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/020-rgb-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03371112499735318
+    },
+    {
+      "name": "rgb-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgb-restored",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/021-rgb-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03119916700234171
+    },
+    {
+      "name": "rgb-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgb-restored",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/022-rgb-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05570254199847113
+    },
+    {
+      "name": "rgb-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/rgb",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/023-rgb-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01385412500530947
+    },
+    {
+      "name": "u8-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u8",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/024-u8-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017883374996017665
+    },
+    {
+      "name": "u8-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u8",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/025-u8-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.008044874994084239
+    },
+    {
+      "name": "u8-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u8",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/026-u8-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03523495800618548,
+      "resources": {
+        "maximum resident set size": 16236544,
+        "peak memory footprint": 2868288
+      }
+    },
+    {
+      "name": "u8-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u8",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/027-u8-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019390957997529767
+    },
+    {
+      "name": "u8-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u8",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/028-u8-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013904499995987862
+    },
+    {
+      "name": "u8-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u8",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/029-u8-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05705945799127221,
+      "resources": {
+        "maximum resident set size": 17514496,
+        "peak memory footprint": 3179584
+      }
+    },
+    {
+      "name": "u8-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u8",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/030-u8-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12807662499835715,
+      "resources": {
+        "maximum resident set size": 33931264,
+        "peak memory footprint": 11109952
+      }
+    },
+    {
+      "name": "u8-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u8",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/031-u8-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.02080825000302866
+    },
+    {
+      "name": "u8-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u8",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/032-u8-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.025591333003831096
+    },
+    {
+      "name": "u8-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u8-restored",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/033-u8-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.031052833001012914
+    },
+    {
+      "name": "u8-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u8-restored",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/034-u8-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.053975292001268826
+    },
+    {
+      "name": "u8-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u8",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/035-u8-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01392479200148955
+    },
+    {
+      "name": "u16-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u16",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/036-u16-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016899916998227127
+    },
+    {
+      "name": "u16-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u16",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/037-u16-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006943375003174879
+    },
+    {
+      "name": "u16-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u16",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/038-u16-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.036392167006852105,
+      "resources": {
+        "maximum resident set size": 16252928,
+        "peak memory footprint": 2884672
+      }
+    },
+    {
+      "name": "u16-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u16",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/039-u16-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019488041012664326
+    },
+    {
+      "name": "u16-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u16",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/040-u16-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01363300000957679
+    },
+    {
+      "name": "u16-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u16",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/041-u16-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05509866699867416,
+      "resources": {
+        "maximum resident set size": 17481728,
+        "peak memory footprint": 3146816
+      }
+    },
+    {
+      "name": "u16-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u16",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/042-u16-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1301140830037184,
+      "resources": {
+        "maximum resident set size": 33865728,
+        "peak memory footprint": 10962496
+      }
+    },
+    {
+      "name": "u16-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u16",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/043-u16-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.020035708002978936
+    },
+    {
+      "name": "u16-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u16",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/044-u16-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.025319624997791834
+    },
+    {
+      "name": "u16-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u16-restored",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/045-u16-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.028212499993969686
+    },
+    {
+      "name": "u16-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u16-restored",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/046-u16-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05576929199742153
+    },
+    {
+      "name": "u16-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/u16",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/047-u16-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013811833006911911
+    },
+    {
+      "name": "sparse-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/048-sparse-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014893415995175019
+    },
+    {
+      "name": "sparse-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/049-sparse-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007167540999944322
+    },
+    {
+      "name": "sparse-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/050-sparse-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.035003208002308384,
+      "resources": {
+        "maximum resident set size": 16236544,
+        "peak memory footprint": 2868288
+      }
+    },
+    {
+      "name": "sparse-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/051-sparse-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019510624988470227
+    },
+    {
+      "name": "sparse-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/052-sparse-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013844290995621122
+    },
+    {
+      "name": "sparse-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/053-sparse-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05512745800660923,
+      "resources": {
+        "maximum resident set size": 17465344,
+        "peak memory footprint": 3130432
+      }
+    },
+    {
+      "name": "sparse-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/054-sparse-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12939633300993592,
+      "resources": {
+        "maximum resident set size": 33898496,
+        "peak memory footprint": 11077184
+      }
+    },
+    {
+      "name": "sparse-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/055-sparse-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.020931375009240583
+    },
+    {
+      "name": "sparse-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/056-sparse-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.029345749993808568
+    },
+    {
+      "name": "sparse-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/sparse-restored",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/057-sparse-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03022883400262799
+    },
+    {
+      "name": "sparse-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/sparse-restored",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/058-sparse-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.061805584002286196
+    },
+    {
+      "name": "sparse-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/059-sparse-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013968500003102235
+    },
+    {
+      "name": "negative-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/negative",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/060-negative-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017631958005949855
+    },
+    {
+      "name": "negative-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/negative",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/061-negative-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007251832998008467
+    },
+    {
+      "name": "malformed",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/negative",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/062-malformed.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "gltf_scene",
+      "seconds": 0.007671957995626144
+    },
+    {
+      "name": "cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/negative",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/063-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.00635470800625626
+    },
+    {
+      "name": "budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/negative",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/064-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.006229999999050051
+    },
+    {
+      "name": "negative-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/negative",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/065-negative-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.00680462499440182
+    },
+    {
+      "name": "explicit-valid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/negative",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression/066-explicit-valid.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0330790409934707
+    }
+  ],
+  "variants": [
+    {
+      "name": "rgba",
+      "revision": "sha256:90f5288e2bcd1f914d87069f97d9c2a948493837d956458d02526300c1eb3e38",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "rgb",
+      "revision": "sha256:33194423965d4e548110b98714d8ac313718b9c5c7c10c7003b35917d0fb6dbc",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "u8",
+      "revision": "sha256:9c6e3a8031810fd5a6e1a38e45166c77a98473c57ed1bf9e2502c41b1fd7b85f",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "u16",
+      "revision": "sha256:c523f97ecd5185e8873eb77dbc591c9113212b0729f28465cf4b0e3197a72405",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "sparse",
+      "revision": "sha256:290e3984c4cbf1cdcfed729bdd26965ad939758955a2506ec60cd60bbbb3b11b",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    }
+  ],
+  "settings": {
+    "width": 32,
+    "height": 16,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        2,
+        2,
+        2
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        3
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 2.5,
+        "ymag": 1,
+        "near": 0.1,
+        "far": 5
+      }
+    }
+  }
+}

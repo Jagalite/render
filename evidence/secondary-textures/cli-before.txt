@@ -1,0 +1,33 @@
+init: passed
+empty: passed
+import: passed
+imported: passed
+opaque-nearest-base: passed
+opaque-nearest: passed
+opaque-nearest-state: passed
+opaque-nearest-cpu: passed
+opaque-nearest-gpu: passed
+opaque-nearest-archive: passed
+opaque-mip-base: passed
+opaque-mip: passed
+opaque-mip-state: passed
+opaque-mip-cpu: passed
+opaque-mip-gpu: passed
+opaque-mip-archive: passed
+principled-nearest-base: passed
+principled-nearest: passed
+principled-nearest-state: passed
+principled-nearest-cpu: passed
+principled-nearest-gpu: passed
+principled-nearest-archive: passed
+principled-mip-base: passed
+principled-mip: passed
+principled-mip-state: passed
+principled-mip-cpu: passed
+principled-mip-gpu: passed
+principled-mip-archive: passed
+Traceback (most recent call last):
+  File "/private/tmp/render-secondary-textures-20260906/scripts/secondary-textures-workflow.py", line 62, in <module>
+    assert (a/'image.pfm').read_bytes()==(b/'image.pfm').read_bytes(),(name,backend,'secondary minification changed pixels')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('principled', 'cpu', 'secondary minification changed pixels')

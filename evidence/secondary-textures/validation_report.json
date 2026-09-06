@@ -1,0 +1,534 @@
+{
+  "status": "passed",
+  "scope": "macOS ARM64 CPU/Metal, Rust Wasm in Node, Chrome WebGPU/OPFS; Linux and Windows compile only",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.688582792005036,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "independent_source_validation",
+      "command": [
+        "node",
+        "scripts/validate-gltf-fixtures.cjs",
+        "artifacts/secondary-textures/run-20260906T100105Z/source-validation"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6377606249880046,
+      "log": "logs/independent_source_validation.txt"
+    },
+    {
+      "name": "secondary_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "secondary_textures_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 0.9783829590014648,
+      "log": "logs/secondary_gpu.txt"
+    },
+    {
+      "name": "gpu_alpha",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_alpha",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 15.60488237500249,
+      "log": "logs/gpu_alpha.txt"
+    },
+    {
+      "name": "gltf_export_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gltf_export_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 7.932330208001076,
+      "log": "logs/gltf_export_gpu.txt"
+    },
+    {
+      "name": "vertex_colors_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "vertex_colors_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 4.238638208000339,
+      "log": "logs/vertex_colors_gpu.txt"
+    },
+    {
+      "name": "named_uv_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "named_uv_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 5.456805790992803,
+      "log": "logs/named_uv_gpu.txt"
+    },
+    {
+      "name": "morph_frame_regressions",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "morph_frames",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 2.738135042003705,
+      "log": "logs/morph_frame_regressions.txt"
+    },
+    {
+      "name": "morph_frame_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "morph_frames_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 4.548138083002414,
+      "log": "logs/morph_frame_gpu.txt"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 8.713076000000001,
+      "log": "logs/clippy.txt"
+    },
+    {
+      "name": "native_tests",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 57.623761124996236,
+      "log": "logs/native_tests.txt"
+    },
+    {
+      "name": "wasm_tests",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 60.81881250000151,
+      "log": "logs/wasm_tests.txt"
+    },
+    {
+      "name": "linux_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-unknown-linux-gnu",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 4.186526708988822,
+      "log": "logs/linux_check.txt"
+    },
+    {
+      "name": "windows_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-pc-windows-msvc",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 3.9444360000052257,
+      "log": "logs/windows_check.txt"
+    },
+    {
+      "name": "browser_clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "-p",
+        "render-web",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 5.034613875002833,
+      "log": "logs/browser_clippy.txt"
+    },
+    {
+      "name": "native_build",
+      "command": [
+        "cargo",
+        "build",
+        "-p",
+        "render-host",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 0.15449162501317915,
+      "log": "logs/native_build.txt"
+    },
+    {
+      "name": "browser_build",
+      "command": [
+        "sh",
+        "scripts/build-web.sh"
+      ],
+      "exit_code": 0,
+      "seconds": 75.87339070800226,
+      "log": "logs/browser_build.txt"
+    },
+    {
+      "name": "camera_regression",
+      "command": [
+        "python3",
+        "scripts/alpha-camera-workflow.py",
+        "artifacts/secondary-textures/run-20260906T100105Z/camera-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 4.373138333001407,
+      "log": "logs/camera_regression.txt"
+    },
+    {
+      "name": "dependency_audit",
+      "command": [
+        "python3",
+        "scripts/dependency-audit.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.39171820899355225,
+      "log": "logs/dependency_audit.txt"
+    },
+    {
+      "name": "animated_regression",
+      "command": [
+        "python3",
+        "scripts/animated-gltf-workflow.py",
+        "artifacts/secondary-textures/run-20260906T100105Z/animated-regression",
+        "--gpu"
+      ],
+      "exit_code": 0,
+      "seconds": 2.5684752079978352,
+      "log": "logs/animated_regression.txt"
+    },
+    {
+      "name": "shutter_regression",
+      "command": [
+        "python3",
+        "scripts/gpu-shutter-workflow.py",
+        "artifacts/secondary-textures/run-20260906T100105Z/shutter-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 1.6193583330023102,
+      "log": "logs/shutter_regression.txt"
+    },
+    {
+      "name": "sparse_regression",
+      "command": [
+        "python3",
+        "scripts/sparse-gltf-workflow.py",
+        "artifacts/secondary-textures/run-20260906T100105Z/sparse-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 2.581555084005231,
+      "log": "logs/sparse_regression.txt"
+    },
+    {
+      "name": "alpha_workflow",
+      "command": [
+        "python3",
+        "scripts/alpha-gltf-workflow.py",
+        "artifacts/secondary-textures/run-20260906T100105Z/alpha-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 2.940674957993906,
+      "log": "logs/alpha_workflow.txt"
+    },
+    {
+      "name": "alpha_browser",
+      "command": [
+        "node",
+        "scripts/alpha-gltf-browser.mjs",
+        "artifacts/secondary-textures/run-20260906T100105Z/alpha-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 1.276565042004222,
+      "log": "logs/alpha_browser.txt"
+    },
+    {
+      "name": "alpha_shutter_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/secondary-textures/run-20260906T100105Z/alpha-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 2.423356250001234,
+      "log": "logs/alpha_shutter_workflow.txt"
+    },
+    {
+      "name": "alpha_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/secondary-textures/run-20260906T100105Z/alpha-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5378647920006188,
+      "log": "logs/alpha_shutter_browser.txt"
+    },
+    {
+      "name": "named_uv_regression",
+      "command": [
+        "python3",
+        "scripts/named-uv-workflow.py",
+        "artifacts/secondary-textures/run-20260906T100105Z/named-uv-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6229254999925615,
+      "log": "logs/named_uv_regression.txt"
+    },
+    {
+      "name": "named_uv_browser",
+      "command": [
+        "node",
+        "scripts/named-uv-browser.mjs",
+        "artifacts/secondary-textures/run-20260906T100105Z/named-uv-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.35008187500352506,
+      "log": "logs/named_uv_browser.txt"
+    },
+    {
+      "name": "named_uv_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-named-uv-browser.py",
+        "artifacts/secondary-textures/run-20260906T100105Z/named-uv-regression",
+        "artifacts/secondary-textures/run-20260906T100105Z/named_uv_cross_platform.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.030467083997791633,
+      "log": "logs/named_uv_cross_platform.txt"
+    },
+    {
+      "name": "morph_workflow",
+      "command": [
+        "python3",
+        "scripts/morph-frames-workflow.py",
+        "artifacts/secondary-textures/run-20260906T100105Z/morph-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 1.8715249999950174,
+      "log": "logs/morph_workflow.txt"
+    },
+    {
+      "name": "morph_browser",
+      "command": [
+        "node",
+        "scripts/morph-frames-browser.mjs",
+        "artifacts/secondary-textures/run-20260906T100105Z/morph-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5052907920035068,
+      "log": "logs/morph_browser.txt"
+    },
+    {
+      "name": "vertex_color_workflow",
+      "command": [
+        "python3",
+        "scripts/vertex-colors-workflow.py",
+        "artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 2.371161375005613,
+      "log": "logs/vertex_color_workflow.txt"
+    },
+    {
+      "name": "vertex_color_browser",
+      "command": [
+        "node",
+        "scripts/vertex-colors-browser.mjs",
+        "artifacts/secondary-textures/run-20260906T100105Z/vertex-color-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.4894894579920219,
+      "log": "logs/vertex_color_browser.txt"
+    },
+    {
+      "name": "export_workflow",
+      "command": [
+        "python3",
+        "scripts/gltf-export-workflow.py",
+        "artifacts/secondary-textures/run-20260906T100105Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 8.87974791698798,
+      "log": "logs/export_workflow.txt"
+    },
+    {
+      "name": "export_schema",
+      "command": [
+        "python3",
+        "scripts/validate-gltf-export-schema.py",
+        "artifacts/secondary-textures/run-20260906T100105Z"
+      ],
+      "exit_code": 0,
+      "seconds": 0.15507875000184868,
+      "log": "logs/export_schema.txt"
+    },
+    {
+      "name": "export_source_validation",
+      "command": [
+        "node",
+        "scripts/validate-exported-glbs.cjs",
+        "artifacts/secondary-textures/run-20260906T100105Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.10897883301367983,
+      "log": "logs/export_source_validation.txt"
+    },
+    {
+      "name": "export_browser",
+      "command": [
+        "node",
+        "scripts/gltf-export-browser.mjs",
+        "artifacts/secondary-textures/run-20260906T100105Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.1990870409936178,
+      "log": "logs/export_browser.txt"
+    },
+    {
+      "name": "secondary_workflow",
+      "command": [
+        "python3",
+        "scripts/secondary-textures-workflow.py",
+        "artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 4.6732789169909665,
+      "log": "logs/secondary_workflow.txt"
+    },
+    {
+      "name": "secondary_browser",
+      "command": [
+        "node",
+        "scripts/secondary-textures-browser.mjs",
+        "artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5371317499957513,
+      "log": "logs/secondary_browser.txt"
+    }
+  ],
+  "build_environment": {
+    "CARGO_NET_OFFLINE": "true",
+    "CARGO_BUILD_JOBS": "2",
+    "CARGO_INCREMENTAL": "0",
+    "CARGO_PROFILE_DEV_DEBUG": "0",
+    "CARGO_PROFILE_TEST_DEBUG": "0",
+    "CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUNNER": "wasm-bindgen-test-runner",
+    "RENDER_TEST_ORIGIN": "http://127.0.0.1:8772"
+  },
+  "native_test_count": 148,
+  "wasm_test_count": 127
+}

@@ -240,9 +240,21 @@ fn visibility(
     }
     Err(Error::new("budget", "alpha shadow exceeded 64 surfaces"))
 }
-fn surface(scene: &Scene, hit: &Hit, settings: &Settings, px: f64, py: f64) -> Result<Shading> {
+fn surface(
+    scene: &Scene,
+    hit: &Hit,
+    settings: &Settings,
+    px: f64,
+    py: f64,
+    primary: bool,
+) -> Result<Shading> {
     let m = &scene.instances[hit.instance].material;
     if m.pbr.is_some() {
+        if !primary {
+            // This profile does not propagate ray differentials. Camera rays
+            // describe primary hits only, including discarded-alpha continuation.
+            return Ok(shading_uv(scene, hit, [glam::Vec2::ZERO; 2], None));
+        }
         Ok(shading(
             scene,
             hit,
@@ -379,7 +391,7 @@ pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) 
                         ray.origin = hit.position + ray.direction * 1e-5;
                         continue;
                     }
-                    let shading = surface(scene, &hit, s, px, py)?;
+                    let shading = surface(scene, &hit, s, px, py, bounce == 0)?;
                     let material = &scene.instances[hit.instance].material;
                     let model = model(material);
                     let n = shading.normal;

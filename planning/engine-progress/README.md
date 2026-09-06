@@ -5,13 +5,13 @@ working on feasible remaining steps. M09 interactive editor remains deferred.
 Each completed increment requires implementation, native/browser workflow evidence,
 negative/cancellation/stale checks, resource/provenance records and documentation.
 
-Current completed increment: GPU Principled alpha coverage; evidence/gpu-alpha.
+Current completed increment: shared secondary texture footprints; evidence/secondary-textures.
 
 | Order | Increment | Status |
 |---|---|---|
 | 1 | GPU shutter frames and streaming sequences | Validated on feat/gpu-shutter-sequences; evidence/gpu-shutter |
 | 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Sparse/UV0, CPU alpha, named UV, morph frames, vertex colors and evaluated PBR GLB export validated |
-| 3 | Richer GPU scattering and transport quality | GPU alpha and CPU occlusion validated; next: secondary texture footprint correction, then richer BSDFs |
+| 3 | Richer GPU scattering and transport quality | GPU alpha, CPU occlusion and shared secondary footprints validated; richer GPU BSDFs next |
 | 4 | External hair/volume inputs, fiber shading and sparse GPU media | Pending |
 | 5 | Scoped native .blend/USD/MaterialX interchange | Pending |
 | 6 | M10 engine UV/paint/sculpt/remesh/retopology operations | Pending |
@@ -85,3 +85,10 @@ evidence. All 23 source GLBs and 10 exported GLBs have zero independent errors.
 Secondary extended-CPU texture footprints are the next concrete correction; no
 major implementation blocker is parked. Historical checkpoint notes above retain
 their original validation scope.
+
+Secondary footprint acceptance: 148 native and 127 Wasm tests, six dedicated Metal
+comparisons, 65 CLI calls and ten Chrome CPU/OPFS cases with four WebGPU cases.
+All 351 previous image/pass files, 117 receipts and 119 fixture files are unchanged.
+Both generated shaders remain exact. Five CPU surface models satisfy secondary-only
+minification invariance; primary camera filtering and alpha continuation remain active.
+No dependency changes or major blocker. Richer GPU scattering is next.

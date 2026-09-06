@@ -1,0 +1,600 @@
+{
+  "status": "failed",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/000-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07872900000074878
+    },
+    {
+      "name": "empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/001-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.008644625006127171
+    },
+    {
+      "name": "import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/002-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04778033299953677
+    },
+    {
+      "name": "imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/003-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011337167001329362
+    },
+    {
+      "name": "opaque-nearest-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/004-opaque-nearest-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011086707992944866
+    },
+    {
+      "name": "opaque-nearest",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/005-opaque-nearest.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03763845798675902
+    },
+    {
+      "name": "opaque-nearest-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/006-opaque-nearest-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015905957989161834
+    },
+    {
+      "name": "opaque-nearest-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/007-opaque-nearest-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07473354200192261,
+      "resources": {
+        "maximum resident set size": 17334272,
+        "peak memory footprint": 2933824
+      }
+    },
+    {
+      "name": "opaque-nearest-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/008-opaque-nearest-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2615540839906316,
+      "resources": {
+        "maximum resident set size": 33734656,
+        "peak memory footprint": 10929792
+      }
+    },
+    {
+      "name": "opaque-nearest-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/009-opaque-nearest-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03262308299599681
+    },
+    {
+      "name": "opaque-mip-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/010-opaque-mip-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016014957989682443
+    },
+    {
+      "name": "opaque-mip",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/011-opaque-mip.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04721137500018813
+    },
+    {
+      "name": "opaque-mip-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/012-opaque-mip-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020532457987428643
+    },
+    {
+      "name": "opaque-mip-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/013-opaque-mip-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06846312498964835,
+      "resources": {
+        "maximum resident set size": 17563648,
+        "peak memory footprint": 3163200
+      }
+    },
+    {
+      "name": "opaque-mip-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/014-opaque-mip-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14417679100006353,
+      "resources": {
+        "maximum resident set size": 33685504,
+        "peak memory footprint": 10864192
+      }
+    },
+    {
+      "name": "opaque-mip-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/015-opaque-mip-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03894279099768028
+    },
+    {
+      "name": "principled-nearest-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/016-principled-nearest-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019553582998923957
+    },
+    {
+      "name": "principled-nearest",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/017-principled-nearest.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.057638833997771144
+    },
+    {
+      "name": "principled-nearest-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/018-principled-nearest-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02368399999977555
+    },
+    {
+      "name": "principled-nearest-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/019-principled-nearest-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07775887500611134,
+      "resources": {
+        "maximum resident set size": 17645568,
+        "peak memory footprint": 3310720
+      }
+    },
+    {
+      "name": "principled-nearest-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/020-principled-nearest-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5331402089941548,
+      "resources": {
+        "maximum resident set size": 35012608,
+        "peak memory footprint": 12306048
+      }
+    },
+    {
+      "name": "principled-nearest-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/021-principled-nearest-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.041346083002281375
+    },
+    {
+      "name": "principled-mip-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/022-principled-mip-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.023957083001732826
+    },
+    {
+      "name": "principled-mip",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/023-principled-mip.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06909483300114516
+    },
+    {
+      "name": "principled-mip-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/024-principled-mip-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02886924998892937
+    },
+    {
+      "name": "principled-mip-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/025-principled-mip-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07979354199778754,
+      "resources": {
+        "maximum resident set size": 17743872,
+        "peak memory footprint": 3409024
+      }
+    },
+    {
+      "name": "principled-mip-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/026-principled-mip-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.23317674999998417,
+      "resources": {
+        "maximum resident set size": 34816000,
+        "peak memory footprint": 12092992
+      }
+    },
+    {
+      "name": "principled-mip-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/027-principled-mip-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05121070799941663
+    }
+  ],
+  "variants": [
+    {
+      "name": "opaque",
+      "model": null,
+      "gpu": true,
+      "filters": [
+        {
+          "name": "nearest",
+          "revision": "sha256:9300de863aaedbc63c5b05ef9d242d2d3171965068123923504969fca3decb4e",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": null,
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "nearest",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/opaque-nearest-archive/document/document.json"
+        },
+        {
+          "name": "mip",
+          "revision": "sha256:ddb40cf1d6429626a631ccb4ead42bb469b874f815b0a0ecb436443117990df1",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": null,
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "linear_mip_linear",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/cli-before/opaque-mip-archive/document/document.json"
+        }
+      ],
+      "gpu_linear_rmse": 6.556405092328058e-08
+    }
+  ],
+  "settings": {
+    "width": 8,
+    "height": 8,
+    "samples": 32,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0,
+      0,
+      0
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        0,
+        0,
+        0
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        1
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 0.9,
+        "ymag": 0.9,
+        "near": 0.01,
+        "far": 10
+      }
+    }
+  },
+  "error": "('principled', 'cpu', 'secondary minification changed pixels')"
+}

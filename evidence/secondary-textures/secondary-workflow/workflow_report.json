@@ -1,0 +1,1814 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/000-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.036776082997675985
+    },
+    {
+      "name": "empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/001-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007113249987014569
+    },
+    {
+      "name": "import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/002-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.032010958006139845
+    },
+    {
+      "name": "imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/003-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012253500011865981
+    },
+    {
+      "name": "opaque-nearest-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/004-opaque-nearest-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012480958001106046
+    },
+    {
+      "name": "opaque-nearest",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/005-opaque-nearest.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03798383299726993
+    },
+    {
+      "name": "opaque-nearest-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/006-opaque-nearest-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01654450000205543
+    },
+    {
+      "name": "opaque-nearest-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/007-opaque-nearest-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06657816699589603,
+      "resources": {
+        "maximum resident set size": 17399808,
+        "peak memory footprint": 3064896
+      }
+    },
+    {
+      "name": "opaque-nearest-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/008-opaque-nearest-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14514366700313985,
+      "resources": {
+        "maximum resident set size": 33882112,
+        "peak memory footprint": 11060864
+      }
+    },
+    {
+      "name": "opaque-nearest-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/009-opaque-nearest-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.035696499995538034
+    },
+    {
+      "name": "opaque-mip-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/010-opaque-mip-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016267957995296456
+    },
+    {
+      "name": "opaque-mip",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/011-opaque-mip.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.047612833994207904
+    },
+    {
+      "name": "opaque-mip-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/012-opaque-mip-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020747999995364808
+    },
+    {
+      "name": "opaque-mip-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/013-opaque-mip-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06965329199738335,
+      "resources": {
+        "maximum resident set size": 17448960,
+        "peak memory footprint": 3114048
+      }
+    },
+    {
+      "name": "opaque-mip-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/014-opaque-mip-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14234474999830127,
+      "resources": {
+        "maximum resident set size": 33865728,
+        "peak memory footprint": 11028032
+      }
+    },
+    {
+      "name": "opaque-mip-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/015-opaque-mip-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03878258301119786
+    },
+    {
+      "name": "principled-nearest-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/016-principled-nearest-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02268924999225419
+    },
+    {
+      "name": "principled-nearest",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/017-principled-nearest.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06333708399324678
+    },
+    {
+      "name": "principled-nearest-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/018-principled-nearest-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02821645799849648
+    },
+    {
+      "name": "principled-nearest-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/019-principled-nearest-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07484112499514595,
+      "resources": {
+        "maximum resident set size": 17481728,
+        "peak memory footprint": 3179648
+      }
+    },
+    {
+      "name": "principled-nearest-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/020-principled-nearest-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.23100866700406186,
+      "resources": {
+        "maximum resident set size": 35045376,
+        "peak memory footprint": 12322432
+      }
+    },
+    {
+      "name": "principled-nearest-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/021-principled-nearest-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04574800000409596
+    },
+    {
+      "name": "principled-mip-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/022-principled-mip-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.026380166003946215
+    },
+    {
+      "name": "principled-mip",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/023-principled-mip.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07742354099173099
+    },
+    {
+      "name": "principled-mip-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/024-principled-mip-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03266658399661537
+    },
+    {
+      "name": "principled-mip-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/025-principled-mip-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0785845420032274,
+      "resources": {
+        "maximum resident set size": 17694720,
+        "peak memory footprint": 3392640
+      }
+    },
+    {
+      "name": "principled-mip-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/026-principled-mip-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21737562499765772,
+      "resources": {
+        "maximum resident set size": 35028992,
+        "peak memory footprint": 12306048
+      }
+    },
+    {
+      "name": "principled-mip-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/027-principled-mip-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04551766699296422
+    },
+    {
+      "name": "coated-nearest-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/028-coated-nearest-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.031314167004893534
+    },
+    {
+      "name": "coated-nearest",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/029-coated-nearest.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08955491600499954
+    },
+    {
+      "name": "coated-nearest-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/030-coated-nearest-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03684104200510774
+    },
+    {
+      "name": "coated-nearest-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/031-coated-nearest-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08256391700706445,
+      "resources": {
+        "maximum resident set size": 17743872,
+        "peak memory footprint": 3441792
+      }
+    },
+    {
+      "name": "coated-nearest-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/032-coated-nearest-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.048216541996225715
+    },
+    {
+      "name": "coated-mip-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/033-coated-mip-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03729866699723061
+    },
+    {
+      "name": "coated-mip",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/034-coated-mip.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10416083299787715
+    },
+    {
+      "name": "coated-mip-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/035-coated-mip-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04298245800600853
+    },
+    {
+      "name": "coated-mip-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/036-coated-mip-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08592125000723172,
+      "resources": {
+        "maximum resident set size": 17858560,
+        "peak memory footprint": 3556480
+      }
+    },
+    {
+      "name": "coated-mip-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/037-coated-mip-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05831116600893438
+    },
+    {
+      "name": "conductor-nearest-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/038-conductor-nearest-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.043377499998314306
+    },
+    {
+      "name": "conductor-nearest",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/039-conductor-nearest.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12502558300911915
+    },
+    {
+      "name": "conductor-nearest-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/040-conductor-nearest-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04826758299896028
+    },
+    {
+      "name": "conductor-nearest-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/041-conductor-nearest-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09049850000883453,
+      "resources": {
+        "maximum resident set size": 17874944,
+        "peak memory footprint": 3572864
+      }
+    },
+    {
+      "name": "conductor-nearest-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/042-conductor-nearest-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06433070899220183
+    },
+    {
+      "name": "conductor-mip-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/043-conductor-mip-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04836387500108685
+    },
+    {
+      "name": "conductor-mip",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/044-conductor-mip.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14166325000405777
+    },
+    {
+      "name": "conductor-mip-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/045-conductor-mip-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05711845800396986
+    },
+    {
+      "name": "conductor-mip-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/046-conductor-mip-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10185020900098607,
+      "resources": {
+        "maximum resident set size": 18055168,
+        "peak memory footprint": 3753088
+      }
+    },
+    {
+      "name": "conductor-mip-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/047-conductor-mip-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07073220799793489
+    },
+    {
+      "name": "dielectric-nearest-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/048-dielectric-nearest-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.056967957993038
+    },
+    {
+      "name": "dielectric-nearest",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/049-dielectric-nearest.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.161813250000705
+    },
+    {
+      "name": "dielectric-nearest-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/050-dielectric-nearest-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06253224999818485
+    },
+    {
+      "name": "dielectric-nearest-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/051-dielectric-nearest-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09922133300278801,
+      "resources": {
+        "maximum resident set size": 18055168,
+        "peak memory footprint": 3753088
+      }
+    },
+    {
+      "name": "dielectric-nearest-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/052-dielectric-nearest-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08611983300943393
+    },
+    {
+      "name": "dielectric-mip-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/053-dielectric-mip-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06883637499413453
+    },
+    {
+      "name": "dielectric-mip",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/054-dielectric-mip.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19715037499554455
+    },
+    {
+      "name": "dielectric-mip-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/055-dielectric-mip-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07636870800342876
+    },
+    {
+      "name": "dielectric-mip-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/056-dielectric-mip-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11684666700602975,
+      "resources": {
+        "maximum resident set size": 18219008,
+        "peak memory footprint": 3916928
+      }
+    },
+    {
+      "name": "dielectric-mip-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/057-dielectric-mip-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09217366699886043
+    },
+    {
+      "name": "final",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/058-final.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07572820900531951
+    },
+    {
+      "name": "restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/restored",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/059-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03425437500118278
+    },
+    {
+      "name": "restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/restored",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/060-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05653983300726395
+    },
+    {
+      "name": "stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/061-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.1455932499957271
+    },
+    {
+      "name": "cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/062-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.00697583299188409
+    },
+    {
+      "name": "budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/063-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.08968458400340751
+    },
+    {
+      "name": "unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/064-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07440820800547954
+    }
+  ],
+  "variants": [
+    {
+      "name": "opaque",
+      "model": null,
+      "gpu": true,
+      "filters": [
+        {
+          "name": "nearest",
+          "revision": "sha256:9300de863aaedbc63c5b05ef9d242d2d3171965068123923504969fca3decb4e",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": null,
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "nearest",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/opaque-nearest-archive/document/document.json"
+        },
+        {
+          "name": "mip",
+          "revision": "sha256:ddb40cf1d6429626a631ccb4ead42bb469b874f815b0a0ecb436443117990df1",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": null,
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "linear_mip_linear",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/opaque-mip-archive/document/document.json"
+        }
+      ],
+      "gpu_linear_rmse": 6.556405092328058e-08
+    },
+    {
+      "name": "principled",
+      "model": {
+        "kind": "principled"
+      },
+      "gpu": true,
+      "filters": [
+        {
+          "name": "nearest",
+          "revision": "sha256:16de561a25b9f5981fe22c59aa20fdb56ba265dade95435c5f44b3b3ecd4e8f8",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "principled"
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "nearest",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/principled-nearest-archive/document/document.json"
+        },
+        {
+          "name": "mip",
+          "revision": "sha256:36b6d6b0cb493f15a6d2858b88765f5886e2741edd7390971bf87565748f8585",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "principled"
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "linear_mip_linear",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/principled-mip-archive/document/document.json"
+        }
+      ],
+      "gpu_linear_rmse": 6.00973732952091e-08
+    },
+    {
+      "name": "coated",
+      "model": {
+        "kind": "coated",
+        "weight": 0.5,
+        "ior": 1.5,
+        "roughness": 0.2
+      },
+      "gpu": false,
+      "filters": [
+        {
+          "name": "nearest",
+          "revision": "sha256:814bfb4da387766b049d1d86a068020c2ede0375431c495ffcff2af111cedd94",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "coated",
+                      "weight": 0.5,
+                      "ior": 1.5,
+                      "roughness": 0.2
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "nearest",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/coated-nearest-archive/document/document.json"
+        },
+        {
+          "name": "mip",
+          "revision": "sha256:a30514af83d163cfc65949688f7f80e8b878dcf4f289110a4ec1bb96051beeca",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "coated",
+                      "weight": 0.5,
+                      "ior": 1.5,
+                      "roughness": 0.2
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "linear_mip_linear",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/coated-mip-archive/document/document.json"
+        }
+      ]
+    },
+    {
+      "name": "conductor",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.2,
+          0.2
+        ],
+        "k": [
+          3,
+          3,
+          3
+        ]
+      },
+      "gpu": false,
+      "filters": [
+        {
+          "name": "nearest",
+          "revision": "sha256:9d2573570deb6b6616c0565358f8502f455134332718157bf918690b6532cf08",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "conductor",
+                      "eta": [
+                        0.2,
+                        0.2,
+                        0.2
+                      ],
+                      "k": [
+                        3,
+                        3,
+                        3
+                      ]
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "nearest",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/conductor-nearest-archive/document/document.json"
+        },
+        {
+          "name": "mip",
+          "revision": "sha256:79ce06cc3c2e94cd96c6108fa8831f8c0fbbc6e386c6e205d83fdbc1d66e1f6a",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "conductor",
+                      "eta": [
+                        0.2,
+                        0.2,
+                        0.2
+                      ],
+                      "k": [
+                        3,
+                        3,
+                        3
+                      ]
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "linear_mip_linear",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/conductor-mip-archive/document/document.json"
+        }
+      ]
+    },
+    {
+      "name": "dielectric",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "gpu": false,
+      "filters": [
+        {
+          "name": "nearest",
+          "revision": "sha256:229a3492882c3f62007b64fe65c9c3f4a1bad5f93a1130e0daf2c79c5091c122",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "dielectric",
+                      "ior": 1.5
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "nearest",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/dielectric-nearest-archive/document/document.json"
+        },
+        {
+          "name": "mip",
+          "revision": "sha256:bcf5192199adcb59659c1a6952acbd2f206f278f6f8e2f41eb1773e8187abb9e",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "dielectric",
+                      "ior": 1.5
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "linear_mip_linear",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/secondary-workflow/dielectric-mip-archive/document/document.json"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "width": 8,
+    "height": 8,
+    "samples": 32,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0,
+      0,
+      0
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        0,
+        0,
+        0
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        1
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 0.9,
+        "ymag": 0.9,
+        "near": 0.01,
+        "far": 10
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "uri": "fixtures/vertex-colors/data/sparse.glb",
+  "mimeType": "model/gltf-binary",
+  "validatorVersion": "2.0.0-dev.3.10",
+  "validatedAt": "2026-09-06T10:01:07.078Z",
+  "issues": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 0,
+    "numHints": 4,
+    "messages": [
+      {
+        "code": "BUFFER_VIEW_TARGET_MISSING",
+        "message": "bufferView.target should be set for vertex or index data.",
+        "severity": 3,
+        "pointer": "/meshes/0/primitives/0/attributes/POSITION"
+      },
+      {
+        "code": "BUFFER_VIEW_TARGET_MISSING",
+        "message": "bufferView.target should be set for vertex or index data.",
+        "severity": 3,
+        "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+      },
+      {
+        "code": "BUFFER_VIEW_TARGET_MISSING",
+        "message": "bufferView.target should be set for vertex or index data.",
+        "severity": 3,
+        "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "BUFFER_VIEW_TARGET_MISSING",
+        "message": "bufferView.target should be set for vertex or index data.",
+        "severity": 3,
+        "pointer": "/meshes/0/primitives/0/indices"
+      }
+    ],
+    "truncated": false
+  },
+  "info": {
+    "version": "2.0",
+    "generator": "Original linear vertex color analytic fixture",
+    "resources": [
+      {
+        "pointer": "/buffers/0",
+        "mimeType": "application/gltf-buffer",
+        "storage": "glb",
+        "byteLength": 280
+      },
+      {
+        "pointer": "/images/0",
+        "mimeType": "image/png",
+        "storage": "buffer-view",
+        "image": {
+          "width": 1,
+          "height": 1,
+          "format": "rgba",
+          "primaries": "srgb",
+          "transfer": "srgb",
+          "bits": 8
+        }
+      }
+    ],
+    "animationCount": 0,
+    "materialCount": 1,
+    "hasMorphTargets": false,
+    "hasSkins": false,
+    "hasTextures": true,
+    "hasDefaultScene": true,
+    "drawCallCount": 2,
+    "totalVertexCount": 8,
+    "totalTriangleCount": 4,
+    "maxUVs": 1,
+    "maxInfluences": 0,
+    "maxAttributes": 4
+  }
+}

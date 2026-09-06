@@ -1,0 +1,484 @@
+{
+  "status": "passed",
+  "profile": "gltf2-morph-frames-v1",
+  "calls": [
+    {
+      "name": "dense-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/dense",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/000-dense-init.json"
+      ],
+      "seconds": 0.021541666006669402,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-base",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/dense",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/001-dense-base.json"
+      ],
+      "seconds": 0.007047208011499606,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/dense",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/002-dense-import.json"
+      ],
+      "seconds": 0.04023658300866373,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17694720,
+        "peak memory footprint": 3720320
+      }
+    },
+    {
+      "name": "dense-retry",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/dense",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/003-dense-retry.json"
+      ],
+      "seconds": 0.04120149998925626,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/dense",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/004-dense-state.json"
+      ],
+      "seconds": 0.02683624999190215,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/dense",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/005-dense-cpu.json"
+      ],
+      "seconds": 0.23472666599263903,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 19742720,
+        "peak memory footprint": 4244608
+      }
+    },
+    {
+      "name": "dense-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/dense",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/006-dense-gpu.json"
+      ],
+      "seconds": 0.19696216699958313,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 35995648,
+        "peak memory footprint": 11748992
+      }
+    },
+    {
+      "name": "dense-archive",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/dense",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/007-dense-archive.json"
+      ],
+      "seconds": 0.03748645799350925,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-restore",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/dense-restored",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/008-dense-restore.json"
+      ],
+      "seconds": 0.03338412499579135,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-restored-frame",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/dense-restored",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/009-dense-restored-frame.json"
+      ],
+      "seconds": 0.1773010000033537,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-stale",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/dense",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/010-dense-stale.json"
+      ],
+      "seconds": 0.038432916000601836,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "dense-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/dense",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/011-dense-unchanged.json"
+      ],
+      "seconds": 0.023351333002210595,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/012-sparse-init.json"
+      ],
+      "seconds": 0.018641125003341585,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/013-sparse-base.json"
+      ],
+      "seconds": 0.007061208001687191,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/014-sparse-import.json"
+      ],
+      "seconds": 0.0415214999957243,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17645568,
+        "peak memory footprint": 3671168
+      }
+    },
+    {
+      "name": "sparse-retry",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/015-sparse-retry.json"
+      ],
+      "seconds": 0.03691879200050607,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/016-sparse-state.json"
+      ],
+      "seconds": 0.02313395799137652,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/017-sparse-cpu.json"
+      ],
+      "seconds": 0.22194470799877308,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 19759104,
+        "peak memory footprint": 4260992
+      }
+    },
+    {
+      "name": "sparse-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/018-sparse-gpu.json"
+      ],
+      "seconds": 0.18094287501298822,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36159488,
+        "peak memory footprint": 11880064
+      }
+    },
+    {
+      "name": "sparse-archive",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/019-sparse-archive.json"
+      ],
+      "seconds": 0.037327709011151455,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-restore",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/sparse-restored",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/020-sparse-restore.json"
+      ],
+      "seconds": 0.03431945899501443,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-restored-frame",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/sparse-restored",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/021-sparse-restored-frame.json"
+      ],
+      "seconds": 0.17488754099758808,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-stale",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/022-sparse-stale.json"
+      ],
+      "seconds": 0.03719270801229868,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "sparse-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/sparse",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/023-sparse-unchanged.json"
+      ],
+      "seconds": 0.02302012499421835,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "negative-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/negative",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/024-negative-init.json"
+      ],
+      "seconds": 0.02250558399828151,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "negative-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/negative",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/025-negative-state.json"
+      ],
+      "seconds": 0.006999750010436401,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "malformed",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/negative",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/026-malformed.json"
+      ],
+      "seconds": 0.0081691669911379,
+      "exit_code": 1,
+      "expected_error": "gltf_scene"
+    },
+    {
+      "name": "cancelled",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/negative",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/027-cancelled.json"
+      ],
+      "seconds": 0.006470084001193754,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "budget",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/negative",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/028-budget.json"
+      ],
+      "seconds": 0.006892417004564777,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "negative-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/negative",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/029-negative-unchanged.json"
+      ],
+      "seconds": 0.0077601660013897344,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "explicit-valid",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/negative",
+        "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/morph-regression/requests/030-explicit-valid.json"
+      ],
+      "seconds": 0.03898733299865853,
+      "exit_code": 0,
+      "expected_error": null
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "settings": {
+    "width": 32,
+    "height": 32,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.15,
+      0.15,
+      0.15
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        30,
+        30,
+        30
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        5
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 2,
+        "ymag": 2.5,
+        "near": 0.1,
+        "far": 10
+      }
+    }
+  },
+  "variants": [
+    {
+      "name": "dense",
+      "revision": "sha256:a0280f22328822394df1999e451f15c3b0c7a62250a7a466680c643862532084",
+      "clip": "9828e5547ba6047cba3ee457c60a76c7",
+      "linear_rmse": 0.000118356824385386,
+      "object_mismatches": 0,
+      "document_bytes": 14990
+    },
+    {
+      "name": "sparse",
+      "revision": "sha256:a3658379e0c38b15daf0dd20f3a185ef9207e63c8579f3644043ade59fe7e05a",
+      "clip": "3aaef354ffe20d4fbe06a694319477ee",
+      "linear_rmse": 0.000118356824385386,
+      "object_mismatches": 0,
+      "document_bytes": 14990
+    }
+  ],
+  "dense_sparse_pixels_identical": true
+}

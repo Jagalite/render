@@ -1,0 +1,63 @@
+/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/camera-regression
+{
+  "source_checkpoint": "working alpha implementation",
+  "scattering_sha256": "5b002a868f05cdefe89db4b5d928d568a2830dff1c77745a77eb3707f570dcd5",
+  "perspective_expected_visible_pixels": 0,
+  "perspective_actual_visible_pixels": 0,
+  "orthographic_expected_constant_depth": 3,
+  "orthographic_actual_depth_range": [
+    3.0,
+    3.0
+  ],
+  "orthographic_max_error": 0.0,
+  "commands": [
+    [
+      "target/debug/render-host",
+      "project",
+      "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/camera-regression/project",
+      "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/camera-regression/init.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/camera-regression/project",
+      "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/camera-regression/inspect-empty.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/camera-regression/project",
+      "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/camera-regression/author.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/camera-regression/project",
+      "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/camera-regression/inspect.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/camera-regression/project",
+      "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/camera-regression/perspective.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/camera-regression/project",
+      "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/camera-regression/orthographic-settings.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/camera-regression/project",
+      "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/camera-regression/inspect-ortho.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/camera-regression/project",
+      "/private/tmp/render-secondary-textures-20260906/artifacts/secondary-textures/run-20260906T100105Z/camera-regression/orthographic.request.json"
+    ]
+  ]
+}

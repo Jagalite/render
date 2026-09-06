@@ -970,7 +970,12 @@ pub fn shading(scene: &Scene, hit: &Hit, differentials: [Ray; 2]) -> Shading {
     shading_uv(scene, hit, d, Some(differentials))
 }
 // Secondary rays have no propagated differentials in this named profile.
-fn shading_uv(scene: &Scene, hit: &Hit, d: [Vec2; 2], differentials: Option<[Ray; 2]>) -> Shading {
+pub(crate) fn shading_uv(
+    scene: &Scene,
+    hit: &Hit,
+    d: [Vec2; 2],
+    differentials: Option<[Ray; 2]>,
+) -> Shading {
     let material = &scene.instances[hit.instance].material;
     let surface = material.pbr.as_ref().expect("PBR material");
     let texture = |binding: Option<&crate::textures::Binding>| {

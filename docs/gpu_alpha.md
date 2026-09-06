@@ -51,11 +51,11 @@ throughput now includes sampled occlusion for Principled, coated, conductor and
 dielectric models. Current direct illumination and emission remain independent.
 Analytic zero/full/partial AO tests reproduce the original error and verify recovery.
 
-Primary PBR color textures use camera differentials; GPU secondary color textures
-use LOD0. The older extended CPU path still projects camera differentials at later
-bounces; parity for minified secondary textures is not qualified by this increment
-and is the next shared transport correction. Small emissive lights, MIS, richer GPU
-BSDFs, refraction, fiber shading and participating media retain separate gates.
+Primary PBR color textures use camera differentials; secondary color textures use
+zero derivatives and base-level magnification filtering. The subsequent shared
+[secondary footprint correction](secondary_textures.md) validates the extended CPU
+path against this contract. Small emissive lights, MIS, richer GPU BSDFs, refraction,
+fiber shading and participating media retain separate gates.
 
 Reproduce with `python3 scripts/validate-gpu-alpha.py` after serving the exact
 `scripts/build-web.sh` output at localhost:8771 and launching the isolated test

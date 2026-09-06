@@ -1,0 +1,25 @@
+   Compiling render-core v0.1.0 (/private/tmp/render-secondary-textures-20260906/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 12.35s
+     Running tests/secondary_textures.rs (target/debug/deps/secondary_textures-27917946800ccca2)
+
+running 3 tests
+test discarded_primary_alpha_does_not_turn_camera_footprints_into_secondary_footprints ... FAILED
+test directly_visible_emitter_retains_primary_minification_and_cancel_budget_checks ... ok
+test secondary_only_emitter_is_invariant_to_minification_filter_in_all_surface_models ... ok
+
+failures:
+
+---- discarded_primary_alpha_does_not_turn_camera_footprints_into_secondary_footprints stdout ----
+
+thread 'discarded_primary_alpha_does_not_turn_camera_footprints_into_secondary_footprints' (4047202) panicked at crates/core/tests/secondary_textures.rs:217:5:
+assertion failed: variants[0].linear.iter().flatten().zip(variants[1].linear.iter().flatten()).all(|(x,
+            y)| (x - y).abs() > 0.4)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    discarded_primary_alpha_does_not_turn_camera_footprints_into_secondary_footprints
+
+test result: FAILED. 2 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.62s
+
+error: test failed, to rerun pass `-p render-core --test secondary_textures`

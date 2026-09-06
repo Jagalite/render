@@ -349,3 +349,19 @@ Native transactions build traversal-limit fixtures beyond the glTF node budget.
 **Revisit trigger:** Secondary footprint parity, richer GPU BSDFs, exact interpolated
 coverage arithmetic, larger traversal profiles or participating media require
 numerical, failure, resource and native/browser acceptance evidence.
+
+## ADR-026 — Secondary PBR footprints share the explicit base-level approximation
+
+**Decision:** Select zero UV derivatives after an actual scattering bounce in the
+extended CPU path. Reuse shared PBR shading; keep camera derivatives for all primary
+coverage continuation. This aligns existing Principled, coated, conductor and
+dielectric transport with the opaque CPU/GPU secondary sampling contract.
+
+**Integration boundary:** The [footprint contract](secondary_textures.md) connects
+material texture consumers, BSDF depth, alpha continuation and persisted native/browser
+workflows. Filter invariance on a secondary-only emitter supplies the analytic oracle;
+primary controls prevent disabling texture minification globally. No shader, schema,
+ABI or dependency changes. Existing rendered artifacts and receipts remain exact.
+
+**Revisit trigger:** Propagated ray differentials, cones or other secondary filtering
+require a separate quality contract and numerical/resource evidence across backends.

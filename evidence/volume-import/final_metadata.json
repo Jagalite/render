@@ -1,0 +1,68 @@
+{
+  "base_commit": "646ed8b",
+  "candidate_branch": "feat/volume-grid-import",
+  "acceptance_run": "artifacts/volume-import/run-20260906T113040Z",
+  "timestamp_utc": "2026-09-06T11:40:18.661373+00:00",
+  "files": [
+    {
+      "path": "crates/core/src/agent.rs",
+      "sha256": "be2a399c776a2664fc0876f12fa1a352ba2bd23e6624e55c34d6602808c2c815"
+    },
+    {
+      "path": "crates/core/src/lib.rs",
+      "sha256": "15c47535fa030a3d2984d64b11a2062ae73b7703c2a45562fcc1125fb47ee650"
+    },
+    {
+      "path": "crates/core/src/volume_import.rs",
+      "sha256": "6d0741fddaa4a9e5e70f985e1f50ec474e07a70f2f7941568a6d0ba21432a7b1"
+    },
+    {
+      "path": "crates/core/tests/volume_import.rs",
+      "sha256": "b27e9ad79c0c4323def4122320fb9bc2782374d3a7929c19dd999e631d3d40de"
+    },
+    {
+      "path": "crates/host/src/project_cli.rs",
+      "sha256": "d9e58b26f6ad2f5309fb464199fc30ff0219819b4aace3bb1d0e9f027f359da7"
+    },
+    {
+      "path": "docs/volume_import.md",
+      "sha256": "47aba17dd33e66bf9bd0a51a090c85f6dfd2eb24d0d7834675de96b800f15590"
+    },
+    {
+      "path": "fixtures/volume-import/generate.py",
+      "sha256": "91aeacc6215d76c2489ed62145c98cec5665f52bb35840d19e3a6bcab616f78e"
+    },
+    {
+      "path": "planning/engine-progress/volume-import-contract.md",
+      "sha256": "ec5a8eb3e52f79135da0a13465bcbcefe30bef3fc747aa9f96f66ce03a709d55"
+    },
+    {
+      "path": "planning/engine-progress/volume-import-review.md",
+      "sha256": "9a6ffb00becda02ab87beb95b3b954cfa25c0d98d728df46ee9442c9366df758"
+    },
+    {
+      "path": "schemas/agent_request.schema.json",
+      "sha256": "d4f4b89f118cba6212cdca2b3c7a78faf84b947dfb29dfc9f768b664cd90fd3b"
+    },
+    {
+      "path": "scripts/collect-volume-import-evidence.py",
+      "sha256": "ea13898318a1d6e54f8f2fe9e33af010bb9ed6f51a6786655b577e679b56c838"
+    },
+    {
+      "path": "scripts/validate-volume-import-schema.py",
+      "sha256": "dc1018488e1c50c59108afedc3eb57ef973a28bac23d3477ccb47e18706c77fb"
+    },
+    {
+      "path": "scripts/validate-volume-import.py",
+      "sha256": "3c9026a16b8549895f932e05fcd27f60882acd7077a760f94ab3ad6b4ec89cf5"
+    },
+    {
+      "path": "scripts/volume-import-browser.mjs",
+      "sha256": "e26329a9f3aebec7123afc2b673526cbf3fb7f277ff3b258369e769e11260b2c"
+    },
+    {
+      "path": "scripts/volume-import-workflow.py",
+      "sha256": "cb2cd275fd8c4359990263f3cfad2d486c334f33763e049ad4fc45a9a1999339"
+    }
+  ]
+}

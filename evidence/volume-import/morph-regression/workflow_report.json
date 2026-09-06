@@ -1,0 +1,484 @@
+{
+  "status": "passed",
+  "profile": "gltf2-morph-frames-v1",
+  "calls": [
+    {
+      "name": "dense-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/dense",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/000-dense-init.json"
+      ],
+      "seconds": 0.025705292006023228,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-base",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/dense",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/001-dense-base.json"
+      ],
+      "seconds": 0.007832666000467725,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/dense",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/002-dense-import.json"
+      ],
+      "seconds": 0.04773254100291524,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17760256,
+        "peak memory footprint": 3736704
+      }
+    },
+    {
+      "name": "dense-retry",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/dense",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/003-dense-retry.json"
+      ],
+      "seconds": 0.038079083009506576,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/dense",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/004-dense-state.json"
+      ],
+      "seconds": 0.02204395800072234,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/dense",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/005-dense-cpu.json"
+      ],
+      "seconds": 0.22136537500773557,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 19972096,
+        "peak memory footprint": 4326528
+      }
+    },
+    {
+      "name": "dense-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/dense",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/006-dense-gpu.json"
+      ],
+      "seconds": 0.18349354100064375,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36306944,
+        "peak memory footprint": 11880064
+      }
+    },
+    {
+      "name": "dense-archive",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/dense",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/007-dense-archive.json"
+      ],
+      "seconds": 0.04171583300922066,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-restore",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/dense-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/008-dense-restore.json"
+      ],
+      "seconds": 0.03648100000282284,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-restored-frame",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/dense-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/009-dense-restored-frame.json"
+      ],
+      "seconds": 0.18173158299759962,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-stale",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/dense",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/010-dense-stale.json"
+      ],
+      "seconds": 0.04006333398865536,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "dense-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/dense",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/011-dense-unchanged.json"
+      ],
+      "seconds": 0.021873457997571677,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/012-sparse-init.json"
+      ],
+      "seconds": 0.018349709003814496,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/013-sparse-base.json"
+      ],
+      "seconds": 0.0072286250069737434,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/014-sparse-import.json"
+      ],
+      "seconds": 0.044196582995937206,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17694720,
+        "peak memory footprint": 3671168
+      }
+    },
+    {
+      "name": "sparse-retry",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/015-sparse-retry.json"
+      ],
+      "seconds": 0.03746841700922232,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/016-sparse-state.json"
+      ],
+      "seconds": 0.021579124993877485,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/017-sparse-cpu.json"
+      ],
+      "seconds": 0.21417804100201465,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 19857408,
+        "peak memory footprint": 4211840
+      }
+    },
+    {
+      "name": "sparse-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/018-sparse-gpu.json"
+      ],
+      "seconds": 0.17809833300998434,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36192256,
+        "peak memory footprint": 11863616
+      }
+    },
+    {
+      "name": "sparse-archive",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/019-sparse-archive.json"
+      ],
+      "seconds": 0.04166387498844415,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-restore",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/sparse-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/020-sparse-restore.json"
+      ],
+      "seconds": 0.03780404099961743,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-restored-frame",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/sparse-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/021-sparse-restored-frame.json"
+      ],
+      "seconds": 0.17805891600437462,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-stale",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/022-sparse-stale.json"
+      ],
+      "seconds": 0.039906125006382354,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "sparse-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/023-sparse-unchanged.json"
+      ],
+      "seconds": 0.022002416997565888,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "negative-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/024-negative-init.json"
+      ],
+      "seconds": 0.019404624996241182,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "negative-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/025-negative-state.json"
+      ],
+      "seconds": 0.007394667001790367,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "malformed",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/026-malformed.json"
+      ],
+      "seconds": 0.008481541008222848,
+      "exit_code": 1,
+      "expected_error": "gltf_scene"
+    },
+    {
+      "name": "cancelled",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/027-cancelled.json"
+      ],
+      "seconds": 0.006339583997032605,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "budget",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/028-budget.json"
+      ],
+      "seconds": 0.005834958006744273,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "negative-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/029-negative-unchanged.json"
+      ],
+      "seconds": 0.0062919160118326545,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "explicit-valid",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/morph-regression/requests/030-explicit-valid.json"
+      ],
+      "seconds": 0.04357070800324436,
+      "exit_code": 0,
+      "expected_error": null
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "settings": {
+    "width": 32,
+    "height": 32,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.15,
+      0.15,
+      0.15
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        30,
+        30,
+        30
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        5
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 2,
+        "ymag": 2.5,
+        "near": 0.1,
+        "far": 10
+      }
+    }
+  },
+  "variants": [
+    {
+      "name": "dense",
+      "revision": "sha256:a0280f22328822394df1999e451f15c3b0c7a62250a7a466680c643862532084",
+      "clip": "9828e5547ba6047cba3ee457c60a76c7",
+      "linear_rmse": 0.000118356824385386,
+      "object_mismatches": 0,
+      "document_bytes": 14990
+    },
+    {
+      "name": "sparse",
+      "revision": "sha256:a3658379e0c38b15daf0dd20f3a185ef9207e63c8579f3644043ade59fe7e05a",
+      "clip": "3aaef354ffe20d4fbe06a694319477ee",
+      "linear_rmse": 0.000118356824385386,
+      "object_mismatches": 0,
+      "document_bytes": 14990
+    }
+  ],
+  "dense_sparse_pixels_identical": true
+}

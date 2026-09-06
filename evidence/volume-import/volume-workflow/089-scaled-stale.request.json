@@ -1,0 +1,87 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "import",
+    "base_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a",
+    "idempotency_key": "volume:stale:0001",
+    "max_added_bytes": 8388608,
+    "source": {
+      "format": "vol",
+      "path": "/private/tmp/render-volume-import-20260906/fixtures/volume-import/data/homogeneous.vol",
+      "emission": null,
+      "policy": {
+        "bounds": "file",
+        "reconstruction": "cell_constant_zero_outside",
+        "meters_per_unit": 2,
+        "density_scale": 1,
+        "emission_scale": [
+          1,
+          1,
+          1
+        ],
+        "absorption": [
+          0.5,
+          1,
+          2
+        ],
+        "scattering": [
+          0,
+          0,
+          0
+        ],
+        "anisotropy": 0,
+        "max_step_meters": 0.1
+      }
+    },
+    "settings": {
+      "width": 1,
+      "height": 1,
+      "samples": 1,
+      "seed": 73,
+      "max_depth": 2,
+      "max_bytes": 16777216,
+      "environment": [
+        1,
+        1,
+        1
+      ],
+      "light": {
+        "position": [
+          -2,
+          4,
+          3
+        ],
+        "intensity": [
+          0,
+          0,
+          0
+        ]
+      },
+      "camera": {
+        "position": [
+          1,
+          1,
+          5
+        ],
+        "target": [
+          1,
+          1,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "vertical_fov_radians": 0.65,
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1e-07,
+          "ymag": 1e-07,
+          "near": 0.01,
+          "far": 20
+        }
+      }
+    }
+  }
+}

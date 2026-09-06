@@ -81,3 +81,9 @@ external glTF material extensions retain a separate input gate.
 Native-authored [ideal dielectric interfaces](gpu_dielectric.md) now render on
 Metal/WebGPU with geometric Fresnel/Snell/TIR and bounded alpha/shutter semantics.
 Nested media, rough transmission and external transmission extensions remain separate gates.
+
+[VOL3 density/emission input](volume_import.md) now decodes external scalar and
+aligned RGB grids under explicit cell, metric and optical policy. Native and
+browser CPU imports, rendering and recovery share exact corpus results in
+[acceptance evidence](../evidence/volume-import/README.md). Sparse paging, other
+formats and GPU media transport retain separate INPUT-05 gates.

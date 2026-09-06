@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "scope": "Original analytic VOL3 corpus; independent header/data reader, no third-party volume runtime",
+  "files": [
+    {
+      "file": "fixtures/volume-import/data/homogeneous.vol",
+      "sha256": "cb82d299be2da29648ce670ed31227a3132ea969526050c7dd51b2fbdf810cf5",
+      "dimensions": [
+        2,
+        2,
+        2
+      ],
+      "channels": 1,
+      "exact_layout_and_analytic_values": true
+    },
+    {
+      "file": "fixtures/volume-import/data/emission.vol",
+      "sha256": "6be5f445bdb8113f8297755c30fc9d75cd1a847a28d95c7bd07590d0243e5d73",
+      "dimensions": [
+        2,
+        2,
+        2
+      ],
+      "channels": 3,
+      "exact_layout_and_analytic_values": true
+    },
+    {
+      "file": "fixtures/volume-import/data/axis.vol",
+      "sha256": "890b7e4c124d15c1469e79bae19e0d060ba3b7f0c14b4e4c363b3ed60706b5d8",
+      "dimensions": [
+        2,
+        2,
+        2
+      ],
+      "channels": 1,
+      "exact_layout_and_analytic_values": true
+    },
+    {
+      "file": "fixtures/volume-import/data/empty.vol",
+      "sha256": "1e1fdd73a579ad24da8b97c8a8b7a5478f7ae08b5ecf9362b8db55c1b8426498",
+      "dimensions": [
+        2,
+        2,
+        2
+      ],
+      "channels": 1,
+      "exact_layout_and_analytic_values": true
+    },
+    {
+      "file": "fixtures/volume-import/data/sparse.vol",
+      "sha256": "d8678e444688f9016463fc5eb3cba5c24d6890f7d85ddee7c971439e144ded05",
+      "dimensions": [
+        64,
+        64,
+        64
+      ],
+      "channels": 1,
+      "exact_layout_and_analytic_values": true
+    }
+  ]
+}

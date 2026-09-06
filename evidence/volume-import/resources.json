@@ -1,0 +1,101 @@
+{
+  "scope": "1x1,1 sample,depth2 analytic CPU renders and per-process imports; sparse source64 cubed with5 occupied cells; observations are not benchmarks or allocator caps",
+  "observations": [
+    {
+      "name": "homogeneous-import",
+      "seconds": 0.02766358299413696,
+      "maximum resident set size": 15007744,
+      "peak memory footprint": 2589760
+    },
+    {
+      "name": "homogeneous-cpu",
+      "seconds": 0.04490375000750646,
+      "maximum resident set size": 15892480,
+      "peak memory footprint": 2573376
+    },
+    {
+      "name": "emission-import",
+      "seconds": 0.02499079200788401,
+      "maximum resident set size": 15007744,
+      "peak memory footprint": 2556992
+    },
+    {
+      "name": "emission-cpu",
+      "seconds": 0.04293216600490268,
+      "maximum resident set size": 15892480,
+      "peak memory footprint": 2573376
+    },
+    {
+      "name": "axis-import",
+      "seconds": 0.02418795799894724,
+      "maximum resident set size": 14974976,
+      "peak memory footprint": 2556992
+    },
+    {
+      "name": "axis-cpu",
+      "seconds": 0.04079170800105203,
+      "maximum resident set size": 15941632,
+      "peak memory footprint": 2622528
+    },
+    {
+      "name": "empty-import",
+      "seconds": 0.022316125003271736,
+      "maximum resident set size": 14483456,
+      "peak memory footprint": 2491456
+    },
+    {
+      "name": "empty-cpu",
+      "seconds": 0.04131075000623241,
+      "maximum resident set size": 14860288,
+      "peak memory footprint": 2425920
+    },
+    {
+      "name": "emission-only-import",
+      "seconds": 0.024057540998910554,
+      "maximum resident set size": 15007744,
+      "peak memory footprint": 2556992
+    },
+    {
+      "name": "emission-only-cpu",
+      "seconds": 0.039660500013269484,
+      "maximum resident set size": 15892480,
+      "peak memory footprint": 2573376
+    },
+    {
+      "name": "unit-cube-import",
+      "seconds": 0.022821333011961542,
+      "maximum resident set size": 15056896,
+      "peak memory footprint": 2622464
+    },
+    {
+      "name": "unit-cube-cpu",
+      "seconds": 0.04202845800318755,
+      "maximum resident set size": 15892480,
+      "peak memory footprint": 2573376
+    },
+    {
+      "name": "scaled-import",
+      "seconds": 0.024743165995460004,
+      "maximum resident set size": 14991360,
+      "peak memory footprint": 2573376
+    },
+    {
+      "name": "scaled-cpu",
+      "seconds": 0.04332224999961909,
+      "maximum resident set size": 15925248,
+      "peak memory footprint": 2606144
+    },
+    {
+      "name": "sparse-import",
+      "seconds": 0.08497537499351893,
+      "maximum resident set size": 16138240,
+      "peak memory footprint": 3720256
+    },
+    {
+      "name": "sparse-cpu",
+      "seconds": 0.03697466700396035,
+      "maximum resident set size": 15826944,
+      "peak memory footprint": 2556992
+    }
+  ]
+}

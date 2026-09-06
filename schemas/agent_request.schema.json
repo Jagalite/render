@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Agent rendering operations v0",
-  "description": "Reviewed JSON Schema subset covering the foundation agent methods and evaluated PBR GLB export. Additional PBR import, imaging and frame methods are documented by their profile contracts. This is not private Session layout. UTF-8 byte lengths, aggregate budgets, finite ranges, permissions, references, revisions and integrity require Rust semantic validation.",
+  "description": "Reviewed JSON Schema subset covering the foundation agent methods evaluated PBR GLB export and explicit VOL3 import. Additional PBR import, imaging and frame methods are documented by their profile contracts. This is not private Session layout. UTF-8 byte lengths, aggregate budgets, finite ranges, permissions, references, revisions and integrity require Rust semantic validation.",
   "type": "object",
   "additionalProperties": false,
   "properties": {
@@ -280,6 +280,48 @@
             "method",
             "request"
           ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "import_vol"
+            },
+            "bytes": {
+              "$ref": "#/$defs/bytes"
+            },
+            "emission_bytes": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/bytes"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "policy": {
+              "$ref": "#/$defs/volume_policy"
+            },
+            "settings": {
+              "$ref": "#/$defs/settings"
+            },
+            "base_revision": {
+              "$ref": "#/$defs/revision"
+            },
+            "idempotency_key": {
+              "$ref": "#/$defs/key"
+            }
+          },
+          "required": [
+            "method",
+            "bytes",
+            "policy",
+            "settings",
+            "base_revision",
+            "idempotency_key"
+          ]
         }
       ]
     }
@@ -379,6 +421,16 @@
           "type": "number",
           "exclusiveMinimum": 0,
           "exclusiveMaximum": 3.141592653589793
+        },
+        "lens": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/lens"
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       },
       "required": [
@@ -608,6 +660,162 @@
       "required": [
         "revision",
         "policy"
+      ]
+    },
+    "volume_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "bounds": {
+          "enum": [
+            "file",
+            "unit_cube"
+          ]
+        },
+        "reconstruction": {
+          "const": "cell_constant_zero_outside"
+        },
+        "meters_per_unit": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "density_scale": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1000000.0
+        },
+        "emission_scale": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1000000.0
+          }
+        },
+        "absorption": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1000000.0
+          }
+        },
+        "scattering": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1000000.0
+          }
+        },
+        "anisotropy": {
+          "type": "number",
+          "minimum": -0.95,
+          "maximum": 0.95
+        },
+        "max_step_meters": {
+          "type": "number",
+          "minimum": 1e-05,
+          "maximum": 1000000.0
+        }
+      },
+      "required": [
+        "bounds",
+        "reconstruction",
+        "meters_per_unit",
+        "density_scale",
+        "emission_scale",
+        "absorption",
+        "scattering",
+        "anisotropy",
+        "max_step_meters"
+      ]
+    },
+    "lens": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "perspective"
+            },
+            "vertical_fov_radians": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "exclusiveMaximum": 3.141592653589793
+            },
+            "aspect_ratio": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "near": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "far": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "vertical_fov_radians",
+            "near"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "orthographic"
+            },
+            "xmag": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "ymag": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "near": {
+              "type": "number",
+              "minimum": 0
+            },
+            "far": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          },
+          "required": [
+            "kind",
+            "xmag",
+            "ymag",
+            "near",
+            "far"
+          ]
+        }
       ]
     }
   }

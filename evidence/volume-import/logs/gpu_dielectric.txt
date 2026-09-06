@@ -1,0 +1,26 @@
+   Compiling render-host v0.1.0 (/private/tmp/render-volume-import-20260906/crates/host)
+    Finished `test` profile [unoptimized] target(s) in 2.17s
+     Running tests/gpu_dielectric.rs (target/debug/deps/gpu_dielectric-68941461ad50f3fd)
+
+running 2 tests
+single-ior1 expected=[0.6, 0.45, 0.25] gpu=[0.6, 0.44999993, 0.25] cpu=[0.6, 0.45, 0.25]
+mixed RMSE=0.000007558914335555135
+single-ior1_5 expected=[0.26666668, 0.19999999, 0.11111111] gpu=[0.26666668, 0.20000003, 0.111111134] cpu=[0.26666668, 0.19999999, 0.11111111]
+single-ior3 expected=[0.05, 0.037499998, 0.020833334] gpu=[0.05, 0.037500005, 0.020833336] cpu=[0.05, 0.037499998, 0.020833334]
+slab-ior1 expected=[0.48000002, 0.40499997, 0.25] gpu=[0.48000002, 0.4049999, 0.25] cpu=[0.48000002, 0.40499997, 0.25]
+slab-ior1_5 expected=[0.48000002, 0.40499997, 0.25] gpu=[0.48000005, 0.4049999, 0.25000003] cpu=[0.48000002, 0.40499997, 0.25]
+slab-ior3 expected=[0.33, 0.2784375, 0.171875] gpu=[0.33000004, 0.2784375, 0.17187501] cpu=[0.33, 0.2784375, 0.171875]
+tilted-frame expected=[0.26666668, 0.19999999, 0.11111111] gpu=[0.26666668, 0.20000003, 0.111111134] cpu=[0.26666668, 0.19999999, 0.11111111]
+mirror-x expected=[0.26666668, 0.19999999, 0.11111111] gpu=[0.26666668, 0.20000003, 0.111111134] cpu=[0.26666668, 0.19999999, 0.11111111]
+mirror-z expected=[1.35, 1.0124999, 0.5625] gpu=[1.3500003, 1.0124999, 0.5625] cpu=[1.35, 1.0124999, 0.5625]
+snell expected=[0.26666668, 0.19999999, 0.11111111] gpu=[0.26666668, 0.20000003, 0.111111134] cpu=[0.26666668, 0.19999999, 0.11111111]
+tir expected=[0.75, 0.5, 0.25] gpu=[0.75, 0.5, 0.25] cpu=[0.75, 0.5, 0.25]
+grazing expected=[0.1, 0.074999996, 0.041666668] gpu=[0.10000001, 0.075, 0.041666668] cpu=[0.1, 0.074999996, 0.041666668]
+near-clipped expected=[0.75, 0.5, 0.25] gpu=[0.75, 0.5, 0.25] cpu=[0.75, 0.5, 0.25]
+far-clipped expected=[0.0, 0.0, 0.0] gpu=[0.0, 0.0, 0.0] cpu=[0.0, 0.0, 0.0]
+mask-clear expected=[0.75, 0.5, 0.25] gpu=[0.75, 0.5, 0.25] cpu=[0.75, 0.5, 0.25]
+blend-half expected=[0.56875, 0.3875, 0.19791667] gpu=[0.56874996, 0.3875, 0.19791667] cpu=[0.56875, 0.3875, 0.19791667]
+test analytic_ideal_interfaces_match_metal_and_keep_prior_shaders_exact ... ok
+test dielectric_variant_keeps_other_bsdfs_and_pipeline_cache_working ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.14s

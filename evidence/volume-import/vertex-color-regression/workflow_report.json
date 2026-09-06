@@ -1,0 +1,981 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "rgba-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgba",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/000-rgba-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.027102624997496605
+    },
+    {
+      "name": "rgba-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgba",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/001-rgba-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007271416994626634
+    },
+    {
+      "name": "rgba-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgba",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/002-rgba-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04068208301032428,
+      "resources": {
+        "maximum resident set size": 16416768,
+        "peak memory footprint": 2933824
+      }
+    },
+    {
+      "name": "rgba-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgba",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/003-rgba-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020845166000071913
+    },
+    {
+      "name": "rgba-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgba",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/004-rgba-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012961125001311302
+    },
+    {
+      "name": "rgba-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgba",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/005-rgba-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05940158299927134,
+      "resources": {
+        "maximum resident set size": 17711104,
+        "peak memory footprint": 3212352
+      }
+    },
+    {
+      "name": "rgba-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgba",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/006-rgba-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12717454199446365,
+      "resources": {
+        "maximum resident set size": 34258944,
+        "peak memory footprint": 11208320
+      }
+    },
+    {
+      "name": "rgba-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgba",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/007-rgba-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.0209258749964647
+    },
+    {
+      "name": "rgba-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgba",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/008-rgba-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.029280125003424473
+    },
+    {
+      "name": "rgba-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgba-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/009-rgba-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03651299999910407
+    },
+    {
+      "name": "rgba-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgba-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/010-rgba-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06265241700748447
+    },
+    {
+      "name": "rgba-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgba",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/011-rgba-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014961000008042902
+    },
+    {
+      "name": "rgb-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgb",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/012-rgb-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01791974999650847
+    },
+    {
+      "name": "rgb-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgb",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/013-rgb-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0068656670046038926
+    },
+    {
+      "name": "rgb-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgb",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/014-rgb-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03959262500575278,
+      "resources": {
+        "maximum resident set size": 16400384,
+        "peak memory footprint": 2901056
+      }
+    },
+    {
+      "name": "rgb-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgb",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/015-rgb-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022982249996857718
+    },
+    {
+      "name": "rgb-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgb",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/016-rgb-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01316791700082831
+    },
+    {
+      "name": "rgb-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgb",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/017-rgb-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.057384792002267204,
+      "resources": {
+        "maximum resident set size": 17612800,
+        "peak memory footprint": 3114048
+      }
+    },
+    {
+      "name": "rgb-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgb",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/018-rgb-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13285079199704342,
+      "resources": {
+        "maximum resident set size": 34062336,
+        "peak memory footprint": 10946176
+      }
+    },
+    {
+      "name": "rgb-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgb",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/019-rgb-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.02109891700092703
+    },
+    {
+      "name": "rgb-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgb",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/020-rgb-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030860750004649162
+    },
+    {
+      "name": "rgb-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgb-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/021-rgb-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03241554100532085
+    },
+    {
+      "name": "rgb-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgb-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/022-rgb-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.060524665997945704
+    },
+    {
+      "name": "rgb-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/rgb",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/023-rgb-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015127916994970292
+    },
+    {
+      "name": "u8-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u8",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/024-u8-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01954733399907127
+    },
+    {
+      "name": "u8-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u8",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/025-u8-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007110167003702372
+    },
+    {
+      "name": "u8-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u8",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/026-u8-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0361075830005575,
+      "resources": {
+        "maximum resident set size": 16384000,
+        "peak memory footprint": 2901056
+      }
+    },
+    {
+      "name": "u8-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u8",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/027-u8-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02060829199035652
+    },
+    {
+      "name": "u8-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u8",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/028-u8-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012959374987985939
+    },
+    {
+      "name": "u8-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u8",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/029-u8-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.058799209000426345,
+      "resources": {
+        "maximum resident set size": 17694720,
+        "peak memory footprint": 3195968
+      }
+    },
+    {
+      "name": "u8-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u8",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/030-u8-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12658170799841173,
+      "resources": {
+        "maximum resident set size": 33964032,
+        "peak memory footprint": 10929792
+      }
+    },
+    {
+      "name": "u8-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u8",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/031-u8-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.020972583995899186
+    },
+    {
+      "name": "u8-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u8",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/032-u8-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03106366700376384
+    },
+    {
+      "name": "u8-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u8-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/033-u8-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030458833993179724
+    },
+    {
+      "name": "u8-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u8-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/034-u8-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05953837500419468
+    },
+    {
+      "name": "u8-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u8",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/035-u8-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014875334003590979
+    },
+    {
+      "name": "u16-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u16",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/036-u16-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020551875000819564
+    },
+    {
+      "name": "u16-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u16",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/037-u16-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006923375010956079
+    },
+    {
+      "name": "u16-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u16",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/038-u16-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03663645799679216,
+      "resources": {
+        "maximum resident set size": 16449536,
+        "peak memory footprint": 2966592
+      }
+    },
+    {
+      "name": "u16-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u16",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/039-u16-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02037591699627228
+    },
+    {
+      "name": "u16-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u16",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/040-u16-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013001167011680081
+    },
+    {
+      "name": "u16-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u16",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/041-u16-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05880991599406116,
+      "resources": {
+        "maximum resident set size": 17711104,
+        "peak memory footprint": 3212352
+      }
+    },
+    {
+      "name": "u16-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u16",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/042-u16-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13510620800661854,
+      "resources": {
+        "maximum resident set size": 34177024,
+        "peak memory footprint": 11142784
+      }
+    },
+    {
+      "name": "u16-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u16",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/043-u16-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.021676916992873885
+    },
+    {
+      "name": "u16-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u16",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/044-u16-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.027236042005824856
+    },
+    {
+      "name": "u16-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u16-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/045-u16-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03532370799803175
+    },
+    {
+      "name": "u16-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u16-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/046-u16-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.061566082993522286
+    },
+    {
+      "name": "u16-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/u16",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/047-u16-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015033166011562571
+    },
+    {
+      "name": "sparse-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/048-sparse-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020547958003589883
+    },
+    {
+      "name": "sparse-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/049-sparse-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0072608329937793314
+    },
+    {
+      "name": "sparse-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/050-sparse-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03873912499693688,
+      "resources": {
+        "maximum resident set size": 16465920,
+        "peak memory footprint": 2982976
+      }
+    },
+    {
+      "name": "sparse-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/051-sparse-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020563416997902095
+    },
+    {
+      "name": "sparse-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/052-sparse-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013275708988658153
+    },
+    {
+      "name": "sparse-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/053-sparse-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.059381042010500096,
+      "resources": {
+        "maximum resident set size": 17645568,
+        "peak memory footprint": 3146816
+      }
+    },
+    {
+      "name": "sparse-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/054-sparse-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12900862500828225,
+      "resources": {
+        "maximum resident set size": 34193408,
+        "peak memory footprint": 11142784
+      }
+    },
+    {
+      "name": "sparse-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/055-sparse-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.021482291995198466
+    },
+    {
+      "name": "sparse-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/056-sparse-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03128087500226684
+    },
+    {
+      "name": "sparse-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/sparse-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/057-sparse-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.033290458988631144
+    },
+    {
+      "name": "sparse-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/sparse-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/058-sparse-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.059494083005120046
+    },
+    {
+      "name": "sparse-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/sparse",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/059-sparse-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014869000006001443
+    },
+    {
+      "name": "negative-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/060-negative-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019515457999659702
+    },
+    {
+      "name": "negative-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/061-negative-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007116249995306134
+    },
+    {
+      "name": "malformed",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/062-malformed.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "gltf_scene",
+      "seconds": 0.007197124999947846
+    },
+    {
+      "name": "cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/063-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.005847541004186496
+    },
+    {
+      "name": "budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/064-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.005516417004400864
+    },
+    {
+      "name": "negative-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/065-negative-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.005900082993321121
+    },
+    {
+      "name": "explicit-valid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/vertex-color-regression/066-explicit-valid.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0347576669882983
+    }
+  ],
+  "variants": [
+    {
+      "name": "rgba",
+      "revision": "sha256:90f5288e2bcd1f914d87069f97d9c2a948493837d956458d02526300c1eb3e38",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "rgb",
+      "revision": "sha256:33194423965d4e548110b98714d8ac313718b9c5c7c10c7003b35917d0fb6dbc",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "u8",
+      "revision": "sha256:9c6e3a8031810fd5a6e1a38e45166c77a98473c57ed1bf9e2502c41b1fd7b85f",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "u16",
+      "revision": "sha256:c523f97ecd5185e8873eb77dbc591c9113212b0729f28465cf4b0e3197a72405",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "sparse",
+      "revision": "sha256:290e3984c4cbf1cdcfed729bdd26965ad939758955a2506ec60cd60bbbb3b11b",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    }
+  ],
+  "settings": {
+    "width": 32,
+    "height": 16,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        2,
+        2,
+        2
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        3
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 2.5,
+        "ymag": 1,
+        "near": 0.1,
+        "far": 5
+      }
+    }
+  }
+}

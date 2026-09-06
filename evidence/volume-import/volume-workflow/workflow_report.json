@@ -1,0 +1,2539 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "homogeneous-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/homogeneous-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/000-homogeneous-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.027713416988262907
+    },
+    {
+      "name": "homogeneous-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/homogeneous-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/001-homogeneous-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007549625006504357
+    },
+    {
+      "name": "homogeneous-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/homogeneous-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/002-homogeneous-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02766358299413696,
+      "resources": {
+        "maximum resident set size": 15007744,
+        "peak memory footprint": 2589760
+      }
+    },
+    {
+      "name": "homogeneous-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/homogeneous-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/003-homogeneous-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011341332996380515
+    },
+    {
+      "name": "homogeneous-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/homogeneous-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/004-homogeneous-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.008662207997986116
+    },
+    {
+      "name": "homogeneous-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/homogeneous-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/005-homogeneous-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04490375000750646,
+      "resources": {
+        "maximum resident set size": 15892480,
+        "peak memory footprint": 2573376
+      }
+    },
+    {
+      "name": "homogeneous-unsupported-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/homogeneous-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/006-homogeneous-unsupported-gpu.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_profile",
+      "seconds": 0.01821195799857378
+    },
+    {
+      "name": "homogeneous-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/homogeneous-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/007-homogeneous-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02848166599869728
+    },
+    {
+      "name": "homogeneous-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/homogeneous-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/008-homogeneous-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021871584001928568
+    },
+    {
+      "name": "homogeneous-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/homogeneous-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/009-homogeneous-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.038442457997007295
+    },
+    {
+      "name": "homogeneous-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/homogeneous-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/010-homogeneous-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.012788374995579943
+    },
+    {
+      "name": "negative",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/homogeneous-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/011-negative.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "vol",
+      "seconds": 0.008376917001442052
+    },
+    {
+      "name": "encoding",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/homogeneous-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/012-encoding.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_vol",
+      "seconds": 0.007927999991807155
+    },
+    {
+      "name": "trailing",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/homogeneous-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/013-trailing.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "vol",
+      "seconds": 0.007685624994337559
+    },
+    {
+      "name": "cancel-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/homogeneous-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/014-cancel-import.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.005850874993484467
+    },
+    {
+      "name": "input-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/homogeneous-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/015-input-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.0057585419999668375
+    },
+    {
+      "name": "budget-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/budget-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/016-budget-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017111209002905525
+    },
+    {
+      "name": "transaction-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/budget-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/017-transaction-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.007379165996098891
+    },
+    {
+      "name": "budget-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/budget-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/018-budget-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006430749999708496
+    },
+    {
+      "name": "homogeneous-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/homogeneous-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/019-homogeneous-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.008565500000258908
+    },
+    {
+      "name": "emission-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/020-emission-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02326183399418369
+    },
+    {
+      "name": "emission-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/021-emission-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006952374998945743
+    },
+    {
+      "name": "emission-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/022-emission-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02499079200788401,
+      "resources": {
+        "maximum resident set size": 15007744,
+        "peak memory footprint": 2556992
+      }
+    },
+    {
+      "name": "emission-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/023-emission-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011779041000409052
+    },
+    {
+      "name": "emission-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/024-emission-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.008906666000257246
+    },
+    {
+      "name": "emission-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/025-emission-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04293216600490268,
+      "resources": {
+        "maximum resident set size": 15892480,
+        "peak memory footprint": 2573376
+      }
+    },
+    {
+      "name": "emission-unsupported-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/026-emission-unsupported-gpu.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_profile",
+      "seconds": 0.019793957995716482
+    },
+    {
+      "name": "emission-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/027-emission-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.023457540999515913
+    },
+    {
+      "name": "emission-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/028-emission-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021671542010153644
+    },
+    {
+      "name": "emission-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/029-emission-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03931470800307579
+    },
+    {
+      "name": "emission-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/030-emission-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.012659958010772243
+    },
+    {
+      "name": "emission-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/031-emission-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.009149625009740703
+    },
+    {
+      "name": "axis-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/axis-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/032-axis-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0187368329934543
+    },
+    {
+      "name": "axis-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/axis-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/033-axis-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006972957999096252
+    },
+    {
+      "name": "axis-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/axis-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/034-axis-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02418795799894724,
+      "resources": {
+        "maximum resident set size": 14974976,
+        "peak memory footprint": 2556992
+      }
+    },
+    {
+      "name": "axis-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/axis-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/035-axis-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011426750003010966
+    },
+    {
+      "name": "axis-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/axis-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/036-axis-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.008867917000316083
+    },
+    {
+      "name": "axis-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/axis-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/037-axis-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04079170800105203,
+      "resources": {
+        "maximum resident set size": 15941632,
+        "peak memory footprint": 2622528
+      }
+    },
+    {
+      "name": "axis-unsupported-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/axis-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/038-axis-unsupported-gpu.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_profile",
+      "seconds": 0.019178583010216244
+    },
+    {
+      "name": "axis-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/axis-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/039-axis-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.029225625010440126
+    },
+    {
+      "name": "axis-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/axis-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/040-axis-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02351737499702722
+    },
+    {
+      "name": "axis-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/axis-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/041-axis-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04314808298659045
+    },
+    {
+      "name": "axis-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/axis-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/042-axis-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.01314995800203178
+    },
+    {
+      "name": "axis-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/axis-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/043-axis-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.009735250001540408
+    },
+    {
+      "name": "empty-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/empty-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/044-empty-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019761167000979185
+    },
+    {
+      "name": "empty-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/empty-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/045-empty-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007281832993612625
+    },
+    {
+      "name": "empty-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/empty-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/046-empty-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022316125003271736,
+      "resources": {
+        "maximum resident set size": 14483456,
+        "peak memory footprint": 2491456
+      }
+    },
+    {
+      "name": "empty-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/empty-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/047-empty-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.00928954100527335
+    },
+    {
+      "name": "empty-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/empty-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/048-empty-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007887540996307507
+    },
+    {
+      "name": "empty-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/empty-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/049-empty-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04131075000623241,
+      "resources": {
+        "maximum resident set size": 14860288,
+        "peak memory footprint": 2425920
+      }
+    },
+    {
+      "name": "empty-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/empty-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/050-empty-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02882945899909828
+    },
+    {
+      "name": "empty-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/empty-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/051-empty-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020661667003878392
+    },
+    {
+      "name": "empty-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/empty-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/052-empty-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03516479099926073
+    },
+    {
+      "name": "empty-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/empty-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/053-empty-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.010463958999025635
+    },
+    {
+      "name": "empty-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/empty-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/054-empty-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.008004791990970261
+    },
+    {
+      "name": "emission-only-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-only-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/055-emission-only-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018985292001161724
+    },
+    {
+      "name": "emission-only-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-only-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/056-emission-only-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006958917001611553
+    },
+    {
+      "name": "emission-only-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-only-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/057-emission-only-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024057540998910554,
+      "resources": {
+        "maximum resident set size": 15007744,
+        "peak memory footprint": 2556992
+      }
+    },
+    {
+      "name": "emission-only-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-only-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/058-emission-only-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011416958004701883
+    },
+    {
+      "name": "emission-only-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-only-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/059-emission-only-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.008931834003305994
+    },
+    {
+      "name": "emission-only-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-only-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/060-emission-only-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.039660500013269484,
+      "resources": {
+        "maximum resident set size": 15892480,
+        "peak memory footprint": 2573376
+      }
+    },
+    {
+      "name": "emission-only-unsupported-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-only-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/061-emission-only-unsupported-gpu.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_profile",
+      "seconds": 0.018821208010194823
+    },
+    {
+      "name": "emission-only-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-only-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/062-emission-only-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.033299417002126575
+    },
+    {
+      "name": "emission-only-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-only-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/063-emission-only-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022407374999602325
+    },
+    {
+      "name": "emission-only-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-only-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/064-emission-only-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03496150000137277
+    },
+    {
+      "name": "emission-only-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-only-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/065-emission-only-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.012599082998349331
+    },
+    {
+      "name": "emission-only-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-only-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/066-emission-only-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.009195959006319754
+    },
+    {
+      "name": "unit-cube-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/unit-cube-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/067-unit-cube-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017516791995149106
+    },
+    {
+      "name": "unit-cube-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/unit-cube-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/068-unit-cube-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006837124994490296
+    },
+    {
+      "name": "unit-cube-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/unit-cube-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/069-unit-cube-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022821333011961542,
+      "resources": {
+        "maximum resident set size": 15056896,
+        "peak memory footprint": 2622464
+      }
+    },
+    {
+      "name": "unit-cube-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/unit-cube-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/070-unit-cube-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011304041996481828
+    },
+    {
+      "name": "unit-cube-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/unit-cube-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/071-unit-cube-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.008684999993420206
+    },
+    {
+      "name": "unit-cube-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/unit-cube-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/072-unit-cube-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04202845800318755,
+      "resources": {
+        "maximum resident set size": 15892480,
+        "peak memory footprint": 2573376
+      }
+    },
+    {
+      "name": "unit-cube-unsupported-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/unit-cube-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/073-unit-cube-unsupported-gpu.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_profile",
+      "seconds": 0.019695042006787844
+    },
+    {
+      "name": "unit-cube-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/unit-cube-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/074-unit-cube-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0271248339995509
+    },
+    {
+      "name": "unit-cube-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/unit-cube-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/075-unit-cube-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022785125009249896
+    },
+    {
+      "name": "unit-cube-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/unit-cube-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/076-unit-cube-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04277149999688845
+    },
+    {
+      "name": "unit-cube-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/unit-cube-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/077-unit-cube-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.012717707999399863
+    },
+    {
+      "name": "unit-cube-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/unit-cube-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/078-unit-cube-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.009545084001729265
+    },
+    {
+      "name": "scaled-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/scaled-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/079-scaled-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01838304199918639
+    },
+    {
+      "name": "scaled-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/scaled-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/080-scaled-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007104666990926489
+    },
+    {
+      "name": "scaled-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/scaled-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/081-scaled-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024743165995460004,
+      "resources": {
+        "maximum resident set size": 14991360,
+        "peak memory footprint": 2573376
+      }
+    },
+    {
+      "name": "scaled-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/scaled-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/082-scaled-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011433332998421974
+    },
+    {
+      "name": "scaled-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/scaled-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/083-scaled-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.008894250000594184
+    },
+    {
+      "name": "scaled-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/scaled-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/084-scaled-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04332224999961909,
+      "resources": {
+        "maximum resident set size": 15925248,
+        "peak memory footprint": 2606144
+      }
+    },
+    {
+      "name": "scaled-unsupported-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/scaled-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/085-scaled-unsupported-gpu.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_profile",
+      "seconds": 0.01778245899186004
+    },
+    {
+      "name": "scaled-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/scaled-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/086-scaled-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030043708989978768
+    },
+    {
+      "name": "scaled-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/scaled-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/087-scaled-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01856900000711903
+    },
+    {
+      "name": "scaled-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/scaled-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/088-scaled-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.037828875007107854
+    },
+    {
+      "name": "scaled-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/scaled-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/089-scaled-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.012614499995834194
+    },
+    {
+      "name": "scaled-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/scaled-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/090-scaled-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.009043250000104308
+    },
+    {
+      "name": "sparse-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/sparse-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/091-sparse-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01928849999967497
+    },
+    {
+      "name": "sparse-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/sparse-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/092-sparse-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0068192910111974925
+    },
+    {
+      "name": "sparse-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/sparse-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/093-sparse-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08497537499351893,
+      "resources": {
+        "maximum resident set size": 16138240,
+        "peak memory footprint": 3720256
+      }
+    },
+    {
+      "name": "sparse-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/sparse-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/094-sparse-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07177841699740384
+    },
+    {
+      "name": "sparse-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/sparse-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/095-sparse-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.00858354099909775
+    },
+    {
+      "name": "sparse-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/sparse-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/096-sparse-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03697466700396035,
+      "resources": {
+        "maximum resident set size": 15826944,
+        "peak memory footprint": 2556992
+      }
+    },
+    {
+      "name": "sparse-unsupported-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/sparse-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/097-sparse-unsupported-gpu.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_profile",
+      "seconds": 0.017672209010925144
+    },
+    {
+      "name": "sparse-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/sparse-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/098-sparse-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024749791002250277
+    },
+    {
+      "name": "sparse-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/sparse-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/099-sparse-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020111000005272217
+    },
+    {
+      "name": "sparse-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/sparse-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/100-sparse-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.035697333005373366
+    },
+    {
+      "name": "sparse-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/sparse-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/101-sparse-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.07509749999735504
+    },
+    {
+      "name": "sparse-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/sparse-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/102-sparse-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.00864299999375362
+    }
+  ],
+  "variants": [
+    {
+      "name": "homogeneous",
+      "source": {
+        "format": "vol",
+        "path": "/private/tmp/render-volume-import-20260906/fixtures/volume-import/data/homogeneous.vol",
+        "emission": null,
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            1,
+            1,
+            5
+          ],
+          "target": [
+            1,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:41c2055de8b1933cb46a8f9e99b5cf9191879838ae79605cae21276a644aba11",
+      "report": {
+        "asset_json_bytes": 650,
+        "density_digest": "sha256:cb82d299be2da29648ce670ed31227a3132ea969526050c7dd51b2fbdf810cf5",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "emission_digest": null,
+        "entity": "7982fdfe7fbf481186b8f2bbdfb6326e",
+        "input_bytes": 80,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:af195f26335f76f303505e17432dae1c7c9c22cef9509e1df82571b0bc998eea",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:63cc060f60b8e5898e97b4564b2d948ed98559dcda044809ece9d8388c710103",
+        "voxel_size_meters": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "expected": [
+        0.36787944117144233,
+        0.1353352832366127,
+        0.01831563888873418
+      ],
+      "archive": "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/homogeneous-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "emission",
+      "source": {
+        "format": "vol",
+        "path": "/private/tmp/render-volume-import-20260906/fixtures/volume-import/data/homogeneous.vol",
+        "emission": "/private/tmp/render-volume-import-20260906/fixtures/volume-import/data/emission.vol",
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            1,
+            1,
+            5
+          ],
+          "target": [
+            1,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:8715cf5b9672ac4991722184a7d8819fc58f544538e33913cf893861334625cf",
+      "report": {
+        "asset_json_bytes": 658,
+        "density_digest": "sha256:cb82d299be2da29648ce670ed31227a3132ea969526050c7dd51b2fbdf810cf5",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "emission_digest": "sha256:6be5f445bdb8113f8297755c30fc9d75cd1a847a28d95c7bd07590d0243e5d73",
+        "entity": "7a3f21eb2cde061877efe2c215526136",
+        "input_bytes": 224,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:4964e59ac6177b38675b7816fb1e87d6ec92f79bc3d373345da4265e090d04ad",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:0c6ea258f4b515adbd3a015820f705f1aa7baaec3a07f8a15ed5fc62653863c5",
+        "voxel_size_meters": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "expected": [
+        0.6839397205857212,
+        0.5676676416183064,
+        0.5091578194443671
+      ],
+      "archive": "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "axis",
+      "source": {
+        "format": "vol",
+        "path": "/private/tmp/render-volume-import-20260906/fixtures/volume-import/data/axis.vol",
+        "emission": null,
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            0.5,
+            0.5,
+            5
+          ],
+          "target": [
+            0.5,
+            0.5,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:ad9f8c32afc2bcf4075487fc2a3cf9d524ff34efaa4a3fc6bea34f44320022f2",
+      "report": {
+        "asset_json_bytes": 650,
+        "density_digest": "sha256:890b7e4c124d15c1469e79bae19e0d060ba3b7f0c14b4e4c363b3ed60706b5d8",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "emission_digest": null,
+        "entity": "974c6f475f42056e6e190044f50ce194",
+        "input_bytes": 80,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:cf343a8e53aef2ae31b96d712a992fb590ee389e12a3483b10630db07b9705be",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:870da4e6296bac8a875731f9506806c8dd504fbbed0382c04fe9c3018e0c7ea9",
+        "voxel_size_meters": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "expected": [
+        0.049787068367863944,
+        0.0024787521766663585,
+        6.14421235332821e-06
+      ],
+      "archive": "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/axis-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "empty",
+      "source": {
+        "format": "vol",
+        "path": "/private/tmp/render-volume-import-20260906/fixtures/volume-import/data/empty.vol",
+        "emission": null,
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            1,
+            1,
+            5
+          ],
+          "target": [
+            1,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:d3cdd3f5cc08be2e6a4ef02f0a8489f84865a7362ab463ebdc524656ae160db0",
+      "report": {
+        "asset_json_bytes": 0,
+        "density_digest": "sha256:1e1fdd73a579ad24da8b97c8a8b7a5478f7ae08b5ecf9362b8db55c1b8426498",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "emission_digest": null,
+        "entity": "b65ad539bc40a0893c1e8709143b11fe",
+        "input_bytes": 80,
+        "occupied_cells": 0,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:9a87b167fe41b9c7892384037bf959e78ce1961b6c578916a96aa21a6154087c",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": null,
+        "voxel_size_meters": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "expected": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "archive": "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/empty-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "emission-only",
+      "source": {
+        "format": "vol",
+        "path": "/private/tmp/render-volume-import-20260906/fixtures/volume-import/data/empty.vol",
+        "emission": "/private/tmp/render-volume-import-20260906/fixtures/volume-import/data/emission.vol",
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            1,
+            1,
+            5
+          ],
+          "target": [
+            1,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:ed2a7ae9ee55bcf7314662641b963c71299bcf0a6f2596e72ad86a82ad07036b",
+      "report": {
+        "asset_json_bytes": 658,
+        "density_digest": "sha256:1e1fdd73a579ad24da8b97c8a8b7a5478f7ae08b5ecf9362b8db55c1b8426498",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "emission_digest": "sha256:6be5f445bdb8113f8297755c30fc9d75cd1a847a28d95c7bd07590d0243e5d73",
+        "entity": "9e65b39b7efa6dd0551bef46d8e58562",
+        "input_bytes": 224,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:5c0202627277b5f2dcfe9ab867ed392802cb8bbed1588f91a6f945fee9993170",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:880e5e80cab40ee5b7e7c56bcb502444bb08ff7bf97772b0e4c7750cb3a8d09a",
+        "voxel_size_meters": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "expected": [
+        1.5,
+        2.0,
+        3.0
+      ],
+      "archive": "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/emission-only-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "unit-cube",
+      "source": {
+        "format": "vol",
+        "path": "/private/tmp/render-volume-import-20260906/fixtures/volume-import/data/homogeneous.vol",
+        "emission": null,
+        "policy": {
+          "bounds": "unit_cube",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            0.5,
+            0.5,
+            5
+          ],
+          "target": [
+            0.5,
+            0.5,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:c9e2e27dd65cb773bf4c570dbd2f36d2f1ab3e644e424a492946a41120c9644a",
+      "report": {
+        "asset_json_bytes": 650,
+        "density_digest": "sha256:cb82d299be2da29648ce670ed31227a3132ea969526050c7dd51b2fbdf810cf5",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "emission_digest": null,
+        "entity": "1c8e550e4fc829f6b94831cb1fdc51ad",
+        "input_bytes": 80,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "unit_cube",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:af195f26335f76f303505e17432dae1c7c9c22cef9509e1df82571b0bc998eea",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:e4afbfe15d40d62f34f914dc80ff4ae4932a721549b961efa4614a07b76f941e",
+        "voxel_size_meters": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "expected": [
+        0.6065306597126334,
+        0.36787944117144233,
+        0.1353352832366127
+      ],
+      "archive": "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/unit-cube-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "scaled",
+      "source": {
+        "format": "vol",
+        "path": "/private/tmp/render-volume-import-20260906/fixtures/volume-import/data/homogeneous.vol",
+        "emission": null,
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 2,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            1,
+            1,
+            5
+          ],
+          "target": [
+            1,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:cb8159aaa0ada022d216cf6c46e376d9cb15c31f2554254a8f0a52d8e4022ad0",
+      "report": {
+        "asset_json_bytes": 650,
+        "density_digest": "sha256:cb82d299be2da29648ce670ed31227a3132ea969526050c7dd51b2fbdf810cf5",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          4.0,
+          4.0,
+          4.0
+        ],
+        "emission_digest": null,
+        "entity": "d4b42bf5b6f77023d3f3d1f3854a9123",
+        "input_bytes": 80,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 2.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:af195f26335f76f303505e17432dae1c7c9c22cef9509e1df82571b0bc998eea",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:604d3a0eba99c39320acbc70c1d96ce17e76f00c71b1610c018ed55aac8a3dde",
+        "voxel_size_meters": [
+          2.0,
+          2.0,
+          2.0
+        ]
+      },
+      "expected": [
+        0.1353352832366127,
+        0.01831563888873418,
+        0.00033546262790251185
+      ],
+      "archive": "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/scaled-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "sparse",
+      "source": {
+        "format": "vol",
+        "path": "/private/tmp/render-volume-import-20260906/fixtures/volume-import/data/sparse.vol",
+        "emission": null,
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            0.984375,
+            0.984375,
+            5
+          ],
+          "target": [
+            0.984375,
+            0.984375,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:a29751888b39caaf1fc281ea449c2d3e4802d67fc0690d95dabc68a70d3db738",
+      "report": {
+        "asset_json_bytes": 485,
+        "density_digest": "sha256:d8678e444688f9016463fc5eb3cba5c24d6890f7d85ddee7c971439e144ded05",
+        "domain_meters": [
+          -1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "emission_digest": null,
+        "entity": "9a1572a5fcf5ba458d1c78bf48bcaab2",
+        "input_bytes": 1048624,
+        "occupied_cells": 5,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          -1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "source_cells": 262144,
+        "source_digest": "sha256:e19722e6b7907a3e31cc78ad4d6571af93b4e8d5f8e1490d9267cbfb3179b657",
+        "source_dimensions": [
+          64,
+          64,
+          64
+        ],
+        "volume_asset": "sha256:95ed0c676272729b7cb8db13b8842d61388d74dd66927f85e6ded5e422890463",
+        "voxel_size_meters": [
+          0.03125,
+          0.03125,
+          0.03125
+        ]
+      },
+      "expected": [
+        0.9248488132162048,
+        0.8553453273074225,
+        0.7316156289466418
+      ],
+      "archive": "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/volume-workflow/sparse-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    }
+  ]
+}

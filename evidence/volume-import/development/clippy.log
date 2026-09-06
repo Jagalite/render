@@ -1,0 +1,23 @@
+    Checking render-core v0.1.0 (/private/tmp/render-volume-import-20260906/crates/core)
+    Checking render-kernel v0.1.0 (/private/tmp/render-volume-import-20260906/crates/kernel)
+    Checking render-gpu v0.1.0 (/private/tmp/render-volume-import-20260906/crates/gpu)
+    Checking render-ffi v0.1.0 (/private/tmp/render-volume-import-20260906/crates/ffi)
+    Checking render-host v0.1.0 (/private/tmp/render-volume-import-20260906/crates/host)
+    Checking render-web v0.1.0 (/private/tmp/render-volume-import-20260906/crates/web)
+error: field assignment outside of initializer for an instance created with Default::default()
+   --> crates/core/tests/volume_import.rs:248:5
+    |
+248 |     store.fail_publication = true;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: consider initializing the variable with `render_core::storage::MemoryStore { fail_publication: true, ..Default::default() }` and removing relevant reassignments
+   --> crates/core/tests/volume_import.rs:247:5
+    |
+247 |     let mut store = storage::MemoryStore::default();
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.95.0/index.html#field_reassign_with_default
+    = note: `-D clippy::field-reassign-with-default` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::field_reassign_with_default)]`
+
+error: could not compile `render-core` (test "volume_import") due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

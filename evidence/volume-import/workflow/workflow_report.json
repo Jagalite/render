@@ -1,0 +1,3067 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "uv-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/uv",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/000-uv-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02719474998593796
+    },
+    {
+      "name": "uv-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/uv",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/001-uv-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007181541004683822
+    },
+    {
+      "name": "uv-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/uv",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/002-uv-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03654433299379889
+    },
+    {
+      "name": "uv-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/uv",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/003-uv-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01679554200381972
+    },
+    {
+      "name": "uv-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/uv",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/004-uv-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04353354200429749,
+      "resources": {
+        "maximum resident set size": 17842176,
+        "peak memory footprint": 3048512
+      }
+    },
+    {
+      "name": "uv-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/uv",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/005-uv-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04053399999975227
+    },
+    {
+      "name": "uv-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/uv-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/006-uv-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020409457996720448
+    },
+    {
+      "name": "uv-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/uv-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/007-uv-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007139666995499283
+    },
+    {
+      "name": "uv-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/uv-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/008-uv-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.041149500000756234,
+      "resources": {
+        "maximum resident set size": 16498688,
+        "peak memory footprint": 2999360
+      }
+    },
+    {
+      "name": "uv-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/uv-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/009-uv-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017040417005773634
+    },
+    {
+      "name": "uv-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/uv",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/010-uv-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05538745901139919,
+      "resources": {
+        "maximum resident set size": 17858560,
+        "peak memory footprint": 3294272
+      }
+    },
+    {
+      "name": "uv-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/uv-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/011-uv-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.059541208000155166,
+      "resources": {
+        "maximum resident set size": 17793024,
+        "peak memory footprint": 3228736
+      }
+    },
+    {
+      "name": "uv-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/uv",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/012-uv-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14046687498921528,
+      "resources": {
+        "maximum resident set size": 34275328,
+        "peak memory footprint": 11224704
+      }
+    },
+    {
+      "name": "uv-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/uv-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/013-uv-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1352870420087129,
+      "resources": {
+        "maximum resident set size": 34357248,
+        "peak memory footprint": 11306624
+      }
+    },
+    {
+      "name": "uv-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/uv-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/014-uv-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03655825000896584
+    },
+    {
+      "name": "uv-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/uv-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/015-uv-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02991870799451135
+    },
+    {
+      "name": "uv-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/uv-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/016-uv-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05912729100964498
+    },
+    {
+      "name": "uv-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/uv",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/017-uv-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.015605957989464514
+    },
+    {
+      "name": "uv-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/uv",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/018-uv-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015675582995754667
+    },
+    {
+      "name": "color-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/019-color-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019571749988244846
+    },
+    {
+      "name": "color-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/020-color-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006899708008859307
+    },
+    {
+      "name": "color-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/021-color-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0382511249918025
+    },
+    {
+      "name": "color-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/022-color-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014735791002749465
+    },
+    {
+      "name": "color-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/023-color-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04032920899044257,
+      "resources": {
+        "maximum resident set size": 17809408,
+        "peak memory footprint": 2966592
+      }
+    },
+    {
+      "name": "color-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/024-color-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03858033299911767
+    },
+    {
+      "name": "color-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/025-color-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021360500002629124
+    },
+    {
+      "name": "color-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/026-color-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007230209012050182
+    },
+    {
+      "name": "color-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/027-color-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04126300000643823,
+      "resources": {
+        "maximum resident set size": 16384000,
+        "peak memory footprint": 2884672
+      }
+    },
+    {
+      "name": "color-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/028-color-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015070458000991493
+    },
+    {
+      "name": "color-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/029-color-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05423566700483207,
+      "resources": {
+        "maximum resident set size": 17760256,
+        "peak memory footprint": 3261504
+      }
+    },
+    {
+      "name": "color-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/030-color-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05747304100077599,
+      "resources": {
+        "maximum resident set size": 17661952,
+        "peak memory footprint": 3163200
+      }
+    },
+    {
+      "name": "color-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/031-color-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1348035830014851,
+      "resources": {
+        "maximum resident set size": 34111488,
+        "peak memory footprint": 11077248
+      }
+    },
+    {
+      "name": "color-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/032-color-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1295222500048112,
+      "resources": {
+        "maximum resident set size": 34013184,
+        "peak memory footprint": 10978944
+      }
+    },
+    {
+      "name": "color-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/033-color-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03262483399885241
+    },
+    {
+      "name": "color-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/034-color-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03291104099480435
+    },
+    {
+      "name": "color-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/035-color-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05156383400026243
+    },
+    {
+      "name": "color-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/036-color-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.011411165993195027
+    },
+    {
+      "name": "color-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/037-color-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012587082994286902
+    },
+    {
+      "name": "morph-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/morph",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/038-morph-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019172667001839727
+    },
+    {
+      "name": "morph-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/morph",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/039-morph-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.00609900000563357
+    },
+    {
+      "name": "morph-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/morph",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/040-morph-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04289591700944584
+    },
+    {
+      "name": "morph-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/morph",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/041-morph-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021241666006972082
+    },
+    {
+      "name": "morph-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/morph",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/042-morph-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0528976670029806,
+      "resources": {
+        "maximum resident set size": 19415040,
+        "peak memory footprint": 3720320
+      }
+    },
+    {
+      "name": "morph-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/morph",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/043-morph-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.050807207997422665
+    },
+    {
+      "name": "morph-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/morph-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/044-morph-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018382542009931058
+    },
+    {
+      "name": "morph-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/morph-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/045-morph-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006302333000348881
+    },
+    {
+      "name": "morph-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/morph-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/046-morph-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03765095899871085,
+      "resources": {
+        "maximum resident set size": 16498688,
+        "peak memory footprint": 2999360
+      }
+    },
+    {
+      "name": "morph-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/morph-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/047-morph-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015513375008595176
+    },
+    {
+      "name": "morph-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/morph",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/048-morph-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07534737499372568,
+      "resources": {
+        "maximum resident set size": 19398656,
+        "peak memory footprint": 3835008
+      }
+    },
+    {
+      "name": "morph-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/morph-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/049-morph-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06572808300552424,
+      "resources": {
+        "maximum resident set size": 17891328,
+        "peak memory footprint": 3327104
+      }
+    },
+    {
+      "name": "morph-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/morph",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/050-morph-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1479918330005603,
+      "resources": {
+        "maximum resident set size": 35536896,
+        "peak memory footprint": 11536000
+      }
+    },
+    {
+      "name": "morph-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/morph-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/051-morph-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1361860409961082,
+      "resources": {
+        "maximum resident set size": 34422784,
+        "peak memory footprint": 11322944
+      }
+    },
+    {
+      "name": "morph-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/morph-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/052-morph-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03101750000496395
+    },
+    {
+      "name": "morph-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/morph-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/053-morph-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03256949999195058
+    },
+    {
+      "name": "morph-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/morph-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/054-morph-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06400816699897405
+    },
+    {
+      "name": "morph-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/morph",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/055-morph-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.018602708005346358
+    },
+    {
+      "name": "morph-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/morph",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/056-morph-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0221512919961242
+    },
+    {
+      "name": "mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/057-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019507457996951416
+    },
+    {
+      "name": "mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/058-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0065074169979197904
+    },
+    {
+      "name": "mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/059-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03331991699815262
+    },
+    {
+      "name": "mask-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/060-mask-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013191625010222197
+    },
+    {
+      "name": "mask-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/061-mask-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.035640166999655776,
+      "resources": {
+        "maximum resident set size": 17842176,
+        "peak memory footprint": 2933824
+      }
+    },
+    {
+      "name": "mask-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/062-mask-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0396707920008339
+    },
+    {
+      "name": "mask-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/063-mask-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020202875006361865
+    },
+    {
+      "name": "mask-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/064-mask-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007036833994789049
+    },
+    {
+      "name": "mask-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/065-mask-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03421241699834354,
+      "resources": {
+        "maximum resident set size": 16416768,
+        "peak memory footprint": 2884672
+      }
+    },
+    {
+      "name": "mask-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/066-mask-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013082042001769878
+    },
+    {
+      "name": "mask-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/067-mask-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.048268250000546686,
+      "resources": {
+        "maximum resident set size": 17645568,
+        "peak memory footprint": 3130432
+      }
+    },
+    {
+      "name": "mask-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/068-mask-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.051225540999439545,
+      "resources": {
+        "maximum resident set size": 17563648,
+        "peak memory footprint": 3048512
+      }
+    },
+    {
+      "name": "mask-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/069-mask-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20349658299528528,
+      "resources": {
+        "maximum resident set size": 35356672,
+        "peak memory footprint": 12404288
+      }
+    },
+    {
+      "name": "mask-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/070-mask-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2011597079981584,
+      "resources": {
+        "maximum resident set size": 35225600,
+        "peak memory footprint": 12240448
+      }
+    },
+    {
+      "name": "mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/071-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0322645420092158
+    },
+    {
+      "name": "mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/mask-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/072-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.031090666001546197
+    },
+    {
+      "name": "mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/mask-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/073-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04858445799618494
+    },
+    {
+      "name": "mask-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/074-mask-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.012131208000937477
+    },
+    {
+      "name": "mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/075-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012336832995060831
+    },
+    {
+      "name": "blend-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/076-blend-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01990924999699928
+    },
+    {
+      "name": "blend-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/077-blend-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0070941659942036495
+    },
+    {
+      "name": "blend-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/078-blend-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03167612499964889
+    },
+    {
+      "name": "blend-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/079-blend-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013082667006528936
+    },
+    {
+      "name": "blend-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/080-blend-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03861775000405032,
+      "resources": {
+        "maximum resident set size": 17825792,
+        "peak memory footprint": 2933824
+      }
+    },
+    {
+      "name": "blend-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/081-blend-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03477570899121929
+    },
+    {
+      "name": "blend-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/blend-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/082-blend-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02117245898989495
+    },
+    {
+      "name": "blend-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/blend-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/083-blend-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007370833001914434
+    },
+    {
+      "name": "blend-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/blend-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/084-blend-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03256270800193306,
+      "resources": {
+        "maximum resident set size": 16384000,
+        "peak memory footprint": 2851904
+      }
+    },
+    {
+      "name": "blend-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/blend-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/085-blend-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013125249999575317
+    },
+    {
+      "name": "blend-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/086-blend-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05647704200237058,
+      "resources": {
+        "maximum resident set size": 17612800,
+        "peak memory footprint": 3097664
+      }
+    },
+    {
+      "name": "blend-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/blend-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/087-blend-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05187195900361985,
+      "resources": {
+        "maximum resident set size": 17580032,
+        "peak memory footprint": 3064896
+      }
+    },
+    {
+      "name": "blend-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/088-blend-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20131162500183564,
+      "resources": {
+        "maximum resident set size": 35356672,
+        "peak memory footprint": 12387904
+      }
+    },
+    {
+      "name": "blend-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/blend-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/089-blend-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20526274999429006,
+      "resources": {
+        "maximum resident set size": 35078144,
+        "peak memory footprint": 12093056
+      }
+    },
+    {
+      "name": "blend-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/blend-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/090-blend-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03066904199658893
+    },
+    {
+      "name": "blend-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/blend-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/091-blend-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02895404199080076
+    },
+    {
+      "name": "blend-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/blend-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/092-blend-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.049621540994849056
+    },
+    {
+      "name": "blend-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/093-blend-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.012238625000463799
+    },
+    {
+      "name": "blend-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/094-blend-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012252000000444241
+    },
+    {
+      "name": "named-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/095-named-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018790417001582682
+    },
+    {
+      "name": "named-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/096-named-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006963042003917508
+    },
+    {
+      "name": "named-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/097-named-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03692045799107291
+    },
+    {
+      "name": "named-mask-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/098-named-mask-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016556791990296915
+    },
+    {
+      "name": "named-mask-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/099-named-mask-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04186404099164065,
+      "resources": {
+        "maximum resident set size": 17940480,
+        "peak memory footprint": 3097728
+      }
+    },
+    {
+      "name": "named-mask-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/100-named-mask-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.041736375002074055
+    },
+    {
+      "name": "named-mask-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/101-named-mask-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02107554099347908
+    },
+    {
+      "name": "named-mask-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/102-named-mask-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0073130420059897006
+    },
+    {
+      "name": "named-mask-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/103-named-mask-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03859041699615773,
+      "resources": {
+        "maximum resident set size": 16596992,
+        "peak memory footprint": 3048512
+      }
+    },
+    {
+      "name": "named-mask-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/104-named-mask-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01685879100114107
+    },
+    {
+      "name": "named-mask-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/105-named-mask-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.054231208996498026,
+      "resources": {
+        "maximum resident set size": 17825792,
+        "peak memory footprint": 3245184
+      }
+    },
+    {
+      "name": "named-mask-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/106-named-mask-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06119354198744986,
+      "resources": {
+        "maximum resident set size": 17907712,
+        "peak memory footprint": 3327104
+      }
+    },
+    {
+      "name": "named-mask-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/107-named-mask-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2073791250004433,
+      "resources": {
+        "maximum resident set size": 35389440,
+        "peak memory footprint": 12387968
+      }
+    },
+    {
+      "name": "named-mask-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/108-named-mask-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21218779199989513,
+      "resources": {
+        "maximum resident set size": 35438592,
+        "peak memory footprint": 12404352
+      }
+    },
+    {
+      "name": "named-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/109-named-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03411529200093355
+    },
+    {
+      "name": "named-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-mask-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/110-named-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03247187499073334
+    },
+    {
+      "name": "named-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-mask-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/111-named-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.058875417002127506
+    },
+    {
+      "name": "named-mask-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/112-named-mask-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.015714957989985123
+    },
+    {
+      "name": "named-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/113-named-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01589495899679605
+    },
+    {
+      "name": "named-blend-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/114-named-blend-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01948879100382328
+    },
+    {
+      "name": "named-blend-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/115-named-blend-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006929958006367087
+    },
+    {
+      "name": "named-blend-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/116-named-blend-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03574395799660124
+    },
+    {
+      "name": "named-blend-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/117-named-blend-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016974082987871952
+    },
+    {
+      "name": "named-blend-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/118-named-blend-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03918095800327137,
+      "resources": {
+        "maximum resident set size": 17956864,
+        "peak memory footprint": 3097728
+      }
+    },
+    {
+      "name": "named-blend-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/119-named-blend-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.041855083996779285
+    },
+    {
+      "name": "named-blend-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-blend-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/120-named-blend-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01886749999539461
+    },
+    {
+      "name": "named-blend-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-blend-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/121-named-blend-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006993000002694316
+    },
+    {
+      "name": "named-blend-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-blend-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/122-named-blend-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03699750000669155,
+      "resources": {
+        "maximum resident set size": 16613376,
+        "peak memory footprint": 3064896
+      }
+    },
+    {
+      "name": "named-blend-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-blend-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/123-named-blend-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016936083004111424
+    },
+    {
+      "name": "named-blend-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/124-named-blend-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0510499579977477,
+      "resources": {
+        "maximum resident set size": 17907712,
+        "peak memory footprint": 3327104
+      }
+    },
+    {
+      "name": "named-blend-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-blend-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/125-named-blend-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.056159083993406966,
+      "resources": {
+        "maximum resident set size": 17809408,
+        "peak memory footprint": 3228800
+      }
+    },
+    {
+      "name": "named-blend-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/126-named-blend-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2052596249995986,
+      "resources": {
+        "maximum resident set size": 35454976,
+        "peak memory footprint": 12404288
+      }
+    },
+    {
+      "name": "named-blend-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-blend-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/127-named-blend-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21074983400467318,
+      "resources": {
+        "maximum resident set size": 35405824,
+        "peak memory footprint": 12371584
+      }
+    },
+    {
+      "name": "named-blend-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-blend-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/128-named-blend-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03609879199939314
+    },
+    {
+      "name": "named-blend-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-blend-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/129-named-blend-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03451433399459347
+    },
+    {
+      "name": "named-blend-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-blend-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/130-named-blend-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05181674999766983
+    },
+    {
+      "name": "named-blend-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/131-named-blend-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.015363625003374182
+    },
+    {
+      "name": "named-blend-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/named-blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/132-named-blend-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015725000004749745
+    },
+    {
+      "name": "ao-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/ao-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/133-ao-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019722957993508317
+    },
+    {
+      "name": "ao-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/ao-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/134-ao-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006888042000355199
+    },
+    {
+      "name": "ao-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/ao-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/135-ao-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03440512499946635
+    },
+    {
+      "name": "ao-mask-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/ao-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/136-ao-mask-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016001458003302105
+    },
+    {
+      "name": "ao-mask-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/ao-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/137-ao-mask-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04674620799778495,
+      "resources": {
+        "maximum resident set size": 17793024,
+        "peak memory footprint": 2999360
+      }
+    },
+    {
+      "name": "ao-mask-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/ao-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/138-ao-mask-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.051350459005334415
+    },
+    {
+      "name": "ao-mask-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/ao-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/139-ao-mask-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01997987499635201
+    },
+    {
+      "name": "ao-mask-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/ao-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/140-ao-mask-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007369375001871958
+    },
+    {
+      "name": "ao-mask-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/ao-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/141-ao-mask-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.036108749991399236,
+      "resources": {
+        "maximum resident set size": 16416768,
+        "peak memory footprint": 2901056
+      }
+    },
+    {
+      "name": "ao-mask-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/ao-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/142-ao-mask-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01514720800332725
+    },
+    {
+      "name": "ao-mask-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/ao-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/143-ao-mask-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05365674999484327,
+      "resources": {
+        "maximum resident set size": 17727488,
+        "peak memory footprint": 3179584
+      }
+    },
+    {
+      "name": "ao-mask-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/ao-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/144-ao-mask-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.057465375008177944,
+      "resources": {
+        "maximum resident set size": 17645568,
+        "peak memory footprint": 3130432
+      }
+    },
+    {
+      "name": "ao-mask-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/ao-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/145-ao-mask-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20033458300167695,
+      "resources": {
+        "maximum resident set size": 35422208,
+        "peak memory footprint": 12404288
+      }
+    },
+    {
+      "name": "ao-mask-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/ao-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/146-ao-mask-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20970849999866914,
+      "resources": {
+        "maximum resident set size": 35438592,
+        "peak memory footprint": 12453504
+      }
+    },
+    {
+      "name": "ao-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/ao-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/147-ao-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03402129199821502
+    },
+    {
+      "name": "ao-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/ao-mask-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/148-ao-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.031771291003678925
+    },
+    {
+      "name": "ao-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/ao-mask-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/149-ao-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05210737499874085
+    },
+    {
+      "name": "ao-mask-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/ao-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/150-ao-mask-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.01467508300265763
+    },
+    {
+      "name": "ao-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/ao-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/151-ao-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015022874998976476
+    },
+    {
+      "name": "boundary-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/boundary-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/152-boundary-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020791167000425048
+    },
+    {
+      "name": "boundary-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/boundary-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/153-boundary-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006966416985960677
+    },
+    {
+      "name": "boundary-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/boundary-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/154-boundary-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03697595799167175
+    },
+    {
+      "name": "boundary-mask-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/boundary-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/155-boundary-mask-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016935499996179715
+    },
+    {
+      "name": "boundary-mask-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/boundary-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/156-boundary-mask-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04257179200067185,
+      "resources": {
+        "maximum resident set size": 17989632,
+        "peak memory footprint": 3114112
+      }
+    },
+    {
+      "name": "boundary-mask-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/boundary-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/157-boundary-mask-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04344116699940059
+    },
+    {
+      "name": "boundary-mask-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/boundary-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/158-boundary-mask-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019830916004139
+    },
+    {
+      "name": "boundary-mask-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/boundary-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/159-boundary-mask-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.00721920799696818
+    },
+    {
+      "name": "boundary-mask-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/boundary-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/160-boundary-mask-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03853112499928102,
+      "resources": {
+        "maximum resident set size": 16531456,
+        "peak memory footprint": 2982976
+      }
+    },
+    {
+      "name": "boundary-mask-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/boundary-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/161-boundary-mask-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016927207994740456
+    },
+    {
+      "name": "boundary-mask-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/boundary-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/162-boundary-mask-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.055106458996306174,
+      "resources": {
+        "maximum resident set size": 17924096,
+        "peak memory footprint": 3343488
+      }
+    },
+    {
+      "name": "boundary-mask-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/boundary-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/163-boundary-mask-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.059145000006537884,
+      "resources": {
+        "maximum resident set size": 17858560,
+        "peak memory footprint": 3277952
+      }
+    },
+    {
+      "name": "boundary-mask-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/boundary-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/164-boundary-mask-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21347883300040849,
+      "resources": {
+        "maximum resident set size": 35192832,
+        "peak memory footprint": 12142208
+      }
+    },
+    {
+      "name": "boundary-mask-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/boundary-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/165-boundary-mask-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2098461659916211,
+      "resources": {
+        "maximum resident set size": 35323904,
+        "peak memory footprint": 12289664
+      }
+    },
+    {
+      "name": "boundary-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/boundary-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/166-boundary-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03580041699751746
+    },
+    {
+      "name": "boundary-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/boundary-mask-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/167-boundary-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03217833300004713
+    },
+    {
+      "name": "boundary-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/boundary-mask-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/168-boundary-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05594291699526366
+    },
+    {
+      "name": "boundary-mask-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/boundary-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/169-boundary-mask-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.0158452089963248
+    },
+    {
+      "name": "boundary-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/boundary-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/170-boundary-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01567100000102073
+    },
+    {
+      "name": "subnormal-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/subnormal-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/171-subnormal-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020917625006404705
+    },
+    {
+      "name": "subnormal-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/subnormal-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/172-subnormal-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.00700929100275971
+    },
+    {
+      "name": "subnormal-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/subnormal-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/173-subnormal-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03615133299899753
+    },
+    {
+      "name": "subnormal-mask-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/subnormal-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/174-subnormal-mask-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016909040990867652
+    },
+    {
+      "name": "subnormal-mask-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/subnormal-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/175-subnormal-mask-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04534583300119266,
+      "resources": {
+        "maximum resident set size": 17924096,
+        "peak memory footprint": 3048576
+      }
+    },
+    {
+      "name": "subnormal-mask-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/subnormal-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/176-subnormal-mask-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04340091701305937
+    },
+    {
+      "name": "subnormal-mask-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/subnormal-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/177-subnormal-mask-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018891875006374903
+    },
+    {
+      "name": "subnormal-mask-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/subnormal-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/178-subnormal-mask-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007370541992713697
+    },
+    {
+      "name": "subnormal-mask-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/subnormal-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/179-subnormal-mask-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.038988082989817485,
+      "resources": {
+        "maximum resident set size": 16629760,
+        "peak memory footprint": 3081280
+      }
+    },
+    {
+      "name": "subnormal-mask-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/subnormal-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/180-subnormal-mask-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0166009579988895
+    },
+    {
+      "name": "subnormal-mask-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/subnormal-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/181-subnormal-mask-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05602616698888596,
+      "resources": {
+        "maximum resident set size": 17842176,
+        "peak memory footprint": 3261568
+      }
+    },
+    {
+      "name": "subnormal-mask-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/subnormal-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/182-subnormal-mask-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05907899999874644,
+      "resources": {
+        "maximum resident set size": 17825792,
+        "peak memory footprint": 3245184
+      }
+    },
+    {
+      "name": "subnormal-mask-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/subnormal-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/183-subnormal-mask-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20328475000860635,
+      "resources": {
+        "maximum resident set size": 35323904,
+        "peak memory footprint": 12322432
+      }
+    },
+    {
+      "name": "subnormal-mask-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/subnormal-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/184-subnormal-mask-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21991058299317956,
+      "resources": {
+        "maximum resident set size": 35307520,
+        "peak memory footprint": 12289600
+      }
+    },
+    {
+      "name": "subnormal-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/subnormal-mask-round",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/185-subnormal-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03473283399944194
+    },
+    {
+      "name": "subnormal-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/subnormal-mask-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/186-subnormal-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.032254333011223935
+    },
+    {
+      "name": "subnormal-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/subnormal-mask-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/187-subnormal-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.055602124994038604
+    },
+    {
+      "name": "subnormal-mask-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/subnormal-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/188-subnormal-mask-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.01571812499605585
+    },
+    {
+      "name": "subnormal-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/subnormal-mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/189-subnormal-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015721542004030198
+    },
+    {
+      "name": "negative-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/190-negative-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012719417005428113
+    },
+    {
+      "name": "core-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/191-core-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.023126750005758367
+    },
+    {
+      "name": "vertex-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/192-vertex-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.024039583004196174
+    },
+    {
+      "name": "output-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/193-output-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.025059666993911378
+    },
+    {
+      "name": "consent",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/194-consent.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_gltf",
+      "seconds": 0.022865249993628822
+    },
+    {
+      "name": "cancelled",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/195-cancelled.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.006296666993875988
+    },
+    {
+      "name": "negative-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/color",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/workflow/196-negative-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013199458000599407
+    }
+  ],
+  "variants": [
+    {
+      "name": "uv",
+      "source": "fixtures/named-uv/data/roles.glb",
+      "gpu": true,
+      "revision": "sha256:a41c0736d4b43e82ccd814f894a57681ef0b8c56b96847ab0d5d2291caf18279",
+      "at": null,
+      "round_revision": "sha256:ced234f1305215dd9d97d732d2624114569ed7cef74eda7641385335b4300b1c",
+      "glb_digest": "sha256:bb24883fe2e14d2d36abc45443a7b7f4870b02ce224a9570c5379796ad567a3c",
+      "glb_bytes": 3732,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "d4b3c8bb8971e6fa66f3a12e3c2a0320": "004556830bbc3bd22349a745c94a2d3c"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "d4b3c8bb8971e6fa66f3a12e3c2a0320": "004556830bbc3bd22349a745c94a2d3c"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "color",
+      "source": "fixtures/vertex-colors/data/rgba.glb",
+      "gpu": true,
+      "revision": "sha256:7a27d4ce8521c972dd4d2197b5c0c7cf2076dab33d163ad4f7a8755caaee56c3",
+      "at": null,
+      "round_revision": "sha256:92ef1e441b5d64e650b0d9e8a2aac287be37cfc86c114921c289f02e6f541528",
+      "glb_digest": "sha256:300bdc341185c578bf4961dadad89904240f684ef45559f9869b5a585e8e4dc9",
+      "glb_bytes": 2732,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "38c60459d1c7caba541c31be0c02e223": "f7721c214c6666804c6d03305df12090",
+            "8e2af0c392e2f0b4ca07e2c07fac6ab2": "2b579589d575c750da26973ec066c06a"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "38c60459d1c7caba541c31be0c02e223": "f7721c214c6666804c6d03305df12090",
+            "8e2af0c392e2f0b4ca07e2c07fac6ab2": "2b579589d575c750da26973ec066c06a"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "morph",
+      "source": "fixtures/morph-frames/data/dense.glb",
+      "gpu": true,
+      "time": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "revision": "sha256:a66785272053787db49bcd516cd5a59f5af32c4c90410d764cefe2655584d65a",
+      "at": {
+        "clip": "b6e31a69e2fddcd8a2842db1f6733f0f",
+        "time": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      "round_revision": "sha256:6f949a69515408e44b53e3a584a9e9d9cde315b71a296ef501d312cf76647f18",
+      "glb_digest": "sha256:083fde0662e36558b95eae70fa562ef1533302457ab8ea2560af83c842a91986",
+      "glb_bytes": 3996,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "3e8517c2902a6be90ebef5865de3441a": "66987d9ede2a6d6f5cec4c030bea9b72"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "3e8517c2902a6be90ebef5865de3441a": "66987d9ede2a6d6f5cec4c030bea9b72"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "mask",
+      "source": "fixtures/alpha-gltf/data/mask.glb",
+      "gpu": true,
+      "revision": "sha256:1f1ec9929babc50d4e2d390a37284cc4645121994a7aab754dc05811be46be56",
+      "at": null,
+      "round_revision": "sha256:0324e3a6db4901380d834dfb5e0b7082506db6b1f55ebd5a33b1fb24327a52a6",
+      "glb_digest": "sha256:ef2a1a911a7aee7a6684801ec0e113421658f53f21d7859ddbc405e6e17b58f3",
+      "glb_bytes": 2052,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "77db4b4b2da4259618486fde62de7e39": "ecddff24ad1d744edb7e56989cf0b601",
+            "a8a022ea971884137fba769f6df06b7d": "52201a6aa934807878887363a863c8a3"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "77db4b4b2da4259618486fde62de7e39": "ecddff24ad1d744edb7e56989cf0b601",
+            "a8a022ea971884137fba769f6df06b7d": "52201a6aa934807878887363a863c8a3"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "blend",
+      "source": "fixtures/alpha-gltf/data/blend.glb",
+      "gpu": true,
+      "revision": "sha256:1832c8f0b8f0c77989868aa220f1c5e762afd40922d886461383977060c014ac",
+      "at": null,
+      "round_revision": "sha256:a74df86fa5eb74829ad1b1178ef9645b6db5b29024cee340fcd248d7f31a85f3",
+      "glb_digest": "sha256:985480c362e75318cfbeb4ee193af551e2513fad81ccb78077e5c358c5a13eb4",
+      "glb_bytes": 2036,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "04c1bd580ee3a8552419f894142a4977": "6524dda95fcbff003fd4f5cef3489fd1",
+            "2bb2257d26e198e39492fec4ed8e7637": "ebbafed01d9f6f47d8367df964b41f7b"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "04c1bd580ee3a8552419f894142a4977": "6524dda95fcbff003fd4f5cef3489fd1",
+            "2bb2257d26e198e39492fec4ed8e7637": "ebbafed01d9f6f47d8367df964b41f7b"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "named-mask",
+      "source": "fixtures/gpu-alpha/data/named-mask.glb",
+      "gpu": true,
+      "revision": "sha256:371d88ee78a8ecabeafca88e1ed480b92c6382ba86cb6761ba5eb6ffea1a4271",
+      "at": null,
+      "round_revision": "sha256:09e26afe61a15e2a604870836475b0d14585ead8a84079ec00add16322beb819",
+      "glb_digest": "sha256:aa8169bce729151d9644e5d73416443c07c0371534383e79d2dadbcf38718cc3",
+      "glb_bytes": 3748,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "4528865a4a4e09ca903bcdde326629f9": "8ae142562d6bb41b711cf2f2745ad033"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "4528865a4a4e09ca903bcdde326629f9": "8ae142562d6bb41b711cf2f2745ad033"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "named-blend",
+      "source": "fixtures/gpu-alpha/data/named-blend.glb",
+      "gpu": true,
+      "revision": "sha256:c7054b55858f1b28dcf38bfecc5d659ae864f2a784f0603b4c949d436a334d22",
+      "at": null,
+      "round_revision": "sha256:1f278d0f9b88c2244b083a88fd1afef46c664ea828c82a6a7895e2fc2cc12664",
+      "glb_digest": "sha256:dc27d011da94fb6683444c11f92b2ca02e6103587b643d36e4fe5e7cce76b4ff",
+      "glb_bytes": 3732,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "50bae1eeef863c018592e8145a6c51c8": "8e2d1f0f37acc5c7f9165d667a682523"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "50bae1eeef863c018592e8145a6c51c8": "8e2d1f0f37acc5c7f9165d667a682523"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "ao-mask",
+      "source": "fixtures/gpu-alpha/data/ao-mask.glb",
+      "gpu": true,
+      "revision": "sha256:83c83d04985288fe727ca613608b7f7d6ac8f87cee32c1555093f73b38651f5e",
+      "at": null,
+      "round_revision": "sha256:991b033d6b1ac2cee618a351847d819c49a53b13763638f6247b6fcc0548a218",
+      "glb_digest": "sha256:530123a84124a0ac7a5964a5319c294a1ddb795252efc2961a79f75f1b32529b",
+      "glb_bytes": 2940,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "7d76a9678d646b9980d2993224b8f395": "fbdb06ce8cc105a675d3c8525441bf2f"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "7d76a9678d646b9980d2993224b8f395": "fbdb06ce8cc105a675d3c8525441bf2f"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "boundary-mask",
+      "source": "fixtures/gpu-alpha/data/boundary-mask.glb",
+      "gpu": true,
+      "revision": "sha256:c7b25339b91fa98098df557e6e9e1fff3f52429d173720792daaf6139e56bed6",
+      "at": null,
+      "round_revision": "sha256:eb377637f19dfe1bbdca776e066bcb9d4c0acc0f93fcdbcf5383ed621992fb54",
+      "glb_digest": "sha256:8bde44183104bfed5819bc82a99c377569060779949a7e6d161c3ba1a1724311",
+      "glb_bytes": 3772,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "6c859bb21cbbe730ce1f7fbc97527c15": "d25130515171612d5fffe20671ec5762"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "6c859bb21cbbe730ce1f7fbc97527c15": "d25130515171612d5fffe20671ec5762"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "subnormal-mask",
+      "source": "fixtures/gpu-alpha/data/subnormal-mask.glb",
+      "gpu": true,
+      "revision": "sha256:431ca79022ed242180b039b75e2e8dd195e84a6b923fc866e0c86ef5f25548ea",
+      "at": null,
+      "round_revision": "sha256:6be77826253b6f99f3530640bf4b07a8577d97e0e999561176268f43c721de3e",
+      "glb_digest": "sha256:165270e6239c5a2ebd4367e6cc14f70892fdb63195126e205839c3d5bb59046a",
+      "glb_bytes": 3756,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "b5db933efd668219e8ad854018cdb2cb": "e3161fa5f8fe3399e398da90ef27a8e8"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "b5db933efd668219e8ad854018cdb2cb": "e3161fa5f8fe3399e398da90ef27a8e8"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    }
+  ],
+  "settings": {
+    "width": 32,
+    "height": 16,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        2,
+        2,
+        2
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        3
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 2.5,
+        "ymag": 2.5,
+        "near": 0.1,
+        "far": 8
+      }
+    }
+  }
+}

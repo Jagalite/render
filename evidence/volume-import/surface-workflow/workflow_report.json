@@ -1,0 +1,2473 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "conductor-secondary-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/000-conductor-secondary-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.029331166995689273
+    },
+    {
+      "name": "conductor-secondary-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/001-conductor-secondary-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0069915420026518404
+    },
+    {
+      "name": "conductor-secondary-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/002-conductor-secondary-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03215650000493042
+    },
+    {
+      "name": "conductor-secondary-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/003-conductor-secondary-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013537042003008537
+    },
+    {
+      "name": "conductor-secondary-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/004-conductor-secondary-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03730720799649134
+    },
+    {
+      "name": "conductor-secondary-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/005-conductor-secondary-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030534582998370752
+    },
+    {
+      "name": "conductor-secondary-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/006-conductor-secondary-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017793084000004455
+    },
+    {
+      "name": "conductor-secondary-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/007-conductor-secondary-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06332612498954404,
+      "resources": {
+        "maximum resident set size": 17580032,
+        "peak memory footprint": 3064896
+      }
+    },
+    {
+      "name": "conductor-secondary-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/008-conductor-secondary-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2127987919957377,
+      "resources": {
+        "maximum resident set size": 35274752,
+        "peak memory footprint": 12289664
+      }
+    },
+    {
+      "name": "conductor-secondary-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/009-conductor-secondary-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.036120250006206334
+    },
+    {
+      "name": "conductor-secondary-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-secondary-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/010-conductor-secondary-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.027353333003702573
+    },
+    {
+      "name": "conductor-secondary-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-secondary-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/011-conductor-secondary-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20572166600322817
+    },
+    {
+      "name": "conductor-secondary-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/012-conductor-secondary-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.027961416999460198
+    },
+    {
+      "name": "conductor-secondary-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/013-conductor-secondary-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.024304249993292615
+    },
+    {
+      "name": "conductor-secondary-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/014-conductor-secondary-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.005533250005100854
+    },
+    {
+      "name": "conductor-secondary-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/015-conductor-secondary-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.1829270829912275
+    },
+    {
+      "name": "conductor-secondary-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/016-conductor-secondary-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019626624998636544
+    },
+    {
+      "name": "conductor-named-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/017-conductor-named-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02004304199363105
+    },
+    {
+      "name": "conductor-named-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/018-conductor-named-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006946124995010905
+    },
+    {
+      "name": "conductor-named-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/019-conductor-named-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03347041599045042
+    },
+    {
+      "name": "conductor-named-mask-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/020-conductor-named-mask-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017024959000991657
+    },
+    {
+      "name": "conductor-named-mask-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/021-conductor-named-mask-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05104191700229421
+    },
+    {
+      "name": "conductor-named-mask-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/022-conductor-named-mask-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0335802089975914
+    },
+    {
+      "name": "conductor-named-mask-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/023-conductor-named-mask-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0213385829993058
+    },
+    {
+      "name": "conductor-named-mask-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/024-conductor-named-mask-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.058212791991536506,
+      "resources": {
+        "maximum resident set size": 17858560,
+        "peak memory footprint": 3277952
+      }
+    },
+    {
+      "name": "conductor-named-mask-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/025-conductor-named-mask-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21319545799633488,
+      "resources": {
+        "maximum resident set size": 35438592,
+        "peak memory footprint": 12355200
+      }
+    },
+    {
+      "name": "conductor-named-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/026-conductor-named-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.039507124994997866
+    },
+    {
+      "name": "conductor-named-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-mask-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/027-conductor-named-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03262629100936465
+    },
+    {
+      "name": "conductor-named-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-mask-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/028-conductor-named-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20748175001062918
+    },
+    {
+      "name": "conductor-named-mask-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/029-conductor-named-mask-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.03842358398833312
+    },
+    {
+      "name": "conductor-named-mask-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/030-conductor-named-mask-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.03377850000106264
+    },
+    {
+      "name": "conductor-named-mask-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/031-conductor-named-mask-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.005577625008299947
+    },
+    {
+      "name": "conductor-named-mask-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/032-conductor-named-mask-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.1883235830027843
+    },
+    {
+      "name": "conductor-named-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/033-conductor-named-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.023452791007002816
+    },
+    {
+      "name": "conductor-named-blend-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/034-conductor-named-blend-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02031087499926798
+    },
+    {
+      "name": "conductor-named-blend-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/035-conductor-named-blend-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007033666988718323
+    },
+    {
+      "name": "conductor-named-blend-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/036-conductor-named-blend-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03494983400742058
+    },
+    {
+      "name": "conductor-named-blend-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/037-conductor-named-blend-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016812166999443434
+    },
+    {
+      "name": "conductor-named-blend-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/038-conductor-named-blend-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.048012208004365675
+    },
+    {
+      "name": "conductor-named-blend-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/039-conductor-named-blend-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0354431250016205
+    },
+    {
+      "name": "conductor-named-blend-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/040-conductor-named-blend-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021205874989391305
+    },
+    {
+      "name": "conductor-named-blend-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/041-conductor-named-blend-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.057686250002007,
+      "resources": {
+        "maximum resident set size": 17924096,
+        "peak memory footprint": 3343488
+      }
+    },
+    {
+      "name": "conductor-named-blend-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/042-conductor-named-blend-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21635533300286625,
+      "resources": {
+        "maximum resident set size": 35684352,
+        "peak memory footprint": 12600960
+      }
+    },
+    {
+      "name": "conductor-named-blend-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/043-conductor-named-blend-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04140920800273307
+    },
+    {
+      "name": "conductor-named-blend-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-blend-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/044-conductor-named-blend-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03266908299701754
+    },
+    {
+      "name": "conductor-named-blend-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-blend-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/045-conductor-named-blend-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21247304099961184
+    },
+    {
+      "name": "conductor-named-blend-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/046-conductor-named-blend-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.038486541001475416
+    },
+    {
+      "name": "conductor-named-blend-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/047-conductor-named-blend-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.033918291999725625
+    },
+    {
+      "name": "conductor-named-blend-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/048-conductor-named-blend-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.005687541997758672
+    },
+    {
+      "name": "conductor-named-blend-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/049-conductor-named-blend-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.18750733300112188
+    },
+    {
+      "name": "conductor-named-blend-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/050-conductor-named-blend-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.023346959002083167
+    },
+    {
+      "name": "conductor-morph-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/051-conductor-morph-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019122832993161865
+    },
+    {
+      "name": "conductor-morph-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/052-conductor-morph-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007083082993631251
+    },
+    {
+      "name": "conductor-morph-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/053-conductor-morph-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04281895801250357
+    },
+    {
+      "name": "conductor-morph-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/054-conductor-morph-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02368166600354016
+    },
+    {
+      "name": "conductor-morph-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/055-conductor-morph-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0684859999892069
+    },
+    {
+      "name": "conductor-morph-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/056-conductor-morph-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0549714170047082
+    },
+    {
+      "name": "conductor-morph-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/057-conductor-morph-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.032041416998254135
+    },
+    {
+      "name": "conductor-morph-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/058-conductor-morph-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14988349999475759,
+      "resources": {
+        "maximum resident set size": 19677184,
+        "peak memory footprint": 3998848
+      }
+    },
+    {
+      "name": "conductor-morph-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/059-conductor-morph-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2628629589889897,
+      "resources": {
+        "maximum resident set size": 37257216,
+        "peak memory footprint": 12994112
+      }
+    },
+    {
+      "name": "conductor-morph-sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/060-conductor-morph-sequence.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.34565391700016335,
+      "resources": {
+        "maximum resident set size": 37355520,
+        "peak memory footprint": 12994176
+      }
+    },
+    {
+      "name": "conductor-morph-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/061-conductor-morph-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05311879199871328
+    },
+    {
+      "name": "conductor-morph-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-morph-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/062-conductor-morph-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03739637500257231
+    },
+    {
+      "name": "conductor-morph-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-morph-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/063-conductor-morph-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2507659999973839
+    },
+    {
+      "name": "conductor-morph-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/064-conductor-morph-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.058308374995249324
+    },
+    {
+      "name": "conductor-morph-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/065-conductor-morph-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.054149125004187226
+    },
+    {
+      "name": "conductor-morph-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/066-conductor-morph-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.0057514999934937805
+    },
+    {
+      "name": "conductor-morph-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/067-conductor-morph-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.2379732499975944
+    },
+    {
+      "name": "conductor-morph-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/068-conductor-morph-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03498129200306721
+    },
+    {
+      "name": "coated-secondary-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/069-coated-secondary-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020481458006543107
+    },
+    {
+      "name": "coated-secondary-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/070-coated-secondary-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.00697583299188409
+    },
+    {
+      "name": "coated-secondary-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/071-coated-secondary-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030770790996029973
+    },
+    {
+      "name": "coated-secondary-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/072-coated-secondary-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01310212499811314
+    },
+    {
+      "name": "coated-secondary-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/073-coated-secondary-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.039511499999207444
+    },
+    {
+      "name": "coated-secondary-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/074-coated-secondary-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02526895800838247
+    },
+    {
+      "name": "coated-secondary-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/075-coated-secondary-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015747332989121787
+    },
+    {
+      "name": "coated-secondary-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/076-coated-secondary-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06406779200187884,
+      "resources": {
+        "maximum resident set size": 17678336,
+        "peak memory footprint": 3163200
+      }
+    },
+    {
+      "name": "coated-secondary-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/077-coated-secondary-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20827425000607036,
+      "resources": {
+        "maximum resident set size": 35274752,
+        "peak memory footprint": 12289664
+      }
+    },
+    {
+      "name": "coated-secondary-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/078-coated-secondary-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.036769375001313165
+    },
+    {
+      "name": "coated-secondary-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-secondary-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/079-coated-secondary-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.031008834004751407
+    },
+    {
+      "name": "coated-secondary-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-secondary-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/080-coated-secondary-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20621829200536013
+    },
+    {
+      "name": "coated-secondary-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/081-coated-secondary-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.027875208004843444
+    },
+    {
+      "name": "coated-secondary-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/082-coated-secondary-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.023832999999285676
+    },
+    {
+      "name": "coated-secondary-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/083-coated-secondary-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.005643374999635853
+    },
+    {
+      "name": "coated-secondary-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/084-coated-secondary-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.1801934160030214
+    },
+    {
+      "name": "coated-secondary-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/085-coated-secondary-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01744870799302589
+    },
+    {
+      "name": "coated-named-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/086-coated-named-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019876916994689964
+    },
+    {
+      "name": "coated-named-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/087-coated-named-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006888999996590428
+    },
+    {
+      "name": "coated-named-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/088-coated-named-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.035875374989700504
+    },
+    {
+      "name": "coated-named-mask-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/089-coated-named-mask-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016606416000286117
+    },
+    {
+      "name": "coated-named-mask-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/090-coated-named-mask-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04758041699824389
+    },
+    {
+      "name": "coated-named-mask-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/091-coated-named-mask-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03510491699853446
+    },
+    {
+      "name": "coated-named-mask-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/092-coated-named-mask-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021116083007655106
+    },
+    {
+      "name": "coated-named-mask-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/093-coated-named-mask-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06590812500508036,
+      "resources": {
+        "maximum resident set size": 17907712,
+        "peak memory footprint": 3327104
+      }
+    },
+    {
+      "name": "coated-named-mask-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/094-coated-named-mask-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2116885830037063,
+      "resources": {
+        "maximum resident set size": 35684352,
+        "peak memory footprint": 12617280
+      }
+    },
+    {
+      "name": "coated-named-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/095-coated-named-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04343854100443423
+    },
+    {
+      "name": "coated-named-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-mask-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/096-coated-named-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03143870799976867
+    },
+    {
+      "name": "coated-named-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-mask-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/097-coated-named-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20610045800276566
+    },
+    {
+      "name": "coated-named-mask-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/098-coated-named-mask-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.03829924999445211
+    },
+    {
+      "name": "coated-named-mask-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/099-coated-named-mask-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.03384512499906123
+    },
+    {
+      "name": "coated-named-mask-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/100-coated-named-mask-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.005740833003073931
+    },
+    {
+      "name": "coated-named-mask-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/101-coated-named-mask-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.18229279200022575
+    },
+    {
+      "name": "coated-named-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/102-coated-named-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02260495800874196
+    },
+    {
+      "name": "coated-named-blend-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/103-coated-named-blend-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019478000001981854
+    },
+    {
+      "name": "coated-named-blend-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/104-coated-named-blend-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0069997079990571365
+    },
+    {
+      "name": "coated-named-blend-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/105-coated-named-blend-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03528233298857231
+    },
+    {
+      "name": "coated-named-blend-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/106-coated-named-blend-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016813333000754938
+    },
+    {
+      "name": "coated-named-blend-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/107-coated-named-blend-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04860804199415725
+    },
+    {
+      "name": "coated-named-blend-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/108-coated-named-blend-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03544220799813047
+    },
+    {
+      "name": "coated-named-blend-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/109-coated-named-blend-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02122345801035408
+    },
+    {
+      "name": "coated-named-blend-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/110-coated-named-blend-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05681766699126456,
+      "resources": {
+        "maximum resident set size": 18006016,
+        "peak memory footprint": 3425408
+      }
+    },
+    {
+      "name": "coated-named-blend-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/111-coated-named-blend-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21322737500304356,
+      "resources": {
+        "maximum resident set size": 35389440,
+        "peak memory footprint": 12306048
+      }
+    },
+    {
+      "name": "coated-named-blend-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/112-coated-named-blend-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.040226291996077634
+    },
+    {
+      "name": "coated-named-blend-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-blend-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/113-coated-named-blend-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03232220798963681
+    },
+    {
+      "name": "coated-named-blend-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-blend-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/114-coated-named-blend-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22370687501097564
+    },
+    {
+      "name": "coated-named-blend-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/115-coated-named-blend-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.040256042004330084
+    },
+    {
+      "name": "coated-named-blend-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/116-coated-named-blend-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.03407333399809431
+    },
+    {
+      "name": "coated-named-blend-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/117-coated-named-blend-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.005655249988194555
+    },
+    {
+      "name": "coated-named-blend-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/118-coated-named-blend-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.19024241699662525
+    },
+    {
+      "name": "coated-named-blend-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/119-coated-named-blend-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.023477541995816864
+    },
+    {
+      "name": "coated-morph-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/120-coated-morph-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02132754199556075
+    },
+    {
+      "name": "coated-morph-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/121-coated-morph-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006995708012254909
+    },
+    {
+      "name": "coated-morph-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/122-coated-morph-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04443745799653698
+    },
+    {
+      "name": "coated-morph-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/123-coated-morph-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024034792004385963
+    },
+    {
+      "name": "coated-morph-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/124-coated-morph-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07026433300052304
+    },
+    {
+      "name": "coated-morph-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/125-coated-morph-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.055046791007043794
+    },
+    {
+      "name": "coated-morph-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/126-coated-morph-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.032132666994584724
+    },
+    {
+      "name": "coated-morph-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/127-coated-morph-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1523184170073364,
+      "resources": {
+        "maximum resident set size": 19693568,
+        "peak memory footprint": 4015232
+      }
+    },
+    {
+      "name": "coated-morph-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/128-coated-morph-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2659571660042275,
+      "resources": {
+        "maximum resident set size": 37552128,
+        "peak memory footprint": 13289088
+      }
+    },
+    {
+      "name": "coated-morph-sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/129-coated-morph-sequence.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3395910830004141,
+      "resources": {
+        "maximum resident set size": 37502976,
+        "peak memory footprint": 13092416
+      }
+    },
+    {
+      "name": "coated-morph-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/130-coated-morph-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05133854199084453
+    },
+    {
+      "name": "coated-morph-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-morph-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/131-coated-morph-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03631991699512582
+    },
+    {
+      "name": "coated-morph-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-morph-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/132-coated-morph-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.25453208399994764
+    },
+    {
+      "name": "coated-morph-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/133-coated-morph-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.059229833001154475
+    },
+    {
+      "name": "coated-morph-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/134-coated-morph-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.05456333300389815
+    },
+    {
+      "name": "coated-morph-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/135-coated-morph-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.00589133299945388
+    },
+    {
+      "name": "coated-morph-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/136-coated-morph-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.2311727499909466
+    },
+    {
+      "name": "coated-morph-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/137-coated-morph-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.034296457990421914
+    }
+  ],
+  "variants": [
+    {
+      "name": "conductor-secondary",
+      "source": "fixtures/secondary-textures/data/mask-nearest.glb",
+      "source_sha256": "f66e8c9415a663af7f19c7d1e62eec9b31a5041e7562d8f10fa06b1edb8beb04",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": false,
+      "secondary": true,
+      "revision": "sha256:e4aca3359c1dbe7f1cf0bbb24b46ee73207f223eaa1e1ea00082122e861b34c4",
+      "settings": {
+        "width": 8,
+        "height": 8,
+        "samples": 32,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0,
+          0,
+          0
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 0.9,
+            "ymag": 0.9,
+            "near": 0.01,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 2.514570951461792e-08,
+      "folder": "image",
+      "archive": "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-secondary-archive/document/document.json"
+    },
+    {
+      "name": "conductor-named-mask",
+      "source": "fixtures/gpu-alpha/data/named-mask.glb",
+      "source_sha256": "1912d4e8c0f4093e1c6fd392be09a92c5ae285c446197f8f9137112e20295bf1",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": false,
+      "secondary": false,
+      "revision": "sha256:fb75fbbc2bb5154f63876449705b568abacc50d7e762ab5cb218cea439178be8",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 1.609829641723087e-05,
+      "folder": "image",
+      "archive": "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-mask-archive/document/document.json"
+    },
+    {
+      "name": "conductor-named-blend",
+      "source": "fixtures/gpu-alpha/data/named-blend.glb",
+      "source_sha256": "40bfddc669d71fb33828f7dd6f6e0a3e1750e93d106455b0accedc678a148fb6",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": false,
+      "secondary": false,
+      "revision": "sha256:b4a508c9830657af637c9696fceba6e5be13d1a6e119987c90373942b9ca55de",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 8.87319270797084e-06,
+      "folder": "image",
+      "archive": "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-named-blend-archive/document/document.json"
+    },
+    {
+      "name": "conductor-morph",
+      "source": "fixtures/morph-frames/data/dense.glb",
+      "source_sha256": "284917f1bf2bd5f666ba2f5b48590222b6d0bbdeff91be0801492ca20025de49",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": true,
+      "secondary": false,
+      "revision": "sha256:c0144aaa9368646a06bf2839a80661edab2f1e111e80d455ad06733ea8fee9be",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "request": {
+        "revision": "sha256:c0144aaa9368646a06bf2839a80661edab2f1e111e80d455ad06733ea8fee9be",
+        "clip": "467e6e12ffc8158594d66c96bc5c770b",
+        "time": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "shutter": {
+          "open": {
+            "numerator": -1,
+            "denominator": 32
+          },
+          "close": {
+            "numerator": 1,
+            "denominator": 32
+          },
+          "samples": 3
+        }
+      },
+      "gpu_linear_rmse": 0.00034138011582237785,
+      "folder": "frame",
+      "sequence": {
+        "revision": "sha256:c0144aaa9368646a06bf2839a80661edab2f1e111e80d455ad06733ea8fee9be",
+        "clip": "467e6e12ffc8158594d66c96bc5c770b",
+        "shutter": {
+          "open": {
+            "numerator": -1,
+            "denominator": 32
+          },
+          "close": {
+            "numerator": 1,
+            "denominator": 32
+          },
+          "samples": 3
+        },
+        "times": [
+          {
+            "numerator": 1,
+            "denominator": 4
+          },
+          {
+            "numerator": 3,
+            "denominator": 4
+          }
+        ]
+      },
+      "archive": "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/conductor-morph-archive/document/document.json"
+    },
+    {
+      "name": "coated-secondary",
+      "source": "fixtures/secondary-textures/data/mask-nearest.glb",
+      "source_sha256": "f66e8c9415a663af7f19c7d1e62eec9b31a5041e7562d8f10fa06b1edb8beb04",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": false,
+      "secondary": true,
+      "revision": "sha256:51140c5486893a6e4ef48f3fdcd471c69847d98bc5de770ba2fa1a39f0cbb053",
+      "settings": {
+        "width": 8,
+        "height": 8,
+        "samples": 32,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0,
+          0,
+          0
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 0.9,
+            "ymag": 0.9,
+            "near": 0.01,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 1.591362958725866e-07,
+      "folder": "image",
+      "archive": "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-secondary-archive/document/document.json"
+    },
+    {
+      "name": "coated-named-mask",
+      "source": "fixtures/gpu-alpha/data/named-mask.glb",
+      "source_sha256": "1912d4e8c0f4093e1c6fd392be09a92c5ae285c446197f8f9137112e20295bf1",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": false,
+      "secondary": false,
+      "revision": "sha256:09f4ad59991bf0c067223f8c8ff06ad48e245bb1fa2f625c67c7b2c984bb42fa",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 1.996711517170901e-05,
+      "folder": "image",
+      "archive": "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-mask-archive/document/document.json"
+    },
+    {
+      "name": "coated-named-blend",
+      "source": "fixtures/gpu-alpha/data/named-blend.glb",
+      "source_sha256": "40bfddc669d71fb33828f7dd6f6e0a3e1750e93d106455b0accedc678a148fb6",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": false,
+      "secondary": false,
+      "revision": "sha256:45a13fc6ccc0e7ca9b44b55e072b91bcd7da7cdd8d0c68a6f1fa36c940c975cb",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 1.0843975906315296e-05,
+      "folder": "image",
+      "archive": "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-named-blend-archive/document/document.json"
+    },
+    {
+      "name": "coated-morph",
+      "source": "fixtures/morph-frames/data/dense.glb",
+      "source_sha256": "284917f1bf2bd5f666ba2f5b48590222b6d0bbdeff91be0801492ca20025de49",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": true,
+      "secondary": false,
+      "revision": "sha256:7636946a60bc825231e49eb73a336429d175554eb0db3cc216bb2270b282b7ff",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "request": {
+        "revision": "sha256:7636946a60bc825231e49eb73a336429d175554eb0db3cc216bb2270b282b7ff",
+        "clip": "467e6e12ffc8158594d66c96bc5c770b",
+        "time": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "shutter": {
+          "open": {
+            "numerator": -1,
+            "denominator": 32
+          },
+          "close": {
+            "numerator": 1,
+            "denominator": 32
+          },
+          "samples": 3
+        }
+      },
+      "gpu_linear_rmse": 0.00014605246131684524,
+      "folder": "frame",
+      "sequence": {
+        "revision": "sha256:7636946a60bc825231e49eb73a336429d175554eb0db3cc216bb2270b282b7ff",
+        "clip": "467e6e12ffc8158594d66c96bc5c770b",
+        "shutter": {
+          "open": {
+            "numerator": -1,
+            "denominator": 32
+          },
+          "close": {
+            "numerator": 1,
+            "denominator": 32
+          },
+          "samples": 3
+        },
+        "times": [
+          {
+            "numerator": 1,
+            "denominator": 4
+          },
+          {
+            "numerator": 3,
+            "denominator": 4
+          }
+        ]
+      },
+      "archive": "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/surface-workflow/coated-morph-archive/document/document.json"
+    }
+  ],
+  "settings": {
+    "width": 8,
+    "height": 8,
+    "samples": 32,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0,
+      0,
+      0
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        0,
+        0,
+        0
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        1
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 0.9,
+        "ymag": 0.9,
+        "near": 0.01,
+        "far": 10
+      }
+    }
+  }
+}

@@ -1,0 +1,383 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/000-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019117125004413538
+    },
+    {
+      "name": "empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/001-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007645624995348044
+    },
+    {
+      "name": "import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/002-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03518504201201722
+    },
+    {
+      "name": "imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/003-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01697062500170432
+    },
+    {
+      "name": "author-stack",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/004-author-stack.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09961658300017007
+    },
+    {
+      "name": "authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/005-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07149079100054223
+    },
+    {
+      "name": "cpu-nominal-failure",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/006-cpu-nominal-failure.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.08402041700901464
+    },
+    {
+      "name": "cpu-temporal-failure",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/007-cpu-temporal-failure.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.09565375000238419
+    },
+    {
+      "name": "cpu-valid",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/008-cpu-valid.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10612070799106732,
+      "resources": {
+        "maximum resident set size": 22478848,
+        "peak memory footprint": 7226496
+      }
+    },
+    {
+      "name": "cpu-partial",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/009-cpu-partial.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.13948600000003353
+    },
+    {
+      "name": "gpu-nominal-failure",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/010-gpu-nominal-failure.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.29105220799101517
+    },
+    {
+      "name": "gpu-temporal-failure",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/011-gpu-temporal-failure.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.276861916994676
+    },
+    {
+      "name": "gpu-valid",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/012-gpu-valid.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.26538108300883323,
+      "resources": {
+        "maximum resident set size": 39895040,
+        "peak memory footprint": 16188992
+      }
+    },
+    {
+      "name": "gpu-partial",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/013-gpu-partial.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.3097760000091512
+    },
+    {
+      "name": "archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/014-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08872537499701139
+    },
+    {
+      "name": "restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/015-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06976250000298023
+    },
+    {
+      "name": "restored-valid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/016-restored-valid.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.26457033299084287
+    },
+    {
+      "name": "stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/017-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.06082158299977891
+    },
+    {
+      "name": "unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-shutter/018-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07334979200095404
+    }
+  ],
+  "variants": [],
+  "model": {
+    "kind": "principled"
+  },
+  "settings": {
+    "width": 2,
+    "height": 2,
+    "samples": 1,
+    "seed": 73,
+    "max_depth": 1,
+    "max_bytes": 16777216,
+    "environment": [
+      0.125,
+      0.25,
+      0.5
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        0,
+        0,
+        0
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        3
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 1,
+        "ymag": 1,
+        "near": 0.1,
+        "far": 8
+      }
+    }
+  },
+  "revision": "sha256:f8260ee2e3130e109f61a80fd22ae3d96a57359dc8c2d49f2fe3bdbe44ced324",
+  "clip": "00000000000000000000000000007532",
+  "nominal_request": {
+    "revision": "sha256:f8260ee2e3130e109f61a80fd22ae3d96a57359dc8c2d49f2fe3bdbe44ced324",
+    "clip": "00000000000000000000000000007532",
+    "time": {
+      "numerator": 0,
+      "denominator": 1
+    },
+    "shutter": {
+      "open": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "close": {
+        "numerator": 2,
+        "denominator": 1
+      },
+      "samples": 2
+    }
+  },
+  "temporal_request": {
+    "revision": "sha256:f8260ee2e3130e109f61a80fd22ae3d96a57359dc8c2d49f2fe3bdbe44ced324",
+    "clip": "00000000000000000000000000007532",
+    "time": {
+      "numerator": 1,
+      "denominator": 1
+    },
+    "shutter": {
+      "open": {
+        "numerator": -1,
+        "denominator": 1
+      },
+      "close": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "samples": 2
+    }
+  },
+  "valid_request": {
+    "revision": "sha256:f8260ee2e3130e109f61a80fd22ae3d96a57359dc8c2d49f2fe3bdbe44ced324",
+    "clip": "00000000000000000000000000007532",
+    "time": {
+      "numerator": 1,
+      "denominator": 1
+    },
+    "shutter": {
+      "open": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "close": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "samples": 1
+    }
+  },
+  "sequence_request": {
+    "revision": "sha256:f8260ee2e3130e109f61a80fd22ae3d96a57359dc8c2d49f2fe3bdbe44ced324",
+    "clip": "00000000000000000000000000007532",
+    "shutter": {
+      "open": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "close": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "samples": 1
+    },
+    "times": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 2,
+        "denominator": 1
+      }
+    ]
+  }
+}

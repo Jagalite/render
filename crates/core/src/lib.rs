@@ -29,6 +29,7 @@ pub mod storage;
 pub mod textures;
 pub mod topology;
 pub mod uploads;
+pub mod volume_import;
 pub mod volumes;
 
 use serde::{Deserialize, Serialize};

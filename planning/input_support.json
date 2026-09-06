@@ -195,10 +195,11 @@
       "qualification": "Volume rendering is distinct from smoke/liquid simulation. No OpenVDB computational runtime is permitted.",
       "status": "partially_implemented_profile",
       "evidence": [
-        "evidence/m06-m08/README.md"
+        "evidence/m06-m08/README.md",
+        "evidence/volume-import/README.md"
       ],
-      "implemented_profile": "native typed sparse-media-v0, native/browser Rust CPU",
-      "remaining_scope": "External sparse-volume formats, paging and GPU transport remain unsupported."
+      "implemented_profile": "native typed sparse-media-v0, native/browser Rust CPU; vol3-cell-constant-v1 external scalar density and optional aligned RGB emission with explicit metric/optical policy, native CLI and browser import/recovery",
+      "remaining_scope": "Additional external formats, trilinear reconstruction, source-container history, paging and GPU transport remain unsupported."
     },
     {
       "id": "INPUT-06",

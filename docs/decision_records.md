@@ -399,3 +399,21 @@ complement CPU/GPU and recovery workflows. No public schema or dependency change
 **Revisit trigger:** Nested media, rough transmission, absorption thickness, source
 material extensions, critical-angle precision or directly sampled glass caustics need
 separate physical, numerical, failure, resource and native/browser acceptance evidence.
+
+## ADR-029 — External VOL3 grids use explicit native cell and optical policy
+
+**Decision:** Decode scalar density and optional aligned RGB emission in shared Rust,
+with explicit coordinate units, bounds, cell-constant zero background and optical
+settings. Scan bounded source bytes into the existing sparse representation; retain
+no zero cells and create an empty entity for an all-zero source.
+
+**Integration boundary:** The [VOL3 contract](volume_import.md) joins binary input,
+native media, stable source identities, agent/browser admission and CLI durable
+transactions. Typed reports expose coordinate interpretation and resource counts.
+Existing snapshot schemas and four GPU kernels remain unchanged. Source containers
+are caller-retained; native archives persist decoded values. Browser dispatch is
+synchronous, while core/native cancellation checks precede atomic publication.
+
+**Revisit trigger:** Trilinear reconstruction, spectral conversion, source round-trip
+history, external paging, other formats or GPU media require separate numerical,
+resource, failure and native/browser workflow evidence. This is not a simulation gate.

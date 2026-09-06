@@ -70,6 +70,11 @@ enum Backend {
 #[derive(Deserialize)]
 #[serde(tag = "format", rename_all = "snake_case", deny_unknown_fields)]
 enum Source {
+    Vol {
+        path: PathBuf,
+        emission: Option<PathBuf>,
+        policy: volume_import::Policy,
+    },
     Obj {
         path: PathBuf,
         entity: Id,
@@ -173,18 +178,23 @@ impl Control {
         }
     }
     fn read(&mut self, path: &Path) -> Result<Vec<u8>> {
+        self.read_limited(path, u64::MAX)
+    }
+    fn read_limited(&mut self, path: &Path, source_limit: u64) -> Result<Vec<u8>> {
         self.check()?;
+        let remaining =
+            source_limit.min(self.limits.max_input_bytes.saturating_sub(self.input_bytes));
         let mut bytes = vec![];
         File::open(path)
             .map_err(io)?
-            .take(self.limits.max_input_bytes.saturating_sub(self.input_bytes) + 1)
+            .take(remaining.saturating_add(1))
             .read_to_end(&mut bytes)
             .map_err(io)?;
         self.input_bytes += bytes.len() as u64;
-        if self.input_bytes > self.limits.max_input_bytes {
+        if bytes.len() as u64 > remaining {
             return Err(Error::new(
                 "budget",
-                "aggregate project input byte limit exceeded",
+                "source or aggregate project input byte limit exceeded",
             ));
         }
         self.check()?;
@@ -533,6 +543,31 @@ fn execute(root: &Path, operation: Operation, control: &mut Control) -> Result<V
             settings,
         } => {
             let (mut commands, report) = match source {
+                Source::Vol {
+                    path,
+                    emission,
+                    policy,
+                } => {
+                    let bytes =
+                        control.read_limited(&path, volume_import::MAX_INPUT_BYTES as u64)?;
+                    let emission = emission
+                        .as_ref()
+                        .map(|p| {
+                            control.read_limited(
+                                p,
+                                (volume_import::MAX_INPUT_BYTES - bytes.len()) as u64,
+                            )
+                        })
+                        .transpose()?;
+                    let imported = volume_import::import(
+                        &bytes,
+                        emission.as_deref(),
+                        doc.snapshot().document_id,
+                        &policy,
+                        || control.cancelled(),
+                    )?;
+                    (imported.commands, json!(imported.report))
+                }
                 Source::Obj {
                     path,
                     entity,
@@ -844,6 +879,7 @@ pub fn help() -> &'static str {
 One versioned JSON request per process. Relative paths use the working directory.
 Request: {\"version\":0,\"operation\":{\"method\":\"inspect\"}}
 Methods: init, restore, inspect, apply, import, evaluate, render, frame, sequence, products, export.
+Import formats: OBJ, GLB, glTF and VOL3 density with optional aligned RGB emission.
 Mutations use existing revision-checked document transactions. Reads/renders pin revision.
 Optional limits: max_input_bytes, max_output_bytes, max_wall_ms, cancel_file.
 Outputs require a fresh directory; manifest.json records complete/failed/cancelled status.

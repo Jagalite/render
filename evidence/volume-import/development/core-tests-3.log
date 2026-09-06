@@ -1,0 +1,10 @@
+   Compiling render-core v0.1.0 (/private/tmp/render-volume-import-20260906/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 11.55s
+     Running tests/volume_import.rs (target/debug/deps/volume_import-8d3c7ebdc63bf2f9)
+
+running 3 tests
+test transactional_import_permissions_retry_stale_cancel_and_durable_recovery ... ok
+test exact_axes_sparse_empty_units_and_analytic_transport ... ok
+test malformed_unsupported_policy_budget_and_cancellation ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s

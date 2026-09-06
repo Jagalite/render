@@ -1,0 +1,14 @@
+   Compiling render-host v0.1.0 (/private/tmp/render-volume-import-20260906/crates/host)
+    Finished `test` profile [unoptimized] target(s) in 0.74s
+     Running tests/secondary_textures_gpu.rs (target/debug/deps/secondary_textures_gpu-f663c7792d13145c)
+
+running 1 test
+extended=false filter=Nearest cpu_gpu_rmse=0.00000005505841692483966
+extended=false filter=LinearMipLinear cpu_gpu_rmse=0.00000005505841692483966
+extended=true filter=Nearest cpu_gpu_rmse=0.00000005868810323695894
+extended=true filter=LinearMipLinear cpu_gpu_rmse=0.00000005868810323695894
+extended=false filter=Nearest cpu_gpu_rmse=0.00000005505841692483966
+extended=false filter=LinearMipLinear cpu_gpu_rmse=0.00000005505841692483966
+test secondary_emitter_filters_match_cpu_and_reuse_both_gpu_profiles ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.41s

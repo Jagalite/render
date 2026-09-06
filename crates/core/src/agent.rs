@@ -28,6 +28,14 @@ pub struct Edits {
 #[serde(tag = "method", rename_all = "snake_case", deny_unknown_fields)]
 pub enum Operation {
     Inspect,
+    ImportVol {
+        bytes: Vec<u8>,
+        emission_bytes: Option<Vec<u8>>,
+        policy: volume_import::Policy,
+        settings: Settings,
+        base_revision: String,
+        idempotency_key: String,
+    },
     ImportGlb {
         bytes: Vec<u8>,
         policy: gltf_scene::Policy,
@@ -359,15 +367,19 @@ impl Session {
             max_added_bytes,
         })
     }
-    fn import(
+    fn import<R: Serialize>(
         &mut self,
         principal: &Principal,
-        imported: gltf_scene::Imported,
+        imported: (Vec<Command>, R),
         settings: Settings,
         base_revision: String,
         idempotency_key: String,
+        cancelled: &mut impl FnMut() -> bool,
     ) -> Result<Value> {
-        let mut commands = imported.commands;
+        if cancelled() {
+            return Err(Error::new("cancelled", "import cancelled before admission"));
+        }
+        let (mut commands, report) = imported;
         commands.push(Command::SetRenderSettings { settings });
         let request = document::Request {
             version: 0,
@@ -377,7 +389,7 @@ impl Session {
             max_added_bytes: 8 * 1024 * 1024,
         };
         if let Some(receipt) = self.document.retry(principal, &request)? {
-            return Ok(json!({"receipt":receipt,"report":imported.report}));
+            return Ok(json!({"receipt":receipt,"report":report}));
         }
         if self.document.snapshot().entities.iter().next().is_some()
             || !self.document.snapshot().materials.is_empty()
@@ -390,11 +402,33 @@ impl Session {
         }
         let candidate = self.document.prepare(principal, &request)?;
         profile(candidate.snapshot())?;
-        Evaluator::default().evaluate(candidate.snapshot())?;
+        Evaluator::default().evaluate_with_cancel(candidate.snapshot(), &mut *cancelled)?;
+        if cancelled() {
+            return Err(Error::new(
+                "cancelled",
+                "import cancelled before publication",
+            ));
+        }
         let receipt = self.document.commit(candidate)?;
-        Ok(json!({"receipt":receipt,"report":imported.report}))
+        Ok(json!({"receipt":receipt,"report":report}))
     }
     pub fn dispatch(&mut self, principal: &Principal, request: Request) -> Result<Value> {
+        self.dispatch_cancellable(principal, request, || false)
+    }
+    /// Checks cancellation at admission and throughout volume import/evaluation.
+    /// Other synchronous operations retain their existing bounded dispatch behavior.
+    pub fn dispatch_cancellable(
+        &mut self,
+        principal: &Principal,
+        request: Request,
+        mut cancelled: impl FnMut() -> bool,
+    ) -> Result<Value> {
+        if cancelled() {
+            return Err(Error::new(
+                "cancelled",
+                "agent operation cancelled before admission",
+            ));
+        }
         if request.version != 0 {
             return Err(Error::new(
                 "operation_version",
@@ -409,6 +443,31 @@ impl Session {
             Inspect => Ok(
                 json!({"revision":self.document.snapshot().revision()?,"document_digest":digest(&canonical(&self.document)?),"snapshot":self.document.snapshot(),"protected_digest":protected_digest(self.document.snapshot())?,"branches":self.branches.iter().filter(|(_,b)| b.owner == principal.id).map(|(n,_)| n).collect::<Vec<_>>(),"profile":"agent-rendering-v0","durability":"memory; explicit host save/export required"}),
             ),
+            ImportVol {
+                bytes,
+                emission_bytes,
+                policy,
+                settings,
+                base_revision,
+                idempotency_key,
+            } => {
+                write_permission(principal)?;
+                let imported = volume_import::import(
+                    &bytes,
+                    emission_bytes.as_deref(),
+                    self.document.snapshot().document_id,
+                    &policy,
+                    &mut cancelled,
+                )?;
+                self.import(
+                    principal,
+                    (imported.commands, imported.report),
+                    settings,
+                    base_revision,
+                    idempotency_key,
+                    &mut cancelled,
+                )
+            }
             ImportGlb {
                 bytes,
                 policy,
@@ -421,10 +480,11 @@ impl Session {
                     gltf_scene::import_glb(&bytes, self.document.snapshot().document_id, &policy)?;
                 self.import(
                     principal,
-                    imported,
+                    (imported.commands, imported.report),
                     settings,
                     base_revision,
                     idempotency_key,
+                    &mut cancelled,
                 )
             }
             ImportScene {
@@ -444,10 +504,11 @@ impl Session {
                 )?;
                 self.import(
                     principal,
-                    imported,
+                    (imported.commands, imported.report),
                     settings,
                     base_revision,
                     idempotency_key,
+                    &mut cancelled,
                 )
             }
             ImportPbrGlb {
@@ -465,10 +526,11 @@ impl Session {
                 )?;
                 self.import(
                     principal,
-                    imported,
+                    (imported.commands, imported.report),
                     settings,
                     base_revision,
                     idempotency_key,
+                    &mut cancelled,
                 )
             }
             ImportPbrScene {
@@ -490,10 +552,11 @@ impl Session {
                 )?;
                 self.import(
                     principal,
-                    imported,
+                    (imported.commands, imported.report),
                     settings,
                     base_revision,
                     idempotency_key,
+                    &mut cancelled,
                 )
             }
             SelectCamera {
@@ -684,7 +747,8 @@ impl Session {
     ) -> Result<Value> {
         let root_mutation = matches!(
             &request.operation,
-            Operation::ImportGlb { .. }
+            Operation::ImportVol { .. }
+                | Operation::ImportGlb { .. }
                 | Operation::ImportScene { .. }
                 | Operation::ImportPbrGlb { .. }
                 | Operation::ImportPbrScene { .. }
@@ -736,6 +800,7 @@ impl Session {
 /// Stable names/versions and effects are reviewed independently of Session layout.
 pub fn registry() -> Vec<crate::api::Operation> {
     [
+        ("agent.import_vol",true,"VOL3 density and optional aligned linear RGB emission; explicit cell-constant metric policy; 4 MiB input, 16384 occupied cells","decode, evaluation and before atomic publication; synchronous browser dispatch"),
         ("agent.render_root_cpu",false,"bounded CPU rendering for extended materials at a pinned root revision","evaluation and render boundaries"),
         ("agent.preview_products",false,"render authored views, color/denoising and typed UV bakes at a pinned revision","evaluation and render boundaries"),
         ("agent.preview_at",false,"render a pinned clip frame with exact-time shutter samples; keeps rest state immutable","evaluation and render boundaries"),

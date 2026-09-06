@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "comparisons": [
+    {
+      "case": "homogeneous",
+      "cpu_pixels_and_passes_identical": true,
+      "analytic_max_absolute_error": 9.149755175741348e-09
+    },
+    {
+      "case": "emission",
+      "cpu_pixels_and_passes_identical": true,
+      "analytic_max_absolute_error": 2.522744479982464e-08
+    },
+    {
+      "case": "axis",
+      "cpu_pixels_and_passes_identical": true,
+      "analytic_max_absolute_error": 1.490975669315997e-09
+    },
+    {
+      "case": "empty",
+      "cpu_pixels_and_passes_identical": true,
+      "analytic_max_absolute_error": 0.0
+    },
+    {
+      "case": "emission-only",
+      "cpu_pixels_and_passes_identical": true,
+      "analytic_max_absolute_error": 0.0
+    },
+    {
+      "case": "unit-cube",
+      "cpu_pixels_and_passes_identical": true,
+      "analytic_max_absolute_error": 9.149755175741348e-09
+    },
+    {
+      "case": "scaled",
+      "cpu_pixels_and_passes_identical": true,
+      "analytic_max_absolute_error": 1.7453331002670325e-09
+    },
+    {
+      "case": "sparse",
+      "cpu_pixels_and_passes_identical": true,
+      "analytic_max_absolute_error": 2.597651849178817e-08
+    }
+  ]
+}

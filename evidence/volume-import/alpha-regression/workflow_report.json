@@ -1,0 +1,660 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/000-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02002529198944103
+    },
+    {
+      "name": "mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/001-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007455500002834015
+    },
+    {
+      "name": "mask-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/002-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.034264624991919845,
+      "resources": {
+        "maximum resident set size": 16351232,
+        "peak memory footprint": 2835520
+      }
+    },
+    {
+      "name": "mask-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/003-mask-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01856229201075621
+    },
+    {
+      "name": "mask-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/004-mask-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01202004199149087
+    },
+    {
+      "name": "mask-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/005-mask-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.24338995800644625,
+      "resources": {
+        "maximum resident set size": 17645568,
+        "peak memory footprint": 3130432
+      }
+    },
+    {
+      "name": "mask-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/006-mask-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.553969667002093,
+      "resources": {
+        "maximum resident set size": 35569664,
+        "peak memory footprint": 12502656
+      }
+    },
+    {
+      "name": "mask-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/007-mask-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.020443583009182476
+    },
+    {
+      "name": "mask-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/008-mask-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030543624990968965
+    },
+    {
+      "name": "mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/mask-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/009-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.029961666994495317
+    },
+    {
+      "name": "mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/mask-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/010-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2428439169889316
+    },
+    {
+      "name": "mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/mask",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/011-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014605665986891836
+    },
+    {
+      "name": "blend-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/012-blend-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019963124999776483
+    },
+    {
+      "name": "blend-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/013-blend-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007423458009725437
+    },
+    {
+      "name": "blend-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/014-blend-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03279837500303984,
+      "resources": {
+        "maximum resident set size": 16318464,
+        "peak memory footprint": 2802752
+      }
+    },
+    {
+      "name": "blend-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/015-blend-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018418417006614618
+    },
+    {
+      "name": "blend-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/016-blend-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012267208003322594
+    },
+    {
+      "name": "blend-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/017-blend-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.264051833000849,
+      "resources": {
+        "maximum resident set size": 17694720,
+        "peak memory footprint": 3179584
+      }
+    },
+    {
+      "name": "blend-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/018-blend-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2176059589983197,
+      "resources": {
+        "maximum resident set size": 35356672,
+        "peak memory footprint": 12371584
+      }
+    },
+    {
+      "name": "blend-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/019-blend-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.022035667003365234
+    },
+    {
+      "name": "blend-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/020-blend-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.029296042004716583
+    },
+    {
+      "name": "blend-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/blend-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/021-blend-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.028030916000716388
+    },
+    {
+      "name": "blend-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/blend-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/022-blend-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2762127500027418
+    },
+    {
+      "name": "blend-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/blend",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/023-blend-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012896084008389153
+    },
+    {
+      "name": "opaque-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/opaque",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/024-opaque-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022078708003391512
+    },
+    {
+      "name": "opaque-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/opaque",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/025-opaque-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007596750001539476
+    },
+    {
+      "name": "opaque-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/opaque",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/026-opaque-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.034488625009544194,
+      "resources": {
+        "maximum resident set size": 16285696,
+        "peak memory footprint": 2819136
+      }
+    },
+    {
+      "name": "opaque-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/opaque",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/027-opaque-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018132666999008507
+    },
+    {
+      "name": "opaque-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/opaque",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/028-opaque-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012224374993820675
+    },
+    {
+      "name": "opaque-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/opaque",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/029-opaque-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20615870799520053,
+      "resources": {
+        "maximum resident set size": 17596416,
+        "peak memory footprint": 3097664
+      }
+    },
+    {
+      "name": "opaque-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/opaque",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/030-opaque-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13767520900000818,
+      "resources": {
+        "maximum resident set size": 34111488,
+        "peak memory footprint": 11044416
+      }
+    },
+    {
+      "name": "opaque-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/opaque",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/031-opaque-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.019167749996995553
+    },
+    {
+      "name": "opaque-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/opaque",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/032-opaque-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03267437500471715
+    },
+    {
+      "name": "opaque-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/opaque-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/033-opaque-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.028719417008687742
+    },
+    {
+      "name": "opaque-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/opaque-restored",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/034-opaque-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20394241600297391
+    },
+    {
+      "name": "opaque-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/opaque",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/035-opaque-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014802958001382649
+    },
+    {
+      "name": "negative-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/036-negative-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018804250008543022
+    },
+    {
+      "name": "negative-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/037-negative-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007592208989080973
+    },
+    {
+      "name": "malformed",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/038-malformed.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "gltf_scene",
+      "seconds": 0.007622541990713216
+    },
+    {
+      "name": "cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/039-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.00647862498590257
+    },
+    {
+      "name": "budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/040-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.006088750000344589
+    },
+    {
+      "name": "negative-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/041-negative-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006479499992565252
+    },
+    {
+      "name": "explicit-valid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/negative",
+        "/private/tmp/render-volume-import-20260906/artifacts/volume-import/run-20260906T113040Z/alpha-regression/042-explicit-valid.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.034714708002866246
+    }
+  ],
+  "variants": [
+    {
+      "name": "mask",
+      "revision": "sha256:2e1ec385c9fecff4718ce345deea75afafee469a2b55ca1163fc212ffb108f09",
+      "stripe_green_means": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "blend",
+      "revision": "sha256:0bea9ed561385d5d64b6c6e33ea28e02519b9b07fdf20275ebd399d39552ee48",
+      "stripe_green_means": [
+        0.0,
+        0.1640625,
+        0.3394775390625,
+        0.497802734375
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "opaque",
+      "revision": "sha256:461b9dd03f58685a18796a5c359d55772b367c7254bbff72060a85bc5536a65b",
+      "stripe_green_means": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "restored_pixels_identical": true
+    }
+  ],
+  "settings": {
+    "width": 32,
+    "height": 16,
+    "samples": 64,
+    "seed": 73,
+    "max_depth": 1,
+    "max_bytes": 16777216,
+    "environment": [
+      0,
+      0,
+      0
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        0,
+        0,
+        0
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        3
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 1,
+        "ymag": 1,
+        "near": 0.1,
+        "far": 5
+      }
+    }
+  }
+}

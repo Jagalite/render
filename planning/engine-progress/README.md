@@ -5,14 +5,14 @@ working on feasible remaining steps. M09 interactive editor remains deferred.
 Each completed increment requires implementation, native/browser workflow evidence,
 negative/cancellation/stale checks, resource/provenance records and documentation.
 
-Current completed increment: GPU ideal dielectric interfaces; evidence/gpu-dielectric.
+Current completed increment: external VOL3 density/emission import; evidence/volume-import.
 
 | Order | Increment | Status |
 |---|---|---|
 | 1 | GPU shutter frames and streaming sequences | Validated on feat/gpu-shutter-sequences; evidence/gpu-shutter |
 | 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Sparse/UV0, CPU alpha, named UV, morph frames, vertex colors and evaluated PBR GLB export validated |
 | 3 | Richer GPU scattering and transport quality | GPU alpha, conductor, coat and ideal dielectric validated; broader lighting/sampling quality remains separate |
-| 4 | External hair/volume inputs, fiber shading and sparse GPU media | Pending |
+| 4 | External hair/volume inputs, fiber shading and sparse GPU media | VOL3 CPU input validated; strand adapter, fiber and GPU media remain |
 | 5 | Scoped native .blend/USD/MaterialX interchange | Pending |
 | 6 | M10 engine UV/paint/sculpt/remesh/retopology operations | Pending |
 | 7 | M11 solver families with checkpoint/seek semantics | Pending |
@@ -108,3 +108,11 @@ All522 prior image/pass files,174 receipts and137 fixture files remain unchanged
 Three earlier generated shaders retain their exact hashes. Native dielectric optics
 now share Metal/WebGPU coverage; external volume input is next in the engine order.
 Evidence: `evidence/gpu-dielectric/README.md`. No major blocker is parked.
+
+VOL3 input acceptance: 156 native and 133 Wasm tests, 103 CLI calls over eight
+analytic/source-policy cases and actual Chrome CPU/OPFS import workflows. Native
+and browser reports, revisions, pixels and diagnostic passes match exactly. The
+64³ sparse source retains five cells in a 485-byte native asset. All 747 prior
+images/passes, 249 receipts, 151 fixture files and four generated shaders remain
+unchanged. No dependency changes or major blocker. External strand input is next.
+Evidence: `evidence/volume-import/README.md`. GPU media remains a separate gate.

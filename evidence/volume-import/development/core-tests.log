@@ -1,0 +1,24 @@
+   Compiling render-core v0.1.0 (/private/tmp/render-volume-import-20260906/crates/core)
+error: float literals must have an integer part
+  --> crates/core/tests/volume_import.rs:28:138
+   |
+28 | ...ransmittance[c]-expected).abs()<1e-13);assert!((t.radiance[c]-[.25,.5,1.][c]*(1.-expected)/p.absorption[c]).abs()<1e-13);}
+   |                                                                   ^^^
+   |
+help: must have an integer part
+   |
+28 |   for c in 0..3 {let expected=(-p.absorption[c]*length).exp();assert!((t.transmittance[c]-expected).abs()<1e-13);assert!((t.radiance[c]-[0.25,.5,1.][c]*(1.-expected)/p.absorption[c]).abs()<1e-13);}
+   |                                                                                                                                          +
+
+error: float literals must have an integer part
+  --> crates/core/tests/volume_import.rs:28:142
+   |
+28 | ...mittance[c]-expected).abs()<1e-13);assert!((t.radiance[c]-[.25,.5,1.][c]*(1.-expected)/p.absorption[c]).abs()<1e-13);}
+   |                                                                   ^^
+   |
+help: must have an integer part
+   |
+28 |   for c in 0..3 {let expected=(-p.absorption[c]*length).exp();assert!((t.transmittance[c]-expected).abs()<1e-13);assert!((t.radiance[c]-[.25,0.5,1.][c]*(1.-expected)/p.absorption[c]).abs()<1e-13);}
+   |                                                                                                                                              +
+
+error: could not compile `render-core` (test "volume_import") due to 2 previous errors

@@ -26,7 +26,7 @@ An independent, fully Rust creative platform with agent-native operations, brows
 - `planning/feature_matrix.json`: capability status by feature family and compatibility axis.
 - `planning/initial_backlog.json`: first 12 implementation tasks and dependencies.
 - `schemas/material_edit_request.schema.json`: narrow illustrative request schema.
-- `schemas/agent_request.schema.json`: implemented agent operations v0 wire contract.
+- `schemas/agent_request.schema.json`: reviewed foundation/export request subset; additional operations are documented in their profile contracts.
 - `examples/`: positive/negative example requests with validation caveats.
 - `planning/document_validation_report.json`: document-shape and planning-graph checks performed while preparing this package.
 
@@ -70,3 +70,8 @@ Normal/tangent morphs and authored skinning frames: [profile](docs/morph_frames.
 
 Independent glTF source validation and fixture corrections:
 [contract](docs/gltf_source_conformance.md), [evidence](evidence/indexed-attributes/README.md).
+
+Linear vertex colors: [profile](docs/vertex_colors.md), [evidence](evidence/vertex-colors/README.md).
+
+Evaluated PBR GLB export: [profile and CLI contract](docs/gltf_export.md),
+[fixture recipe](fixtures/gltf-export/README.md), [acceptance](evidence/gltf-export/README.md).

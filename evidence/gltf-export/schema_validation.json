@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "scope": "Structural JSON Schema subset; semantic consent, stale revisions and actual output budgets remain Rust checks",
+  "schema_sha256": "345097e4a6f1e3a2321a89b315fdf9f443aa1de040c052fa5f56067697e329be",
+  "accepted_request_shapes": [
+    "004-uv-export.request.json",
+    "005-uv-repeat.request.json",
+    "017-uv-stale-export.request.json",
+    "023-color-export.request.json",
+    "024-color-repeat.request.json",
+    "036-color-stale-export.request.json",
+    "042-morph-export.request.json",
+    "043-morph-repeat.request.json",
+    "055-morph-stale-export.request.json",
+    "061-mask-export.request.json",
+    "062-mask-repeat.request.json",
+    "073-mask-stale-export.request.json",
+    "079-blend-export.request.json",
+    "080-blend-repeat.request.json",
+    "091-blend-stale-export.request.json",
+    "094-core-budget.request.json",
+    "095-vertex-budget.request.json",
+    "096-output-budget.request.json",
+    "097-consent.request.json",
+    "098-cancelled.request.json"
+  ],
+  "rejected_mutations": [
+    "max_bytes",
+    "max_vertices",
+    "max_position_error_meters",
+    "allow_approximations",
+    "unknown",
+    "missing_revision",
+    "extra_request",
+    "zero_denominator",
+    "unknown_method"
+  ]
+}

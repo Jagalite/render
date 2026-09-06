@@ -1,0 +1,24 @@
+   Compiling render-core v0.1.0 (/private/tmp/render-gltf-export-20260906/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 6.38s
+     Running tests/gltf_export.rs (target/debug/deps/gltf_export-65420313c676ab8e)
+
+running 1 test
+test persistence_layout_cannot_change_export_order_or_bytes ... FAILED
+
+failures:
+
+---- persistence_layout_cannot_change_export_order_or_bytes stdout ----
+
+thread 'persistence_layout_cannot_change_export_order_or_bytes' (3799460) panicked at crates/core/tests/gltf_export.rs:443:5:
+assertion `left == right` failed
+  left: "sha256:f2eec88eef33e5acb2e7c5484df14a0e4d0a4acb4dfc79adad813e4e07c8f484"
+ right: "sha256:51b346ca6c0db7c13339697a9d11b327364a880ff9221677db67b03e4137e592"
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    persistence_layout_cannot_change_export_order_or_bytes
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 0.02s
+
+error: test failed, to rerun pass `-p render-core --test gltf_export`

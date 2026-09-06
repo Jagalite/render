@@ -1,0 +1,462 @@
+{
+  "status": "passed",
+  "profile": "gltf2-animated-pbr-v0",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/000-init.json"
+      ],
+      "seconds": 0.023120416000892874,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/001-inspect.json"
+      ],
+      "seconds": 0.007795582998369355,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/002-import.json"
+      ],
+      "seconds": 0.04120387500006473,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17367040,
+        "peak memory footprint": 3638400
+      }
+    },
+    {
+      "name": "retry",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/003-retry.json"
+      ],
+      "seconds": 0.0311142079954152,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/004-inspect.json"
+      ],
+      "seconds": 0.01870325000345474,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "static-defaults",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/005-static-defaults.json"
+      ],
+      "seconds": 0.10319879199960269,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20152320,
+        "peak memory footprint": 5047424
+      }
+    },
+    {
+      "name": "evaluate-2",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/006-evaluate-2.json"
+      ],
+      "seconds": 0.02057737499853829,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-0",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/007-evaluate-0.json"
+      ],
+      "seconds": 0.01859708299889462,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-4",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/008-evaluate-4.json"
+      ],
+      "seconds": 0.01826104100473458,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-1",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/009-evaluate-1.json"
+      ],
+      "seconds": 0.018394334001641255,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-3",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/010-evaluate-3.json"
+      ],
+      "seconds": 0.01834633300313726,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-2",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/011-evaluate-2.json"
+      ],
+      "seconds": 0.018376416999672074,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/012-sequence.json"
+      ],
+      "seconds": 1.020544166000036,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20660224,
+        "peak memory footprint": 5309504
+      }
+    },
+    {
+      "name": "frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/013-frame.json"
+      ],
+      "seconds": 0.18442958300147438,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20414464,
+        "peak memory footprint": 5129344
+      }
+    },
+    {
+      "name": "archive",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/014-archive.json"
+      ],
+      "seconds": 0.03833029199449811,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restore",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/restored",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/015-restore.json"
+      ],
+      "seconds": 0.031802083998627495,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restored",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/restored",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/016-restored.json"
+      ],
+      "seconds": 0.020339041999250185,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restored-frame",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/restored",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/017-restored-frame.json"
+      ],
+      "seconds": 0.18433691599784652,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/018-cpu.json"
+      ],
+      "seconds": 0.09266208399640163,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20103168,
+        "peak memory footprint": 4932736
+      }
+    },
+    {
+      "name": "gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/019-gpu.json"
+      ],
+      "seconds": 0.21111329099949216,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 35799040,
+        "peak memory footprint": 12060224
+      }
+    },
+    {
+      "name": "stale",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/020-stale.json"
+      ],
+      "seconds": 0.016536415998416487,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "cancel",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/021-cancel.json"
+      ],
+      "seconds": 0.006426790998375509,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "limited-output",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/022-limited-output.json"
+      ],
+      "seconds": 0.06319620800059056,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/023-unchanged.json"
+      ],
+      "seconds": 0.02117358300165506,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "external-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/external",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/024-external-init.json"
+      ],
+      "seconds": 0.018460416999005247,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "external-base",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/external",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/025-external-base.json"
+      ],
+      "seconds": 0.007453833000909071,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "external-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/external",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/026-external-import.json"
+      ],
+      "seconds": 0.039903958000650164,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17743872,
+        "peak memory footprint": 3556480
+      }
+    },
+    {
+      "name": "external-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/external",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/027-external-state.json"
+      ],
+      "seconds": 0.021126083003764506,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "external-frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/external",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/animated-regression/requests/028-external-frame.json"
+      ],
+      "seconds": 0.2158069590004743,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20545536,
+        "peak memory footprint": 5244032
+      }
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "import": {
+    "instances": 1,
+    "losses": [
+      "Single-scattering GGX, roughness regularized to >=0.05; missing tangents use a per-triangle UV basis, not MikkTSpace seam smoothing. OPAQUE alpha is ignored as specified by glTF.",
+      "Node names are retained; extras and generator metadata are not authored components. Only the selected scene is imported.",
+      "Animation and skin names remain in the original source; native IDs and complete converted channels/bindings are retained. Imported node and rig tracks are separate native authoring components.",
+      "Maximum source quaternion squared-norm correction: 3.422854178e-8",
+      "Absolute TRS clips; float32 key times retained exactly within rational limits; unit rotation keys renormalized within 1e-3 squared-norm error. Skin weights normalized within 0.01 of unity, duplicate influences combined. Deformation recomputes flat geometric normals; POSITION-only morphs; no animation/skin glTF export. Single-time clips use a one-second constant interval."
+    ],
+    "profile": "gltf2-animated-pbr-v0",
+    "source_clips": {
+      "0": "15c77c8677038a00d22b7921d37af01e"
+    },
+    "source_digest": "sha256:60dd5e05c5bc4c889646fe69e0630bed0affe9c0702c09130cf06a579e8ff017",
+    "source_materials": {
+      "0": "c3846073cd659005c3f0352a8bf9e160"
+    },
+    "source_nodes": {
+      "0": "0f947722da939cac995c46516731eaaf",
+      "1": "75d6fb7de0af8f1f0a3954a89f84ad05",
+      "2": "a5725e26474543436536bce8e9d02f98"
+    },
+    "source_skins": {
+      "0": "ccaec64f12300e1800dcb5294cc0f24b"
+    },
+    "unique_meshes": 1
+  },
+  "revision": "sha256:4d0069d4ae88dff8a3e16f9bbcd998796f9739101b158d9bab9423d78a472580",
+  "clip": "15c77c8677038a00d22b7921d37af01e",
+  "serialized_document_bytes": 12537,
+  "gpu_comparison": {
+    "linear_rmse": 4.4022530014598934e-09,
+    "object_mismatches": 0
+  },
+  "external_import": {
+    "instances": 1,
+    "losses": [
+      "Single-scattering GGX, roughness regularized to >=0.05; missing tangents use a per-triangle UV basis, not MikkTSpace seam smoothing. OPAQUE alpha is ignored as specified by glTF.",
+      "Node names are retained; extras and generator metadata are not authored components. Only the selected scene is imported.",
+      "Animation and skin names remain in the original source; native IDs and complete converted channels/bindings are retained. Imported node and rig tracks are separate native authoring components.",
+      "Maximum source quaternion squared-norm correction: 4.650354123e-4",
+      "Absolute TRS clips; float32 key times retained exactly within rational limits; unit rotation keys renormalized within 1e-3 squared-norm error. Skin weights normalized within 0.01 of unity, duplicate influences combined. Deformation recomputes flat geometric normals; POSITION-only morphs; no animation/skin glTF export. Single-time clips use a one-second constant interval."
+    ],
+    "profile": "gltf2-animated-pbr-v0",
+    "source_clips": {
+      "0": "eab05af5a11dd3519be2a4821acd588a"
+    },
+    "source_digest": "sha256:10fdd28dc28741300cb106933931a6b046216443962d823d35e24f34a3ce4d23",
+    "source_materials": {},
+    "source_nodes": {
+      "0": "7bf34272c6d60ca5d76fd5c2493e695b",
+      "1": "7968a11b4bd76e12049a8231cc0b37d0",
+      "2": "87b504e8915ad5093b118e57396dd0d4"
+    },
+    "source_skins": {
+      "0": "4bdd57af7fbca1e74f7f61e46ab344dc"
+    },
+    "unique_meshes": 1
+  }
+}

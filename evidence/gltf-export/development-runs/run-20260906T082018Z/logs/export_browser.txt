@@ -1,0 +1,9 @@
+file:///private/tmp/render-gltf-export-20260906/scripts/gltf-export-browser.mjs:12
+const evaluate=async expression=>{const r=await command('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw new Error(JSON.stringify(r.exceptionDetails));return r.result.value;};
+                                                                                                                                                          ^
+
+Error: {"exceptionId":18,"text":"Uncaught (in promise) Error: native/browser GLB bytes","lineNumber":0,"columnNumber":0,"exception":{"type":"object","subtype":"error","className":"Error","description":"Error: native/browser GLB bytes\n    at check (<anonymous>:2:77)\n    at <anonymous>:9:104","objectId":"-106541566979535419.17.1"}}
+    at evaluate (file:///private/tmp/render-gltf-export-20260906/scripts/gltf-export-browser.mjs:12:155)
+    at async file:///private/tmp/render-gltf-export-20260906/scripts/gltf-export-browser.mjs:18:15
+
+Node.js v23.5.0

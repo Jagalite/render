@@ -19,7 +19,7 @@
         "preview": "portable_path_PBR; flat_raster_legacy_only",
         "human_editing": "planned_M09",
         "import": "scoped_OBJ_static_PBR_and_gltf2_animated_pbr_v0_with_explicit_resources; gltf2_sparse_uv0_v1; gltf2_alpha_cpu_v1_MASK_BLEND; gltf2_named_uv_v1_per_role_UV0_to_UV7; gltf2_morph_frames_v1; gltf2_vertex_color_v1",
-        "export": "canonical_json_and_native_package"
+        "export": "canonical_json_and_native_package; gltf2_evaluated_pbr_export_v1_with_explicit_losses"
       },
       "platform_profiles": {
         "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
@@ -38,7 +38,8 @@
         "evidence/named-uv/README.md",
         "evidence/morph-frames/README.md",
         "evidence/indexed-attributes/README.md",
-        "evidence/vertex-colors/README.md"
+        "evidence/vertex-colors/README.md",
+        "evidence/gltf-export/README.md"
       ]
     },
     {
@@ -57,7 +58,7 @@
         "preview": "implemented_candidates_and_render_api",
         "human_editing": "planned_M09",
         "import": "typed_JSON_requests_and_explicit_OBJ_static_or_animated_GLB_glTF_bundles; gltf2_sparse_uv0_v1; gltf2_alpha_cpu_v1_MASK_BLEND; gltf2_named_uv_v1_per_role_UV0_to_UV7; gltf2_morph_frames_v1; gltf2_vertex_color_v1",
-        "export": "native_document_lossy_evaluated_OBJ_and_render_artifact_manifests"
+        "export": "native_document_lossy_evaluated_OBJ_and_render_artifact_manifests; gltf2_evaluated_pbr_export_v1_with_explicit_losses"
       },
       "platform_profiles": {
         "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
@@ -79,7 +80,8 @@
         "evidence/named-uv/README.md",
         "evidence/morph-frames/README.md",
         "evidence/indexed-attributes/README.md",
-        "evidence/vertex-colors/README.md"
+        "evidence/vertex-colors/README.md",
+        "evidence/gltf-export/README.md"
       ]
     },
     {
@@ -189,14 +191,15 @@
         "preview": "public_Rust_render_preview_operations; raster_legacy_only",
         "human_editing": "planned_M09",
         "import": "native_typed_JSON_only; external_format_adapters_retain_INPUT_track_limits",
-        "export": "canonical_JSON_native_package_and_typed_render_artifacts"
+        "export": "canonical_JSON_native_package_and_typed_render_artifacts; gltf2_evaluated_pbr_export_v1_with_explicit_losses"
       },
       "platform_profiles": {
         "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
         "browser_local": "validated_Chromium_Rust_Wasm_OPFS; WebGPU_named_subset"
       },
       "evidence": [
-        "evidence/m06-m08/README.md"
+        "evidence/m06-m08/README.md",
+        "evidence/gltf-export/README.md"
       ]
     },
     {
@@ -216,7 +219,7 @@
         "preview": "public_Rust_render_preview_operations; raster_legacy_only",
         "human_editing": "planned_M09",
         "import": "scoped_OBJ_static_PBR_and_gltf2_animated_pbr_v0_with_explicit_resources",
-        "export": "canonical_JSON_native_package_and_typed_render_artifacts"
+        "export": "canonical_JSON_native_package_and_typed_render_artifacts; gltf2_evaluated_pbr_export_v1_with_explicit_losses"
       },
       "platform_profiles": {
         "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
@@ -230,7 +233,8 @@
         "evidence/animated-gltf/README.md",
         "evidence/multibounce-pbr/README.md",
         "evidence/alpha-gltf/README.md",
-        "evidence/named-uv/README.md"
+        "evidence/named-uv/README.md",
+        "evidence/gltf-export/README.md"
       ]
     },
     {
@@ -250,7 +254,7 @@
         "preview": "public_Rust_render_preview_operations; raster_legacy_only",
         "human_editing": "planned_M09",
         "import": "gltf2_animated_pbr_v0_TRS_clips_skins_POSITION_morphs; gltf2_sparse_uv0_v1",
-        "export": "canonical_JSON_native_package_and_typed_render_artifacts"
+        "export": "canonical_JSON_native_package_and_typed_render_artifacts; gltf2_evaluated_pbr_export_v1_with_explicit_losses"
       },
       "platform_profiles": {
         "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
@@ -261,7 +265,8 @@
         "evidence/animated-gltf/README.md",
         "evidence/gpu-shutter/README.md",
         "evidence/sparse-gltf/README.md",
-        "evidence/morph-frames/README.md"
+        "evidence/morph-frames/README.md",
+        "evidence/gltf-export/README.md"
       ]
     },
     {
@@ -424,7 +429,7 @@
         "preview": "portable_path_PBR; flat_raster_legacy_only",
         "human_editing": "planned_M09",
         "import": "scoped_OBJ_static_PBR_and_gltf2_animated_pbr_v0_with_explicit_resources; gltf2_sparse_uv0_v1; gltf2_alpha_cpu_v1_MASK_BLEND; gltf2_named_uv_v1_per_role_UV0_to_UV7; gltf2_morph_frames_v1; gltf2_vertex_color_v1",
-        "export": "named_static_OBJ_glTF_profiles_and_lossless_native_JSON; no_animated_glTF_export"
+        "export": "named_static_OBJ_glTF_profiles_and_lossless_native_JSON; no_authored_animation_glTF_export; gltf2_evaluated_pbr_export_v1_with_explicit_losses"
       },
       "platform_profiles": {
         "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
@@ -442,7 +447,8 @@
         "evidence/named-uv/README.md",
         "evidence/morph-frames/README.md",
         "evidence/indexed-attributes/README.md",
-        "evidence/vertex-colors/README.md"
+        "evidence/vertex-colors/README.md",
+        "evidence/gltf-export/README.md"
       ]
     },
     {

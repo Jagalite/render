@@ -1,0 +1,161 @@
+{
+  "scope": "32x16, 8 samples, depth2; UV, color, exact-time morph, MASK and BLEND export/reimport cases; individual process observations are not a benchmark or allocator limit",
+  "observations": [
+    {
+      "name": "uv-export",
+      "seconds": 0.04430687499552732,
+      "maximum resident set size": 17661952,
+      "peak memory footprint": 2966592
+    },
+    {
+      "name": "uv-reimport",
+      "seconds": 0.03940745799627621,
+      "maximum resident set size": 16351232,
+      "peak memory footprint": 2999360
+    },
+    {
+      "name": "uv-source-cpu",
+      "seconds": 0.057733292000193615,
+      "maximum resident set size": 17694720,
+      "peak memory footprint": 3163136
+    },
+    {
+      "name": "uv-round-cpu",
+      "seconds": 0.0555469999962952,
+      "maximum resident set size": 17678336,
+      "peak memory footprint": 3163200
+    },
+    {
+      "name": "uv-source-gpu",
+      "seconds": 0.13072929199552163,
+      "maximum resident set size": 33832960,
+      "peak memory footprint": 10929728
+    },
+    {
+      "name": "uv-round-gpu",
+      "seconds": 0.13528541599953314,
+      "maximum resident set size": 33964032,
+      "peak memory footprint": 11077248
+    },
+    {
+      "name": "color-export",
+      "seconds": 0.039815083000576124,
+      "maximum resident set size": 17629184,
+      "peak memory footprint": 2819072
+    },
+    {
+      "name": "color-reimport",
+      "seconds": 0.04046599999855971,
+      "maximum resident set size": 16269312,
+      "peak memory footprint": 2884672
+    },
+    {
+      "name": "color-source-cpu",
+      "seconds": 0.05345691700495081,
+      "maximum resident set size": 17629184,
+      "peak memory footprint": 3130432
+    },
+    {
+      "name": "color-round-cpu",
+      "seconds": 0.061374583005090244,
+      "maximum resident set size": 17629184,
+      "peak memory footprint": 3130432
+    },
+    {
+      "name": "color-source-gpu",
+      "seconds": 0.13274470899341395,
+      "maximum resident set size": 34045952,
+      "peak memory footprint": 11159168
+    },
+    {
+      "name": "color-round-gpu",
+      "seconds": 0.12966545800009044,
+      "maximum resident set size": 33865728,
+      "peak memory footprint": 10978944
+    },
+    {
+      "name": "morph-export",
+      "seconds": 0.05341862500063144,
+      "maximum resident set size": 19283968,
+      "peak memory footprint": 3654784
+    },
+    {
+      "name": "morph-reimport",
+      "seconds": 0.03982641699985834,
+      "maximum resident set size": 16384000,
+      "peak memory footprint": 3032128
+    },
+    {
+      "name": "morph-source-cpu",
+      "seconds": 0.0769670000008773,
+      "maximum resident set size": 19300352,
+      "peak memory footprint": 3802240
+    },
+    {
+      "name": "morph-round-cpu",
+      "seconds": 0.06715516700205626,
+      "maximum resident set size": 17661952,
+      "peak memory footprint": 3146880
+    },
+    {
+      "name": "morph-source-gpu",
+      "seconds": 0.14134724999894388,
+      "maximum resident set size": 35389440,
+      "peak memory footprint": 11454080
+    },
+    {
+      "name": "morph-round-gpu",
+      "seconds": 0.13921629099786514,
+      "maximum resident set size": 33865728,
+      "peak memory footprint": 10962560
+    },
+    {
+      "name": "mask-export",
+      "seconds": 0.0411485829972662,
+      "maximum resident set size": 17645568,
+      "peak memory footprint": 2851904
+    },
+    {
+      "name": "mask-reimport",
+      "seconds": 0.03657412499887869,
+      "maximum resident set size": 16302080,
+      "peak memory footprint": 2884672
+    },
+    {
+      "name": "mask-source-cpu",
+      "seconds": 0.055690208995656576,
+      "maximum resident set size": 17367040,
+      "peak memory footprint": 3015744
+    },
+    {
+      "name": "mask-round-cpu",
+      "seconds": 0.05364325000118697,
+      "maximum resident set size": 17383424,
+      "peak memory footprint": 3032128
+    },
+    {
+      "name": "blend-export",
+      "seconds": 0.03903704100230243,
+      "maximum resident set size": 17612800,
+      "peak memory footprint": 2835520
+    },
+    {
+      "name": "blend-reimport",
+      "seconds": 0.03553633300180081,
+      "maximum resident set size": 16302080,
+      "peak memory footprint": 2884672
+    },
+    {
+      "name": "blend-source-cpu",
+      "seconds": 0.051785333002044354,
+      "maximum resident set size": 17432576,
+      "peak memory footprint": 3081280
+    },
+    {
+      "name": "blend-round-cpu",
+      "seconds": 0.053284458997950424,
+      "maximum resident set size": 17416192,
+      "peak memory footprint": 3064896
+    }
+  ]
+}

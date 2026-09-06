@@ -154,3 +154,8 @@ that rendering never mutates it. It calls only the general project entry point.
 [Sparse accessors and normalized UV0](gltf_accessors.md) now extend the named
 static/animated glTF profiles; [acceptance evidence](../evidence/sparse-gltf/README.md)
 records equivalent dense/sparse native/browser rendering and recovery.
+
+The pinned `export` operation also accepts `content.format: "glb"` with an optional
+exact-time pose and required bounded policy. [The export contract](gltf_export.md)
+defines preserved PBR/attribute semantics, explicit losses, publication and budgets.
+The workflow is `python3 scripts/gltf-export-workflow.py artifacts/my-export-run`.

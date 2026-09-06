@@ -1,0 +1,500 @@
+[
+  {
+    "path": "Cargo.lock",
+    "bytes": 37507,
+    "sha256": "4f6c11c32e966f791611b40cf7773771ecc0bef6491cb1cd484a4369c75bc59d",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "Cargo.toml",
+    "bytes": 864,
+    "sha256": "30f2bf6f877b47d7cf3ff8c091be20db9ed0002087c0cb61fbc1756e12bccf21",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/Cargo.toml",
+    "bytes": 447,
+    "sha256": "2e56aec61a5c08e545ee9fffbf026e7a50608f3ff6166a2cfe2e95e640990365",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/agent.rs",
+    "bytes": 30654,
+    "sha256": "789c33af3c1e5e220fa67063f0d21b0960b4130c0c5351f6f16f9a15a0d8398d",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/animation.rs",
+    "bytes": 33880,
+    "sha256": "3a8002b2942af5626807191ed50b3e4b5edea90e9aac69ba8d47f0b4b5a6d658",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/api.rs",
+    "bytes": 6772,
+    "sha256": "2c80f45ae5aef1db959c22afe721b17b0ee236851073f1fb6558660d24b07aec",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/cameras.rs",
+    "bytes": 1698,
+    "sha256": "12b5950d8eb79b604ed20745675feecfc313902c6c3d54249ce3963355da0abe",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/curves.rs",
+    "bytes": 28783,
+    "sha256": "5ddabfa24ec53c730f24af081fc253a33c33bb14677335d5cc0f26e28bd6cfdc",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/displacement.rs",
+    "bytes": 14737,
+    "sha256": "0d5dc4298210874af376023da247fd56a981e365f14e292a90fc14d70a4d7200",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/document.rs",
+    "bytes": 45700,
+    "sha256": "d3dc17128988c958a96df7c6d647419563c0f8636c87e3c881dd6d6a1c8182a8",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/feature_fixtures.rs",
+    "bytes": 30029,
+    "sha256": "aaa82eb81a874743b269c9b3f3374d4e8cf58977ac3b1187cd5493a6e7b3a2f5",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/fixtures.rs",
+    "bytes": 7515,
+    "sha256": "31f8849f5045f84d4e7f1cd538f4906b1aa2eef8bce277dec0e1f6e46e144252",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/geometry.rs",
+    "bytes": 15722,
+    "sha256": "c5f5995aae25788207b2ccbe0bd26ef44ba9d68e16718e3b38ace8992e7fdc4e",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/gltf_export.rs",
+    "bytes": 21562,
+    "sha256": "3c2298614cc5235d87bff4af5098c60943f91abeffe835d2da8896ffcf99915a",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/gltf_materials.rs",
+    "bytes": 9358,
+    "sha256": "308da1d33e49465eb0d708a20406e9a624f7c10bef0051466e70628a97620a89",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/gltf_scene.rs",
+    "bytes": 42202,
+    "sha256": "097a4e0d1ede4e153e50e245708205cdce327466ddd7edfdfc3d924f6b5b2683",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/gltf_scene/animated.rs",
+    "bytes": 32923,
+    "sha256": "2525011ee0983bd0a70ec63a944d09b0645e3179068bd18d350ecf2ec716e578",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/groom.rs",
+    "bytes": 10546,
+    "sha256": "964142ec16d0268095811a86526438d96c96421d47d6d70b72a8bf934a3ce66b",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/imaging.rs",
+    "bytes": 2843,
+    "sha256": "9af32e4fbb2cffe48a8d682a7f1f3eb4c054776d45dd2d9860a2254577f91cd8",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/interchange.rs",
+    "bytes": 13656,
+    "sha256": "b19699ea86a9ec19f1bc69d426f1b512fdaf746689456ff8439fdb4591f81059",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/jobs.rs",
+    "bytes": 6361,
+    "sha256": "c5cc0dd83c0702932751d8580fbdae8441dcd1f80068bf2cf220df20c7bbeba6",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/lib.rs",
+    "bytes": 4353,
+    "sha256": "29f09a0aa96252928f92a52f3f5c5961f9d9d31f723323f65522b6f6850d3b14",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/mesh_codec.rs",
+    "bytes": 5680,
+    "sha256": "8422e06b65486334da9bbcc14d44a2ee7e3514f2f6ede7f7ab6ec034d2faacf8",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/modeling.rs",
+    "bytes": 53535,
+    "sha256": "ec99f0275defd971abd191d15bcb2a6b015b7328937d2dbbac1e0db80a79ae8c",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/pbr.rs",
+    "bytes": 5335,
+    "sha256": "d84cf662eb4aa0ff6246a33d00d38f00aea0b08b505e473280f3c69132fdbcb3",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/procedural.rs",
+    "bytes": 16384,
+    "sha256": "14870f3052f3bda35d5db06dd41d4e720a40a6358d482ed2c11221b9e2d033d6",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/products.rs",
+    "bytes": 23905,
+    "sha256": "5a999a6cac51cd7f58a5acd378ce45c7a3ce37ceb3669f097961c62ab1f9b017",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/render.rs",
+    "bytes": 58217,
+    "sha256": "79364bbf0ccdf5a82f6f0a41f966c3ec2566140c4935b8902d8a5fc23ab52123",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/rigging.rs",
+    "bytes": 18992,
+    "sha256": "8d4a2bcf81352f4c23e07a959ffd2264c305a24d3cfed7696ec5aae0032e9d8b",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/rigging/frames.rs",
+    "bytes": 10730,
+    "sha256": "cf5aaf5946d0f6ce61b52107d4e3214a6fafb6febf325dea8b137a8e65a99bf9",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/scattering.rs",
+    "bytes": 21672,
+    "sha256": "e5a0bcec8f952c95681bbce88e56724d62810d1d4b93baa0c09481a12ed0e8ac",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/sequence.rs",
+    "bytes": 8112,
+    "sha256": "27286d07c8de16a4a7d5ec233fc540fa0e5f495bdd40c50f0995f093bd5e7d7b",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/storage.rs",
+    "bytes": 13143,
+    "sha256": "b2ed8f37fa83859fb5132988467afc63bc5c3bb6884d9edbad603bb1286a5e21",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/textures.rs",
+    "bytes": 9985,
+    "sha256": "439a9bfe9e24f922c4f3200d1e948369291c451ad080f8455cd140ead5fb998e",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/topology.rs",
+    "bytes": 9420,
+    "sha256": "282a772af1d906ec43be65918a2e603ba3b18405bd8db54364b5021dc41578bf",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/uploads.rs",
+    "bytes": 3439,
+    "sha256": "958a2423431e990de0a306ef9180d9d0712147fed2980b1e28e0ba94238fc091",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/src/volumes.rs",
+    "bytes": 13543,
+    "sha256": "25425e769b523241bd8f01c0d9014b0e77f6038c6300702f7a2ac9cad309900d",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/tests/agent_workflow.rs",
+    "bytes": 21320,
+    "sha256": "5a14df5987aa759ddc6b2d5e0fa3da973ebc30f30419f06ec9bafa24dae1540f",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/tests/alpha_gltf.rs",
+    "bytes": 13587,
+    "sha256": "6903f027c995a38643c14a6d6590a90938f145b4c375712eae5edc505b7d66ed",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/tests/animated_gltf.rs",
+    "bytes": 17320,
+    "sha256": "3141fa1edfecb24cf6c9457adafba39f4fb2a919d6c8420739448a744b64da43",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/tests/animation.rs",
+    "bytes": 18815,
+    "sha256": "8fb8a6edd6fa1083b035aed32166e0e89d05b86406e16726cdfdbb1fb61227ac",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/tests/conformance.rs",
+    "bytes": 36232,
+    "sha256": "2d3d826d2f5606c80ae5d77fe86a582ef511c07875ae452231e210b90fbb580e",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/tests/curves.rs",
+    "bytes": 10875,
+    "sha256": "1644dc30fa971182aec3b97ac337426bd16028e7114449bffaa1047d602c1791",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/tests/displacement.rs",
+    "bytes": 5336,
+    "sha256": "cd97364f703c4aeabbed4dd9e0b5e1bab9a358c906ce9773515701ccbcfa6d39",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/tests/gltf_export.rs",
+    "bytes": 15789,
+    "sha256": "c42bbea01ecf379cfa70570cf6f15c1dc8cab1d8434c697170fb2589226b38a8",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/tests/groom.rs",
+    "bytes": 5486,
+    "sha256": "07653fe4a6c64ff83f31a93b986431887eca489cac2b6fba63a15f30ddcd6f6f",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/tests/modeling.rs",
+    "bytes": 15774,
+    "sha256": "98d84d9b21f2c1f047c436e1df01cb37cad1e75179cb7fe474a771b057b15a32",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/tests/morph_frames.rs",
+    "bytes": 11486,
+    "sha256": "9d012444d3317e5d6059809f0ec96fc17b4fdf780b2d7b2ddf70ce31ddc7a48e",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/tests/multibounce.rs",
+    "bytes": 7824,
+    "sha256": "d176dd9ec82bc5d19536ba7d124652138f60efed88240c24577a222936c141a4",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/tests/named_uv.rs",
+    "bytes": 12639,
+    "sha256": "8d45358962d6578048f8df7896e6b8cefc8bd952f9e24bb953b818ce5a71bdf1",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/tests/products.rs",
+    "bytes": 7226,
+    "sha256": "989d37ebd0a6a0c830b1c6f4e347442b00c25f26e8c8dd084e9364a036b67659",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/tests/scattering.rs",
+    "bytes": 8361,
+    "sha256": "727a65c110ac080a76bb86e99c1c6467fd631b7827833d7cd9b12940c8781c37",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/tests/sparse_gltf.rs",
+    "bytes": 12187,
+    "sha256": "a1d229f2504a3f842ec4ed53141e76b0f87c9d705e4acb39da42ed696abd6af7",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/tests/static_pbr.rs",
+    "bytes": 22820,
+    "sha256": "c7942514f9141db9eb40c54df9b941ee178ca2a31bd30d5170ff071666e3f993",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/tests/vertex_colors.rs",
+    "bytes": 15528,
+    "sha256": "c4d5a08b890c2be40d52ed9333b542ee1189cbe49c48ee9152ea6d42e5589300",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/core/tests/volumes.rs",
+    "bytes": 9144,
+    "sha256": "ac261fc90eb28649f4512b91ab6e31508854872483ead70b2b2590ed1fa52907",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/ffi/Cargo.toml",
+    "bytes": 311,
+    "sha256": "a73a443608037a9c7c9b2991e5e0aeca27385cf38605cf21f41a2ddd2946a9d3",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/ffi/src/lib.rs",
+    "bytes": 9387,
+    "sha256": "37a57f809e9aff70b29b16318abeaf83cfe6498fd85d884509c4c70d7e22b260",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/gpu/Cargo.toml",
+    "bytes": 356,
+    "sha256": "6275711a12367eb3085eceafa29d7d6456beb0d711d1c655f14298324f078c16",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/gpu/src/lib.rs",
+    "bytes": 31357,
+    "sha256": "a16b54079424111e7bfb7fba5131555056f6a06b0356f72efef5cdde26d3ff44",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/gpu/src/raster.rs",
+    "bytes": 11065,
+    "sha256": "983a7075af9ed0d7ae3f5c2420d5dd0b60ca50e6b97e72ebd5ee99316dde0246",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/gpu/src/sequence.rs",
+    "bytes": 7207,
+    "sha256": "d3575b13d9a4bea31a5d4cfbbeca6f218cd21fc5a55b5f07041ee4b74184561a",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/host/Cargo.toml",
+    "bytes": 347,
+    "sha256": "74296656ace7267550cbe7cec5f6064c3a5ca9b4f15219f85d79306d7981cacf",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/host/examples/m00.rs",
+    "bytes": 10306,
+    "sha256": "00479cea5899706b5924dc2ed72a1547bc3cc5e1dc9837846db54ec3948c48b1",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/host/src/agent_workflow.rs",
+    "bytes": 10221,
+    "sha256": "2d4d06145514719e721daa8a8cf5d032f91059031d616b294054fcc43d044fe3",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/host/src/job_host.rs",
+    "bytes": 19565,
+    "sha256": "6c2046136b6b9fdaf85c2cf19b85f10587ecc53ed86e9f85435d83c737b041dc",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/host/src/main.rs",
+    "bytes": 22624,
+    "sha256": "f96fd47528f124634e468934e9c7fab3f3f810c5e08e91cd75eacd53de22b37a",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/host/src/milestone_workflow.rs",
+    "bytes": 20839,
+    "sha256": "bd6a57ed4e98304efab70d31569a017a83154adb2e9ab765d52c0e4cec1c740b",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/host/src/project_cli.rs",
+    "bytes": 32658,
+    "sha256": "b4259178cf59623e6587e6233a1ad9c520a7743b92980297e4c347e394fe164c",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/host/src/static_pbr.rs",
+    "bytes": 12148,
+    "sha256": "61c11a938c43a53cf1c7bcbdf941a1c85b54d0f5bad9476a77bfa9ff4696c7c8",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/host/tests/gltf_export_gpu.rs",
+    "bytes": 4443,
+    "sha256": "19bf50d64e932e6df6344359d43ad582d3b5e3cdad9e1271f0e47fd85a4a55fa",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/host/tests/gpu_sequence.rs",
+    "bytes": 8552,
+    "sha256": "8f77c3155c7fadbc6f75271fd375c6da71efd4c06b8894825681f2f0fbb67fc4",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/host/tests/morph_frames_gpu.rs",
+    "bytes": 5240,
+    "sha256": "f5ed88bbf1efff303e80cf827ceb1e0eb53e78490246864caf76c371dba37733",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/host/tests/multibounce_gpu.rs",
+    "bytes": 5993,
+    "sha256": "a92c899a9c32767a7408750519c5c8727e697f89d5a494b07346747c01133ddd",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/host/tests/named_uv_gpu.rs",
+    "bytes": 3776,
+    "sha256": "71dd10f2d787ae335179dfc8b6a0f3702814156d3a3e4a80e4cdbceb5be6e408",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/host/tests/project_cli.rs",
+    "bytes": 20177,
+    "sha256": "64fdbdbd6ef51803cc751410685f100ed3c8208429160b8342d91921d731bb0a",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/host/tests/vertex_colors_gpu.rs",
+    "bytes": 4883,
+    "sha256": "f8c85cc2fa9ed6d01fefe0ead4e95ce15bfd3c1ff99a4c230e33ce618046f1ec",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/kernel/Cargo.toml",
+    "bytes": 199,
+    "sha256": "7cd2433582517c87a99ac064763b6c98134e0d54bff643712bdcd81189eeeba8",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/kernel/src/lib.rs",
+    "bytes": 10626,
+    "sha256": "ec11cab4aa678d0624c693d1f33bb25bbfb407826f7ef7b6e4fb922e6fee3a8c",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/kernel/src/path.rs",
+    "bytes": 33687,
+    "sha256": "60b5926eb79a527925ea34b2edb719bae226653bb244444f5a878cd5911b4bd0",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/kernel/src/path/pbr.rs",
+    "bytes": 29738,
+    "sha256": "92ed0aeb7134ee5d1c18f77ccf6a68dc060f95bbd9d8150ca54c82cda4ccb6f5",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/web/Cargo.toml",
+    "bytes": 890,
+    "sha256": "855c7eb86ec57d8cb0cfd940234e124e0888e123c88d1893bd570b03396ad2bf",
+    "unchanged_during_validation": true
+  },
+  {
+    "path": "crates/web/src/lib.rs",
+    "bytes": 37510,
+    "sha256": "145b660ec8cafd19d99ebd065265dbe77272b7c0c0a2b40f976ab1328ddb1fff",
+    "unchanged_during_validation": true
+  }
+]

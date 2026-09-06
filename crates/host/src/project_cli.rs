@@ -91,7 +91,14 @@ enum Source {
 #[serde(tag = "format", rename_all = "snake_case", deny_unknown_fields)]
 enum Export {
     Document {},
-    Obj { entity: Id, at: Option<Sample> },
+    Obj {
+        entity: Id,
+        at: Option<Sample>,
+    },
+    Glb {
+        at: Option<gltf_export::Sample>,
+        policy: gltf_export::Policy,
+    },
 }
 #[derive(Deserialize)]
 #[serde(tag = "method", rename_all = "snake_case", deny_unknown_fields)]
@@ -761,6 +768,26 @@ fn execute(root: &Path, operation: Operation, control: &mut Control) -> Result<V
                     json!({"profile":"native-document-v0","losses":[]}),
                     control,
                 ),
+                Export::Glb { at, policy } => {
+                    let exported = gltf_export::export(
+                        doc.snapshot(),
+                        &gltf_export::Request {
+                            revision: doc.snapshot().revision()?,
+                            at,
+                            policy,
+                        },
+                        || control.cancelled(),
+                    )?;
+                    out.bundle(
+                        "scene",
+                        vec![
+                            ("scene.glb", exported.glb),
+                            ("report.json", canonical(&exported.report)?),
+                        ],
+                        serde_json::to_value(&exported.report)?,
+                        control,
+                    )
+                }
                 Export::Obj { entity, at } => {
                     let (scene, receipt) = evaluated(&doc, at.as_ref(), control)?;
                     let inst =

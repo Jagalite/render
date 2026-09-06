@@ -5,19 +5,19 @@ working on feasible remaining steps. M09 interactive editor remains deferred.
 Each completed increment requires implementation, native/browser workflow evidence,
 negative/cancellation/stale checks, resource/provenance records and documentation.
 
-Current completed increment: linear glTF vertex colors; evidence/vertex-colors.
+Current completed increment: evaluated PBR GLB export; evidence/gltf-export.
 
 | Order | Increment | Status |
 |---|---|---|
 | 1 | GPU shutter frames and streaming sequences | Validated on feat/gpu-shutter-sequences; evidence/gpu-shutter |
-| 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Sparse/UV0, CPU alpha, named UV, morph frames and vertex colors validated; broader export next |
-| 3 | Richer GPU scattering and transport quality | Pending |
+| 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Sparse/UV0, CPU alpha, named UV, morph frames, vertex colors and evaluated PBR GLB export validated |
+| 3 | Richer GPU scattering and transport quality | Next: GPU alpha coverage and the identified CPU occlusion regression |
 | 4 | External hair/volume inputs, fiber shading and sparse GPU media | Pending |
 | 5 | Scoped native .blend/USD/MaterialX interchange | Pending |
 | 6 | M10 engine UV/paint/sculpt/remesh/retopology operations | Pending |
 | 7 | M11 solver families with checkpoint/seek semantics | Pending |
 | 8 | M12 compositor/drawing/media/tracking engines | Pending |
-| 9 | M13 collaboration/extensions/client compatibility hardening | Pending |
+| 9 | M13 collaboration/extensions/client compatibility hardening | Pending; expand the documented JSON Schema subset to all existing profile operations |
 | 10 | M14 engine production conformance and platform runtime coverage | Pending |
 
 M10/M12 full interactive acceptance and the full major-suite release retain their
@@ -65,3 +65,12 @@ GPU RMSE is below 0.000004303. All 135 previous image/pass artifacts, 45 receipt
 and 81 original fixture files are unchanged. Snapshot-v14 typed RGBA attributes
 retain corner seams through displacement and multiply base color/CPU coverage.
 Broader glTF export is next. GPU alpha remains pending.
+
+Evaluated PBR GLB export acceptance: 141 native and 122 Wasm tests, real Metal
+roundtrip comparisons, 100 CLI requests and five Chrome export/reimport/OPFS
+workflows. All five emitted GLBs pass independent validation and are byte-identical
+on native/browser. Native roundtrip render pixels are exact in this corpus. The
+reproduced private entity-order dependence is fixed with stable-ID table ordering.
+Authored labels, local frames, UV/color/material semantics and encoded assets are
+preserved within the bounded profile. Prior images, passes, receipts and fixtures
+remain unchanged. GPU alpha and its related CPU occlusion check are next.

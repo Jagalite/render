@@ -1,0 +1,383 @@
+   Compiling render-web v0.1.0 (/private/tmp/render-gltf-export-20260906/crates/web)
+   Compiling render-ffi v0.1.0 (/private/tmp/render-gltf-export-20260906/crates/ffi)
+   Compiling render-host v0.1.0 (/private/tmp/render-gltf-export-20260906/crates/host)
+   Compiling render-gpu v0.1.0 (/private/tmp/render-gltf-export-20260906/crates/gpu)
+   Compiling render-kernel v0.1.0 (/private/tmp/render-gltf-export-20260906/crates/kernel)
+   Compiling render-core v0.1.0 (/private/tmp/render-gltf-export-20260906/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 23.50s
+     Running unittests src/lib.rs (target/debug/deps/render_core-2a1e3bb691ad8a26)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/agent_workflow.rs (target/debug/deps/agent_workflow-d504769118e953a9)
+
+running 7 tests
+test importer_rejects_truncation_unsupported_features_and_invalid_accessors ... ok
+test real_glb_and_gltf_preserve_indexed_geometry_and_hierarchy ... ok
+test importer_unsigned_index_widths_multiple_primitives_and_invalid_transforms ... ok
+test durable_agent_retry_checks_target_and_retained_metadata ... ok
+test agent_admission_and_durable_dispatch_are_atomic_and_versioned ... ok
+test restricted_variants_reject_scope_budget_conflicts_cancellation_and_unrendered_selection ... ok
+test three_restricted_variants_render_and_commit_durably_with_lost_ack_retry ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s
+
+     Running tests/alpha_gltf.rs (target/debug/deps/alpha_gltf-f052f4ba40ae5d43)
+
+running 7 tests
+test initial_perspective_near_clip_is_not_replaced_by_continuation_epsilon ... ok
+test exhausted_alpha_camera_interval_with_media_returns_environment ... ok
+test alpha_continuation_preserves_camera_clip_and_orthographic_primary_depth ... ok
+test alpha_invalid_inputs_and_failed_transactions_leave_document_unchanged ... ok
+test alpha_layers_and_single_double_sided_backfaces_preserve_coverage ... ok
+test imported_linear_alpha_mask_blend_and_opaque_have_analytic_coverage ... ok
+test alpha_factor_cutoff_boundaries_and_defaults_are_preserved ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.09s
+
+     Running tests/animated_gltf.rs (target/debug/deps/animated_gltf-2a4a2f16d4c143c4)
+
+running 5 tests
+test absolute_nonuniform_scale_cubic_quaternions_and_vector_morph_channels ... ok
+test skin_specific_inverse_binds_defaults_and_multiple_imports_are_preserved ... ok
+test external_khronos_character_imports_and_renders_at_random_times ... ok
+test imported_character_matches_analytic_skin_morph_and_absolute_channels ... ok
+test malformed_and_unsupported_animation_inputs_fail_without_publication ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+     Running tests/animation.rs (target/debug/deps/animation-943f1dbad38c02bd)
+
+running 8 tests
+test rational_time_and_interpolation_preserve_authored_modes ... ok
+test clip_random_access_retime_conflicts_and_cancellation ... ok
+test bind_affine_scale_shear_and_two_bone_solver_diagnostics ... ok
+test quaternion_layer_schema_gate_and_transaction_upgrade ... ok
+test sequence_preflights_all_exact_times_and_rejects_invalid_dimensions_without_overflow ... ok
+test weighted_affine_skinning_and_morph_have_independent_numeric_expectations ... ok
+test character_skin_morph_transaction_random_access_and_native_state_recovery ... ok
+test shutter_sequence_pinned_revisions_partial_output_and_agent_preview ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.50s
+
+     Running tests/conformance.rs (target/debug/deps/conformance-3ea8dc59c2a2b85c)
+
+running 35 tests
+test concave_polygon_area_and_degeneracy ... ok
+test cancelled_jobs_release_queue_capacity_and_retries_preserve_events ... ok
+test canonical_order_independent_of_table_layout ... ok
+test diffuse_energy_pdf_and_sample_mean ... ok
+test foreign_edit_handle_and_hostile_accessor_are_rejected ... ok
+test identity_and_rational_time ... ok
+test empty_scene_environment_is_analytic ... ok
+test jobs_events_cancellation_and_recovery ... ok
+test diffuse_plane_radiance_matches_analytic_solution ... ok
+test malformed_topology_rejected ... ok
+test mesh_preserves_seams_and_loose_elements ... ok
+test durable_host_metadata_cannot_be_overwritten_by_stale_snapshot ... ok
+test journal_sequence_is_checked ... ok
+test obj_and_gltf_profiles_roundtrip ... ok
+test ordered_transform_channels_and_external_texture ... ok
+test durable_retry_publishes_to_the_requested_store ... ok
+test durable_failure_quota_recovery_and_idempotency ... ok
+test negative_shear_parent_and_layer_semantics ... ok
+test binary_mesh_chunks_preserve_precision_and_reject_truncation ... ok
+test radial_nonmanifold_and_generation_safety ... ok
+test later_layer_restores_hidden_geometry ... ok
+test render_reproducibility_and_color_boundaries ... ok
+test renderer_reuses_geometry_after_transform ... ok
+test snapshots_copy_only_changed_entity_chunk ... ok
+test staged_upload_permissions_checksums_and_budget ... ok
+test storage_crash_child ... ok
+test triangle_bvh_and_parallel_slab_analytic ... ok
+test retries_wire_permissions_and_budgets ... ok
+test transactions_are_atomic_and_revision_checked ... ok
+test shared_browser_suite ... ok
+test unsupported_scattering_is_diagnosed ... ok
+
+running 1 test
+test native_mesh_chunks_deduplicate_and_detect_corruption ... ok
+
+running 1 test
+
+running 1 test
+test native_publication_fault_boundaries ... ok
+
+running 1 test
+test process_termination_recovers_committed_root ... ok
+test prepared_noop_candidates_cannot_overfill_retention ... ok
+
+test result: ok. 35 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.15s
+
+     Running tests/curves.rs (target/debug/deps/curves-5fc61af595cde6ed)
+
+running 4 tests
+test curve_failures_budgets_cancellation_and_schema_versions ... ok
+test spline_basis_and_rational_knot_insertion_match_analytic_geometry ... ok
+test authored_geometry_transactions_recovery_visibility_and_render ... ok
+test generated_tubes_and_point_spheres_are_closed_and_outward ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.11s
+
+     Running tests/displacement.rs (target/debug/deps/displacement-06c7aff2f5490321)
+
+running 3 tests
+test displacement_loose_data_and_root_evaluation_cancellation ... ok
+test displacement_metric_height_subdivision_convergence_and_limits ... ok
+test surface_displacement_cache_transactions_and_recovery ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.12s
+
+     Running tests/gltf_export.rs (target/debug/deps/gltf_export-89fca2ded4a04565)
+
+running 7 tests
+test persistence_layout_cannot_change_export_order_or_bytes ... ok
+test agent_export_is_the_same_pinned_read_only_rust_operation ... ok
+test precision_policy_measures_world_error_and_rejects_shear_or_collapsed_output ... ok
+test export_public_operation_rejects_stale_cancel_budgets_and_unsupported_shading ... ok
+test local_frames_and_mesh_sharing_survive_nonuniform_and_reflected_transforms ... ok
+test named_uv_color_alpha_and_sampler_semantics_roundtrip_through_glb ... ok
+test evaluated_morph_frames_and_displacement_export_the_selected_surface ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.34s
+
+     Running tests/groom.rs (target/debug/deps/groom-1fbd8f6837e4c3df)
+
+running 2 tests
+test groom_root_topology_failures_permissions_cancellation_and_budgets ... ok
+test groom_authored_children_deformation_cache_visibility_and_roundtrip ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.21s
+
+     Running tests/modeling.rs (target/debug/deps/modeling-467fc409cb714b3b)
+
+running 6 tests
+test box_operators_reject_inward_shells ... ok
+test bridge_dissolve_attribute_transfer_invalid_selection_budget_and_cancel ... ok
+test primitives_extrude_inset_split_weld_and_correspondence ... ok
+test subdivision_mirror_array_solidify_and_box_csg_numeric ... ok
+test direct_modeling_transactions_and_field_cycle_domain_resource_diagnostics ... ok
+test procedural_groups_fields_direct_parity_bake_recovery_and_stale_edits ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+     Running tests/morph_frames.rs (target/debug/deps/morph_frames-1391c279248dcf22)
+
+running 6 tests
+test morph_frame_import_rejects_missing_base_unknown_semantics_and_bad_counts ... ok
+test animation_input_bounds_are_required_and_match_decoded_endpoints ... ok
+test native_corner_direction_offsets_preserve_seam_domain_and_stable_ids ... ok
+test morph_reflection_and_singular_blends_are_explicit ... ok
+test morph_frame_versions_invalid_edits_zero_directions_and_cancellation_are_atomic ... ok
+test morph_directions_and_affine_skin_match_analytic_frames_and_recovery ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.12s
+
+     Running tests/multibounce.rs (target/debug/deps/multibounce-a386f3be33c078a4)
+
+running 3 tests
+test diffuse_cavity_matches_finite_geometric_series_and_mixed_paths_continue ... ok
+test escape_is_counted_once_and_multibounce_operations_reject_invalid_cancelled_stale ... ok
+test rough_metal_indirect_emitter_matches_closed_form ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.66s
+
+     Running tests/named_uv.rs (target/debug/deps/named_uv-8b0d7fdf42078542)
+
+running 7 tests
+test named_uv_primary_footprint_selects_its_own_mip ... ok
+test geometry_export_reports_each_omitted_uv_set ... ok
+test source_indexed_sets_reject_gaps_missing_zero_and_noncanonical_suffixes ... ok
+test missing_uv_sets_bad_selectors_and_old_versions_fail_atomically ... ok
+test named_uv_alpha_and_bake_follow_the_material_selector ... ok
+test named_uv_displacement_preserves_coordinates_and_ids ... ok
+test named_uv_material_roles_and_normal_frame_match_independent_samples ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running tests/products.rs (target/debug/deps/products-0a447017d6809a68)
+
+running 4 tests
+test color_profiles_numeric_white_primaries_and_signed_roundtrip ... ok
+test world_normal_bake_tracks_reflected_winding ... ok
+test denoiser_preserves_constant_regions_and_object_edges_reduces_variance ... ok
+test authored_views_passes_bakes_roundtrip_invalid_atlas_and_stale_requests ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.15s
+
+     Running tests/scattering.rs (target/debug/deps/scattering-ab5c844963b8aaa3)
+
+running 4 tests
+test dielectric_snell_fresnel_and_total_internal_reflection ... ok
+test alpha_coverage_and_ideal_glass_render_analytic_environment ... ok
+test dielectric_closed_interface_furnace_and_mixed_media_integration ... ok
+test coated_conductor_reciprocity_furnace_and_pdf_sampling ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.34s
+
+     Running tests/sparse_gltf.rs (target/debug/deps/sparse_gltf-43982c6b62ac8bdb)
+
+running 3 tests
+test missing_base_can_represent_zero_morph_and_vertex_offsets_require_four_byte_alignment ... ok
+test sparse_offsets_indices_counts_extensions_and_normalized_roles_reject_atomically ... ok
+test sparse_dense_and_normalized_uv_inputs_preserve_analytic_animation_and_rendering ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.21s
+
+     Running tests/static_pbr.rs (target/debug/deps/static_pbr-125da29acaac897f)
+
+running 5 tests
+test encoded_images_roles_wrap_filters_and_mips ... ok
+test tangent_handedness_inverse_transpose_culling_and_jpeg_workflow ... ok
+test authored_camera_selection_clipping_and_protection ... ok
+test static_pbr_transaction_roundtrip_render_and_failures ... ok
+test ggx_analytic_reciprocity_energy_and_sampling ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.25s
+
+     Running tests/vertex_colors.rs (target/debug/deps/vertex_colors-e79741b4aab11345)
+
+running 6 tests
+test colors_survive_displacement_modeling_and_bake_without_tinting_emission ... ok
+test source_colors_clamp_before_interpolation_and_reject_malformed_accessors ... ok
+test native_color_validation_versions_transactions_and_profile_boundaries ... ok
+test linear_rgba_interpolation_shared_material_and_archive_are_exact ... ok
+test float_normalized_sparse_colors_agree_and_rgb_defaults_alpha_to_one ... ok
+test vertex_alpha_multiplies_factor_and_texture_for_mask_blend_only ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+     Running tests/volumes.rs (target/debug/deps/volumes-a78f2b47c4dd7cb3)
+
+running 4 tests
+test media_invalid_input_budget_and_cancellation ... ok
+test beer_emission_overlap_scale_and_sparse_boundaries ... ok
+test phase_normalization_and_single_scatter_quadrature_convergence ... ok
+test volume_document_roundtrip_transactions_visibility_and_render ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.26s
+
+     Running unittests src/lib.rs (target/debug/deps/render_ffi-b02715e2adfb6902)
+
+running 1 test
+test tests::lifecycle_and_stale_buffers ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/render_gpu-b1eacbde823677ee)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/render_host-38eb6d8c0ccaf36d)
+
+running 5 tests
+test project_cli::tests::cancellation_is_checked_after_preparation_but_not_inside_admitted_commit ... ok
+test job_host::tests::second_host_cannot_recover_an_active_worker ... ok
+test job_host::tests::jobs_pin_the_document_written_through_the_project_api ... ok
+test job_host::tests::pinned_variant_jobs_reject_changed_retries_and_recover_terminal_events ... ok
+test job_host::tests::durable_jobs_survive_reopen_and_cancel ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.44s
+
+     Running tests/gltf_export_gpu.rs (target/debug/deps/gltf_export_gpu-abe11c5e3de0e87d)
+
+running 1 test
+test exported_pbr_surfaces_match_cpu_and_metal_at_static_and_animated_times ... ignored, requires a real GPU; mandatory in evaluated GLB export acceptance
+
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/gpu_sequence.rs (target/debug/deps/gpu_sequence-3c38386dc50d0c7a)
+
+running 1 test
+test gpu_shutter_analytic_average_random_access_sequences_and_faults ... ignored, requires a real GPU; mandatory in GPU shutter acceptance
+
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/morph_frames_gpu.rs (target/debug/deps/morph_frames_gpu-cdf2cd06348fd39f)
+
+running 1 test
+test authored_morph_frames_match_metal_at_random_times_and_shutters ... ignored, requires a real GPU; mandatory in morph frame acceptance
+
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/multibounce_gpu.rs (target/debug/deps/multibounce_gpu-fe17f3f895f92d6e)
+
+running 2 tests
+test gpu_multibounce_parity_progressive_identity_and_cancellation ... ignored, requires a GPU adapter; run explicitly in the multi-bounce acceptance gate
+test gpu_depth_admission_and_unsupported_materials_are_explicit ... ok
+
+test result: ok. 1 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/named_uv_gpu.rs (target/debug/deps/named_uv_gpu-5ff462f9bd86f79b)
+
+running 1 test
+test named_uv_cpu_gpu_roles_mips_and_displacement_match ... ignored, requires a real GPU; mandatory in named UV acceptance
+
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/project_cli.rs (target/debug/deps/project_cli-3c5e5a90163545c5)
+
+running 7 tests
+test ordinary_api_and_project_cli_produce_equivalent_deltas_and_retry_receipts ... ok
+test import_files_are_explicit_bounded_transactional_and_retryable ... ok
+test stale_invalid_cancelled_and_existing_paths_never_replace_authored_state ... ok
+test animated_glb_import_is_retryable_cancellable_and_preserves_existing_animation ... ok
+test gpu_profile_preflight_deadline_and_authored_names_have_safe_output_semantics ... ok
+test general_cli_authors_models_animates_renders_and_recovers_without_demo_commands ... ok
+test sequence_cancellation_preserves_completed_bundles_and_source_revision ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.14s
+
+     Running tests/vertex_colors_gpu.rs (target/debug/deps/vertex_colors_gpu-c13846802a7f69fe)
+
+running 1 test
+test vertex_color_cpu_gpu_encodings_displacement_and_admission_match ... ignored, requires a real GPU; mandatory in vertex-color acceptance
+
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/render_kernel-6a592d09f2421d5c)
+
+running 1 test
+test path::tests::generated_traversal_and_shading_validate ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+
+     Running unittests src/lib.rs (target/debug/deps/render_web-314caaaa08c69368)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests render_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests render_ffi
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests render_gpu
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests render_kernel
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests render_web
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

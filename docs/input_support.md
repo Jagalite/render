@@ -65,3 +65,10 @@ PBR rendering, with CPU MASK/BLEND coverage, displacement transfer and albedo
 baking. All 18 current GLB fixtures pass independent source validation; the
 [acceptance evidence](../evidence/vertex-colors/README.md) records five source
 encodings, native/browser recovery and unchanged regression artifacts.
+
+[Evaluated PBR GLB export](gltf_export.md) now carries local geometry frames, UVs,
+colors, transforms, encoded textures and supported material semantics through the
+same Rust operation on native and browser. [Evidence](../evidence/gltf-export/README.md)
+records exact file bytes across persistence/platforms, independent format validation
+and render round trips. Authored animation and full scene-render recipes remain
+separate export gates.

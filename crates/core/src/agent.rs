@@ -108,6 +108,9 @@ pub enum Operation {
     Discard {
         branch: String,
     },
+    ExportGlb {
+        request: gltf_export::Request,
+    },
     Export,
 }
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -661,6 +664,11 @@ impl Session {
                 self.branches.remove(&branch);
                 Ok(json!({"discarded":branch}))
             }
+            ExportGlb { request } => Ok(serde_json::to_value(gltf_export::export(
+                self.document.snapshot(),
+                &request,
+                || false,
+            )?)?),
             Export => Ok(
                 json!({"document":self.document,"revision":self.document.snapshot().revision()?,"ephemeral_variants_exported":false}),
             ),

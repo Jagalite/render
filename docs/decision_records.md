@@ -313,3 +313,21 @@ No runtime dependency or public material-layout change is required.
 
 **Revisit trigger:** Multiple selected color sets, color morphs, vertex paint tools,
 source material export and GPU alpha require separate bounded workflow evidence.
+
+## ADR-024 — Evaluated PBR interchange remains separate from native authoring
+
+**Decision:** Export embedded-resource GLB from the shared pinned evaluator with
+explicit loss consent, bounded output and measured f32 world-position error. Keep
+local smooth frames separate from representable world TRS transforms, retain PBR
+bindings/encoded assets and map stable native UV IDs into glTF sets. Reject shading
+or transform semantics that the profile cannot preserve.
+
+**Integration boundary:** The [export contract](gltf_export.md) connects native
+CLI publication and browser/agent reads to the same core implementation. Posed
+morph/displacement surfaces export as evaluated triangles; report their time and
+source revision. Source indices remain file-local identities. Native archives
+retain authored structure, while independent Khronos validation complements render
+roundtrip and recovery evidence. No runtime dependency or snapshot version changes.
+
+**Revisit trigger:** Authored animation, hierarchy, camera/light recipes, shear
+factorization, additional material extensions and larger output profiles require separate contracts and resource evidence.

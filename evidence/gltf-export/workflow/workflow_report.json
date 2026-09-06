@@ -1,0 +1,1548 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "uv-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/uv",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/000-uv-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.023634666002180893
+    },
+    {
+      "name": "uv-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/uv",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/001-uv-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0076620420004474
+    },
+    {
+      "name": "uv-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/uv",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/002-uv-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.031353582999145146
+    },
+    {
+      "name": "uv-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/uv",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/003-uv-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017078000004403293
+    },
+    {
+      "name": "uv-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/uv",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/004-uv-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04430687499552732,
+      "resources": {
+        "maximum resident set size": 17661952,
+        "peak memory footprint": 2966592
+      }
+    },
+    {
+      "name": "uv-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/uv",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/005-uv-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04050579099566676
+    },
+    {
+      "name": "uv-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/uv-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/006-uv-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01945174999855226
+    },
+    {
+      "name": "uv-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/uv-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/007-uv-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.00791216699872166
+    },
+    {
+      "name": "uv-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/uv-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/008-uv-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03940745799627621,
+      "resources": {
+        "maximum resident set size": 16351232,
+        "peak memory footprint": 2999360
+      }
+    },
+    {
+      "name": "uv-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/uv-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/009-uv-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017221917005372234
+    },
+    {
+      "name": "uv-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/uv",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/010-uv-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.057733292000193615,
+      "resources": {
+        "maximum resident set size": 17694720,
+        "peak memory footprint": 3163136
+      }
+    },
+    {
+      "name": "uv-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/uv-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/011-uv-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0555469999962952,
+      "resources": {
+        "maximum resident set size": 17678336,
+        "peak memory footprint": 3163200
+      }
+    },
+    {
+      "name": "uv-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/uv",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/012-uv-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13072929199552163,
+      "resources": {
+        "maximum resident set size": 33832960,
+        "peak memory footprint": 10929728
+      }
+    },
+    {
+      "name": "uv-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/uv-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/013-uv-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13528541599953314,
+      "resources": {
+        "maximum resident set size": 33964032,
+        "peak memory footprint": 11077248
+      }
+    },
+    {
+      "name": "uv-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/uv-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/014-uv-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.034771209000609815
+    },
+    {
+      "name": "uv-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/uv-restored",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/015-uv-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.032472999999299645
+    },
+    {
+      "name": "uv-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/uv-restored",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/016-uv-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05930029199953424
+    },
+    {
+      "name": "uv-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/uv",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/017-uv-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.016186249995371327
+    },
+    {
+      "name": "uv-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/uv",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/018-uv-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016137167003762443
+    },
+    {
+      "name": "color-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/019-color-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018819208999047987
+    },
+    {
+      "name": "color-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/020-color-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007558625002275221
+    },
+    {
+      "name": "color-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/021-color-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03554387500480516
+    },
+    {
+      "name": "color-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/022-color-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015162125004280824
+    },
+    {
+      "name": "color-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/023-color-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.039815083000576124,
+      "resources": {
+        "maximum resident set size": 17629184,
+        "peak memory footprint": 2819072
+      }
+    },
+    {
+      "name": "color-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/024-color-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.039094375002605375
+    },
+    {
+      "name": "color-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/025-color-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021121166995726526
+    },
+    {
+      "name": "color-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/026-color-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.00782141699892236
+    },
+    {
+      "name": "color-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/027-color-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04046599999855971,
+      "resources": {
+        "maximum resident set size": 16269312,
+        "peak memory footprint": 2884672
+      }
+    },
+    {
+      "name": "color-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/028-color-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015329875001043547
+    },
+    {
+      "name": "color-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/029-color-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05345691700495081,
+      "resources": {
+        "maximum resident set size": 17629184,
+        "peak memory footprint": 3130432
+      }
+    },
+    {
+      "name": "color-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/030-color-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.061374583005090244,
+      "resources": {
+        "maximum resident set size": 17629184,
+        "peak memory footprint": 3130432
+      }
+    },
+    {
+      "name": "color-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/031-color-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13274470899341395,
+      "resources": {
+        "maximum resident set size": 34045952,
+        "peak memory footprint": 11159168
+      }
+    },
+    {
+      "name": "color-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/032-color-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12966545800009044,
+      "resources": {
+        "maximum resident set size": 33865728,
+        "peak memory footprint": 10978944
+      }
+    },
+    {
+      "name": "color-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/033-color-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03184362500178395
+    },
+    {
+      "name": "color-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color-restored",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/034-color-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03339912500086939
+    },
+    {
+      "name": "color-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color-restored",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/035-color-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05454658399685286
+    },
+    {
+      "name": "color-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/036-color-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.01424274999590125
+    },
+    {
+      "name": "color-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/037-color-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014744916996278334
+    },
+    {
+      "name": "morph-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/morph",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/038-morph-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019821041998511646
+    },
+    {
+      "name": "morph-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/morph",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/039-morph-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007587291998788714
+    },
+    {
+      "name": "morph-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/morph",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/040-morph-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04455441699974472
+    },
+    {
+      "name": "morph-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/morph",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/041-morph-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024511542003892828
+    },
+    {
+      "name": "morph-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/morph",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/042-morph-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05341862500063144,
+      "resources": {
+        "maximum resident set size": 19283968,
+        "peak memory footprint": 3654784
+      }
+    },
+    {
+      "name": "morph-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/morph",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/043-morph-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05593799999769544
+    },
+    {
+      "name": "morph-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/morph-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/044-morph-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020026207996124867
+    },
+    {
+      "name": "morph-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/morph-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/045-morph-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007925374993646983
+    },
+    {
+      "name": "morph-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/morph-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/046-morph-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03982641699985834,
+      "resources": {
+        "maximum resident set size": 16384000,
+        "peak memory footprint": 3032128
+      }
+    },
+    {
+      "name": "morph-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/morph-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/047-morph-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01858725000056438
+    },
+    {
+      "name": "morph-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/morph",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/048-morph-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0769670000008773,
+      "resources": {
+        "maximum resident set size": 19300352,
+        "peak memory footprint": 3802240
+      }
+    },
+    {
+      "name": "morph-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/morph-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/049-morph-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06715516700205626,
+      "resources": {
+        "maximum resident set size": 17661952,
+        "peak memory footprint": 3146880
+      }
+    },
+    {
+      "name": "morph-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/morph",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/050-morph-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14134724999894388,
+      "resources": {
+        "maximum resident set size": 35389440,
+        "peak memory footprint": 11454080
+      }
+    },
+    {
+      "name": "morph-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/morph-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/051-morph-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13921629099786514,
+      "resources": {
+        "maximum resident set size": 33865728,
+        "peak memory footprint": 10962560
+      }
+    },
+    {
+      "name": "morph-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/morph-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/052-morph-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0373717089969432
+    },
+    {
+      "name": "morph-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/morph-restored",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/053-morph-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03165433400135953
+    },
+    {
+      "name": "morph-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/morph-restored",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/054-morph-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07207279199792538
+    },
+    {
+      "name": "morph-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/morph",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/055-morph-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.022266833002504427
+    },
+    {
+      "name": "morph-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/morph",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/056-morph-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022637958005361725
+    },
+    {
+      "name": "mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/mask",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/057-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01976533400011249
+    },
+    {
+      "name": "mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/mask",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/058-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0075670000005629845
+    },
+    {
+      "name": "mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/mask",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/059-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03025141599937342
+    },
+    {
+      "name": "mask-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/mask",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/060-mask-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01362900000094669
+    },
+    {
+      "name": "mask-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/mask",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/061-mask-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0411485829972662,
+      "resources": {
+        "maximum resident set size": 17645568,
+        "peak memory footprint": 2851904
+      }
+    },
+    {
+      "name": "mask-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/mask",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/062-mask-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03915104200132191
+    },
+    {
+      "name": "mask-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/mask-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/063-mask-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02140374999726191
+    },
+    {
+      "name": "mask-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/mask-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/064-mask-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.009512208998785354
+    },
+    {
+      "name": "mask-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/mask-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/065-mask-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03657412499887869,
+      "resources": {
+        "maximum resident set size": 16302080,
+        "peak memory footprint": 2884672
+      }
+    },
+    {
+      "name": "mask-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/mask-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/066-mask-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012757791999320034
+    },
+    {
+      "name": "mask-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/mask",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/067-mask-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.055690208995656576,
+      "resources": {
+        "maximum resident set size": 17367040,
+        "peak memory footprint": 3015744
+      }
+    },
+    {
+      "name": "mask-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/mask-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/068-mask-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05364325000118697,
+      "resources": {
+        "maximum resident set size": 17383424,
+        "peak memory footprint": 3032128
+      }
+    },
+    {
+      "name": "mask-gpu-rejected",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/mask-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/069-mask-gpu-rejected.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_profile",
+      "seconds": 0.02068791700003203
+    },
+    {
+      "name": "mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/mask-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/070-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.052469082998868544
+    },
+    {
+      "name": "mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/mask-restored",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/071-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030279750004410744
+    },
+    {
+      "name": "mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/mask-restored",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/072-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0514357909996761
+    },
+    {
+      "name": "mask-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/mask",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/073-mask-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.01213895800174214
+    },
+    {
+      "name": "mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/mask",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/074-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012828582999645732
+    },
+    {
+      "name": "blend-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/blend",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/075-blend-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022509458001877647
+    },
+    {
+      "name": "blend-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/blend",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/076-blend-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.008313250000355765
+    },
+    {
+      "name": "blend-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/blend",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/077-blend-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03023133399983635
+    },
+    {
+      "name": "blend-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/blend",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/078-blend-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012652375000470784
+    },
+    {
+      "name": "blend-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/blend",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/079-blend-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03903704100230243,
+      "resources": {
+        "maximum resident set size": 17612800,
+        "peak memory footprint": 2835520
+      }
+    },
+    {
+      "name": "blend-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/blend",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/080-blend-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.037926042001345195
+    },
+    {
+      "name": "blend-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/blend-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/081-blend-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022202332998858765
+    },
+    {
+      "name": "blend-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/blend-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/082-blend-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0075242500024614856
+    },
+    {
+      "name": "blend-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/blend-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/083-blend-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03553633300180081,
+      "resources": {
+        "maximum resident set size": 16302080,
+        "peak memory footprint": 2884672
+      }
+    },
+    {
+      "name": "blend-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/blend-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/084-blend-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012658666004426777
+    },
+    {
+      "name": "blend-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/blend",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/085-blend-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.051785333002044354,
+      "resources": {
+        "maximum resident set size": 17432576,
+        "peak memory footprint": 3081280
+      }
+    },
+    {
+      "name": "blend-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/blend-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/086-blend-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.053284458997950424,
+      "resources": {
+        "maximum resident set size": 17416192,
+        "peak memory footprint": 3064896
+      }
+    },
+    {
+      "name": "blend-gpu-rejected",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/blend-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/087-blend-gpu-rejected.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_profile",
+      "seconds": 0.022695291001582518
+    },
+    {
+      "name": "blend-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/blend-round",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/088-blend-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030201832996681333
+    },
+    {
+      "name": "blend-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/blend-restored",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/089-blend-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.027783124998677522
+    },
+    {
+      "name": "blend-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/blend-restored",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/090-blend-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05443750000267755
+    },
+    {
+      "name": "blend-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/blend",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/091-blend-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.01584554199507693
+    },
+    {
+      "name": "blend-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/blend",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/092-blend-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01492254200275056
+    },
+    {
+      "name": "negative-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/093-negative-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01499162500113016
+    },
+    {
+      "name": "core-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/094-core-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.026288082997780293
+    },
+    {
+      "name": "vertex-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/095-vertex-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.025385667002410628
+    },
+    {
+      "name": "output-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/096-output-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.022147750001749955
+    },
+    {
+      "name": "consent",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/097-consent.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_gltf",
+      "seconds": 0.02318475000356557
+    },
+    {
+      "name": "cancelled",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/098-cancelled.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.007255333002831321
+    },
+    {
+      "name": "negative-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/color",
+        "/private/tmp/render-gltf-export-20260906/artifacts/gltf-export/run-20260906T082746Z/workflow/099-negative-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013382124998315703
+    }
+  ],
+  "variants": [
+    {
+      "name": "uv",
+      "source": "fixtures/named-uv/data/roles.glb",
+      "gpu": true,
+      "revision": "sha256:a41c0736d4b43e82ccd814f894a57681ef0b8c56b96847ab0d5d2291caf18279",
+      "at": null,
+      "round_revision": "sha256:ced234f1305215dd9d97d732d2624114569ed7cef74eda7641385335b4300b1c",
+      "glb_digest": "sha256:bb24883fe2e14d2d36abc45443a7b7f4870b02ce224a9570c5379796ad567a3c",
+      "glb_bytes": 3732,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "d4b3c8bb8971e6fa66f3a12e3c2a0320": "004556830bbc3bd22349a745c94a2d3c"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "d4b3c8bb8971e6fa66f3a12e3c2a0320": "004556830bbc3bd22349a745c94a2d3c"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "color",
+      "source": "fixtures/vertex-colors/data/rgba.glb",
+      "gpu": true,
+      "revision": "sha256:7a27d4ce8521c972dd4d2197b5c0c7cf2076dab33d163ad4f7a8755caaee56c3",
+      "at": null,
+      "round_revision": "sha256:92ef1e441b5d64e650b0d9e8a2aac287be37cfc86c114921c289f02e6f541528",
+      "glb_digest": "sha256:300bdc341185c578bf4961dadad89904240f684ef45559f9869b5a585e8e4dc9",
+      "glb_bytes": 2732,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "38c60459d1c7caba541c31be0c02e223": "f7721c214c6666804c6d03305df12090",
+            "8e2af0c392e2f0b4ca07e2c07fac6ab2": "2b579589d575c750da26973ec066c06a"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "38c60459d1c7caba541c31be0c02e223": "f7721c214c6666804c6d03305df12090",
+            "8e2af0c392e2f0b4ca07e2c07fac6ab2": "2b579589d575c750da26973ec066c06a"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "morph",
+      "source": "fixtures/morph-frames/data/dense.glb",
+      "gpu": true,
+      "time": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "revision": "sha256:a66785272053787db49bcd516cd5a59f5af32c4c90410d764cefe2655584d65a",
+      "at": {
+        "clip": "b6e31a69e2fddcd8a2842db1f6733f0f",
+        "time": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      "round_revision": "sha256:6f949a69515408e44b53e3a584a9e9d9cde315b71a296ef501d312cf76647f18",
+      "glb_digest": "sha256:083fde0662e36558b95eae70fa562ef1533302457ab8ea2560af83c842a91986",
+      "glb_bytes": 3996,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "3e8517c2902a6be90ebef5865de3441a": "66987d9ede2a6d6f5cec4c030bea9b72"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "3e8517c2902a6be90ebef5865de3441a": "66987d9ede2a6d6f5cec4c030bea9b72"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "mask",
+      "source": "fixtures/alpha-gltf/data/mask.glb",
+      "gpu": false,
+      "revision": "sha256:1f1ec9929babc50d4e2d390a37284cc4645121994a7aab754dc05811be46be56",
+      "at": null,
+      "round_revision": "sha256:0324e3a6db4901380d834dfb5e0b7082506db6b1f55ebd5a33b1fb24327a52a6",
+      "glb_digest": "sha256:ef2a1a911a7aee7a6684801ec0e113421658f53f21d7859ddbc405e6e17b58f3",
+      "glb_bytes": 2052,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "77db4b4b2da4259618486fde62de7e39": "ecddff24ad1d744edb7e56989cf0b601",
+            "a8a022ea971884137fba769f6df06b7d": "52201a6aa934807878887363a863c8a3"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "blend",
+      "source": "fixtures/alpha-gltf/data/blend.glb",
+      "gpu": false,
+      "revision": "sha256:1832c8f0b8f0c77989868aa220f1c5e762afd40922d886461383977060c014ac",
+      "at": null,
+      "round_revision": "sha256:a74df86fa5eb74829ad1b1178ef9645b6db5b29024cee340fcd248d7f31a85f3",
+      "glb_digest": "sha256:985480c362e75318cfbeb4ee193af551e2513fad81ccb78077e5c358c5a13eb4",
+      "glb_bytes": 2036,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "04c1bd580ee3a8552419f894142a4977": "6524dda95fcbff003fd4f5cef3489fd1",
+            "2bb2257d26e198e39492fec4ed8e7637": "ebbafed01d9f6f47d8367df964b41f7b"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    }
+  ],
+  "settings": {
+    "width": 32,
+    "height": 16,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        2,
+        2,
+        2
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        3
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 2.5,
+        "ymag": 2.5,
+        "near": 0.1,
+        "far": 8
+      }
+    }
+  }
+}

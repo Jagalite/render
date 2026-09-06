@@ -1,0 +1,34 @@
+[
+  {
+    "case": "blend",
+    "binary_equal": false,
+    "changed_fields": [
+      "buffers",
+      "accessors",
+      "images",
+      "nodes",
+      "materials",
+      "bufferViews"
+    ]
+  },
+  {
+    "case": "color",
+    "binary_equal": true,
+    "changed_fields": []
+  },
+  {
+    "case": "mask",
+    "binary_equal": true,
+    "changed_fields": []
+  },
+  {
+    "case": "morph",
+    "binary_equal": true,
+    "changed_fields": []
+  },
+  {
+    "case": "uv",
+    "binary_equal": true,
+    "changed_fields": []
+  }
+]

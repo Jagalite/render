@@ -53,9 +53,11 @@
         "evidence/alpha-gltf/README.md",
         "evidence/named-uv/README.md",
         "evidence/indexed-attributes/README.md",
-        "evidence/vertex-colors/README.md"
+        "evidence/vertex-colors/README.md",
+        "evidence/gltf-export/README.md"
       ],
-      "remaining_scope": "Additional color sets, material extensions and broader scene export remain unsupported; sparse accessors, normalized UV/skin/color components, linear COLOR_0 and up to eight independent UV sets are supported."
+      "remaining_scope": "Additional color sets, material extensions and authored hierarchy/camera/light export remain unsupported; evaluated PBR GLB export preserves UVs, colors, local frames, representable transforms and encoded textures.",
+      "export_profile": "gltf2-evaluated-pbr-export-v1; selected evaluated surface/pose with embedded resources and explicit authoring/render-recipe losses"
     },
     {
       "id": "INPUT-02",
@@ -88,9 +90,11 @@
         "evidence/alpha-gltf/README.md",
         "evidence/named-uv/README.md",
         "evidence/indexed-attributes/README.md",
-        "evidence/vertex-colors/README.md"
+        "evidence/vertex-colors/README.md",
+        "evidence/gltf-export/README.md"
       ],
-      "remaining_scope": "Source material extensions and extended GPU scattering remain unsupported; MASK/BLEND imports use the named native/browser Rust CPU profile. Named UV selection applies across render, alpha, displacement and bake consumers."
+      "remaining_scope": "Source material extensions and extended GPU scattering remain unsupported; MASK/BLEND imports use the named native/browser Rust CPU profile. Named UV selection applies across render, alpha, displacement and bake consumers.",
+      "export_profile": "gltf2-evaluated-pbr-export-v1; selected evaluated surface/pose with embedded resources and explicit authoring/render-recipe losses"
     },
     {
       "id": "INPUT-03",
@@ -123,10 +127,12 @@
         "evidence/sparse-gltf/README.md",
         "evidence/morph-frames/README.md",
         "evidence/indexed-attributes/README.md",
-        "evidence/vertex-colors/README.md"
+        "evidence/vertex-colors/README.md",
+        "evidence/gltf-export/README.md"
       ],
       "implemented_profile": "native-authored affine-lbs-shutter-v0 and gltf2-animated-pbr-v0 on native/Wasm; gpu-f32-animation-v0 frames and streaming sequences on Metal/WebGPU; gltf2-sparse-uv0-v1 accessor capability; gltf2-morph-frames-v1 POSITION/NORMAL/TANGENT deltas with opt-in authored deformation frames; gltf2-vertex-color-v1 linear COLOR_0 on CPU/Metal/WebGPU with CPU MASK/BLEND coverage",
-      "remaining_scope": "Morph UV/color attributes, extensions, larger source profiles and animated glTF export remain unsupported. Authored normal/tangent directions use the explicit snapshot-v13 affine frame policy."
+      "remaining_scope": "Morph UV/color attributes, extensions, larger source profiles and animated glTF export remain unsupported. Authored normal/tangent directions use the explicit snapshot-v13 affine frame policy.",
+      "export_profile": "gltf2-evaluated-pbr-export-v1; selected evaluated surface/pose with embedded resources and explicit authoring/render-recipe losses"
     },
     {
       "id": "INPUT-04",

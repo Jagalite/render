@@ -1,0 +1,140 @@
+[
+  {
+    "name": "uv",
+    "report": {
+      "animation": null,
+      "authored_revision": "sha256:a41c0736d4b43e82ccd814f894a57681ef0b8c56b96847ab0d5d2291caf18279",
+      "bytes": 3760,
+      "evaluated_revision": "sha256:a41c0736d4b43e82ccd814f894a57681ef0b8c56b96847ab0d5d2291caf18279",
+      "exported_vertices": 6,
+      "images": 3,
+      "losses": [
+        "Evaluated local triangles with duplicated corner vertices and f32 attributes/transforms; authored polygon/loose topology, stable IDs and custom attributes are not preserved.",
+        "World transforms replace authored parenting; clip, rig, controller, procedural, curve and displacement intent becomes the selected evaluated surface. Native archives retain authoring data.",
+        "Render settings, cameras, lights, environment, hidden and non-renderable authoring objects are not exported. Reapply an explicit render recipe when comparing engine images.",
+        "Core glTF metallic/roughness semantics retain the engine's bounded GGX, normal-frame fallback, texture filtering and CPU alpha qualifications; no arbitrary external-renderer pixel fidelity claim."
+      ],
+      "materials": 1,
+      "max_position_error_meters": 0,
+      "meshes": 1,
+      "output_digest": "sha256:d010cba4c3752d0982451793a39cfe6dc3dadd77f0f32f51e79a863a0a797f31",
+      "profile": "gltf2-evaluated-pbr-export-v1",
+      "source_entities": {
+        "d4b3c8bb8971e6fa66f3a12e3c2a0320": 0
+      }
+    }
+  },
+  {
+    "name": "color",
+    "report": {
+      "animation": null,
+      "authored_revision": "sha256:7a27d4ce8521c972dd4d2197b5c0c7cf2076dab33d163ad4f7a8755caaee56c3",
+      "bytes": 2788,
+      "evaluated_revision": "sha256:7a27d4ce8521c972dd4d2197b5c0c7cf2076dab33d163ad4f7a8755caaee56c3",
+      "exported_vertices": 12,
+      "images": 1,
+      "losses": [
+        "Evaluated local triangles with duplicated corner vertices and f32 attributes/transforms; authored polygon/loose topology, stable IDs and custom attributes are not preserved.",
+        "World transforms replace authored parenting; clip, rig, controller, procedural, curve and displacement intent becomes the selected evaluated surface. Native archives retain authoring data.",
+        "Render settings, cameras, lights, environment, hidden and non-renderable authoring objects are not exported. Reapply an explicit render recipe when comparing engine images.",
+        "Core glTF metallic/roughness semantics retain the engine's bounded GGX, normal-frame fallback, texture filtering and CPU alpha qualifications; no arbitrary external-renderer pixel fidelity claim."
+      ],
+      "materials": 1,
+      "max_position_error_meters": 0,
+      "meshes": 2,
+      "output_digest": "sha256:acf6f69f457d3d876bdb02b499969abb2f73dc6c503f77e2cd7b4fad16e75f57",
+      "profile": "gltf2-evaluated-pbr-export-v1",
+      "source_entities": {
+        "38c60459d1c7caba541c31be0c02e223": 0,
+        "8e2af0c392e2f0b4ca07e2c07fac6ab2": 1
+      }
+    }
+  },
+  {
+    "name": "morph",
+    "report": {
+      "animation": {
+        "approximation": "affine-lbs-authored-frames-v1: additive directions before skinning; inverse-transpose blended normals; linear blended tangents; determinant handedness; normalized directions; geometric fallback for unbound entities",
+        "authored_revision": "sha256:a66785272053787db49bcd516cd5a59f5af32c4c90410d764cefe2655584d65a",
+        "clip": "b6e31a69e2fddcd8a2842db1f6733f0f",
+        "deformed_points": 4,
+        "evaluation_digest": "sha256:f8322046ca48bb5a024f3b12b0ea76a1be3b37adc75ac378cac3bc787217e51c",
+        "time": {
+          "denominator": 2,
+          "numerator": 1
+        }
+      },
+      "authored_revision": "sha256:a66785272053787db49bcd516cd5a59f5af32c4c90410d764cefe2655584d65a",
+      "bytes": 4024,
+      "evaluated_revision": "sha256:f8322046ca48bb5a024f3b12b0ea76a1be3b37adc75ac378cac3bc787217e51c",
+      "exported_vertices": 6,
+      "images": 3,
+      "losses": [
+        "Evaluated local triangles with duplicated corner vertices and f32 attributes/transforms; authored polygon/loose topology, stable IDs and custom attributes are not preserved.",
+        "World transforms replace authored parenting; clip, rig, controller, procedural, curve and displacement intent becomes the selected evaluated surface. Native archives retain authoring data.",
+        "Render settings, cameras, lights, environment, hidden and non-renderable authoring objects are not exported. Reapply an explicit render recipe when comparing engine images.",
+        "Core glTF metallic/roughness semantics retain the engine's bounded GGX, normal-frame fallback, texture filtering and CPU alpha qualifications; no arbitrary external-renderer pixel fidelity claim."
+      ],
+      "materials": 1,
+      "max_position_error_meters": 1.9185245037078857e-7,
+      "meshes": 1,
+      "output_digest": "sha256:e2ad319300ec7f91eaac8415a8dcd13d0a1d2e8d1db767e19c380269695d81f6",
+      "profile": "gltf2-evaluated-pbr-export-v1",
+      "source_entities": {
+        "3e8517c2902a6be90ebef5865de3441a": 0
+      }
+    }
+  },
+  {
+    "name": "mask",
+    "report": {
+      "animation": null,
+      "authored_revision": "sha256:1f1ec9929babc50d4e2d390a37284cc4645121994a7aab754dc05811be46be56",
+      "bytes": 2108,
+      "evaluated_revision": "sha256:1f1ec9929babc50d4e2d390a37284cc4645121994a7aab754dc05811be46be56",
+      "exported_vertices": 12,
+      "images": 1,
+      "losses": [
+        "Evaluated local triangles with duplicated corner vertices and f32 attributes/transforms; authored polygon/loose topology, stable IDs and custom attributes are not preserved.",
+        "World transforms replace authored parenting; clip, rig, controller, procedural, curve and displacement intent becomes the selected evaluated surface. Native archives retain authoring data.",
+        "Render settings, cameras, lights, environment, hidden and non-renderable authoring objects are not exported. Reapply an explicit render recipe when comparing engine images.",
+        "Core glTF metallic/roughness semantics retain the engine's bounded GGX, normal-frame fallback, texture filtering and CPU alpha qualifications; no arbitrary external-renderer pixel fidelity claim."
+      ],
+      "materials": 2,
+      "max_position_error_meters": 0,
+      "meshes": 2,
+      "output_digest": "sha256:f23829bfd24640bb1c6beae125befb8c823d61af42fdb34518e096923790431e",
+      "profile": "gltf2-evaluated-pbr-export-v1",
+      "source_entities": {
+        "77db4b4b2da4259618486fde62de7e39": 0,
+        "a8a022ea971884137fba769f6df06b7d": 1
+      }
+    }
+  },
+  {
+    "name": "blend",
+    "report": {
+      "animation": null,
+      "authored_revision": "sha256:1832c8f0b8f0c77989868aa220f1c5e762afd40922d886461383977060c014ac",
+      "bytes": 2092,
+      "evaluated_revision": "sha256:1832c8f0b8f0c77989868aa220f1c5e762afd40922d886461383977060c014ac",
+      "exported_vertices": 12,
+      "images": 1,
+      "losses": [
+        "Evaluated local triangles with duplicated corner vertices and f32 attributes/transforms; authored polygon/loose topology, stable IDs and custom attributes are not preserved.",
+        "World transforms replace authored parenting; clip, rig, controller, procedural, curve and displacement intent becomes the selected evaluated surface. Native archives retain authoring data.",
+        "Render settings, cameras, lights, environment, hidden and non-renderable authoring objects are not exported. Reapply an explicit render recipe when comparing engine images.",
+        "Core glTF metallic/roughness semantics retain the engine's bounded GGX, normal-frame fallback, texture filtering and CPU alpha qualifications; no arbitrary external-renderer pixel fidelity claim."
+      ],
+      "materials": 2,
+      "max_position_error_meters": 0,
+      "meshes": 2,
+      "output_digest": "sha256:f2eec88eef33e5acb2e7c5484df14a0e4d0a4acb4dfc79adad813e4e07c8f484",
+      "profile": "gltf2-evaluated-pbr-export-v1",
+      "source_entities": {
+        "04c1bd580ee3a8552419f894142a4977": 1,
+        "2bb2257d26e198e39492fec4ed8e7637": 0
+      }
+    }
+  }
+]

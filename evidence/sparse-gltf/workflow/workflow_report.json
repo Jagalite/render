@@ -1,0 +1,647 @@
+{
+  "status": "passed",
+  "profile": "gltf2-sparse-uv0-v1",
+  "calls": [
+    {
+      "name": "dense-init",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/000-dense-init.json"
+      ],
+      "seconds": 0.4792670419992646,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/001-dense-base.json"
+      ],
+      "seconds": 0.012209417000121903,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/002-dense-import.json"
+      ],
+      "seconds": 0.16059962500003166,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17874944,
+        "peak memory footprint": 3687552
+      }
+    },
+    {
+      "name": "dense-retry",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/003-dense-retry.json"
+      ],
+      "seconds": 0.04632054200192215,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-state",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/004-dense-state.json"
+      ],
+      "seconds": 0.023105291998945177,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/005-dense-cpu.json"
+      ],
+      "seconds": 0.42573179100145353,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 21004288,
+        "peak memory footprint": 5129344
+      }
+    },
+    {
+      "name": "dense-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/006-dense-gpu.json"
+      ],
+      "seconds": 1.1269634999989648,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36814848,
+        "peak memory footprint": 11781760
+      }
+    },
+    {
+      "name": "dense-archive",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/007-dense-archive.json"
+      ],
+      "seconds": 0.12938204199599568,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-restore",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/dense-restored",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/008-dense-restore.json"
+      ],
+      "seconds": 0.11693962499703048,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-restored-frame",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/dense-restored",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/009-dense-restored-frame.json"
+      ],
+      "seconds": 0.33541320800577523,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-stale",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/010-dense-stale.json"
+      ],
+      "seconds": 0.04877712500456255,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "dense-unchanged",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/011-dense-unchanged.json"
+      ],
+      "seconds": 0.023168584004451986,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-init",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/012-sparse-zero-u16-init.json"
+      ],
+      "seconds": 0.0734500830003526,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/013-sparse-zero-u16-base.json"
+      ],
+      "seconds": 0.008598624997830484,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/014-sparse-zero-u16-import.json"
+      ],
+      "seconds": 0.11624166699766647,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17989632,
+        "peak memory footprint": 3802240
+      }
+    },
+    {
+      "name": "sparse-zero-u16-retry",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/015-sparse-zero-u16-retry.json"
+      ],
+      "seconds": 0.04524483299610438,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-state",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/016-sparse-zero-u16-state.json"
+      ],
+      "seconds": 0.023127291999117006,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/017-sparse-zero-u16-cpu.json"
+      ],
+      "seconds": 0.4140585830027703,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 21102592,
+        "peak memory footprint": 5227648
+      }
+    },
+    {
+      "name": "sparse-zero-u16-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/018-sparse-zero-u16-gpu.json"
+      ],
+      "seconds": 0.3510154169998714,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 37027840,
+        "peak memory footprint": 11994752
+      }
+    },
+    {
+      "name": "sparse-zero-u16-archive",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/019-sparse-zero-u16-archive.json"
+      ],
+      "seconds": 0.14058549999754177,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-restore",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-zero-u16-restored",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/020-sparse-zero-u16-restore.json"
+      ],
+      "seconds": 0.12398899999971036,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-restored-frame",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-zero-u16-restored",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/021-sparse-zero-u16-restored-frame.json"
+      ],
+      "seconds": 0.34753170900512487,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-stale",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/022-sparse-zero-u16-stale.json"
+      ],
+      "seconds": 0.05736829200031934,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "sparse-zero-u16-unchanged",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/023-sparse-zero-u16-unchanged.json"
+      ],
+      "seconds": 0.024761542001215275,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-init",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/024-sparse-base-u8-init.json"
+      ],
+      "seconds": 0.07323929199628765,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/025-sparse-base-u8-base.json"
+      ],
+      "seconds": 0.007542999999714084,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/026-sparse-base-u8-import.json"
+      ],
+      "seconds": 0.1173138750018552,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 18006016,
+        "peak memory footprint": 3818624
+      }
+    },
+    {
+      "name": "sparse-base-u8-retry",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/027-sparse-base-u8-retry.json"
+      ],
+      "seconds": 0.04595954200340202,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-state",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/028-sparse-base-u8-state.json"
+      ],
+      "seconds": 0.02297812500182772,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/029-sparse-base-u8-cpu.json"
+      ],
+      "seconds": 0.41443662499659695,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 21168128,
+        "peak memory footprint": 5293184
+      }
+    },
+    {
+      "name": "sparse-base-u8-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/030-sparse-base-u8-gpu.json"
+      ],
+      "seconds": 0.35010450000118,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36782080,
+        "peak memory footprint": 11748992
+      }
+    },
+    {
+      "name": "sparse-base-u8-archive",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/031-sparse-base-u8-archive.json"
+      ],
+      "seconds": 0.1344604999976582,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-restore",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-base-u8-restored",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/032-sparse-base-u8-restore.json"
+      ],
+      "seconds": 0.11747475000447594,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-restored-frame",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-base-u8-restored",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/033-sparse-base-u8-restored-frame.json"
+      ],
+      "seconds": 0.35199049999937415,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-stale",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/034-sparse-base-u8-stale.json"
+      ],
+      "seconds": 0.04966358299861895,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "sparse-base-u8-unchanged",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/035-sparse-base-u8-unchanged.json"
+      ],
+      "seconds": 0.02347666699643014,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "negative-init",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/negative",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/036-negative-init.json"
+      ],
+      "seconds": 0.06903654199413722,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "negative-state",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/negative",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/037-negative-state.json"
+      ],
+      "seconds": 0.008783041994320229,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "malformed",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/negative",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/038-malformed.json"
+      ],
+      "seconds": 0.009238541999366134,
+      "exit_code": 1,
+      "expected_error": "gltf_scene"
+    },
+    {
+      "name": "cancelled",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/negative",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/039-cancelled.json"
+      ],
+      "seconds": 0.00629283300077077,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "budget",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/negative",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/040-budget.json"
+      ],
+      "seconds": 0.005780333005532157,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "negative-unchanged",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/negative",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/041-negative-unchanged.json"
+      ],
+      "seconds": 0.00633341699722223,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "explicit-valid",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/negative",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/042-explicit-valid.json"
+      ],
+      "seconds": 0.10827266600244911,
+      "exit_code": 0,
+      "expected_error": null
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "settings": {
+    "width": 64,
+    "height": 64,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.15,
+      0.15,
+      0.15
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        30,
+        30,
+        30
+      ]
+    },
+    "camera": {
+      "position": [
+        1,
+        1,
+        5
+      ],
+      "target": [
+        0,
+        1,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65
+    }
+  },
+  "variants": [
+    {
+      "name": "dense",
+      "revision": "sha256:a51a5e7111defc04c23efc61b487ddecb4b5a11fab43a11f8126c1c82dc1a505",
+      "clip": "018903b040fab8788cf9c997635d0066",
+      "linear_rmse": 2.3070609148956016e-05,
+      "object_mismatches": 0,
+      "document_bytes": 13624
+    },
+    {
+      "name": "sparse-zero-u16",
+      "revision": "sha256:ddea16da144796356b6539cc7b21870563bbdb67151ff8680c194d7b5a3f9083",
+      "clip": "162f1a3cac4149b4c924a5b82c734322",
+      "linear_rmse": 2.3070609148956016e-05,
+      "object_mismatches": 0,
+      "document_bytes": 13624
+    },
+    {
+      "name": "sparse-base-u8",
+      "revision": "sha256:19ced2b513de24719976221392021e17ebb608f43208f4224d29cf46b3233284",
+      "clip": "9d21f2477178975d566e53a59f34d62e",
+      "linear_rmse": 2.3070609148956016e-05,
+      "object_mismatches": 0,
+      "document_bytes": 13624
+    }
+  ],
+  "dense_sparse_pixels_identical": true
+}

@@ -44,13 +44,14 @@
       ],
       "qualification": "Static scene completeness also depends on INPUT-02 for core PBR material evaluation. Reading or preserving a field is not rendering support.",
       "status": "partially_implemented_profile",
-      "implemented_profile": "gltf2-static-pbr-v0",
+      "implemented_profile": "gltf2-static-pbr-v0; gltf2-sparse-uv0-v1 accessor capability",
       "evidence": [
         "evidence/m05/agent_workflow_report.json",
         "evidence/m05/browser_workflow_report.json",
-        "evidence/static-pbr/README.md"
+        "evidence/static-pbr/README.md",
+        "evidence/sparse-gltf/README.md"
       ],
-      "remaining_scope": "Sparse/general normalized attributes, additional UV sets and broader scene inputs remain unsupported; normalized skin weights are supported by INPUT-03."
+      "remaining_scope": "Additional UV sets, vertex colors and broader scene inputs remain unsupported; sparse accessors and normalized UV0/skin weights are supported."
     },
     {
       "id": "INPUT-02",
@@ -110,10 +111,11 @@
       "evidence": [
         "evidence/m06-m08/README.md",
         "evidence/animated-gltf/README.md",
-        "evidence/gpu-shutter/README.md"
+        "evidence/gpu-shutter/README.md",
+        "evidence/sparse-gltf/README.md"
       ],
-      "implemented_profile": "native-authored affine-lbs-shutter-v0 and gltf2-animated-pbr-v0 on native/Wasm; gpu-f32-animation-v0 frames and streaming sequences on Metal/WebGPU",
-      "remaining_scope": "Sparse accessors, normal/tangent morph targets, extensions, larger source profiles and animated glTF export remain unsupported."
+      "implemented_profile": "native-authored affine-lbs-shutter-v0 and gltf2-animated-pbr-v0 on native/Wasm; gpu-f32-animation-v0 frames and streaming sequences on Metal/WebGPU; gltf2-sparse-uv0-v1 accessor capability",
+      "remaining_scope": "Normal/tangent morph targets, extensions, larger source profiles and animated glTF export remain unsupported."
     },
     {
       "id": "INPUT-04",

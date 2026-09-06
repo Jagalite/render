@@ -1,0 +1,27 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "frame",
+    "backend": "gpu",
+    "request": {
+      "revision": "sha256:ddea16da144796356b6539cc7b21870563bbdb67151ff8680c194d7b5a3f9083",
+      "clip": "162f1a3cac4149b4c924a5b82c734322",
+      "time": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "shutter": {
+        "open": {
+          "numerator": -1,
+          "denominator": 32
+        },
+        "close": {
+          "numerator": 1,
+          "denominator": 32
+        },
+        "samples": 3
+      }
+    },
+    "output": "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-zero-u16-restored-frame"
+  }
+}

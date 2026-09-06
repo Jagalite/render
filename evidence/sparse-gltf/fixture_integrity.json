@@ -1,0 +1,70 @@
+{
+  "status": "passed",
+  "command": [
+    "python3",
+    "fixtures/sparse-gltf/generate.py",
+    "artifacts/sparse-gltf/run-20260906T045410Z/fixture-reproduction"
+  ],
+  "files": [
+    {
+      "path": "fixtures/sparse-gltf/data/dense.bin",
+      "bytes": 610,
+      "sha256": "1042110d58f9cb125ae57ba6dabd256debbf0abbab4d22645f291d5b954d2819",
+      "reproduced_exactly": true
+    },
+    {
+      "path": "fixtures/sparse-gltf/data/dense.glb",
+      "bytes": 3440,
+      "sha256": "ef0e61c3bd5a38667a3730d0b491807a37cee5665292e5c71cc9c76d5a1e6c73",
+      "reproduced_exactly": true
+    },
+    {
+      "path": "fixtures/sparse-gltf/data/dense.gltf",
+      "bytes": 5520,
+      "sha256": "f9c275c17cc1e561378de59446f0e34173793fc9853106369f1dad5f0c9f8768",
+      "reproduced_exactly": true
+    },
+    {
+      "path": "fixtures/sparse-gltf/data/provenance.json",
+      "bytes": 1843,
+      "sha256": "b3828b7a853efaabdb75d214fdf62c9d7082c3ce94259c4ee04ff44935bfe883",
+      "reproduced_exactly": true
+    },
+    {
+      "path": "fixtures/sparse-gltf/data/sparse-base-u8.bin",
+      "bytes": 822,
+      "sha256": "1e2635358e785a0877b93d3f340b39fd2d41742d1d39a46707bf4341f6dc7e18",
+      "reproduced_exactly": true
+    },
+    {
+      "path": "fixtures/sparse-gltf/data/sparse-base-u8.glb",
+      "bytes": 5780,
+      "sha256": "dbdc35899f4852366ce899d4403efe1d262744c1b579bad155081222b9710ebc",
+      "reproduced_exactly": true
+    },
+    {
+      "path": "fixtures/sparse-gltf/data/sparse-base-u8.gltf",
+      "bytes": 9524,
+      "sha256": "db67d43a6d17b248556f0caee7b7300c9130b7172bbb9b2533edd300370d76ad",
+      "reproduced_exactly": true
+    },
+    {
+      "path": "fixtures/sparse-gltf/data/sparse-zero-u16.bin",
+      "bytes": 614,
+      "sha256": "01c72731f8f933421a3151ef3999498936f88d275131db01d024be3e900e71a4",
+      "reproduced_exactly": true
+    },
+    {
+      "path": "fixtures/sparse-gltf/data/sparse-zero-u16.glb",
+      "bytes": 4968,
+      "sha256": "0a3c453f143de159dd2e0598c9ef43aa3a764bed149f2f70736e7900d2c188b2",
+      "reproduced_exactly": true
+    },
+    {
+      "path": "fixtures/sparse-gltf/data/sparse-zero-u16.gltf",
+      "bytes": 8562,
+      "sha256": "5ca05fb9cafe8015353ba68499cf6b82a68c59aafeb1b02f622f41d5ab7f01e2",
+      "reproduced_exactly": true
+    }
+  ]
+}

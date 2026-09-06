@@ -167,7 +167,7 @@ fn import_glb_mode(bytes: &[u8], document: Id, policy: &Policy, pbr: bool) -> Re
 }
 
 struct Accessor<'a> {
-    bytes: &'a [u8],
+    bytes: std::borrow::Cow<'a, [u8]>,
     start: usize,
     stride: usize,
     count: usize,
@@ -181,13 +181,25 @@ impl Accessor<'_> {
         &self.bytes[start..start + self.width]
     }
     fn floats<const N: usize>(&self) -> Result<Vec<[f32; N]>> {
-        if self.component != 5126 {
-            return Err(unsupported("attributes require float32"));
+        if !matches!(
+            (self.component, self.normalized),
+            (5126, false) | (5121 | 5123, true)
+        ) {
+            return Err(unsupported(
+                "float32 or normalized unsigned byte/short attributes required",
+            ));
         }
         (0..self.count)
             .map(|i| {
                 let v = std::array::from_fn(|axis| {
-                    f32::from_le_bytes(self.component(i, axis).try_into().expect("validated width"))
+                    let bytes = self.component(i, axis);
+                    match self.component {
+                        5121 => f32::from(bytes[0]) / 255.,
+                        5123 => {
+                            f32::from(u16::from_le_bytes(bytes.try_into().expect("width"))) / 65535.
+                        }
+                        _ => f32::from_le_bytes(bytes.try_into().expect("width")),
+                    }
                 });
                 if v.iter().any(|x| !x.is_finite()) {
                     Err(bad("nonfinite attribute"))
@@ -207,7 +219,7 @@ fn accessor<'a>(
 ) -> Result<Accessor<'a>> {
     accessor_mode(root, buffers, id, shape, axes, false)
 }
-fn accessor_mode<'a>(
+fn vertex_accessor<'a>(
     root: &Value,
     buffers: &'a [Vec<u8>],
     id: usize,
@@ -216,42 +228,59 @@ fn accessor_mode<'a>(
     allow_normalized: bool,
 ) -> Result<Accessor<'a>> {
     let a = at(root, "accessors", id)?;
-    if a.get("extensions").is_some() {
-        return Err(unsupported("accessor extensions"));
+    if let Some(view) = a.get("bufferView") {
+        let view = at(root, "bufferViews", index(view)?)?;
+        let component = index(&a["componentType"])?;
+        let width = match component {
+            5121 => 1,
+            5123 => 2,
+            5125 | 5126 => 4,
+            _ => return Err(unsupported("vertex component type")),
+        };
+        let stride = view
+            .get("byteStride")
+            .map(index)
+            .transpose()?
+            .unwrap_or(width * axes);
+        if !offset(a, "byteOffset")?.is_multiple_of(4) || !stride.is_multiple_of(4) {
+            return Err(bad(
+                "vertex attributes require four-byte offset/stride alignment",
+            ));
+        }
     }
-    let normalized = a
-        .get("normalized")
-        .map(|v| v.as_bool().ok_or_else(|| bad("normalized must be boolean")))
-        .transpose()?
-        .unwrap_or(false);
-    if a.get("sparse").is_some() || (normalized && !allow_normalized) {
-        return Err(unsupported("sparse/normalized accessor"));
+    accessor_mode(root, buffers, id, shape, axes, allow_normalized)
+}
+struct AccessorLayout {
+    count: usize,
+    width: usize,
+    element: usize,
+    sparse: bool,
+}
+fn accessor_view<'a>(
+    root: &Value,
+    buffers: &'a [Vec<u8>],
+    view_id: usize,
+    start: usize,
+    layout: AccessorLayout,
+) -> Result<(&'a [u8], usize, usize)> {
+    let AccessorLayout {
+        count,
+        width,
+        element,
+        sparse: tightly_packed,
+    } = layout;
+    let view = at(root, "bufferViews", view_id)?;
+    if view.get("extensions").is_some() {
+        return Err(unsupported("buffer view extensions"));
     }
-    if a["type"] != shape {
-        return Err(bad("accessor shape mismatch"));
-    }
-    let component = index(&a["componentType"])?;
-    let width = match component {
-        5121 => 1,
-        5123 => 2,
-        5125 | 5126 => 4,
-        _ => return Err(unsupported("component type")),
-    };
-    let count = index(&a["count"])?;
-    if count == 0 || count > 196608 {
-        return Err(Error::new("budget", "accessor count outside profile"));
-    }
-    let view = at(root, "bufferViews", index(&a["bufferView"])?)?;
-    if shape == "SCALAR" && view.get("byteStride").is_some() {
-        return Err(bad("index bufferView cannot declare byteStride"));
+    if tightly_packed && (view.get("byteStride").is_some() || view.get("target").is_some()) {
+        return Err(bad("sparse views cannot declare stride or target"));
     }
     let bytes = buffers
         .get(index(&view["buffer"])?)
         .ok_or_else(|| bad("missing buffer"))?;
     let view_start = offset(view, "byteOffset")?;
     let view_len = index(&view["byteLength"])?;
-    let start = offset(a, "byteOffset")?;
-    let element = width * axes;
     let stride = view
         .get("byteStride")
         .map(index)
@@ -272,7 +301,8 @@ fn accessor_mode<'a>(
         .and_then(|n| n.checked_add(element))
         .and_then(|n| n.checked_add(start))
         .ok_or_else(|| bad("accessor overflow"))?;
-    if !absolute.is_multiple_of(width)
+    if !start.is_multiple_of(width)
+        || !absolute.is_multiple_of(width)
         || end > view_len
         || view_start
             .checked_add(view_len)
@@ -280,15 +310,181 @@ fn accessor_mode<'a>(
     {
         return Err(bad("accessor exceeds view/buffer or is unaligned"));
     }
-    Ok(Accessor {
-        bytes,
-        start: absolute,
-        stride,
-        count,
-        component,
-        width,
-        normalized,
-    })
+    Ok((bytes, absolute, stride))
+}
+fn accessor_mode<'a>(
+    root: &Value,
+    buffers: &'a [Vec<u8>],
+    id: usize,
+    shape: &str,
+    axes: usize,
+    allow_normalized: bool,
+) -> Result<Accessor<'a>> {
+    let a = at(root, "accessors", id)?;
+    if a.get("extensions").is_some() {
+        return Err(unsupported("accessor extensions"));
+    }
+    let normalized = a
+        .get("normalized")
+        .map(|v| v.as_bool().ok_or_else(|| bad("normalized must be boolean")))
+        .transpose()?
+        .unwrap_or(false);
+    if normalized && !allow_normalized {
+        return Err(unsupported("normalized accessor outside supported role"));
+    }
+    if a["type"] != shape {
+        return Err(bad("accessor shape mismatch"));
+    }
+    let component = index(&a["componentType"])?;
+    let width = match component {
+        5121 => 1,
+        5123 => 2,
+        5125 | 5126 => 4,
+        _ => return Err(unsupported("component type")),
+    };
+    if normalized && matches!(component, 5125 | 5126) {
+        return Err(bad("FLOAT and UNSIGNED_INT cannot be normalized"));
+    }
+    let count = index(&a["count"])?;
+    if count == 0 || count > 196608 {
+        return Err(Error::new("budget", "accessor count outside profile"));
+    }
+    let element = width * axes;
+    let expanded = count
+        .checked_mul(element)
+        .filter(|n| *n <= 16 * 1024 * 1024)
+        .ok_or_else(|| Error::new("budget", "accessor expansion exceeds 16 MiB"))?;
+    let mut result = if let Some(view_id) = a.get("bufferView") {
+        let view_id = index(view_id)?;
+        if shape == "SCALAR"
+            && at(root, "bufferViews", view_id)?
+                .get("byteStride")
+                .is_some()
+        {
+            return Err(bad("scalar bufferView cannot declare byteStride"));
+        }
+        let (bytes, start, stride) = accessor_view(
+            root,
+            buffers,
+            view_id,
+            offset(a, "byteOffset")?,
+            AccessorLayout {
+                count,
+                width,
+                element,
+                sparse: false,
+            },
+        )?;
+        Accessor {
+            bytes: std::borrow::Cow::Borrowed(bytes),
+            start,
+            stride,
+            count,
+            component,
+            width,
+            normalized,
+        }
+    } else {
+        if a.get("byteOffset").is_some() {
+            return Err(bad("accessor byteOffset requires bufferView"));
+        }
+        Accessor {
+            bytes: std::borrow::Cow::Owned(vec![0; expanded]),
+            start: 0,
+            stride: element,
+            count,
+            component,
+            width,
+            normalized,
+        }
+    };
+    if let Some(sparse) = a.get("sparse") {
+        if !sparse.is_object() {
+            return Err(bad("sparse must be an object"));
+        }
+        let indices = &sparse["indices"];
+        let values = &sparse["values"];
+        if [sparse, indices, values]
+            .iter()
+            .any(|v| v.get("extensions").is_some())
+        {
+            return Err(unsupported("sparse accessor extensions"));
+        }
+        let sparse_count = index(&sparse["count"])?;
+        if sparse_count == 0 || sparse_count > count {
+            return Err(bad("sparse count must be 1..accessor count"));
+        }
+        let index_component = index(&indices["componentType"])?;
+        let index_width = match index_component {
+            5121 => 1,
+            5123 => 2,
+            5125 => 4,
+            _ => return Err(bad("sparse indices require unsigned byte/short/int")),
+        };
+        let (ib, is, _) = accessor_view(
+            root,
+            buffers,
+            index(&indices["bufferView"])?,
+            offset(indices, "byteOffset")?,
+            AccessorLayout {
+                count: sparse_count,
+                width: index_width,
+                element: index_width,
+                sparse: true,
+            },
+        )?;
+        let (vb, vs, _) = accessor_view(
+            root,
+            buffers,
+            index(&values["bufferView"])?,
+            offset(values, "byteOffset")?,
+            AccessorLayout {
+                count: sparse_count,
+                width,
+                element,
+                sparse: true,
+            },
+        )?;
+        // Validate every index before materializing the dense replacement buffer.
+        let mut positions = Vec::with_capacity(sparse_count);
+        for i in 0..sparse_count {
+            let bytes = &ib[is + i * index_width..is + (i + 1) * index_width];
+            let pos = match index_component {
+                5121 => usize::from(bytes[0]),
+                5123 => usize::from(u16::from_le_bytes(bytes.try_into().expect("width"))),
+                _ => u32::from_le_bytes(bytes.try_into().expect("width")) as usize,
+            };
+            if pos >= count || positions.last().is_some_and(|last| *last >= pos) {
+                return Err(bad(
+                    "sparse indices must strictly increase within accessor count",
+                ));
+            }
+            positions.push(pos);
+        }
+        let mut bytes = if result.start == 0
+            && result.stride == element
+            && matches!(result.bytes, std::borrow::Cow::Owned(_))
+        {
+            result.bytes.into_owned()
+        } else {
+            let mut compact = vec![0; expanded];
+            for i in 0..count {
+                compact[i * element..(i + 1) * element].copy_from_slice(
+                    &result.bytes[result.start + i * result.stride
+                        ..result.start + i * result.stride + element],
+                );
+            }
+            compact
+        };
+        for (i, pos) in positions.into_iter().enumerate() {
+            bytes[pos * element..(pos + 1) * element]
+                .copy_from_slice(&vb[vs + i * element..vs + (i + 1) * element]);
+        }
+        result.bytes = std::borrow::Cow::Owned(bytes);
+        result.start = 0;
+        result.stride = element;
+    }
+    Ok(result)
 }
 fn transform(node: &Value) -> Result<Transform> {
     let a = if node.get("matrix").is_some() {
@@ -564,12 +760,13 @@ fn import_scene_mode(
                     "vertex attribute outside POSITION/NORMAL/TEXCOORD_0",
                 ));
             }
-            let position_accessor = accessor(
+            let position_accessor = vertex_accessor(
                 &root,
                 buffers,
                 index(&p["attributes"]["POSITION"])?,
                 "VEC3",
                 3,
+                false,
             )?;
             elements += position_accessor.count;
             if elements > 20000 {
@@ -625,12 +822,13 @@ fn import_scene_mode(
             )?;
             for (key, axes) in [("NORMAL", 3), ("TEXCOORD_0", 2)] {
                 if let Some(id) = attributes.get(key) {
-                    let a = accessor(
+                    let a = vertex_accessor(
                         &root,
                         buffers,
                         index(id)?,
                         if axes == 3 { "VEC3" } else { "VEC2" },
                         axes,
+                        axes == 2,
                     )?;
                     if a.count != mesh.positions.len() {
                         return Err(bad("attribute vertex count mismatch"));
@@ -670,7 +868,7 @@ fn import_scene_mode(
                     if !attributes.contains_key("NORMAL") {
                         return Err(bad("TANGENT requires NORMAL"));
                     }
-                    let a = accessor(&root, buffers, index(tangent)?, "VEC4", 4)?;
+                    let a = vertex_accessor(&root, buffers, index(tangent)?, "VEC4", 4, false)?;
                     if a.count != mesh.positions.len() {
                         return Err(bad("tangent count mismatch"));
                     }

@@ -1,0 +1,18 @@
+dense-init: passed
+dense-base: passed
+dense-import: passed
+dense-retry: passed
+dense-state: passed
+dense-cpu: passed
+dense-gpu: passed
+dense-archive: passed
+dense-restore: passed
+dense-restored-frame: passed
+Traceback (most recent call last):
+  File "/Volumes/seed2/Projects/render/scripts/sparse-gltf-workflow.py", line 91, in <module>
+    call(variant+'-stale',dict(operation,idempotency_key='sparse:stale:01'),target,error='stale_revision')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/seed2/Projects/render/scripts/sparse-gltf-workflow.py", line 47, in call
+    assert value['code']==error,value
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'code': 'request', 'stage': 'validation', 'message': 'unsupported version or invalid request bounds', 'retryable': False, 'context': {}}

@@ -1,0 +1,244 @@
+{
+  "status": "passed",
+  "scope": "macOS ARM64 CPU/Metal, Rust Wasm in Node, Chrome WebGPU/OPFS; Linux and Windows compile only",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5198074159998214,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 18.118751333000546,
+      "log": "logs/clippy.txt"
+    },
+    {
+      "name": "native_tests",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 235.32280545800313,
+      "log": "logs/native_tests.txt"
+    },
+    {
+      "name": "wasm_tests",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 328.7490430409962,
+      "log": "logs/wasm_tests.txt"
+    },
+    {
+      "name": "linux_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-unknown-linux-gnu",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 43.29056304099504,
+      "log": "logs/linux_check.txt"
+    },
+    {
+      "name": "windows_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-pc-windows-msvc",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 10.31987420799851,
+      "log": "logs/windows_check.txt"
+    },
+    {
+      "name": "browser_clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "-p",
+        "render-web",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 13.477403875003802,
+      "log": "logs/browser_clippy.txt"
+    },
+    {
+      "name": "native_build",
+      "command": [
+        "cargo",
+        "build",
+        "-p",
+        "render-host",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 7.932632666001155,
+      "log": "logs/native_build.txt"
+    },
+    {
+      "name": "browser_build",
+      "command": [
+        "sh",
+        "scripts/build-web.sh"
+      ],
+      "exit_code": 0,
+      "seconds": 145.29315312499966,
+      "log": "logs/browser_build.txt"
+    },
+    {
+      "name": "dependency_audit",
+      "command": [
+        "python3",
+        "scripts/dependency-audit.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0956461669993587,
+      "log": "logs/dependency_audit.txt"
+    },
+    {
+      "name": "animated_regression",
+      "command": [
+        "python3",
+        "scripts/animated-gltf-workflow.py",
+        "artifacts/sparse-gltf/run-20260906T045410Z/animated-regression",
+        "--gpu"
+      ],
+      "exit_code": 0,
+      "seconds": 15.555508290999569,
+      "log": "logs/animated_regression.txt"
+    },
+    {
+      "name": "shutter_regression",
+      "command": [
+        "python3",
+        "scripts/gpu-shutter-workflow.py",
+        "artifacts/sparse-gltf/run-20260906T045410Z/shutter-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 20.60077491699485,
+      "log": "logs/shutter_regression.txt"
+    },
+    {
+      "name": "sparse_workflow",
+      "command": [
+        "python3",
+        "scripts/sparse-gltf-workflow.py",
+        "artifacts/sparse-gltf/run-20260906T045410Z/workflow"
+      ],
+      "exit_code": 1,
+      "seconds": 3.587672959001793,
+      "log": "logs/sparse_workflow.txt"
+    }
+  ],
+  "build_environment": {
+    "CARGO_NET_OFFLINE": "true",
+    "CARGO_BUILD_JOBS": "2",
+    "CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUNNER": "wasm-bindgen-test-runner"
+  },
+  "resume_verification": {
+    "runtime_tests_and_fixtures_unchanged": true,
+    "verified_files": 127,
+    "reason": "Client stale-check key had only 15 characters, below the 16-character minimum. Corrected key and valid pre-import revision; Rust sources and tests unchanged.",
+    "client_sha256": "0f96ee5b77289cefa039a709bb1610406ca2fd2c2586d99bb382a1d8fe7a03e9"
+  },
+  "followup_checks": [
+    {
+      "name": "sparse_workflow_retry",
+      "command": [
+        "python3",
+        "scripts/sparse-gltf-workflow.py",
+        "artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry"
+      ],
+      "exit_code": 1,
+      "seconds": 6.970595458995376,
+      "log": "logs/sparse_workflow_retry.txt"
+    },
+    {
+      "name": "sparse_workflow_retry2",
+      "command": [
+        "python3",
+        "scripts/sparse-gltf-workflow.py",
+        "artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2"
+      ],
+      "exit_code": 0,
+      "seconds": 6.755554707997362,
+      "log": "logs/sparse_workflow_retry2.txt"
+    },
+    {
+      "name": "browser_workflow",
+      "command": [
+        "node",
+        "scripts/sparse-gltf-browser.mjs",
+        "artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0217462919972604,
+      "log": "logs/browser_workflow.txt"
+    }
+  ],
+  "resume_history": [
+    {
+      "runtime_tests_and_fixtures_unchanged": true,
+      "verified_files": 127,
+      "reason": "Client used a malformed stale string. Retry uses the valid pre-import revision under a fresh key; Rust sources and tests unchanged.",
+      "client_sha256": "b62f6be4e7e361dbe39668c7fc34afa2114921bfbd712dc4e799db22d6463e0d"
+    }
+  ],
+  "native_test_count": 108,
+  "wasm_test_count": 89,
+  "resolved_failures": {
+    "sparse_workflow": "sparse_workflow_retry2",
+    "sparse_workflow_retry": "sparse_workflow_retry2"
+  },
+  "completed_workflow": "workflow-retry2"
+}

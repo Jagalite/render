@@ -54,3 +54,6 @@ independent command-line workflow and cancellation/recovery tests.
 
 [GPU shutter frames and streaming sequences](docs/gpu_shutter.md) are validated
 on Metal/WebGPU through the CLI and browser APIs; see [acceptance evidence](evidence/gpu-shutter/README.md).
+
+[Sparse glTF and normalized UV0 inputs](docs/gltf_accessors.md) now convert through
+the shared native/browser importer into existing typed geometry and animation.

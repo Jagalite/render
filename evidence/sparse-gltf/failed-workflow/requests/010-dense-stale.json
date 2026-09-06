@@ -1,0 +1,59 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "import",
+    "base_revision": "stale",
+    "idempotency_key": "sparse:stale:01",
+    "max_added_bytes": 8388608,
+    "source": {
+      "format": "glb",
+      "path": "fixtures/sparse-gltf/data/dense.glb",
+      "policy": {
+        "allow_approximations": true
+      }
+    },
+    "settings": {
+      "width": 64,
+      "height": 64,
+      "samples": 8,
+      "seed": 73,
+      "max_depth": 2,
+      "max_bytes": 16777216,
+      "environment": [
+        0.15,
+        0.15,
+        0.15
+      ],
+      "light": {
+        "position": [
+          -2,
+          4,
+          3
+        ],
+        "intensity": [
+          30,
+          30,
+          30
+        ]
+      },
+      "camera": {
+        "position": [
+          1,
+          1,
+          5
+        ],
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "vertical_fov_radians": 0.65
+      }
+    }
+  }
+}

@@ -150,3 +150,7 @@ python3 scripts/project-cli-workflow.py artifacts/my-cli-run --gpu
 That client records every concrete request and response, performs a modeled and
 animated scene workflow, reopens the project through a native archive, and checks
 that rendering never mutates it. It calls only the general project entry point.
+
+[Sparse accessors and normalized UV0](gltf_accessors.md) now extend the named
+static/animated glTF profiles; [acceptance evidence](../evidence/sparse-gltf/README.md)
+records equivalent dense/sparse native/browser rendering and recovery.

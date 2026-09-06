@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "runtime_tests_and_fixture_sources_unchanged_during_validation": true,
+  "verified_files": 127,
+  "post_capture_changes": [
+    "README.md",
+    "docs/agent_alpha.md",
+    "docs/animated_gltf.md",
+    "docs/input_support.md",
+    "docs/project_cli.md",
+    "planning/engine-progress/README.md",
+    "planning/engine-progress/sparse-accessor-contract.md",
+    "planning/feature_matrix.json",
+    "planning/input_support.json",
+    "scripts/sparse-gltf-browser.mjs",
+    "scripts/sparse-gltf-workflow.py"
+  ],
+  "client_corrections": "Valid older revision and retry-key length in CLI stale test; valid retry-key length in browser malformed-import test. Followup workflows passed. Remaining changes are docs/capability status."
+}

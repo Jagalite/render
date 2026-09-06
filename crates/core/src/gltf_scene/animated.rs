@@ -325,7 +325,8 @@ pub(super) fn append(
                         "morph profile requires POSITION only; normal/tangent morphs unsupported",
                     ));
                 }
-                let a = accessor(root, buffers, index(&target["POSITION"])?, "VEC3", 3)?;
+                let a =
+                    vertex_accessor(root, buffers, index(&target["POSITION"])?, "VEC3", 3, false)?;
                 if a.count != geometry.positions.len() {
                     return Err(bad("morph point count"));
                 }
@@ -363,14 +364,15 @@ pub(super) fn append(
                     if set == 1 && ja.is_none() && wa.is_none() {
                         continue;
                     }
-                    let ja = accessor(
+                    let ja = vertex_accessor(
                         root,
                         buffers,
                         index(ja.ok_or_else(|| bad("paired JOINTS/WEIGHTS required"))?)?,
                         "VEC4",
                         4,
+                        false,
                     )?;
-                    let wa = accessor_mode(
+                    let wa = vertex_accessor(
                         root,
                         buffers,
                         index(wa.ok_or_else(|| bad("paired JOINTS/WEIGHTS required"))?)?,

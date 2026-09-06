@@ -1,0 +1,27 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "frame",
+    "backend": "gpu",
+    "request": {
+      "revision": "sha256:19ced2b513de24719976221392021e17ebb608f43208f4224d29cf46b3233284",
+      "clip": "9d21f2477178975d566e53a59f34d62e",
+      "time": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "shutter": {
+        "open": {
+          "numerator": -1,
+          "denominator": 32
+        },
+        "close": {
+          "numerator": 1,
+          "denominator": 32
+        },
+        "samples": 3
+      }
+    },
+    "output": "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-base-u8-gpu"
+  }
+}

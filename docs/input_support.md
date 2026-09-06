@@ -35,3 +35,7 @@ The core glTF target is grounded in the [Khronos glTF 2.0 specification](https:/
 [GPU shutter frames and streaming sequences](gpu_shutter.md) now extend the
 opaque animation profile on Metal/WebGPU, with explicit nominal-time passes and
 partial-output semantics. Format coverage remains separately qualified.
+
+[Sparse accessors and normalized UV0](gltf_accessors.md) now extend the named
+static/animated glTF profiles; [acceptance evidence](../evidence/sparse-gltf/README.md)
+records equivalent dense/sparse native/browser rendering and recovery.

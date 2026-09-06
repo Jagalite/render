@@ -1,0 +1,61 @@
+{
+  "license": "CC0-1.0",
+  "authorship": "Original repository synthetic character and checker texture; generated directly from glTF binary fields",
+  "inputs": [
+    {
+      "path": "fixtures/animated-gltf/character.gltf",
+      "sha256": "ae8e6f29cfd0571f0bb36b990780a29eb1eb9e0f113abe5676010a823c8486ba"
+    },
+    {
+      "path": "fixtures/animated-gltf/character.bin",
+      "sha256": "dadae66cb1aab78f4fa13b404d46bda325f2680042e5af2912524d28ea9cb725"
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "dense.bin",
+      "bytes": 610,
+      "sha256": "1042110d58f9cb125ae57ba6dabd256debbf0abbab4d22645f291d5b954d2819"
+    },
+    {
+      "file": "dense.glb",
+      "bytes": 3440,
+      "sha256": "ef0e61c3bd5a38667a3730d0b491807a37cee5665292e5c71cc9c76d5a1e6c73"
+    },
+    {
+      "file": "dense.gltf",
+      "bytes": 5520,
+      "sha256": "f9c275c17cc1e561378de59446f0e34173793fc9853106369f1dad5f0c9f8768"
+    },
+    {
+      "file": "sparse-base-u8.bin",
+      "bytes": 822,
+      "sha256": "1e2635358e785a0877b93d3f340b39fd2d41742d1d39a46707bf4341f6dc7e18"
+    },
+    {
+      "file": "sparse-base-u8.glb",
+      "bytes": 5780,
+      "sha256": "dbdc35899f4852366ce899d4403efe1d262744c1b579bad155081222b9710ebc"
+    },
+    {
+      "file": "sparse-base-u8.gltf",
+      "bytes": 9524,
+      "sha256": "db67d43a6d17b248556f0caee7b7300c9130b7172bbb9b2533edd300370d76ad"
+    },
+    {
+      "file": "sparse-zero-u16.bin",
+      "bytes": 614,
+      "sha256": "01c72731f8f933421a3151ef3999498936f88d275131db01d024be3e900e71a4"
+    },
+    {
+      "file": "sparse-zero-u16.glb",
+      "bytes": 4968,
+      "sha256": "0a3c453f143de159dd2e0598c9ef43aa3a764bed149f2f70736e7900d2c188b2"
+    },
+    {
+      "file": "sparse-zero-u16.gltf",
+      "bytes": 8562,
+      "sha256": "5ca05fb9cafe8015353ba68499cf6b82a68c59aafeb1b02f622f41d5ab7f01e2"
+    }
+  ]
+}

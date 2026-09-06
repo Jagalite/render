@@ -33,7 +33,8 @@ The [CLI contract](project_cli.md) covers paths, transactions and artifact publi
   Mesh-node world transforms cancel in skin evaluation, as required by glTF skinning.
 - POSITION-only morph targets, mesh defaults and node overrides, with independently
   animated target weights. Default and key weights must be within [-8,8]; cubic overshoot is diagnosed during evaluation. Morphs precede LBS. Target counts must agree across all
-  primitives. Sparse accessors and normal/tangent morph targets are unsupported.
+  primitives. [Sparse accessors](gltf_accessors.md) are now supported; normal/tangent
+  morph targets remain unsupported.
 
 Approximation consent remains required. Rotation keys whose squared-norm error is
 at most 1e-3 are renormalized; the conversion report records the largest source
@@ -125,3 +126,7 @@ builds current Wasm bindings before browser validation. See the
 
 Reference: [Khronos glTF 2.0 specification](https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html),
 particularly transforms, skins, morph targets and animation interpolation.
+
+[Sparse accessors and normalized UV0](gltf_accessors.md) now extend the named
+static/animated glTF profiles; [acceptance evidence](../evidence/sparse-gltf/README.md)
+records equivalent dense/sparse native/browser rendering and recovery.

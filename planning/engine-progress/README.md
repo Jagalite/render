@@ -5,12 +5,12 @@ working on feasible remaining steps. M09 interactive editor remains deferred.
 Each completed increment requires implementation, native/browser workflow evidence,
 negative/cancellation/stale checks, resource/provenance records and documentation.
 
-Base checkpoint: `4bfe27f` (validated multi-bounce opaque transport).
+Current checkpoint: `5416cfa` (validated GPU shutter frames and sequences).
 
 | Order | Increment | Status |
 |---|---|---|
 | 1 | GPU shutter frames and streaming sequences | Validated on feat/gpu-shutter-sequences; evidence/gpu-shutter |
-| 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Next: sparse accessors and normalized UV0 |
+| 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Sparse accessors/normalized UV0 validated; alpha import next |
 | 3 | Richer GPU scattering and transport quality | Pending |
 | 4 | External hair/volume inputs, fiber shading and sparse GPU media | Pending |
 | 5 | Scoped native .blend/USD/MaterialX interchange | Pending |
@@ -27,3 +27,12 @@ not be silently reported as completed. No major implementation blocker parked ye
 GPU shutter acceptance: 105 native tests, 86 Wasm tests, two explicit Metal test
 groups, complete CLI/browser workflows and 84 unchanged regression artifacts.
 Evidence: `evidence/gpu-shutter/README.md`. No dependency changes or major blockers.
+
+Sparse accessor acceptance: 108 native tests, 89 Wasm tests, 43-request CLI and
+Chrome CPU/WebGPU/OPFS workflows. Dense/sparse pixels are identical; 80 prior
+render/pass/receipt artifacts are unchanged. Evidence: `evidence/sparse-gltf/README.md`.
+
+Next alpha work has two reproduced pre-existing CPU camera bugs to fix: far
+clipping after transparency, and orthographic ray-distance depth. Baseline evidence
+is `artifacts/alpha-baseline/run-20260906T050222Z`; these do not affect the opaque
+sparse-input profile.

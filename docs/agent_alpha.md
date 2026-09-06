@@ -84,7 +84,7 @@ are geometric. Imported normals are retained as typed attributes, not evaluated
 as a smooth-shading model. No PBR compatibility claim follows.
 
 Cameras in the input file, animations, skins, morphs, textures/images, additional
-vertex semantics, sparse/normalized accessors, nontriangle modes and extensions
+vertex semantics, nontriangle modes and extensions
 are rejected. A caller supplies the camera separately. Extras/generator metadata
 and unselected scenes are identified as losses. The old mesh-only OBJ/glTF APIs
 remain separate. INPUT-01 is partially implemented; its complete static scene,
@@ -198,3 +198,7 @@ inspection, Metal workflow timing/RSS, browser workflow and foundation regressio
 It writes to `artifacts/m05` and never updates reference images automatically.
 
 The additive [M06–M08 contracts](m07_m08.md) expose ordinary typed authoring commands, pinned animated previews, CPU extended root rendering and imaging products. These operations preserve the existing narrow ABI and restricted static-variant commit contract.
+
+The shared importer now additionally accepts [bounded sparse accessors and
+normalized unsigned UV0](gltf_accessors.md); other normalized vertex roles retain
+their explicit profile restrictions.

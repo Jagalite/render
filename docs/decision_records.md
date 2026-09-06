@@ -209,3 +209,20 @@ and exact frame identities retain their meaning.
 or asynchronous dispatch ring with equivalent cancellation, budget and publication
 semantics. Driver preemption, unbounded consumer buffering and automatic CPU
 fallback are not part of this profile.
+
+## ADR-018 — Sparse source arrays convert into existing native semantics
+
+**Decision:** Expand checked sparse glTF accessors only within explicit temporary
+limits, preserve zero/interleaved base semantics, and decode normalized unsigned
+TEXCOORD_0 values into the existing UV attribute. Keep normalization role-specific.
+The [accessor contract](gltf_accessors.md) adds a capability without changing typed
+native geometry, animation, texture, transaction or public layout semantics.
+
+**Integration boundary:** The shared importer serves native explicit resources and
+browser byte inputs. Equivalent values retain mesh content identity; different
+source bytes retain different scoped entity IDs. Sparse overrides never become
+runtime-index durable IDs. Render/persistence behavior uses existing Rust APIs.
+
+**Revisit trigger:** Larger valid sources require measured streaming expansion or
+additional attribute/material semantics. Broader UV, alpha, morph and quantization
+profiles must pass their own renderer/numerical and state-recovery gates.

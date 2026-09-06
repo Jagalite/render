@@ -1,0 +1,202 @@
+{
+  "status": "failed",
+  "profile": "gltf2-sparse-uv0-v1",
+  "calls": [
+    {
+      "name": "dense-init",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/requests/000-dense-init.json"
+      ],
+      "seconds": 0.8141980420041364,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/requests/001-dense-base.json"
+      ],
+      "seconds": 0.030088749997958075,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/requests/002-dense-import.json"
+      ],
+      "seconds": 0.14814200000546407,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17956864,
+        "peak memory footprint": 3769472
+      }
+    },
+    {
+      "name": "dense-retry",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/requests/003-dense-retry.json"
+      ],
+      "seconds": 0.054191458999412134,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-state",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/requests/004-dense-state.json"
+      ],
+      "seconds": 0.030837665995932184,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/requests/005-dense-cpu.json"
+      ],
+      "seconds": 0.6735221669950988,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 21053440,
+        "peak memory footprint": 5309568
+      }
+    },
+    {
+      "name": "dense-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/requests/006-dense-gpu.json"
+      ],
+      "seconds": 1.197228292003274,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36945920,
+        "peak memory footprint": 11896448
+      }
+    },
+    {
+      "name": "dense-archive",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/requests/007-dense-archive.json"
+      ],
+      "seconds": 0.26197258300089743,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-restore",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/dense-restored",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/requests/008-dense-restore.json"
+      ],
+      "seconds": 0.1290069580063573,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-restored-frame",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/dense-restored",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/requests/009-dense-restored-frame.json"
+      ],
+      "seconds": 2.700354292006523,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-stale",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry/requests/010-dense-stale.json"
+      ],
+      "seconds": 0.45674729199527064,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "settings": {
+    "width": 64,
+    "height": 64,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.15,
+      0.15,
+      0.15
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        30,
+        30,
+        30
+      ]
+    },
+    "camera": {
+      "position": [
+        1,
+        1,
+        5
+      ],
+      "target": [
+        0,
+        1,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65
+    }
+  },
+  "variants": [],
+  "error": "{'code': 'request', 'stage': 'validation', 'message': 'unsupported version or invalid request bounds', 'retryable': False, 'context': {}}"
+}

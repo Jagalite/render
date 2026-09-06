@@ -1,0 +1,167 @@
+{
+  "profile": "64x64, 8 spatial samples, 3 shutter samples, depth2; single CLI process observations, not speed benchmarks",
+  "observations": [
+    {
+      "name": "dense-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/002-dense-import.json"
+      ],
+      "seconds": 0.16059962500003166,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17874944,
+        "peak memory footprint": 3687552
+      }
+    },
+    {
+      "name": "dense-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/005-dense-cpu.json"
+      ],
+      "seconds": 0.42573179100145353,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 21004288,
+        "peak memory footprint": 5129344
+      }
+    },
+    {
+      "name": "dense-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/dense",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/006-dense-gpu.json"
+      ],
+      "seconds": 1.1269634999989648,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36814848,
+        "peak memory footprint": 11781760
+      }
+    },
+    {
+      "name": "sparse-zero-u16-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/014-sparse-zero-u16-import.json"
+      ],
+      "seconds": 0.11624166699766647,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17989632,
+        "peak memory footprint": 3802240
+      }
+    },
+    {
+      "name": "sparse-zero-u16-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/017-sparse-zero-u16-cpu.json"
+      ],
+      "seconds": 0.4140585830027703,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 21102592,
+        "peak memory footprint": 5227648
+      }
+    },
+    {
+      "name": "sparse-zero-u16-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/018-sparse-zero-u16-gpu.json"
+      ],
+      "seconds": 0.3510154169998714,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 37027840,
+        "peak memory footprint": 11994752
+      }
+    },
+    {
+      "name": "sparse-base-u8-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/026-sparse-base-u8-import.json"
+      ],
+      "seconds": 0.1173138750018552,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 18006016,
+        "peak memory footprint": 3818624
+      }
+    },
+    {
+      "name": "sparse-base-u8-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/029-sparse-base-u8-cpu.json"
+      ],
+      "seconds": 0.41443662499659695,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 21168128,
+        "peak memory footprint": 5293184
+      }
+    },
+    {
+      "name": "sparse-base-u8-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/sparse-gltf/run-20260906T045410Z/workflow-retry2/requests/030-sparse-base-u8-gpu.json"
+      ],
+      "seconds": 0.35010450000118,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36782080,
+        "peak memory footprint": 11748992
+      }
+    }
+  ]
+}

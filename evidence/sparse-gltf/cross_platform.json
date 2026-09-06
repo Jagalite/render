@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "comparisons": [
+    {
+      "variant": "dense",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "object_mismatches": 0
+    },
+    {
+      "variant": "dense",
+      "browser": "gpu",
+      "linear_rmse": 2.306863478243146e-05,
+      "object_mismatches": 0
+    },
+    {
+      "variant": "sparse-zero-u16",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "object_mismatches": 0
+    },
+    {
+      "variant": "sparse-zero-u16",
+      "browser": "gpu",
+      "linear_rmse": 2.306863478243146e-05,
+      "object_mismatches": 0
+    },
+    {
+      "variant": "sparse-base-u8",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "object_mismatches": 0
+    },
+    {
+      "variant": "sparse-base-u8",
+      "browser": "gpu",
+      "linear_rmse": 2.306863478243146e-05,
+      "object_mismatches": 0
+    }
+  ]
+}

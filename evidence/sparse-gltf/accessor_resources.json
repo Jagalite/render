@@ -1,0 +1,29 @@
+{
+  "profile": "196608 elements and 16 MiB per materialized accessor, current roles <=12 MiB; unchanged source/scene/transaction bounds",
+  "fixtures": [
+    {
+      "variant": "dense",
+      "source_json_bytes": 5520,
+      "source_binary_bytes": 610,
+      "materialized_accessor_bytes_sum": 0,
+      "largest_materialized_accessor_bytes": 0,
+      "sparse_accessors": 0
+    },
+    {
+      "variant": "sparse-base-u8",
+      "source_json_bytes": 9524,
+      "source_binary_bytes": 822,
+      "materialized_accessor_bytes_sum": 496,
+      "largest_materialized_accessor_bytes": 128,
+      "sparse_accessors": 11
+    },
+    {
+      "variant": "sparse-zero-u16",
+      "source_json_bytes": 8562,
+      "source_binary_bytes": 614,
+      "materialized_accessor_bytes_sum": 512,
+      "largest_materialized_accessor_bytes": 128,
+      "sparse_accessors": 12
+    }
+  ]
+}

@@ -18,7 +18,7 @@
         "final_render": "implemented_cpu_gpu_diffuse_and_opaque_static_pbr_profiles",
         "preview": "portable_path_PBR; flat_raster_legacy_only",
         "human_editing": "planned_M09",
-        "import": "scoped_OBJ_static_PBR_and_gltf2_animated_pbr_v0_with_explicit_resources",
+        "import": "scoped_OBJ_static_PBR_and_gltf2_animated_pbr_v0_with_explicit_resources; gltf2_sparse_uv0_v1",
         "export": "canonical_json_and_native_package"
       },
       "platform_profiles": {
@@ -32,7 +32,8 @@
         "evidence/m05/agent_workflow_report.json",
         "evidence/static-pbr/README.md",
         "evidence/m06-m08/README.md",
-        "evidence/animated-gltf/README.md"
+        "evidence/animated-gltf/README.md",
+        "evidence/sparse-gltf/README.md"
       ]
     },
     {
@@ -50,7 +51,7 @@
         "final_render": "native_CPU_GPU_scene_and_shutter_sequences; CPU_imaging_products",
         "preview": "implemented_candidates_and_render_api",
         "human_editing": "planned_M09",
-        "import": "typed_JSON_requests_and_explicit_OBJ_static_or_animated_GLB_glTF_bundles",
+        "import": "typed_JSON_requests_and_explicit_OBJ_static_or_animated_GLB_glTF_bundles; gltf2_sparse_uv0_v1",
         "export": "native_document_lossy_evaluated_OBJ_and_render_artifact_manifests"
       },
       "platform_profiles": {
@@ -67,7 +68,8 @@
         "evidence/m05/browser_workflow_report.json",
         "evidence/project-cli/README.md",
         "evidence/animated-gltf/README.md",
-        "evidence/gpu-shutter/README.md"
+        "evidence/gpu-shutter/README.md",
+        "evidence/sparse-gltf/README.md"
       ]
     },
     {
@@ -234,7 +236,7 @@
         "final_render": "native_and_browser_Rust_CPU; GPU_only_declared_geometry_and_surface_profiles",
         "preview": "public_Rust_render_preview_operations; raster_legacy_only",
         "human_editing": "planned_M09",
-        "import": "gltf2_animated_pbr_v0_TRS_clips_skins_POSITION_morphs",
+        "import": "gltf2_animated_pbr_v0_TRS_clips_skins_POSITION_morphs; gltf2_sparse_uv0_v1",
         "export": "canonical_JSON_native_package_and_typed_render_artifacts"
       },
       "platform_profiles": {
@@ -244,7 +246,8 @@
       "evidence": [
         "evidence/m06-m08/README.md",
         "evidence/animated-gltf/README.md",
-        "evidence/gpu-shutter/README.md"
+        "evidence/gpu-shutter/README.md",
+        "evidence/sparse-gltf/README.md"
       ]
     },
     {
@@ -399,14 +402,14 @@
       "broader_gates": [
         "M13"
       ],
-      "qualification": "Named static Lambertian/PBR and animated PBR glTF/GLB profiles with explicit resources and source-to-ID reports. No sparse accessors, normal/tangent morphs, extensions or arbitrary glTF claim.",
+      "qualification": "Named static Lambertian/PBR and animated PBR glTF/GLB profiles with explicit resources and source-to-ID reports. Sparse accessors and normalized unsigned UV0 are supported; normal/tangent morphs, extensions and arbitrary glTF fidelity remain outside these profiles.",
       "capability_axes": {
         "native_authoring": "not_applicable_adapter",
         "native_evaluation": "validated_static_and_animated_hierarchy_skinning_and_position_morphs",
         "final_render": "implemented_cpu_gpu_diffuse_and_opaque_static_pbr_profiles",
         "preview": "portable_path_PBR; flat_raster_legacy_only",
         "human_editing": "planned_M09",
-        "import": "scoped_OBJ_static_PBR_and_gltf2_animated_pbr_v0_with_explicit_resources",
+        "import": "scoped_OBJ_static_PBR_and_gltf2_animated_pbr_v0_with_explicit_resources; gltf2_sparse_uv0_v1",
         "export": "named_static_OBJ_glTF_profiles_and_lossless_native_JSON; no_animated_glTF_export"
       },
       "platform_profiles": {
@@ -419,7 +422,8 @@
         "evidence/m05/browser_workflow_report.json",
         "evidence/static-pbr/README.md",
         "evidence/animated-gltf/README.md",
-        "evidence/gpu-shutter/README.md"
+        "evidence/gpu-shutter/README.md",
+        "evidence/sparse-gltf/README.md"
       ]
     },
     {

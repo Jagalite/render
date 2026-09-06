@@ -11,6 +11,41 @@ pub struct Operation {
 pub fn registry() -> Vec<Operation> {
     let mut operations = vec![
         Operation {
+            name: "author_paint",
+            version: 0,
+            mutation: true,
+            effects: "apply bounded pixel-space brush samples to immutable tiles and compare-replace a canvas",
+            cancellation: "bounded computation and before publication; synchronous browser admission",
+        },
+        Operation {
+            name: "bake_paint",
+            version: 0,
+            mutation: true,
+            effects: "composite a pinned canvas into an ordinary encoded image; material binding is explicit",
+            cancellation: "bounded computation and before publication; synchronous browser admission",
+        },
+        Operation {
+            name: "put_paint_tile",
+            version: 0,
+            mutation: true,
+            effects: "retain typed linear premultiplied color or scalar mask tile in snapshot18",
+            cancellation: "bounded computation and before publication; synchronous browser admission",
+        },
+        Operation {
+            name: "put_paint_asset",
+            version: 0,
+            mutation: true,
+            effects: "retain bounded layer and stroke intent with typed sparse tile references",
+            cancellation: "bounded computation and before publication; synchronous browser admission",
+        },
+        Operation {
+            name: "set_paint_canvas",
+            version: 0,
+            mutation: true,
+            effects: "compare-replace or remove an independent canvas binding for editing and recovery",
+            cancellation: "bounded computation and before publication; synchronous browser admission",
+        },
+        Operation {
             name: "author_uv",
             version: 0,
             mutation: true,

@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "reason": "Review added Metal and WebGPU depth/normal checks to exact CPU and GPU color checks; previous gates retained.",
+  "command": [
+    "python3",
+    "scripts/compare-tiled-painting-browser.py",
+    "artifacts/tiled-painting/run-20260906T212644Z/paint-workflow"
+  ],
+  "exit_code": 0,
+  "log": "logs/paint_pass_review.txt",
+  "comparator_before_sha256": "fb5587ac25a4fde072daccadfdaf82180cb1b2239db27c27d7a5cd95860c615a",
+  "comparator_after_sha256": "9625025c7a1a0a73140d0e577190f50db63ae31f6f2647f1be74b930fff537c3",
+  "new_compilation": false,
+  "unchanged_tested_native": "1652648006bb1d81a429d96e00f55de35a9e6cb99947d053a5352ac1e7d0b333",
+  "unchanged_tested_browser": "e3c625effe7c8a892cc07987dca5f99651510d468026c5e48e9c5af4efc3d5b6"
+}

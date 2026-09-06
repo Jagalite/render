@@ -1,0 +1,9 @@
+file:///Volumes/seed2/Projects/render/artifacts/worktrees/tiled-painting/scripts/tiled-painting-browser.mjs:12
+const evaluate=async expression=>{const r=await command('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw new Error(JSON.stringify(r.exceptionDetails));return r.result.value;};
+                                                                                                                                                          ^
+
+Error: {"exceptionId":188,"text":"Uncaught (in promise)","lineNumber":0,"columnNumber":0,"exception":{"type":"string","value":"reference: UV source mesh missing"}}
+    at evaluate (file:///Volumes/seed2/Projects/render/artifacts/worktrees/tiled-painting/scripts/tiled-painting-browser.mjs:12:155)
+    at async file:///Volumes/seed2/Projects/render/artifacts/worktrees/tiled-painting/scripts/tiled-painting-browser.mjs:17:15
+
+Node.js v23.5.0

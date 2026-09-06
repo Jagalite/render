@@ -1,0 +1,31 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/tiled-painting/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 52.76s
+     Running tests/tiled_painting.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/tiled_painting-3c515ee7a9110d79)
+
+running 8 tests
+test tile_encoding_is_explicit_and_rejects_invalid_payloads ... ok
+test edge_padding_references_layer_ids_and_caps_are_validated ... ok
+test brush_coverage_clipping_pressure_and_work_are_bounded ... ok
+test bake_uses_explicit_color_role_and_reports_premultiplied_error ... ok
+test source_over_erase_and_mask_match_independent_alpha_equations ... FAILED
+test layer_order_visibility_and_opacity_affect_real_composite ... ok
+test stroke_checkpoint_replay_matches_one_shot_and_preserves_distant_tiles ... ok
+test cancellation_at_every_observed_checkpoint_keeps_sources_immutable ... ok
+
+failures:
+
+---- source_over_erase_and_mask_match_independent_alpha_equations stdout ----
+
+thread 'source_over_erase_and_mask_match_independent_alpha_equations' (6423844) panicked at crates/core/tests/tiled_painting.rs:168:5:
+assertion `left == right` failed
+  left: [127, 0, 128, 127]
+ right: [128, 0, 128, 127]
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    source_over_erase_and_mask_match_independent_alpha_equations
+
+test result: FAILED. 7 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.19s
+
+error: test failed, to rerun pass `-p render-core --test tiled_painting`

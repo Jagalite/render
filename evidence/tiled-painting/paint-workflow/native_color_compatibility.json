@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "compared_to": "run-20260906T200434Z before portable sRGB8 and mip LOD changes",
+  "native_render_files": [
+    {
+      "path": "source-cpu/manifest.json",
+      "sha256": "8c79cb7346acda9fc9e6aca48b5912712b1380ed2ed32767b432efec93cd72f4",
+      "unchanged": true
+    },
+    {
+      "path": "source-cpu/image/image.pfm",
+      "sha256": "fb7a4e85cd4bd66cb5a937c5e85373f6954eb4d45edddb1eb7d9779faa0a7834",
+      "unchanged": true
+    },
+    {
+      "path": "source-cpu/image/image.ppm",
+      "sha256": "49a3b500fd2a06007f15cd04039fa4ac49b6ee713eb0380a81a9d36332d98f81",
+      "unchanged": true
+    },
+    {
+      "path": "source-cpu/image/passes.json",
+      "sha256": "dcf06940b4dee45f90d49b523adcafccd97f604c024ba5249c7ccaeb380c03c3",
+      "unchanged": true
+    },
+    {
+      "path": "box-cpu/manifest.json",
+      "sha256": "4c2c2fb54b9470972259440730c267f4f779b38bc847224456181f434a271171",
+      "unchanged": true
+    },
+    {
+      "path": "box-cpu/image/image.pfm",
+      "sha256": "1a9681202a257ed8abf4b407dbe04e487e969f04259d8913206fd2a2930a498b",
+      "unchanged": true
+    },
+    {
+      "path": "box-cpu/image/image.ppm",
+      "sha256": "f5f17c7f3130ef0b18c8507e58a7bc89a892b47081bf66617454921bb8b22960",
+      "unchanged": true
+    },
+    {
+      "path": "box-cpu/image/passes.json",
+      "sha256": "dcf06940b4dee45f90d49b523adcafccd97f604c024ba5249c7ccaeb380c03c3",
+      "unchanged": true
+    },
+    {
+      "path": "box-gpu/manifest.json",
+      "sha256": "f593300c745305d8a8d38dba9929906b3e33987dc18be5495707fb082087c3c6",
+      "unchanged": true
+    },
+    {
+      "path": "box-gpu/image/image.pfm",
+      "sha256": "fc82794bac984865daf85b5b0e675d19e0f7059eff039e743a0f843d447c6edf",
+      "unchanged": true
+    },
+    {
+      "path": "box-gpu/image/image.ppm",
+      "sha256": "4a2ffbc05683daccb019901217e1a4bc3ebf89c7b9bae0c0bc1aaf79d57433f0",
+      "unchanged": true
+    },
+    {
+      "path": "box-gpu/image/passes.json",
+      "sha256": "e958665868546677053c58e05ebed9c4c746b9d9511a6312f87c5c46b84faf57",
+      "unchanged": true
+    },
+    {
+      "path": "box-restored/manifest.json",
+      "sha256": "4c2c2fb54b9470972259440730c267f4f779b38bc847224456181f434a271171",
+      "unchanged": true
+    },
+    {
+      "path": "box-restored/image/image.pfm",
+      "sha256": "1a9681202a257ed8abf4b407dbe04e487e969f04259d8913206fd2a2930a498b",
+      "unchanged": true
+    },
+    {
+      "path": "box-restored/image/image.ppm",
+      "sha256": "f5f17c7f3130ef0b18c8507e58a7bc89a892b47081bf66617454921bb8b22960",
+      "unchanged": true
+    },
+    {
+      "path": "box-restored/image/passes.json",
+      "sha256": "dcf06940b4dee45f90d49b523adcafccd97f604c024ba5249c7ccaeb380c03c3",
+      "unchanged": true
+    }
+  ],
+  "full_paint_snapshot_unchanged": true
+}

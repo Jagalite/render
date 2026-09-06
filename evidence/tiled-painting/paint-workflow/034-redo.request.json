@@ -1,0 +1,20 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:128ff16e9118ea95c9fd20eb6f9fc8773f571f2a90869b525f881fff70e2529b",
+      "idempotency_key": "paint-workflow-redo",
+      "max_added_bytes": 4194304,
+      "commands": [
+        {
+          "operation": "set_paint_canvas",
+          "canvas": "00000000000000000000000000000384",
+          "source_asset": "sha256:94442c778eedf3e3267d7396b36e464b0e28b1e5e9d20c3f2eec6c2bacd21748",
+          "asset": "sha256:f136cb8901355d16ea14f8bd4483d15e174b81472ae7451091d9c49fe51d452f"
+        }
+      ]
+    }
+  }
+}

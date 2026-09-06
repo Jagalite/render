@@ -1,0 +1,1080 @@
+{
+  "status": "passed",
+  "scope": "macOS ARM64 CPU/Metal, Rust Wasm in Node, Chrome WebGPU/OPFS; Linux and Windows compile only",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 1.7181260409997776,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "srgb8_numeric_source",
+      "command": [
+        "python3",
+        "scripts/validate-srgb8-compat.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/srgb8_numeric_source.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.48605824999685865,
+      "log": "logs/srgb8_numeric_source.txt"
+    },
+    {
+      "name": "mip_lod_numeric_source",
+      "command": [
+        "python3",
+        "scripts/validate-paint-mip-lod.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/mip_lod_numeric_source.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.15194104200054426,
+      "log": "logs/mip_lod_numeric_source.txt"
+    },
+    {
+      "name": "paint_native",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "tiled_painting",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 78.92094879200158,
+      "log": "logs/paint_native.txt"
+    },
+    {
+      "name": "independent_source_validation",
+      "command": [
+        "node",
+        "scripts/validate-gltf-fixtures.cjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/source-validation"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7037085839983774,
+      "log": "logs/independent_source_validation.txt"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 16.942938457999844,
+      "log": "logs/clippy.txt"
+    },
+    {
+      "name": "native_build",
+      "command": [
+        "cargo",
+        "build",
+        "-p",
+        "render-host",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 32.02387066600204,
+      "log": "logs/native_build.txt"
+    },
+    {
+      "name": "paint_workflow",
+      "command": [
+        "python3",
+        "scripts/tiled-painting-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 87.09688108300907,
+      "log": "logs/paint_workflow.txt"
+    },
+    {
+      "name": "paint_schema",
+      "command": [
+        "python3",
+        "scripts/validate-tiled-painting-schema.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3307176250091288,
+      "log": "logs/paint_schema.txt"
+    },
+    {
+      "name": "browser_build",
+      "command": [
+        "sh",
+        "scripts/build-web.sh"
+      ],
+      "exit_code": 0,
+      "seconds": 95.58469583299302,
+      "log": "logs/browser_build.txt"
+    },
+    {
+      "name": "paint_browser",
+      "command": [
+        "node",
+        "scripts/tiled-painting-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.433049667000887,
+      "log": "logs/paint_browser.txt"
+    },
+    {
+      "name": "paint_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-tiled-painting-browser.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06383558300149161,
+      "log": "logs/paint_cross_platform.txt"
+    },
+    {
+      "name": "wasm_tests",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 131.54770129198732,
+      "log": "logs/wasm_tests.txt"
+    },
+    {
+      "name": "native_tests",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 1083.2119006249995,
+      "log": "logs/native_tests.txt"
+    },
+    {
+      "name": "uv_workflow",
+      "command": [
+        "python3",
+        "scripts/uv-authoring-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 6.186633833000087,
+      "log": "logs/uv_workflow.txt"
+    },
+    {
+      "name": "uv_schema",
+      "command": [
+        "python3",
+        "scripts/validate-uv-authoring-schema.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.2979403750068741,
+      "log": "logs/uv_schema.txt"
+    },
+    {
+      "name": "uv_browser",
+      "command": [
+        "node",
+        "scripts/uv-authoring-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7803784999996424,
+      "log": "logs/uv_browser.txt"
+    },
+    {
+      "name": "uv_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-uv-authoring-browser.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.031010083999717608,
+      "log": "logs/uv_cross_platform.txt"
+    },
+    {
+      "name": "blend_workflow",
+      "command": [
+        "python3",
+        "scripts/blend-static-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 87.55295449998812,
+      "log": "logs/blend_workflow.txt"
+    },
+    {
+      "name": "blend_reference",
+      "command": [
+        "python3",
+        "scripts/compare-blend-reference.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.15552266599843279,
+      "log": "logs/blend_reference.txt"
+    },
+    {
+      "name": "blend_schema",
+      "command": [
+        "python3",
+        "scripts/validate-blend-schema.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 50.64963299999363,
+      "log": "logs/blend_schema.txt"
+    },
+    {
+      "name": "blend_browser",
+      "command": [
+        "node",
+        "scripts/blend-static-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 4.419127249988378,
+      "log": "logs/blend_browser.txt"
+    },
+    {
+      "name": "blend_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-blend-browser.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.4662478750105947,
+      "log": "logs/blend_cross_platform.txt"
+    },
+    {
+      "name": "gpu_dielectric",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_dielectric",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 11.221624083991628,
+      "log": "logs/gpu_dielectric.txt"
+    },
+    {
+      "name": "gpu_surfaces",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_surfaces",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 10.542423791994224,
+      "log": "logs/gpu_surfaces.txt"
+    },
+    {
+      "name": "secondary_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "secondary_textures_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 4.438172833004501,
+      "log": "logs/secondary_gpu.txt"
+    },
+    {
+      "name": "gpu_alpha",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_alpha",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 11.077436291001504,
+      "log": "logs/gpu_alpha.txt"
+    },
+    {
+      "name": "gltf_export_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gltf_export_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 1.7882404169940855,
+      "log": "logs/gltf_export_gpu.txt"
+    },
+    {
+      "name": "vertex_colors_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "vertex_colors_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 1.4810819170088507,
+      "log": "logs/vertex_colors_gpu.txt"
+    },
+    {
+      "name": "named_uv_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "named_uv_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 1.2950030830106698,
+      "log": "logs/named_uv_gpu.txt"
+    },
+    {
+      "name": "morph_frame_regressions",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "morph_frames",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 14.486794917000225,
+      "log": "logs/morph_frame_regressions.txt"
+    },
+    {
+      "name": "morph_frame_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "morph_frames_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 2.518820750003215,
+      "log": "logs/morph_frame_gpu.txt"
+    },
+    {
+      "name": "linux_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-unknown-linux-gnu",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 11.438662542001111,
+      "log": "logs/linux_check.txt"
+    },
+    {
+      "name": "windows_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-pc-windows-msvc",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 22.97325829201145,
+      "log": "logs/windows_check.txt"
+    },
+    {
+      "name": "browser_clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "-p",
+        "render-web",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 17.66233520800597,
+      "log": "logs/browser_clippy.txt"
+    },
+    {
+      "name": "camera_regression",
+      "command": [
+        "python3",
+        "scripts/alpha-camera-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/camera-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 31.656090874996153,
+      "log": "logs/camera_regression.txt"
+    },
+    {
+      "name": "dependency_audit",
+      "command": [
+        "python3",
+        "scripts/dependency-audit.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6580253749998519,
+      "log": "logs/dependency_audit.txt"
+    },
+    {
+      "name": "animated_regression",
+      "command": [
+        "python3",
+        "scripts/animated-gltf-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/animated-regression",
+        "--gpu"
+      ],
+      "exit_code": 0,
+      "seconds": 7.165841541995178,
+      "log": "logs/animated_regression.txt"
+    },
+    {
+      "name": "shutter_regression",
+      "command": [
+        "python3",
+        "scripts/gpu-shutter-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/shutter-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 5.180549749988131,
+      "log": "logs/shutter_regression.txt"
+    },
+    {
+      "name": "sparse_regression",
+      "command": [
+        "python3",
+        "scripts/sparse-gltf-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/sparse-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 15.830647541995859,
+      "log": "logs/sparse_regression.txt"
+    },
+    {
+      "name": "alpha_workflow",
+      "command": [
+        "python3",
+        "scripts/alpha-gltf-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/alpha-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 12.221546459011734,
+      "log": "logs/alpha_workflow.txt"
+    },
+    {
+      "name": "alpha_browser",
+      "command": [
+        "node",
+        "scripts/alpha-gltf-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/alpha-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 1.2884677910042228,
+      "log": "logs/alpha_browser.txt"
+    },
+    {
+      "name": "alpha_shutter_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/alpha-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 5.78436987499299,
+      "log": "logs/alpha_shutter_workflow.txt"
+    },
+    {
+      "name": "alpha_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/alpha-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5216945830034092,
+      "log": "logs/alpha_shutter_browser.txt"
+    },
+    {
+      "name": "named_uv_regression",
+      "command": [
+        "python3",
+        "scripts/named-uv-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/named-uv-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 3.910548875006498,
+      "log": "logs/named_uv_regression.txt"
+    },
+    {
+      "name": "named_uv_browser",
+      "command": [
+        "node",
+        "scripts/named-uv-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/named-uv-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3847888340096688,
+      "log": "logs/named_uv_browser.txt"
+    },
+    {
+      "name": "named_uv_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-named-uv-browser.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/named-uv-regression",
+        "artifacts/tiled-painting/run-20260906T212644Z/named_uv_cross_platform.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06418783401022665,
+      "log": "logs/named_uv_cross_platform.txt"
+    },
+    {
+      "name": "morph_workflow",
+      "command": [
+        "python3",
+        "scripts/morph-frames-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/morph-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 5.564395332999993,
+      "log": "logs/morph_workflow.txt"
+    },
+    {
+      "name": "morph_browser",
+      "command": [
+        "node",
+        "scripts/morph-frames-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/morph-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5124497920041904,
+      "log": "logs/morph_browser.txt"
+    },
+    {
+      "name": "vertex_color_workflow",
+      "command": [
+        "python3",
+        "scripts/vertex-colors-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/vertex-color-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 14.149333207999007,
+      "log": "logs/vertex_color_workflow.txt"
+    },
+    {
+      "name": "vertex_color_browser",
+      "command": [
+        "node",
+        "scripts/vertex-colors-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/vertex-color-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5214490840007784,
+      "log": "logs/vertex_color_browser.txt"
+    },
+    {
+      "name": "export_workflow",
+      "command": [
+        "python3",
+        "scripts/gltf-export-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 55.83562525000889,
+      "log": "logs/export_workflow.txt"
+    },
+    {
+      "name": "export_schema",
+      "command": [
+        "python3",
+        "scripts/validate-gltf-export-schema.py",
+        "artifacts/tiled-painting/run-20260906T212644Z"
+      ],
+      "exit_code": 0,
+      "seconds": 2.1332375409983797,
+      "log": "logs/export_schema.txt"
+    },
+    {
+      "name": "export_source_validation",
+      "command": [
+        "node",
+        "scripts/validate-exported-glbs.cjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3735276670049643,
+      "log": "logs/export_source_validation.txt"
+    },
+    {
+      "name": "export_browser",
+      "command": [
+        "node",
+        "scripts/gltf-export-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.6568325830012327,
+      "log": "logs/export_browser.txt"
+    },
+    {
+      "name": "secondary_workflow",
+      "command": [
+        "python3",
+        "scripts/secondary-textures-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/secondary-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 28.01960116700502,
+      "log": "logs/secondary_workflow.txt"
+    },
+    {
+      "name": "secondary_browser",
+      "command": [
+        "node",
+        "scripts/secondary-textures-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/secondary-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8444654589984566,
+      "log": "logs/secondary_browser.txt"
+    },
+    {
+      "name": "surface_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-surfaces-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/surface-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 34.93173999999999,
+      "log": "logs/surface_workflow.txt"
+    },
+    {
+      "name": "surface_browser",
+      "command": [
+        "node",
+        "scripts/gpu-surfaces-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/surface-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.6089386669918895,
+      "log": "logs/surface_browser.txt"
+    },
+    {
+      "name": "conductor_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/conductor-shutter",
+        "{\"kind\": \"conductor\", \"eta\": [0.2, 0.9, 1.1], \"k\": [3, 2, 1.5]}"
+      ],
+      "exit_code": 0,
+      "seconds": 9.62278875001357,
+      "log": "logs/conductor_shutter.txt"
+    },
+    {
+      "name": "conductor_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/conductor-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5025552500010235,
+      "log": "logs/conductor_shutter_browser.txt"
+    },
+    {
+      "name": "coated_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/coated-shutter",
+        "{\"kind\": \"coated\", \"weight\": 0.7, \"ior\": 1.5, \"roughness\": 0.25}"
+      ],
+      "exit_code": 0,
+      "seconds": 6.015565082998364,
+      "log": "logs/coated_shutter.txt"
+    },
+    {
+      "name": "coated_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/coated-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5078832080034772,
+      "log": "logs/coated_shutter_browser.txt"
+    },
+    {
+      "name": "dielectric_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-dielectric-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/dielectric-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 111.49749858300493,
+      "log": "logs/dielectric_workflow.txt"
+    },
+    {
+      "name": "dielectric_browser",
+      "command": [
+        "node",
+        "scripts/gpu-dielectric-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/dielectric-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 2.5341917920013657,
+      "log": "logs/dielectric_browser.txt"
+    },
+    {
+      "name": "dielectric_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/dielectric-shutter",
+        "{\"kind\": \"dielectric\", \"ior\": 1.5}"
+      ],
+      "exit_code": 0,
+      "seconds": 6.011104208999313,
+      "log": "logs/dielectric_shutter.txt"
+    },
+    {
+      "name": "dielectric_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/dielectric-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5314089160092408,
+      "log": "logs/dielectric_shutter_browser.txt"
+    },
+    {
+      "name": "volume_workflow",
+      "command": [
+        "python3",
+        "scripts/volume-import-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/volume-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 35.917238541005645,
+      "log": "logs/volume_workflow.txt"
+    },
+    {
+      "name": "volume_schema",
+      "command": [
+        "python3",
+        "scripts/validate-volume-import-schema.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/volume-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 7.899827166998875,
+      "log": "logs/volume_schema.txt"
+    },
+    {
+      "name": "volume_browser",
+      "command": [
+        "node",
+        "scripts/volume-import-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/volume-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0383387499896344,
+      "log": "logs/volume_browser.txt"
+    },
+    {
+      "name": "hair_workflow",
+      "command": [
+        "python3",
+        "scripts/hair-import-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/hair-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 28.190260582996416,
+      "log": "logs/hair_workflow.txt"
+    },
+    {
+      "name": "hair_schema",
+      "command": [
+        "python3",
+        "scripts/validate-hair-import-schema.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/hair-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3383199579984648,
+      "log": "logs/hair_schema.txt"
+    },
+    {
+      "name": "hair_browser",
+      "command": [
+        "node",
+        "scripts/hair-import-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/hair-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6582019170018611,
+      "log": "logs/hair_browser.txt"
+    },
+    {
+      "name": "geometry_regression",
+      "command": [
+        "target/debug/render-host",
+        "geometry-workflow",
+        "artifacts/tiled-painting/run-20260906T212644Z/geometry-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8871036250056932,
+      "log": "logs/geometry_regression.txt"
+    },
+    {
+      "name": "groom_regression",
+      "command": [
+        "target/debug/render-host",
+        "groom-workflow",
+        "artifacts/tiled-painting/run-20260906T212644Z/groom-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6800151250063209,
+      "log": "logs/groom_regression.txt"
+    },
+    {
+      "name": "curve_color_workflow",
+      "command": [
+        "python3",
+        "scripts/curve-colors-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 51.606637875011074,
+      "log": "logs/curve_color_workflow.txt"
+    },
+    {
+      "name": "curve_color_schema",
+      "command": [
+        "python3",
+        "scripts/validate-curve-colors-schema.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5885521250020247,
+      "log": "logs/curve_color_schema.txt"
+    },
+    {
+      "name": "curve_color_glb_validation",
+      "command": [
+        "node",
+        "scripts/validate-exported-glbs.cjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.22518850000051316,
+      "log": "logs/curve_color_glb_validation.txt"
+    },
+    {
+      "name": "curve_color_browser",
+      "command": [
+        "node",
+        "scripts/curve-colors-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.2649961249990156,
+      "log": "logs/curve_color_browser.txt"
+    },
+    {
+      "name": "media_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_media",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 24.334359874992515,
+      "log": "logs/media_gpu.txt"
+    },
+    {
+      "name": "media_exact_rays",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-gpu",
+        "--locked",
+        "--offline",
+        "half_open_unit_cells",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 12.820578667000518,
+      "log": "logs/media_exact_rays.txt"
+    },
+    {
+      "name": "media_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-media-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/media-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 64.01692012499552,
+      "log": "logs/media_workflow.txt"
+    },
+    {
+      "name": "media_browser",
+      "command": [
+        "node",
+        "scripts/gpu-media-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/media-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.6998014169948874,
+      "log": "logs/media_browser.txt"
+    },
+    {
+      "name": "media_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-media-shutter-workflow.py",
+        "artifacts/tiled-painting/run-20260906T212644Z/media-shutter",
+        "artifacts/tiled-painting/run-20260906T212644Z/media-workflow/homogeneous-archive/document/document.json"
+      ],
+      "exit_code": 0,
+      "seconds": 2.4281156659999397,
+      "log": "logs/media_shutter.txt"
+    },
+    {
+      "name": "media_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-media-shutter-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T212644Z/media-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.38420483301160857,
+      "log": "logs/media_shutter_browser.txt"
+    }
+  ],
+  "build_environment": {
+    "CARGO_NET_OFFLINE": "true",
+    "CARGO_BUILD_JOBS": "2",
+    "CARGO_INCREMENTAL": "0",
+    "CARGO_PROFILE_DEV_DEBUG": "0",
+    "CARGO_PROFILE_TEST_DEBUG": "0",
+    "CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUNNER": "wasm-bindgen-test-runner",
+    "RENDER_TEST_ORIGIN": "http://127.0.0.1:8781"
+  },
+  "native_test_count": 213,
+  "wasm_test_count": 188
+}

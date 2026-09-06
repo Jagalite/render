@@ -20,6 +20,7 @@ pub mod interchange;
 pub mod jobs;
 pub mod mesh_codec;
 pub mod modeling;
+pub mod painting;
 pub mod pbr;
 pub mod procedural;
 pub mod products;

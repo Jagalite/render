@@ -1,0 +1,214 @@
+{
+  "canvas_id": "00000000000000000000000000000384",
+  "canvas": {
+    "version": 0,
+    "width": 64,
+    "height": 64,
+    "role": "srgb_color",
+    "layers": [
+      {
+        "id": "00000000000000000000000000000385",
+        "name": "Ochre base",
+        "visible": true,
+        "opacity": 65535,
+        "color": [],
+        "mask": []
+      },
+      {
+        "id": "00000000000000000000000000000386",
+        "name": "Blue detail",
+        "visible": true,
+        "opacity": 65535,
+        "color": [],
+        "mask": []
+      }
+    ],
+    "strokes": []
+  },
+  "strokes": [
+    {
+      "id": "0000000000000000000000000000038e",
+      "layer": "00000000000000000000000000000385",
+      "brush": {
+        "radius": 10,
+        "hardness": 0.5,
+        "spacing": 0.4,
+        "mode": {
+          "kind": "paint",
+          "color": [
+            0.8,
+            0.3,
+            0.04,
+            1
+          ]
+        }
+      },
+      "samples": [
+        {
+          "pixel": [
+            5,
+            10
+          ],
+          "pressure": 1,
+          "time": {
+            "numerator": 0,
+            "denominator": 1
+          }
+        },
+        {
+          "pixel": [
+            30,
+            20
+          ],
+          "pressure": 0.6,
+          "time": {
+            "numerator": 1,
+            "denominator": 1
+          }
+        }
+      ],
+      "finish": false
+    },
+    {
+      "id": "0000000000000000000000000000038e",
+      "layer": "00000000000000000000000000000385",
+      "brush": {
+        "radius": 10,
+        "hardness": 0.5,
+        "spacing": 0.4,
+        "mode": {
+          "kind": "paint",
+          "color": [
+            0.8,
+            0.3,
+            0.04,
+            1
+          ]
+        }
+      },
+      "samples": [
+        {
+          "pixel": [
+            52,
+            45
+          ],
+          "pressure": 1,
+          "time": {
+            "numerator": 2,
+            "denominator": 1
+          }
+        }
+      ],
+      "finish": true
+    },
+    {
+      "id": "0000000000000000000000000000038f",
+      "layer": "00000000000000000000000000000386",
+      "brush": {
+        "radius": 8,
+        "hardness": 0.5,
+        "spacing": 0.4,
+        "mode": {
+          "kind": "paint",
+          "color": [
+            0.02,
+            0.2,
+            0.9,
+            0.8
+          ]
+        }
+      },
+      "samples": [
+        {
+          "pixel": [
+            12,
+            50
+          ],
+          "pressure": 1,
+          "time": {
+            "numerator": 0,
+            "denominator": 1
+          }
+        },
+        {
+          "pixel": [
+            48,
+            8
+          ],
+          "pressure": 1,
+          "time": {
+            "numerator": 1,
+            "denominator": 1
+          }
+        }
+      ],
+      "finish": true
+    },
+    {
+      "id": "00000000000000000000000000000390",
+      "layer": "00000000000000000000000000000386",
+      "brush": {
+        "radius": 7,
+        "hardness": 0.5,
+        "spacing": 0.4,
+        "mode": {
+          "kind": "mask",
+          "value": 0.1,
+          "opacity": 0.9
+        }
+      },
+      "samples": [
+        {
+          "pixel": [
+            31,
+            31
+          ],
+          "pressure": 1,
+          "time": {
+            "numerator": 0,
+            "denominator": 1
+          }
+        },
+        {
+          "pixel": [
+            39,
+            31
+          ],
+          "pressure": 1,
+          "time": {
+            "numerator": 1,
+            "denominator": 1
+          }
+        }
+      ],
+      "finish": true
+    },
+    {
+      "id": "00000000000000000000000000000391",
+      "layer": "00000000000000000000000000000385",
+      "brush": {
+        "radius": 3,
+        "hardness": 0.5,
+        "spacing": 0.4,
+        "mode": {
+          "kind": "erase",
+          "opacity": 0.6
+        }
+      },
+      "samples": [
+        {
+          "pixel": [
+            18,
+            18
+          ],
+          "pressure": 1,
+          "time": {
+            "numerator": 0,
+            "denominator": 1
+          }
+        }
+      ],
+      "finish": true
+    }
+  ]
+}

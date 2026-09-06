@@ -437,6 +437,38 @@
             "method",
             "request"
           ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "author_paint"
+            },
+            "request": {
+              "$ref": "#/$defs/paintRequest"
+            }
+          },
+          "required": [
+            "method",
+            "request"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "bake_paint"
+            },
+            "request": {
+              "$ref": "#/$defs/paintBakeRequest"
+            }
+          },
+          "required": [
+            "method",
+            "request"
+          ]
         }
       ]
     }
@@ -1271,6 +1303,619 @@
         "operation",
         "budget",
         "max_added_bytes"
+      ]
+    },
+    "paintCoordinate": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 63
+        },
+        "y": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 63
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ]
+    },
+    "paintTileRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "coordinate": {
+          "$ref": "#/$defs/paintCoordinate"
+        },
+        "tile": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "coordinate",
+        "tile"
+      ]
+    },
+    "paintTile": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "color"
+            },
+            "version": {
+              "const": 0
+            },
+            "rgba_le": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{16384}$"
+            }
+          },
+          "required": [
+            "kind",
+            "version",
+            "rgba_le"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "mask"
+            },
+            "version": {
+              "const": 0
+            },
+            "coverage_le": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{4096}$"
+            }
+          },
+          "required": [
+            "kind",
+            "version",
+            "coverage_le"
+          ]
+        }
+      ]
+    },
+    "paintMode": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "paint"
+            },
+            "color": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "minItems": 4,
+              "maxItems": 4
+            }
+          },
+          "required": [
+            "kind",
+            "color"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "erase"
+            },
+            "opacity": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "required": [
+            "kind",
+            "opacity"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "mask"
+            },
+            "value": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "opacity": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "required": [
+            "kind",
+            "value",
+            "opacity"
+          ]
+        }
+      ]
+    },
+    "paintBrush": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "radius": {
+          "type": "number",
+          "minimum": 0.25,
+          "maximum": 128
+        },
+        "hardness": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "spacing": {
+          "type": "number",
+          "minimum": 0.05,
+          "maximum": 2
+        },
+        "mode": {
+          "$ref": "#/$defs/paintMode"
+        }
+      },
+      "required": [
+        "radius",
+        "hardness",
+        "spacing",
+        "mode"
+      ]
+    },
+    "paintSample": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pixel": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": -4096,
+            "maximum": 4096
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "pressure": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "time": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "numerator": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9223372036854775807
+            },
+            "denominator": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 18446744073709551615
+            }
+          },
+          "required": [
+            "numerator",
+            "denominator"
+          ]
+        }
+      },
+      "required": [
+        "pixel",
+        "pressure",
+        "time"
+      ]
+    },
+    "paintStrokeInput": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{32}$"
+        },
+        "layer": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{32}$"
+        },
+        "brush": {
+          "$ref": "#/$defs/paintBrush"
+        },
+        "samples": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/paintSample"
+          },
+          "minItems": 0,
+          "maxItems": 256
+        },
+        "finish": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "layer",
+        "brush",
+        "samples",
+        "finish"
+      ]
+    },
+    "paintStroke": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{32}$"
+        },
+        "layer": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{32}$"
+        },
+        "brush": {
+          "$ref": "#/$defs/paintBrush"
+        },
+        "samples": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/paintSample"
+          },
+          "minItems": 1,
+          "maxItems": 256
+        },
+        "closed": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "layer",
+        "brush",
+        "samples",
+        "closed"
+      ]
+    },
+    "paintLayer": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{32}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "visible": {
+          "type": "boolean"
+        },
+        "opacity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "color": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/paintTileRef"
+          },
+          "minItems": 0,
+          "maxItems": 256
+        },
+        "mask": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/paintTileRef"
+          },
+          "minItems": 0,
+          "maxItems": 256
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "visible",
+        "opacity",
+        "color",
+        "mask"
+      ]
+    },
+    "paintAsset": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "const": 0
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2048
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2048
+        },
+        "role": {
+          "enum": [
+            "srgb_color",
+            "linear_data"
+          ]
+        },
+        "layers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/paintLayer"
+          },
+          "minItems": 1,
+          "maxItems": 8
+        },
+        "strokes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/paintStroke"
+          },
+          "minItems": 0,
+          "maxItems": 16
+        }
+      },
+      "required": [
+        "version",
+        "width",
+        "height",
+        "role",
+        "layers",
+        "strokes"
+      ]
+    },
+    "paintBudget": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "max_dabs": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4096
+        },
+        "max_pixel_work": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 16777216
+        },
+        "max_touched_tiles": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64
+        },
+        "max_output_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4194304
+        }
+      },
+      "required": [
+        "max_dabs",
+        "max_pixel_work",
+        "max_touched_tiles",
+        "max_output_bytes"
+      ]
+    },
+    "paintBakeBudget": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "max_pixel_work": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 16777216
+        },
+        "max_encoded_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4194304
+        }
+      },
+      "required": [
+        "max_pixel_work",
+        "max_encoded_bytes"
+      ]
+    },
+    "paintRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "const": 0
+        },
+        "base_revision": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "idempotency_key": {
+          "type": "string",
+          "minLength": 16,
+          "maxLength": 128
+        },
+        "canvas": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{32}$"
+        },
+        "source_asset": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "stroke": {
+          "$ref": "#/$defs/paintStrokeInput"
+        },
+        "budget": {
+          "$ref": "#/$defs/paintBudget"
+        },
+        "max_added_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 67108864
+        }
+      },
+      "required": [
+        "version",
+        "base_revision",
+        "idempotency_key",
+        "canvas",
+        "source_asset",
+        "stroke",
+        "budget",
+        "max_added_bytes"
+      ]
+    },
+    "paintBakeRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "const": 0
+        },
+        "base_revision": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "idempotency_key": {
+          "type": "string",
+          "minLength": 16,
+          "maxLength": 128
+        },
+        "canvas": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{32}$"
+        },
+        "source_asset": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "budget": {
+          "$ref": "#/$defs/paintBakeBudget"
+        },
+        "max_added_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 67108864
+        }
+      },
+      "required": [
+        "version",
+        "base_revision",
+        "idempotency_key",
+        "canvas",
+        "source_asset",
+        "budget",
+        "max_added_bytes"
+      ]
+    },
+    "paintCommand": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "tile": {
+              "$ref": "#/$defs/paintTile"
+            },
+            "operation": {
+              "const": "put_paint_tile"
+            }
+          },
+          "required": [
+            "operation",
+            "tile"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "asset": {
+              "$ref": "#/$defs/paintAsset"
+            },
+            "operation": {
+              "const": "put_paint_asset"
+            }
+          },
+          "required": [
+            "operation",
+            "asset"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "canvas": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{32}$"
+            },
+            "source_asset": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^sha256:[0-9a-f]{64}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "asset": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^sha256:[0-9a-f]{64}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "operation": {
+              "const": "set_paint_canvas"
+            }
+          },
+          "required": [
+            "operation",
+            "canvas",
+            "source_asset",
+            "asset"
+          ]
+        }
       ]
     }
   }

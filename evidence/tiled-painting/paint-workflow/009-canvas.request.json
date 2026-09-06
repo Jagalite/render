@@ -1,0 +1,48 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:cbd25db63063a973410fdd7eabfc8f74cde8adb873ac3513ae829b185982466c",
+      "idempotency_key": "paint-workflow-canvas",
+      "max_added_bytes": 4194304,
+      "commands": [
+        {
+          "operation": "put_paint_asset",
+          "asset": {
+            "version": 0,
+            "width": 64,
+            "height": 64,
+            "role": "srgb_color",
+            "layers": [
+              {
+                "id": "00000000000000000000000000000385",
+                "name": "Ochre base",
+                "visible": true,
+                "opacity": 65535,
+                "color": [],
+                "mask": []
+              },
+              {
+                "id": "00000000000000000000000000000386",
+                "name": "Blue detail",
+                "visible": true,
+                "opacity": 65535,
+                "color": [],
+                "mask": []
+              }
+            ],
+            "strokes": []
+          }
+        },
+        {
+          "operation": "set_paint_canvas",
+          "canvas": "00000000000000000000000000000384",
+          "source_asset": null,
+          "asset": "sha256:d63aaaa15669dbf6cbc189b33eae828ba73ecafb7e96569f81d6da4300a516ca"
+        }
+      ]
+    }
+  }
+}

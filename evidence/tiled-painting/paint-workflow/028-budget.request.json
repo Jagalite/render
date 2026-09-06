@@ -1,0 +1,47 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "author_paint",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:a4f65be45e1ec6b67d817ebf0b2a7d71e18cab6eb4ae59f9356a479c2aa5d26e",
+      "idempotency_key": "paint-workflow-rejected",
+      "canvas": "00000000000000000000000000000384",
+      "source_asset": "sha256:f136cb8901355d16ea14f8bd4483d15e174b81472ae7451091d9c49fe51d452f",
+      "stroke": {
+        "id": "00000000000000000000000000000398",
+        "layer": "00000000000000000000000000000385",
+        "brush": {
+          "radius": 3,
+          "hardness": 0.5,
+          "spacing": 0.4,
+          "mode": {
+            "kind": "erase",
+            "opacity": 0.6
+          }
+        },
+        "samples": [
+          {
+            "pixel": [
+              18,
+              18
+            ],
+            "pressure": 1,
+            "time": {
+              "numerator": 0,
+              "denominator": 1
+            }
+          }
+        ],
+        "finish": true
+      },
+      "budget": {
+        "max_dabs": 4096,
+        "max_pixel_work": 1,
+        "max_touched_tiles": 64,
+        "max_output_bytes": 4194304
+      },
+      "max_added_bytes": 4194304
+    }
+  }
+}

@@ -11,7 +11,7 @@
         "M05",
         "M13"
       ],
-      "qualification": "Transactional typed assets and shared geometry through snapshot version 17, with procedural, groom, media and UV bindings, animation and imaging; no full editor.",
+      "qualification": "Transactional typed assets and shared geometry through snapshot version 18, with procedural, groom, media, UV and paint assets, animation and imaging; no full editor.",
       "capability_axes": {
         "native_authoring": "implemented_api_v0",
         "native_evaluation": "implemented_polygon_profile",
@@ -313,6 +313,32 @@
       },
       "evidence": [
         "evidence/uv-authoring/README.md"
+      ]
+    },
+    {
+      "id": "texture_painting",
+      "family": "Tiled texture painting",
+      "status": "implemented_experimental_profile",
+      "first_useful_gate": "M10",
+      "broader_gates": [
+        "M14"
+      ],
+      "qualification": "paint-tiles-v1: bounded pixel-space strokes, premultiplied UNORM16 tiles, scalar layer masks, layers, checkpoint recovery and explicit RGBA8 PNG baking. Projected painting, HDR, virtual textures and broader baking remain separate.",
+      "capability_axes": {
+        "native_authoring": "ordinary_canvas_tile_asset_transactions_and_author_paint",
+        "native_evaluation": "bounded_layer_mask_composite_and_explicit_bake_paint",
+        "final_render": "validated_named_UV_to_painted_image_CPU_Metal_WebGPU_workflow",
+        "preview": "shared_Rust_rendering; no_paint_editor",
+        "human_editing": "planned_M09",
+        "import": "native_typed_tiles_and_stroke_recipes; no_external_layer_stack_import",
+        "export": "snapshot18_archive_and_normal_baked_PNG_image_asset"
+      },
+      "platform_profiles": {
+        "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
+        "browser_local": "validated_Chromium_Rust_Wasm_OPFS_WebGPU; synchronous_bounded_authoring"
+      },
+      "evidence": [
+        "evidence/tiled-painting/README.md"
       ]
     },
     {

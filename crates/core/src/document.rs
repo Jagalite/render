@@ -307,6 +307,12 @@ pub struct Snapshot {
     #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
     pub uv_bindings: BTreeMap<Id, String>,
     #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub paint_tiles: BTreeMap<String, Arc<crate::painting::Tile>>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub paint_assets: BTreeMap<String, Arc<crate::painting::Asset>>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub paint_canvases: BTreeMap<Id, String>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
     pub volume_bindings: BTreeMap<Id, String>,
     #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
     pub grooms: BTreeMap<Id, crate::groom::Groom>,
@@ -340,6 +346,9 @@ impl Snapshot {
             source_assets: BTreeMap::new(),
             uv_assets: BTreeMap::new(),
             uv_bindings: BTreeMap::new(),
+            paint_tiles: BTreeMap::new(),
+            paint_assets: BTreeMap::new(),
+            paint_canvases: BTreeMap::new(),
             volume_bindings: BTreeMap::new(),
             grooms: BTreeMap::new(),
             animation: None,
@@ -355,7 +364,11 @@ impl Snapshot {
         Ok(digest(&canonical(self)?))
     }
     pub fn validate(&self) -> Result<()> {
-        if self.version > 17
+        if self.version > 18
+            || (self.version < 18
+                && (!self.paint_tiles.is_empty()
+                    || !self.paint_assets.is_empty()
+                    || !self.paint_canvases.is_empty()))
             || (self.version < 17 && (!self.uv_assets.is_empty() || !self.uv_bindings.is_empty()))
             || (self.version < 17
                 && self
@@ -458,6 +471,31 @@ impl Snapshot {
                     "reference",
                     "typed geometry attachment is missing or conflicts with a mesh",
                 ));
+            }
+        }
+        if self.paint_tiles.len() > crate::painting::MAX_TILES
+            || self.paint_assets.len() > crate::painting::MAX_ASSETS
+            || self.paint_canvases.len() > 64
+        {
+            return Err(Error::new(
+                "budget",
+                "paint retained tile, asset or canvas count exceeds profile",
+            ));
+        }
+        for (hash, tile) in &self.paint_tiles {
+            if tile.content_id()? != *hash {
+                return Err(Error::new("integrity", "paint tile digest mismatch"));
+            }
+        }
+        for (hash, asset) in &self.paint_assets {
+            if asset.content_id()? != *hash {
+                return Err(Error::new("integrity", "paint asset digest mismatch"));
+            }
+            asset.validate_tiles(&self.paint_tiles)?;
+        }
+        for hash in self.paint_canvases.values() {
+            if !self.paint_assets.contains_key(hash) {
+                return Err(Error::new("reference", "paint canvas asset missing"));
             }
         }
         if self.uv_assets.len() > 64 {
@@ -816,6 +854,17 @@ pub enum Command {
     SetGroom {
         entity: Id,
         groom: Option<crate::groom::Groom>,
+    },
+    PutPaintTile {
+        tile: crate::painting::Tile,
+    },
+    PutPaintAsset {
+        asset: crate::painting::Asset,
+    },
+    SetPaintCanvas {
+        canvas: Id,
+        source_asset: Option<String>,
+        asset: Option<String>,
     },
     PutUvAsset {
         asset: crate::uv::Asset,
@@ -1271,6 +1320,31 @@ fn apply(s: &mut Snapshot, c: &Command) -> Result<()> {
                 } else {
                     5
                 });
+        }
+        Command::PutPaintTile { tile } => {
+            s.paint_tiles
+                .insert(tile.content_id()?, Arc::new(tile.clone()));
+            s.version = s.version.max(18);
+        }
+        Command::PutPaintAsset { asset } => {
+            s.paint_assets
+                .insert(asset.content_id()?, Arc::new(asset.clone()));
+            s.version = s.version.max(18);
+        }
+        Command::SetPaintCanvas {
+            canvas,
+            source_asset,
+            asset,
+        } => {
+            if s.paint_canvases.get(canvas) != source_asset.as_ref() {
+                return Err(Error::new("stale_selection", "paint canvas source changed"));
+            }
+            if let Some(hash) = asset {
+                s.paint_canvases.insert(*canvas, hash.clone());
+            } else {
+                s.paint_canvases.remove(canvas);
+            }
+            s.version = s.version.max(18);
         }
         Command::PutUvAsset { asset } => {
             s.uv_assets

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Volumes/seed2/Projects/render/artifacts/worktrees/tiled-painting/scripts/compare-tiled-painting-browser.py", line 9, in <module>
+    assert a==b,'native/Wasm CPU pixels differ'
+           ^^^^
+AssertionError: native/Wasm CPU pixels differ

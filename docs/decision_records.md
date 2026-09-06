@@ -521,3 +521,56 @@ subgate. Numerical, transaction, archive, CLI and packaged browser tests passed,
 with evidence in `evidence/uv-authoring`. Dense QR and rectangle placement have small fixed limits;
 there is no general chart segmentation, optimal packing or interactive authoring
 claim. Painting, sculpting and retopology remain independent requirements.
+
+## ADR-035 — Tiled painting retains editable sources and bakes ordinary images
+
+**Decision:** Keep independent canvas IDs bound to immutable typed layer
+assets and content-addressed color/mask tiles. Pixel-space strokes prepare sparse
+changes outside document mutation, then publish through ordinary snapshot18
+commands. Baking publishes a normal image; material binding is an explicit ordinary
+transaction with a named UV selection. No renderer-owned image becomes mutable.
+
+**Integration review:** UNORM16 premultiplied color and scalar masks have explicit
+wire endianness, padding defaults, layer order and rounding. Stable stroke recipes
+support checkpoint recovery without trusting private accumulator state. Tile
+commands depend only on pinned input, preserving idempotency after publication.
+Existing document permission, revision, quota, journal and agent profile checks
+apply. Missing painting tables remain omitted in older documents.
+
+**Acceptance boundary:** [paint-tiles-v1](tiled_painting.md) passed the bounded
+native/browser tile, PNG and revision equality, analytic alpha/locality tests,
+resource observations and prior artifact preservation gates. See `evidence/tiled-painting`. Projected painting,
+virtual textures, broader baking, sculpting and interactive M10 remain separate.
+
+## ADR-036 — Portable 8-bit sRGB conversion preserves qualified native values
+
+**Decision:** At the decoded 8-bit image/Pyramid boundary, use the versioned
+`srgb8-compat-v1` f32 table for sRGB RGB channels. Alpha and linear-data channels
+retain their existing direct normalization. General floating-point transfer
+functions, PNG bytes, public image roles, filtering and shaders are unchanged.
+
+**Evidence and integration review:** The painted palette produced identical assets
+and revisions but 43 differing CPU channels (maximum 5.960464477539063e-8). Probes
+of all 256 input codes found 23 one-bit native/Wasm differences in the prior power
+function. The table preserves every qualified native code. Its generating script,
+retained native oracle, unchanged be20d1f source-function hash and 64-digit Decimal
+analytic check are recorded under `fixtures/tiled-painting` and `scripts`. The
+absolute analytic error bound is 3e-7. No foreign computational runtime is added.
+
+**Acceptance boundary:** The public image path must match the oracle on native and
+Wasm, and the painted CPU workflow must pass exact equality. Preserve the prior
+native rendering corpus byte for byte; do not regenerate image references or
+loosen the comparator. New numeric-profile values require explicit review.
+
+## ADR-037 — Mip-level selection uses a common higher-precision logarithm
+
+**Decision:** Compute the existing footprint from f32 UV derivatives, then use
+pure Rust libm f64 log2 rounded to f32 for level selection and blending. Filter
+rules, mip generation, UV addressing and GPU shaders are unchanged.
+
+**Evidence:** With portable sRGB8 conversion, 13 CPU channels still differed by at
+most 1.4901161193847656e-8. Actual-image probes showed identical mip hashes, UVs,
+derivatives and 1,041 footprints, but 144 native/Wasm f32 logarithms differed. The
+shared f64 path matches every observed native LOD. The retained numeric fixture,
+Decimal64 rounding check and public-sampler test preserve this evidence. Full
+native output preservation and exact painted CPU parity remain acceptance gates.

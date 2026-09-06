@@ -1,0 +1,41 @@
+{
+  "status": "validated_experimental_profile",
+  "profile": "paint-tiles-v1",
+  "implementation": "Original Rust tile, brush resampling, mask, layer composite and bake implementation",
+  "integer_math": "UNORM16 multiplication floor((a*b+32767)/65535), premultiplied source-over and explicit straight RGBA8 quantization",
+  "coverage": "Four fixed quarter-pixel subpixel samples; hard inner disk and linear radial falloff",
+  "dependencies_added": [],
+  "expanded_existing_dependency_use": {
+    "libm": "Already pinned pure Rust 0.2.16; sqrt for brush distance, pow for explicit paint bake sRGB transfer; f64 log2 rounded to f32 for portable mip selection"
+  },
+  "image_encoding": "Existing pinned image 0.25.10 PNG path; no new features",
+  "reference_code_imported": false,
+  "foreign_computational_runtime": false,
+  "qualification_required": [
+    "native and Wasm numerical and transaction tests",
+    "exact tile and encoded image identities",
+    "CPU Metal WebGPU workflow",
+    "old artifact and dependency preservation",
+    "resource observations"
+  ],
+  "decoded_srgb8_profile": {
+    "name": "srgb8-compat-v1",
+    "native_reference": "fixtures/tiled-painting/srgb8-native-baseline.json",
+    "generator": "scripts/generate-srgb8-compat.py",
+    "generated_rust": "crates/core/src/generated/srgb8_compat_v1.rs",
+    "validation": "scripts/validate-srgb8-compat.py",
+    "reason": "Preserve all qualified native 8-bit conversion values while eliminating 23 one-bit platform powf differences exposed by the painted palette",
+    "analytic_absolute_error_bound": 3e-07,
+    "prior_native_outputs_preserved": true
+  },
+  "mip_lod_profile": {
+    "name": "mip-log2-f64-v1",
+    "reference": "fixtures/tiled-painting/mip-native-baseline.json",
+    "validation": "scripts/validate-paint-mip-lod.py",
+    "observed_footprints": 1041,
+    "prior_differing_hits": 144,
+    "all_observed_native_values_preserved": true
+  },
+  "general_floating_transfer_source_unchanged": true,
+  "prior_render_artifacts_preserved": 1880
+}

@@ -1,0 +1,30 @@
+{
+  "reason": "Python report retained a mutable UV request alias; preserve exact request copies before updating the next step",
+  "rust_cargo_inputs_unchanged": true,
+  "packages": [
+    {
+      "path": "target/debug/render-host",
+      "sha256": "a7bb1a5d7dcba32418c6487dda6d6d35d4aefc5c3c60e9b42f48e4e142707ea0",
+      "bytes": 62987280
+    },
+    {
+      "path": "web/pkg/render_web.js",
+      "sha256": "8026eaf262579d1cef958a4418319e56b2d12e11ba3643c0022829d3f92af8fb",
+      "bytes": 75905
+    },
+    {
+      "path": "web/pkg/render_web_bg.wasm",
+      "sha256": "10bcd3fc4ddc92bca40d707d68a1dc57c92fbd7fda89b2f2fbf6a84498cd26c4",
+      "bytes": 11999635
+    }
+  ],
+  "reused_checks": [
+    "format",
+    "paint_native",
+    "independent_source_validation",
+    "clippy",
+    "native_build",
+    "wasm_tests",
+    "browser_build"
+  ]
+}

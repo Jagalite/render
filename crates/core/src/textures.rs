@@ -3,6 +3,8 @@ use crate::{Error, Result, canonical, digest};
 use glam::{Vec2, Vec4};
 use serde::{Deserialize, Serialize};
 use std::io::Cursor;
+#[path = "generated/srgb8_compat_v1.rs"]
+mod srgb8;
 
 pub const MAX_IMAGE_BYTES: usize = 4 * 1024 * 1024;
 pub const MAX_DIMENSION: u32 = 2048;
@@ -173,8 +175,10 @@ impl Pyramid {
             .map(|pixel| {
                 let mut p = pixel.0.map(|v| f32::from(v) / 255.);
                 if role == TextureRole::SrgbColor {
-                    for c in &mut p[..3] {
-                        *c = crate::imaging::srgb_to_linear(*c);
+                    for (channel, c) in p[..3].iter_mut().enumerate() {
+                        // Fixed 8-bit transfer preserves qualified native values
+                        // while avoiding platform powf rounding differences.
+                        *c = srgb8::LINEAR[usize::from(pixel.0[channel])];
                     }
                 }
                 p
@@ -217,11 +221,10 @@ impl Pyramid {
     pub fn sample(&self, sampler: &Sampler, uv: Vec2, dx: Vec2, dy: Vec2) -> Vec4 {
         let base = &self.levels[0];
         let dims = Vec2::new(base.width as f32, base.height as f32);
-        let lod = (dx * dims)
-            .length()
-            .max((dy * dims).length())
-            .max(1e-8)
-            .log2();
+        let footprint = (dx * dims).length().max((dy * dims).length()).max(1e-8);
+        // Shared higher-precision log avoids platform log2f rounding differences
+        // in mip blend weights while preserving the observed native profile.
+        let lod = libm::log2(f64::from(footprint)) as f32;
         if lod <= 0. {
             return self.at_level(0, sampler, uv, sampler.mag);
         }

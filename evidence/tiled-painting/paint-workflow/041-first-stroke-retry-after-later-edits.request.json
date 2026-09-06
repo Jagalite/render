@@ -1,0 +1,63 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "author_paint",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:a22e689d95feb9b3ef6f7cace5830b740afc0d66ab5d33fa53f67e97557d3b2a",
+      "idempotency_key": "paint-workflow-stroke-0",
+      "canvas": "00000000000000000000000000000384",
+      "source_asset": "sha256:d63aaaa15669dbf6cbc189b33eae828ba73ecafb7e96569f81d6da4300a516ca",
+      "stroke": {
+        "id": "0000000000000000000000000000038e",
+        "layer": "00000000000000000000000000000385",
+        "brush": {
+          "radius": 10,
+          "hardness": 0.5,
+          "spacing": 0.4,
+          "mode": {
+            "kind": "paint",
+            "color": [
+              0.8,
+              0.3,
+              0.04,
+              1
+            ]
+          }
+        },
+        "samples": [
+          {
+            "pixel": [
+              5,
+              10
+            ],
+            "pressure": 1,
+            "time": {
+              "numerator": 0,
+              "denominator": 1
+            }
+          },
+          {
+            "pixel": [
+              30,
+              20
+            ],
+            "pressure": 0.6,
+            "time": {
+              "numerator": 1,
+              "denominator": 1
+            }
+          }
+        ],
+        "finish": false
+      },
+      "budget": {
+        "max_dabs": 4096,
+        "max_pixel_work": 16777216,
+        "max_touched_tiles": 64,
+        "max_output_bytes": 4194304
+      },
+      "max_added_bytes": 4194304
+    }
+  }
+}

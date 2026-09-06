@@ -89,3 +89,9 @@ transactions as the CLI. Its reviewed request schema is in
 `schemas/agent_request.schema.json`; UV constraints, default-set semantics and
 browser cancellation limits are specified in [UV authoring](uv_authoring.md).
 The existing narrow ABI is unchanged.
+
+The shared `author_paint` and `bake_paint` methods prepare bounded tile/image changes
+and publish through ordinary transactions. Editable canvas assets remain distinct
+from rendered images and shared materials. `schemas/tiled_painting.schema.json` and
+[the painting contract](tiled_painting.md) specify wire shape and semantics. The
+existing narrow ABI is unchanged; browser stroke admission remains synchronous.

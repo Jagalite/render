@@ -1,0 +1,11 @@
+artifacts/tiled-painting/run-20260906T200434Z
+paint_workflow: 0
+paint_schema: 0
+paint_browser: 0
+paint_cross_platform: 1
+Traceback (most recent call last):
+  File "/Volumes/seed2/Projects/render/artifacts/worktrees/tiled-painting/scripts/compare-tiled-painting-browser.py", line 9, in <module>
+    assert a==b,'native/Wasm CPU pixels differ'
+           ^^^^
+AssertionError: native/Wasm CPU pixels differ
+

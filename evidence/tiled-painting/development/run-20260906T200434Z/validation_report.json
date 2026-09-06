@@ -1,0 +1,156 @@
+{
+  "status": "failed",
+  "scope": "macOS ARM64 CPU/Metal, Rust Wasm in Node, Chrome WebGPU/OPFS; Linux and Windows compile only",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 9.410477958008414,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "paint_native",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "tiled_painting",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 306.42241349999676,
+      "log": "logs/paint_native.txt"
+    },
+    {
+      "name": "independent_source_validation",
+      "command": [
+        "node",
+        "scripts/validate-gltf-fixtures.cjs",
+        "artifacts/tiled-painting/run-20260906T200434Z/source-validation"
+      ],
+      "exit_code": 0,
+      "seconds": 2.2181371249898802,
+      "log": "logs/independent_source_validation.txt"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 111.63815454200085,
+      "log": "logs/clippy.txt"
+    },
+    {
+      "name": "native_build",
+      "command": [
+        "cargo",
+        "build",
+        "-p",
+        "render-host",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 180.6848490419943,
+      "log": "logs/native_build.txt"
+    },
+    {
+      "name": "wasm_tests",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 181.0298362080066,
+      "log": "logs/wasm_tests.txt"
+    },
+    {
+      "name": "browser_build",
+      "command": [
+        "sh",
+        "scripts/build-web.sh"
+      ],
+      "exit_code": 0,
+      "seconds": 145.81014400000277,
+      "log": "logs/browser_build.txt"
+    },
+    {
+      "name": "paint_workflow",
+      "command": [
+        "python3",
+        "scripts/tiled-painting-workflow.py",
+        "artifacts/tiled-painting/run-20260906T200434Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 74.80899708298966,
+      "log": "logs/paint_workflow.txt"
+    },
+    {
+      "name": "paint_schema",
+      "command": [
+        "python3",
+        "scripts/validate-tiled-painting-schema.py",
+        "artifacts/tiled-painting/run-20260906T200434Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.33274120900023263,
+      "log": "logs/paint_schema.txt"
+    },
+    {
+      "name": "paint_browser",
+      "command": [
+        "node",
+        "scripts/tiled-painting-browser.mjs",
+        "artifacts/tiled-painting/run-20260906T200434Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.9072947090025991,
+      "log": "logs/paint_browser.txt"
+    },
+    {
+      "name": "paint_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-tiled-painting-browser.py",
+        "artifacts/tiled-painting/run-20260906T200434Z/paint-workflow"
+      ],
+      "exit_code": 1,
+      "seconds": 0.17329791699012276,
+      "log": "logs/paint_cross_platform.txt"
+    }
+  ],
+  "harness_resume": "See development browser-resume-integrity and before-browser-resume reports; unchanged compiled inputs/packages, native painting and browser rerun",
+  "build_environment": {
+    "CARGO_NET_OFFLINE": "true",
+    "CARGO_BUILD_JOBS": "2",
+    "CARGO_INCREMENTAL": "0",
+    "CARGO_PROFILE_DEV_DEBUG": "0",
+    "CARGO_PROFILE_TEST_DEBUG": "0",
+    "CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUNNER": "wasm-bindgen-test-runner",
+    "RENDER_TEST_ORIGIN": "http://127.0.0.1:8781"
+  }
+}

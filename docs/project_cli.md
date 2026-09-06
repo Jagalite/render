@@ -177,3 +177,9 @@ named corner coordinates and publishes normal mesh/UV asset commands through the
 native journal. The result contains a durable receipt, numeric report and complete
 UV asset key. See [UV authoring](uv_authoring.md) for seams, pins, atlas policies,
 version 17 compatibility, cancellation limits and the validated workflow.
+
+`author_paint` applies bounded pixel-space strokes to an independently bound canvas.
+`bake_paint` composites a pinned canvas into an ordinary PNG image asset. Both use
+ordinary durable transactions and return source/output identities and resource
+reports. Layer/canvas setup and explicit image-to-material binding use `apply`. See
+[tiled painting](tiled_painting.md) for checkpointing, masks, color math and limits.

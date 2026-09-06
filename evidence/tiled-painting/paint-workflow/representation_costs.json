@@ -1,0 +1,25 @@
+{
+  "scope": "Observed fixture inspection JSON and storage bytes; not allocator sizes",
+  "tables": [
+    {
+      "table": "paint_tiles",
+      "count": 15,
+      "json_bytes": 198361
+    },
+    {
+      "table": "paint_assets",
+      "count": 6,
+      "json_bytes": 10705
+    },
+    {
+      "table": "images",
+      "count": 1,
+      "json_bytes": 15941
+    }
+  ],
+  "canonical_archive_bytes": 479745,
+  "journal_files": 18,
+  "journal_apparent_bytes": 3370719,
+  "journal_allocated_bytes": 3448832,
+  "note": "Existing journal storage retains full document envelopes; sparse tile computation is not sparse physical journal writes."
+}

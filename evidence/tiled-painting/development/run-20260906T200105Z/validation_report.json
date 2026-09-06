@@ -1,0 +1,39 @@
+{
+  "status": "failed",
+  "scope": "macOS ARM64 CPU/Metal, Rust Wasm in Node, Chrome WebGPU/OPFS; Linux and Windows compile only",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 3.40236162499059,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "independent_source_validation",
+      "command": [
+        "node",
+        "scripts/validate-gltf-fixtures.cjs",
+        "artifacts/tiled-painting/run-20260906T200105Z/source-validation"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0997477500059176,
+      "log": "logs/independent_source_validation.txt"
+    }
+  ],
+  "build_environment": {
+    "CARGO_NET_OFFLINE": "true",
+    "CARGO_BUILD_JOBS": "2",
+    "CARGO_INCREMENTAL": "0",
+    "CARGO_PROFILE_DEV_DEBUG": "0",
+    "CARGO_PROFILE_TEST_DEBUG": "0",
+    "CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUNNER": "wasm-bindgen-test-runner",
+    "RENDER_TEST_ORIGIN": "http://127.0.0.1:8781"
+  },
+  "interruption": "Stopped owned process group during clippy after review reproduced a duplicate endpoint dab: 5.1 -> 0.1 at spacing 0.625 emits 10 dabs instead of 9. No capability acceptance."
+}

@@ -1,0 +1,27 @@
+    Checking render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/tiled-painting/crates/core)
+error: this `if` statement can be collapsed
+   --> crates/core/src/painting/brush.rs:94:13
+    |
+ 94 | /             if let Some(p) = previous {
+ 95 | |                 if i128::from(p.numerator) * i128::from(sample.time.denominator)
+ 96 | |                     > i128::from(sample.time.numerator) * i128::from(p.denominator)
+...   |
+100 | |             }
+    | |_____________^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.95.0/index.html#collapsible_if
+    = note: `-D clippy::collapsible-if` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::collapsible_if)]`
+help: collapse nested if block
+    |
+ 94 ~             if let Some(p) = previous
+ 95 ~                 && i128::from(p.numerator) * i128::from(sample.time.denominator)
+ 96 |                     > i128::from(sample.time.numerator) * i128::from(p.denominator)
+ 97 |                 {
+ 98 |                     return Err(Error::new("paint_sample", "stroke time must be monotone"));
+ 99 ~                 }
+    |
+
+error: could not compile `render-core` (lib test) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `render-core` (lib) due to 1 previous error

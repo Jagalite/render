@@ -1,0 +1,89 @@
+{
+  "status": "passed",
+  "comparisons": [
+    {
+      "case": "default-le",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "cpu_pixels_identical": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "default-le",
+      "browser": "gpu",
+      "linear_rmse": 1.4039514057041458e-08,
+      "cpu_pixels_identical": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "default-be",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "cpu_pixels_identical": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "default-be",
+      "browser": "gpu",
+      "linear_rmse": 1.4039514057041458e-08,
+      "cpu_pixels_identical": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "arrays-le",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "cpu_pixels_identical": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "arrays-le",
+      "browser": "gpu",
+      "linear_rmse": 1.4191850604321853e-08,
+      "cpu_pixels_identical": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "arrays-be",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "cpu_pixels_identical": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "arrays-be",
+      "browser": "gpu",
+      "linear_rmse": 1.4191850604321853e-08,
+      "cpu_pixels_identical": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "srgb",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "cpu_pixels_identical": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "srgb",
+      "browser": "gpu",
+      "linear_rmse": 1.3870573343766861e-08,
+      "cpu_pixels_identical": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "scaled-radius",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "cpu_pixels_identical": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "scaled-radius",
+      "browser": "gpu",
+      "linear_rmse": 1.370540135797247e-08,
+      "cpu_pixels_identical": false,
+      "object_mismatches": 0
+    }
+  ]
+}

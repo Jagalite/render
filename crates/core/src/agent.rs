@@ -28,6 +28,12 @@ pub struct Edits {
 #[serde(tag = "method", rename_all = "snake_case", deny_unknown_fields)]
 pub enum Operation {
     Inspect,
+    AuthorPaint {
+        request: painting::Request,
+    },
+    BakePaint {
+        request: painting::BakeRequest,
+    },
     AuthorUv {
         request: uv::Request,
     },
@@ -477,6 +483,48 @@ impl Session {
         }
         use Operation::*;
         match request.operation {
+            AuthorPaint { request } => {
+                let prepared =
+                    painting::prepare(&self.document, principal, &request, &mut cancelled)?;
+                let receipt =
+                    if let Some(receipt) = self.document.retry(principal, &prepared.transaction)? {
+                        receipt
+                    } else {
+                        let candidate = self.document.prepare(principal, &prepared.transaction)?;
+                        profile(candidate.snapshot())?;
+                        Evaluator::default()
+                            .evaluate_with_cancel(candidate.snapshot(), &mut cancelled)?;
+                        if cancelled() {
+                            return Err(Error::new(
+                                "cancelled",
+                                "painting cancelled before publication",
+                            ));
+                        }
+                        self.document.commit(candidate)?
+                    };
+                Ok(json!({"receipt":receipt,"report":prepared.report}))
+            }
+            BakePaint { request } => {
+                let prepared =
+                    painting::prepare_bake(&self.document, principal, &request, &mut cancelled)?;
+                let receipt =
+                    if let Some(receipt) = self.document.retry(principal, &prepared.transaction)? {
+                        receipt
+                    } else {
+                        let candidate = self.document.prepare(principal, &prepared.transaction)?;
+                        profile(candidate.snapshot())?;
+                        Evaluator::default()
+                            .evaluate_with_cancel(candidate.snapshot(), &mut cancelled)?;
+                        if cancelled() {
+                            return Err(Error::new(
+                                "cancelled",
+                                "painting cancelled before publication",
+                            ));
+                        }
+                        self.document.commit(candidate)?
+                    };
+                Ok(json!({"receipt":receipt,"report":prepared.report}))
+            }
             AuthorUv { request } => {
                 let prepared = uv::prepare(&self.document, principal, &request, &mut cancelled)?;
                 let receipt =
@@ -855,7 +903,9 @@ impl Session {
     ) -> Result<Value> {
         let root_mutation = matches!(
             &request.operation,
-            Operation::AuthorUv { .. }
+            Operation::AuthorPaint { .. }
+                | Operation::BakePaint { .. }
+                | Operation::AuthorUv { .. }
                 | Operation::ImportBlend { .. }
                 | Operation::ImportHair { .. }
                 | Operation::ImportVol { .. }

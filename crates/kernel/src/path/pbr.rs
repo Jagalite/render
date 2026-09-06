@@ -30,7 +30,25 @@ fn sample_map(slot: u32) -> Expr {
         ],
     )
 }
-pub(super) fn functions() -> Vec<Function> {
+pub(super) fn functions(extended: bool) -> Vec<Function> {
+    let texel_value = || {
+        call(
+            Ty::V4.text(),
+            Ty::V4,
+            vec![
+                call(
+                    "unpack2x16float",
+                    Ty::V2,
+                    vec![call("bitcast<u32>", Ty::U32, vec![vv("pair").field("x")])],
+                ),
+                call(
+                    "unpack2x16float",
+                    Ty::V2,
+                    vec![call("bitcast<u32>", Ty::U32, vec![vv("pair").field("y")])],
+                ),
+            ],
+        )
+    };
     let mut result = vec![
         function(
             "camera_origin",
@@ -137,22 +155,45 @@ pub(super) fn functions() -> Vec<Function> {
                     i("address").remainder(u(2)).eq(u(1)),
                     vec![set(vv("pair"), q("record").field("zw"))],
                 ),
-                ret(call(
-                    Ty::V4.text(),
-                    Ty::V4,
-                    vec![
-                        call(
-                            "unpack2x16float",
-                            Ty::V2,
-                            vec![call("bitcast<u32>", Ty::U32, vec![vv("pair").field("x")])],
-                        ),
-                        call(
-                            "unpack2x16float",
-                            Ty::V2,
-                            vec![call("bitcast<u32>", Ty::U32, vec![vv("pair").field("y")])],
-                        ),
-                    ],
-                )),
+                if extended {
+                    var("rgba", texel_value())
+                } else {
+                    ret(texel_value())
+                },
+                when(
+                    extended,
+                    if_(
+                        q("level").field("w").gt(f(0.)),
+                        vec![
+                            let_(
+                                "alpha_index",
+                                cast(Ty::U32, s("y")) * cast(Ty::U32, q("level").field("y"))
+                                    + cast(Ty::U32, s("x")),
+                            ),
+                            let_(
+                                "alpha_row",
+                                data(
+                                    cast(Ty::U32, q("level").field("w")) - u(1)
+                                        + i("alpha_index") / u(4),
+                                ),
+                            ),
+                            set(q("rgba").field("w"), q("alpha_row").field("x")),
+                            if_(
+                                i("alpha_index").remainder(u(4)).eq(u(1)),
+                                vec![set(q("rgba").field("w"), q("alpha_row").field("y"))],
+                            ),
+                            if_(
+                                i("alpha_index").remainder(u(4)).eq(u(2)),
+                                vec![set(q("rgba").field("w"), q("alpha_row").field("z"))],
+                            ),
+                            if_(
+                                i("alpha_index").remainder(u(4)).eq(u(3)),
+                                vec![set(q("rgba").field("w"), q("alpha_row").field("w"))],
+                            ),
+                        ],
+                    ),
+                ),
+                when(extended, ret(q("rgba"))),
             ],
         ),
     ];
@@ -531,7 +572,7 @@ pub(super) fn functions() -> Vec<Function> {
     ));
     result
 }
-pub(super) fn body() -> Vec<Stmt> {
+pub(super) fn body(extended: bool) -> Vec<Stmt> {
     let bary = |origin, direction| {
         call(
             "project_bary",
@@ -790,17 +831,14 @@ pub(super) fn body() -> Vec<Stmt> {
                     s("cosine")
                         .gt(f(0.))
                         .and(dot(v("geometric"), v("light_dir")).gt(f(0.))),
-                    vec![if_(
-                        trace(v("offset"), v("light_dir"), s("distance") - f(2e-5))
-                            .field("x")
-                            .lt(f(0.)),
-                        vec![set(
-                            v("radiance"),
-                            v("radiance")
-                                + brdf(v("light_dir"))
-                                    * xyz(param(6))
-                                    * (s("cosine") / (s("distance") * s("distance"))),
-                        )],
+                    vec![alpha::illuminate(
+                        extended,
+                        v("offset"),
+                        v("light_dir"),
+                        s("distance") - f(2e-5),
+                        brdf(v("light_dir"))
+                            * xyz(param(6))
+                            * (s("cosine") / (s("distance") * s("distance"))),
                     )],
                 ),
             ],
@@ -814,9 +852,9 @@ pub(super) fn body() -> Vec<Stmt> {
                     v("normal"),
                     v("view"),
                     s("rough"),
-                    path_random(4),
-                    path_random(2),
-                    path_random(3),
+                    path_random(4, extended),
+                    path_random(2, extended),
+                    path_random(3, extended),
                 ],
             ),
         ),
@@ -845,21 +883,13 @@ pub(super) fn body() -> Vec<Stmt> {
                         * (dot(v("normal"), v("secondary")) / s("pdf"))
                         * s("occlusion"),
                 ),
-                if_(
-                    (i("bounce") + u(1))
-                        .eq(cast(Ty::U32, param(0).field("w")))
-                        .and(
-                            trace(v("offset"), v("secondary"), f(1e30))
-                                .field("x")
-                                .lt(f(0.)),
-                        ),
-                    vec![set(
-                        v("radiance"),
-                        v("radiance")
-                            + brdf(v("secondary"))
-                                * xyz(param(7))
-                                * (dot(v("normal"), v("secondary")) * s("occlusion") / s("pdf")),
-                    )],
+                alpha::last_bounce(
+                    extended,
+                    v("offset"),
+                    v("secondary"),
+                    brdf(v("secondary"))
+                        * xyz(param(7))
+                        * (dot(v("normal"), v("secondary")) * s("occlusion") / s("pdf")),
                 ),
             ],
         ),

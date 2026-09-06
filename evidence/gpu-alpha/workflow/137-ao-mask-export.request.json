@@ -1,0 +1,18 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "export",
+    "revision": "sha256:83c83d04985288fe727ca613608b7f7d6ac8f87cee32c1555093f73b38651f5e",
+    "output": "/private/tmp/render-gpu-alpha-20260906/artifacts/gpu-alpha/run-20260906T093429Z/workflow/ao-mask-export",
+    "content": {
+      "format": "glb",
+      "at": null,
+      "policy": {
+        "allow_approximations": true,
+        "max_bytes": 4194304,
+        "max_vertices": 10000,
+        "max_position_error_meters": 1e-05
+      }
+    }
+  }
+}

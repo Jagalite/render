@@ -36,6 +36,7 @@ pub struct Renderer {
     device: wgpu::Device,
     queue: wgpu::Queue,
     pipeline: wgpu::ComputePipeline,
+    alpha_pipeline: Option<wgpu::ComputePipeline>,
     pub capabilities: Capabilities,
     lost: Arc<AtomicBool>,
     geometry_cache: Option<(String, wgpu::Buffer)>,
@@ -121,14 +122,15 @@ pub struct Packed {
 pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
     scene.validate_geometry_bindings()?;
     if scene.instances.iter().any(|i| {
-        i.material
-            .pbr
-            .as_ref()
-            .is_some_and(|p| p.advanced.is_some())
+        i.material.pbr.as_ref().is_some_and(|p| {
+            p.advanced
+                .as_ref()
+                .is_some_and(|a| !matches!(a.model, render_core::scattering::Model::Principled))
+        })
     }) {
         return Err(Error::new(
             "unsupported_profile",
-            "extended dielectric/conductor/coat/alpha requires the Rust CPU backend",
+            "extended dielectric/conductor/coat requires the Rust CPU backend",
         ));
     }
     if !scene.media.is_empty() {
@@ -161,6 +163,24 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
             "PBR sampled textures exceed 16 million mip texels",
         ));
     }
+    let extended = scene.instances.iter().any(|i| {
+        i.material
+            .pbr
+            .as_ref()
+            .is_some_and(|p| p.advanced.is_some())
+    });
+    let alpha_images: std::collections::BTreeSet<_> = scene
+        .instances
+        .iter()
+        .filter_map(|i| {
+            let p = i.material.pbr.as_ref()?;
+            let a = p.advanced.as_ref()?;
+            if matches!(a.opacity, render_core::scattering::Opacity::Opaque) {
+                return None;
+            }
+            p.base_color.as_ref().map(|b| (b.image.clone(), b.role))
+        })
+        .collect();
     let mut texels = Vec::with_capacity(texel_count.div_ceil(2));
     let mut texel_index = 0usize;
     for (key, pyramid) in &scene.images {
@@ -188,6 +208,18 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
                 record[offset] = pair(pixel[0], pixel[1]);
                 record[offset + 1] = pair(pixel[2], pixel[3]);
                 texel_index += 1;
+            }
+        }
+        if alpha_images.contains(key) {
+            // Coverage keeps the decoded base-level f32 alpha. Color/filter mips
+            // retain the existing RGBA16 profile and opaque packing is unchanged.
+            geometry[header][3] = (geometry.len() + 1) as f32;
+            for pixels in pyramid.levels[0].rgba.chunks(4) {
+                let mut row = [0.; 4];
+                for (i, pixel) in pixels.iter().enumerate() {
+                    row[i] = pixel[3];
+                }
+                geometry.push(row);
             }
         }
         maps.insert(key, (header, pyramid.levels.len()));
@@ -286,7 +318,38 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
             });
             instances.push([descriptor, uv_slot as f32, 0., 0.]);
         }
-        instances.push([0.; 4]);
+        use render_core::scattering::Opacity;
+        let opacity = surface
+            .and_then(|p| p.advanced.as_ref())
+            .map(|a| &a.opacity);
+        let coverage = match opacity {
+            None | Some(Opacity::Opaque) => [0.; 4],
+            Some(Opacity::Blend { factor }) => [2., *factor as f32, 0., 0.],
+            Some(Opacity::Mask { factor, cutoff }) => {
+                // Compile the CPU f64 multiplication predicate into the first
+                // accepted f32 alpha. Dividing cutoff/factor can round an exact
+                // equality upward, and is not equivalent for subnormal factors.
+                // Positive f32 bit patterns are monotone; this takes <=30 steps.
+                if *cutoff == 0. {
+                    [0.; 4]
+                } else if *factor == 0. || cutoff > factor {
+                    [1., 0., 2., 0.]
+                } else {
+                    let mut low = 0_u32;
+                    let mut high = 1_f32.to_bits();
+                    while low < high {
+                        let middle = low + (high - low) / 2;
+                        if f64::from(f32::from_bits(middle)) * factor >= *cutoff {
+                            high = middle;
+                        } else {
+                            low = middle + 1;
+                        }
+                    }
+                    [1., 0., f32::from_bits(low), 0.]
+                }
+            }
+        };
+        instances.push(coverage);
     }
     if geometry.len() > 16777216 || instances.len() > 16777216 {
         return Err(Error::new(
@@ -320,7 +383,7 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
             ymag,
             near,
             far,
-        }) => (2., xmag, ymag, 1., near, far),
+        }) => (2., xmag, ymag, 1., near.max(1e-5), far),
         None => (
             0.,
             0.,
@@ -361,12 +424,14 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
         [
             near as f32,
             far as f32,
-            if scene.instances.iter().any(|i| i.material.pbr.is_some()) {
+            if extended {
+                16.
+            } else if scene.instances.iter().any(|i| i.material.pbr.is_some()) {
                 3.
             } else {
                 2.
             },
-            0.,
+            f32::from(extended),
         ],
     ];
     params.push([1., 0., 0., 0.]);
@@ -454,15 +519,48 @@ impl Renderer {
             device,
             queue,
             pipeline,
+            alpha_pipeline: None,
             capabilities,
             lost,
             geometry_cache: None,
             geometry_uploads: 0,
         })
     }
+    async fn ensure_alpha_pipeline(&mut self) -> Result<()> {
+        if self.alpha_pipeline.is_some() {
+            return Ok(());
+        }
+        let source = render_kernel::path::alpha_kernel().generate()?;
+        self.device.push_error_scope(wgpu::ErrorFilter::OutOfMemory);
+        self.device.push_error_scope(wgpu::ErrorFilter::Validation);
+        let module = self
+            .device
+            .create_shader_module(wgpu::ShaderModuleDescriptor {
+                label: Some("Rust-generated Principled coverage traversal"),
+                source: wgpu::ShaderSource::Wgsl(source.into()),
+            });
+        let pipeline = self
+            .device
+            .create_compute_pipeline(&wgpu::ComputePipelineDescriptor {
+                label: Some("portable alpha path tracing"),
+                layout: None,
+                module: &module,
+                entry_point: Some("main"),
+                compilation_options: Default::default(),
+                cache: None,
+            });
+        let validation = self.device.pop_error_scope().await;
+        let allocation = self.device.pop_error_scope().await;
+        if let Some(error) = validation.or(allocation) {
+            return Err(fail("gpu_validation", error));
+        }
+        self.alpha_pipeline = Some(pipeline);
+        Ok(())
+    }
     pub fn destroy(&mut self) {
         self.lost.store(true, Ordering::Release);
         self.geometry_cache = None;
+        self.alpha_pipeline = None;
         self.device.destroy();
     }
     pub fn is_lost(&self) -> bool {
@@ -578,6 +676,10 @@ impl Renderer {
                 "dispatch exceeds negotiated workgroup count",
             ));
         }
+        let extended = p.params[9][3] > 0.;
+        if extended {
+            self.ensure_alpha_pipeline().await?;
+        }
         self.device.push_error_scope(wgpu::ErrorFilter::OutOfMemory);
         self.device.push_error_scope(wgpu::ErrorFilter::Validation);
         let geometry_bytes = bytes(&p.geometry);
@@ -643,9 +745,16 @@ impl Renderer {
                 resource: b.as_entire_binding(),
             })
             .collect::<Vec<_>>();
+        let pipeline = if extended {
+            self.alpha_pipeline
+                .as_ref()
+                .expect("created alpha pipeline")
+        } else {
+            &self.pipeline
+        };
         let bind = self.device.create_bind_group(&wgpu::BindGroupDescriptor {
             label: Some("scene resources"),
-            layout: &self.pipeline.get_bind_group_layout(0),
+            layout: &pipeline.get_bind_group_layout(0),
             entries: &entries,
         });
         let mut encoder = self.device.create_command_encoder(&Default::default());
@@ -654,7 +763,7 @@ impl Renderer {
                 label: Some("diffuse transport"),
                 timestamp_writes: None,
             });
-            pass.set_pipeline(&self.pipeline);
+            pass.set_pipeline(pipeline);
             pass.set_bind_group(0, &bind, &[]);
             pass.dispatch_workgroups(workgroups, 1, 1);
         }
@@ -739,6 +848,12 @@ impl Renderer {
         let mut normals = vec![];
         let mut objects = vec![];
         for p in values.chunks_exact(8) {
+            if p[3] < 0. {
+                return Err(Error::new(
+                    "budget",
+                    "GPU alpha traversal exceeded 64 surfaces",
+                ));
+            }
             linear.push([p[0], p[1], p[2]]);
             depth.push(p[3]);
             normals.push([p[4], p[5], p[6]]);
@@ -791,6 +906,15 @@ impl Renderer {
                     .collect::<Vec<_>>(),
             ),
         };
+        if scene.instances.iter().any(|i| {
+            i.material
+                .pbr
+                .as_ref()
+                .is_some_and(|p| p.advanced.is_some())
+        }) {
+            receipt.backend = format!("gpu-f32-principled-alpha-v1/{}", self.capabilities.backend);
+            receipt.approximation.push_str("; extended dimension stride16; stochastic BLEND and inclusive MASK; base-level f32 coverage, f32 interpolated alpha products and normalized thresholds; 64-surface continuation/visibility bounds; multiplicative transparent visibility");
+        }
         if !scene.displacements.is_empty() {
             receipt.approximation.push_str(
                 "; bounded uniform geometric displacement; see displacement conversion receipts",

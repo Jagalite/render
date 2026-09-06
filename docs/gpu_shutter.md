@@ -5,7 +5,9 @@ Metal and browser WebGPU. Rust evaluates each rigid, LBS and POSITION-morph pose
 the Rust-generated path kernel integrates its supported opaque diffuse/PBR color.
 Authored snapshots, animation schemas, sample indexing and transaction authority
 retain their existing semantics. This profile adds no input formats or runtime
-dependencies. Extended surfaces and sparse media still reject on GPU.
+dependencies. [Principled alpha](gpu_alpha.md) now extends this workflow with
+coverage and bounded failure propagation. Other extended BSDFs and sparse media
+still reject on GPU.
 
 A frame pins the authored revision, clip, nominal rational time and relative
 shutter interval. Midpoint quadrature admits 1–32 temporal samples. A sequence

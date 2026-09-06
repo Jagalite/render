@@ -79,7 +79,15 @@ try:
         for old,node in export_report['source_entities'].items():
             parent=reimported['import']['source_nodes'][str(node)]
             leaves=[e['id'] for e in round_state['snapshot']['entities'] if e['parent']==parent and e['mesh'] is not None];assert len(leaves)==1;mapping[old]=leaves[0]
-        assert state['snapshot']['images']==round_state['snapshot']['images']
+        # Export preserves encoded images referenced by evaluated materials. The
+        # importer also stores unused source images; those are not GLB dependencies.
+        snapshot=state['snapshot'];used=set()
+        for entity in snapshot['entities']:
+            if entity['mesh'] is None or entity['material'] is None:continue
+            pbr=snapshot['materials'][entity['material']].get('pbr') or {}
+            for role in ['base_color','metallic_roughness','normal','emission','occlusion']:
+                if pbr.get(role):used.add(pbr[role]['image'])
+        assert {key:snapshot['images'][key] for key in used}==round_state['snapshot']['images']
         comparisons=[]
         for backend in ['cpu','gpu'] if case['gpu'] else ['cpu']:
             first=root/(name+'-source-'+backend);second=root/(name+'-round-'+backend)

@@ -43,7 +43,8 @@ records equivalent dense/sparse native/browser rendering and recovery.
 [glTF MASK/BLEND alpha](gltf_alpha.md) now imports into the existing Rust CPU/Wasm
 coverage profile, with corrected camera continuation and exact native/browser
 passes. [Evidence](../evidence/alpha-gltf/README.md) retains analytic and complete
-workflow checks. GPU alpha remains explicitly unsupported.
+workflow checks. [GPU Principled alpha](gpu_alpha.md) now covers Metal/WebGPU
+static frames, shutter accumulation and partial sequence failure semantics.
 
 [Named UV bindings](named_uv.md) support per-role UV0 through UV7 on CPU and GPU,
 including displacement preservation and CPU alpha/bake consumers. The

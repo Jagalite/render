@@ -90,3 +90,8 @@ validation, render comparisons, persistence, precision and failure oracles.
 [Acceptance evidence](../evidence/gltf-export/README.md) records the complete native
 and browser workflows, independent format checks and the reproduced/fixed export
 ordering defect.
+
+The additive [GPU alpha acceptance](gpu_alpha.md) also renders MASK/BLEND exports
+on Metal/WebGPU, including named UV, occlusion, equality and subnormal-factor cases.
+Only images referenced by evaluated material bindings are export dependencies;
+unused source images retained by import do not need to appear in an evaluated GLB.

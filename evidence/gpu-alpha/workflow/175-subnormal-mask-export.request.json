@@ -1,0 +1,18 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "export",
+    "revision": "sha256:431ca79022ed242180b039b75e2e8dd195e84a6b923fc866e0c86ef5f25548ea",
+    "output": "/private/tmp/render-gpu-alpha-20260906/artifacts/gpu-alpha/run-20260906T093429Z/workflow/subnormal-mask-export",
+    "content": {
+      "format": "glb",
+      "at": null,
+      "policy": {
+        "allow_approximations": true,
+        "max_bytes": 4194304,
+        "max_vertices": 10000,
+        "max_position_error_meters": 1e-05
+      }
+    }
+  }
+}

@@ -210,6 +210,8 @@ pub fn sqrt(a: Expr) -> Expr {
 }
 #[derive(Clone, Debug)]
 pub enum Stmt {
+    /// Generation-time composition without an additional shader scope.
+    Sequence(Vec<Stmt>),
     Let(String, Expr),
     Var(String, Expr),
     Assign(Expr, Expr),
@@ -221,6 +223,11 @@ pub enum Stmt {
 impl Stmt {
     fn emit(&self, out: &mut String) {
         match self {
+            Self::Sequence(body) => {
+                for statement in body {
+                    statement.emit(out);
+                }
+            }
             Self::Let(n, e) => out.push_str(&format!("let {n}: {} = {};\n", e.ty.text(), e.emit())),
             Self::Var(n, e) => out.push_str(&format!("var {n}: {} = {};\n", e.ty.text(), e.emit())),
             Self::Assign(a, b) => out.push_str(&format!("{} = {};\n", a.emit(), b.emit())),

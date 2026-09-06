@@ -1,0 +1,35 @@
+{
+  "artifact": "path.generated.wgsl",
+  "sha256": "e0bae9a561867ddc4622b68e9d52635ce3d380bbf6f4aeb109e63b46c8d89247",
+  "opaque_baseline": "07720c5; byte-identical generated shader",
+  "alpha_artifact": "path.alpha.generated.wgsl",
+  "alpha_sha256": "82177b8262a499bad4e9997fe15d04975b9635e0817ea4caeeb38d713a0648dc",
+  "generator": "target/debug/render-host kernel [--alpha]",
+  "inputs": [
+    {
+      "path": "crates/kernel/src/lib.rs",
+      "bytes": 10874,
+      "sha256": "a7cd4024d3ef294c6a3baa597c5a0f86f4410565e3536ad28e596f3bb513e791",
+      "unchanged_during_validation": true
+    },
+    {
+      "path": "crates/kernel/src/path.rs",
+      "bytes": 35959,
+      "sha256": "8aff988f40b43733f95b99efa94f4287deb92691a45be1d7f09bf5fbfcf92480",
+      "unchanged_during_validation": true
+    },
+    {
+      "path": "crates/kernel/src/path/alpha.rs",
+      "bytes": 8994,
+      "sha256": "745815ef10ab5f912aa3851a658af814962aba4f3bf715511fa6a734705965d8",
+      "unchanged_during_validation": true
+    },
+    {
+      "path": "crates/kernel/src/path/pbr.rs",
+      "bytes": 30980,
+      "sha256": "9808b85bfecbba92c9d198b67a24488955a2210d68bed8753b49df65019be4a0",
+      "unchanged_during_validation": true
+    }
+  ],
+  "validation": "Naga typed generation plus actual Metal and Chrome WebGPU pipelines"
+}

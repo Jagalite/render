@@ -1,0 +1,27 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "frame",
+    "backend": "gpu",
+    "request": {
+      "revision": "sha256:f8260ee2e3130e109f61a80fd22ae3d96a57359dc8c2d49f2fe3bdbe44ced324",
+      "clip": "00000000000000000000000000007532",
+      "time": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "shutter": {
+        "open": {
+          "numerator": -1,
+          "denominator": 1
+        },
+        "close": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "samples": 2
+      }
+    },
+    "output": "/private/tmp/render-gpu-alpha-20260906/artifacts/gpu-alpha/run-20260906T093429Z/alpha-shutter/gpu-temporal-failure"
+  }
+}

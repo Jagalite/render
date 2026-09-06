@@ -15,7 +15,7 @@
       "capability_axes": {
         "native_authoring": "implemented_api_v0",
         "native_evaluation": "implemented_polygon_profile",
-        "final_render": "implemented_cpu_gpu_diffuse_and_opaque_static_pbr_profiles",
+        "final_render": "implemented_cpu_gpu_diffuse_PBR_and_Principled_alpha_profiles",
         "preview": "portable_path_PBR; flat_raster_legacy_only",
         "human_editing": "planned_M09",
         "import": "scoped_OBJ_static_PBR_and_gltf2_animated_pbr_v0_with_explicit_resources; gltf2_sparse_uv0_v1; gltf2_alpha_cpu_v1_MASK_BLEND; gltf2_named_uv_v1_per_role_UV0_to_UV7; gltf2_morph_frames_v1; gltf2_vertex_color_v1",
@@ -39,7 +39,8 @@
         "evidence/morph-frames/README.md",
         "evidence/indexed-attributes/README.md",
         "evidence/vertex-colors/README.md",
-        "evidence/gltf-export/README.md"
+        "evidence/gltf-export/README.md",
+        "evidence/gpu-alpha/README.md"
       ]
     },
     {
@@ -81,7 +82,8 @@
         "evidence/morph-frames/README.md",
         "evidence/indexed-attributes/README.md",
         "evidence/vertex-colors/README.md",
-        "evidence/gltf-export/README.md"
+        "evidence/gltf-export/README.md",
+        "evidence/gpu-alpha/README.md"
       ]
     },
     {
@@ -94,7 +96,7 @@
         "M07",
         "M08"
       ],
-      "qualification": "Opaque PBR/diffuse paths at depth 1\u201316 on CPU/Metal/WebGPU, with primary mipmaps and secondary LOD0; Rust CPU extended scattering/media, imaging products; exact-time CPU/Metal/WebGPU shutter frames and streaming sequences. Explicit unsupported GPU material/media profiles. Stable named UV bindings across CPU/GPU textures, CPU alpha, displacement and baking.",
+      "qualification": "Opaque PBR/diffuse paths at depth 1\u201316 on CPU/Metal/WebGPU, with primary mipmaps and secondary LOD0; Rust CPU extended scattering/media, imaging products; exact-time CPU/Metal/WebGPU shutter frames and streaming sequences. Explicit unsupported GPU material/media profiles. Stable named UV bindings across CPU/GPU textures, CPU alpha, displacement and baking. GPU Principled alpha uses a separate generated kernel to retain exact opaque results; bounded alpha failures survive shutter accumulation.",
       "capability_axes": {
         "native_authoring": "ordinary_revision_checked_typed_transactions",
         "native_evaluation": "named_Rust_profiles_in_docs/m07_m08.md",
@@ -117,7 +119,8 @@
         "evidence/animated-gltf/README.md",
         "evidence/multibounce-pbr/README.md",
         "evidence/gpu-shutter/README.md",
-        "evidence/named-uv/README.md"
+        "evidence/named-uv/README.md",
+        "evidence/gpu-alpha/README.md"
       ]
     },
     {
@@ -211,7 +214,7 @@
         "M07",
         "M10"
       ],
-      "qualification": "Opaque textured PBR at depth 1\u201316 on CPU/Metal/WebGPU, with primary mipmaps and secondary LOD0; CPU ideal dielectric, eta/k conductor approximation, single coat and alpha; geometric displacement, UV bakes and Rust D65 color/bilateral-v0 imaging. Imported glTF MASK/BLEND is validated on Rust CPU/Wasm; GPU alpha rejects explicitly. Stable named UV bindings across CPU/GPU textures, CPU alpha, displacement and baking.",
+      "qualification": "Opaque textured PBR at depth 1\u201316 on CPU/Metal/WebGPU, with primary mipmaps and secondary LOD0; CPU ideal dielectric, eta/k conductor approximation, single coat and alpha; geometric displacement, UV bakes and Rust D65 color/bilateral-v0 imaging. Imported glTF MASK/BLEND is validated on Rust CPU/Wasm; GPU Principled MASK/BLEND is validated with selected UV/vertex coverage and explicit f32 precision. Stable named UV bindings across CPU/GPU textures, CPU alpha, displacement and baking.",
       "capability_axes": {
         "native_authoring": "ordinary_revision_checked_typed_transactions",
         "native_evaluation": "named_Rust_profiles_in_docs/m07_m08.md",
@@ -234,7 +237,8 @@
         "evidence/multibounce-pbr/README.md",
         "evidence/alpha-gltf/README.md",
         "evidence/named-uv/README.md",
-        "evidence/gltf-export/README.md"
+        "evidence/gltf-export/README.md",
+        "evidence/gpu-alpha/README.md"
       ]
     },
     {
@@ -246,7 +250,7 @@
         "M09",
         "M14"
       ],
-      "qualification": "Exact rational clips/retiming, Euler/quaternion step/linear/cubic tracks, stable rigs/rest/bind, CopyPosition/TwoBoneIk, triangle LBS/morphs and sampled shutter sequences. Imported absolute TRS clips, per-skin inverse binds and default POSITION morph weights; immutable default/random-time evaluation. GPU f32 shutter frames/streaming sequences for opaque material profiles with nominal-time passes. Snapshot-v13 authored point/corner frames and imported normal/tangent morph deltas under explicit affine skinning.",
+      "qualification": "Exact rational clips/retiming, Euler/quaternion step/linear/cubic tracks, stable rigs/rest/bind, CopyPosition/TwoBoneIk, triangle LBS/morphs and sampled shutter sequences. Imported absolute TRS clips, per-skin inverse binds and default POSITION morph weights; immutable default/random-time evaluation. GPU f32 shutter frames/streaming sequences for opaque and Principled alpha material profiles with nominal-time passes. Snapshot-v13 authored point/corner frames and imported normal/tangent morph deltas under explicit affine skinning.",
       "capability_axes": {
         "native_authoring": "ordinary_revision_checked_typed_transactions",
         "native_evaluation": "named_Rust_profiles_in_docs/m07_m08.md",
@@ -266,7 +270,8 @@
         "evidence/gpu-shutter/README.md",
         "evidence/sparse-gltf/README.md",
         "evidence/morph-frames/README.md",
-        "evidence/gltf-export/README.md"
+        "evidence/gltf-export/README.md",
+        "evidence/gpu-alpha/README.md"
       ]
     },
     {
@@ -425,7 +430,7 @@
       "capability_axes": {
         "native_authoring": "not_applicable_adapter",
         "native_evaluation": "validated_hierarchy_skinning_position_normal_tangent_morphs_and_linear_vertex_colors",
-        "final_render": "implemented_cpu_gpu_diffuse_and_opaque_static_pbr_profiles",
+        "final_render": "implemented_cpu_gpu_diffuse_PBR_and_Principled_alpha_profiles",
         "preview": "portable_path_PBR; flat_raster_legacy_only",
         "human_editing": "planned_M09",
         "import": "scoped_OBJ_static_PBR_and_gltf2_animated_pbr_v0_with_explicit_resources; gltf2_sparse_uv0_v1; gltf2_alpha_cpu_v1_MASK_BLEND; gltf2_named_uv_v1_per_role_UV0_to_UV7; gltf2_morph_frames_v1; gltf2_vertex_color_v1",
@@ -448,7 +453,8 @@
         "evidence/morph-frames/README.md",
         "evidence/indexed-attributes/README.md",
         "evidence/vertex-colors/README.md",
-        "evidence/gltf-export/README.md"
+        "evidence/gltf-export/README.md",
+        "evidence/gpu-alpha/README.md"
       ]
     },
     {

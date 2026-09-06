@@ -1,0 +1,66 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "import",
+    "base_revision": "sha256:aff09cc412e645333ca0f40b477df6e2a84641610b6c5facc25f7ec69d970924",
+    "idempotency_key": "gltfexport:reimport:01",
+    "max_added_bytes": 8388608,
+    "source": {
+      "format": "glb",
+      "path": "/private/tmp/render-gpu-alpha-20260906/artifacts/gpu-alpha/run-20260906T093429Z/workflow/named-blend-export/scene/scene.glb",
+      "policy": {
+        "allow_approximations": true
+      }
+    },
+    "settings": {
+      "width": 32,
+      "height": 16,
+      "samples": 8,
+      "seed": 73,
+      "max_depth": 2,
+      "max_bytes": 16777216,
+      "environment": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "light": {
+        "position": [
+          -2,
+          4,
+          3
+        ],
+        "intensity": [
+          2,
+          2,
+          2
+        ]
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          3
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "vertical_fov_radians": 0.65,
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 2.5,
+          "ymag": 2.5,
+          "near": 0.1,
+          "far": 8
+        }
+      }
+    }
+  }
+}

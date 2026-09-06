@@ -75,3 +75,6 @@ Linear vertex colors: [profile](docs/vertex_colors.md), [evidence](evidence/vert
 
 Evaluated PBR GLB export: [profile and CLI contract](docs/gltf_export.md),
 [fixture recipe](fixtures/gltf-export/README.md), [acceptance](evidence/gltf-export/README.md).
+
+Principled MASK/BLEND on Metal and browser WebGPU: [profile](docs/gpu_alpha.md),
+[fixtures](fixtures/gpu-alpha/README.md), [evidence](evidence/gpu-alpha/README.md).

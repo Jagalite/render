@@ -19,7 +19,7 @@ hit barycentrics. Primary texture footprints use that set's projected coordinate
 secondary texture lookups retain base-mip sampling. Missing authored tangents use
 the normal texture's chosen UV basis, including its handedness. Authored tangents
 keep their source meaning. Alpha coverage uses the base-color binding selection
-and its existing base-mip CPU approximation. GPU alpha remains unsupported.
+and its existing base-mip CPU approximation. [GPU alpha coverage](gpu_alpha.md) now has its own validated transport profile.
 
 Evaluated geometry retains at most eight corner UV sets once per geometry, shared
 across instances. GPU triangles append two vec4 rows per retained set; leaf metadata

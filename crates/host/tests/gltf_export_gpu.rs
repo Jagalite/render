@@ -116,8 +116,14 @@ fn exported_pbr_surfaces_match_cpu_and_metal_at_static_and_animated_times() {
     };
     let round = document(&gltf_export::export(d.snapshot(), &q, || false).unwrap().glb);
     let scene = Evaluator::default().evaluate(round.snapshot()).unwrap();
-    assert_eq!(
-        render_gpu::pack(&scene, &s, 0).err().unwrap().code,
-        "unsupported_profile"
+    let cpu = render(&scene, &s, || false).unwrap();
+    let image = pollster::block_on(gpu.render(&scene, &s, 0, &cancel)).unwrap();
+    assert_eq!(cpu.objects, image.objects);
+    assert!(
+        cpu.linear
+            .iter()
+            .flatten()
+            .zip(image.linear.iter().flatten())
+            .all(|(a, b)| (a - b).abs() < 0.002)
     );
 }

@@ -1,0 +1,39 @@
+   Compiling render-kernel v0.1.0 (/private/tmp/render-gpu-alpha-20260906/crates/kernel)
+   Compiling render-gpu v0.1.0 (/private/tmp/render-gpu-alpha-20260906/crates/gpu)
+   Compiling render-host v0.1.0 (/private/tmp/render-gpu-alpha-20260906/crates/host)
+    Finished `test` profile [unoptimized] target(s) in 6.16s
+     Running tests/gpu_alpha.rs (target/debug/deps/gpu_alpha-1a671c30d6f722eb)
+
+running 2 tests
+rmse=0.0000000276861226823128 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000000056975835796513464 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.00000002178146758020211 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000008805140775697394 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000008812226601284489 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000000056975835796513464 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000008812226601284489 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000008169850507782992 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000000056975835796513464 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000008175184116694022 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000008175184116694022 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.00000336052178103384 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000003362881984346133 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000003362881984346133 backend=gpu-f32-principled-alpha-v1/Metal
+test coverage_textures_vertex_alpha_and_extended_schedule_match_cpu ... ok
+
+thread 'mask_boundaries_camera_and_transparent_crossing_budgets' (3909554) panicked at crates/host/tests/gpu_alpha.rs:58:6:
+called `Result::unwrap()` on an `Err` value: Error { code: "budget", stage: "validation", message: "scene table limit is 64", retryable: false, context: {} }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test mask_boundaries_camera_and_transparent_crossing_budgets ... FAILED
+
+failures:
+
+failures:
+    mask_boundaries_camera_and_transparent_crossing_budgets
+
+test result: FAILED. 1 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 16.69s
+
+error: test failed, to rerun pass `-p render-host --test gpu_alpha`

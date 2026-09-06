@@ -15,7 +15,8 @@ attribute supplies white, including on a primitive sharing a colored primitive's
 material. The source material is not duplicated just to apply geometry colors.
 CPU MASK/BLEND coverage multiplies vertex alpha, factor alpha and texture alpha.
 OPAQUE ignores their alpha components. The existing stochastic BLEND and base-mip
-CPU alpha approximation remains explicit. GPU alpha is a separate pending gate.
+CPU alpha approximation remains explicit. [GPU alpha](gpu_alpha.md) now validates
+vertex alpha through the separate Principled coverage profile.
 
 Snapshot v14 adds the typed `vec4` attribute value variant; older snapshot versions
 reject it. Native `color_rgba` attributes use stable IDs, point or corner domains,

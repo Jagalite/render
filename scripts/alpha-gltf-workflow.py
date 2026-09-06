@@ -54,10 +54,11 @@ try:
             mean=sum(green)/len(green);assert abs(mean-expected)<0.03,(variant,stripe,mean,expected);means.append(mean)
         for i in range(512):assert values[3*i]+values[3*i+1]==1 and values[3*i+2]==0
         gpu=dict(render,backend='gpu',output=str(root/(variant+'-gpu')))
-        call(variant+'-gpu',gpu,target,error='unsupported_profile' if variant!='opaque' else None)
-        if variant!='opaque':
-            manifest=json.loads((root/(variant+'-gpu/manifest.json')).read_text())
-            assert manifest['status']=='failed' and manifest['bundles']==[] and manifest['artifact_bytes']==0,manifest
+        call(variant+'-gpu',gpu,target,resource=True)
+        gpu_values=pfm(root/(variant+'-gpu/image/image.pfm'))
+        rmse=(sum((a-b)**2 for a,b in zip(values,gpu_values,strict=True))/len(values))**.5
+        assert rmse<0.00002,(variant,rmse)
+        assert json.loads((root/(variant+'-gpu/manifest.json')).read_text())['status']=='complete'
         call(variant+'-stale',dict(op,idempotency_key='alpha:stale:00001'),target,error='stale_revision')
         call(variant+'-export',{'method':'export','revision':revision,'output':str(root/(variant+'-archive')),'content':{'format':'document'}},target)
         restored=root/(variant+'-restored');call(variant+'-restore',{'method':'restore','source':str(root/(variant+'-archive/document/document.json'))},restored)

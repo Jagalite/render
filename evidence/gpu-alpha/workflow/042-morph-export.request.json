@@ -1,0 +1,24 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "export",
+    "revision": "sha256:a66785272053787db49bcd516cd5a59f5af32c4c90410d764cefe2655584d65a",
+    "output": "/private/tmp/render-gpu-alpha-20260906/artifacts/gpu-alpha/run-20260906T093429Z/workflow/morph-export",
+    "content": {
+      "format": "glb",
+      "at": {
+        "clip": "b6e31a69e2fddcd8a2842db1f6733f0f",
+        "time": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      "policy": {
+        "allow_approximations": true,
+        "max_bytes": 4194304,
+        "max_vertices": 10000,
+        "max_position_error_meters": 1e-05
+      }
+    }
+  }
+}

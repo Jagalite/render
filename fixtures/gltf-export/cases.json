@@ -1,11 +1,65 @@
 {
   "document_id": "000000000000000000000000000026e8",
-  "policy": {"allow_approximations": true, "max_bytes": 4194304, "max_vertices": 10000, "max_position_error_meters": 0.00001},
+  "policy": {
+    "allow_approximations": true,
+    "max_bytes": 4194304,
+    "max_vertices": 10000,
+    "max_position_error_meters": 1e-05
+  },
   "cases": [
-    {"name": "uv", "source": "fixtures/named-uv/data/roles.glb", "gpu": true},
-    {"name": "color", "source": "fixtures/vertex-colors/data/rgba.glb", "gpu": true},
-    {"name": "morph", "source": "fixtures/morph-frames/data/dense.glb", "gpu": true, "time": {"numerator": 1, "denominator": 2}},
-    {"name": "mask", "source": "fixtures/alpha-gltf/data/mask.glb", "gpu": false},
-    {"name": "blend", "source": "fixtures/alpha-gltf/data/blend.glb", "gpu": false}
+    {
+      "name": "uv",
+      "source": "fixtures/named-uv/data/roles.glb",
+      "gpu": true
+    },
+    {
+      "name": "color",
+      "source": "fixtures/vertex-colors/data/rgba.glb",
+      "gpu": true
+    },
+    {
+      "name": "morph",
+      "source": "fixtures/morph-frames/data/dense.glb",
+      "gpu": true,
+      "time": {
+        "numerator": 1,
+        "denominator": 2
+      }
+    },
+    {
+      "name": "mask",
+      "source": "fixtures/alpha-gltf/data/mask.glb",
+      "gpu": true
+    },
+    {
+      "name": "blend",
+      "source": "fixtures/alpha-gltf/data/blend.glb",
+      "gpu": true
+    },
+    {
+      "name": "named-mask",
+      "source": "fixtures/gpu-alpha/data/named-mask.glb",
+      "gpu": true
+    },
+    {
+      "name": "named-blend",
+      "source": "fixtures/gpu-alpha/data/named-blend.glb",
+      "gpu": true
+    },
+    {
+      "name": "ao-mask",
+      "source": "fixtures/gpu-alpha/data/ao-mask.glb",
+      "gpu": true
+    },
+    {
+      "name": "boundary-mask",
+      "source": "fixtures/gpu-alpha/data/boundary-mask.glb",
+      "gpu": true
+    },
+    {
+      "name": "subnormal-mask",
+      "source": "fixtures/gpu-alpha/data/subnormal-mask.glb",
+      "gpu": true
+    }
   ]
 }

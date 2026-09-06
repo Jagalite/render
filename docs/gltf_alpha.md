@@ -3,8 +3,8 @@
 The `gltf2-alpha-cpu-v1` capability extends the PBR scene importer with MASK and
 BLEND. It converts them to the existing typed Principled surface and Mask/Blend
 opacity models. Native Rust CPU and browser Rust Wasm share those semantics;
-Metal/WebGPU return `unsupported_profile` for alpha materials. OPAQUE keeps its
-existing CPU/GPU path. This is a bounded input extension, not completion of INPUT-02.
+Metal/WebGPU coverage is now validated in the additive [GPU alpha profile](gpu_alpha.md).
+OPAQUE keeps its existing CPU/GPU path. This is a bounded input extension, not completion of INPUT-02.
 
 The source baseColorFactor alpha defaults to one and multiplies the linear alpha
 channel of the base-color texture. sRGB conversion affects RGB only. MASK accepts
@@ -46,5 +46,6 @@ analytic oracle. [Acceptance evidence](../evidence/alpha-gltf/README.md) records
 native/browser workflows, resource use, failures and prior-profile regressions.
 
 Named UV bindings are covered by [their own profile](named_uv.md).
-Vertex colors, shader extensions, rough transmission, GPU alpha
-and general material interchange remain separate gates. M09 stays deferred.
+[Vertex colors](vertex_colors.md), [GPU alpha](gpu_alpha.md) and [evaluated GLB
+export](gltf_export.md) now have separate evidence. Shader extensions, rough
+transmission and broader interchange remain separate gates. M09 stays deferred.

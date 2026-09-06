@@ -1,0 +1,9 @@
+   Compiling render-core v0.1.0 (/private/tmp/render-gpu-alpha-20260906/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 9.47s
+     Running tests/alpha_occlusion.rs (target/debug/deps/alpha_occlusion-eaceeb5b699e9a30)
+
+running 2 tests
+test principled_mask_and_blend_keep_occlusion_after_coverage_admission ... ok
+test extended_surface_occlusion_scales_only_indirect_transport ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.66s

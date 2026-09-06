@@ -1,0 +1,23 @@
+   Compiling render-gpu v0.1.0 (/private/tmp/render-gpu-alpha-20260906/crates/gpu)
+   Compiling render-host v0.1.0 (/private/tmp/render-gpu-alpha-20260906/crates/host)
+    Finished `test` profile [unoptimized] target(s) in 6.52s
+     Running tests/gpu_alpha.rs (target/debug/deps/gpu_alpha-1a671c30d6f722eb)
+
+running 1 test
+rmse=0 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.6614378277661477 backend=gpu-f32-principled-alpha-v1/Metal
+
+thread 'normalized_texture_cutoffs_and_mixed_material_bounces' (3922774) panicked at crates/host/tests/gpu_alpha.rs:121:5:
+rmse=0.6614378277661477
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test normalized_texture_cutoffs_and_mixed_material_bounces ... FAILED
+
+failures:
+
+failures:
+    normalized_texture_cutoffs_and_mixed_material_bounces
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 4 filtered out; finished in 0.27s
+
+error: test failed, to rerun pass `-p render-host --test gpu_alpha`

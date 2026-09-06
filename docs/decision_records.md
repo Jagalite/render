@@ -331,3 +331,21 @@ roundtrip and recovery evidence. No runtime dependency or snapshot version chang
 
 **Revisit trigger:** Authored animation, hierarchy, camera/light recipes, shear
 factorization, additional material extensions and larger output profiles require separate contracts and resource evidence.
+
+## ADR-025 — Bounded GPU coverage preserves frame failure semantics
+
+**Decision:** Admit existing Principled alpha in the Rust-generated path kernel,
+keep base-level f32 coverage separately from RGBA16 color, preserve inclusive
+CPU-predicate MASK thresholds, and use extended counter dimensions for stochastic
+BLEND. Carry bounded traversal failure through GPU accumulation to final readback.
+
+**Integration boundary:** The [GPU alpha contract](gpu_alpha.md) connects shared
+material/UV/color meaning, camera traversal, direct visibility, CPU occlusion,
+static/shutter/sequence publication and CLI/browser recovery. Existing opaque
+packing and arithmetic remain the default; a separate lazily compiled kernel
+variant preserves the exact baseline opaque shader. No public schema or dependency changes.
+Native transactions build traversal-limit fixtures beyond the glTF node budget.
+
+**Revisit trigger:** Secondary footprint parity, richer GPU BSDFs, exact interpolated
+coverage arithmetic, larger traversal profiles or participating media require
+numerical, failure, resource and native/browser acceptance evidence.

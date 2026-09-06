@@ -1,0 +1,29 @@
+   Compiling render-core v0.1.0 (/private/tmp/render-gpu-alpha-20260906/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 9.28s
+     Running tests/alpha_occlusion.rs (target/debug/deps/alpha_occlusion-eaceeb5b699e9a30)
+
+running 2 tests
+test principled_mask_and_blend_keep_occlusion_after_coverage_admission ... FAILED
+test extended_surface_occlusion_scales_only_indirect_transport ... FAILED
+
+failures:
+
+---- principled_mask_and_blend_keep_occlusion_after_coverage_admission stdout ----
+
+thread 'principled_mask_and_blend_keep_occlusion_after_coverage_admission' (3899482) panicked at crates/core/tests/alpha_occlusion.rs:184:9:
+assertion failed: image.linear.iter().all(|p| *p == [0.; 3])
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- extended_surface_occlusion_scales_only_indirect_transport stdout ----
+
+thread 'extended_surface_occlusion_scales_only_indirect_transport' (3899481) panicked at crates/core/tests/alpha_occlusion.rs:126:17:
+modelPrincipled red0 strength1: 0.4883072 vs 0
+
+
+failures:
+    extended_surface_occlusion_scales_only_indirect_transport
+    principled_mask_and_blend_keep_occlusion_after_coverage_admission
+
+test result: FAILED. 0 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+error: test failed, to rerun pass `-p render-core --test alpha_occlusion`

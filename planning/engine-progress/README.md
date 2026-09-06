@@ -5,13 +5,13 @@ working on feasible remaining steps. M09 interactive editor remains deferred.
 Each completed increment requires implementation, native/browser workflow evidence,
 negative/cancellation/stale checks, resource/provenance records and documentation.
 
-Current completed increment: evaluated PBR GLB export; evidence/gltf-export.
+Current completed increment: GPU Principled alpha coverage; evidence/gpu-alpha.
 
 | Order | Increment | Status |
 |---|---|---|
 | 1 | GPU shutter frames and streaming sequences | Validated on feat/gpu-shutter-sequences; evidence/gpu-shutter |
 | 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Sparse/UV0, CPU alpha, named UV, morph frames, vertex colors and evaluated PBR GLB export validated |
-| 3 | Richer GPU scattering and transport quality | Next: GPU alpha coverage and the identified CPU occlusion regression |
+| 3 | Richer GPU scattering and transport quality | GPU alpha and CPU occlusion validated; next: secondary texture footprint correction, then richer BSDFs |
 | 4 | External hair/volume inputs, fiber shading and sparse GPU media | Pending |
 | 5 | Scoped native .blend/USD/MaterialX interchange | Pending |
 | 6 | M10 engine UV/paint/sculpt/remesh/retopology operations | Pending |
@@ -74,3 +74,14 @@ reproduced private entity-order dependence is fixed with stable-ID table orderin
 Authored labels, local frames, UV/color/material semantics and encoded assets are
 preserved within the bounded profile. Prior images, passes, receipts and fixtures
 remain unchanged. GPU alpha and its related CPU occlusion check are next.
+
+GPU alpha acceptance: 145 native and 124 Wasm tests, five dedicated Metal groups,
+197-request export, 43-request alpha and 19-request shutter CLI workflows, and
+actual Chrome WebGPU/OPFS checks. All 243 previous image/pass files and 81 receipts
+remain byte-identical. A separate lazy alpha kernel preserves the old opaque WGSL
+exactly. CPU occlusion, MASK equality/subnormal thresholds, RNG endpoints, near
+clipping and bounded nominal/temporal/partial-sequence failures have regression
+evidence. All 23 source GLBs and 10 exported GLBs have zero independent errors.
+Secondary extended-CPU texture footprints are the next concrete correction; no
+major implementation blocker is parked. Historical checkpoint notes above retain
+their original validation scope.

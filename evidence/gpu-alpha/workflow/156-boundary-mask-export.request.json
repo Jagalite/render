@@ -1,0 +1,18 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "export",
+    "revision": "sha256:c7b25339b91fa98098df557e6e9e1fff3f52429d173720792daaf6139e56bed6",
+    "output": "/private/tmp/render-gpu-alpha-20260906/artifacts/gpu-alpha/run-20260906T093429Z/workflow/boundary-mask-export",
+    "content": {
+      "format": "glb",
+      "at": null,
+      "policy": {
+        "allow_approximations": true,
+        "max_bytes": 4194304,
+        "max_vertices": 10000,
+        "max_position_error_meters": 1e-05
+      }
+    }
+  }
+}

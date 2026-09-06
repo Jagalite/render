@@ -28,16 +28,21 @@ try {
   let staleBranch=false;try{call('branch',{branch:'old-base',base_revision:args.base_revision});}catch(e){staleBranch=String(e).includes('conflict');}check(staleBranch,'stale branch mutation rejected');
   const project='alpha-'+name+'-'+Date.now();await d.save(project,undefined,false);const restored=await m.BrowserAgent.load(project);check(restored.export_json()===before,'OPFS state roundtrip');
   call('branch',{branch:'alpha',base_revision:state.revision});
-  const cpu=call('preview',{branch:'alpha',revision:state.revision});let gpuUnsupported=false;
-  try{await d.preview_gpu('alpha',state.revision);}catch(e){gpuUnsupported=String(e).includes('unsupported_profile');}check(gpuUnsupported===(name!=='opaque'),'truthful GPU alpha support');
+  const cpu=call('preview',{branch:'alpha',revision:state.revision});
+  const gpu=JSON.parse(await d.preview_gpu('alpha',state.revision));
+  const a=cpu.passes.linear_rgb.flat(),b=gpu.passes.linear_rgb.flat();check(a.length===b.length,'GPU pixel dimensions');
+  const rmse=Math.sqrt(a.reduce((sum,v,i)=>sum+(v-b[i])**2,0)/a.length);check(rmse<.00002,'GPU alpha color '+rmse);
+  check(JSON.stringify(cpu.passes.object_ids)===JSON.stringify(gpu.passes.object_ids),'GPU alpha IDs');
+  check(cpu.passes.depth_meters.every((v,i)=>Math.abs(v-gpu.passes.depth_meters[i])<.00002),'GPU alpha depth');
+
   const restoredCall=(method,args={})=>JSON.parse(restored.dispatch(JSON.stringify({version:0,operation:{method,...args}})));restoredCall('branch',{branch:'alpha',base_revision:state.revision});
   const again=restoredCall('preview',{branch:'alpha',revision:state.revision});check(JSON.stringify(again.passes)===JSON.stringify(cpu.passes),'restored render');
-  check(d.export_json()===before,'immutable root');results.push({name,revision:state.revision,opfs_restored:true,nonempty_import_error:String(stale),stale_render_rejected:staleRender,stale_branch_rejected:staleBranch,gpu_unsupported:gpuUnsupported,cpu:cpu.passes});restored.free();d.free();
+  check(d.export_json()===before,'immutable root');results.push({name,revision:state.revision,opfs_restored:true,nonempty_import_error:String(stale),stale_render_rejected:staleRender,stale_branch_rejected:staleBranch,gpu_linear_rmse:rmse,gpu:gpu.passes,cpu:cpu.passes});restored.free();d.free();
  }
  const d=new m.BrowserAgent('00000000000000000000000000002648');const before=d.export_json();const call=(method,args={})=>JSON.parse(d.dispatch(JSON.stringify({version:0,operation:{method,...args}})));let malformed=false;
  try{call('import_pbr_scene',{json:${JSON.stringify(bad)},buffers:[Array.from(atob(${JSON.stringify(bin)}),c=>c.charCodeAt(0))],images:[],policy:{allow_approximations:true},settings,base_revision:call('inspect').revision,idempotency_key:'alpha:browser:bad:01'});}catch(e){malformed=String(e).includes('gltf_scene');}
- check(malformed&&d.export_json()===before,'malformed input atomic');d.free();return {status:'passed',profile:'gltf2-alpha-cpu-v1',results,malformed_atomic:malformed,seconds:(performance.now()-at)/1000};
+ check(malformed&&d.export_json()===before,'malformed input atomic');d.free();return {status:'passed',profile:'gltf2-alpha-cpu-gpu-v1',results,malformed_atomic:malformed,seconds:(performance.now()-at)/1000};
  })()`);
- for(const result of report.results){await fs.writeFile(root+'/browser-'+result.name+'-cpu.json',JSON.stringify(result.cpu)+'\n');delete result.cpu;}
+ for(const result of report.results){await fs.writeFile(root+'/browser-'+result.name+'-cpu.json',JSON.stringify(result.cpu)+'\n');await fs.writeFile(root+'/browser-'+result.name+'-gpu.json',JSON.stringify(result.gpu)+'\n');delete result.gpu;delete result.cpu;}
  report.browser=await command('Browser.getVersion');await fs.writeFile(root+'/browser_report.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
 } finally {socket.close();}

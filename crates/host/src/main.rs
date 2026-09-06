@@ -180,7 +180,12 @@ fn run() -> Result<()> {
             args.iter().any(|a| a == "--gpu"),
         ),
         Some("kernel") => {
-            print!("{}", render_kernel::path::kernel().generate()?);
+            let kernel = match args.get(1).map(String::as_str) {
+                None => render_kernel::path::kernel(),
+                Some("--alpha") if args.len() == 2 => render_kernel::path::alpha_kernel(),
+                _ => return Err(Error::new("arguments", "kernel accepts only --alpha")),
+            };
+            print!("{}", kernel.generate()?);
             Ok(())
         }
         Some("verify") => {
@@ -216,7 +221,7 @@ fn run() -> Result<()> {
         ),
         _ => Err(Error::new(
             "usage",
-            "render-host project <project> <request.json|-> | agent <project> | agent-workflow [GLB] [output] [--gpu] | demo [directory] [--gpu] | verify [directory] [--gpu] | kernel | api <project> | jobs <project> | serve [web-root] [port]",
+            "render-host project <project> <request.json|-> | agent <project> | agent-workflow [GLB] [output] [--gpu] | demo [directory] [--gpu] | verify [directory] [--gpu] | kernel [--alpha] | api <project> | jobs <project> | serve [web-root] [port]",
         )),
     }
 }

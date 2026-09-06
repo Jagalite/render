@@ -1,5 +1,6 @@
 //! Portable diffuse transport built from typed Rust IR nodes.
 use super::*;
+mod alpha;
 mod pbr;
 fn v(n: &str) -> Expr {
     Expr::var(n, Ty::V3)
@@ -52,7 +53,17 @@ fn random(dim: u32) -> Expr {
         ],
     )
 }
-fn path_random(dim: u32) -> Expr {
+fn path_random(dim: u32, extended: bool) -> Expr {
+    let dim = if extended {
+        match dim {
+            4 => 3,
+            2 => 4,
+            3 => 5,
+            _ => dim,
+        }
+    } else {
+        dim
+    };
     call(
         "random",
         Ty::F32,
@@ -64,7 +75,16 @@ fn path_random(dim: u32) -> Expr {
         ],
     )
 }
+fn when(enabled: bool, statement: Stmt) -> Stmt {
+    Stmt::Sequence(if enabled { vec![statement] } else { vec![] })
+}
 pub fn kernel() -> Kernel {
+    build(false)
+}
+pub fn alpha_kernel() -> Kernel {
+    build(true)
+}
+fn build(extended: bool) -> Kernel {
     let random_fn = function(
         "random",
         &[
@@ -102,7 +122,10 @@ pub fn kernel() -> Kernel {
             + xyz(inst(i("base") + u(2))) * v("p").field("z")
             + xyz(inst(i("base") + u(3))) * s("w"))],
     );
-    let mut bounds_body = vec![var("near", f(0.00001)), var("far", s("limit"))];
+    let mut bounds_body = vec![
+        var("near", f(if extended { 0. } else { 0.00001 })),
+        var("far", s("limit")),
+    ];
     for axis in ["x", "y", "z"] {
         bounds_body.push(Stmt::If(
             v("rd").field(axis).eq(f(0.)),
@@ -178,7 +201,7 @@ pub fn kernel() -> Kernel {
             let_("distance", dot(v("e2"), v("qvec")) / s("det")),
             if_(
                 s("distance")
-                    .lt(f(0.00001))
+                    .lt(f(if extended { 0. } else { 0.00001 }))
                     .or(s("distance").gt(s("limit"))),
                 vec![ret(splat(-1.))],
             ),
@@ -377,6 +400,7 @@ pub fn kernel() -> Kernel {
             i("pixel").ge(i("width") * i("height")),
             vec![Stmt::Return(None)],
         ),
+        when(extended, var("alpha_failed", f(0.))),
         var("sum", splat(0.)),
         var("first_depth", f(0.)),
         var("first_normal", splat(0.)),
@@ -421,9 +445,28 @@ pub fn kernel() -> Kernel {
                     let_(
                         "hit",
                         call(
-                            "trace",
+                            if extended { "covered_trace" } else { "trace" },
                             Ty::V4,
-                            vec![v("origin"), v("direction"), s("far"), s("near")],
+                            if extended {
+                                vec![
+                                    v("origin"),
+                                    v("direction"),
+                                    s("far"),
+                                    s("near"),
+                                    i("pixel"),
+                                    i("sample"),
+                                    i("bounce"),
+                                ]
+                            } else {
+                                vec![v("origin"), v("direction"), s("far"), s("near")]
+                            },
+                        ),
+                    ),
+                    when(
+                        extended,
+                        if_(
+                            q("hit").field("x").lt(f(-1.)),
+                            vec![set(s("alpha_failed"), f(1.)), Stmt::Break],
                         ),
                     ),
                     Stmt::If(
@@ -464,7 +507,7 @@ pub fn kernel() -> Kernel {
                             ),
                             Stmt::If(
                                 inst(i("base") + u(8)).field("z").gt(f(0.)),
-                                pbr::body(),
+                                pbr::body(extended),
                                 vec![
                                     var("color", xyz(inst(i("base") + u(6)))),
                                     let_(
@@ -568,24 +611,17 @@ pub fn kernel() -> Kernel {
                                     let_("cosine", max(dot(v("normal"), v("light_dir")), f(0.))),
                                     if_(
                                         s("cosine").gt(f(0.)).and(s("distance").gt(f(0.00001))),
-                                        vec![if_(
-                                            trace(
-                                                v("offset"),
-                                                v("light_dir"),
-                                                s("distance") - f(0.00002),
-                                            )
-                                            .field("x")
-                                            .lt(f(0.)),
-                                            vec![set(
-                                                v("radiance"),
-                                                v("radiance")
-                                                    + v("color")
-                                                        * xyz(param(6))
-                                                        * (s("cosine")
-                                                            / (f(std::f32::consts::PI)
-                                                                * s("distance")
-                                                                * s("distance"))),
-                                            )],
+                                        vec![alpha::illuminate(
+                                            extended,
+                                            v("offset"),
+                                            v("light_dir"),
+                                            s("distance") - f(0.00002),
+                                            v("color")
+                                                * xyz(param(6))
+                                                * (s("cosine")
+                                                    / (f(std::f32::consts::PI)
+                                                        * s("distance")
+                                                        * s("distance"))),
                                         )],
                                     ),
                                     let_(
@@ -593,24 +629,21 @@ pub fn kernel() -> Kernel {
                                         call(
                                             "cosine_direction",
                                             Ty::V3,
-                                            vec![v("normal"), path_random(2), path_random(3)],
+                                            vec![
+                                                v("normal"),
+                                                path_random(2, extended),
+                                                path_random(3, extended),
+                                            ],
                                         ),
                                     ),
                                     set(v("next_origin"), v("offset")),
                                     set(v("next_direction"), v("secondary")),
                                     set(v("weight"), v("color")),
-                                    if_(
-                                        (i("bounce") + u(1))
-                                            .eq(cast(Ty::U32, param(0).field("w")))
-                                            .and(
-                                                trace(v("offset"), v("secondary"), f(1e30))
-                                                    .field("x")
-                                                    .lt(f(0.)),
-                                            ),
-                                        vec![set(
-                                            v("radiance"),
-                                            v("radiance") + v("color") * xyz(param(7)),
-                                        )],
+                                    alpha::last_bounce(
+                                        extended,
+                                        v("offset"),
+                                        v("secondary"),
+                                        v("color") * xyz(param(7)),
                                     ),
                                 ],
                             ),
@@ -662,6 +695,22 @@ pub fn kernel() -> Kernel {
             ),
         ],
     ));
+    if extended {
+        body.push(if_(
+            param(10)
+                .field("y")
+                .gt(f(0.))
+                .or(param(10).field("z").gt(f(0.))),
+            vec![if_(
+                read("output", i("pixel") * u(2)).field("w").lt(f(0.)),
+                vec![set(s("alpha_failed"), f(1.))],
+            )],
+        ));
+        body.push(if_(
+            s("alpha_failed").gt(f(0.)),
+            vec![set(s("first_depth"), f(-1.))],
+        ));
+    }
     body.push(set(
         read("output", i("pixel") * u(2)),
         vec4(v("color"), s("first_depth")),
@@ -687,7 +736,10 @@ pub fn kernel() -> Kernel {
                 trace_fn,
                 cosine_fn,
             ];
-            functions.extend(pbr::functions());
+            functions.extend(pbr::functions(extended));
+            if extended {
+                functions.extend(alpha::functions());
+            }
             functions
         },
         body,
@@ -698,6 +750,12 @@ mod tests {
     #[test]
     fn generated_traversal_and_shading_validate() {
         let source = super::kernel().generate().unwrap();
+        // Captured by building commit07720c5: preserve the established opaque
+        // program, not merely a tolerance after adding a second material profile.
+        assert_eq!(
+            render_core::digest(source.as_bytes()),
+            "sha256:e0bae9a561867ddc4622b68e9d52635ce3d380bbf6f4aeb109e63b46c8d89247"
+        );
         let module = naga::front::wgsl::parse_str(&source).unwrap();
         assert_eq!(module.global_variables.len(), 5);
         assert_eq!(module.entry_points[0].workgroup_size, [64, 1, 1]);
@@ -708,6 +766,21 @@ mod tests {
                     .iter()
                     .any(|(_, f)| f.name.as_deref() == Some(name))
             );
+        }
+    }
+    #[test]
+    fn generated_alpha_profile_validates_and_keeps_coverage_functions_separate() {
+        let source = super::alpha_kernel().generate().unwrap();
+        let module = naga::front::wgsl::parse_str(&source).unwrap();
+        assert_eq!(module.global_variables.len(), 5);
+        for name in ["covered_trace", "alpha_visibility", "opacity"] {
+            assert!(
+                module
+                    .functions
+                    .iter()
+                    .any(|(_, f)| f.name.as_deref() == Some(name))
+            );
+            assert!(!super::kernel().functions.iter().any(|f| f.name == name));
         }
     }
 }

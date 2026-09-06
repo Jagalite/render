@@ -1,0 +1,18 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "export",
+    "revision": "sha256:aff09cc412e645333ca0f40b477df6e2a84641610b6c5facc25f7ec69d970924",
+    "output": "/private/tmp/render-gpu-alpha-20260906/artifacts/gpu-alpha/run-20260906T093429Z/workflow/named-blend-stale-export",
+    "content": {
+      "format": "glb",
+      "at": null,
+      "policy": {
+        "allow_approximations": true,
+        "max_bytes": 4194304,
+        "max_vertices": 10000,
+        "max_position_error_meters": 1e-05
+      }
+    }
+  }
+}

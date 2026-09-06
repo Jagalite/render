@@ -464,6 +464,8 @@ pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) 
                         };
                         throughput *= f * n.dot(direction) / density;
                     }
+                    // Occlusion affects indirect transport, after direct light and emission.
+                    throughput *= f64::from(shading.occlusion);
                     direction = direction.normalize();
                     ray = Ray {
                         origin: hit.position

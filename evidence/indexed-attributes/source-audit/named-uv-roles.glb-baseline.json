@@ -1,0 +1,162 @@
+{
+  "uri": "fixtures/named-uv/data/roles.glb",
+  "mimeType": "model/gltf-binary",
+  "validatorVersion": "2.0.0-dev.3.10",
+  "validatedAt": "2026-09-06T07:28:08.530Z",
+  "issues": {
+    "numErrors": 6,
+    "numWarnings": 1,
+    "numInfos": 0,
+    "numHints": 7,
+    "messages": [
+      {
+        "code": "MESH_PRIMITIVE_INDEXED_SEMANTIC_CONTINUITY",
+        "message": "Indices for indexed attribute semantic 'TEXCOORD' must start with 0 and be continuous. Total expected indices: 8, total provided indices: 4.",
+        "severity": 0,
+        "pointer": "/meshes/0/primitives/0/attributes"
+      },
+      {
+        "code": "BUFFER_VIEW_TARGET_MISSING",
+        "message": "bufferView.target should be set for vertex or index data.",
+        "severity": 3,
+        "pointer": "/meshes/0/primitives/0/attributes/POSITION"
+      },
+      {
+        "code": "BUFFER_VIEW_TARGET_MISSING",
+        "message": "bufferView.target should be set for vertex or index data.",
+        "severity": 3,
+        "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+      },
+      {
+        "code": "BUFFER_VIEW_TARGET_MISSING",
+        "message": "bufferView.target should be set for vertex or index data.",
+        "severity": 3,
+        "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "BUFFER_VIEW_TARGET_MISSING",
+        "message": "bufferView.target should be set for vertex or index data.",
+        "severity": 3,
+        "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
+      },
+      {
+        "code": "BUFFER_VIEW_TARGET_MISSING",
+        "message": "bufferView.target should be set for vertex or index data.",
+        "severity": 3,
+        "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_2"
+      },
+      {
+        "code": "BUFFER_VIEW_TARGET_MISSING",
+        "message": "bufferView.target should be set for vertex or index data.",
+        "severity": 3,
+        "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_7"
+      },
+      {
+        "code": "BUFFER_VIEW_TARGET_MISSING",
+        "message": "bufferView.target should be set for vertex or index data.",
+        "severity": 3,
+        "pointer": "/meshes/0/primitives/0/indices"
+      },
+      {
+        "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+        "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations.",
+        "severity": 1,
+        "pointer": "/meshes/0/primitives/0/material"
+      },
+      {
+        "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+        "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/pbrMetallicRoughness/baseColorTexture' needs 'TEXCOORD_0' attribute.",
+        "severity": 0,
+        "pointer": "/meshes/0/primitives/0/material"
+      },
+      {
+        "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+        "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/pbrMetallicRoughness/metallicRoughnessTexture' needs 'TEXCOORD_7' attribute.",
+        "severity": 0,
+        "pointer": "/meshes/0/primitives/0/material"
+      },
+      {
+        "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+        "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/normalTexture' needs 'TEXCOORD_1' attribute.",
+        "severity": 0,
+        "pointer": "/meshes/0/primitives/0/material"
+      },
+      {
+        "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+        "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/occlusionTexture' needs 'TEXCOORD_2' attribute.",
+        "severity": 0,
+        "pointer": "/meshes/0/primitives/0/material"
+      },
+      {
+        "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+        "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/emissiveTexture' needs 'TEXCOORD_1' attribute.",
+        "severity": 0,
+        "pointer": "/meshes/0/primitives/0/material"
+      }
+    ],
+    "truncated": false
+  },
+  "info": {
+    "version": "2.0",
+    "generator": "Original named UV analytic fixture",
+    "resources": [
+      {
+        "pointer": "/buffers/0",
+        "mimeType": "application/gltf-buffer",
+        "storage": "glb",
+        "byteLength": 448
+      },
+      {
+        "pointer": "/images/0",
+        "mimeType": "image/png",
+        "storage": "buffer-view",
+        "image": {
+          "width": 2,
+          "height": 2,
+          "format": "rgba",
+          "primaries": "srgb",
+          "transfer": "srgb",
+          "bits": 8
+        }
+      },
+      {
+        "pointer": "/images/1",
+        "mimeType": "image/png",
+        "storage": "buffer-view",
+        "image": {
+          "width": 2,
+          "height": 2,
+          "format": "rgba",
+          "primaries": "srgb",
+          "transfer": "srgb",
+          "bits": 8
+        }
+      },
+      {
+        "pointer": "/images/2",
+        "mimeType": "image/png",
+        "storage": "buffer-view",
+        "image": {
+          "width": 2,
+          "height": 2,
+          "format": "rgba",
+          "primaries": "srgb",
+          "transfer": "srgb",
+          "bits": 8
+        }
+      }
+    ],
+    "animationCount": 0,
+    "materialCount": 1,
+    "hasMorphTargets": false,
+    "hasSkins": false,
+    "hasTextures": true,
+    "hasDefaultScene": true,
+    "drawCallCount": 1,
+    "totalVertexCount": 4,
+    "totalTriangleCount": 2,
+    "maxUVs": 0,
+    "maxInfluences": 0,
+    "maxAttributes": 6
+  }
+}

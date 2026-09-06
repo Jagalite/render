@@ -54,3 +54,8 @@ CLI/browser recovery and unchanged prior render artifacts.
 affine skinning, including dense/sparse inputs and snapshot-v13 point/corner
 correspondence. [Evidence](../evidence/morph-frames/README.md) covers native and
 browser frames, shutters, persistence and numerical direction checks.
+
+[Source conformance](gltf_source_conformance.md) now checks indexed attribute
+continuity and animation-input bounds. All 13 GLB fixtures pass the independent
+Khronos validator; [evidence](../evidence/indexed-attributes/README.md) records
+metadata corrections, preserved render values and expected source identity changes.

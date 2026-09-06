@@ -51,3 +51,7 @@ separate gates. M09 stays deferred.
 
 [Acceptance evidence](../evidence/named-uv/README.md) covers the complete native
 and browser workflow, analytical cases, resource use and dependency review.
+
+Indexed source sets must be consecutive from zero. See the
+[source-conformance correction](gltf_source_conformance.md) for independent fixture
+validation and the metadata correction preserving their binary payloads.

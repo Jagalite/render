@@ -1,0 +1,68 @@
+{
+  "scope": "Same named-UV and morph rendering settings with all eight UV sets; process observations are not benchmark comparisons or allocator guarantees",
+  "observations": [
+    {
+      "workflow": "named-uv-regression",
+      "name": "roles-import",
+      "seconds": 0.03495320799993351,
+      "maximum resident set size": 16007168,
+      "peak memory footprint": 3048512
+    },
+    {
+      "workflow": "named-uv-regression",
+      "name": "roles-render",
+      "seconds": 0.07520749999821419,
+      "maximum resident set size": 17154048,
+      "peak memory footprint": 3228736
+    },
+    {
+      "workflow": "named-uv-regression",
+      "name": "roles-gpu",
+      "seconds": 0.13545349999913014,
+      "maximum resident set size": 33636352,
+      "peak memory footprint": 11077184
+    },
+    {
+      "workflow": "workflow",
+      "name": "dense-import",
+      "seconds": 0.04525741700490471,
+      "maximum resident set size": 17055744,
+      "peak memory footprint": 3589248
+    },
+    {
+      "workflow": "workflow",
+      "name": "dense-cpu",
+      "seconds": 0.21294333299738355,
+      "maximum resident set size": 19054592,
+      "peak memory footprint": 4162624
+    },
+    {
+      "workflow": "workflow",
+      "name": "dense-gpu",
+      "seconds": 0.1769528330041794,
+      "maximum resident set size": 35340288,
+      "peak memory footprint": 11699840
+    },
+    {
+      "workflow": "workflow",
+      "name": "sparse-import",
+      "seconds": 0.04410841699427692,
+      "maximum resident set size": 16990208,
+      "peak memory footprint": 3523712
+    },
+    {
+      "workflow": "workflow",
+      "name": "sparse-cpu",
+      "seconds": 0.21988954200060107,
+      "maximum resident set size": 19021824,
+      "peak memory footprint": 4146304
+    },
+    {
+      "workflow": "workflow",
+      "name": "sparse-gpu",
+      "seconds": 0.17770241600373993,
+      "maximum resident set size": 35340288,
+      "peak memory footprint": 11634176
+    }
+  ]
+}

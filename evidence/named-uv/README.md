@@ -41,3 +41,9 @@ was visually inspected as a four-region textured quad; numerical role samples,
 not appearance, supply the oracle. Linux/Windows are compile-only; GPU alpha,
 vertex colors, shader extensions and broader source export remain separate gates.
 M09 remains deferred.
+
+Source-conformance amendment: these historical analytical inputs had nonconsecutive
+UV-set metadata; the morph inputs also lacked animation-input bounds. Native
+numerical/render results above retain their recorded meaning, but source-format
+conformance is superseded by [the correction evidence](../indexed-attributes/README.md).
+All raw historical inputs/reports remain available in their recorded commits.

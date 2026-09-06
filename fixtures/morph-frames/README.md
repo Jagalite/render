@@ -9,7 +9,7 @@ with `data/provenance.json`; existing reference files are not updated automatica
 python3 fixtures/morph-frames/generate.py /tmp/render-morph-frame-fixture-check
 ```
 
-A quad carries four independent UV sets and three material images from the named-UV
+A quad carries eight UV sets with four distinct mappings and three material images from the named-UV
 analytic construction. Three morph targets independently displace position by
 (0.1,0,0), normal by (0.5,0,0), and tangent by (0,0.25,0). The latter two are
 direction-only targets. Default weights are (0.25,0.5,0.75); the clip linearly
@@ -29,3 +29,9 @@ Their decoded geometry and rendered pixels must agree despite different source
 identities. Analytical direction tests, malformed/cancelled/stale workflows,
 recovery, Metal/WebGPU frames and shutters provide acceptance; no golden rendering
 is generated from these inputs.
+
+Source-conformance correction: UV3 through UV6 explicitly alias the existing
+constant UV7 accessor, so all eight set indices are consecutive. Binary geometry,
+image and animation payloads are unchanged. The morph source additionally declares
+its unchanged [0,1] animation-input bounds. See
+[the source validation contract](../../docs/gltf_source_conformance.md).

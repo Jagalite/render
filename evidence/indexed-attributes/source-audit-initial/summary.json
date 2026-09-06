@@ -1,0 +1,223 @@
+{
+  "validator": "2.0.0-dev.3.10",
+  "development_only": true,
+  "results": [
+    {
+      "file": "fixtures/named-uv/data/roles.glb",
+      "version": "baseline",
+      "errors": 6,
+      "warnings": 1,
+      "codes": [
+        "MESH_PRIMITIVE_INDEXED_SEMANTIC_CONTINUITY",
+        "BUFFER_VIEW_TARGET_MISSING",
+        "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+        "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS"
+      ],
+      "errors_detail": [
+        {
+          "code": "MESH_PRIMITIVE_INDEXED_SEMANTIC_CONTINUITY",
+          "message": "Indices for indexed attribute semantic 'TEXCOORD' must start with 0 and be continuous. Total expected indices: 8, total provided indices: 4.",
+          "severity": 0,
+          "pointer": "/meshes/0/primitives/0/attributes"
+        },
+        {
+          "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+          "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/pbrMetallicRoughness/baseColorTexture' needs 'TEXCOORD_0' attribute.",
+          "severity": 0,
+          "pointer": "/meshes/0/primitives/0/material"
+        },
+        {
+          "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+          "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/pbrMetallicRoughness/metallicRoughnessTexture' needs 'TEXCOORD_7' attribute.",
+          "severity": 0,
+          "pointer": "/meshes/0/primitives/0/material"
+        },
+        {
+          "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+          "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/normalTexture' needs 'TEXCOORD_1' attribute.",
+          "severity": 0,
+          "pointer": "/meshes/0/primitives/0/material"
+        },
+        {
+          "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+          "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/occlusionTexture' needs 'TEXCOORD_2' attribute.",
+          "severity": 0,
+          "pointer": "/meshes/0/primitives/0/material"
+        },
+        {
+          "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+          "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/emissiveTexture' needs 'TEXCOORD_1' attribute.",
+          "severity": 0,
+          "pointer": "/meshes/0/primitives/0/material"
+        }
+      ]
+    },
+    {
+      "file": "fixtures/named-uv/data/roles.glb",
+      "version": "candidate",
+      "errors": 0,
+      "warnings": 1,
+      "codes": [
+        "BUFFER_VIEW_TARGET_MISSING",
+        "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+        "UNUSED_OBJECT"
+      ],
+      "errors_detail": []
+    },
+    {
+      "file": "fixtures/morph-frames/data/dense.glb",
+      "version": "baseline",
+      "errors": 7,
+      "warnings": 1,
+      "codes": [
+        "MESH_PRIMITIVE_INDEXED_SEMANTIC_CONTINUITY",
+        "BUFFER_VIEW_TARGET_MISSING",
+        "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+        "ANIMATION_SAMPLER_INPUT_ACCESSOR_WITHOUT_BOUNDS",
+        "NODE_SKINNED_MESH_LOCAL_TRANSFORMS"
+      ],
+      "errors_detail": [
+        {
+          "code": "MESH_PRIMITIVE_INDEXED_SEMANTIC_CONTINUITY",
+          "message": "Indices for indexed attribute semantic 'TEXCOORD' must start with 0 and be continuous. Total expected indices: 8, total provided indices: 4.",
+          "severity": 0,
+          "pointer": "/meshes/0/primitives/0/attributes"
+        },
+        {
+          "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+          "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/pbrMetallicRoughness/baseColorTexture' needs 'TEXCOORD_0' attribute.",
+          "severity": 0,
+          "pointer": "/meshes/0/primitives/0/material"
+        },
+        {
+          "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+          "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/pbrMetallicRoughness/metallicRoughnessTexture' needs 'TEXCOORD_7' attribute.",
+          "severity": 0,
+          "pointer": "/meshes/0/primitives/0/material"
+        },
+        {
+          "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+          "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/normalTexture' needs 'TEXCOORD_1' attribute.",
+          "severity": 0,
+          "pointer": "/meshes/0/primitives/0/material"
+        },
+        {
+          "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+          "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/occlusionTexture' needs 'TEXCOORD_2' attribute.",
+          "severity": 0,
+          "pointer": "/meshes/0/primitives/0/material"
+        },
+        {
+          "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+          "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/emissiveTexture' needs 'TEXCOORD_1' attribute.",
+          "severity": 0,
+          "pointer": "/meshes/0/primitives/0/material"
+        },
+        {
+          "code": "ANIMATION_SAMPLER_INPUT_ACCESSOR_WITHOUT_BOUNDS",
+          "message": "accessor.min and accessor.max must be defined for animation input accessor.",
+          "severity": 0,
+          "pointer": "/animations/0/samplers/0/input"
+        }
+      ]
+    },
+    {
+      "file": "fixtures/morph-frames/data/dense.glb",
+      "version": "candidate",
+      "errors": 1,
+      "warnings": 1,
+      "codes": [
+        "BUFFER_VIEW_TARGET_MISSING",
+        "UNUSED_OBJECT",
+        "ANIMATION_SAMPLER_INPUT_ACCESSOR_WITHOUT_BOUNDS",
+        "NODE_SKINNED_MESH_LOCAL_TRANSFORMS"
+      ],
+      "errors_detail": [
+        {
+          "code": "ANIMATION_SAMPLER_INPUT_ACCESSOR_WITHOUT_BOUNDS",
+          "message": "accessor.min and accessor.max must be defined for animation input accessor.",
+          "severity": 0,
+          "pointer": "/animations/0/samplers/0/input"
+        }
+      ]
+    },
+    {
+      "file": "fixtures/morph-frames/data/sparse.glb",
+      "version": "baseline",
+      "errors": 7,
+      "warnings": 1,
+      "codes": [
+        "MESH_PRIMITIVE_INDEXED_SEMANTIC_CONTINUITY",
+        "BUFFER_VIEW_TARGET_MISSING",
+        "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+        "ANIMATION_SAMPLER_INPUT_ACCESSOR_WITHOUT_BOUNDS",
+        "NODE_SKINNED_MESH_LOCAL_TRANSFORMS",
+        "UNUSED_OBJECT"
+      ],
+      "errors_detail": [
+        {
+          "code": "MESH_PRIMITIVE_INDEXED_SEMANTIC_CONTINUITY",
+          "message": "Indices for indexed attribute semantic 'TEXCOORD' must start with 0 and be continuous. Total expected indices: 8, total provided indices: 4.",
+          "severity": 0,
+          "pointer": "/meshes/0/primitives/0/attributes"
+        },
+        {
+          "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+          "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/pbrMetallicRoughness/baseColorTexture' needs 'TEXCOORD_0' attribute.",
+          "severity": 0,
+          "pointer": "/meshes/0/primitives/0/material"
+        },
+        {
+          "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+          "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/pbrMetallicRoughness/metallicRoughnessTexture' needs 'TEXCOORD_7' attribute.",
+          "severity": 0,
+          "pointer": "/meshes/0/primitives/0/material"
+        },
+        {
+          "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+          "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/normalTexture' needs 'TEXCOORD_1' attribute.",
+          "severity": 0,
+          "pointer": "/meshes/0/primitives/0/material"
+        },
+        {
+          "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+          "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/occlusionTexture' needs 'TEXCOORD_2' attribute.",
+          "severity": 0,
+          "pointer": "/meshes/0/primitives/0/material"
+        },
+        {
+          "code": "MESH_PRIMITIVE_TOO_FEW_TEXCOORDS",
+          "message": "Material is incompatible with mesh primitive: Texture binding '/materials/0/emissiveTexture' needs 'TEXCOORD_1' attribute.",
+          "severity": 0,
+          "pointer": "/meshes/0/primitives/0/material"
+        },
+        {
+          "code": "ANIMATION_SAMPLER_INPUT_ACCESSOR_WITHOUT_BOUNDS",
+          "message": "accessor.min and accessor.max must be defined for animation input accessor.",
+          "severity": 0,
+          "pointer": "/animations/0/samplers/0/input"
+        }
+      ]
+    },
+    {
+      "file": "fixtures/morph-frames/data/sparse.glb",
+      "version": "candidate",
+      "errors": 1,
+      "warnings": 1,
+      "codes": [
+        "BUFFER_VIEW_TARGET_MISSING",
+        "UNUSED_OBJECT",
+        "ANIMATION_SAMPLER_INPUT_ACCESSOR_WITHOUT_BOUNDS",
+        "NODE_SKINNED_MESH_LOCAL_TRANSFORMS"
+      ],
+      "errors_detail": [
+        {
+          "code": "ANIMATION_SAMPLER_INPUT_ACCESSOR_WITHOUT_BOUNDS",
+          "message": "accessor.min and accessor.max must be defined for animation input accessor.",
+          "severity": 0,
+          "pointer": "/animations/0/samplers/0/input"
+        }
+      ]
+    }
+  ]
+}

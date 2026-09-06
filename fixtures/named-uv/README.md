@@ -26,3 +26,9 @@ emission, and test spatial alpha coverage.
 The fixture is an analytic input, not a golden rendering. Core tests constrain
 samples and transfer numerically; CPU/Metal and browser acceptance compare renders,
 persistence, invalid/stale/cancelled operations and resource limits.
+
+Source-conformance correction: UV3 through UV6 explicitly alias the existing
+constant UV7 accessor, so all eight set indices are consecutive. Binary geometry,
+image and animation payloads are unchanged. The morph source additionally declares
+its unchanged [0,1] animation-input bounds. See
+[the source validation contract](../../docs/gltf_source_conformance.md).

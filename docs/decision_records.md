@@ -280,3 +280,19 @@ separate deformation accuracy from the existing binary16 GPU texture profile.
 **Revisit trigger:** Morph UV/colors, other skinning modes, reconstructed smooth
 frames, or larger imported offset profiles require new numerical, resource and
 recovery evidence. General animated source export remains a separate gate.
+
+## ADR-022 — Independent source conformance complements engine oracles
+
+**Decision:** Validate indexed attribute continuity and animation-input bounds in
+Rust admission. Correct original fixture metadata while preserving every binary
+geometry/image/animation payload and analytical oracle. Retain source-scoped
+identity changes rather than forcing old IDs onto different source bytes.
+
+**Integration boundary:** The [source-conformance contract](gltf_source_conformance.md)
+distinguishes numerical/API acceptance from format validity. A pinned official
+Khronos validator runs only as a development oracle, never a computational product
+dependency. Reports retain warnings and baseline failures; corrected-source images,
+depth and normals must match, while source-derived IDs/receipt hashes may change.
+
+**Revisit trigger:** Broader source adapters require independent validity checks in
+addition to typed negative, resource, persistence and rendering evidence.

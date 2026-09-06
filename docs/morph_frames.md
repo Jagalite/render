@@ -56,3 +56,7 @@ reconstruction for missing normals remain separate profiles. M09 stays deferred.
 
 [Acceptance evidence](../evidence/morph-frames/README.md) records complete workflows,
 resource use, dependency review, numeric oracles and prior-profile identity.
+
+Animation input accessors must declare scalar min/max matching decoded endpoint
+times. The [source-conformance correction](gltf_source_conformance.md) records
+independent validation of fixture metadata and unchanged binary payloads.

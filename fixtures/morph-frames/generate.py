@@ -26,7 +26,7 @@ for pixels in [[255,30,20,0,20,255,30,85,30,20,255,170,240,240,240,255],[204,128
  images.append({'bufferView':view(png(pixels)),'mimeType':'image/png'})
 root={'asset':{'version':'2.0','generator':'Original morph direction analytic fixture'},'scene':0,'scenes':[{'nodes':[0]}],
  'nodes':[{'name':'multi-uv-quad','mesh':0}],
- 'meshes':[{'primitives':[{'attributes':{'POSITION':pos,'NORMAL':normal,'TEXCOORD_0':uv0,'TEXCOORD_1':uv1,'TEXCOORD_2':uv2,'TEXCOORD_7':uv7},'indices':idx,'material':0}]}],
+ 'meshes':[{'primitives':[{'attributes':{'POSITION':pos,'NORMAL':normal,'TEXCOORD_0':uv0,'TEXCOORD_1':uv1,'TEXCOORD_2':uv2,**{f'TEXCOORD_{n}':uv7 for n in range(3,8)}},'indices':idx,'material':0}]}],
  'materials':[{'name':'independent-role-UVs','doubleSided':True,'emissiveFactor':[.4,.4,.4],
   'pbrMetallicRoughness':{'baseColorFactor':[.6,.6,.6,1],'metallicFactor':.5,'roughnessFactor':.8,'baseColorTexture':{'index':0},'metallicRoughnessTexture':{'index':2,'texCoord':7}},
   'emissiveTexture':{'index':0,'texCoord':1},'occlusionTexture':{'index':2,'texCoord':2},'normalTexture':{'index':1,'texCoord':1}}],
@@ -41,7 +41,7 @@ tangent=accessor([[1,0,0,1]]*4,'VEC4',5126,'4f')
 joints=accessor([[0,1,0,0]]*4,'VEC4',5121,'4B')
 weights=accessor([[.5,.5,0,0]]*4,'VEC4',5126,'4f')
 binds=accessor([[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]]*2,'MAT4',5126,'16f')
-times=accessor([[0],[1]],'SCALAR',5126,'f')
+times=accessor([[0],[1]],'SCALAR',5126,'f');accessors[times].update(min=[0],max=[1])
 keys=accessor([[0],[0],[0],[1],[1],[1]],'SCALAR',5126,'f')
 primitive=root['meshes'][0]['primitives'][0]
 primitive['attributes'].update(TANGENT=tangent,JOINTS_0=joints,WEIGHTS_0=weights)

@@ -26,7 +26,7 @@ for pixels in [[255,30,20,0,20,255,30,85,30,20,255,170,240,240,240,255],[204,128
  images.append({'bufferView':view(png(pixels)),'mimeType':'image/png'})
 root={'asset':{'version':'2.0','generator':'Original named UV analytic fixture'},'scene':0,'scenes':[{'nodes':[0]}],
  'nodes':[{'name':'multi-uv-quad','mesh':0}],
- 'meshes':[{'primitives':[{'attributes':{'POSITION':pos,'NORMAL':normal,'TEXCOORD_0':uv0,'TEXCOORD_1':uv1,'TEXCOORD_2':uv2,'TEXCOORD_7':uv7},'indices':idx,'material':0}]}],
+ 'meshes':[{'primitives':[{'attributes':{'POSITION':pos,'NORMAL':normal,'TEXCOORD_0':uv0,'TEXCOORD_1':uv1,'TEXCOORD_2':uv2,**{f'TEXCOORD_{n}':uv7 for n in range(3,8)}},'indices':idx,'material':0}]}],
  'materials':[{'name':'independent-role-UVs','doubleSided':True,'emissiveFactor':[.4,.4,.4],
   'pbrMetallicRoughness':{'baseColorFactor':[.6,.6,.6,1],'metallicFactor':.5,'roughnessFactor':.8,'baseColorTexture':{'index':0},'metallicRoughnessTexture':{'index':2,'texCoord':7}},
   'emissiveTexture':{'index':0,'texCoord':1},'occlusionTexture':{'index':2,'texCoord':2},'normalTexture':{'index':1,'texCoord':1}}],
@@ -35,4 +35,4 @@ root={'asset':{'version':'2.0','generator':'Original named UV analytic fixture'}
 (out/'roles.gltf').write_text(json.dumps(root,indent=2)+'\n');(out/'roles.bin').write_bytes(binary)
 del root['buffers'][0]['uri'];j=json.dumps(root,separators=(',',':')).encode();j+=b' '*(-len(j)%4);b=bytes(binary)+b'\0'*(-len(binary)%4)
 (out/'roles.glb').write_bytes(struct.pack('<III',0x46546c67,2,28+len(j)+len(b))+struct.pack('<II',len(j),0x4e4f534a)+j+struct.pack('<II',len(b),0x004e4942)+b)
-(out/'provenance.json').write_text(json.dumps({'license':'CC0-1.0','authorship':'Original quad, UV arrays and directly encoded PNGs','oracle':'UV0=(x,y), UV1=(y,x), UV2=(1-x,y), UV7=(1/3,2/3). Tangent fallback for UV1 points +Y with negative handedness.', 'artifacts':[{'file':p.name,'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(out.iterdir())]},indent=2)+'\n')
+(out/'provenance.json').write_text(json.dumps({'license':'CC0-1.0','authorship':'Original quad, UV arrays and directly encoded PNGs','oracle':'UV0=(x,y), UV1=(y,x), UV2=(1-x,y), UV3 through UV7=(1/3,2/3). Tangent fallback for UV1 points +Y with negative handedness.', 'artifacts':[{'file':p.name,'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(out.iterdir())]},indent=2)+'\n')

@@ -51,7 +51,8 @@
         "evidence/static-pbr/README.md",
         "evidence/sparse-gltf/README.md",
         "evidence/alpha-gltf/README.md",
-        "evidence/named-uv/README.md"
+        "evidence/named-uv/README.md",
+        "evidence/indexed-attributes/README.md"
       ],
       "remaining_scope": "Vertex colors and broader scene inputs remain unsupported; sparse accessors, normalized UV/skin weights and up to eight independent UV sets are supported."
     },
@@ -84,7 +85,8 @@
         "evidence/m06-m08/README.md",
         "evidence/multibounce-pbr/README.md",
         "evidence/alpha-gltf/README.md",
-        "evidence/named-uv/README.md"
+        "evidence/named-uv/README.md",
+        "evidence/indexed-attributes/README.md"
       ],
       "remaining_scope": "Source material extensions and extended GPU scattering remain unsupported; MASK/BLEND imports use the named native/browser Rust CPU profile. Named UV selection applies across render, alpha, displacement and bake consumers."
     },
@@ -117,7 +119,8 @@
         "evidence/animated-gltf/README.md",
         "evidence/gpu-shutter/README.md",
         "evidence/sparse-gltf/README.md",
-        "evidence/morph-frames/README.md"
+        "evidence/morph-frames/README.md",
+        "evidence/indexed-attributes/README.md"
       ],
       "implemented_profile": "native-authored affine-lbs-shutter-v0 and gltf2-animated-pbr-v0 on native/Wasm; gpu-f32-animation-v0 frames and streaming sequences on Metal/WebGPU; gltf2-sparse-uv0-v1 accessor capability; gltf2-morph-frames-v1 POSITION/NORMAL/TANGENT deltas with opt-in authored deformation frames",
       "remaining_scope": "Morph UV/color attributes, extensions, larger source profiles and animated glTF export remain unsupported. Authored normal/tangent directions use the explicit snapshot-v13 affine frame policy."

@@ -1,0 +1,971 @@
+{
+  "baseline": "d107a5f",
+  "unchanged_artifacts": [
+    {
+      "path": "animated-regression/external-frame/frame/image.pfm",
+      "sha256": "8b0858fb48d8e7dfbce22c469bb464704995127fca52f4369ffe2a52c7183e31",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/external-frame/frame/passes.json",
+      "sha256": "8d9b2dbd50c75b60cd6741258bc4dc2328b6d27a3440674396cfaf5c1e93da59",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/external-frame/frame/image.ppm",
+      "sha256": "025e18e60b82e3a5e52cceb3515966f6309849ca5b7c7f7c7127374e47c99db8",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/external-frame/frame/receipt.json",
+      "sha256": "a9ca88d193ff636e3361845d3dbff460171a4ae64953d1292d6f2d6bf2db9923",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000000/image.pfm",
+      "sha256": "d40de9e87b02e3fe75635e1f4e9db044b9b57c802969216ca62e6bc3b2f2c6e8",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000000/passes.json",
+      "sha256": "fd420fc932627a1ee3175677d6d3ef800002563e601b0e2b930f0d8a3d184b7b",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000000/image.ppm",
+      "sha256": "54375dd5b43ddee7571a5c8a9d3043bbf59a6f401e6e6240cc549db756fdffb8",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000000/receipt.json",
+      "sha256": "0471d8ccd1522c48d780c3f3b5056aefab470b7d18d8634a5977022ab1659dc8",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000001/image.pfm",
+      "sha256": "c0da03e7728282ff996f71fcf8bd2fb5d2e414c5ca1ba96edef826285feb90cb",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000001/passes.json",
+      "sha256": "35e70440e5d9876d022a57dd3ddbdd3ecadfb436f8b3790c247316fd6adbd371",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000001/image.ppm",
+      "sha256": "1c470cb77aca0f264f0e6846b4fe6a8aebfd4ecb8100ba82e82afb220d50c610",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000001/receipt.json",
+      "sha256": "6baf6819f8c7a71b52390e846cf3ab45f65b30a96466c1246febaca21f38a9fc",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000004/image.pfm",
+      "sha256": "7529d1186ee5e55b0254b294c3e0d2fb4b83ede93940d8d442bfb9740e288a47",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000004/passes.json",
+      "sha256": "4b10e5968a4be1aaf97cf16e7eeb6aca75f9d5aed878f34a285cc705bb36c8f6",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000004/image.ppm",
+      "sha256": "5a7b97a6e53a93a02ef0cffd5c90a8dcac0d3cebbb1a3977d057545567a8e6b3",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000004/receipt.json",
+      "sha256": "01c0681dfed9ebe83726389e3f8030c33318f6a156ef24b2756603639bcaa37a",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000003/image.pfm",
+      "sha256": "85de156f16a09a3ad0a46edbca1703519706ee75da3f8037410b392ae82420cd",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000003/passes.json",
+      "sha256": "12763075d63ee65bd02c9f03aa88a7b81cfef7413b5e840d57e87fffb9593636",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000003/image.ppm",
+      "sha256": "cec49e762b1d054c6ccebe748936cbcd93e6cd4399eaeba09a6e3d372580bc39",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000003/receipt.json",
+      "sha256": "676f6a59295ef88e8c9e64efe9bf248bd75908e8d7e9eb8b1edffe5a5cf1ef78",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000002/image.pfm",
+      "sha256": "2e103f0574052f2e8e702c83bcaccf98cbb8f02ad9d5e490634392a7cd79e9e1",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000002/passes.json",
+      "sha256": "8c4efdf7cd4822cbdcebc352aa4bc238471d341ce07279cff4c77d47c1153316",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000002/image.ppm",
+      "sha256": "79fbb9b65fb6a46b047974a90eb73c2304643194bacf50f80ba632a6e5372fd7",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000002/receipt.json",
+      "sha256": "3e350f6438928ba1cd59777170ca0803ff4cc8f4c5cee967a660957a0c567cfa",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/restored-frame/frame/image.pfm",
+      "sha256": "2e103f0574052f2e8e702c83bcaccf98cbb8f02ad9d5e490634392a7cd79e9e1",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/restored-frame/frame/passes.json",
+      "sha256": "8c4efdf7cd4822cbdcebc352aa4bc238471d341ce07279cff4c77d47c1153316",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/restored-frame/frame/image.ppm",
+      "sha256": "79fbb9b65fb6a46b047974a90eb73c2304643194bacf50f80ba632a6e5372fd7",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/restored-frame/frame/receipt.json",
+      "sha256": "3e350f6438928ba1cd59777170ca0803ff4cc8f4c5cee967a660957a0c567cfa",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/frame/frame/image.pfm",
+      "sha256": "2e103f0574052f2e8e702c83bcaccf98cbb8f02ad9d5e490634392a7cd79e9e1",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/frame/frame/passes.json",
+      "sha256": "8c4efdf7cd4822cbdcebc352aa4bc238471d341ce07279cff4c77d47c1153316",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/frame/frame/image.ppm",
+      "sha256": "79fbb9b65fb6a46b047974a90eb73c2304643194bacf50f80ba632a6e5372fd7",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/frame/frame/receipt.json",
+      "sha256": "3e350f6438928ba1cd59777170ca0803ff4cc8f4c5cee967a660957a0c567cfa",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/default/image/image.pfm",
+      "sha256": "00c99524bb9c71c18f1560c562be3993d415536cc598d4d29aad2c84569e4714",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/default/image/passes.json",
+      "sha256": "fd420fc932627a1ee3175677d6d3ef800002563e601b0e2b930f0d8a3d184b7b",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/default/image/image.ppm",
+      "sha256": "2faa400f435cce23611f2ed040d6ae70a3e9944751dcdb9f1950e97a53ebef62",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/default/image/receipt.json",
+      "sha256": "4dc48e2cf87ef1d54922b77af4514876a7483e0f7bb1197f978de542a8ccad6f",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/cpu/image/image.pfm",
+      "sha256": "62362bcf50fb5a05ec851ce4f8ef3940e9e7a33f88e58e5d1d77b433a4e572dd",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/cpu/image/passes.json",
+      "sha256": "8c4efdf7cd4822cbdcebc352aa4bc238471d341ce07279cff4c77d47c1153316",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/cpu/image/image.ppm",
+      "sha256": "f3e73c97f7c789c7d73869839dfc301a10bb7ec8c6ff92593487ed68c4a85d06",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/cpu/image/receipt.json",
+      "sha256": "6f63df145c4f5673670318295cadace8025bdf06504c40e5946f8379ac4c8481",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/gpu/image/image.pfm",
+      "sha256": "9f221b49f754f04dd0547d8c161712ad837ee27c039ed7df54cc759f6ef48987",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/gpu/image/passes.json",
+      "sha256": "75f38ba90affd4a66966a5a0f7039734dbae91e1e055e3d93979adac6eebed15",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/gpu/image/image.ppm",
+      "sha256": "f3e73c97f7c789c7d73869839dfc301a10bb7ec8c6ff92593487ed68c4a85d06",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/gpu/image/receipt.json",
+      "sha256": "3912fd448cbdea5c4dd989699823e64e4b5814525aebec5b62bf324661624d5f",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/cpu-frame/frame/image.pfm",
+      "sha256": "662230a6b282c6d7f405de29b3c76a2c7af49d980d16e57bf341ec1d83b3e84e",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/cpu-frame/frame/passes.json",
+      "sha256": "8c4efdf7cd4822cbdcebc352aa4bc238471d341ce07279cff4c77d47c1153316",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/cpu-frame/frame/image.ppm",
+      "sha256": "79fbb9b65fb6a46b047974a90eb73c2304643194bacf50f80ba632a6e5372fd7",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/cpu-frame/frame/receipt.json",
+      "sha256": "3b70b5722eee585ab0d0e2a055ede463b5430f782ff844547f8a78420e9d321c",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/restored-frame/frame/image.pfm",
+      "sha256": "0fe963717f72bef1ad108af63a232881cdbd6b6c03ec53937fc76d51e902a350",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/restored-frame/frame/passes.json",
+      "sha256": "75f38ba90affd4a66966a5a0f7039734dbae91e1e055e3d93979adac6eebed15",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/restored-frame/frame/image.ppm",
+      "sha256": "79fbb9b65fb6a46b047974a90eb73c2304643194bacf50f80ba632a6e5372fd7",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/restored-frame/frame/receipt.json",
+      "sha256": "68eff0a2f688983e864f8311e088597c66dd8fc450bbb059ee8310a862284144",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000000/image.pfm",
+      "sha256": "86697f737da5bb34f61ce4f38419a0f028b0b876e55a81b4758141307e24390c",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000000/passes.json",
+      "sha256": "af6a46fe88d1eda0aabf900c43633fb88ffb552a358a6ec30cfe000de88b7828",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000000/image.ppm",
+      "sha256": "54375dd5b43ddee7571a5c8a9d3043bbf59a6f401e6e6240cc549db756fdffb8",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000000/receipt.json",
+      "sha256": "5e279d3aa009cc0146be326f7e041d2cc4361d2464be175e1f58f68d91473f8c",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000001/image.pfm",
+      "sha256": "d87124f61af4f4138c11f7a7b2fc394f8b4c6647f7ca3e9f81fecb668f76d18e",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000001/passes.json",
+      "sha256": "5dc17e761a05651c31cdc760d9c7dda142a642d1e634490d57f45a9c7e49dfe4",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000001/image.ppm",
+      "sha256": "1c470cb77aca0f264f0e6846b4fe6a8aebfd4ecb8100ba82e82afb220d50c610",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000001/receipt.json",
+      "sha256": "9e0688cca661489a45c69a90c3171cfce6d5ca24e79f66bd281a9e2dcda113fe",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000004/image.pfm",
+      "sha256": "c2cd8d26101624e6559207b7b7b936e598c59ee10a01b809436f91c38b6ce834",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000004/passes.json",
+      "sha256": "83209114982327f083bf2be7e53e14020d40410c6ddce404331680752d60fc94",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000004/image.ppm",
+      "sha256": "5a7b97a6e53a93a02ef0cffd5c90a8dcac0d3cebbb1a3977d057545567a8e6b3",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000004/receipt.json",
+      "sha256": "b4728d9bb794f6749848517d54b977f9417841faa7d984ba87572d05f71f555f",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000003/image.pfm",
+      "sha256": "6cd18cdbad72f36368b4a6582ba320b04537f43131f2d39e11cf78af271d66de",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000003/passes.json",
+      "sha256": "d2ff2be72823ba9a6567fc4295e55e0762ef92cf43f2b6e0249a15db2680d6ec",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000003/image.ppm",
+      "sha256": "cec49e762b1d054c6ccebe748936cbcd93e6cd4399eaeba09a6e3d372580bc39",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000003/receipt.json",
+      "sha256": "69051e5663d34e46f4b43c03deb536ac7f32242374513a83a3a2be3e891dd542",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000002/image.pfm",
+      "sha256": "0fe963717f72bef1ad108af63a232881cdbd6b6c03ec53937fc76d51e902a350",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000002/passes.json",
+      "sha256": "75f38ba90affd4a66966a5a0f7039734dbae91e1e055e3d93979adac6eebed15",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000002/image.ppm",
+      "sha256": "79fbb9b65fb6a46b047974a90eb73c2304643194bacf50f80ba632a6e5372fd7",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-sequence/frame-000002/receipt.json",
+      "sha256": "68eff0a2f688983e864f8311e088597c66dd8fc450bbb059ee8310a862284144",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/partial/frame-000000/image.pfm",
+      "sha256": "86697f737da5bb34f61ce4f38419a0f028b0b876e55a81b4758141307e24390c",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/partial/frame-000000/passes.json",
+      "sha256": "af6a46fe88d1eda0aabf900c43633fb88ffb552a358a6ec30cfe000de88b7828",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/partial/frame-000000/image.ppm",
+      "sha256": "54375dd5b43ddee7571a5c8a9d3043bbf59a6f401e6e6240cc549db756fdffb8",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/partial/frame-000000/receipt.json",
+      "sha256": "5e279d3aa009cc0146be326f7e041d2cc4361d2464be175e1f58f68d91473f8c",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-frame/frame/image.pfm",
+      "sha256": "0fe963717f72bef1ad108af63a232881cdbd6b6c03ec53937fc76d51e902a350",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-frame/frame/passes.json",
+      "sha256": "75f38ba90affd4a66966a5a0f7039734dbae91e1e055e3d93979adac6eebed15",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-frame/frame/image.ppm",
+      "sha256": "79fbb9b65fb6a46b047974a90eb73c2304643194bacf50f80ba632a6e5372fd7",
+      "byte_identical": true
+    },
+    {
+      "path": "shutter-regression/gpu-frame/frame/receipt.json",
+      "sha256": "68eff0a2f688983e864f8311e088597c66dd8fc450bbb059ee8310a862284144",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-zero-u16-restored-frame/frame/image.pfm",
+      "sha256": "da8a0d5dd379fe704846f1b34219cd2781cd7379acc76186b81d9ce14cb869ed",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-zero-u16-restored-frame/frame/passes.json",
+      "sha256": "7b55fd0abf2fc94f70079d1fd3980bec3de5525639bcf915b1d7ec9102ad5205",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-zero-u16-restored-frame/frame/image.ppm",
+      "sha256": "87da8b3d293b1a68594350be7d3f4c22d49d2b4b7524dd3aae0cdd949cfb4f53",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-zero-u16-restored-frame/frame/receipt.json",
+      "sha256": "1776eabcc2b3767c3089cd79019009298fece6916dacdc24bbb9a2610d64e156",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-base-u8-cpu/frame/image.pfm",
+      "sha256": "bbfccb2e4997f7b0dfa8cb36f31b6a7692d9ebed81a923b55b38f6f09531aa58",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-base-u8-cpu/frame/passes.json",
+      "sha256": "fc690d6536a4161476f4b6bc74123438c7d7f84d167bf9a21f63021a53fb786c",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-base-u8-cpu/frame/image.ppm",
+      "sha256": "8a66a7f6f6865e95727f4076ef7ff10ca6796ffa6d2ccc9c580dab16c18eff55",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-base-u8-cpu/frame/receipt.json",
+      "sha256": "484ccf701a7ca3b7f1e920f704a0b00b1c44bc22f2a1218c4b5c2c07bc236911",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-base-u8-gpu/frame/image.pfm",
+      "sha256": "da8a0d5dd379fe704846f1b34219cd2781cd7379acc76186b81d9ce14cb869ed",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-base-u8-gpu/frame/passes.json",
+      "sha256": "a0a84444e1ff74f5673b535b06d288abec33ae9eed4c96ed6b36f2348dba4918",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-base-u8-gpu/frame/image.ppm",
+      "sha256": "87da8b3d293b1a68594350be7d3f4c22d49d2b4b7524dd3aae0cdd949cfb4f53",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-base-u8-gpu/frame/receipt.json",
+      "sha256": "9176b801995f333a4c91d22974f658d8fe3a3d9ea7aaf2b3bc7748a6240091dc",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/dense-restored-frame/frame/image.pfm",
+      "sha256": "da8a0d5dd379fe704846f1b34219cd2781cd7379acc76186b81d9ce14cb869ed",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/dense-restored-frame/frame/passes.json",
+      "sha256": "d509f24a36abdc1a8d4ba253baf8e8fc1cb59a58324aa93b4160b6a3f5deb02b",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/dense-restored-frame/frame/image.ppm",
+      "sha256": "87da8b3d293b1a68594350be7d3f4c22d49d2b4b7524dd3aae0cdd949cfb4f53",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/dense-restored-frame/frame/receipt.json",
+      "sha256": "be576a982f8104705b1adc9c9cccab750374f26bbfd9e0d367aef1e8d9f9987c",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/dense-gpu/frame/image.pfm",
+      "sha256": "da8a0d5dd379fe704846f1b34219cd2781cd7379acc76186b81d9ce14cb869ed",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/dense-gpu/frame/passes.json",
+      "sha256": "d509f24a36abdc1a8d4ba253baf8e8fc1cb59a58324aa93b4160b6a3f5deb02b",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/dense-gpu/frame/image.ppm",
+      "sha256": "87da8b3d293b1a68594350be7d3f4c22d49d2b4b7524dd3aae0cdd949cfb4f53",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/dense-gpu/frame/receipt.json",
+      "sha256": "be576a982f8104705b1adc9c9cccab750374f26bbfd9e0d367aef1e8d9f9987c",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-zero-u16-gpu/frame/image.pfm",
+      "sha256": "da8a0d5dd379fe704846f1b34219cd2781cd7379acc76186b81d9ce14cb869ed",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-zero-u16-gpu/frame/passes.json",
+      "sha256": "7b55fd0abf2fc94f70079d1fd3980bec3de5525639bcf915b1d7ec9102ad5205",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-zero-u16-gpu/frame/image.ppm",
+      "sha256": "87da8b3d293b1a68594350be7d3f4c22d49d2b4b7524dd3aae0cdd949cfb4f53",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-zero-u16-gpu/frame/receipt.json",
+      "sha256": "1776eabcc2b3767c3089cd79019009298fece6916dacdc24bbb9a2610d64e156",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/dense-cpu/frame/image.pfm",
+      "sha256": "bbfccb2e4997f7b0dfa8cb36f31b6a7692d9ebed81a923b55b38f6f09531aa58",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/dense-cpu/frame/passes.json",
+      "sha256": "f4ab2cbb8d0d7039e94eb72cf3174d63f5cee0397305d37bdcd47be9bf9116f0",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/dense-cpu/frame/image.ppm",
+      "sha256": "8a66a7f6f6865e95727f4076ef7ff10ca6796ffa6d2ccc9c580dab16c18eff55",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/dense-cpu/frame/receipt.json",
+      "sha256": "993f72c3623097842eca94de284b302157395421a4ce0878d4065430bf00629b",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-zero-u16-cpu/frame/image.pfm",
+      "sha256": "bbfccb2e4997f7b0dfa8cb36f31b6a7692d9ebed81a923b55b38f6f09531aa58",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-zero-u16-cpu/frame/passes.json",
+      "sha256": "91a041d64f52a2f0ec5ce03a6c259dc8b23d0434ac96115e3868b1b55948a1c9",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-zero-u16-cpu/frame/image.ppm",
+      "sha256": "8a66a7f6f6865e95727f4076ef7ff10ca6796ffa6d2ccc9c580dab16c18eff55",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-zero-u16-cpu/frame/receipt.json",
+      "sha256": "30e1cfde591bead36351621fef73e3a61717962c86a190d4446c9b144c5e02f2",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-base-u8-restored-frame/frame/image.pfm",
+      "sha256": "da8a0d5dd379fe704846f1b34219cd2781cd7379acc76186b81d9ce14cb869ed",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-base-u8-restored-frame/frame/passes.json",
+      "sha256": "a0a84444e1ff74f5673b535b06d288abec33ae9eed4c96ed6b36f2348dba4918",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-base-u8-restored-frame/frame/image.ppm",
+      "sha256": "87da8b3d293b1a68594350be7d3f4c22d49d2b4b7524dd3aae0cdd949cfb4f53",
+      "byte_identical": true
+    },
+    {
+      "path": "sparse-regression/sparse-base-u8-restored-frame/frame/receipt.json",
+      "sha256": "9176b801995f333a4c91d22974f658d8fe3a3d9ea7aaf2b3bc7748a6240091dc",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/mask-restored-image/image/image.pfm",
+      "sha256": "ddd90238b9772a038a717db6b6f1be21ae2e7338d9872060055653010d1f0bd1",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/mask-restored-image/image/passes.json",
+      "sha256": "c20462957b32fc8e963d56e95d429c43d636ed3cc01821d6f2325244d7bf0bb5",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/mask-restored-image/image/image.ppm",
+      "sha256": "750cc0ad7b3149d00ecc2ab669151dae54bd2a114d80af20984dac4dc9c161bc",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/mask-restored-image/image/receipt.json",
+      "sha256": "f0c090b298836964e2274cc28d6f2bf93f732f47362855d4d8265a70d3db3d7e",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/mask-cpu/image/image.pfm",
+      "sha256": "ddd90238b9772a038a717db6b6f1be21ae2e7338d9872060055653010d1f0bd1",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/mask-cpu/image/passes.json",
+      "sha256": "c20462957b32fc8e963d56e95d429c43d636ed3cc01821d6f2325244d7bf0bb5",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/mask-cpu/image/image.ppm",
+      "sha256": "750cc0ad7b3149d00ecc2ab669151dae54bd2a114d80af20984dac4dc9c161bc",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/mask-cpu/image/receipt.json",
+      "sha256": "f0c090b298836964e2274cc28d6f2bf93f732f47362855d4d8265a70d3db3d7e",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/opaque-restored-image/image/image.pfm",
+      "sha256": "d76abdadab7244aaf46daed4a47d06b7cabae7a4f1c3c346bd8100eb2a38bfc6",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/opaque-restored-image/image/passes.json",
+      "sha256": "e787f1b63f812116f653a9c25bdb390f03978e128b05757343b149ede2e0bd02",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/opaque-restored-image/image/image.ppm",
+      "sha256": "e2b39caa772df4329f20bd26106f188dc9a711f50111ea0eaaee90e0e578f4fa",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/opaque-restored-image/image/receipt.json",
+      "sha256": "3098e78a7b8fe952c4e6b53f63eda027ae5e7fb7b7ad2eaac71183937a70269b",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/blend-cpu/image/image.pfm",
+      "sha256": "0a4186e6c4de09681deb578c14868e4ddec75d25cfd4baface53455a6788f493",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/blend-cpu/image/passes.json",
+      "sha256": "d444c87dd76248fc85ebe85c55f2c450fc9550968ec282c1489787b82d4423fd",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/blend-cpu/image/image.ppm",
+      "sha256": "13646c063c608a5ee04aff0132272e3d89f7a4e74a6f133e27b6b1039009f53e",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/blend-cpu/image/receipt.json",
+      "sha256": "f7c1872a445249a341379859e3142ac7d6e243e6f653443628a09fb0ce1aa2ea",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/opaque-cpu/image/image.pfm",
+      "sha256": "d76abdadab7244aaf46daed4a47d06b7cabae7a4f1c3c346bd8100eb2a38bfc6",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/opaque-cpu/image/passes.json",
+      "sha256": "e787f1b63f812116f653a9c25bdb390f03978e128b05757343b149ede2e0bd02",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/opaque-cpu/image/image.ppm",
+      "sha256": "e2b39caa772df4329f20bd26106f188dc9a711f50111ea0eaaee90e0e578f4fa",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/opaque-cpu/image/receipt.json",
+      "sha256": "3098e78a7b8fe952c4e6b53f63eda027ae5e7fb7b7ad2eaac71183937a70269b",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/blend-restored-image/image/image.pfm",
+      "sha256": "0a4186e6c4de09681deb578c14868e4ddec75d25cfd4baface53455a6788f493",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/blend-restored-image/image/passes.json",
+      "sha256": "d444c87dd76248fc85ebe85c55f2c450fc9550968ec282c1489787b82d4423fd",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/blend-restored-image/image/image.ppm",
+      "sha256": "13646c063c608a5ee04aff0132272e3d89f7a4e74a6f133e27b6b1039009f53e",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/blend-restored-image/image/receipt.json",
+      "sha256": "f7c1872a445249a341379859e3142ac7d6e243e6f653443628a09fb0ce1aa2ea",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/opaque-gpu/image/image.pfm",
+      "sha256": "d76abdadab7244aaf46daed4a47d06b7cabae7a4f1c3c346bd8100eb2a38bfc6",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/opaque-gpu/image/passes.json",
+      "sha256": "e787f1b63f812116f653a9c25bdb390f03978e128b05757343b149ede2e0bd02",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/opaque-gpu/image/image.ppm",
+      "sha256": "e2b39caa772df4329f20bd26106f188dc9a711f50111ea0eaaee90e0e578f4fa",
+      "byte_identical": true
+    },
+    {
+      "path": "alpha-regression/opaque-gpu/image/receipt.json",
+      "sha256": "fd2ef381545b837ef029d1449ef618f5ad8dd2e0a4364d694091826a80660a24",
+      "byte_identical": true
+    },
+    {
+      "path": "named-uv-regression/roles-gpu/image/image.pfm",
+      "sha256": "42cc30b5041117027cfeca67fab7ff7966552d954f6e4978476f0fefa6f8802f",
+      "byte_identical": true
+    },
+    {
+      "path": "named-uv-regression/roles-gpu/image/image.ppm",
+      "sha256": "c2d219475f67ed53d25a1091929de6a5f3df6c6758c93d1710e1c494e5476b3c",
+      "byte_identical": true
+    },
+    {
+      "path": "named-uv-regression/roles-cpu/image/image.pfm",
+      "sha256": "d5617b924d47f6a89f910bd9d81c67ac367456d40cf5856e8f9960cef0da6e18",
+      "byte_identical": true
+    },
+    {
+      "path": "named-uv-regression/roles-cpu/image/image.ppm",
+      "sha256": "6350f9bf3be9a0610f63e2fc4b958b009fffed2f71e534bcfb156ebb9ddd6514",
+      "byte_identical": true
+    },
+    {
+      "path": "named-uv-regression/roles-restored-image/image/image.pfm",
+      "sha256": "d5617b924d47f6a89f910bd9d81c67ac367456d40cf5856e8f9960cef0da6e18",
+      "byte_identical": true
+    },
+    {
+      "path": "named-uv-regression/roles-restored-image/image/image.ppm",
+      "sha256": "6350f9bf3be9a0610f63e2fc4b958b009fffed2f71e534bcfb156ebb9ddd6514",
+      "byte_identical": true
+    },
+    {
+      "path": "workflow/sparse-restored-frame/frame/image.pfm",
+      "sha256": "fe77aec8554ab73928c85aabe468eb8571b46ea51e2f0282a6b2a7c6afb314e5",
+      "byte_identical": true
+    },
+    {
+      "path": "workflow/sparse-restored-frame/frame/image.ppm",
+      "sha256": "77d3104bf551db5f09ab7310697c16fc9b3b0581dced0ef0916e4aeb8cef89f3",
+      "byte_identical": true
+    },
+    {
+      "path": "workflow/sparse-gpu/frame/image.pfm",
+      "sha256": "fe77aec8554ab73928c85aabe468eb8571b46ea51e2f0282a6b2a7c6afb314e5",
+      "byte_identical": true
+    },
+    {
+      "path": "workflow/sparse-gpu/frame/image.ppm",
+      "sha256": "77d3104bf551db5f09ab7310697c16fc9b3b0581dced0ef0916e4aeb8cef89f3",
+      "byte_identical": true
+    },
+    {
+      "path": "workflow/sparse-cpu/frame/image.pfm",
+      "sha256": "a229af66e27367851fb7c81d739f5b5d637b2d0e17546d9f9ca70041998bd5d7",
+      "byte_identical": true
+    },
+    {
+      "path": "workflow/sparse-cpu/frame/image.ppm",
+      "sha256": "a3c7382b5e8532af85831226536659f1f1e776aab9519a4d1a35e6659da84bc2",
+      "byte_identical": true
+    },
+    {
+      "path": "workflow/dense-restored-frame/frame/image.pfm",
+      "sha256": "fe77aec8554ab73928c85aabe468eb8571b46ea51e2f0282a6b2a7c6afb314e5",
+      "byte_identical": true
+    },
+    {
+      "path": "workflow/dense-restored-frame/frame/image.ppm",
+      "sha256": "77d3104bf551db5f09ab7310697c16fc9b3b0581dced0ef0916e4aeb8cef89f3",
+      "byte_identical": true
+    },
+    {
+      "path": "workflow/dense-gpu/frame/image.pfm",
+      "sha256": "fe77aec8554ab73928c85aabe468eb8571b46ea51e2f0282a6b2a7c6afb314e5",
+      "byte_identical": true
+    },
+    {
+      "path": "workflow/dense-gpu/frame/image.ppm",
+      "sha256": "77d3104bf551db5f09ab7310697c16fc9b3b0581dced0ef0916e4aeb8cef89f3",
+      "byte_identical": true
+    },
+    {
+      "path": "workflow/dense-cpu/frame/image.pfm",
+      "sha256": "a229af66e27367851fb7c81d739f5b5d637b2d0e17546d9f9ca70041998bd5d7",
+      "byte_identical": true
+    },
+    {
+      "path": "workflow/dense-cpu/frame/image.ppm",
+      "sha256": "a3c7382b5e8532af85831226536659f1f1e776aab9519a4d1a35e6659da84bc2",
+      "byte_identical": true
+    }
+  ],
+  "corrected_source_artifacts": [
+    {
+      "path": "named-uv-regression/roles-gpu/image/passes.json",
+      "sha256": "57f6c210f6b5d855634cbe68cee51aa9aca07550fc08f23fc1ead46eb58c87a5",
+      "byte_identical": false,
+      "color_depth_normals_unchanged": true,
+      "source_scoped_id_mapping": {
+        "b8556100438c82a089cd1f33eae5c05d": "0592f7cd53aa3da7c292a2c12ac682d5"
+      }
+    },
+    {
+      "path": "named-uv-regression/roles-gpu/image/receipt.json",
+      "sha256": "ae2c8cc4c3db7d54b25e68583994cd995d202944769a77ebadfd6b2db678ba5f",
+      "byte_identical": false,
+      "changed_fields": [
+        "revision"
+      ]
+    },
+    {
+      "path": "named-uv-regression/roles-cpu/image/passes.json",
+      "sha256": "a2721406e69b61bf2ba418307c00225b69cad1306aeffd874a255d5d8371f8e2",
+      "byte_identical": false,
+      "color_depth_normals_unchanged": true,
+      "source_scoped_id_mapping": {
+        "b8556100438c82a089cd1f33eae5c05d": "0592f7cd53aa3da7c292a2c12ac682d5"
+      }
+    },
+    {
+      "path": "named-uv-regression/roles-cpu/image/receipt.json",
+      "sha256": "c831d18c070e7f8ba9e640be96cbf91df59fc6dcaeed092fa86486945e13efe5",
+      "byte_identical": false,
+      "changed_fields": [
+        "revision"
+      ]
+    },
+    {
+      "path": "named-uv-regression/roles-restored-image/image/passes.json",
+      "sha256": "a2721406e69b61bf2ba418307c00225b69cad1306aeffd874a255d5d8371f8e2",
+      "byte_identical": false,
+      "color_depth_normals_unchanged": true,
+      "source_scoped_id_mapping": {
+        "b8556100438c82a089cd1f33eae5c05d": "0592f7cd53aa3da7c292a2c12ac682d5"
+      }
+    },
+    {
+      "path": "named-uv-regression/roles-restored-image/image/receipt.json",
+      "sha256": "c831d18c070e7f8ba9e640be96cbf91df59fc6dcaeed092fa86486945e13efe5",
+      "byte_identical": false,
+      "changed_fields": [
+        "revision"
+      ]
+    },
+    {
+      "path": "workflow/sparse-restored-frame/frame/passes.json",
+      "sha256": "518b4fe618e00ad636a19b0cf4a2a96e9a93c3f3ae2ab87a613e014fe65479fa",
+      "byte_identical": false,
+      "color_depth_normals_unchanged": true,
+      "source_scoped_id_mapping": {
+        "98a849a57b43eb65c1e3d31256da55b1": "b43d17788260305e4471801a69fa1ba5"
+      }
+    },
+    {
+      "path": "workflow/sparse-restored-frame/frame/receipt.json",
+      "sha256": "231c9c33dbf15628862daf9f5a7a3f3ae6d2864862168aa95b2d779bb0c6fed7",
+      "byte_identical": false,
+      "changed_fields": [
+        "revision"
+      ]
+    },
+    {
+      "path": "workflow/sparse-gpu/frame/passes.json",
+      "sha256": "518b4fe618e00ad636a19b0cf4a2a96e9a93c3f3ae2ab87a613e014fe65479fa",
+      "byte_identical": false,
+      "color_depth_normals_unchanged": true,
+      "source_scoped_id_mapping": {
+        "98a849a57b43eb65c1e3d31256da55b1": "b43d17788260305e4471801a69fa1ba5"
+      }
+    },
+    {
+      "path": "workflow/sparse-gpu/frame/receipt.json",
+      "sha256": "231c9c33dbf15628862daf9f5a7a3f3ae6d2864862168aa95b2d779bb0c6fed7",
+      "byte_identical": false,
+      "changed_fields": [
+        "revision"
+      ]
+    },
+    {
+      "path": "workflow/sparse-cpu/frame/passes.json",
+      "sha256": "b54b4e040e78527d7c61e6e3b76deb1ec1f48892062b4a59d16d88242f7d7d7f",
+      "byte_identical": false,
+      "color_depth_normals_unchanged": true,
+      "source_scoped_id_mapping": {
+        "98a849a57b43eb65c1e3d31256da55b1": "b43d17788260305e4471801a69fa1ba5"
+      }
+    },
+    {
+      "path": "workflow/sparse-cpu/frame/receipt.json",
+      "sha256": "9f2113dff5375ae6b6d208e57b58e87f295b5b3fb8c57a5369b1a31a346165c7",
+      "byte_identical": false,
+      "changed_fields": [
+        "revision"
+      ]
+    },
+    {
+      "path": "workflow/dense-restored-frame/frame/passes.json",
+      "sha256": "2f1a1c34f4499ddadd53ab979902131445af9b204dbc91e1ea17c6a553ec40ba",
+      "byte_identical": false,
+      "color_depth_normals_unchanged": true,
+      "source_scoped_id_mapping": {
+        "153e0154d4641eeef3c5f42776a22d08": "d2187450259491a761f34a83e1a3e628"
+      }
+    },
+    {
+      "path": "workflow/dense-restored-frame/frame/receipt.json",
+      "sha256": "facd3ecb26f91b3d9985311990bccf1e0e67b51b72251ac3e897f378e008d14d",
+      "byte_identical": false,
+      "changed_fields": [
+        "revision"
+      ]
+    },
+    {
+      "path": "workflow/dense-gpu/frame/passes.json",
+      "sha256": "2f1a1c34f4499ddadd53ab979902131445af9b204dbc91e1ea17c6a553ec40ba",
+      "byte_identical": false,
+      "color_depth_normals_unchanged": true,
+      "source_scoped_id_mapping": {
+        "153e0154d4641eeef3c5f42776a22d08": "d2187450259491a761f34a83e1a3e628"
+      }
+    },
+    {
+      "path": "workflow/dense-gpu/frame/receipt.json",
+      "sha256": "facd3ecb26f91b3d9985311990bccf1e0e67b51b72251ac3e897f378e008d14d",
+      "byte_identical": false,
+      "changed_fields": [
+        "revision"
+      ]
+    },
+    {
+      "path": "workflow/dense-cpu/frame/passes.json",
+      "sha256": "3ea195378abb2904c6d7321a28c2515256dbb66bd003595361632bca424c1c80",
+      "byte_identical": false,
+      "color_depth_normals_unchanged": true,
+      "source_scoped_id_mapping": {
+        "153e0154d4641eeef3c5f42776a22d08": "d2187450259491a761f34a83e1a3e628"
+      }
+    },
+    {
+      "path": "workflow/dense-cpu/frame/receipt.json",
+      "sha256": "c8f8c71a7884d692bc9b3f1882765bcc1b2126a316f61cf0fa0c0090986678df",
+      "byte_identical": false,
+      "changed_fields": [
+        "revision"
+      ]
+    }
+  ],
+  "policy": "Only source-scoped IDs and dependent receipt revision/output digests may change for the corrected named-UV/morph fixtures; original color/depth/normal values remain exact."
+}

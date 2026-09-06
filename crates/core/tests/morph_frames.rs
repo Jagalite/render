@@ -293,3 +293,24 @@ fn native_corner_direction_offsets_preserve_seam_domain_and_stable_ids() {
         .tangent = None;
     assert_eq!(invalid.validate().unwrap_err().code, "deformation_frame");
 }
+
+#[cfg_attr(target_arch = "wasm32", wasm_bindgen_test::wasm_bindgen_test)]
+#[cfg_attr(not(target_arch = "wasm32"), test)]
+fn animation_input_bounds_are_required_and_match_decoded_endpoints() {
+    for value in [
+        json!(null),
+        json!([]),
+        json!([0.5]),
+        json!([1, 2]),
+        json!(["1"]),
+    ] {
+        let mut v = source();
+        let input = v["animations"][0]["samplers"][0]["input"].as_u64().unwrap() as usize;
+        v["accessors"][input]["max"] = value;
+        assert_eq!(imported(&v, BIN).err().unwrap().code, "gltf_scene");
+    }
+    let mut v = source();
+    let input = v["animations"][0]["samplers"][0]["input"].as_u64().unwrap() as usize;
+    v["accessors"][input].as_object_mut().unwrap().remove("min");
+    assert_eq!(imported(&v, BIN).err().unwrap().code, "gltf_scene");
+}

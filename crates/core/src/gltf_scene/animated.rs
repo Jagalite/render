@@ -552,8 +552,20 @@ pub(super) fn append(
             if input.count > 16384 {
                 return Err(Error::new("budget", "16384 keys per channel"));
             }
-            let times = input
-                .floats::<1>()?
+            let values = input.floats::<1>()?;
+            let description = at(root, "accessors", index(&sampler["input"])?)?;
+            for (name, expected) in [
+                ("min", values[0][0]),
+                ("max", values.last().expect("nonempty accessor")[0]),
+            ] {
+                let bounds = array(description, name)?;
+                if bounds.len() != 1 || number(&bounds[0])? as f32 != expected {
+                    return Err(bad(
+                        "animation input accessor requires exact scalar min/max bounds",
+                    ));
+                }
+            }
+            let times = values
                 .into_iter()
                 .map(|v| seconds(v[0]))
                 .collect::<Result<Vec<_>>>()?;

@@ -40,3 +40,9 @@ visually inspected; closed-form frame math supplies the numerical oracle.
 
 Morph UV/colors, broad animated source export and alternate skinning modes remain
 separate capabilities. M09 remains deferred.
+
+Source-conformance amendment: these historical analytical inputs had nonconsecutive
+UV-set metadata; the morph inputs also lacked animation-input bounds. Native
+numerical/render results above retain their recorded meaning, but source-format
+conformance is superseded by [the correction evidence](../indexed-attributes/README.md).
+All raw historical inputs/reports remain available in their recorded commits.

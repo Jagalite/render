@@ -1,0 +1,27 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "frame",
+    "backend": "gpu",
+    "request": {
+      "revision": "sha256:a0280f22328822394df1999e451f15c3b0c7a62250a7a466680c643862532084",
+      "clip": "9828e5547ba6047cba3ee457c60a76c7",
+      "time": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "shutter": {
+        "open": {
+          "numerator": -1,
+          "denominator": 32
+        },
+        "close": {
+          "numerator": 1,
+          "denominator": 32
+        },
+        "samples": 3
+      }
+    },
+    "output": "/private/tmp/render-vertex-colors-20260906/artifacts/indexed-attributes/run-20260906T072854Z/workflow/dense-restored-frame"
+  }
+}

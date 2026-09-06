@@ -760,6 +760,22 @@ fn import_scene_mode(
             let attributes = p["attributes"]
                 .as_object()
                 .ok_or_else(|| bad("primitive attributes missing"))?;
+            for family in ["TEXCOORD", "COLOR", "JOINTS", "WEIGHTS"] {
+                let prefix = format!("{family}_");
+                for key in attributes.keys().filter(|k| k.starts_with(&prefix)) {
+                    let suffix = &key[prefix.len()..];
+                    let n = suffix
+                        .parse::<usize>()
+                        .map_err(|_| bad("invalid indexed attribute suffix"))?;
+                    if suffix != n.to_string()
+                        || (n > 0 && !attributes.contains_key(&format!("{family}_{}", n - 1)))
+                    {
+                        return Err(bad(
+                            "indexed attribute sets must start at zero and be consecutive without leading zeroes",
+                        ));
+                    }
+                }
+            }
             if attributes.keys().any(|k| {
                 !(["POSITION", "NORMAL", "TEXCOORD_0"].contains(&k.as_str())
                     || (pbr_mode

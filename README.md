@@ -67,3 +67,6 @@ Named UV texture bindings: [profile](docs/named_uv.md),
 
 Normal/tangent morphs and authored skinning frames: [profile](docs/morph_frames.md),
 [fixture](fixtures/morph-frames/README.md), and [validation](evidence/morph-frames/README.md).
+
+Independent glTF source validation and fixture corrections:
+[contract](docs/gltf_source_conformance.md), [evidence](evidence/indexed-attributes/README.md).

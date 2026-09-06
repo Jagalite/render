@@ -62,7 +62,7 @@ try:
         assert inspect(variant+'-unchanged',target)['document_digest']==state['document_digest']
         report['variants'].append({'name':variant,'revision':revision,'cpu_metal_rmse':rmse,'restored_pixels_identical':True})
     target=root/'negative';call('negative-init',{'method':'init','document_id':f'{9900:032x}'},target);state=inspect('negative-empty',target)
-    broken=json.loads((fixture/'roles.gltf').read_text());broken['materials'][0]['emissiveTexture']['texCoord']=3
+    broken=json.loads((fixture/'roles.gltf').read_text());broken['meshes'][0]['primitives'][0]['attributes'].pop('TEXCOORD_7')
     malformed=root/'malformed.gltf';malformed.write_text(json.dumps(broken))
     op={'method':'import','base_revision':state['revision'],'idempotency_key':'nameduv:negative:0001','max_added_bytes':8*1024*1024,'source':{'format':'gltf','path':str(malformed),'buffers':[str(fixture/'roles.bin')],'images':[],'policy':{'allow_approximations':True}},'settings':settings}
     call('malformed',op,target,error='reference');op['source']['path']=str(fixture/'roles.gltf')

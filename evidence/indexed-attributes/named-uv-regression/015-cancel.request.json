@@ -1,0 +1,73 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "import",
+    "base_revision": "sha256:1b3296e513c51ef65b8af9ba2b887a4d1136c25533e9e31a9894a9d96513690e",
+    "idempotency_key": "nameduv:negative:0001",
+    "max_added_bytes": 8388608,
+    "source": {
+      "format": "gltf",
+      "path": "/private/tmp/render-vertex-colors-20260906/fixtures/named-uv/data/roles.gltf",
+      "buffers": [
+        "/private/tmp/render-vertex-colors-20260906/fixtures/named-uv/data/roles.bin"
+      ],
+      "images": [],
+      "policy": {
+        "allow_approximations": true
+      }
+    },
+    "settings": {
+      "width": 32,
+      "height": 16,
+      "samples": 8,
+      "seed": 73,
+      "max_depth": 2,
+      "max_bytes": 16777216,
+      "environment": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "light": {
+        "position": [
+          -2,
+          4,
+          3
+        ],
+        "intensity": [
+          2,
+          2,
+          2
+        ]
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          3
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "vertical_fov_radians": 0.65,
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1,
+          "ymag": 1,
+          "near": 0.1,
+          "far": 5
+        }
+      }
+    }
+  },
+  "limits": {
+    "cancel_file": "/private/tmp/render-vertex-colors-20260906/artifacts/indexed-attributes/run-20260906T072854Z/named-uv-regression/cancel"
+  }
+}

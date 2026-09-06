@@ -5,7 +5,7 @@ working on feasible remaining steps. M09 interactive editor remains deferred.
 Each completed increment requires implementation, native/browser workflow evidence,
 negative/cancellation/stale checks, resource/provenance records and documentation.
 
-Current implementation checkpoint: `246288c` (authored morph frames); full acceptance is in evidence/morph-frames.
+Current completed increment: glTF indexed-attribute and fixture conformance; evidence/indexed-attributes.
 
 | Order | Increment | Status |
 |---|---|---|
@@ -50,3 +50,10 @@ frame/shutter comparisons, 31 CLI requests and dense/sparse Chrome CPU/WebGPU/OP
 workflows. CPU native/Wasm and dense/sparse pixels are exact; GPU RMSE is below
 0.000119. All 117 prior images/passes, 39 receipts and 72 fixture files remain
 unchanged. Native snapshot-v13 frame bindings preserve stable point/corner IDs.
+
+Source-conformance correction: 128 native and 109 Wasm tests, both Metal suites,
+both complete browser workflows, and zero independent Khronos errors across 13
+GLB fixtures. UV aliases/time-bound metadata are corrected with all .bin payloads
+unchanged. Historical named-UV/morph source-conformance claims are amended;
+render values remain exact and source-scoped identity changes are audited.
+Vertex colors and broader source export remain next.

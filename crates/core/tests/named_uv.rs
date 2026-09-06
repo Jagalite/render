@@ -149,7 +149,19 @@ fn named_uv_displacement_preserves_coordinates_and_ids() {
     let scene = Evaluator::default().evaluate(d.snapshot()).unwrap();
     assert_eq!(scene.instances.len(), 1);
     let g = &scene.instances[0].geometry;
-    assert_eq!(g.uv_attributes, vec![Id(2), Id(101), Id(102), Id(107)]);
+    assert_eq!(
+        g.uv_attributes,
+        vec![
+            Id(2),
+            Id(101),
+            Id(102),
+            Id(103),
+            Id(104),
+            Id(105),
+            Id(106),
+            Id(107)
+        ]
+    );
     let slot = g
         .uv_attributes
         .iter()
@@ -197,7 +209,7 @@ fn missing_uv_sets_bad_selectors_and_old_versions_fail_atomically() {
     v["meshes"][0]["primitives"][0]["attributes"]
         .as_object_mut()
         .unwrap()
-        .remove("TEXCOORD_1");
+        .remove("TEXCOORD_7");
     assert_eq!(imported(&v).err().unwrap().code, "reference");
     let mut d = document(&source());
     let before = canonical(&d).unwrap();
@@ -340,10 +352,36 @@ fn geometry_export_reports_each_omitted_uv_set() {
             .iter()
             .filter(|s| s.starts_with("additional UV attribute"))
             .collect::<Vec<_>>();
-        assert_eq!(extra.len(), 3);
-        for name in ["uv_1", "uv_2", "uv_7"] {
+        assert_eq!(extra.len(), 7);
+        for name in ["uv_1", "uv_2", "uv_3", "uv_4", "uv_5", "uv_6", "uv_7"] {
             assert!(extra.iter().any(|s| s.contains(name)));
         }
         assert!(!extra.iter().any(|s| s.contains("uv_0")));
     }
+}
+
+#[cfg_attr(target_arch = "wasm32", wasm_bindgen_test::wasm_bindgen_test)]
+#[cfg_attr(not(target_arch = "wasm32"), test)]
+fn source_indexed_sets_reject_gaps_missing_zero_and_noncanonical_suffixes() {
+    for missing in ["TEXCOORD_0", "TEXCOORD_3", "TEXCOORD_6"] {
+        let mut v = source();
+        v["meshes"][0]["primitives"][0]["attributes"]
+            .as_object_mut()
+            .unwrap()
+            .remove(missing);
+        assert_eq!(imported(&v).err().unwrap().code, "gltf_scene");
+    }
+    for key in [
+        "TEXCOORD_01",
+        "TEXCOORD_+1",
+        "TEXCOORD_999999999999999999999999",
+        "JOINTS_1",
+        "WEIGHTS_1",
+        "COLOR_1",
+    ] {
+        let mut v = source();
+        v["meshes"][0]["primitives"][0]["attributes"][key] = json!(0);
+        assert_eq!(imported(&v).err().unwrap().code, "gltf_scene");
+    }
+    assert!(imported(&source()).is_ok());
 }

@@ -61,3 +61,6 @@ the shared native/browser importer into existing typed geometry and animation.
 [glTF MASK/BLEND alpha](docs/gltf_alpha.md) is validated through native/browser
 Rust CPU import, rendering and recovery; [evidence](evidence/alpha-gltf/README.md)
 records exact passes and the corrected camera clipping/depth cases.
+
+Named UV texture bindings: [profile](docs/named_uv.md),
+[fixture](fixtures/named-uv/README.md), and [validation](evidence/named-uv/README.md).

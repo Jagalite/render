@@ -40,10 +40,14 @@ Existing UV baking still targets the default atlas. Its material samples use eac
 explicitly selected source set, with pixel differentials transformed through the
 atlas-to-selected-coordinate Jacobian. Selecting a different bake destination is
 a separate operation profile. Geometry-only interchange exporters remain separate
-lossy profiles; document archives preserve all named bindings and attributes.
+lossy profiles; each omitted additional UV set is identified by name and stable ID
+in the conversion report. Document archives preserve all named bindings and attributes.
 
 The source contract is the official [glTF 2.0 specification](https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html).
 The [original fixture](../fixtures/named-uv/README.md) contains independent UV-role
 and normal-frame oracles. No runtime dependencies are added. Vertex colors,
 texture-transform extensions and general material/animated source export remain
 separate gates. M09 stays deferred.
+
+[Acceptance evidence](../evidence/named-uv/README.md) covers the complete native
+and browser workflow, analytical cases, resource use and dependency review.

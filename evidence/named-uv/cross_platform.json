@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "comparisons": [
+    {
+      "variant": "roles",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "object_mismatches": 0
+    },
+    {
+      "variant": "roles",
+      "browser": "gpu",
+      "linear_rmse": 4.674914099609268e-05,
+      "object_mismatches": 0
+    }
+  ]
+}

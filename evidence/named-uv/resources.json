@@ -1,0 +1,23 @@
+{
+  "scope": "32x16, 8 samples, depth2, two triangles, four UV sets and three 2x2 RGBA textures; process observations are not a benchmark or allocator limit",
+  "observations": [
+    {
+      "name": "roles-import",
+      "seconds": 0.03348970800288953,
+      "maximum resident set size": 15843328,
+      "peak memory footprint": 2884608
+    },
+    {
+      "name": "roles-render",
+      "seconds": 0.0765371250017779,
+      "maximum resident set size": 17088512,
+      "peak memory footprint": 3228736
+    },
+    {
+      "name": "roles-gpu",
+      "seconds": 0.1295438750021276,
+      "maximum resident set size": 33554432,
+      "peak memory footprint": 11044416
+    }
+  ]
+}

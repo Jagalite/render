@@ -43,3 +43,8 @@ records equivalent dense/sparse native/browser rendering and recovery.
 coverage profile, with corrected camera continuation and exact native/browser
 passes. [Evidence](../evidence/alpha-gltf/README.md) retains analytic and complete
 workflow checks. GPU alpha remains explicitly unsupported.
+
+[Named UV bindings](named_uv.md) support per-role UV0 through UV7 on CPU and GPU,
+including displacement preservation and CPU alpha/bake consumers. The
+[acceptance evidence](../evidence/named-uv/README.md) records analytic samples,
+CLI/browser recovery and unchanged prior render artifacts.

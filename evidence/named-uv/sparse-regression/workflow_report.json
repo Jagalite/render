@@ -1,0 +1,647 @@
+{
+  "status": "passed",
+  "profile": "gltf2-sparse-uv0-v1",
+  "calls": [
+    {
+      "name": "dense-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/dense",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/000-dense-init.json"
+      ],
+      "seconds": 0.018663499999092892,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-base",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/dense",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/001-dense-base.json"
+      ],
+      "seconds": 0.006967667002754752,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/dense",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/002-dense-import.json"
+      ],
+      "seconds": 0.03858962499361951,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17186816,
+        "peak memory footprint": 3703936
+      }
+    },
+    {
+      "name": "dense-retry",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/dense",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/003-dense-retry.json"
+      ],
+      "seconds": 0.03197641599399503,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/dense",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/004-dense-state.json"
+      ],
+      "seconds": 0.02038883299974259,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/dense",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/005-dense-cpu.json"
+      ],
+      "seconds": 0.22969533300056355,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20135936,
+        "peak memory footprint": 5244032
+      }
+    },
+    {
+      "name": "dense-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/dense",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/006-dense-gpu.json"
+      ],
+      "seconds": 0.1774435000043013,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 35962880,
+        "peak memory footprint": 12125760
+      }
+    },
+    {
+      "name": "dense-archive",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/dense",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/007-dense-archive.json"
+      ],
+      "seconds": 0.03809883300709771,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-restore",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/dense-restored",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/008-dense-restore.json"
+      ],
+      "seconds": 0.03722020900022471,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-restored-frame",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/dense-restored",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/009-dense-restored-frame.json"
+      ],
+      "seconds": 0.19179408399941167,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-stale",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/dense",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/010-dense-stale.json"
+      ],
+      "seconds": 0.033608750003622845,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "dense-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/dense",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/011-dense-unchanged.json"
+      ],
+      "seconds": 0.020495500000834,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/012-sparse-zero-u16-init.json"
+      ],
+      "seconds": 0.01731387499603443,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-base",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/013-sparse-zero-u16-base.json"
+      ],
+      "seconds": 0.0075926249992335215,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/014-sparse-zero-u16-import.json"
+      ],
+      "seconds": 0.03989266699500149,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17088512,
+        "peak memory footprint": 3605632
+      }
+    },
+    {
+      "name": "sparse-zero-u16-retry",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/015-sparse-zero-u16-retry.json"
+      ],
+      "seconds": 0.0325000419979915,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/016-sparse-zero-u16-state.json"
+      ],
+      "seconds": 0.022514125004818197,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/017-sparse-zero-u16-cpu.json"
+      ],
+      "seconds": 0.23334458300087135,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20135936,
+        "peak memory footprint": 5227584
+      }
+    },
+    {
+      "name": "sparse-zero-u16-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/018-sparse-zero-u16-gpu.json"
+      ],
+      "seconds": 0.17181112499383744,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 35848192,
+        "peak memory footprint": 12011072
+      }
+    },
+    {
+      "name": "sparse-zero-u16-archive",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/019-sparse-zero-u16-archive.json"
+      ],
+      "seconds": 0.03444595800101524,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-restore",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-zero-u16-restored",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/020-sparse-zero-u16-restore.json"
+      ],
+      "seconds": 0.14535654099745443,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-restored-frame",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-zero-u16-restored",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/021-sparse-zero-u16-restored-frame.json"
+      ],
+      "seconds": 0.260734916999354,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-stale",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/022-sparse-zero-u16-stale.json"
+      ],
+      "seconds": 0.03702516700286651,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "sparse-zero-u16-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/023-sparse-zero-u16-unchanged.json"
+      ],
+      "seconds": 0.022246624997933395,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/024-sparse-base-u8-init.json"
+      ],
+      "seconds": 0.03591158299968811,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-base",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/025-sparse-base-u8-base.json"
+      ],
+      "seconds": 0.009532500000204891,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/026-sparse-base-u8-import.json"
+      ],
+      "seconds": 0.056690750003326684,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17235968,
+        "peak memory footprint": 3753088
+      }
+    },
+    {
+      "name": "sparse-base-u8-retry",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/027-sparse-base-u8-retry.json"
+      ],
+      "seconds": 0.0354571659991052,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/028-sparse-base-u8-state.json"
+      ],
+      "seconds": 0.020078250003280118,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/029-sparse-base-u8-cpu.json"
+      ],
+      "seconds": 0.24213112500001444,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20168704,
+        "peak memory footprint": 5276800
+      }
+    },
+    {
+      "name": "sparse-base-u8-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/030-sparse-base-u8-gpu.json"
+      ],
+      "seconds": 0.18381529199541546,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 35930112,
+        "peak memory footprint": 12109376
+      }
+    },
+    {
+      "name": "sparse-base-u8-archive",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/031-sparse-base-u8-archive.json"
+      ],
+      "seconds": 0.042397541998070665,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-restore",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-base-u8-restored",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/032-sparse-base-u8-restore.json"
+      ],
+      "seconds": 0.03304550000029849,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-restored-frame",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-base-u8-restored",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/033-sparse-base-u8-restored-frame.json"
+      ],
+      "seconds": 0.1849052079996909,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-stale",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/034-sparse-base-u8-stale.json"
+      ],
+      "seconds": 0.03559325000242097,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "sparse-base-u8-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/035-sparse-base-u8-unchanged.json"
+      ],
+      "seconds": 0.02193808300216915,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "negative-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/negative",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/036-negative-init.json"
+      ],
+      "seconds": 0.018252250003570225,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "negative-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/negative",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/037-negative-state.json"
+      ],
+      "seconds": 0.007425208001222927,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "malformed",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/negative",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/038-malformed.json"
+      ],
+      "seconds": 0.008539458001905587,
+      "exit_code": 1,
+      "expected_error": "gltf_scene"
+    },
+    {
+      "name": "cancelled",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/negative",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/039-cancelled.json"
+      ],
+      "seconds": 0.006374167001922615,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "budget",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/negative",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/040-budget.json"
+      ],
+      "seconds": 0.00593937499797903,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "negative-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/negative",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/041-negative-unchanged.json"
+      ],
+      "seconds": 0.006696000004012603,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "explicit-valid",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/negative",
+        "/private/tmp/render-named-uv-20260906/artifacts/named-uv/run-20260906T065252Z/sparse-regression/requests/042-explicit-valid.json"
+      ],
+      "seconds": 0.037024165998445824,
+      "exit_code": 0,
+      "expected_error": null
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "settings": {
+    "width": 64,
+    "height": 64,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.15,
+      0.15,
+      0.15
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        30,
+        30,
+        30
+      ]
+    },
+    "camera": {
+      "position": [
+        1,
+        1,
+        5
+      ],
+      "target": [
+        0,
+        1,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65
+    }
+  },
+  "variants": [
+    {
+      "name": "dense",
+      "revision": "sha256:a51a5e7111defc04c23efc61b487ddecb4b5a11fab43a11f8126c1c82dc1a505",
+      "clip": "018903b040fab8788cf9c997635d0066",
+      "linear_rmse": 2.3070609148956016e-05,
+      "object_mismatches": 0,
+      "document_bytes": 13624
+    },
+    {
+      "name": "sparse-zero-u16",
+      "revision": "sha256:ddea16da144796356b6539cc7b21870563bbdb67151ff8680c194d7b5a3f9083",
+      "clip": "162f1a3cac4149b4c924a5b82c734322",
+      "linear_rmse": 2.3070609148956016e-05,
+      "object_mismatches": 0,
+      "document_bytes": 13624
+    },
+    {
+      "name": "sparse-base-u8",
+      "revision": "sha256:19ced2b513de24719976221392021e17ebb608f43208f4224d29cf46b3233284",
+      "clip": "9d21f2477178975d566e53a59f34d62e",
+      "linear_rmse": 2.3070609148956016e-05,
+      "object_mismatches": 0,
+      "document_bytes": 13624
+    }
+  ],
+  "dense_sparse_pixels_identical": true
+}

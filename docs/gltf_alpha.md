@@ -45,5 +45,6 @@ The [original fixture](../fixtures/alpha-gltf/README.md) supplies an independent
 analytic oracle. [Acceptance evidence](../evidence/alpha-gltf/README.md) records
 native/browser workflows, resource use, failures and prior-profile regressions.
 
-Broader UV sets, vertex colors, shader extensions, rough transmission, GPU alpha
+Named UV bindings are covered by [their own profile](named_uv.md).
+Vertex colors, shader extensions, rough transmission, GPU alpha
 and general material interchange remain separate gates. M09 stays deferred.

@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "profile": "gltf2-named-uv-v1",
+  "results": [
+    {
+      "name": "roles",
+      "revision": "sha256:1f30e19008706385ce3bee83e34e3a7f82cd31b4c366133243990d135f3a0d50",
+      "opfs_restored": true,
+      "cancelled": true,
+      "nonempty_import_error": "import_target: scene import requires an empty project",
+      "stale_render_rejected": true,
+      "stale_branch_rejected": true
+    }
+  ],
+  "malformed_atomic": true,
+  "seconds": 0.06769999999552966,
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/152.0.7977.76",
+    "revision": "@0d89dfa2dd7c1ec4b8a14b9f303f887bb63b6174",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+    "jsVersion": "15.2.124.19"
+  }
+}

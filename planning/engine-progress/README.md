@@ -5,12 +5,12 @@ working on feasible remaining steps. M09 interactive editor remains deferred.
 Each completed increment requires implementation, native/browser workflow evidence,
 negative/cancellation/stale checks, resource/provenance records and documentation.
 
-Current implementation checkpoint: `35f92f2` (glTF alpha and camera fixes); full alpha acceptance is in evidence/alpha-gltf.
+Current implementation checkpoint: `68edeb3` (named UV bindings); full acceptance is in evidence/named-uv.
 
 | Order | Increment | Status |
 |---|---|---|
 | 1 | GPU shutter frames and streaming sequences | Validated on feat/gpu-shutter-sequences; evidence/gpu-shutter |
-| 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Sparse/UV0 and CPU alpha validated; named UV bindings in isolated candidate branch |
+| 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Sparse/UV0, CPU alpha and named UV bindings validated; morph shading frames in isolated candidate branch |
 | 3 | Richer GPU scattering and transport quality | Pending |
 | 4 | External hair/volume inputs, fiber shading and sparse GPU media | Pending |
 | 5 | Scoped native .blend/USD/MaterialX interchange | Pending |
@@ -36,4 +36,11 @@ Alpha acceptance: 115 native and 96 Wasm tests, 43-request CLI and Chrome/OPFS
 workflows, exact native/browser pixels/passes and 116 unchanged prior artifacts.
 The reproduced camera clipping/depth bugs are fixed; initial boundary regressions
 and browser-client corrections are retained in evidence/alpha-gltf. GPU alpha
-remains pending. Named UV work is isolated in feat/named-uv-bindings.
+remains pending. Named UV acceptance follows in evidence/named-uv.
+
+Named UV acceptance: 121 native and 102 Wasm tests, three Metal comparison cases,
+19-request CLI and Chrome CPU/WebGPU/OPFS workflow. Native/browser CPU pixels
+are exact; GPU RMSE is below 0.000047. All 108 previous images/passes and 36
+receipts are unchanged; 66 existing fixture files are unchanged. Displacement
+derived UV identity intentionally changes under uniform-named-uv-v1. Morph-frame
+work is isolated in feat/morph-shading-frames.

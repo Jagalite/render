@@ -249,10 +249,10 @@ fn static_pbr_transaction_roundtrip_render_and_failures() {
         "cancelled"
     );
     let mut s = settings();
-    s.max_depth = 2;
+    s.max_depth = 17;
     assert_eq!(
         render(&scene, &s, || false).unwrap_err().code,
-        "unsupported_profile"
+        "render_settings"
     );
     let mut overflow_scene = scene.clone();
     for instance in &mut overflow_scene.instances {

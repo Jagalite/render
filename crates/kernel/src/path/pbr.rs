@@ -528,19 +528,26 @@ pub(super) fn body() -> Vec<Stmt> {
         ),
         let_("bary", bary(v("origin"), v("direction"))),
         let_("uv", uv(v("bary"))),
-        let_(
-            "dx",
-            uv(bary(
-                ray("camera_origin", s("px") + f(1.), s("py")),
-                ray("camera_direction", s("px") + f(1.), s("py")),
-            )) - vv("uv"),
-        ),
-        let_(
-            "dy",
-            uv(bary(
-                ray("camera_origin", s("px"), s("py") + f(1.)),
-                ray("camera_direction", s("px"), s("py") + f(1.)),
-            )) - vv("uv"),
+        var("dx", vec2(f(0.), f(0.))),
+        var("dy", vec2(f(0.), f(0.))),
+        if_(
+            i("bounce").eq(u(0)),
+            vec![
+                set(
+                    vv("dx"),
+                    uv(bary(
+                        ray("camera_origin", s("px") + f(1.), s("py")),
+                        ray("camera_direction", s("px") + f(1.), s("py")),
+                    )) - vv("uv"),
+                ),
+                set(
+                    vv("dy"),
+                    uv(bary(
+                        ray("camera_origin", s("px"), s("py") + f(1.)),
+                        ray("camera_direction", s("px"), s("py") + f(1.)),
+                    )) - vv("uv"),
+                ),
+            ],
         ),
         var("local_shading", norm(v("local_normal"))),
         if_(
@@ -672,12 +679,14 @@ pub(super) fn body() -> Vec<Stmt> {
             ],
         ),
         if_(
-            i("sample").eq(cast(Ty::U32, param(6).field("w"))),
+            i("sample")
+                .eq(cast(Ty::U32, param(6).field("w")))
+                .and(i("bounce").eq(u(0))),
             vec![set(v("first_normal"), v("normal"))],
         ),
         set(
-            v("sum"),
-            v("sum") + xyz(inst(i("base") + u(7))) * xyz(sample_map(3)),
+            v("radiance"),
+            v("radiance") + xyz(inst(i("base") + u(7))) * xyz(sample_map(3)),
         ),
         let_("offset", v("position") + v("geometric") * f(1e-5)),
         let_("view", v("direction") * f(-1.)),
@@ -697,8 +706,8 @@ pub(super) fn body() -> Vec<Stmt> {
                             .field("x")
                             .lt(f(0.)),
                         vec![set(
-                            v("sum"),
-                            v("sum")
+                            v("radiance"),
+                            v("radiance")
                                 + brdf(v("light_dir"))
                                     * xyz(param(6))
                                     * (s("cosine") / (s("distance") * s("distance"))),
@@ -716,9 +725,9 @@ pub(super) fn body() -> Vec<Stmt> {
                     v("normal"),
                     v("view"),
                     s("rough"),
-                    random(4),
-                    random(2),
-                    random(3),
+                    path_random(4),
+                    path_random(2),
+                    path_random(3),
                 ],
             ),
         ),
@@ -734,26 +743,36 @@ pub(super) fn body() -> Vec<Stmt> {
             s("pdf")
                 .gt(f(0.))
                 .and(dot(v("geometric"), v("secondary")).gt(f(0.))),
-            vec![if_(
-                trace(v("offset"), v("secondary"), f(1e30))
-                    .field("x")
-                    .lt(f(0.)),
-                vec![
-                    let_(
-                        "occlusion",
-                        f(1.)
-                            + inst(i("base") + u(9)).field("w")
-                                * (sample_map(4).field("x") - f(1.)),
-                    ),
-                    set(
-                        v("sum"),
-                        v("sum")
+            vec![
+                let_(
+                    "occlusion",
+                    f(1.) + inst(i("base") + u(9)).field("w") * (sample_map(4).field("x") - f(1.)),
+                ),
+                set(v("next_origin"), v("offset")),
+                set(v("next_direction"), v("secondary")),
+                set(
+                    v("weight"),
+                    brdf(v("secondary"))
+                        * (dot(v("normal"), v("secondary")) / s("pdf"))
+                        * s("occlusion"),
+                ),
+                if_(
+                    (i("bounce") + u(1))
+                        .eq(cast(Ty::U32, param(0).field("w")))
+                        .and(
+                            trace(v("offset"), v("secondary"), f(1e30))
+                                .field("x")
+                                .lt(f(0.)),
+                        ),
+                    vec![set(
+                        v("radiance"),
+                        v("radiance")
                             + brdf(v("secondary"))
                                 * xyz(param(7))
                                 * (dot(v("normal"), v("secondary")) * s("occlusion") / s("pdf")),
-                    ),
-                ],
-            )],
+                    )],
+                ),
+            ],
         ),
     ];
     out.shrink_to_fit();

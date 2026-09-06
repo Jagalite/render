@@ -111,12 +111,6 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
         ));
     }
     s.validate()?;
-    if s.max_depth != 1 {
-        return Err(Error::new(
-            "unsupported_profile",
-            "GPU diffuse v0 supports max_depth=1",
-        ));
-    }
     if start_sample
         .checked_add(s.samples)
         .is_none_or(|v| v > 16777216)
@@ -302,7 +296,12 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
         ),
     };
     let params = vec![
-        [s.width as f32, s.height as f32, s.samples as f32, 0.],
+        [
+            s.width as f32,
+            s.height as f32,
+            s.samples as f32,
+            s.max_depth as f32,
+        ],
         [0., 0., 0., scene.instances.len() as f32],
         point(forward, (s.camera.fov() / 2.).tan() as f32),
         point(right, 0.),
@@ -324,7 +323,16 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
             (s.seed >> 16) as f32,
         ],
         [mode, xmag as f32, ymag as f32, aspect as f32],
-        [near as f32, far as f32, 0., 0.],
+        [
+            near as f32,
+            far as f32,
+            if scene.instances.iter().any(|i| i.material.pbr.is_some()) {
+                3.
+            } else {
+                2.
+            },
+            0.,
+        ],
     ];
     if geometry
         .iter()
@@ -668,24 +676,33 @@ impl Renderer {
             revision: scene.revision.clone(),
             settings_digest: digest(&canonical(s)?),
             backend: format!(
-                "gpu-f32-{}-v0/{}",
+                "gpu-f32-{}-{}/{}",
                 if scene.instances.iter().any(|i| i.material.pbr.is_some()) {
                     "pbr"
                 } else {
                     "diffuse"
                 },
+                if s.max_depth == 1 { "v0" } else { "path-v1" },
                 self.capabilities.backend
             ),
             samples: s.samples,
             seed: s.seed,
             color_space: "linear-sRGB".into(),
-            approximation: if scene.instances.iter().any(|i| i.material.pbr.is_some()) {
+            approximation: if s.max_depth > 1
+                && scene.instances.iter().any(|i| i.material.pbr.is_some())
+            {
+                format!(
+                    "finite depth {}; single-scattering GGX; roughness >=0.05; diffuse/GGX mixture PDF; point-light direct sampling; emissive surfaces/environment via BSDF only; primary UV-differential mipmaps, secondary LOD0; occlusion multiplies indirect throughput; RGBA16 texture precision; start sample {start_sample}; camera-relative f32",
+                    s.max_depth
+                )
+            } else if scene.instances.iter().any(|i| i.material.pbr.is_some()) {
                 format!(
                     "single-scattering GGX; roughness >=0.05; one bounce; primary UV-differential mipmaps; RGBA16 texture precision; start sample {start_sample}; camera-relative f32"
                 )
             } else {
                 format!(
-                    "finite depth 1; two-sided Lambertian; nearest repeat textures; start sample {start_sample}; camera-relative f32"
+                    "finite depth {}; two-sided Lambertian; nearest repeat textures; start sample {start_sample}; camera-relative f32",
+                    s.max_depth
                 )
             },
             width: s.width,
@@ -769,8 +786,8 @@ impl Progressive {
         total_settings.samples = self.next_sample;
         next.receipt.settings_digest = digest(&canonical(&total_settings)?);
         next.receipt.approximation = format!(
-            "finite depth 1; two-sided Lambertian; nearest repeat textures; accumulated samples 0..{}; camera-relative f32",
-            self.next_sample
+            "{}; accumulated samples 0..{}",
+            next.receipt.approximation, self.next_sample
         );
         next.receipt.output_digest = digest(
             &next

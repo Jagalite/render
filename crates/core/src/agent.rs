@@ -155,13 +155,12 @@ fn profile(snapshot: &Snapshot) -> Result<&Settings> {
     if settings.width > 128
         || settings.height > 128
         || settings.samples > 64
-        || settings.max_depth != 1
         || snapshot.entities.iter().count() > 192
         || canonical(snapshot)?.len() > 8 * 1024 * 1024
     {
         return Err(Error::new(
             "budget",
-            "agent preview profile: 128x128, 64 samples, depth 1, 192 entities, 8 MiB snapshot",
+            "agent preview profile: 128x128, 64 samples, depth 1..16, 192 entities, 8 MiB snapshot",
         ));
     }
     Ok(settings)

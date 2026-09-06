@@ -169,3 +169,22 @@ Native JSON retains converted animation; source glTF export remains unsupported.
 **Revisit trigger:** Sparse/morph-normal data, additional source formats, skinning
 methods or GPU shutter accumulation require separate profiles and numerical,
 resource and persistence evidence. M09 UI work remains independent.
+
+## ADR-016 — Bounded shared opaque path transport
+
+**Decision:** Extend the existing CPU loop and Rust kernel IR to shade 1–16
+opaque PBR/diffuse vertices through the existing typed max_depth setting. Preserve
+primary passes, indexed samples, ordinary render transactions and depth-one CPU
+semantics. Use BSDF-only sampling for emissive surfaces/environment and direct
+point-light evaluation. Declare finite-depth bias, secondary LOD0 and authored
+occlusion on indirect throughput. No new runtime dependency or snapshot version.
+
+**Integration boundary:** GPU packing carries depth and sample stride in private
+parameters; no public Rust layout is exposed. Browser agent preview admits the
+same depth range within its existing pixel/sample limits. GPU progressive receipts
+retain the selected material/depth qualifications. Advanced surfaces/media and GPU
+shutter accumulation remain separate profiles. See [contract](multibounce_pbr.md).
+
+**Revisit trigger:** Measured small-emitter variance or texture aliasing motivates
+continuous light sampling/MIS or propagated secondary footprints, with independent
+numerical evidence before changing the named policy.

@@ -409,7 +409,9 @@
           "maximum": 4294967295
         },
         "max_depth": {
-          "const": 1
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 16
         },
         "max_bytes": {
           "$ref": "#/$defs/budget"

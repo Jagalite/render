@@ -109,15 +109,8 @@ try:
     call('existing-output',{'method':'render','revision':revision,'backend':'cpu','output':str(root/'cpu')},error='output_exists')
     assert verify_manifest(root/'cpu')==cpu_manifest
     if '--gpu' in sys.argv:
-        # Existing GPU diffuse profile is depth one. Verify rejection, then make
-        # a separately restored project with explicit supported settings.
-        call('gpu-depth-rejection',{'method':'render','revision':revision,'backend':'gpu','output':str(root/'gpu-unsupported')},error='unsupported_profile')
-        gpu_project=root/'gpu-project'
-        call('gpu-restore',{'method':'restore','source':str(root/'archive/document/document.json')},gpu_project)
-        gpu_state=inspect('gpu-base',gpu_project)
-        settings=gpu_state['snapshot']['render_settings'].copy();settings['max_depth']=1
-        changed=call('gpu-profile-settings',{'method':'apply','request':{'version':0,'base_revision':gpu_state['revision'],'idempotency_key':'cli-workflow:gpu-profile','max_added_bytes':8*1024*1024,'commands':[{'operation':'set_render_settings','settings':settings}]}},gpu_project)
-        gpu_revision=changed['receipt']['revision']
+        gpu_project=project
+        gpu_revision=revision
         call('gpu-cpu-reference',{'method':'render','revision':gpu_revision,'backend':'cpu','output':str(root/'gpu-reference')},gpu_project,resource=True);verify_manifest(root/'gpu-reference')
         call('gpu-render',{'method':'render','revision':gpu_revision,'backend':'gpu','output':str(root/'gpu')},gpu_project,resource=True);verify_manifest(root/'gpu')
         dimensions,a=pfm(root/'gpu-reference/image/image.pfm');other,b=pfm(root/'gpu/image/image.pfm');assert dimensions==other
@@ -125,7 +118,7 @@ try:
         cp=json.loads((root/'gpu-reference/image/passes.json').read_text())
         gp=json.loads((root/'gpu/image/passes.json').read_text());mismatches=sum(x!=y for x,y in zip(cp[4],gp[4],strict=True))
         assert rmse<.025 and mismatches<=4,(rmse,mismatches)
-        report['cpu_gpu']={'linear_rmse':rmse,'object_mismatches':mismatches,'authored_revision':gpu_revision,'max_depth':1,'unsupported_depth_two_rejected':True}
+        report['cpu_gpu']={'linear_rmse':rmse,'object_mismatches':mismatches,'authored_revision':gpu_revision,'max_depth':2,'depth_two_rendered':True}
     assert inspect('final')['document_digest']==state['document_digest']
     report.update(status='passed',revision=revision,random_access=True,restore_equal=True,rendering_preserves_source=True,sequence_frames=5,fixture='fixtures/project-cli',dependency_delta='none')
 except Exception as error:

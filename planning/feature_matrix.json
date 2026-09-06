@@ -79,7 +79,7 @@
         "M07",
         "M08"
       ],
-      "qualification": "Supported opaque surfaces and evaluated geometry on CPU/Metal/WebGPU; Rust CPU extended scattering/media, imaging products and exact-time shutter accumulation. Explicit unsupported GPU profiles.",
+      "qualification": "Opaque PBR/diffuse paths at depth 1–16 on CPU/Metal/WebGPU, with primary mipmaps and secondary LOD0; Rust CPU extended scattering/media, imaging products and exact-time shutter accumulation. Explicit unsupported GPU profiles.",
       "capability_axes": {
         "native_authoring": "ordinary_revision_checked_typed_transactions",
         "native_evaluation": "named_Rust_profiles_in_docs/m07_m08.md",
@@ -99,7 +99,8 @@
         "evidence/m00-m04/gpu_fault_report.json",
         "evidence/static-pbr/README.md",
         "evidence/m06-m08/README.md",
-        "evidence/animated-gltf/README.md"
+        "evidence/animated-gltf/README.md",
+        "evidence/multibounce-pbr/README.md"
       ]
     },
     {
@@ -192,7 +193,7 @@
         "M07",
         "M10"
       ],
-      "qualification": "Opaque textured PBR on CPU/GPU; CPU ideal dielectric, eta/k conductor approximation, single coat and alpha; geometric displacement, UV bakes and Rust D65 color/bilateral-v0 imaging.",
+      "qualification": "Opaque textured PBR at depth 1–16 on CPU/Metal/WebGPU, with primary mipmaps and secondary LOD0; CPU ideal dielectric, eta/k conductor approximation, single coat and alpha; geometric displacement, UV bakes and Rust D65 color/bilateral-v0 imaging.",
       "capability_axes": {
         "native_authoring": "ordinary_revision_checked_typed_transactions",
         "native_evaluation": "named_Rust_profiles_in_docs/m07_m08.md",
@@ -211,7 +212,8 @@
         "evidence/m00-m04/cross_backend_report.json",
         "evidence/static-pbr/README.md",
         "evidence/m06-m08/README.md",
-        "evidence/animated-gltf/README.md"
+        "evidence/animated-gltf/README.md",
+        "evidence/multibounce-pbr/README.md"
       ]
     },
     {

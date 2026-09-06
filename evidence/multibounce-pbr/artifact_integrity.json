@@ -1,0 +1,75 @@
+{
+  "status": "passed",
+  "manifests": [
+    {
+      "path": "workflow/archive-1/manifest.json",
+      "status": "complete",
+      "verified_artifact_bytes": 12670
+    },
+    {
+      "path": "workflow/archive-16/manifest.json",
+      "status": "complete",
+      "verified_artifact_bytes": 16582
+    },
+    {
+      "path": "workflow/archive-2/manifest.json",
+      "status": "complete",
+      "verified_artifact_bytes": 13973
+    },
+    {
+      "path": "workflow/archive-4/manifest.json",
+      "status": "complete",
+      "verified_artifact_bytes": 15276
+    },
+    {
+      "path": "workflow/cpu-1/manifest.json",
+      "status": "complete",
+      "verified_artifact_bytes": 17996
+    },
+    {
+      "path": "workflow/cpu-16/manifest.json",
+      "status": "complete",
+      "verified_artifact_bytes": 18151
+    },
+    {
+      "path": "workflow/cpu-2/manifest.json",
+      "status": "complete",
+      "verified_artifact_bytes": 18150
+    },
+    {
+      "path": "workflow/cpu-4/manifest.json",
+      "status": "complete",
+      "verified_artifact_bytes": 18150
+    },
+    {
+      "path": "workflow/gpu-1/manifest.json",
+      "status": "complete",
+      "verified_artifact_bytes": 17989
+    },
+    {
+      "path": "workflow/gpu-16/manifest.json",
+      "status": "complete",
+      "verified_artifact_bytes": 18156
+    },
+    {
+      "path": "workflow/gpu-2/manifest.json",
+      "status": "complete",
+      "verified_artifact_bytes": 18155
+    },
+    {
+      "path": "workflow/gpu-4/manifest.json",
+      "status": "complete",
+      "verified_artifact_bytes": 18155
+    },
+    {
+      "path": "workflow/limited/manifest.json",
+      "status": "failed",
+      "verified_artifact_bytes": 0
+    },
+    {
+      "path": "workflow/restored-cpu/manifest.json",
+      "status": "complete",
+      "verified_artifact_bytes": 18150
+    }
+  ]
+}

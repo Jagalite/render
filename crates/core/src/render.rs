@@ -829,8 +829,6 @@ pub struct Shading {
 }
 pub fn shading(scene: &Scene, hit: &Hit, differentials: [Ray; 2]) -> Shading {
     let instance = &scene.instances[hit.instance];
-    let material = &instance.material;
-    let surface = material.pbr.as_ref().expect("PBR material");
     let tri = &instance.geometry.triangles[hit.triangle];
     let d = differentials.map(|ray| {
         projected_uv(
@@ -842,6 +840,12 @@ pub fn shading(scene: &Scene, hit: &Hit, differentials: [Ray; 2]) -> Shading {
         )
         .map_or(Vec2::ZERO, |uv| uv - hit.uv)
     });
+    shading_uv(scene, hit, d)
+}
+// Secondary rays have no propagated differentials in this named profile.
+fn shading_uv(scene: &Scene, hit: &Hit, d: [Vec2; 2]) -> Shading {
+    let material = &scene.instances[hit.instance].material;
+    let surface = material.pbr.as_ref().expect("PBR material");
     let texture = |binding: Option<&crate::textures::Binding>| {
         binding.map_or(glam::Vec4::ONE, |b| {
             scene.images[&(b.image.clone(), b.role)].sample(&b.sampler, hit.uv, d[0], d[1])
@@ -928,6 +932,9 @@ fn shade_pbr(
                     .as_vec3();
         }
     }
+    if settings.max_depth > 1 {
+        return Ok(radiance);
+    }
     let [pixel, sample] = indices;
     let l = crate::pbr::sample(
         n,
@@ -988,12 +995,6 @@ pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) 
     }
     s.validate()?;
     let pbr_profile = scene.instances.iter().any(|i| i.material.pbr.is_some());
-    if pbr_profile && s.max_depth != 1 {
-        return Err(Error::new(
-            "unsupported_profile",
-            "PBR v0 supports one bounce",
-        ));
-    }
     let count = (s.width * s.height) as usize;
     let mut linear = vec![[0.; 3]; count];
     let mut depth = vec![0.; count];
@@ -1021,6 +1022,9 @@ pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) 
                 )?;
                 let mut throughput = Vec3::ONE;
                 for bounce in 0..s.max_depth {
+                    if cancelled() {
+                        return Err(Error::new("cancelled", "render cancelled at path boundary"));
+                    }
                     let (near, far) = if bounce == 0 {
                         s.camera.clip(ray)
                     } else {
@@ -1064,15 +1068,19 @@ pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) 
                     if scene.instances[hit.instance].material.pbr.is_some() {
                         let px = x as f64 + random(pixel, sample, 0, s.seed);
                         let py = y as f64 + random(pixel, sample, 1, s.seed);
-                        let surface = shading(
-                            scene,
-                            &hit,
-                            [
-                                s.camera.ray(px + 1., py, s.width, s.height)?,
-                                s.camera.ray(px, py + 1., s.width, s.height)?,
-                            ],
-                        );
-                        if sample == 0 {
+                        let surface = if bounce == 0 {
+                            shading(
+                                scene,
+                                &hit,
+                                [
+                                    s.camera.ray(px + 1., py, s.width, s.height)?,
+                                    s.camera.ray(px, py + 1., s.width, s.height)?,
+                                ],
+                            )
+                        } else {
+                            shading_uv(scene, &hit, [Vec2::ZERO; 2])
+                        };
+                        if bounce == 0 && sample == 0 {
                             depth[pixel as usize] = hit.distance as f32;
                             normals[pixel as usize] = surface.normal.as_vec3().to_array();
                             objects[pixel as usize] = Some(scene.instances[hit.instance].id);
@@ -1087,7 +1095,51 @@ pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) 
                                 [pixel, sample],
                                 &mut cancelled,
                             )?;
-                        break;
+                        if s.max_depth == 1 {
+                            break;
+                        }
+                        let direction = crate::pbr::sample(
+                            surface.normal,
+                            -ray.direction,
+                            surface.roughness,
+                            random(pixel, sample, 4 + bounce * 3, s.seed),
+                            random(pixel, sample, 2 + bounce * 3, s.seed),
+                            random(pixel, sample, 3 + bounce * 3, s.seed),
+                        );
+                        let pdf = crate::pbr::pdf(
+                            surface.normal,
+                            -ray.direction,
+                            direction,
+                            surface.roughness,
+                        );
+                        if pdf <= 0. || hit.geometric_normal.dot(direction) <= 0. {
+                            break;
+                        }
+                        throughput *= (crate::pbr::brdf(
+                            surface.color,
+                            surface.metallic,
+                            surface.roughness,
+                            surface.normal,
+                            -ray.direction,
+                            direction,
+                        ) * (surface.normal.dot(direction) / pdf))
+                            .as_vec3()
+                            * surface.occlusion;
+                        ray = Ray {
+                            origin: hit.position + hit.geometric_normal * 1e-5,
+                            direction,
+                        };
+                        if bounce + 1 == s.max_depth
+                            && scene.intersect(ray, 1e-5, f64::INFINITY).is_none()
+                        {
+                            sum += throughput
+                                * Vec3::from_array(s.environment)
+                                * scene
+                                    .media
+                                    .transmittance(ray, 1e-5, f64::INFINITY, &mut cancelled)?
+                                    .as_vec3();
+                        }
+                        continue;
                     }
                     if bounce == 0 && sample == 0 {
                         depth[pixel as usize] = hit.distance as f32;
@@ -1133,8 +1185,18 @@ pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) 
                     }
                     let direction = cosine_direction(
                         hit.normal,
-                        random(pixel, sample, 2 + bounce * 2, s.seed),
-                        random(pixel, sample, 3 + bounce * 2, s.seed),
+                        random(
+                            pixel,
+                            sample,
+                            2 + bounce * if pbr_profile { 3 } else { 2 },
+                            s.seed,
+                        ),
+                        random(
+                            pixel,
+                            sample,
+                            3 + bounce * if pbr_profile { 3 } else { 2 },
+                            s.seed,
+                        ),
                     );
                     ray = Ray {
                         origin: hit.position + hit.normal * 1e-5,
@@ -1172,7 +1234,11 @@ pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) 
         revision: scene.revision.clone(),
         settings_digest: digest(&canonical(s)?),
         backend: if pbr_profile {
-            "cpu-f64-pbr-v0"
+            if s.max_depth == 1 {
+                "cpu-f64-pbr-v0"
+            } else {
+                "cpu-f64-pbr-path-v1"
+            }
         } else {
             "cpu-f64-diffuse-v0"
         }
@@ -1180,7 +1246,12 @@ pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) 
         samples: s.samples,
         seed: s.seed,
         color_space: "linear-sRGB".into(),
-        approximation: if pbr_profile {
+        approximation: if pbr_profile && s.max_depth > 1 {
+            format!(
+                "finite depth {}; single-scattering GGX/Schlick/Smith; roughness >=0.05; diffuse/GGX mixture PDF; point-light direct sampling; emissive surfaces/environment via BSDF only; primary UV-differential mipmaps, secondary LOD0; occlusion multiplies indirect throughput; geometric visibility with mapped shading normals",
+                s.max_depth
+            )
+        } else if pbr_profile {
             "single-scattering GGX/Schlick/Smith; roughness >=0.05; one bounce; diffuse/GGX mixture PDF; mipmapped textures; geometric visibility with mapped shading normals".into()
         } else {
             format!(

@@ -1,0 +1,419 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "init",
+      "seconds": 0.08191016699856846,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 11763712,
+        "peak memory footprint": 2196544
+      }
+    },
+    {
+      "name": "author-base",
+      "seconds": 0.009359499999845866,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 11993088,
+        "peak memory footprint": 2278464
+      }
+    },
+    {
+      "name": "author",
+      "seconds": 0.24275208299513906,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 15941632,
+        "peak memory footprint": 2884672
+      }
+    },
+    {
+      "name": "depth-1-base",
+      "seconds": 0.01942987499933224,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 15515648,
+        "peak memory footprint": 2901120
+      }
+    },
+    {
+      "name": "depth-1",
+      "seconds": 0.12761112499720184,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 16039936,
+        "peak memory footprint": 3212416
+      }
+    },
+    {
+      "name": "state-1",
+      "seconds": 0.026612790999934077,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 15679488,
+        "peak memory footprint": 3064960
+      }
+    },
+    {
+      "name": "cpu-1",
+      "seconds": 0.4471296670017182,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17448960,
+        "peak memory footprint": 3228800
+      }
+    },
+    {
+      "name": "gpu-1",
+      "seconds": 0.7881988750013988,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 34357248,
+        "peak memory footprint": 10995328
+      }
+    },
+    {
+      "name": "export-1",
+      "seconds": 0.15771204200427746,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 16007168,
+        "peak memory footprint": 3048576
+      }
+    },
+    {
+      "name": "depth-2-base",
+      "seconds": 0.04770375000225613,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 15761408,
+        "peak memory footprint": 3146880
+      }
+    },
+    {
+      "name": "depth-2",
+      "seconds": 0.243679291997978,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 16203776,
+        "peak memory footprint": 3376256
+      }
+    },
+    {
+      "name": "state-2",
+      "seconds": 0.037574666006548796,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 15826944,
+        "peak memory footprint": 3212416
+      }
+    },
+    {
+      "name": "cpu-2",
+      "seconds": 1.4414623330012546,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17334272,
+        "peak memory footprint": 3228800
+      }
+    },
+    {
+      "name": "gpu-2",
+      "seconds": 1.4876457499995013,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 34144256,
+        "peak memory footprint": 10798720
+      }
+    },
+    {
+      "name": "export-2",
+      "seconds": 0.868095000005269,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 16138240,
+        "peak memory footprint": 3179648
+      }
+    },
+    {
+      "name": "depth-4-base",
+      "seconds": 0.046590958001615945,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 15777792,
+        "peak memory footprint": 3163264
+      }
+    },
+    {
+      "name": "depth-4",
+      "seconds": 1.2111829580026097,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 16171008,
+        "peak memory footprint": 3507328
+      }
+    },
+    {
+      "name": "state-4",
+      "seconds": 0.10258112500014249,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 15876096,
+        "peak memory footprint": 3261568
+      }
+    },
+    {
+      "name": "cpu-4",
+      "seconds": 3.744743749994086,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 16760832,
+        "peak memory footprint": 3441792
+      }
+    },
+    {
+      "name": "gpu-4",
+      "seconds": 5.162882750002609,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 33030144,
+        "peak memory footprint": 10929792
+      }
+    },
+    {
+      "name": "export-4",
+      "seconds": 1.2781304579984862,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 16236544,
+        "peak memory footprint": 3277952
+      }
+    },
+    {
+      "name": "depth-16-base",
+      "seconds": 0.11838004199671559,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 15826944,
+        "peak memory footprint": 3212416
+      }
+    },
+    {
+      "name": "depth-16",
+      "seconds": 1.3630015840026317,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 16285696,
+        "peak memory footprint": 3458176
+      }
+    },
+    {
+      "name": "state-16",
+      "seconds": 0.07091983300051652,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 15958016,
+        "peak memory footprint": 3343488
+      }
+    },
+    {
+      "name": "cpu-16",
+      "seconds": 2.900318749998405,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17760256,
+        "peak memory footprint": 3523712
+      }
+    },
+    {
+      "name": "gpu-16",
+      "seconds": 5.081614499998977,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 33816576,
+        "peak memory footprint": 11241088
+      }
+    },
+    {
+      "name": "export-16",
+      "seconds": 0.4760366660048021,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 16220160,
+        "peak memory footprint": 3261568
+      }
+    },
+    {
+      "name": "restore",
+      "seconds": 0.5300612089995411,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 15384576,
+        "peak memory footprint": 2786368
+      }
+    },
+    {
+      "name": "restored-state",
+      "seconds": 0.02275908400042681,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 15663104,
+        "peak memory footprint": 3064960
+      }
+    },
+    {
+      "name": "restored-render",
+      "seconds": 1.012450499998522,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17416192,
+        "peak memory footprint": 3163200
+      }
+    },
+    {
+      "name": "before-negative",
+      "seconds": 0.05173595799715258,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 15892480,
+        "peak memory footprint": 3277952
+      }
+    },
+    {
+      "name": "invalid-depth-0-base",
+      "seconds": 0.09700908399827313,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 15908864,
+        "peak memory footprint": 3294336
+      }
+    },
+    {
+      "name": "invalid-depth-0",
+      "seconds": 0.15100225000060163,
+      "exit_code": 1,
+      "expected_error": "render_settings"
+    },
+    {
+      "name": "invalid-depth-17-base",
+      "seconds": 0.08194262499455363,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 15908864,
+        "peak memory footprint": 3294336
+      }
+    },
+    {
+      "name": "invalid-depth-17",
+      "seconds": 0.08726020900212461,
+      "exit_code": 1,
+      "expected_error": "render_settings"
+    },
+    {
+      "name": "stale-cpu",
+      "seconds": 0.061858125001890585,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "cancel-cpu",
+      "seconds": 0.0060208750001038425,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "stale-gpu",
+      "seconds": 0.0684553329992923,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "cancel-gpu",
+      "seconds": 0.00692079199507134,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "output-budget",
+      "seconds": 1.4993433749987162,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "unchanged",
+      "seconds": 0.056595792004372925,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 15941632,
+        "peak memory footprint": 3327104
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "depth": 1,
+      "linear_rmse": 0.0,
+      "object_mismatches": 0,
+      "mean_rgb": 0.0
+    },
+    {
+      "depth": 2,
+      "linear_rmse": 2.3762417625958237e-08,
+      "object_mismatches": 0,
+      "mean_rgb": 0.2149448320948674
+    },
+    {
+      "depth": 4,
+      "linear_rmse": 2.8617023621451578e-08,
+      "object_mismatches": 0,
+      "mean_rgb": 0.24911643663654104
+    },
+    {
+      "depth": 16,
+      "linear_rmse": 3.123172352773366e-08,
+      "object_mismatches": 0,
+      "mean_rgb": 0.25607398794575903
+    }
+  ],
+  "source": "fixtures/multibounce-pbr/create.json",
+  "restored_identical": true,
+  "invalid_depths_rejected": true,
+  "stale_rejected": true,
+  "cancelled": true,
+  "authored_state_immutable": true
+}

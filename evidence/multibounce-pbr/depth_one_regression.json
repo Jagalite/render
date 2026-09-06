@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "files": [
+    {
+      "current": "artifacts/multibounce-pbr/run-20260906T031706Z/static-regression/BoxTextured-cpu.pfm",
+      "baseline": "evidence/static-pbr/renders/BoxTextured-cpu.pfm",
+      "sha256": "674b91ad59430821d62597302b97d33d552a5f1342d4518f3d3ec79392d4fb05",
+      "byte_identical": true
+    },
+    {
+      "current": "artifacts/multibounce-pbr/run-20260906T031706Z/static-regression/mirror-back-cpu.pfm",
+      "baseline": "evidence/static-pbr/renders/mirror-back-cpu.pfm",
+      "sha256": "e4abffa0cfac40ee1eab245c2123338691edcbf3666a7dbbe47ee6ba9d225c02",
+      "byte_identical": true
+    },
+    {
+      "current": "artifacts/multibounce-pbr/run-20260906T031706Z/static-regression/NormalTangentMirrorTest-cpu.pfm",
+      "baseline": "evidence/static-pbr/renders/NormalTangentMirrorTest-cpu.pfm",
+      "sha256": "5a7a2c61b02ffb08efc0f203c8c9daa1aab4f420e31b68aa09e5972a49526510",
+      "byte_identical": true
+    },
+    {
+      "current": "artifacts/multibounce-pbr/run-20260906T031706Z/animated-regression/default/image/image.pfm",
+      "baseline": "evidence/animated-gltf/workflow/default/image/image.pfm",
+      "sha256": "00c99524bb9c71c18f1560c562be3993d415536cc598d4d29aad2c84569e4714",
+      "byte_identical": true
+    },
+    {
+      "current": "artifacts/multibounce-pbr/run-20260906T031706Z/animated-regression/cpu/image/image.pfm",
+      "baseline": "evidence/animated-gltf/workflow/cpu/image/image.pfm",
+      "sha256": "62362bcf50fb5a05ec851ce4f8ef3940e9e7a33f88e58e5d1d77b433a4e572dd",
+      "byte_identical": true
+    },
+    {
+      "current": "artifacts/multibounce-pbr/run-20260906T031706Z/animated-regression/frame/frame/image.pfm",
+      "baseline": "evidence/animated-gltf/workflow/frame/frame/image.pfm",
+      "sha256": "2e103f0574052f2e8e702c83bcaccf98cbb8f02ad9d5e490634392a7cd79e9e1",
+      "byte_identical": true
+    }
+  ]
+}

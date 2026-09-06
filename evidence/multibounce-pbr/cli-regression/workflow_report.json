@@ -1,0 +1,441 @@
+{
+  "status": "passed",
+  "profile": "project-cli-v0",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/000-init.json"
+      ],
+      "seconds": 0.16153416700399248,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "create-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/001-create-base.json"
+      ],
+      "seconds": 0.02558508400397841,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "create",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/002-create.json"
+      ],
+      "seconds": 0.12624199999845587,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/003-inspect.json"
+      ],
+      "seconds": 0.02053262499975972,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "bevel-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/004-bevel-base.json"
+      ],
+      "seconds": 0.02432375000353204,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "bevel",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/005-bevel.json"
+      ],
+      "seconds": 0.1874185420019785,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/006-inspect.json"
+      ],
+      "seconds": 0.05724987499706913,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "import-obj",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/007-import-obj.json"
+      ],
+      "seconds": 0.3351169169982313,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "animate-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/008-animate-base.json"
+      ],
+      "seconds": 0.12424079199990956,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "animate",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/009-animate.json"
+      ],
+      "seconds": 0.37260129100468475,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "authored",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/010-authored.json"
+      ],
+      "seconds": 0.25419679199694656,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-0",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/011-evaluate-0.json"
+      ],
+      "seconds": 0.15163441699405666,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-2",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/012-evaluate-2.json"
+      ],
+      "seconds": 0.13886866599932546,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-4",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/013-evaluate-4.json"
+      ],
+      "seconds": 0.1601486669969745,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-1",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/014-evaluate-1.json"
+      ],
+      "seconds": 0.2088233329996001,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-3",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/015-evaluate-3.json"
+      ],
+      "seconds": 0.1673358330008341,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-2",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/016-evaluate-2.json"
+      ],
+      "seconds": 0.13177895899571013,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/017-render.json"
+      ],
+      "seconds": 0.5869412909960374,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 19824640,
+        "peak memory footprint": 4768896
+      }
+    },
+    {
+      "name": "frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/018-frame.json"
+      ],
+      "seconds": 2.9310942910015,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 18808832,
+        "peak memory footprint": 5194880
+      }
+    },
+    {
+      "name": "sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/019-sequence.json"
+      ],
+      "seconds": 9.385448041997734,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 18808832,
+        "peak memory footprint": 5293184
+      }
+    },
+    {
+      "name": "products",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/020-products.json"
+      ],
+      "seconds": 1.9969702499947743,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 19333120,
+        "peak memory footprint": 5194880
+      }
+    },
+    {
+      "name": "export-document",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/021-export-document.json"
+      ],
+      "seconds": 0.33032445900607854,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restore",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/restored",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/022-restore.json"
+      ],
+      "seconds": 0.24299924999650102,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "reopened",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/restored",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/023-reopened.json"
+      ],
+      "seconds": 0.0724107090063626,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "export-obj",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/024-export-obj.json"
+      ],
+      "seconds": 0.7470190409949282,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "stale-render",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/025-stale-render.json"
+      ],
+      "seconds": 0.11008062500332016,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "cancel-evaluation",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/026-cancel-evaluation.json"
+      ],
+      "seconds": 0.012547291000373662,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "output-budget",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/027-output-budget.json"
+      ],
+      "seconds": 0.7613124580020667,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "existing-output",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/028-existing-output.json"
+      ],
+      "seconds": 0.08917545899748802,
+      "exit_code": 1,
+      "expected_error": "output_exists"
+    },
+    {
+      "name": "gpu-cpu-reference",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/029-gpu-cpu-reference.json"
+      ],
+      "seconds": 0.8570552079982008,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 19496960,
+        "peak memory footprint": 4523136
+      }
+    },
+    {
+      "name": "gpu-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/030-gpu-render.json"
+      ],
+      "seconds": 3.8661271249948186,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 34652160,
+        "peak memory footprint": 11978432
+      }
+    },
+    {
+      "name": "final",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression/requests/031-final.json"
+      ],
+      "seconds": 0.4726697499936563,
+      "exit_code": 0,
+      "expected_error": null
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "cpu_gpu": {
+    "linear_rmse": 7.685052442938142e-09,
+    "object_mismatches": 0,
+    "authored_revision": "sha256:4ec93862c2775b928a54e934179300aa4e01962224e559dcb8348c9da7e13d8e",
+    "max_depth": 2,
+    "depth_two_rendered": true
+  },
+  "revision": "sha256:4ec93862c2775b928a54e934179300aa4e01962224e559dcb8348c9da7e13d8e",
+  "random_access": true,
+  "restore_equal": true,
+  "rendering_preserves_source": true,
+  "sequence_frames": 5,
+  "fixture": "fixtures/project-cli",
+  "dependency_delta": "none"
+}

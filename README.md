@@ -9,6 +9,7 @@ An independent, fully Rust creative platform with agent-native operations, brows
 - [Agent workflow, ABI v1 and supported input profile](docs/agent_alpha.md)
 - [M05 validation evidence](evidence/m05/README.md)
 - [Animated glTF/GLB profile](docs/animated_gltf.md) and [validation evidence](evidence/animated-gltf/README.md)
+- [Multi-bounce opaque PBR transport](docs/multibounce_pbr.md) and [validation evidence](evidence/multibounce-pbr/README.md)
 - [Static PBR profile](docs/static_pbr.md) and [validation evidence](evidence/static-pbr/README.md)
 - [Build, run, foundation contracts and supported profiles](docs/implementation.md)
 - [Planned input, material, animation and Blender support](docs/input_support.md)

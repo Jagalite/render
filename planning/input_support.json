@@ -75,10 +75,11 @@
       ],
       "qualification": "Core glTF materials and named extensions are separate capabilities. Blender node graphs require explicitly supported node semantics.",
       "status": "partially_implemented_profile",
-      "implemented_profile": "static glTF opaque CPU/GPU plus native-authored extended Rust CPU surfaces",
+      "implemented_profile": "glTF opaque CPU/Metal/WebGPU finite-depth 1–16 transport plus native-authored extended Rust CPU surfaces",
       "evidence": [
         "evidence/static-pbr/README.md",
-        "evidence/m06-m08/README.md"
+        "evidence/m06-m08/README.md",
+        "evidence/multibounce-pbr/README.md"
       ],
       "remaining_scope": "Imported glTF alpha/extensions, multiple UV sets and extended GPU scattering remain unsupported."
     },

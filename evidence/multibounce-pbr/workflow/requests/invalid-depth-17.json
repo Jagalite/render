@@ -1,0 +1,67 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:3ea83611b1ac47712fc00d33189339329c08bef55a9aa067b93e5ee0d0fa5339",
+      "idempotency_key": "multibounce:invalid-depth-17",
+      "commands": [
+        {
+          "operation": "set_render_settings",
+          "settings": {
+            "width": 16,
+            "height": 16,
+            "samples": 64,
+            "seed": 73,
+            "max_depth": 17,
+            "max_bytes": 16777216,
+            "environment": [
+              0,
+              0,
+              0
+            ],
+            "light": {
+              "position": [
+                0,
+                0,
+                1
+              ],
+              "intensity": [
+                0,
+                0,
+                0
+              ]
+            },
+            "camera": {
+              "position": [
+                0,
+                0,
+                1
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "up": [
+                0,
+                1,
+                0
+              ],
+              "vertical_fov_radians": 0.5,
+              "lens": {
+                "kind": "orthographic",
+                "xmag": 1,
+                "ymag": 1,
+                "near": 0.01,
+                "far": 1.5
+              }
+            }
+          }
+        }
+      ],
+      "max_added_bytes": 8388608
+    }
+  }
+}

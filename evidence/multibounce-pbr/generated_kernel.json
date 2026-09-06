@@ -1,0 +1,34 @@
+{
+  "generator": [
+    "target/debug/render-host",
+    "kernel"
+  ],
+  "artifact": {
+    "path": "generated-path.wgsl",
+    "bytes": 21427,
+    "sha256": "44687a7a74d4aa39aeae6cf0e4d09a21a61ce67aec33475fe0d2fce6ec1d1780"
+  },
+  "inputs": [
+    {
+      "path": "crates/kernel/src/lib.rs",
+      "sha256": "ec11cab4aa678d0624c693d1f33bb25bbfb407826f7ef7b6e4fb922e6fee3a8c"
+    },
+    {
+      "path": "crates/kernel/src/path.rs",
+      "sha256": "9a614e5210b05ef65ad5046f6f6667c538873fa1e65b440f2bea84497433171c"
+    },
+    {
+      "path": "crates/kernel/src/path/pbr.rs",
+      "sha256": "a25750c73d42a09bb7132dc31267393d6e67d6d3513de4fb528b491442caa3d0"
+    },
+    {
+      "path": "crates/gpu/src/lib.rs",
+      "sha256": "6155881dba4a0d04e2bdd711cabf006dfacc848a788e5fae53110bc43858e0c1"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "4f6c11c32e966f791611b40cf7773771ecc0bef6491cb1cd484a4369c75bc59d"
+    }
+  ],
+  "toolchain": "rustc 1.95.0 (59807616e 2026-04-14)"
+}

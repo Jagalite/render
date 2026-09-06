@@ -52,6 +52,18 @@ fn random(dim: u32) -> Expr {
         ],
     )
 }
+fn path_random(dim: u32) -> Expr {
+    call(
+        "random",
+        Ty::F32,
+        vec![
+            i("pixel"),
+            i("sample"),
+            u(dim) + i("bounce") * cast(Ty::U32, param(9).field("z")),
+            cast(Ty::U32, param(5).field("w")) + cast(Ty::U32, param(7).field("w")) * u(65536),
+        ],
+    )
+}
 pub fn kernel() -> Kernel {
     let random_fn = function(
         "random",
@@ -374,11 +386,11 @@ pub fn kernel() -> Kernel {
                 cast(Ty::F32, i("pixel").remainder(i("width"))) + random(0),
             ),
             let_("py", cast(Ty::F32, i("pixel") / i("width")) + random(1)),
-            let_(
+            var(
                 "origin",
                 call("camera_origin", Ty::V3, vec![vec2(s("px"), s("py"))]),
             ),
-            let_(
+            var(
                 "direction",
                 call("camera_direction", Ty::V3, vec![vec2(s("px"), s("py"))]),
             ),
@@ -390,178 +402,226 @@ pub fn kernel() -> Kernel {
                     f(1.) / dot(v("direction"), xyz(param(2))),
                 )],
             ),
-            let_(
-                "hit",
-                call(
-                    "trace",
-                    Ty::V4,
-                    vec![
-                        v("origin"),
-                        v("direction"),
-                        param(9).field("y") * s("clip_factor"),
-                        param(9).field("x") * s("clip_factor"),
-                    ],
-                ),
-            ),
-            Stmt::If(
-                q("hit").field("x").lt(f(0.)),
-                vec![set(v("sum"), v("sum") + xyz(param(7)))],
+            var("throughput", splat(1.)),
+            var("bounce", u(0)),
+            var("near", param(9).field("x") * s("clip_factor")),
+            var("far", param(9).field("y") * s("clip_factor")),
+            Stmt::While(
+                i("bounce").lt(cast(Ty::U32, param(0).field("w"))),
                 vec![
-                    let_("base", cast(Ty::U32, q("hit").field("y")) * u(16)),
-                    let_("triangle", cast(Ty::U32, q("hit").field("z"))),
+                    var("radiance", splat(0.)),
+                    var("weight", splat(0.)),
+                    var("next_origin", v("origin")),
+                    var("next_direction", v("direction")),
                     let_(
-                        "position",
-                        v("origin") + v("direction") * q("hit").field("x"),
-                    ),
-                    let_("a", xyz(data(i("triangle")))),
-                    let_("e1", xyz(data(i("triangle") + u(1))) - v("a")),
-                    let_("e2", xyz(data(i("triangle") + u(2))) - v("a")),
-                    let_("local_normal", cross(v("e1"), v("e2"))),
-                    var(
-                        "normal",
-                        norm(vec3(
-                            dot(xyz(inst(i("base"))), v("local_normal")),
-                            dot(xyz(inst(i("base") + u(1))), v("local_normal")),
-                            dot(xyz(inst(i("base") + u(2))), v("local_normal")),
-                        )),
-                    ),
-                    if_(
-                        dot(v("normal"), v("direction")).gt(f(0.)),
-                        vec![set(v("normal"), v("normal") * f(-1.))],
-                    ),
-                    if_(
-                        i("sample").eq(cast(Ty::U32, param(6).field("w"))),
-                        vec![
-                            set(s("first_depth"), q("hit").field("x")),
-                            set(v("first_normal"), v("normal")),
-                            set(s("first_instance"), q("hit").field("y")),
-                        ],
+                        "hit",
+                        call(
+                            "trace",
+                            Ty::V4,
+                            vec![v("origin"), v("direction"), s("far"), s("near")],
+                        ),
                     ),
                     Stmt::If(
-                        inst(i("base") + u(8)).field("z").gt(f(0.)),
-                        pbr::body(),
+                        q("hit").field("x").lt(f(0.)),
+                        vec![set(v("radiance"), v("radiance") + xyz(param(7)))],
                         vec![
-                            var("color", xyz(inst(i("base") + u(6)))),
-                            let_("texwidth", cast(Ty::U32, inst(i("base") + u(8)).field("x"))),
+                            let_("base", cast(Ty::U32, q("hit").field("y")) * u(16)),
+                            let_("triangle", cast(Ty::U32, q("hit").field("z"))),
                             let_(
-                                "texheight",
-                                cast(Ty::U32, inst(i("base") + u(8)).field("y")),
+                                "position",
+                                v("origin") + v("direction") * q("hit").field("x"),
+                            ),
+                            let_("a", xyz(data(i("triangle")))),
+                            let_("e1", xyz(data(i("triangle") + u(1))) - v("a")),
+                            let_("e2", xyz(data(i("triangle") + u(2))) - v("a")),
+                            let_("local_normal", cross(v("e1"), v("e2"))),
+                            var(
+                                "normal",
+                                norm(vec3(
+                                    dot(xyz(inst(i("base"))), v("local_normal")),
+                                    dot(xyz(inst(i("base") + u(1))), v("local_normal")),
+                                    dot(xyz(inst(i("base") + u(2))), v("local_normal")),
+                                )),
                             ),
                             if_(
-                                i("texwidth").gt(u(0)),
+                                dot(v("normal"), v("direction")).gt(f(0.)),
+                                vec![set(v("normal"), v("normal") * f(-1.))],
+                            ),
+                            if_(
+                                i("sample")
+                                    .eq(cast(Ty::U32, param(6).field("w")))
+                                    .and(i("bounce").eq(u(0))),
                                 vec![
+                                    set(s("first_depth"), q("hit").field("x")),
+                                    set(v("first_normal"), v("normal")),
+                                    set(s("first_instance"), q("hit").field("y")),
+                                ],
+                            ),
+                            Stmt::If(
+                                inst(i("base") + u(8)).field("z").gt(f(0.)),
+                                pbr::body(),
+                                vec![
+                                    var("color", xyz(inst(i("base") + u(6)))),
                                     let_(
-                                        "ro",
-                                        call(
-                                            "transform",
-                                            Ty::V3,
-                                            vec![i("base"), v("origin"), f(1.)],
-                                        ),
+                                        "texwidth",
+                                        cast(Ty::U32, inst(i("base") + u(8)).field("x")),
                                     ),
                                     let_(
-                                        "rd",
-                                        call(
-                                            "transform",
-                                            Ty::V3,
-                                            vec![i("base"), v("direction"), f(0.)],
-                                        ),
+                                        "texheight",
+                                        cast(Ty::U32, inst(i("base") + u(8)).field("y")),
                                     ),
-                                    let_(
-                                        "bary",
-                                        call(
-                                            "triangle_hit",
-                                            Ty::V3,
-                                            vec![v("ro"), v("rd"), i("triangle"), f(1e30)],
-                                        ),
-                                    ),
-                                    let_("uvpair", data(i("triangle") + u(3))),
-                                    let_("lastuv", data(i("triangle") + u(4))),
-                                    let_(
-                                        "uv",
-                                        q("uvpair").field("xy")
-                                            * (f(1.) - v("bary").field("y") - v("bary").field("z"))
-                                            + q("uvpair").field("zw") * v("bary").field("y")
-                                            + q("lastuv").field("xy") * v("bary").field("z"),
-                                    ),
-                                    let_(
-                                        "tx",
-                                        min(
-                                            cast(
-                                                Ty::U32,
+                                    if_(
+                                        i("texwidth").gt(u(0)),
+                                        vec![
+                                            let_(
+                                                "ro",
                                                 call(
-                                                    "fract",
-                                                    Ty::F32,
-                                                    vec![Expr::var("uv", Ty::V2).field("x")],
-                                                ) * cast(Ty::F32, i("texwidth")),
+                                                    "transform",
+                                                    Ty::V3,
+                                                    vec![i("base"), v("origin"), f(1.)],
+                                                ),
                                             ),
-                                            i("texwidth") - u(1),
-                                        ),
+                                            let_(
+                                                "rd",
+                                                call(
+                                                    "transform",
+                                                    Ty::V3,
+                                                    vec![i("base"), v("direction"), f(0.)],
+                                                ),
+                                            ),
+                                            let_(
+                                                "bary",
+                                                call(
+                                                    "triangle_hit",
+                                                    Ty::V3,
+                                                    vec![v("ro"), v("rd"), i("triangle"), f(1e30)],
+                                                ),
+                                            ),
+                                            let_("uvpair", data(i("triangle") + u(3))),
+                                            let_("lastuv", data(i("triangle") + u(4))),
+                                            let_(
+                                                "uv",
+                                                q("uvpair").field("xy")
+                                                    * (f(1.)
+                                                        - v("bary").field("y")
+                                                        - v("bary").field("z"))
+                                                    + q("uvpair").field("zw")
+                                                        * v("bary").field("y")
+                                                    + q("lastuv").field("xy")
+                                                        * v("bary").field("z"),
+                                            ),
+                                            let_(
+                                                "tx",
+                                                min(
+                                                    cast(
+                                                        Ty::U32,
+                                                        call(
+                                                            "fract",
+                                                            Ty::F32,
+                                                            vec![
+                                                                Expr::var("uv", Ty::V2).field("x"),
+                                                            ],
+                                                        ) * cast(Ty::F32, i("texwidth")),
+                                                    ),
+                                                    i("texwidth") - u(1),
+                                                ),
+                                            ),
+                                            let_(
+                                                "ty",
+                                                min(
+                                                    cast(
+                                                        Ty::U32,
+                                                        call(
+                                                            "fract",
+                                                            Ty::F32,
+                                                            vec![
+                                                                Expr::var("uv", Ty::V2).field("y"),
+                                                            ],
+                                                        ) * cast(Ty::F32, i("texheight")),
+                                                    ),
+                                                    i("texheight") - u(1),
+                                                ),
+                                            ),
+                                            set(
+                                                v("color"),
+                                                v("color")
+                                                    * xyz(data(
+                                                        cast(
+                                                            Ty::U32,
+                                                            inst(i("base") + u(7)).field("w"),
+                                                        ) + i("ty") * i("texwidth")
+                                                            + i("tx"),
+                                                    )),
+                                            ),
+                                        ],
+                                    ),
+                                    set(v("radiance"), v("radiance") + xyz(inst(i("base") + u(7)))),
+                                    let_("offset", v("position") + v("normal") * f(0.00001)),
+                                    let_("to_light", xyz(param(5)) - v("position")),
+                                    let_("distance", sqrt(dot(v("to_light"), v("to_light")))),
+                                    let_("light_dir", v("to_light") / s("distance")),
+                                    let_("cosine", max(dot(v("normal"), v("light_dir")), f(0.))),
+                                    if_(
+                                        s("cosine").gt(f(0.)).and(s("distance").gt(f(0.00001))),
+                                        vec![if_(
+                                            trace(
+                                                v("offset"),
+                                                v("light_dir"),
+                                                s("distance") - f(0.00002),
+                                            )
+                                            .field("x")
+                                            .lt(f(0.)),
+                                            vec![set(
+                                                v("radiance"),
+                                                v("radiance")
+                                                    + v("color")
+                                                        * xyz(param(6))
+                                                        * (s("cosine")
+                                                            / (f(std::f32::consts::PI)
+                                                                * s("distance")
+                                                                * s("distance"))),
+                                            )],
+                                        )],
                                     ),
                                     let_(
-                                        "ty",
-                                        min(
-                                            cast(
-                                                Ty::U32,
-                                                call(
-                                                    "fract",
-                                                    Ty::F32,
-                                                    vec![Expr::var("uv", Ty::V2).field("y")],
-                                                ) * cast(Ty::F32, i("texheight")),
-                                            ),
-                                            i("texheight") - u(1),
+                                        "secondary",
+                                        call(
+                                            "cosine_direction",
+                                            Ty::V3,
+                                            vec![v("normal"), path_random(2), path_random(3)],
                                         ),
                                     ),
-                                    set(
-                                        v("color"),
-                                        v("color")
-                                            * xyz(data(
-                                                cast(Ty::U32, inst(i("base") + u(7)).field("w"))
-                                                    + i("ty") * i("texwidth")
-                                                    + i("tx"),
-                                            )),
+                                    set(v("next_origin"), v("offset")),
+                                    set(v("next_direction"), v("secondary")),
+                                    set(v("weight"), v("color")),
+                                    if_(
+                                        (i("bounce") + u(1))
+                                            .eq(cast(Ty::U32, param(0).field("w")))
+                                            .and(
+                                                trace(v("offset"), v("secondary"), f(1e30))
+                                                    .field("x")
+                                                    .lt(f(0.)),
+                                            ),
+                                        vec![set(
+                                            v("radiance"),
+                                            v("radiance") + v("color") * xyz(param(7)),
+                                        )],
                                     ),
                                 ],
                             ),
-                            set(v("sum"), v("sum") + xyz(inst(i("base") + u(7)))),
-                            let_("offset", v("position") + v("normal") * f(0.00001)),
-                            let_("to_light", xyz(param(5)) - v("position")),
-                            let_("distance", sqrt(dot(v("to_light"), v("to_light")))),
-                            let_("light_dir", v("to_light") / s("distance")),
-                            let_("cosine", max(dot(v("normal"), v("light_dir")), f(0.))),
-                            if_(
-                                s("cosine").gt(f(0.)).and(s("distance").gt(f(0.00001))),
-                                vec![if_(
-                                    trace(v("offset"), v("light_dir"), s("distance") - f(0.00002))
-                                        .field("x")
-                                        .lt(f(0.)),
-                                    vec![set(
-                                        v("sum"),
-                                        v("sum")
-                                            + v("color")
-                                                * xyz(param(6))
-                                                * (s("cosine")
-                                                    / (f(std::f32::consts::PI)
-                                                        * s("distance")
-                                                        * s("distance"))),
-                                    )],
-                                )],
-                            ),
-                            let_(
-                                "secondary",
-                                call(
-                                    "cosine_direction",
-                                    Ty::V3,
-                                    vec![v("normal"), random(2), random(3)],
-                                ),
-                            ),
-                            if_(
-                                trace(v("offset"), v("secondary"), f(1e30))
-                                    .field("x")
-                                    .lt(f(0.)),
-                                vec![set(v("sum"), v("sum") + v("color") * xyz(param(7)))],
-                            ),
                         ],
                     ),
+                    set(v("sum"), v("sum") + v("throughput") * v("radiance")),
+                    set(v("throughput"), v("throughput") * v("weight")),
+                    if_(
+                        dot(v("throughput"), v("throughput")).eq(f(0.)),
+                        vec![Stmt::Break],
+                    ),
+                    set(v("origin"), v("next_origin")),
+                    set(v("direction"), v("next_direction")),
+                    set(s("near"), f(1e-5)),
+                    set(s("far"), f(1e30)),
+                    set(i("bounce"), i("bounce") + u(1)),
                 ],
             ),
             set(i("sample"), i("sample") + u(1)),

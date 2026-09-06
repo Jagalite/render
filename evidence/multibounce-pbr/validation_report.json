@@ -1,0 +1,227 @@
+{
+  "status": "passed",
+  "scope": "macOS ARM64 CPU/Metal; Rust Wasm in Node; Chromium CPU/WebGPU/OPFS; Linux and Windows compile only",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.149571667003329,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 51.04648283300048,
+      "log": "logs/clippy.txt"
+    },
+    {
+      "name": "native_tests",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 562.3795646659928,
+      "log": "logs/native_tests.txt"
+    },
+    {
+      "name": "gpu_tests",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "multibounce_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored"
+      ],
+      "exit_code": 0,
+      "seconds": 22.5599282080002,
+      "log": "logs/gpu_tests.txt"
+    },
+    {
+      "name": "wasm_tests",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 970.1648338340019,
+      "log": "logs/wasm_tests.txt"
+    },
+    {
+      "name": "linux_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-unknown-linux-gnu",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 35.83096079200186,
+      "log": "logs/linux_check.txt"
+    },
+    {
+      "name": "windows_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-pc-windows-msvc",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 50.51058850000118,
+      "log": "logs/windows_check.txt"
+    },
+    {
+      "name": "browser_clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "-p",
+        "render-web",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 13.846289667002566,
+      "log": "logs/browser_clippy.txt"
+    },
+    {
+      "name": "native_build",
+      "command": [
+        "cargo",
+        "build",
+        "-p",
+        "render-host",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 4.57845758300391,
+      "log": "logs/native_build.txt"
+    },
+    {
+      "name": "browser_build",
+      "command": [
+        "sh",
+        "scripts/build-web.sh"
+      ],
+      "exit_code": 0,
+      "seconds": 77.46589166700142,
+      "log": "logs/browser_build.txt"
+    },
+    {
+      "name": "dependency_audit",
+      "command": [
+        "python3",
+        "scripts/dependency-audit.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.1272268329994404,
+      "log": "logs/dependency_audit.txt"
+    },
+    {
+      "name": "cli_regression",
+      "command": [
+        "python3",
+        "scripts/project-cli-workflow.py",
+        "artifacts/multibounce-pbr/run-20260906T031706Z/cli-regression",
+        "--gpu"
+      ],
+      "exit_code": 0,
+      "seconds": 26.018115709004633,
+      "log": "logs/cli_regression.txt"
+    },
+    {
+      "name": "static_regression",
+      "command": [
+        "target/debug/render-host",
+        "pbr-workflow",
+        "artifacts/multibounce-pbr/run-20260906T031706Z/static-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 78.78396116600197,
+      "log": "logs/static_regression.txt"
+    },
+    {
+      "name": "animated_regression",
+      "command": [
+        "python3",
+        "scripts/animated-gltf-workflow.py",
+        "artifacts/multibounce-pbr/run-20260906T031706Z/animated-regression",
+        "--gpu"
+      ],
+      "exit_code": 0,
+      "seconds": 9.138675542002602,
+      "log": "logs/animated_regression.txt"
+    },
+    {
+      "name": "multibounce_workflow",
+      "command": [
+        "python3",
+        "scripts/multibounce-workflow.py",
+        "artifacts/multibounce-pbr/run-20260906T031706Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 31.582993459000136,
+      "log": "logs/multibounce_workflow.txt"
+    },
+    {
+      "name": "browser_workflow",
+      "command": [
+        "node",
+        "scripts/multibounce-browser.mjs",
+        "artifacts/multibounce-pbr/run-20260906T031706Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 2.7172469170036493,
+      "log": "logs/browser_workflow.txt"
+    }
+  ],
+  "native_test_count": 104,
+  "wasm_test_count": 85,
+  "gpu_test_count": 1
+}

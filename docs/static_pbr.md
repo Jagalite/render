@@ -2,6 +2,7 @@
 
 This is the first materials slice of M07, paired with INPUT-01 scene ingestion.
 This historical slice is now extended by the completed [M07/M08 named profiles](m07_m08.md); its original evidence and importer restrictions remain unchanged.
+Opaque transport is additionally extended by [multi-bounce PBR](multibounce_pbr.md); the depth-one limits below describe the original slice.
 The M05 checkpoint is `de07c70`; candidate work is on `feat/static-pbr-m07`.
 
 The public `gltf2-static-pbr-v0` profile adds opaque metallic/roughness materials,

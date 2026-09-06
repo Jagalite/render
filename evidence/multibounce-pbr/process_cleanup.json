@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "stopped_owned_processes": [
+    {
+      "pid": 17636,
+      "port": 8766,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m http.server 8766 --bind 127.0.0.1 --directory web",
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 17639,
+      "port": 9224,
+      "command": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome --headless=new --remote-debugging-port=9224 --user-data-dir=/tmp/render-multibounce-chrome-20260906 --enable-unsafe-webgpu --use-angle=metal about:blank",
+      "signal": "SIGTERM"
+    }
+  ],
+  "ports_clear": [
+    8766,
+    9224
+  ]
+}

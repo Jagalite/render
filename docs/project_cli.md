@@ -5,7 +5,7 @@ geometry, material or file-format compatibility. M09 remains a separate editor
 milestone. [Validation evidence](../evidence/project-cli/README.md) records 94 native
 tests and an independent 36-request CPU/Metal workflow, including five shutter
 frames, native restore, cancellation, diagnostics and source integrity. Subsequent
-[animated glTF import](animated_gltf.md) has [separate current validation](../evidence/animated-gltf/README.md).
+[animated glTF import](animated_gltf.md) has [separate validation](../evidence/animated-gltf/README.md). The current [multi-bounce extension](multibounce_pbr.md) has [new acceptance evidence](../evidence/multibounce-pbr/README.md).
 
 `render-host project <project-directory> <request.json|->` executes one versioned,
 typed JSON request and exits. `-` reads stdin. Relative paths are relative to the
@@ -122,9 +122,9 @@ Shutters specify relative `open`, `close` times and `samples`; instant exposure 
 zero open/close with one sample. Existing rational-time and sample-count rules
 apply. Per-frame metadata retains the actual shutter times and evaluation receipt.
 GPU rendering at a single clip/time is supported for compatible scene profiles.
-The current diffuse GPU profile requires depth one; unsupported settings reject
-before native device creation. The workflow explicitly verifies depth-two
-rejection, then compares CPU/Metal on a separately restored depth-one project;
+Opaque PBR and diffuse CPU/GPU transport now supports depth 1–16 under the
+[multi-bounce contract](multibounce_pbr.md). The CLI workflow compares the same
+authored depth-two scene on CPU/Metal;
 GPU shutter accumulation remains unsupported and is not an accepted `frame` or
 `sequence` field.
 

@@ -61,7 +61,7 @@ The authoring engine exposes snapshots immutably. Transactions are the mutation 
 
 CPU rendering uses f64 intersection/transform math, per-geometry BVHs, an instance-level BVH, indexed random streams, two-sided Lambertian reflection, emission, one point light, constant environment lighting, nearest/repeating textures, and finite path depth. Depth truncation is explicitly biased. Point-light sampling is discrete and does not overlap the continuous BSDF sampler, so this profile does not require a light/BSDF MIS weight. Materials with metallic != 0 or roughness != 1 are rejected explicitly by the Lambertian renderer.
 
-GPU rendering implements the matched one-bounce diffuse profile. Mesh acceleration and triangle data stay shared between instances. Instance bounds and inverse transforms are separate; camera-relative coordinates limit world-origin precision loss. GPU geometry addressing uses exactly representable f32 indices, capped at 16,777,216 packed records. Rendering negotiates baseline WebGPU limits and rejects oversized buffers/dispatches before admission. A real over-limit allocation is also tested through GPU validation error scopes. Physical VRAM exhaustion and spontaneous driver reset are not induced; device destruction/recreation is exercised explicitly.
+The original GPU checkpoint implements the matched one-bounce diffuse profile; the [multi-bounce extension](multibounce_pbr.md) now supports opaque PBR and diffuse depth 1–16. Mesh acceleration and triangle data stay shared between instances. Instance bounds and inverse transforms are separate; camera-relative coordinates limit world-origin precision loss. GPU geometry addressing uses exactly representable f32 indices, capped at 16,777,216 packed records. Rendering negotiates baseline WebGPU limits and rejects oversized buffers/dispatches before admission. A real over-limit allocation is also tested through GPU validation error scopes. Physical VRAM exhaustion and spontaneous driver reset are not induced; device destruction/recreation is exercised explicitly.
 
 The raster preview is a separate hardware raster pipeline with depth testing and flat approximate shading. It omits texture sampling, transport shadows and indirect light. It is never presented as an equivalent final render.
 
@@ -108,3 +108,5 @@ For general project authoring and rendering from CLI requests, see [the project 
 The scene adapters now also support [animated glTF/GLB](animated_gltf.md), including
 absolute TRS clips, skin-specific binds and position morphs through the same native
 and browser APIs. The mesh-only importer described above retains its original limits.
+
+Opaque PBR/diffuse CPU, Metal and WebGPU transport is extended to depth 1–16; see the [bounded multi-bounce contract](multibounce_pbr.md) for secondary filtering, truncation and acceptance gates.

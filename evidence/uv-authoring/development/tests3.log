@@ -1,0 +1,42 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 17.39s
+     Running unittests src/lib.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/render_core-6a918d07e2b3a755)
+
+running 6 tests
+test uv::solver::rank_and_cancellation ... ok
+test uv::solver::pivot_order_does_not_change_solution ... ok
+test uv::solver::analytic_rectangular_least_squares ... ok
+test blend::reader::tests::work_limits_cancellation_and_declarators_are_explicit ... ok
+test blend::reader::tests::pointer_width_endianness_layout_and_numeric_values_agree ... ok
+test blend::reader::tests::malformed_truncated_ambiguous_and_nonfinite_inputs_fail ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/blend_static.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/blend_static-20bcdf223d3aa3ce)
+
+running 9 tests
+test distinct_material_blocks_cannot_alias_one_native_identity ... ok
+test invalid_source_parameters_do_not_hide_behind_positive_ratios_or_zero_power ... ok
+test shared_mesh_instances_do_not_expand_asset_commands_or_geometry_builds ... ok
+test metric_units_authored_rotations_reflections_and_orthographic_lens ... ok
+test source_asset_count_and_byte_limits_are_transactional ... ok
+test public_agent_import_export_cancellation_and_invalid_wire_are_atomic ... ok
+test typed_source_transactions_permissions_versions_and_durability ... FAILED
+test analytic_scene_hierarchy_uv_camera_light_and_source_roundtrip ... ok
+test hostile_links_dependencies_numeric_and_cancellation_fail_before_commands ... ok
+
+failures:
+
+---- typed_source_transactions_permissions_versions_and_durability stdout ----
+
+thread 'typed_source_transactions_permissions_versions_and_durability' (5877068) panicked at crates/core/tests/blend_static.rs:187:34:
+called `Result::unwrap_err()` on an `Ok` value: ()
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    typed_source_transactions_permissions_versions_and_durability
+
+test result: FAILED. 8 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.49s
+
+error: test failed, to rerun pass `-p render-core --test blend_static`

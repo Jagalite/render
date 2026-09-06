@@ -1,0 +1,998 @@
+{
+  "status": "passed",
+  "scope": "macOS ARM64 CPU/Metal, Rust Wasm in Node, Chrome WebGPU/OPFS; Linux and Windows compile only",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5746799159969669,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "independent_source_validation",
+      "command": [
+        "node",
+        "scripts/validate-gltf-fixtures.cjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/source-validation"
+      ],
+      "exit_code": 0,
+      "seconds": 0.4005738330015447,
+      "log": "logs/independent_source_validation.txt"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 13.77909270800592,
+      "log": "logs/clippy.txt"
+    },
+    {
+      "name": "native_build",
+      "command": [
+        "cargo",
+        "build",
+        "-p",
+        "render-host",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 31.2144489170023,
+      "log": "logs/native_build.txt"
+    },
+    {
+      "name": "uv_workflow",
+      "command": [
+        "python3",
+        "scripts/uv-authoring-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 9.150168666994432,
+      "log": "logs/uv_workflow.txt"
+    },
+    {
+      "name": "uv_schema",
+      "command": [
+        "python3",
+        "scripts/validate-uv-authoring-schema.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.27958295900316443,
+      "log": "logs/uv_schema.txt"
+    },
+    {
+      "name": "wasm_tests",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 118.71850154100684,
+      "log": "logs/wasm_tests.txt"
+    },
+    {
+      "name": "browser_build",
+      "command": [
+        "sh",
+        "scripts/build-web.sh"
+      ],
+      "exit_code": 0,
+      "seconds": 136.57940433399926,
+      "log": "logs/browser_build.txt"
+    },
+    {
+      "name": "uv_browser",
+      "command": [
+        "node",
+        "scripts/uv-authoring-browser.mjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.672438791996683,
+      "log": "logs/uv_browser.txt"
+    },
+    {
+      "name": "uv_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-uv-authoring-browser.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.20990841700404417,
+      "log": "logs/uv_cross_platform.txt"
+    },
+    {
+      "name": "native_tests",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 626.211172167008,
+      "log": "logs/native_tests.txt"
+    },
+    {
+      "name": "blend_workflow",
+      "command": [
+        "python3",
+        "scripts/blend-static-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 218.00644025001384,
+      "log": "logs/blend_workflow.txt"
+    },
+    {
+      "name": "blend_reference",
+      "command": [
+        "python3",
+        "scripts/compare-blend-reference.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1145148329960648,
+      "log": "logs/blend_reference.txt"
+    },
+    {
+      "name": "blend_schema",
+      "command": [
+        "python3",
+        "scripts/validate-blend-schema.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 74.98823683299997,
+      "log": "logs/blend_schema.txt"
+    },
+    {
+      "name": "blend_browser",
+      "command": [
+        "node",
+        "scripts/blend-static-browser.mjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 5.024291249996168,
+      "log": "logs/blend_browser.txt"
+    },
+    {
+      "name": "blend_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-blend-browser.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3059736669965787,
+      "log": "logs/blend_cross_platform.txt"
+    },
+    {
+      "name": "gpu_dielectric",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_dielectric",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 5.261353042005794,
+      "log": "logs/gpu_dielectric.txt"
+    },
+    {
+      "name": "gpu_surfaces",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_surfaces",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 1.8566702079988318,
+      "log": "logs/gpu_surfaces.txt"
+    },
+    {
+      "name": "secondary_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "secondary_textures_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 1.1256848330085631,
+      "log": "logs/secondary_gpu.txt"
+    },
+    {
+      "name": "gpu_alpha",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_alpha",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 8.410602041010861,
+      "log": "logs/gpu_alpha.txt"
+    },
+    {
+      "name": "gltf_export_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gltf_export_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 1.1198584999947343,
+      "log": "logs/gltf_export_gpu.txt"
+    },
+    {
+      "name": "vertex_colors_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "vertex_colors_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 1.2535034590109717,
+      "log": "logs/vertex_colors_gpu.txt"
+    },
+    {
+      "name": "named_uv_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "named_uv_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 0.9970688330067787,
+      "log": "logs/named_uv_gpu.txt"
+    },
+    {
+      "name": "morph_frame_regressions",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "morph_frames",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 11.318350041998201,
+      "log": "logs/morph_frame_regressions.txt"
+    },
+    {
+      "name": "morph_frame_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "morph_frames_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 4.9537373750063125,
+      "log": "logs/morph_frame_gpu.txt"
+    },
+    {
+      "name": "linux_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-unknown-linux-gnu",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 11.025953999997,
+      "log": "logs/linux_check.txt"
+    },
+    {
+      "name": "windows_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-pc-windows-msvc",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 10.389278374990681,
+      "log": "logs/windows_check.txt"
+    },
+    {
+      "name": "browser_clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "-p",
+        "render-web",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 13.961258832991007,
+      "log": "logs/browser_clippy.txt"
+    },
+    {
+      "name": "camera_regression",
+      "command": [
+        "python3",
+        "scripts/alpha-camera-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/camera-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 7.774575874995207,
+      "log": "logs/camera_regression.txt"
+    },
+    {
+      "name": "dependency_audit",
+      "command": [
+        "python3",
+        "scripts/dependency-audit.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5237724170001457,
+      "log": "logs/dependency_audit.txt"
+    },
+    {
+      "name": "animated_regression",
+      "command": [
+        "python3",
+        "scripts/animated-gltf-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/animated-regression",
+        "--gpu"
+      ],
+      "exit_code": 0,
+      "seconds": 4.901451958998223,
+      "log": "logs/animated_regression.txt"
+    },
+    {
+      "name": "shutter_regression",
+      "command": [
+        "python3",
+        "scripts/gpu-shutter-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/shutter-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 3.272238290999667,
+      "log": "logs/shutter_regression.txt"
+    },
+    {
+      "name": "sparse_regression",
+      "command": [
+        "python3",
+        "scripts/sparse-gltf-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/sparse-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 6.0008419579971815,
+      "log": "logs/sparse_regression.txt"
+    },
+    {
+      "name": "alpha_workflow",
+      "command": [
+        "python3",
+        "scripts/alpha-gltf-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/alpha-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 6.24182708299486,
+      "log": "logs/alpha_workflow.txt"
+    },
+    {
+      "name": "alpha_browser",
+      "command": [
+        "node",
+        "scripts/alpha-gltf-browser.mjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/alpha-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 1.301609083006042,
+      "log": "logs/alpha_browser.txt"
+    },
+    {
+      "name": "alpha_shutter_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/alpha-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 4.054191041999729,
+      "log": "logs/alpha_shutter_workflow.txt"
+    },
+    {
+      "name": "alpha_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/alpha-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5581795829930343,
+      "log": "logs/alpha_shutter_browser.txt"
+    },
+    {
+      "name": "named_uv_regression",
+      "command": [
+        "python3",
+        "scripts/named-uv-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/named-uv-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 1.8327166669914732,
+      "log": "logs/named_uv_regression.txt"
+    },
+    {
+      "name": "named_uv_browser",
+      "command": [
+        "node",
+        "scripts/named-uv-browser.mjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/named-uv-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.36419120800564997,
+      "log": "logs/named_uv_browser.txt"
+    },
+    {
+      "name": "named_uv_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-named-uv-browser.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/named-uv-regression",
+        "artifacts/uv-authoring/run-20260906T184750Z/named_uv_cross_platform.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.033455041993875057,
+      "log": "logs/named_uv_cross_platform.txt"
+    },
+    {
+      "name": "morph_workflow",
+      "command": [
+        "python3",
+        "scripts/morph-frames-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/morph-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 3.9459070000011707,
+      "log": "logs/morph_workflow.txt"
+    },
+    {
+      "name": "morph_browser",
+      "command": [
+        "node",
+        "scripts/morph-frames-browser.mjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/morph-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5019611250027083,
+      "log": "logs/morph_browser.txt"
+    },
+    {
+      "name": "vertex_color_workflow",
+      "command": [
+        "python3",
+        "scripts/vertex-colors-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/vertex-color-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 6.883605082999566,
+      "log": "logs/vertex_color_workflow.txt"
+    },
+    {
+      "name": "vertex_color_browser",
+      "command": [
+        "node",
+        "scripts/vertex-colors-browser.mjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/vertex-color-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.485184457997093,
+      "log": "logs/vertex_color_browser.txt"
+    },
+    {
+      "name": "export_workflow",
+      "command": [
+        "python3",
+        "scripts/gltf-export-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 26.068434500004514,
+      "log": "logs/export_workflow.txt"
+    },
+    {
+      "name": "export_schema",
+      "command": [
+        "python3",
+        "scripts/validate-gltf-export-schema.py",
+        "artifacts/uv-authoring/run-20260906T184750Z"
+      ],
+      "exit_code": 0,
+      "seconds": 3.3618620420020306,
+      "log": "logs/export_schema.txt"
+    },
+    {
+      "name": "export_source_validation",
+      "command": [
+        "node",
+        "scripts/validate-exported-glbs.cjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.34144366600958165,
+      "log": "logs/export_source_validation.txt"
+    },
+    {
+      "name": "export_browser",
+      "command": [
+        "node",
+        "scripts/gltf-export-browser.mjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.2973813749995315,
+      "log": "logs/export_browser.txt"
+    },
+    {
+      "name": "secondary_workflow",
+      "command": [
+        "python3",
+        "scripts/secondary-textures-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/secondary-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 15.506041833999916,
+      "log": "logs/secondary_workflow.txt"
+    },
+    {
+      "name": "secondary_browser",
+      "command": [
+        "node",
+        "scripts/secondary-textures-browser.mjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/secondary-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.969463999994332,
+      "log": "logs/secondary_browser.txt"
+    },
+    {
+      "name": "surface_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-surfaces-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/surface-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 45.13064166699769,
+      "log": "logs/surface_workflow.txt"
+    },
+    {
+      "name": "surface_browser",
+      "command": [
+        "node",
+        "scripts/gpu-surfaces-browser.mjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/surface-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.3813146669999696,
+      "log": "logs/surface_browser.txt"
+    },
+    {
+      "name": "conductor_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/conductor-shutter",
+        "{\"kind\": \"conductor\", \"eta\": [0.2, 0.9, 1.1], \"k\": [3, 2, 1.5]}"
+      ],
+      "exit_code": 0,
+      "seconds": 7.811454750000848,
+      "log": "logs/conductor_shutter.txt"
+    },
+    {
+      "name": "conductor_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/conductor-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6346837500022957,
+      "log": "logs/conductor_shutter_browser.txt"
+    },
+    {
+      "name": "coated_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/coated-shutter",
+        "{\"kind\": \"coated\", \"weight\": 0.7, \"ior\": 1.5, \"roughness\": 0.25}"
+      ],
+      "exit_code": 0,
+      "seconds": 6.7489100840030005,
+      "log": "logs/coated_shutter.txt"
+    },
+    {
+      "name": "coated_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/coated-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6208869170077378,
+      "log": "logs/coated_shutter_browser.txt"
+    },
+    {
+      "name": "dielectric_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-dielectric-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/dielectric-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 58.652906290997635,
+      "log": "logs/dielectric_workflow.txt"
+    },
+    {
+      "name": "dielectric_browser",
+      "command": [
+        "node",
+        "scripts/gpu-dielectric-browser.mjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/dielectric-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.9591601669962984,
+      "log": "logs/dielectric_browser.txt"
+    },
+    {
+      "name": "dielectric_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/dielectric-shutter",
+        "{\"kind\": \"dielectric\", \"ior\": 1.5}"
+      ],
+      "exit_code": 0,
+      "seconds": 4.274023916994338,
+      "log": "logs/dielectric_shutter.txt"
+    },
+    {
+      "name": "dielectric_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/dielectric-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5167493750050198,
+      "log": "logs/dielectric_shutter_browser.txt"
+    },
+    {
+      "name": "volume_workflow",
+      "command": [
+        "python3",
+        "scripts/volume-import-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/volume-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 18.22328925000329,
+      "log": "logs/volume_workflow.txt"
+    },
+    {
+      "name": "volume_schema",
+      "command": [
+        "python3",
+        "scripts/validate-volume-import-schema.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/volume-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 7.755234083000687,
+      "log": "logs/volume_schema.txt"
+    },
+    {
+      "name": "volume_browser",
+      "command": [
+        "node",
+        "scripts/volume-import-browser.mjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/volume-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0922869999922113,
+      "log": "logs/volume_browser.txt"
+    },
+    {
+      "name": "hair_workflow",
+      "command": [
+        "python3",
+        "scripts/hair-import-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/hair-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 23.82248812499165,
+      "log": "logs/hair_workflow.txt"
+    },
+    {
+      "name": "hair_schema",
+      "command": [
+        "python3",
+        "scripts/validate-hair-import-schema.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/hair-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6845880000037141,
+      "log": "logs/hair_schema.txt"
+    },
+    {
+      "name": "hair_browser",
+      "command": [
+        "node",
+        "scripts/hair-import-browser.mjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/hair-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.84996454200882,
+      "log": "logs/hair_browser.txt"
+    },
+    {
+      "name": "geometry_regression",
+      "command": [
+        "target/debug/render-host",
+        "geometry-workflow",
+        "artifacts/uv-authoring/run-20260906T184750Z/geometry-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 1.4259687080048025,
+      "log": "logs/geometry_regression.txt"
+    },
+    {
+      "name": "groom_regression",
+      "command": [
+        "target/debug/render-host",
+        "groom-workflow",
+        "artifacts/uv-authoring/run-20260906T184750Z/groom-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5027247499965597,
+      "log": "logs/groom_regression.txt"
+    },
+    {
+      "name": "curve_color_workflow",
+      "command": [
+        "python3",
+        "scripts/curve-colors-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 25.80349445900356,
+      "log": "logs/curve_color_workflow.txt"
+    },
+    {
+      "name": "curve_color_schema",
+      "command": [
+        "python3",
+        "scripts/validate-curve-colors-schema.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3595361670013517,
+      "log": "logs/curve_color_schema.txt"
+    },
+    {
+      "name": "curve_color_glb_validation",
+      "command": [
+        "node",
+        "scripts/validate-exported-glbs.cjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.17377691599540412,
+      "log": "logs/curve_color_glb_validation.txt"
+    },
+    {
+      "name": "curve_color_browser",
+      "command": [
+        "node",
+        "scripts/curve-colors-browser.mjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.1511068749969127,
+      "log": "logs/curve_color_browser.txt"
+    },
+    {
+      "name": "media_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_media",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 4.536028374990565,
+      "log": "logs/media_gpu.txt"
+    },
+    {
+      "name": "media_exact_rays",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-gpu",
+        "--locked",
+        "--offline",
+        "half_open_unit_cells",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 0.4783928749966435,
+      "log": "logs/media_exact_rays.txt"
+    },
+    {
+      "name": "media_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-media-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/media-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 45.935555957999895,
+      "log": "logs/media_workflow.txt"
+    },
+    {
+      "name": "media_browser",
+      "command": [
+        "node",
+        "scripts/gpu-media-browser.mjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/media-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.3797468330012634,
+      "log": "logs/media_browser.txt"
+    },
+    {
+      "name": "media_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-media-shutter-workflow.py",
+        "artifacts/uv-authoring/run-20260906T184750Z/media-shutter",
+        "artifacts/uv-authoring/run-20260906T184750Z/media-workflow/homogeneous-archive/document/document.json"
+      ],
+      "exit_code": 0,
+      "seconds": 2.3490887919906527,
+      "log": "logs/media_shutter.txt"
+    },
+    {
+      "name": "media_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-media-shutter-browser.mjs",
+        "artifacts/uv-authoring/run-20260906T184750Z/media-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.40464970900211483,
+      "log": "logs/media_shutter_browser.txt"
+    }
+  ],
+  "build_environment": {
+    "CARGO_NET_OFFLINE": "true",
+    "CARGO_BUILD_JOBS": "2",
+    "CARGO_INCREMENTAL": "0",
+    "CARGO_PROFILE_DEV_DEBUG": "0",
+    "CARGO_PROFILE_TEST_DEBUG": "0",
+    "CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUNNER": "wasm-bindgen-test-runner",
+    "RENDER_TEST_ORIGIN": "http://127.0.0.1:8780"
+  },
+  "native_test_count": 197,
+  "wasm_test_count": 172
+}

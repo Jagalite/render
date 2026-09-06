@@ -294,6 +294,7 @@ impl Displacement {
             .iter()
             .map(|c| vertex_uv[c.vertex as usize])
             .collect();
+        derived.default_uv_attribute = mesh.default_uv_attribute;
         if uv_attributes.is_empty() {
             derived.attributes.insert(
                 "uv".into(),

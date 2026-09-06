@@ -114,6 +114,8 @@ pub struct Mesh {
     pub face_ids: Vec<u64>,
     pub corner_ids: Vec<u64>,
     pub attributes: BTreeMap<String, Attribute>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub default_uv_attribute: Option<Id>,
 }
 impl Mesh {
     pub fn from_polygons(
@@ -131,6 +133,7 @@ impl Mesh {
             face_ids: vec![],
             corner_ids: vec![],
             attributes: BTreeMap::new(),
+            default_uv_attribute: None,
         };
         let mut lookup = BTreeMap::new();
         for face in faces {
@@ -276,6 +279,9 @@ impl Mesh {
                 ));
             }
         }
+        if let Some(id) = self.default_uv_attribute {
+            self.uv_values(id)?;
+        }
         Ok(())
     }
     pub fn color_attribute(&self) -> Option<&Attribute> {
@@ -308,15 +314,18 @@ impl Mesh {
         self.validate()?;
         Ok(digest(&canonical(self)?))
     }
+    pub fn default_uv_id(&self) -> Option<Id> {
+        self.default_uv_attribute.or_else(|| {
+            self.attributes
+                .values()
+                .find(|a| a.semantic == "uv")
+                .map(|a| a.id)
+        })
+    }
     pub fn uv(&self, corner: usize) -> Vec2 {
-        self.attributes
-            .values()
-            .find_map(|a| match (&a.values, &a.domain, a.semantic.as_str()) {
-                (AttributeValues::Vec2(v), Domain::Corner, "uv") => {
-                    Some(Vec2::from_array(v[corner]))
-                }
-                _ => None,
-            })
+        self.default_uv_id()
+            .and_then(|id| self.uv_values(id).ok())
+            .map(|values| Vec2::from_array(values[corner]))
             .unwrap_or(Vec2::ZERO)
     }
     pub fn uv_values(&self, id: Id) -> Result<&[[f32; 2]]> {

@@ -421,6 +421,22 @@
             "method",
             "request"
           ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "author_uv"
+            },
+            "request": {
+              "$ref": "#/$defs/uv_request"
+            }
+          },
+          "required": [
+            "method",
+            "request"
+          ]
         }
       ]
     }
@@ -1033,6 +1049,228 @@
         "meters_per_unit",
         "allow_principled_approximation",
         "allow_point_light_approximation"
+      ]
+    },
+    "uv_pin": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "corner": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 18446744073709551615
+        },
+        "uv": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": -1024,
+            "maximum": 1024
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "required": [
+        "corner",
+        "uv"
+      ]
+    },
+    "uv_unwrap": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "attribute": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "attribute_id": {
+          "$ref": "#/$defs/id"
+        },
+        "seams": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 18446744073709551615
+          },
+          "minItems": 0,
+          "maxItems": 65536,
+          "uniqueItems": true
+        },
+        "pins": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uv_pin"
+          },
+          "minItems": 0,
+          "maxItems": 4096
+        }
+      },
+      "required": [
+        "attribute",
+        "attribute_id",
+        "seams",
+        "pins"
+      ]
+    },
+    "uv_atlas": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4096
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4096
+        },
+        "padding_pixels": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 32
+        },
+        "pixels_per_meter": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 65536
+        }
+      },
+      "required": [
+        "width",
+        "height",
+        "padding_pixels",
+        "pixels_per_meter"
+      ]
+    },
+    "uv_pack": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "atlas": {
+          "$ref": "#/$defs/uv_atlas"
+        },
+        "pins": {
+          "enum": [
+            "preserve",
+            "transform_with_chart"
+          ]
+        }
+      },
+      "required": [
+        "atlas",
+        "pins"
+      ]
+    },
+    "uv_request": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "const": 0
+        },
+        "base_revision": {
+          "$ref": "#/$defs/revision"
+        },
+        "idempotency_key": {
+          "$ref": "#/$defs/key"
+        },
+        "entity": {
+          "$ref": "#/$defs/id"
+        },
+        "source_mesh": {
+          "$ref": "#/$defs/revision"
+        },
+        "source_uv_asset": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/revision"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "operation": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "kind": {
+                  "const": "unwrap"
+                },
+                "settings": {
+                  "$ref": "#/$defs/uv_unwrap"
+                }
+              },
+              "required": [
+                "kind",
+                "settings"
+              ]
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "kind": {
+                  "const": "pack"
+                },
+                "attribute": {
+                  "$ref": "#/$defs/id"
+                },
+                "settings": {
+                  "$ref": "#/$defs/uv_pack"
+                }
+              },
+              "required": [
+                "kind",
+                "attribute",
+                "settings"
+              ]
+            }
+          ]
+        },
+        "budget": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "max_output_bytes": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 33554432
+            },
+            "max_solver_work": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 16777216
+            }
+          },
+          "required": [
+            "max_output_bytes",
+            "max_solver_work"
+          ]
+        },
+        "max_added_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 18446744073709551615
+        }
+      },
+      "required": [
+        "version",
+        "base_revision",
+        "idempotency_key",
+        "entity",
+        "source_mesh",
+        "source_uv_asset",
+        "operation",
+        "budget",
+        "max_added_bytes"
       ]
     }
   }

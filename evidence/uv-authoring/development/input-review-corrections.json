@@ -1,0 +1,47 @@
+{
+  "scope": "Corrections before the UV workflow is executed; no Rust, Cargo, embedded create/unwrap input or render reference changed",
+  "reason": [
+    "A 64x64 atlas fits six automatic-anchor box charts at 12 pixels/meter with one pixel of padding; two pixels is retained as a no-fit negative",
+    "Old clients encounter unknown journal commands before snapshot validation; check journal rejection and an independent snapshot17 checkpoint"
+  ],
+  "changes": [
+    {
+      "path": "fixtures/uv-authoring/generate.py",
+      "before_sha256": "15a623f37a227f7c0dd0e89610c2d9dabbcfe9b298bc97a8964d0a5ba245881f",
+      "after_sha256": "29d88760060e8ce7feffe35ed2cfbc13c0d373fdbeb8aec0c208726fe01e8f5e"
+    },
+    {
+      "path": "fixtures/uv-authoring/data/pack.json",
+      "before_sha256": "84dab47f6010ccba710145310fd422591b9946929c7f0ed58e6ec06de5d22a0d",
+      "after_sha256": "f5918ed7fd219c8d370e1c09e58ff446efac7d847edf5b8a87210d500aaef86c"
+    },
+    {
+      "path": "scripts/uv-authoring-workflow.py",
+      "before_sha256": "566a11f532e61b42ccd23e03d6c25b402909d7a6079c0994e5bf7d0e499ad198",
+      "after_sha256": "b382057212e18d4e6d323d6cf6f5dfa499d4b1e33b4a2650dbacdceb5356486e"
+    },
+    {
+      "path": "fixtures/uv-authoring/README.md",
+      "before_sha256": "a8addec9a7bccf96d13f3519ab837887f8be6b6c5ed64b611976e6cdeb14b90c",
+      "after_sha256": "89699c8fa62bffbc1b766f97c9cdf07bac0f90f600bd012efa85934d0f166868"
+    }
+  ],
+  "compiled_fixture_inputs_unchanged": [
+    {
+      "path": "fixtures/uv-authoring/data/create.json",
+      "bytes": 6516,
+      "sha256": "3c1d4182667214bac0d285be8edb2c51bc61d5e7ccf937068eb96594db47431c"
+    },
+    {
+      "path": "fixtures/uv-authoring/data/unwrap.json",
+      "bytes": 201,
+      "sha256": "f53796fc258d631bf683d343e4ae873f5f90579a62228bd4e5cf51cef9487177"
+    }
+  ],
+  "additional_pre_execution_check": {
+    "path": "scripts/uv-authoring-workflow.py",
+    "before_sha256": "b382057212e18d4e6d323d6cf6f5dfa499d4b1e33b4a2650dbacdceb5356486e",
+    "after_sha256": "6d38490ba2f73fb917c9bcfe509ddc8e55fa1eefbe938750b2a4d72eec3eb884",
+    "reason": "Compare the original constant-UV checker rendering with authored UV output to verify meaningful texture sampling changes"
+  }
+}

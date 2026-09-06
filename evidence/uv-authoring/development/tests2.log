@@ -1,0 +1,24 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 23.84s
+     Running unittests src/lib.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/render_core-6a918d07e2b3a755)
+
+running 6 tests
+test uv::solver::analytic_rectangular_least_squares ... ok
+test uv::solver::pivot_order_does_not_change_solution ... ok
+test uv::solver::rank_and_cancellation ... ok
+test blend::reader::tests::work_limits_cancellation_and_declarators_are_explicit ... ok
+test blend::reader::tests::pointer_width_endianness_layout_and_numeric_values_agree ... ok
+test blend::reader::tests::malformed_truncated_ambiguous_and_nonfinite_inputs_fail ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/uv_authoring.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/uv_authoring-b11df070b9b80792)
+
+running 4 tests
+test planar_and_developable_charts_match_independent_coordinates ... ok
+test invalid_constraints_budgets_and_cancellation_are_bounded ... ok
+test closed_surfaces_need_seams_and_keep_other_attributes ... ok
+test atlas_packing_is_bounded_deterministic_and_pin_explicit ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+

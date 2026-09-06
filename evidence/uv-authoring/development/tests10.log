@@ -1,0 +1,45 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 34.06s
+     Running unittests src/lib.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/render_core-6a918d07e2b3a755)
+
+running 6 tests
+test uv::solver::analytic_rectangular_least_squares ... ok
+test uv::solver::pivot_order_does_not_change_solution ... ok
+test uv::solver::rank_and_cancellation ... ok
+test blend::reader::tests::pointer_width_endianness_layout_and_numeric_values_agree ... ok
+test blend::reader::tests::work_limits_cancellation_and_declarators_are_explicit ... ok
+test blend::reader::tests::malformed_truncated_ambiguous_and_nonfinite_inputs_fail ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/uv_authoring.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/uv_authoring-b11df070b9b80792)
+
+running 12 tests
+test fully_pinned_flips_and_global_overlaps_reject ... ok
+test boundary_touch_and_authored_packing_frames_reject ... ok
+test invalid_constraints_budgets_and_cancellation_are_bounded ... ok
+test closed_surfaces_need_seams_and_keep_other_attributes ... ok
+test planar_and_developable_charts_match_independent_coordinates ... ok
+test named_sets_keep_legacy_default_and_version_the_explicit_metadata ... ok
+test atlas_packing_is_bounded_deterministic_and_pin_explicit ... ok
+test failed_publication_permissions_stale_selection_and_cancellation_are_atomic ... ok
+test transactions_preserve_instances_multiple_sets_and_retry_identity ... ok
+test public_agent_uv_workflow_checks_permission_cancellation_and_durability ... ok
+test evaluated_animation_keeps_authored_uv_constraints_on_the_source_only ... FAILED
+test scale_normalization_and_named_set_limit_are_explicit ... ok
+
+failures:
+
+---- evaluated_animation_keeps_authored_uv_constraints_on_the_source_only stdout ----
+
+thread 'evaluated_animation_keeps_authored_uv_constraints_on_the_source_only' (6030679) panicked at crates/core/tests/uv_authoring.rs:968:38:
+called `Result::unwrap()` on an `Err` value: Error { code: "deformation", stage: "validation", message: "skin/morph requires an authored polygon mesh", retryable: false, context: {} }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    evaluated_animation_keeps_authored_uv_constraints_on_the_source_only
+
+test result: FAILED. 11 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.31s
+
+error: test failed, to rerun pass `-p render-core --test uv_authoring`

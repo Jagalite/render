@@ -467,6 +467,7 @@ fn finish(
         }
         output.attributes.insert(name.clone(), out);
     }
+    output.default_uv_attribute = source.default_uv_attribute;
     output.triangles()?;
     output = EditMesh::new(&output)?.commit()?.mesh;
     let bytes = canonical(&output)?.len();

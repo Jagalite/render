@@ -341,7 +341,7 @@
     {
       "id": "M10",
       "title": "UVs, painting, sculpting and retopology",
-      "status": "planned",
+      "status": "in_progress",
       "dependencies": [
         "M09"
       ],
@@ -362,7 +362,15 @@
         "No automatic identity preservation through arbitrary remeshing"
       ],
       "calendar_estimate": null,
-      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence.",
+      "engine_subgates": [
+        {
+          "id": "uv-authoring",
+          "status": "validated_experimental_profile",
+          "evidence": "evidence/uv-authoring/README.md"
+        }
+      ],
+      "remaining": "Tiled painting, masks/layers/baking, sculpting, multiresolution, remesh, retopology, long-gesture recovery and the deferred M09 interactive demonstration."
     },
     {
       "id": "M11",

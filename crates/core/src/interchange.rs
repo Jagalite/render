@@ -56,8 +56,7 @@ fn report_omitted_attributes(mesh: &Mesh, losses: &mut Vec<String>) {
     for (name, attribute) in mesh
         .attributes
         .iter()
-        .filter(|(_, a)| a.semantic == "uv")
-        .skip(1)
+        .filter(|(_, a)| a.semantic == "uv" && Some(a.id) != mesh.default_uv_id())
     {
         losses.push(format!("additional UV attribute {name:?} ({:032x}) omitted by the single-UV geometry export profile", attribute.id.0));
     }

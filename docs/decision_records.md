@@ -500,3 +500,24 @@ record. The adapter is a selected static profile, not arbitrary Blender evaluati
 Further versions, animation, node graphs, modifiers, textures, smoothing, area lights,
 compressed containers or writing edited Blender files require their own fixtures,
 resource bounds, compatibility tests and native/browser workflows.
+
+## ADR-034 — UV authoring prepares ordinary mesh and constraint transactions
+
+**Decision:** Store coordinates in typed corner attributes and retain
+named seam/pin/atlas intent in immutable mesh-bound UV assets. Prepare bounded
+cancellable unwrap/packing outside document command execution, then publish through
+ordinary permission/revision/idempotency/storage checks. Snapshot 17 and R3DMESH1
+version the explicit default UV reference and authoring metadata; legacy absent
+fields remain omitted.
+
+**Integration review:** Adding a new attribute must preserve the previous default
+UV selection, other named sets and shared instances. Topology changes clear or
+replace stale constraint bindings explicitly. Disposable animated meshes retain UV
+coordinates while the authored constraint binding stays on their source. Public
+IDs never expose chart solver indices. Packing pin movement is an explicit policy.
+
+**Acceptance boundary:** The [qualified profile](uv_authoring.md) is an M10 engine
+subgate. Numerical, transaction, archive, CLI and packaged browser tests passed,
+with evidence in `evidence/uv-authoring`. Dense QR and rectangle placement have small fixed limits;
+there is no general chart segmentation, optimal packing or interactive authoring
+claim. Painting, sculpting and retopology remain independent requirements.

@@ -11,7 +11,7 @@
         "M05",
         "M13"
       ],
-      "qualification": "Transactional typed snapshot-v15 assets and shared geometry, procedural/groom/media bindings, animation and imaging; no full editor.",
+      "qualification": "Transactional typed assets and shared geometry through snapshot version 17, with procedural, groom, media and UV bindings, animation and imaging; no full editor.",
       "capability_axes": {
         "native_authoring": "implemented_api_v0",
         "native_evaluation": "implemented_polygon_profile",
@@ -287,6 +287,32 @@
         "evidence/gpu-surfaces/README.md",
         "evidence/gpu-dielectric/README.md",
         "evidence/gpu-media/README.md"
+      ]
+    },
+    {
+      "id": "uv",
+      "family": "UV authoring",
+      "status": "implemented_experimental_profile",
+      "first_useful_gate": "M10",
+      "broader_gates": [
+        "M14"
+      ],
+      "qualification": "uv-lscm-disk-v1 and uv-rectangle-atlas-v1; stable corner pins/edge seams, eight named constraint sets, explicit default UV identity, bounded QR and deterministic atlas placement. M10 remains incomplete.",
+      "capability_axes": {
+        "native_authoring": "author_uv_through_ordinary_revision_checked_transactions",
+        "native_evaluation": "validated_disk_charts_and_packed_atlases",
+        "final_render": "validated_CPU_Metal_WebGPU_checker_workflow",
+        "preview": "shared_Rust_rendering; no_UV_editor",
+        "human_editing": "planned_M09",
+        "import": "existing_native_corner_UV_attributes; no_new_external_format_profile",
+        "export": "native_constraints_and_version17_archives; existing_scoped_OBJ_GLB_coordinate_exports"
+      },
+      "platform_profiles": {
+        "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
+        "browser_local": "validated_Chromium_Rust_Wasm_OPFS_WebGPU; synchronous_bounded_authoring"
+      },
+      "evidence": [
+        "evidence/uv-authoring/README.md"
       ]
     },
     {

@@ -1,0 +1,30 @@
+{
+  "status": "validated_experimental_profile",
+  "algorithm": "area-weighted conformal least squares with pinned chart vertices; column-pivoted Householder QR",
+  "primary_reference": {
+    "authors": [
+      "Bruno Levy",
+      "Sylvain Petitjean",
+      "Nicolas Ray",
+      "Jerome Maillot"
+    ],
+    "title": "Least Squares Conformal Maps for Automatic Texture Atlas Generation",
+    "venue": "SIGGRAPH 2002",
+    "url": "https://www.cs.jhu.edu/~misha/ReadingSeminar/Papers/Levy02.pdf",
+    "sections": "2.3-2.6"
+  },
+  "implementation": "Original Rust implementation from the mathematical description; no copied implementation source",
+  "dependencies_added": [],
+  "reference_code_imported": false,
+  "foreign_computational_runtime": false,
+  "numeric_tests": [
+    "independent rectangular least-squares solution",
+    "pivot permutation and rank rejection",
+    "planar and developable coordinates",
+    "scale normalization",
+    "stored f32 flips, overlap and boundary contact",
+    "pin preservation and measured atlas density",
+    "nondevelopable disk symmetry solution with nonzero conformal residual"
+  ],
+  "packing": "Original deterministic bounded rectangle heuristic; no optimality claim"
+}

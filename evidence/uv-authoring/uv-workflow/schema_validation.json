@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "positive": 3,
+  "negative": [
+    "unknown-field",
+    "unknown-method",
+    "future-version",
+    "bad-source-hash",
+    "private-identity",
+    "zero-budget",
+    "excess-work",
+    "bad-attribute",
+    "pin-shape",
+    "pin-range",
+    "duplicate-seam",
+    "pin-policy",
+    "zero-atlas",
+    "negative-density"
+  ],
+  "boundary": "shape only; Rust enforces UTF-8 byte counts, finite numbers, identities, topology and atomic publication"
+}

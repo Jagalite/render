@@ -28,6 +28,9 @@ pub struct Edits {
 #[serde(tag = "method", rename_all = "snake_case", deny_unknown_fields)]
 pub enum Operation {
     Inspect,
+    AuthorUv {
+        request: uv::Request,
+    },
     ImportBlend {
         bytes: Vec<u8>,
         policy: blend::Policy,
@@ -474,6 +477,26 @@ impl Session {
         }
         use Operation::*;
         match request.operation {
+            AuthorUv { request } => {
+                let prepared = uv::prepare(&self.document, principal, &request, &mut cancelled)?;
+                let receipt =
+                    if let Some(receipt) = self.document.retry(principal, &prepared.transaction)? {
+                        receipt
+                    } else {
+                        let candidate = self.document.prepare(principal, &prepared.transaction)?;
+                        profile(candidate.snapshot())?;
+                        Evaluator::default()
+                            .evaluate_with_cancel(candidate.snapshot(), &mut cancelled)?;
+                        if cancelled() {
+                            return Err(Error::new(
+                                "cancelled",
+                                "UV authoring cancelled before publication",
+                            ));
+                        }
+                        self.document.commit(candidate)?
+                    };
+                Ok(json!({"receipt":receipt,"report":prepared.report,"uv_asset":prepared.uv_asset}))
+            }
             Inspect => Ok(
                 json!({"revision":self.document.snapshot().revision()?,"document_digest":digest(&canonical(&self.document)?),"snapshot":self.document.snapshot(),"protected_digest":protected_digest(self.document.snapshot())?,"branches":self.branches.iter().filter(|(_,b)| b.owner == principal.id).map(|(n,_)| n).collect::<Vec<_>>(),"profile":"agent-rendering-v0","durability":"memory; explicit host save/export required"}),
             ),
@@ -832,7 +855,8 @@ impl Session {
     ) -> Result<Value> {
         let root_mutation = matches!(
             &request.operation,
-            Operation::ImportBlend { .. }
+            Operation::AuthorUv { .. }
+                | Operation::ImportBlend { .. }
                 | Operation::ImportHair { .. }
                 | Operation::ImportVol { .. }
                 | Operation::ImportGlb { .. }

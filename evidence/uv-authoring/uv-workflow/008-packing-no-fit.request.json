@@ -1,0 +1,32 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "author_uv",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:18dbeec2204098f2231903d1f67f55ff4da7d3b4d1ab82d5ecd6980ca11c607d",
+      "idempotency_key": "uv-workflow-pack-no-fit",
+      "entity": "00000000000000000000000000000001",
+      "source_mesh": "sha256:5dbe06f850cab31156ab5f27bc07bb3122cedd4cdced089f0806d45d0bfff7f1",
+      "source_uv_asset": "sha256:b960b888895ede06169442316dfeaa664b358b1f4ee1d547d22458e0080c0796",
+      "operation": {
+        "kind": "pack",
+        "attribute": "000000000000000000000000000001f4",
+        "settings": {
+          "atlas": {
+            "width": 64,
+            "height": 64,
+            "padding_pixels": 2,
+            "pixels_per_meter": 12
+          },
+          "pins": "preserve"
+        }
+      },
+      "budget": {
+        "max_output_bytes": 4194304,
+        "max_solver_work": 16777216
+      },
+      "max_added_bytes": 4194304
+    }
+  }
+}

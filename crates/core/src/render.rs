@@ -327,12 +327,15 @@ impl Evaluator {
             let geometry = if let Some(g) = self.cache.get(key) {
                 g.clone()
             } else {
-                let uv_attributes = mesh
+                let mut uv_attributes = mesh
                     .attributes
                     .values()
                     .filter(|a| a.semantic == "uv")
                     .map(|a| a.id)
                     .collect::<Vec<_>>();
+                // Keep the explicit default in slot zero for unnamed bindings
+                // and interchange. Legacy meshes retain their original name order.
+                uv_attributes.sort_by_key(|id| Some(*id) != mesh.default_uv_attribute);
                 if uv_attributes.len() > 8 {
                     return Err(Error::new(
                         "budget",

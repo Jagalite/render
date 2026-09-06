@@ -1,0 +1,166 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/crates/core)
+error[E0599]: no function or associated item named `identity` found for struct `render_core::document::Transform` in the current scope
+   --> crates/core/tests/uv_authoring.rs:501:39
+    |
+501 |                 transform: Transform::identity(),
+    |                                       ^^^^^^^^ function or associated item not found in `render_core::document::Transform`
+    |
+note: if you're trying to build a new `render_core::document::Transform`, consider using `render_core::document::Transform::translation` which returns `render_core::document::Transform`
+   --> crates/core/src/document.rs:55:5
+    |
+ 55 |     pub fn translation(x: f64, y: f64, z: f64) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0308]: mismatched types
+    --> crates/core/tests/uv_authoring.rs:506:41
+     |
+ 506 |     doc.execute(&fixtures::principal(), &init).unwrap();
+     |         -------                         ^^^^^ expected `&Request`, found `&Result<Request, Error>`
+     |         |
+     |         arguments to this method are incorrect
+     |
+     = note: expected reference `&render_core::document::Request`
+                found reference `&Result<render_core::document::Request, render_core::Error>`
+note: method defined here
+    --> crates/core/src/document.rs:1109:12
+     |
+1109 |     pub fn execute(&mut self, p: &Principal, r: &Request) -> Result<Receipt> {
+     |            ^^^^^^^
+
+error[E0560]: struct `render_core::document::Request` has no field named `entity`
+   --> crates/core/tests/uv_authoring.rs:511:9
+    |
+511 |         entity: Id(951),
+    |         ^^^^^^ `render_core::document::Request` does not have this field
+    |
+    = note: available fields are: `commands`
+
+error[E0560]: struct `render_core::document::Request` has no field named `source_mesh`
+   --> crates/core/tests/uv_authoring.rs:512:9
+    |
+512 |         source_mesh: source,
+    |         ^^^^^^^^^^^ `render_core::document::Request` does not have this field
+    |
+    = note: available fields are: `commands`
+
+error[E0560]: struct `render_core::document::Request` has no field named `source_uv_asset`
+   --> crates/core/tests/uv_authoring.rs:513:9
+    |
+513 |         source_uv_asset: None,
+    |         ^^^^^^^^^^^^^^^ `render_core::document::Request` does not have this field
+    |
+    = note: available fields are: `commands`
+
+error[E0560]: struct `render_core::document::Request` has no field named `operation`
+   --> crates/core/tests/uv_authoring.rs:514:9
+    |
+514 |         operation: Operation::Unwrap {
+    |         ^^^^^^^^^ `render_core::document::Request` does not have this field
+    |
+    = note: available fields are: `commands`
+
+error[E0560]: struct `render_core::document::Request` has no field named `budget`
+   --> crates/core/tests/uv_authoring.rs:517:9
+    |
+517 |         budget: Budget::default(),
+    |         ^^^^^^ `render_core::document::Request` does not have this field
+    |
+    = note: available fields are: `commands`
+
+error[E0308]: mismatched types
+   --> crates/core/tests/uv_authoring.rs:520:11
+    |
+520 |     (doc, request)
+    |           ^^^^^^^ expected `render_core::uv::Request`, found `render_core::document::Request`
+
+error[E0560]: struct `render_core::document::Request` has no field named `source_mesh`
+   --> crates/core/tests/uv_authoring.rs:563:9
+    |
+563 |         source_mesh: source,
+    |         ^^^^^^^^^^^ `render_core::document::Request` does not have this field
+    |
+    = note: available fields are: `version`, `commands`, `max_added_bytes`
+
+error[E0560]: struct `render_core::document::Request` has no field named `source_uv_asset`
+   --> crates/core/tests/uv_authoring.rs:564:9
+    |
+564 |         source_uv_asset: Some(prepared.uv_asset),
+    |         ^^^^^^^^^^^^^^^ `render_core::document::Request` does not have this field
+    |
+    = note: available fields are: `version`, `commands`, `max_added_bytes`
+
+error[E0560]: struct `render_core::document::Request` has no field named `operation`
+   --> crates/core/tests/uv_authoring.rs:565:9
+    |
+565 |         operation: Operation::Unwrap { settings },
+    |         ^^^^^^^^^ `render_core::document::Request` does not have this field
+    |
+    = note: available fields are: `version`, `commands`, `max_added_bytes`
+
+error[E0308]: mismatched types
+   --> crates/core/tests/uv_authoring.rs:568:42
+    |
+568 |     let next = prepare(&doc, &principal, &second, || false).unwrap();
+    |                -------                   ^^^^^^^ expected `render_core::uv::Request`, found `render_core::document::Request`
+    |                |
+    |                arguments to this function are incorrect
+    |
+    = note: expected reference `&render_core::uv::Request`
+               found reference `&render_core::document::Request`
+note: function defined here
+   --> crates/core/src/uv/authoring.rs:59:8
+    |
+ 59 | pub fn prepare(
+    |        ^^^^^^^
+
+error[E0609]: no field `source_uv_asset` on type `render_core::document::Request`
+   --> crates/core/tests/uv_authoring.rs:590:47
+    |
+590 |         previous.snapshot().uv_assets[&second.source_uv_asset.clone().unwrap()]
+    |                                               ^^^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `version`, `base_revision`, `idempotency_key`, `commands`, `max_added_bytes`
+
+error[E0609]: no field `budget` on type `render_core::document::Request`
+   --> crates/core/tests/uv_authoring.rs:607:15
+    |
+607 |     too_small.budget.max_output_bytes = next.report.output_bytes - 1;
+    |               ^^^^^^ unknown field
+    |
+    = note: available fields are: `version`, `base_revision`, `idempotency_key`, `commands`, `max_added_bytes`
+
+error[E0308]: mismatched types
+   --> crates/core/tests/uv_authoring.rs:609:40
+    |
+609 |         prepare(&previous, &principal, &too_small, || false)
+    |         -------                        ^^^^^^^^^^ expected `render_core::uv::Request`, found `render_core::document::Request`
+    |         |
+    |         arguments to this function are incorrect
+    |
+    = note: expected reference `&render_core::uv::Request`
+               found reference `&render_core::document::Request`
+note: function defined here
+   --> crates/core/src/uv/authoring.rs:59:8
+    |
+ 59 | pub fn prepare(
+    |        ^^^^^^^
+
+error[E0308]: mismatched types
+    --> crates/core/tests/uv_authoring.rs:636:29
+     |
+ 636 |     doc.execute(&principal, &clear).unwrap();
+     |         -------             ^^^^^^ expected `&Request`, found `&Result<Request, Error>`
+     |         |
+     |         arguments to this method are incorrect
+     |
+     = note: expected reference `&render_core::document::Request`
+                found reference `&Result<render_core::document::Request, render_core::Error>`
+note: method defined here
+    --> crates/core/src/document.rs:1109:12
+     |
+1109 |     pub fn execute(&mut self, p: &Principal, r: &Request) -> Result<Receipt> {
+     |            ^^^^^^^
+
+Some errors have detailed explanations: E0308, E0560, E0599, E0609.
+For more information about an error, try `rustc --explain E0308`.
+error: could not compile `render-core` (test "uv_authoring") due to 16 previous errors

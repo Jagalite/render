@@ -170,3 +170,10 @@ The pinned `export` operation also accepts `content.format: "glb"` with an optio
 exact-time pose and required bounded policy. [The export contract](gltf_export.md)
 defines preserved PBR/attribute semantics, explicit losses, publication and budgets.
 The workflow is `python3 scripts/gltf-export-workflow.py artifacts/my-export-run`.
+
+`author_uv` accepts a versioned UV request with an entity, source mesh, optional
+source UV asset, revision, retry key and byte/work budgets. It unwraps or packs
+named corner coordinates and publishes normal mesh/UV asset commands through the
+native journal. The result contains a durable receipt, numeric report and complete
+UV asset key. See [UV authoring](uv_authoring.md) for seams, pins, atlas policies,
+version 17 compatibility, cancellation limits and the validated workflow.

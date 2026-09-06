@@ -32,6 +32,7 @@ pub mod storage;
 pub mod textures;
 pub mod topology;
 pub mod uploads;
+pub mod uv;
 pub mod volume_import;
 pub mod volumes;
 

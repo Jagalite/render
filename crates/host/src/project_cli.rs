@@ -129,6 +129,9 @@ enum Operation {
     Apply {
         request: document::Request,
     },
+    AuthorUv {
+        request: Box<uv::Request>,
+    },
     Import {
         base_revision: String,
         idempotency_key: String,
@@ -545,6 +548,20 @@ fn execute(root: &Path, operation: Operation, control: &mut Control) -> Result<V
                 &request,
             )?;
             Ok(json!({"receipt":receipt}))
+        }
+        Operation::AuthorUv { request } => {
+            let prepared = uv::prepare(&doc, &principal(), &request, || control.cancelled())?;
+            control.check()?;
+            let receipt = durable_execute(
+                &mut CancellableStore {
+                    store: &mut store,
+                    control,
+                },
+                &mut doc,
+                &principal(),
+                &prepared.transaction,
+            )?;
+            Ok(json!({"receipt":receipt,"report":prepared.report,"uv_asset":prepared.uv_asset}))
         }
         Operation::Import {
             base_revision,

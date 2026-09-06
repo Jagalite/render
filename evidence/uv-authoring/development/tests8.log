@@ -1,0 +1,20 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/crates/core)
+error[E0603]: struct `Time` is private
+   --> crates/core/tests/uv_authoring.rs:938:20
+    |
+938 |         animation::Time::new(1, 1).unwrap(),
+    |                    ^^^^ private struct
+    |
+note: the struct `Time` is defined here
+   --> crates/core/src/animation.rs:3:32
+    |
+  3 | use crate::{Error, Id, Result, Time, canonical, digest, document::*};
+    |                                ^^^^
+help: import `Time` directly
+    |
+938 -         animation::Time::new(1, 1).unwrap(),
+938 +         render_core::Time(1, 1).unwrap(),
+    |
+
+For more information about this error, try `rustc --explain E0603`.
+error: could not compile `render-core` (test "uv_authoring") due to 1 previous error

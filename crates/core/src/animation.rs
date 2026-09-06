@@ -873,6 +873,8 @@ fn evaluate_sample(
             .get_mut(entity)
             .expect("validated deformed entity")
             .mesh = Some(key);
+        // UV constraints refer to authored mesh space, not disposable posed geometry.
+        out.uv_bindings.remove(&entity);
     }
     // Poses and deformed meshes are disposable evaluated state, not rest state.
     out.animation = None;

@@ -1,0 +1,22 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/crates/core)
+error[E0433]: cannot find module or crate `wasm_bindgen_test` in this scope
+   --> crates/core/src/uv/solver.rs:105:36
+    |
+105 | #[cfg_attr(target_arch = "wasm32", wasm_bindgen_test::wasm_bindgen_test)]
+    |                                    ^^^^^^^^^^^^^^^^^ use of unresolved module or unlinked crate `wasm_bindgen_test`
+
+error[E0433]: cannot find module or crate `wasm_bindgen_test` in this scope
+   --> crates/core/src/uv/solver.rs:118:36
+    |
+118 | #[cfg_attr(target_arch = "wasm32", wasm_bindgen_test::wasm_bindgen_test)]
+    |                                    ^^^^^^^^^^^^^^^^^ use of unresolved module or unlinked crate `wasm_bindgen_test`
+
+error[E0433]: cannot find module or crate `wasm_bindgen_test` in this scope
+   --> crates/core/src/uv/solver.rs:136:36
+    |
+136 | #[cfg_attr(target_arch = "wasm32", wasm_bindgen_test::wasm_bindgen_test)]
+    |                                    ^^^^^^^^^^^^^^^^^ use of unresolved module or unlinked crate `wasm_bindgen_test`
+
+For more information about this error, try `rustc --explain E0433`.
+error: could not compile `render-core` (lib) due to 3 previous errors
+warning: build failed, waiting for other jobs to finish...

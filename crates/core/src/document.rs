@@ -303,6 +303,10 @@ pub struct Snapshot {
     #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
     pub source_assets: BTreeMap<String, Arc<crate::source::Asset>>,
     #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub uv_assets: BTreeMap<String, Arc<crate::uv::Asset>>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub uv_bindings: BTreeMap<Id, String>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
     pub volume_bindings: BTreeMap<Id, String>,
     #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
     pub grooms: BTreeMap<Id, crate::groom::Groom>,
@@ -334,6 +338,8 @@ impl Snapshot {
             geometry_bindings: BTreeMap::new(),
             volume_assets: BTreeMap::new(),
             source_assets: BTreeMap::new(),
+            uv_assets: BTreeMap::new(),
+            uv_bindings: BTreeMap::new(),
             volume_bindings: BTreeMap::new(),
             grooms: BTreeMap::new(),
             animation: None,
@@ -349,7 +355,13 @@ impl Snapshot {
         Ok(digest(&canonical(self)?))
     }
     pub fn validate(&self) -> Result<()> {
-        if self.version > 16
+        if self.version > 17
+            || (self.version < 17 && (!self.uv_assets.is_empty() || !self.uv_bindings.is_empty()))
+            || (self.version < 17
+                && self
+                    .meshes
+                    .values()
+                    .any(|m| m.default_uv_attribute.is_some()))
             || (self.version < 16 && !self.source_assets.is_empty())
             || (self.version < 15
                 && (self.geometry_assets.values().any(|a| a.has_colors())
@@ -445,6 +457,37 @@ impl Snapshot {
                 return Err(Error::new(
                     "reference",
                     "typed geometry attachment is missing or conflicts with a mesh",
+                ));
+            }
+        }
+        if self.uv_assets.len() > 64 {
+            return Err(Error::new("budget", "at most 64 retained UV assets"));
+        }
+        for (key, asset) in &self.uv_assets {
+            if asset.content_id()? != *key {
+                return Err(Error::new("integrity", "UV asset digest mismatch"));
+            }
+            asset.validate(
+                self.meshes
+                    .get(&asset.mesh)
+                    .ok_or_else(|| Error::new("reference", "UV asset mesh missing"))?,
+            )?;
+        }
+        for (entity, key) in &self.uv_bindings {
+            let asset = self
+                .uv_assets
+                .get(key)
+                .ok_or_else(|| Error::new("reference", "UV binding asset missing"))?;
+            let target = self
+                .entities
+                .get(*entity)
+                .ok_or_else(|| Error::new("reference", "UV binding entity missing"))?;
+            if target.mesh.as_ref() != Some(&asset.mesh)
+                || self.procedural_bindings.contains_key(entity)
+            {
+                return Err(Error::new(
+                    "stale_selection",
+                    "UV binding requires its authored mesh and no procedural override",
                 ));
             }
         }
@@ -724,6 +767,7 @@ impl Snapshot {
         let (mut out, hidden) = self.composition()?;
         for id in hidden {
             out.geometry_bindings.remove(&id);
+            out.uv_bindings.remove(&id);
             out.volume_bindings.remove(&id);
             out.grooms.remove(&id);
             out.procedural_bindings.remove(&id);
@@ -772,6 +816,15 @@ pub enum Command {
     SetGroom {
         entity: Id,
         groom: Option<crate::groom::Groom>,
+    },
+    PutUvAsset {
+        asset: crate::uv::Asset,
+    },
+    SetUvAsset {
+        entity: Id,
+        source_mesh: String,
+        source_asset: Option<String>,
+        asset: Option<String>,
     },
     PutSource {
         asset: crate::source::Asset,
@@ -1219,6 +1272,39 @@ fn apply(s: &mut Snapshot, c: &Command) -> Result<()> {
                     5
                 });
         }
+        Command::PutUvAsset { asset } => {
+            s.uv_assets
+                .insert(asset.content_id()?, Arc::new(asset.clone()));
+            s.version = s.version.max(17);
+        }
+        Command::SetUvAsset {
+            entity: id,
+            source_mesh,
+            source_asset,
+            asset,
+        } => {
+            if entity(s, *id)?.mesh.as_ref() != Some(source_mesh)
+                || s.uv_bindings.get(id) != source_asset.as_ref()
+            {
+                return Err(Error::new(
+                    "stale_selection",
+                    "UV attachment source mesh or asset changed",
+                ));
+            }
+            if let Some(key) = asset {
+                let mesh = s
+                    .uv_assets
+                    .get(key)
+                    .ok_or_else(|| Error::new("reference", "UV attachment asset missing"))?
+                    .mesh
+                    .clone();
+                entity(s, *id)?.mesh = Some(mesh);
+                s.uv_bindings.insert(*id, key.clone());
+            } else {
+                s.uv_bindings.remove(id);
+            }
+            s.version = s.version.max(17);
+        }
         Command::PutSource { asset } => {
             s.source_assets
                 .insert(asset.content_id()?, Arc::new(asset.clone()));
@@ -1283,6 +1369,9 @@ fn apply(s: &mut Snapshot, c: &Command) -> Result<()> {
                 .max(if settings.camera.lens.is_some() { 2 } else { 1 });
         }
         Command::PutMesh { mesh } => {
+            if mesh.default_uv_attribute.is_some() {
+                s.version = s.version.max(17);
+            }
             let id = mesh.content_id()?;
             if mesh
                 .attributes

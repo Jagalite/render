@@ -1,0 +1,41 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "author_uv",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:902e53bc8fe9d6f06742260a886d60bcb931a8451fbac1d87e9fed56f0c563b0",
+      "idempotency_key": "uv-workflow-unwrap",
+      "entity": "00000000000000000000000000000001",
+      "source_mesh": "sha256:037bcbc22af99f0fc2f7e82b4e06107943fcaa5a18f137257e754307b5099ad8",
+      "source_uv_asset": null,
+      "operation": {
+        "kind": "unwrap",
+        "settings": {
+          "attribute": "PaintUV",
+          "attribute_id": "000000000000000000000000000001f4",
+          "seams": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "pins": []
+        }
+      },
+      "budget": {
+        "max_output_bytes": 4194304,
+        "max_solver_work": 16777216
+      },
+      "max_added_bytes": 4194304
+    }
+  }
+}

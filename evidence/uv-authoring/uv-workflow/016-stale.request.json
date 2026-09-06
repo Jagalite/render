@@ -1,0 +1,41 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "author_uv",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:fb12cc36750126bf66a7553b9ce93a65f69d1f381c7a5d1d69787e944ff06d79",
+      "idempotency_key": "uv-workflow-stale",
+      "entity": "00000000000000000000000000000001",
+      "source_mesh": "sha256:0a61c43bddabcbcaa64b49fbcf8fef6df44d76aab9508f0efe927521577ae5b7",
+      "source_uv_asset": "sha256:86a222c006c777f3426feccb782cb4e70320aa58e04664ed5305cc0351ca058a",
+      "operation": {
+        "kind": "unwrap",
+        "settings": {
+          "attribute": "AnotherUV",
+          "attribute_id": "000000000000000000000000000001f5",
+          "seams": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "pins": []
+        }
+      },
+      "budget": {
+        "max_output_bytes": 4194304,
+        "max_solver_work": 16777216
+      },
+      "max_added_bytes": 4194304
+    }
+  }
+}

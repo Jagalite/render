@@ -1,0 +1,24 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/crates/core)
+error: float literals must have an integer part
+    --> crates/core/tests/uv_authoring.rs:1203:52
+     |
+1203 |     assert!(report.least_squares_residual.unwrap()>.01);
+     |                                                    ^^^
+     |
+help: must have an integer part
+     |
+1203 |     assert!(report.least_squares_residual.unwrap()>0.01);
+     |                                                    +
+
+error: float literals must have an integer part
+    --> crates/core/tests/uv_authoring.rs:1204:44
+     |
+1204 |     assert!(report.qr_pivot_ratio.unwrap()>.9);
+     |                                            ^^
+     |
+help: must have an integer part
+     |
+1204 |     assert!(report.qr_pivot_ratio.unwrap()>0.9);
+     |                                            +
+
+error: could not compile `render-core` (test "uv_authoring") due to 2 previous errors

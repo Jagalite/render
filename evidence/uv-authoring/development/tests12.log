@@ -1,0 +1,35 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/crates/core)
+error[E0308]: mismatched types
+    --> crates/core/tests/uv_authoring.rs:1121:9
+     |
+1119 |     snapshot.materials.insert(
+     |                        ------ arguments to this method are incorrect
+1120 |         Id(2),
+1121 |         std::sync::Arc::new(Material::diffuse(Id(2), [0.5; 3])),
+     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `Material`, found `Arc<Material>`
+     |
+     = note: expected struct `render_core::document::Material`
+                found struct `Arc<render_core::document::Material>`
+help: the return type of this call is `Arc<render_core::document::Material>` due to the type of the argument passed
+    --> crates/core/tests/uv_authoring.rs:1119:5
+     |
+1119 | /     snapshot.materials.insert(
+1120 | |         Id(2),
+1121 | |         std::sync::Arc::new(Material::diffuse(Id(2), [0.5; 3])),
+     | |         ------------------------------------------------------- this argument influences the return type of `insert`
+1122 | |     );
+     | |_____^
+note: method defined here
+    --> /rustc/59807616e1fa2540724bfbac14d7976d7e4a3860/library/alloc/src/collections/btree/map.rs:1046:11
+
+error[E0609]: no field `entity` on type `&&Instance`
+    --> crates/core/tests/uv_authoring.rs:1131:21
+     |
+1131 |         .find(|i| i.entity == Id(951))
+     |                     ^^^^^^ unknown field
+     |
+     = note: available fields are: `id`, `geometry`, `geometry_id`, `transform`, `inverse` ... and 2 others
+
+Some errors have detailed explanations: E0308, E0609.
+For more information about an error, try `rustc --explain E0308`.
+error: could not compile `render-core` (test "uv_authoring") due to 2 previous errors

@@ -1,0 +1,527 @@
+{
+  "status": "passed",
+  "comparisons": [
+    {
+      "workflow": "media-workflow",
+      "case": "homogeneous",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 1.8796368961293553e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "homogeneous",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 2.910418916979296e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "vacuum",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 4.7683715642676816e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "vacuum",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 4.7683715642676816e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "tiny",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 6.130903784651309e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "tiny",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 7.305115068412249e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "small-optical-depth",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 3.726924990843372e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "small-optical-depth",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 3.726924990843372e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "series-boundary",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 4.9200687635142515e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "series-boundary",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 3.2442867325954694e-07
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "opaque",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 9.499490256914545e-11
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "opaque",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 9.499490256914545e-11
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "overlap",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 2.2926882392582115e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "overlap",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 3.1475680062342803e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "ordered-overlap",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 1.9040418297588957e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "ordered-overlap",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 4.267230946375378e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "sparse-hole",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 2.2926882337070964e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "sparse-hole",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 5.2729204724766277e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "metric-scale",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 2.2926882392582115e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "metric-scale",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 3.1475680062342803e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "negative-scale",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 1.8796368961293553e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "negative-scale",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 2.910418916979296e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "sheared",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 1.8796368961293553e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "sheared",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 2.910418916979296e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "near-clip",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 3.6599020480920785e-09
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "near-clip",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 3.6599020480920785e-09
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "far-clip",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 3.6599020480920785e-09
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "far-clip",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 3.6599020480920785e-09
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "inside",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 1.1024858526109682e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "inside",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 3.152648342386044e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "miss",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 1.1920928966180355e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "miss",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 1.1920928966180355e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "zero-density-emission",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 4.7683715642676816e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "zero-density-emission",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 4.7683715642676816e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "surface-depth1",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "cpu",
+      "max_absolute_error": 0.0
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "surface-depth1",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "cpu",
+      "max_absolute_error": 4.470348358154297e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "surface-depth2",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "cpu",
+      "max_absolute_error": 0.0
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "surface-depth2",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "cpu",
+      "max_absolute_error": 8.940696716308594e-08
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "surface-depth4",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "cpu",
+      "max_absolute_error": 0.0
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "surface-depth4",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "cpu",
+      "max_absolute_error": 1.1920928955078125e-07
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "surface-depth8",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "cpu",
+      "max_absolute_error": 0.0
+    },
+    {
+      "workflow": "media-workflow",
+      "case": "surface-depth8",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "cpu",
+      "max_absolute_error": 1.4901161193847656e-07
+    },
+    {
+      "workflow": "volume-workflow",
+      "case": "homogeneous",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 9.149755175741348e-09
+    },
+    {
+      "workflow": "volume-workflow",
+      "case": "homogeneous",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 2.0652567211953965e-08
+    },
+    {
+      "workflow": "volume-workflow",
+      "case": "emission",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 2.522744479982464e-08
+    },
+    {
+      "workflow": "volume-workflow",
+      "case": "emission",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 2.522744479982464e-08
+    },
+    {
+      "workflow": "volume-workflow",
+      "case": "axis",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 1.490975669315997e-09
+    },
+    {
+      "workflow": "volume-workflow",
+      "case": "axis",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 2.234314629145917e-09
+    },
+    {
+      "workflow": "volume-workflow",
+      "case": "empty",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 0.0
+    },
+    {
+      "workflow": "volume-workflow",
+      "case": "empty",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 0.0
+    },
+    {
+      "workflow": "volume-workflow",
+      "case": "emission-only",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 0.0
+    },
+    {
+      "workflow": "volume-workflow",
+      "case": "emission-only",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 0.0
+    },
+    {
+      "workflow": "volume-workflow",
+      "case": "unit-cube",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 9.149755175741348e-09
+    },
+    {
+      "workflow": "volume-workflow",
+      "case": "unit-cube",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 5.296595984027874e-08
+    },
+    {
+      "workflow": "volume-workflow",
+      "case": "scaled",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 1.7453331002670325e-09
+    },
+    {
+      "workflow": "volume-workflow",
+      "case": "scaled",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 1.664649429411469e-08
+    },
+    {
+      "workflow": "volume-workflow",
+      "case": "sparse",
+      "browser": "cpu",
+      "cpu_pixels_identical": true,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 2.597651849178817e-08
+    },
+    {
+      "workflow": "volume-workflow",
+      "case": "sparse",
+      "browser": "gpu",
+      "cpu_pixels_identical": false,
+      "passes_identical": true,
+      "reference": "analytic",
+      "max_absolute_error": 7.813139712986583e-08
+    }
+  ]
+}

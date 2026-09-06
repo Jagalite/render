@@ -83,3 +83,9 @@ Begin with branches and conservative revision checks. Permit automatic merges on
 A successful agent benchmark must measure task validity, destructive mistakes, retry behavior, cost, convergence and ability to explain changes. Human preference can rank aesthetics, but must not replace machine-verifiable correctness for scene invariants.
 
 The additive [M06–M08 contracts](m07_m08.md) expose ordinary typed authoring commands, pinned animated previews, CPU extended root rendering and imaging products. These operations preserve the existing narrow ABI and restricted static-variant commit contract.
+
+The shared agent `author_uv` method uses the same bounded computation and ordinary
+transactions as the CLI. Its reviewed request schema is in
+`schemas/agent_request.schema.json`; UV constraints, default-set semantics and
+browser cancellation limits are specified in [UV authoring](uv_authoring.md).
+The existing narrow ABI is unchanged.

@@ -1,0 +1,3690 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/000-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.9535598329966888
+    },
+    {
+      "name": "empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/001-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014110333999269642
+    },
+    {
+      "name": "create",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/002-create.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10849354199308436
+    },
+    {
+      "name": "created",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/003-created.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020497332996455953
+    },
+    {
+      "name": "source-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/004-source-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.362117416007095
+    },
+    {
+      "name": "unwrap",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/005-unwrap.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1443486659991322,
+      "resources": {
+        "maximum resident set size": 18792448,
+        "peak memory footprint": 3294272
+      }
+    },
+    {
+      "name": "unwrap-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/006-unwrap-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.047176750013022684
+    },
+    {
+      "name": "before-pack",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/007-before-pack.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02192333400307689
+    },
+    {
+      "name": "packing-no-fit",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/008-packing-no-fit.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "uv_atlas",
+      "seconds": 0.018282500008353963
+    },
+    {
+      "name": "pack",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/009-pack.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.17848000000230968,
+      "resources": {
+        "maximum resident set size": 18841600,
+        "peak memory footprint": 3540096
+      }
+    },
+    {
+      "name": "pack-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/010-pack-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06410691600467544
+    },
+    {
+      "name": "before-second-set",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/011-before-second-set.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.031988749993615784
+    },
+    {
+      "name": "second-set",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/012-second-set.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2267453749955166,
+      "resources": {
+        "maximum resident set size": 19529728,
+        "peak memory footprint": 3982464
+      }
+    },
+    {
+      "name": "second-set-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/013-second-set-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09419895900646225
+    },
+    {
+      "name": "authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/014-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.050731166993500665
+    },
+    {
+      "name": "first-retry-after-two-edits",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/015-first-retry-after-two-edits.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08628462499473244
+    },
+    {
+      "name": "stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/016-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.06377466701087542
+    },
+    {
+      "name": "stale-selection",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/017-stale-selection.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_selection",
+      "seconds": 0.05030141600582283
+    },
+    {
+      "name": "cancelled",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/018-cancelled.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.007024958002148196
+    },
+    {
+      "name": "output-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/019-output-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.04496800000197254
+    },
+    {
+      "name": "mutation-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/020-mutation-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.1000033330055885
+    },
+    {
+      "name": "failures-atomic",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/021-failures-atomic.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05428662500344217
+    },
+    {
+      "name": "render-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/022-render-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.24027720799495,
+      "resources": {
+        "maximum resident set size": 19644416,
+        "peak memory footprint": 4129920
+      }
+    },
+    {
+      "name": "render-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/023-render-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.7733337080135243,
+      "resources": {
+        "maximum resident set size": 35897344,
+        "peak memory footprint": 11748992
+      }
+    },
+    {
+      "name": "export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/024-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.17539929199847393
+    },
+    {
+      "name": "restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/025-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1811260420072358
+    },
+    {
+      "name": "restored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/026-restored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.033853250002721325
+    },
+    {
+      "name": "restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/artifacts/uv-authoring/run-20260906T184750Z/uv-workflow/027-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22045841699582525
+    }
+  ],
+  "variants": [],
+  "settings": {
+    "width": 32,
+    "height": 32,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "light": {
+      "position": [
+        2,
+        4,
+        3
+      ],
+      "intensity": [
+        32,
+        32,
+        32
+      ]
+    },
+    "camera": {
+      "position": [
+        3,
+        2,
+        4
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65
+    }
+  },
+  "old_client": {
+    "sha256": "4af4585f10d6604d0bdecd2f9c86d7230859e74d3320d5517635f20073092264",
+    "journal_error": "encoding",
+    "checkpoint_error": "schema_version",
+    "state_not_created": true
+  },
+  "create": {
+    "version": 0,
+    "base_revision": "sha256:ac9716f7f084f4a0a43c8cafb18b269a9eea32a4b17fa9a816230921396a4260",
+    "idempotency_key": "uv-workflow-create",
+    "max_added_bytes": 4194304,
+    "commands": [
+      {
+        "operation": "put_material",
+        "material": {
+          "id": "00000000000000000000000000000002",
+          "base_color": [
+            0.8,
+            0.8,
+            0.8
+          ],
+          "emission": [
+            0,
+            0,
+            0
+          ],
+          "roughness": 1,
+          "metallic": 0,
+          "texture": {
+            "width": 8,
+            "height": 8,
+            "linear_rgb": [
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0.1,
+                0.2,
+                0.8
+              ]
+            ]
+          }
+        }
+      },
+      {
+        "operation": "create_entity",
+        "entity": {
+          "id": "00000000000000000000000000000001",
+          "name": "UV authored checker box",
+          "parent": null,
+          "mesh": null,
+          "material": "00000000000000000000000000000002",
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        }
+      },
+      {
+        "operation": "create_box",
+        "entity": "00000000000000000000000000000001",
+        "min": [
+          -0.5,
+          -0.5,
+          -0.5
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "operation": "set_render_settings",
+        "settings": {
+          "width": 32,
+          "height": 32,
+          "samples": 8,
+          "seed": 73,
+          "max_depth": 2,
+          "max_bytes": 16777216,
+          "environment": [
+            0.1,
+            0.1,
+            0.1
+          ],
+          "light": {
+            "position": [
+              2,
+              4,
+              3
+            ],
+            "intensity": [
+              32,
+              32,
+              32
+            ]
+          },
+          "camera": {
+            "position": [
+              3,
+              2,
+              4
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "vertical_fov_radians": 0.65
+          }
+        }
+      }
+    ]
+  },
+  "operations": [
+    {
+      "operation": {
+        "method": "author_uv",
+        "request": {
+          "version": 0,
+          "base_revision": "sha256:902e53bc8fe9d6f06742260a886d60bcb931a8451fbac1d87e9fed56f0c563b0",
+          "idempotency_key": "uv-workflow-unwrap",
+          "entity": "00000000000000000000000000000001",
+          "source_mesh": "sha256:037bcbc22af99f0fc2f7e82b4e06107943fcaa5a18f137257e754307b5099ad8",
+          "source_uv_asset": null,
+          "operation": {
+            "kind": "unwrap",
+            "settings": {
+              "attribute": "PaintUV",
+              "attribute_id": "000000000000000000000000000001f4",
+              "seams": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "pins": []
+            }
+          },
+          "budget": {
+            "max_output_bytes": 4194304,
+            "max_solver_work": 16777216
+          },
+          "max_added_bytes": 4194304
+        }
+      },
+      "result": {
+        "receipt": {
+          "base_revision": "sha256:902e53bc8fe9d6f06742260a886d60bcb931a8451fbac1d87e9fed56f0c563b0",
+          "command_count": 3,
+          "delta_digest": "sha256:2426c357b2f6f777cfd339a31d8b3aaa616fb0835bb9492a68b1c97da8591049",
+          "document_id": "000000000000000000000000000003b6",
+          "durable": true,
+          "revision": "sha256:18dbeec2204098f2231903d1f67f55ff4da7d3b4d1ab82d5ecd6980ca11c607d"
+        },
+        "report": {
+          "charts": [
+            {
+              "anchor_face": 1,
+              "boundary_vertices": 4,
+              "bounds": [
+                [
+                  0.0,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.5
+                ]
+              ],
+              "corners": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "faces": [
+                1
+              ],
+              "least_squares_residual": 3.188872858294072e-16,
+              "qr_pivot_ratio": 0.9999999999999999,
+              "surface_area_square_meters": 1.0,
+              "triangles": 2,
+              "uv_area": 0.5,
+              "vertices": 4
+            },
+            {
+              "anchor_face": 2,
+              "boundary_vertices": 4,
+              "bounds": [
+                [
+                  0.0,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.5
+                ]
+              ],
+              "corners": [
+                5,
+                6,
+                7,
+                8
+              ],
+              "faces": [
+                2
+              ],
+              "least_squares_residual": 3.188872858294072e-16,
+              "qr_pivot_ratio": 0.9999999999999999,
+              "surface_area_square_meters": 1.0,
+              "triangles": 2,
+              "uv_area": 0.5,
+              "vertices": 4
+            },
+            {
+              "anchor_face": 3,
+              "boundary_vertices": 4,
+              "bounds": [
+                [
+                  0.0,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.5
+                ]
+              ],
+              "corners": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "faces": [
+                3
+              ],
+              "least_squares_residual": 3.188872858294072e-16,
+              "qr_pivot_ratio": 0.9999999999999999,
+              "surface_area_square_meters": 1.0,
+              "triangles": 2,
+              "uv_area": 0.5,
+              "vertices": 4
+            },
+            {
+              "anchor_face": 4,
+              "boundary_vertices": 4,
+              "bounds": [
+                [
+                  0.0,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.5
+                ]
+              ],
+              "corners": [
+                13,
+                14,
+                15,
+                16
+              ],
+              "faces": [
+                4
+              ],
+              "least_squares_residual": 3.188872858294072e-16,
+              "qr_pivot_ratio": 0.9999999999999999,
+              "surface_area_square_meters": 1.0,
+              "triangles": 2,
+              "uv_area": 0.5,
+              "vertices": 4
+            },
+            {
+              "anchor_face": 5,
+              "boundary_vertices": 4,
+              "bounds": [
+                [
+                  0.0,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.5
+                ]
+              ],
+              "corners": [
+                17,
+                18,
+                19,
+                20
+              ],
+              "faces": [
+                5
+              ],
+              "least_squares_residual": 3.188872858294072e-16,
+              "qr_pivot_ratio": 0.9999999999999999,
+              "surface_area_square_meters": 1.0,
+              "triangles": 2,
+              "uv_area": 0.5,
+              "vertices": 4
+            },
+            {
+              "anchor_face": 6,
+              "boundary_vertices": 4,
+              "bounds": [
+                [
+                  0.0,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.5
+                ]
+              ],
+              "corners": [
+                21,
+                22,
+                23,
+                24
+              ],
+              "faces": [
+                6
+              ],
+              "least_squares_residual": 3.188872858294072e-16,
+              "qr_pivot_ratio": 0.9999999999999999,
+              "surface_area_square_meters": 1.0,
+              "triangles": 2,
+              "uv_area": 0.5,
+              "vertices": 4
+            }
+          ],
+          "layout": "sha256:c621b663eca95085b5eead06dfe2f2d851309ff80a12783c983e90b7efc331da",
+          "output_bytes": 1828,
+          "output_mesh": "sha256:5dbe06f850cab31156ab5f27bc07bb3122cedd4cdced089f0806d45d0bfff7f1",
+          "packing": null,
+          "profile": "uv-lscm-disk-v1",
+          "solver_work": 384,
+          "source_mesh": "sha256:037bcbc22af99f0fc2f7e82b4e06107943fcaa5a18f137257e754307b5099ad8"
+        },
+        "uv_asset": "sha256:b960b888895ede06169442316dfeaa664b358b1f4ee1d547d22458e0080c0796"
+      }
+    },
+    {
+      "operation": {
+        "method": "author_uv",
+        "request": {
+          "version": 0,
+          "base_revision": "sha256:18dbeec2204098f2231903d1f67f55ff4da7d3b4d1ab82d5ecd6980ca11c607d",
+          "idempotency_key": "uv-workflow-pack",
+          "entity": "00000000000000000000000000000001",
+          "source_mesh": "sha256:5dbe06f850cab31156ab5f27bc07bb3122cedd4cdced089f0806d45d0bfff7f1",
+          "source_uv_asset": "sha256:b960b888895ede06169442316dfeaa664b358b1f4ee1d547d22458e0080c0796",
+          "operation": {
+            "kind": "pack",
+            "attribute": "000000000000000000000000000001f4",
+            "settings": {
+              "atlas": {
+                "width": 64,
+                "height": 64,
+                "padding_pixels": 1,
+                "pixels_per_meter": 12
+              },
+              "pins": "preserve"
+            }
+          },
+          "budget": {
+            "max_output_bytes": 4194304,
+            "max_solver_work": 16777216
+          },
+          "max_added_bytes": 4194304
+        }
+      },
+      "result": {
+        "receipt": {
+          "base_revision": "sha256:18dbeec2204098f2231903d1f67f55ff4da7d3b4d1ab82d5ecd6980ca11c607d",
+          "command_count": 3,
+          "delta_digest": "sha256:d77aeae4eb62610e6918a24688a9d89090b85d053e5f411f3505f8d5c1f6dd9b",
+          "document_id": "000000000000000000000000000003b6",
+          "durable": true,
+          "revision": "sha256:fb12cc36750126bf66a7553b9ce93a65f69d1f381c7a5d1d69787e944ff06d79"
+        },
+        "report": {
+          "charts": [
+            {
+              "anchor_face": 1,
+              "boundary_vertices": 4,
+              "bounds": [
+                [
+                  0.03125,
+                  0.03125
+                ],
+                [
+                  0.2964150309562683,
+                  0.2964150309562683
+                ]
+              ],
+              "corners": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "faces": [
+                1
+              ],
+              "least_squares_residual": null,
+              "qr_pivot_ratio": null,
+              "surface_area_square_meters": 1.0,
+              "triangles": 2,
+              "uv_area": 0.035156246821019366,
+              "vertices": 4
+            },
+            {
+              "anchor_face": 2,
+              "boundary_vertices": 4,
+              "bounds": [
+                [
+                  0.359375,
+                  0.03125
+                ],
+                [
+                  0.6245400309562683,
+                  0.2964150309562683
+                ]
+              ],
+              "corners": [
+                5,
+                6,
+                7,
+                8
+              ],
+              "faces": [
+                2
+              ],
+              "least_squares_residual": null,
+              "qr_pivot_ratio": null,
+              "surface_area_square_meters": 1.0,
+              "triangles": 2,
+              "uv_area": 0.035156246821019366,
+              "vertices": 4
+            },
+            {
+              "anchor_face": 3,
+              "boundary_vertices": 4,
+              "bounds": [
+                [
+                  0.6875,
+                  0.03125
+                ],
+                [
+                  0.9526650309562683,
+                  0.2964150309562683
+                ]
+              ],
+              "corners": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "faces": [
+                3
+              ],
+              "least_squares_residual": null,
+              "qr_pivot_ratio": null,
+              "surface_area_square_meters": 1.0,
+              "triangles": 2,
+              "uv_area": 0.035156246821019366,
+              "vertices": 4
+            },
+            {
+              "anchor_face": 4,
+              "boundary_vertices": 4,
+              "bounds": [
+                [
+                  0.03125,
+                  0.359375
+                ],
+                [
+                  0.2964150309562683,
+                  0.6245400309562683
+                ]
+              ],
+              "corners": [
+                13,
+                14,
+                15,
+                16
+              ],
+              "faces": [
+                4
+              ],
+              "least_squares_residual": null,
+              "qr_pivot_ratio": null,
+              "surface_area_square_meters": 1.0,
+              "triangles": 2,
+              "uv_area": 0.035156246821019366,
+              "vertices": 4
+            },
+            {
+              "anchor_face": 5,
+              "boundary_vertices": 4,
+              "bounds": [
+                [
+                  0.359375,
+                  0.359375
+                ],
+                [
+                  0.6245400309562683,
+                  0.6245400309562683
+                ]
+              ],
+              "corners": [
+                17,
+                18,
+                19,
+                20
+              ],
+              "faces": [
+                5
+              ],
+              "least_squares_residual": null,
+              "qr_pivot_ratio": null,
+              "surface_area_square_meters": 1.0,
+              "triangles": 2,
+              "uv_area": 0.035156246821019366,
+              "vertices": 4
+            },
+            {
+              "anchor_face": 6,
+              "boundary_vertices": 4,
+              "bounds": [
+                [
+                  0.6875,
+                  0.359375
+                ],
+                [
+                  0.9526650309562683,
+                  0.6245400309562683
+                ]
+              ],
+              "corners": [
+                21,
+                22,
+                23,
+                24
+              ],
+              "faces": [
+                6
+              ],
+              "least_squares_residual": null,
+              "qr_pivot_ratio": null,
+              "surface_area_square_meters": 1.0,
+              "triangles": 2,
+              "uv_area": 0.035156246821019366,
+              "vertices": 4
+            }
+          ],
+          "layout": "sha256:f48e20f3670fae664f0e499365cfe90af70af3c7deacb0015a55f1f869a6b0ce",
+          "output_bytes": 2496,
+          "output_mesh": "sha256:0a61c43bddabcbcaa64b49fbcf8fef6df44d76aab9508f0efe927521577ae5b7",
+          "packing": {
+            "allocated_pixels": 2646,
+            "atlas_pixels": 4096,
+            "guard_pixels": 1,
+            "pins": "preserve",
+            "placement_candidates": 24,
+            "surface_occupancy": 0.2109374809261162,
+            "transforms": [
+              {
+                "anchor_face": 1,
+                "preserved_pins": false,
+                "uv_offset": [
+                  0.03125,
+                  0.16383252147247768
+                ],
+                "uv_scale": [
+                  0.26516504294495535,
+                  0.26516504294495535
+                ]
+              },
+              {
+                "anchor_face": 2,
+                "preserved_pins": false,
+                "uv_offset": [
+                  0.359375,
+                  0.16383252147247768
+                ],
+                "uv_scale": [
+                  0.26516504294495535,
+                  0.26516504294495535
+                ]
+              },
+              {
+                "anchor_face": 3,
+                "preserved_pins": false,
+                "uv_offset": [
+                  0.6875,
+                  0.16383252147247768
+                ],
+                "uv_scale": [
+                  0.26516504294495535,
+                  0.26516504294495535
+                ]
+              },
+              {
+                "anchor_face": 4,
+                "preserved_pins": false,
+                "uv_offset": [
+                  0.03125,
+                  0.4919575214724777
+                ],
+                "uv_scale": [
+                  0.26516504294495535,
+                  0.26516504294495535
+                ]
+              },
+              {
+                "anchor_face": 5,
+                "preserved_pins": false,
+                "uv_offset": [
+                  0.359375,
+                  0.4919575214724777
+                ],
+                "uv_scale": [
+                  0.26516504294495535,
+                  0.26516504294495535
+                ]
+              },
+              {
+                "anchor_face": 6,
+                "preserved_pins": false,
+                "uv_offset": [
+                  0.6875,
+                  0.4919575214724777
+                ],
+                "uv_scale": [
+                  0.26516504294495535,
+                  0.26516504294495535
+                ]
+              }
+            ]
+          },
+          "profile": "uv-rectangle-atlas-v1",
+          "solver_work": 0,
+          "source_mesh": "sha256:5dbe06f850cab31156ab5f27bc07bb3122cedd4cdced089f0806d45d0bfff7f1"
+        },
+        "uv_asset": "sha256:86a222c006c777f3426feccb782cb4e70320aa58e04664ed5305cc0351ca058a"
+      }
+    },
+    {
+      "operation": {
+        "method": "author_uv",
+        "request": {
+          "version": 0,
+          "base_revision": "sha256:fb12cc36750126bf66a7553b9ce93a65f69d1f381c7a5d1d69787e944ff06d79",
+          "idempotency_key": "uv-workflow-second-set",
+          "entity": "00000000000000000000000000000001",
+          "source_mesh": "sha256:0a61c43bddabcbcaa64b49fbcf8fef6df44d76aab9508f0efe927521577ae5b7",
+          "source_uv_asset": "sha256:86a222c006c777f3426feccb782cb4e70320aa58e04664ed5305cc0351ca058a",
+          "operation": {
+            "kind": "unwrap",
+            "settings": {
+              "attribute": "AnotherUV",
+              "attribute_id": "000000000000000000000000000001f5",
+              "seams": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "pins": []
+            }
+          },
+          "budget": {
+            "max_output_bytes": 4194304,
+            "max_solver_work": 16777216
+          },
+          "max_added_bytes": 4194304
+        }
+      },
+      "result": {
+        "receipt": {
+          "base_revision": "sha256:fb12cc36750126bf66a7553b9ce93a65f69d1f381c7a5d1d69787e944ff06d79",
+          "command_count": 3,
+          "delta_digest": "sha256:dbe98eb14ddf0eaa19b8a1f30b6ac226f3dc5d6160fa3b6896d94d79569d0044",
+          "document_id": "000000000000000000000000000003b6",
+          "durable": true,
+          "revision": "sha256:c4b83c32b6d351343fee117e6fcbd5d13bf2c9f681375940600dd41a9e6d561b"
+        },
+        "report": {
+          "charts": [
+            {
+              "anchor_face": 1,
+              "boundary_vertices": 4,
+              "bounds": [
+                [
+                  0.0,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.5
+                ]
+              ],
+              "corners": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "faces": [
+                1
+              ],
+              "least_squares_residual": 3.188872858294072e-16,
+              "qr_pivot_ratio": 0.9999999999999999,
+              "surface_area_square_meters": 1.0,
+              "triangles": 2,
+              "uv_area": 0.5,
+              "vertices": 4
+            },
+            {
+              "anchor_face": 2,
+              "boundary_vertices": 4,
+              "bounds": [
+                [
+                  0.0,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.5
+                ]
+              ],
+              "corners": [
+                5,
+                6,
+                7,
+                8
+              ],
+              "faces": [
+                2
+              ],
+              "least_squares_residual": 3.188872858294072e-16,
+              "qr_pivot_ratio": 0.9999999999999999,
+              "surface_area_square_meters": 1.0,
+              "triangles": 2,
+              "uv_area": 0.5,
+              "vertices": 4
+            },
+            {
+              "anchor_face": 3,
+              "boundary_vertices": 4,
+              "bounds": [
+                [
+                  0.0,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.5
+                ]
+              ],
+              "corners": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "faces": [
+                3
+              ],
+              "least_squares_residual": 3.188872858294072e-16,
+              "qr_pivot_ratio": 0.9999999999999999,
+              "surface_area_square_meters": 1.0,
+              "triangles": 2,
+              "uv_area": 0.5,
+              "vertices": 4
+            },
+            {
+              "anchor_face": 4,
+              "boundary_vertices": 4,
+              "bounds": [
+                [
+                  0.0,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.5
+                ]
+              ],
+              "corners": [
+                13,
+                14,
+                15,
+                16
+              ],
+              "faces": [
+                4
+              ],
+              "least_squares_residual": 3.188872858294072e-16,
+              "qr_pivot_ratio": 0.9999999999999999,
+              "surface_area_square_meters": 1.0,
+              "triangles": 2,
+              "uv_area": 0.5,
+              "vertices": 4
+            },
+            {
+              "anchor_face": 5,
+              "boundary_vertices": 4,
+              "bounds": [
+                [
+                  0.0,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.5
+                ]
+              ],
+              "corners": [
+                17,
+                18,
+                19,
+                20
+              ],
+              "faces": [
+                5
+              ],
+              "least_squares_residual": 3.188872858294072e-16,
+              "qr_pivot_ratio": 0.9999999999999999,
+              "surface_area_square_meters": 1.0,
+              "triangles": 2,
+              "uv_area": 0.5,
+              "vertices": 4
+            },
+            {
+              "anchor_face": 6,
+              "boundary_vertices": 4,
+              "bounds": [
+                [
+                  0.0,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.5
+                ]
+              ],
+              "corners": [
+                21,
+                22,
+                23,
+                24
+              ],
+              "faces": [
+                6
+              ],
+              "least_squares_residual": 3.188872858294072e-16,
+              "qr_pivot_ratio": 0.9999999999999999,
+              "surface_area_square_meters": 1.0,
+              "triangles": 2,
+              "uv_area": 0.5,
+              "vertices": 4
+            }
+          ],
+          "layout": "sha256:8efa39670d38d92836f1dea7d4bde757db1787ae2e6c1e586614ecf7358f062a",
+          "output_bytes": 3150,
+          "output_mesh": "sha256:e1581ef817143630d9ee0ef6151da9de11b9aaa7f7f3a8f06b02505f024f3fab",
+          "packing": null,
+          "profile": "uv-lscm-disk-v1",
+          "solver_work": 384,
+          "source_mesh": "sha256:0a61c43bddabcbcaa64b49fbcf8fef6df44d76aab9508f0efe927521577ae5b7"
+        },
+        "uv_asset": "sha256:95d1e70baac36ddf0801ba1af8ef0930f7f5717fd9876b1abdd3c6d123bb2f2b"
+      }
+    }
+  ],
+  "source_mesh": "sha256:037bcbc22af99f0fc2f7e82b4e06107943fcaa5a18f137257e754307b5099ad8",
+  "revision": "sha256:c4b83c32b6d351343fee117e6fcbd5d13bf2c9f681375940600dd41a9e6d561b",
+  "snapshot": {
+    "document_id": "000000000000000000000000000003b6",
+    "entities": [
+      {
+        "id": "00000000000000000000000000000001",
+        "material": "00000000000000000000000000000002",
+        "mesh": "sha256:e1581ef817143630d9ee0ef6151da9de11b9aaa7f7f3a8f06b02505f024f3fab",
+        "name": "UV authored checker box",
+        "parent": null,
+        "transform": {
+          "columns": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "operations": []
+        }
+      }
+    ],
+    "layers": [],
+    "materials": {
+      "00000000000000000000000000000002": {
+        "base_color": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929
+        ],
+        "emission": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "id": "00000000000000000000000000000002",
+        "metallic": 0.0,
+        "roughness": 1.0,
+        "texture": {
+          "height": 8,
+          "linear_rgb": [
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.10000000149011612,
+              0.20000000298023224,
+              0.800000011920929
+            ]
+          ],
+          "width": 8
+        }
+      }
+    },
+    "meshes": {
+      "sha256:037bcbc22af99f0fc2f7e82b4e06107943fcaa5a18f137257e754307b5099ad8": {
+        "attributes": {},
+        "corner_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "corners": [
+          {
+            "edge": 0,
+            "vertex": 0
+          },
+          {
+            "edge": 1,
+            "vertex": 2
+          },
+          {
+            "edge": 2,
+            "vertex": 3
+          },
+          {
+            "edge": 3,
+            "vertex": 1
+          },
+          {
+            "edge": 4,
+            "vertex": 4
+          },
+          {
+            "edge": 5,
+            "vertex": 5
+          },
+          {
+            "edge": 6,
+            "vertex": 7
+          },
+          {
+            "edge": 7,
+            "vertex": 6
+          },
+          {
+            "edge": 3,
+            "vertex": 0
+          },
+          {
+            "edge": 8,
+            "vertex": 1
+          },
+          {
+            "edge": 4,
+            "vertex": 5
+          },
+          {
+            "edge": 9,
+            "vertex": 4
+          },
+          {
+            "edge": 10,
+            "vertex": 2
+          },
+          {
+            "edge": 6,
+            "vertex": 6
+          },
+          {
+            "edge": 11,
+            "vertex": 7
+          },
+          {
+            "edge": 1,
+            "vertex": 3
+          },
+          {
+            "edge": 9,
+            "vertex": 0
+          },
+          {
+            "edge": 7,
+            "vertex": 4
+          },
+          {
+            "edge": 10,
+            "vertex": 6
+          },
+          {
+            "edge": 0,
+            "vertex": 2
+          },
+          {
+            "edge": 2,
+            "vertex": 1
+          },
+          {
+            "edge": 11,
+            "vertex": 3
+          },
+          {
+            "edge": 5,
+            "vertex": 7
+          },
+          {
+            "edge": 8,
+            "vertex": 5
+          }
+        ],
+        "edge_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            7,
+            3
+          ]
+        ],
+        "face_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "face_offsets": [
+          0,
+          4,
+          8,
+          12,
+          16,
+          20,
+          24
+        ],
+        "point_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "positions": {
+          "precision": "F64",
+          "values": [
+            [
+              -0.5,
+              -0.5,
+              -0.5
+            ],
+            [
+              0.5,
+              -0.5,
+              -0.5
+            ],
+            [
+              -0.5,
+              0.5,
+              -0.5
+            ],
+            [
+              0.5,
+              0.5,
+              -0.5
+            ],
+            [
+              -0.5,
+              -0.5,
+              0.5
+            ],
+            [
+              0.5,
+              -0.5,
+              0.5
+            ],
+            [
+              -0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        }
+      },
+      "sha256:0a61c43bddabcbcaa64b49fbcf8fef6df44d76aab9508f0efe927521577ae5b7": {
+        "attributes": {
+          "PaintUV": {
+            "domain": "Corner",
+            "id": "000000000000000000000000000001f4",
+            "semantic": "uv",
+            "transfer": "Linear",
+            "values": {
+              "type": "Vec2",
+              "values": [
+                [
+                  0.03125,
+                  0.16383251547813416
+                ],
+                [
+                  0.16383251547813416,
+                  0.03125
+                ],
+                [
+                  0.2964150309562683,
+                  0.16383251547813416
+                ],
+                [
+                  0.16383251547813416,
+                  0.2964150309562683
+                ],
+                [
+                  0.359375,
+                  0.16383251547813416
+                ],
+                [
+                  0.49195751547813416,
+                  0.03125
+                ],
+                [
+                  0.6245400309562683,
+                  0.16383251547813416
+                ],
+                [
+                  0.49195751547813416,
+                  0.2964150309562683
+                ],
+                [
+                  0.6875,
+                  0.16383251547813416
+                ],
+                [
+                  0.8200825452804565,
+                  0.03125
+                ],
+                [
+                  0.9526650309562683,
+                  0.16383251547813416
+                ],
+                [
+                  0.8200825452804565,
+                  0.2964150309562683
+                ],
+                [
+                  0.03125,
+                  0.49195751547813416
+                ],
+                [
+                  0.16383251547813416,
+                  0.359375
+                ],
+                [
+                  0.2964150309562683,
+                  0.49195751547813416
+                ],
+                [
+                  0.16383251547813416,
+                  0.6245400309562683
+                ],
+                [
+                  0.359375,
+                  0.49195751547813416
+                ],
+                [
+                  0.49195751547813416,
+                  0.359375
+                ],
+                [
+                  0.6245400309562683,
+                  0.49195751547813416
+                ],
+                [
+                  0.49195751547813416,
+                  0.6245400309562683
+                ],
+                [
+                  0.6875,
+                  0.49195751547813416
+                ],
+                [
+                  0.8200825452804565,
+                  0.359375
+                ],
+                [
+                  0.9526650309562683,
+                  0.49195751547813416
+                ],
+                [
+                  0.8200825452804565,
+                  0.6245400309562683
+                ]
+              ]
+            }
+          }
+        },
+        "corner_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "corners": [
+          {
+            "edge": 0,
+            "vertex": 0
+          },
+          {
+            "edge": 1,
+            "vertex": 2
+          },
+          {
+            "edge": 2,
+            "vertex": 3
+          },
+          {
+            "edge": 3,
+            "vertex": 1
+          },
+          {
+            "edge": 4,
+            "vertex": 4
+          },
+          {
+            "edge": 5,
+            "vertex": 5
+          },
+          {
+            "edge": 6,
+            "vertex": 7
+          },
+          {
+            "edge": 7,
+            "vertex": 6
+          },
+          {
+            "edge": 3,
+            "vertex": 0
+          },
+          {
+            "edge": 8,
+            "vertex": 1
+          },
+          {
+            "edge": 4,
+            "vertex": 5
+          },
+          {
+            "edge": 9,
+            "vertex": 4
+          },
+          {
+            "edge": 10,
+            "vertex": 2
+          },
+          {
+            "edge": 6,
+            "vertex": 6
+          },
+          {
+            "edge": 11,
+            "vertex": 7
+          },
+          {
+            "edge": 1,
+            "vertex": 3
+          },
+          {
+            "edge": 9,
+            "vertex": 0
+          },
+          {
+            "edge": 7,
+            "vertex": 4
+          },
+          {
+            "edge": 10,
+            "vertex": 6
+          },
+          {
+            "edge": 0,
+            "vertex": 2
+          },
+          {
+            "edge": 2,
+            "vertex": 1
+          },
+          {
+            "edge": 11,
+            "vertex": 3
+          },
+          {
+            "edge": 5,
+            "vertex": 7
+          },
+          {
+            "edge": 8,
+            "vertex": 5
+          }
+        ],
+        "default_uv_attribute": "000000000000000000000000000001f4",
+        "edge_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            7,
+            3
+          ]
+        ],
+        "face_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "face_offsets": [
+          0,
+          4,
+          8,
+          12,
+          16,
+          20,
+          24
+        ],
+        "point_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "positions": {
+          "precision": "F64",
+          "values": [
+            [
+              -0.5,
+              -0.5,
+              -0.5
+            ],
+            [
+              0.5,
+              -0.5,
+              -0.5
+            ],
+            [
+              -0.5,
+              0.5,
+              -0.5
+            ],
+            [
+              0.5,
+              0.5,
+              -0.5
+            ],
+            [
+              -0.5,
+              -0.5,
+              0.5
+            ],
+            [
+              0.5,
+              -0.5,
+              0.5
+            ],
+            [
+              -0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        }
+      },
+      "sha256:5dbe06f850cab31156ab5f27bc07bb3122cedd4cdced089f0806d45d0bfff7f1": {
+        "attributes": {
+          "PaintUV": {
+            "domain": "Corner",
+            "id": "000000000000000000000000000001f4",
+            "semantic": "uv",
+            "transfer": "Linear",
+            "values": {
+              "type": "Vec2",
+              "values": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  0.5
+                ]
+              ]
+            }
+          }
+        },
+        "corner_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "corners": [
+          {
+            "edge": 0,
+            "vertex": 0
+          },
+          {
+            "edge": 1,
+            "vertex": 2
+          },
+          {
+            "edge": 2,
+            "vertex": 3
+          },
+          {
+            "edge": 3,
+            "vertex": 1
+          },
+          {
+            "edge": 4,
+            "vertex": 4
+          },
+          {
+            "edge": 5,
+            "vertex": 5
+          },
+          {
+            "edge": 6,
+            "vertex": 7
+          },
+          {
+            "edge": 7,
+            "vertex": 6
+          },
+          {
+            "edge": 3,
+            "vertex": 0
+          },
+          {
+            "edge": 8,
+            "vertex": 1
+          },
+          {
+            "edge": 4,
+            "vertex": 5
+          },
+          {
+            "edge": 9,
+            "vertex": 4
+          },
+          {
+            "edge": 10,
+            "vertex": 2
+          },
+          {
+            "edge": 6,
+            "vertex": 6
+          },
+          {
+            "edge": 11,
+            "vertex": 7
+          },
+          {
+            "edge": 1,
+            "vertex": 3
+          },
+          {
+            "edge": 9,
+            "vertex": 0
+          },
+          {
+            "edge": 7,
+            "vertex": 4
+          },
+          {
+            "edge": 10,
+            "vertex": 6
+          },
+          {
+            "edge": 0,
+            "vertex": 2
+          },
+          {
+            "edge": 2,
+            "vertex": 1
+          },
+          {
+            "edge": 11,
+            "vertex": 3
+          },
+          {
+            "edge": 5,
+            "vertex": 7
+          },
+          {
+            "edge": 8,
+            "vertex": 5
+          }
+        ],
+        "default_uv_attribute": "000000000000000000000000000001f4",
+        "edge_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            7,
+            3
+          ]
+        ],
+        "face_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "face_offsets": [
+          0,
+          4,
+          8,
+          12,
+          16,
+          20,
+          24
+        ],
+        "point_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "positions": {
+          "precision": "F64",
+          "values": [
+            [
+              -0.5,
+              -0.5,
+              -0.5
+            ],
+            [
+              0.5,
+              -0.5,
+              -0.5
+            ],
+            [
+              -0.5,
+              0.5,
+              -0.5
+            ],
+            [
+              0.5,
+              0.5,
+              -0.5
+            ],
+            [
+              -0.5,
+              -0.5,
+              0.5
+            ],
+            [
+              0.5,
+              -0.5,
+              0.5
+            ],
+            [
+              -0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        }
+      },
+      "sha256:e1581ef817143630d9ee0ef6151da9de11b9aaa7f7f3a8f06b02505f024f3fab": {
+        "attributes": {
+          "AnotherUV": {
+            "domain": "Corner",
+            "id": "000000000000000000000000000001f5",
+            "semantic": "uv",
+            "transfer": "Linear",
+            "values": {
+              "type": "Vec2",
+              "values": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  -0.5
+                ],
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  0.5
+                ]
+              ]
+            }
+          },
+          "PaintUV": {
+            "domain": "Corner",
+            "id": "000000000000000000000000000001f4",
+            "semantic": "uv",
+            "transfer": "Linear",
+            "values": {
+              "type": "Vec2",
+              "values": [
+                [
+                  0.03125,
+                  0.16383251547813416
+                ],
+                [
+                  0.16383251547813416,
+                  0.03125
+                ],
+                [
+                  0.2964150309562683,
+                  0.16383251547813416
+                ],
+                [
+                  0.16383251547813416,
+                  0.2964150309562683
+                ],
+                [
+                  0.359375,
+                  0.16383251547813416
+                ],
+                [
+                  0.49195751547813416,
+                  0.03125
+                ],
+                [
+                  0.6245400309562683,
+                  0.16383251547813416
+                ],
+                [
+                  0.49195751547813416,
+                  0.2964150309562683
+                ],
+                [
+                  0.6875,
+                  0.16383251547813416
+                ],
+                [
+                  0.8200825452804565,
+                  0.03125
+                ],
+                [
+                  0.9526650309562683,
+                  0.16383251547813416
+                ],
+                [
+                  0.8200825452804565,
+                  0.2964150309562683
+                ],
+                [
+                  0.03125,
+                  0.49195751547813416
+                ],
+                [
+                  0.16383251547813416,
+                  0.359375
+                ],
+                [
+                  0.2964150309562683,
+                  0.49195751547813416
+                ],
+                [
+                  0.16383251547813416,
+                  0.6245400309562683
+                ],
+                [
+                  0.359375,
+                  0.49195751547813416
+                ],
+                [
+                  0.49195751547813416,
+                  0.359375
+                ],
+                [
+                  0.6245400309562683,
+                  0.49195751547813416
+                ],
+                [
+                  0.49195751547813416,
+                  0.6245400309562683
+                ],
+                [
+                  0.6875,
+                  0.49195751547813416
+                ],
+                [
+                  0.8200825452804565,
+                  0.359375
+                ],
+                [
+                  0.9526650309562683,
+                  0.49195751547813416
+                ],
+                [
+                  0.8200825452804565,
+                  0.6245400309562683
+                ]
+              ]
+            }
+          }
+        },
+        "corner_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "corners": [
+          {
+            "edge": 0,
+            "vertex": 0
+          },
+          {
+            "edge": 1,
+            "vertex": 2
+          },
+          {
+            "edge": 2,
+            "vertex": 3
+          },
+          {
+            "edge": 3,
+            "vertex": 1
+          },
+          {
+            "edge": 4,
+            "vertex": 4
+          },
+          {
+            "edge": 5,
+            "vertex": 5
+          },
+          {
+            "edge": 6,
+            "vertex": 7
+          },
+          {
+            "edge": 7,
+            "vertex": 6
+          },
+          {
+            "edge": 3,
+            "vertex": 0
+          },
+          {
+            "edge": 8,
+            "vertex": 1
+          },
+          {
+            "edge": 4,
+            "vertex": 5
+          },
+          {
+            "edge": 9,
+            "vertex": 4
+          },
+          {
+            "edge": 10,
+            "vertex": 2
+          },
+          {
+            "edge": 6,
+            "vertex": 6
+          },
+          {
+            "edge": 11,
+            "vertex": 7
+          },
+          {
+            "edge": 1,
+            "vertex": 3
+          },
+          {
+            "edge": 9,
+            "vertex": 0
+          },
+          {
+            "edge": 7,
+            "vertex": 4
+          },
+          {
+            "edge": 10,
+            "vertex": 6
+          },
+          {
+            "edge": 0,
+            "vertex": 2
+          },
+          {
+            "edge": 2,
+            "vertex": 1
+          },
+          {
+            "edge": 11,
+            "vertex": 3
+          },
+          {
+            "edge": 5,
+            "vertex": 7
+          },
+          {
+            "edge": 8,
+            "vertex": 5
+          }
+        ],
+        "default_uv_attribute": "000000000000000000000000000001f4",
+        "edge_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            7,
+            3
+          ]
+        ],
+        "face_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "face_offsets": [
+          0,
+          4,
+          8,
+          12,
+          16,
+          20,
+          24
+        ],
+        "point_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "positions": {
+          "precision": "F64",
+          "values": [
+            [
+              -0.5,
+              -0.5,
+              -0.5
+            ],
+            [
+              0.5,
+              -0.5,
+              -0.5
+            ],
+            [
+              -0.5,
+              0.5,
+              -0.5
+            ],
+            [
+              0.5,
+              0.5,
+              -0.5
+            ],
+            [
+              -0.5,
+              -0.5,
+              0.5
+            ],
+            [
+              0.5,
+              -0.5,
+              0.5
+            ],
+            [
+              -0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        }
+      }
+    },
+    "render_settings": {
+      "camera": {
+        "position": [
+          3.0,
+          2.0,
+          4.0
+        ],
+        "target": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "up": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "vertical_fov_radians": 0.65
+      },
+      "environment": [
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "height": 32,
+      "light": {
+        "intensity": [
+          32.0,
+          32.0,
+          32.0
+        ],
+        "position": [
+          2.0,
+          4.0,
+          3.0
+        ]
+      },
+      "max_bytes": 16777216,
+      "max_depth": 2,
+      "samples": 8,
+      "seed": 73,
+      "width": 32
+    },
+    "uv_assets": {
+      "sha256:86a222c006c777f3426feccb782cb4e70320aa58e04664ed5305cc0351ca058a": {
+        "mesh": "sha256:0a61c43bddabcbcaa64b49fbcf8fef6df44d76aab9508f0efe927521577ae5b7",
+        "sets": {
+          "000000000000000000000000000001f4": {
+            "atlas": {
+              "height": 64,
+              "padding_pixels": 1,
+              "pixels_per_meter": 12.0,
+              "width": 64
+            },
+            "attribute": "PaintUV",
+            "attribute_id": "000000000000000000000000000001f4",
+            "mesh": "sha256:0a61c43bddabcbcaa64b49fbcf8fef6df44d76aab9508f0efe927521577ae5b7",
+            "pins": [],
+            "seams": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "version": 0
+          }
+        },
+        "version": 0
+      },
+      "sha256:95d1e70baac36ddf0801ba1af8ef0930f7f5717fd9876b1abdd3c6d123bb2f2b": {
+        "mesh": "sha256:e1581ef817143630d9ee0ef6151da9de11b9aaa7f7f3a8f06b02505f024f3fab",
+        "sets": {
+          "000000000000000000000000000001f4": {
+            "atlas": {
+              "height": 64,
+              "padding_pixels": 1,
+              "pixels_per_meter": 12.0,
+              "width": 64
+            },
+            "attribute": "PaintUV",
+            "attribute_id": "000000000000000000000000000001f4",
+            "mesh": "sha256:e1581ef817143630d9ee0ef6151da9de11b9aaa7f7f3a8f06b02505f024f3fab",
+            "pins": [],
+            "seams": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "version": 0
+          },
+          "000000000000000000000000000001f5": {
+            "atlas": null,
+            "attribute": "AnotherUV",
+            "attribute_id": "000000000000000000000000000001f5",
+            "mesh": "sha256:e1581ef817143630d9ee0ef6151da9de11b9aaa7f7f3a8f06b02505f024f3fab",
+            "pins": [],
+            "seams": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "version": 0
+          }
+        },
+        "version": 0
+      },
+      "sha256:b960b888895ede06169442316dfeaa664b358b1f4ee1d547d22458e0080c0796": {
+        "mesh": "sha256:5dbe06f850cab31156ab5f27bc07bb3122cedd4cdced089f0806d45d0bfff7f1",
+        "sets": {
+          "000000000000000000000000000001f4": {
+            "atlas": null,
+            "attribute": "PaintUV",
+            "attribute_id": "000000000000000000000000000001f4",
+            "mesh": "sha256:5dbe06f850cab31156ab5f27bc07bb3122cedd4cdced089f0806d45d0bfff7f1",
+            "pins": [],
+            "seams": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "version": 0
+          }
+        },
+        "version": 0
+      }
+    },
+    "uv_bindings": {
+      "00000000000000000000000000000001": "sha256:95d1e70baac36ddf0801ba1af8ef0930f7f5717fd9876b1abdd3c6d123bb2f2b"
+    },
+    "version": 17
+  },
+  "cpu_metal_rmse": 4.582074384336459e-09,
+  "checker_sampling_max_change": 0.30887458100914955,
+  "source_unchanged": true,
+  "restored_pixels_identical": true
+}

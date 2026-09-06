@@ -1,0 +1,33 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 35.00s
+     Running unittests src/lib.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/render_core-6a918d07e2b3a755)
+
+running 6 tests
+test uv::solver::analytic_rectangular_least_squares ... ok
+test uv::solver::rank_and_cancellation ... ok
+test uv::solver::pivot_order_does_not_change_solution ... ok
+test blend::reader::tests::work_limits_cancellation_and_declarators_are_explicit ... ok
+test blend::reader::tests::pointer_width_endianness_layout_and_numeric_values_agree ... ok
+test blend::reader::tests::malformed_truncated_ambiguous_and_nonfinite_inputs_fail ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/uv_authoring.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/uv_authoring-b11df070b9b80792)
+
+running 13 tests
+test boundary_touch_and_authored_packing_frames_reject ... ok
+test invalid_constraints_budgets_and_cancellation_are_bounded ... ok
+test named_sets_keep_legacy_default_and_version_the_explicit_metadata ... ok
+test fully_pinned_flips_and_global_overlaps_reject ... ok
+test closed_surfaces_need_seams_and_keep_other_attributes ... ok
+test planar_and_developable_charts_match_independent_coordinates ... ok
+test atlas_packing_is_bounded_deterministic_and_pin_explicit ... ok
+test failed_publication_permissions_stale_selection_and_cancellation_are_atomic ... ok
+test stale_topology_and_retained_asset_budget_reject_atomically ... ok
+test transactions_preserve_instances_multiple_sets_and_retry_identity ... ok
+test public_agent_uv_workflow_checks_permission_cancellation_and_durability ... ok
+test evaluated_animation_keeps_authored_uv_constraints_on_the_source_only ... ok
+test scale_normalization_and_named_set_limit_are_explicit ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.43s
+

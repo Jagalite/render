@@ -11,6 +11,8 @@ struct Header {
     corners: u32,
     faces: u32,
     attributes: BTreeMap<String, Attribute>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    default_uv_attribute: Option<crate::Id>,
 }
 pub fn encode(mesh: &Mesh) -> Result<Vec<u8>> {
     mesh.validate()?;
@@ -26,9 +28,15 @@ pub fn encode(mesh: &Mesh) -> Result<Vec<u8>> {
         corners: mesh.corners.len() as u32,
         faces: mesh.faces() as u32,
         attributes: mesh.attributes.clone(),
+        default_uv_attribute: mesh.default_uv_attribute,
     };
     let meta = canonical(&header)?;
-    let mut out = b"R3DMESH0".to_vec();
+    let mut out = if mesh.default_uv_attribute.is_some() {
+        b"R3DMESH1"
+    } else {
+        b"R3DMESH0"
+    }
+    .to_vec();
     out.extend((meta.len() as u32).to_le_bytes());
     out.extend(meta);
     match &mesh.positions {
@@ -84,7 +92,8 @@ impl Cursor<'_> {
     }
 }
 pub fn decode(bytes: &[u8]) -> Result<Mesh> {
-    if bytes.len() > 128 * 1024 * 1024 || bytes.get(..8) != Some(b"R3DMESH0") {
+    if bytes.len() > 128 * 1024 * 1024 || !matches!(bytes.get(..8), Some(b"R3DMESH0" | b"R3DMESH1"))
+    {
         return Err(Error::new(
             "mesh_chunk",
             "invalid signature or excessive chunk size",
@@ -101,6 +110,12 @@ pub fn decode(bytes: &[u8]) -> Result<Mesh> {
             .get(c.offset..end)
             .ok_or_else(|| Error::new("mesh_chunk", "truncated metadata"))?,
     )?;
+    if (bytes.get(..8) == Some(b"R3DMESH1")) != header.default_uv_attribute.is_some() {
+        return Err(Error::new(
+            "mesh_chunk",
+            "mesh version/default UV metadata mismatch",
+        ));
+    }
     c.offset = end;
     if ![32, 64].contains(&header.precision) || header.faces.checked_add(1) != Some(header.offsets)
     {
@@ -176,6 +191,7 @@ pub fn decode(bytes: &[u8]) -> Result<Mesh> {
         face_ids: ids.next().expect("four domains"),
         corner_ids: ids.next().expect("four domains"),
         attributes: header.attributes,
+        default_uv_attribute: header.default_uv_attribute,
     };
     mesh.validate()?;
     Ok(mesh)

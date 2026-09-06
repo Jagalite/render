@@ -1,0 +1,88 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/uv-authoring/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 10.44s
+     Running unittests src/lib.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/render_core-6a918d07e2b3a755)
+
+running 6 tests
+test uv::solver::pivot_order_does_not_change_solution ... ok
+test uv::solver::analytic_rectangular_least_squares ... ok
+test uv::solver::rank_and_cancellation ... ok
+test blend::reader::tests::work_limits_cancellation_and_declarators_are_explicit ... ok
+test blend::reader::tests::pointer_width_endianness_layout_and_numeric_values_agree ... ok
+test blend::reader::tests::malformed_truncated_ambiguous_and_nonfinite_inputs_fail ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/blend_static.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/blend_static-20bcdf223d3aa3ce)
+
+running 9 tests
+test distinct_material_blocks_cannot_alias_one_native_identity ... ok
+test invalid_source_parameters_do_not_hide_behind_positive_ratios_or_zero_power ... ok
+test shared_mesh_instances_do_not_expand_asset_commands_or_geometry_builds ... ok
+test metric_units_authored_rotations_reflections_and_orthographic_lens ... ok
+test public_agent_import_export_cancellation_and_invalid_wire_are_atomic ... ok
+test source_asset_count_and_byte_limits_are_transactional ... ok
+test typed_source_transactions_permissions_versions_and_durability ... ok
+test analytic_scene_hierarchy_uv_camera_light_and_source_roundtrip ... ok
+test hostile_links_dependencies_numeric_and_cancellation_fail_before_commands ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.47s
+
+     Running tests/displacement.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/displacement-a8910e06031d7d12)
+
+running 3 tests
+test displacement_loose_data_and_root_evaluation_cancellation ... ok
+test displacement_metric_height_subdivision_convergence_and_limits ... ok
+test surface_displacement_cache_transactions_and_recovery ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.13s
+
+     Running tests/modeling.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/modeling-e595404eb9ea425c)
+
+running 6 tests
+test box_operators_reject_inward_shells ... ok
+test bridge_dissolve_attribute_transfer_invalid_selection_budget_and_cancel ... ok
+test primitives_extrude_inset_split_weld_and_correspondence ... ok
+test subdivision_mirror_array_solidify_and_box_csg_numeric ... ok
+test direct_modeling_transactions_and_field_cycle_domain_resource_diagnostics ... ok
+test procedural_groups_fields_direct_parity_bake_recovery_and_stale_edits ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.11s
+
+     Running tests/named_uv.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/named_uv-10681e1d5d1f2dd1)
+
+running 7 tests
+test geometry_export_reports_each_omitted_uv_set ... ok
+test source_indexed_sets_reject_gaps_missing_zero_and_noncanonical_suffixes ... ok
+test named_uv_primary_footprint_selects_its_own_mip ... ok
+test missing_uv_sets_bad_selectors_and_old_versions_fail_atomically ... ok
+test named_uv_alpha_and_bake_follow_the_material_selector ... ok
+test named_uv_displacement_preserves_coordinates_and_ids ... ok
+test named_uv_material_roles_and_normal_frame_match_independent_samples ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+     Running tests/uv_authoring.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/uv_authoring-b11df070b9b80792)
+
+running 6 tests
+test fully_pinned_flips_and_global_overlaps_reject ... ok
+test planar_and_developable_charts_match_independent_coordinates ... ok
+test invalid_constraints_budgets_and_cancellation_are_bounded ... ok
+test closed_surfaces_need_seams_and_keep_other_attributes ... ok
+test named_sets_keep_legacy_default_and_version_the_explicit_metadata ... FAILED
+test atlas_packing_is_bounded_deterministic_and_pin_explicit ... ok
+
+failures:
+
+---- named_sets_keep_legacy_default_and_version_the_explicit_metadata stdout ----
+
+thread 'named_sets_keep_legacy_default_and_version_the_explicit_metadata' (5881220) panicked at crates/core/tests/uv_authoring.rs:421:50:
+called `Result::unwrap()` on an `Err` value: Error { code: "request", stage: "validation", message: "unsupported version or invalid request bounds", retryable: false, context: {} }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    named_sets_keep_legacy_default_and_version_the_explicit_metadata
+
+test result: FAILED. 5 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+error: test failed, to rerun pass `-p render-core --test uv_authoring`

@@ -5,8 +5,8 @@ working on feasible remaining steps. M09 interactive editor remains deferred.
 Each completed increment requires implementation, native/browser workflow evidence,
 negative/cancellation/stale checks, resource/provenance records and documentation.
 
-Current completed increment: native Blender 2.93 static import and exact source preservation; evidence/blend-static.
-Next engine subgate: UV authoring for textured assets, followed by tiled painting.
+Current completed increment: bounded UV unwrap/packing and named constraint assets; evidence/uv-authoring.
+Next engine subgate: tiled texture painting, layers, masks and explicit image baking.
 
 | Order | Increment | Status |
 |---|---|---|
@@ -15,7 +15,7 @@ Next engine subgate: UV authoring for textured assets, followed by tiled paintin
 | 3 | Richer GPU scattering and transport quality | GPU alpha, conductor, coat and ideal dielectric validated; broader lighting/sampling quality remains separate |
 | 4 | External hair/volume inputs, fiber shading and sparse GPU media | VOL3, HAIR surface inputs, polyline control RGBA and bounded GPU media validated; physical fiber remains a separate gate |
 | 5 | Scoped native .blend/USD/MaterialX interchange | Blender 2.93 static profile validated; additional USD/MaterialX profiles remain future format work |
-| 6 | M10 engine UV/paint/sculpt/remesh/retopology operations | Pending |
+| 6 | M10 engine UV/paint/sculpt/remesh/retopology operations | UV authoring validated; painting, sculpting, remesh and retopology pending |
 | 7 | M11 solver families with checkpoint/seek semantics | Pending |
 | 8 | M12 compositor/drawing/media/tracking engines | Pending |
 | 9 | M13 collaboration/extensions/client compatibility hardening | Pending; expand the documented JSON Schema subset to all existing profile operations |
@@ -141,3 +141,11 @@ Evidence: `evidence/gpu-media/README.md`. No major blocker is parked. Scoped nat
 
 Static Blender acceptance: 179 native and 154 Wasm tests; 137 CLI calls across seven cases; exact native/Wasm import revisions and CPU pixels; actual Metal/WebGPU and OPFS recovery. 1308 prior images/passes and 436 receipts remain byte identical, with all five shaders and existing fixtures unchanged.
 Evidence: `evidence/blend-static/README.md`. No major blocker parked.
+
+UV authoring acceptance: 197 native tests,
+172 Wasm tests, 78 acceptance checks and
+28 CLI requests. Named unwrap/packing, multiple sets, source
+immutability, old-client rejection, archive/OPFS recovery and CPU/Metal/WebGPU output
+passed. 1864 earlier render/pass/receipt files remain
+byte identical. No Cargo or shader changes. M10 and the M09 interactive dependency
+remain open; see `evidence/uv-authoring/README.md`.

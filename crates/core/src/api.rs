@@ -11,6 +11,27 @@ pub struct Operation {
 pub fn registry() -> Vec<Operation> {
     let mut operations = vec![
         Operation {
+            name: "author_uv",
+            version: 0,
+            mutation: true,
+            effects: "unwrap or pack named corner UV sets against pinned mesh and constraint assets",
+            cancellation: "during bounded computation and before publication; synchronous browser admission",
+        },
+        Operation {
+            name: "put_uv_asset",
+            version: 0,
+            mutation: true,
+            effects: "retain a typed mesh-bound asset with named seam, pin and atlas constraints in snapshot17",
+            cancellation: "before publication",
+        },
+        Operation {
+            name: "set_uv_asset",
+            version: 0,
+            mutation: true,
+            effects: "compare and replace an entity mesh and UV binding atomically, or explicitly clear its binding",
+            cancellation: "before publication",
+        },
+        Operation {
             name: "put_source",
             version: 0,
             mutation: true,

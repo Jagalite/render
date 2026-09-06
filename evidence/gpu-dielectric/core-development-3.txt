@@ -1,0 +1,19 @@
+   Compiling render-core v0.1.0 (/private/tmp/render-gpu-dielectric-20260906/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 1.49s
+     Running tests/dielectric_interfaces.rs (target/debug/deps/dielectric_interfaces-8ed1c45c0b1db946)
+
+running 1 test
+single-ior1 expected=[0.6, 0.45, 0.25] actual=[0.6, 0.45, 0.25]
+single-ior1_5 expected=[0.26666668, 0.19999999, 0.11111111] actual=[0.26666668, 0.19999999, 0.11111111]
+single-ior3 expected=[0.05, 0.037499998, 0.020833334] actual=[0.05, 0.037499998, 0.020833334]
+slab-ior1 expected=[0.48000002, 0.40499997, 0.25] actual=[0.48000002, 0.40499997, 0.25]
+slab-ior1_5 expected=[0.48000002, 0.40499997, 0.25] actual=[0.48000002, 0.40499997, 0.25]
+slab-ior3 expected=[0.33, 0.2784375, 0.171875] actual=[0.33, 0.2784375, 0.171875]
+tilted-frame expected=[0.26666668, 0.19999999, 0.11111111] actual=[0.26666668, 0.19999999, 0.11111111]
+mirror-x expected=[0.26666668, 0.19999999, 0.11111111] actual=[0.26666668, 0.19999999, 0.11111111]
+mirror-z expected=[1.35, 1.0124999, 0.5625] actual=[1.35, 1.0124999, 0.5625]
+snell expected=[0.26666668, 0.19999999, 0.11111111] actual=[0.26666668, 0.19999999, 0.11111111]
+tir expected=[0.75, 0.5, 0.25] actual=[0.75, 0.5, 0.25]
+test analytic_ideal_interfaces_snell_tir_frames_and_mirrors_survive_recovery ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.18s

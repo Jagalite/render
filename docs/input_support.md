@@ -77,3 +77,7 @@ separate export gates.
 Native-authored [conductor and single-interface coat](gpu_surfaces.md) now share
 Metal/WebGPU texture, alpha and shutter transport. This extends authored rendering;
 external glTF material extensions retain a separate input gate.
+
+Native-authored [ideal dielectric interfaces](gpu_dielectric.md) now render on
+Metal/WebGPU with geometric Fresnel/Snell/TIR and bounded alpha/shutter semantics.
+Nested media, rough transmission and external transmission extensions remain separate gates.

@@ -572,7 +572,7 @@ pub(super) fn functions(extended: bool) -> Vec<Function> {
     ));
     result
 }
-pub(super) fn body(extended: bool, surfaces: bool) -> Vec<Stmt> {
+pub(super) fn body(extended: bool, surfaces: bool, dielectric: bool) -> Vec<Stmt> {
     let bary = |origin, direction| {
         call(
             "project_bary",
@@ -855,6 +855,8 @@ pub(super) fn body(extended: bool, surfaces: bool) -> Vec<Stmt> {
         ),
         let_("offset", v("position") + v("geometric") * f(1e-5)),
         let_("view", v("direction") * f(-1.)),
+    ]);
+    let reflection = vec![
         let_("to_light", xyz(param(5)) - v("position")),
         let_("distance", length(v("to_light"))),
         if_(
@@ -907,7 +909,20 @@ pub(super) fn body(extended: bool, surfaces: bool) -> Vec<Stmt> {
                 ),
             ],
         ),
-    ]);
+    ];
+    if dielectric {
+        let model = call("surface_model", Ty::V4, vec![i("base")]);
+        out.push(Stmt::If(
+            model.clone().field("x").eq(f(3.)),
+            dielectric::body(
+                model.field("z"),
+                f(1.) + inst(i("base") + u(9)).field("w") * (sample_map(4).field("x") - f(1.)),
+            ),
+            reflection,
+        ));
+    } else {
+        out.extend(reflection);
+    }
     out.shrink_to_fit();
     out
 }

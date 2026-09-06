@@ -1,0 +1,54 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:e5e4550ecf3c8b49d420113e0980c6fc770318bafc5182710e09b685ee94b9a7",
+      "idempotency_key": "surfaces:stale:001",
+      "max_added_bytes": 8388608,
+      "commands": [
+        {
+          "operation": "put_material",
+          "material": {
+            "base_color": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "emission": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "id": "0a9ae863dc06da43f1ec0030977dcc1b",
+            "metallic": 0,
+            "pbr": {
+              "base_color": null,
+              "double_sided": false,
+              "emission": null,
+              "metallic_roughness": null,
+              "normal": null,
+              "normal_scale": 1.0,
+              "occlusion": null,
+              "occlusion_strength": 1.0,
+              "advanced": {
+                "model": {
+                  "kind": "dielectric",
+                  "ior": 4
+                },
+                "opacity": {
+                  "kind": "mask",
+                  "factor": 0,
+                  "cutoff": 0.5
+                }
+              }
+            },
+            "roughness": 0,
+            "texture": null
+          }
+        }
+      ]
+    }
+  }
+}

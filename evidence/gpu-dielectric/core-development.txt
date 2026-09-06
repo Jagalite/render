@@ -1,0 +1,24 @@
+   Compiling render-core v0.1.0 (/private/tmp/render-gpu-dielectric-20260906/crates/core)
+error[E0609]: no field `name` on type `&&Material`
+  --> crates/core/tests/support/dielectric.rs:69:27
+   |
+69 |             .filter(|m| m.name == "glass")
+   |                           ^^^^ unknown field
+   |
+   = note: available fields are: `id`, `base_color`, `emission`, `roughness`, `metallic` ... and 2 others
+
+error[E0433]: cannot find type `Evaluator` in this scope
+ --> crates/core/tests/dielectric_interfaces.rs:9:21
+  |
+9 |         let scene = Evaluator::default()
+  |                     ^^^^^^^^^ use of undeclared type `Evaluator`
+
+error[E0433]: cannot find type `Evaluator` in this scope
+  --> crates/core/tests/dielectric_interfaces.rs:31:14
+   |
+31 |             &Evaluator::default().evaluate(restored.snapshot()).unwrap(),
+   |              ^^^^^^^^^ use of undeclared type `Evaluator`
+
+Some errors have detailed explanations: E0433, E0609.
+For more information about an error, try `rustc --explain E0433`.
+error: could not compile `render-core` (test "dielectric_interfaces") due to 3 previous errors

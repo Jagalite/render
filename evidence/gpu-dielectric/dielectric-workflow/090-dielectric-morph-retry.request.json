@@ -1,0 +1,139 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:8fa2494101e5842d42530364f88ed24544595d8ce13c8231c1356ac8e6e4f68f",
+      "idempotency_key": "surfaces:material:001",
+      "max_added_bytes": 8388608,
+      "commands": [
+        {
+          "operation": "put_material",
+          "material": {
+            "base_color": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "emission": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "id": "aad1c2e69577333672404ce927267060",
+            "metallic": 0,
+            "pbr": {
+              "base_color": null,
+              "double_sided": false,
+              "emission": null,
+              "metallic_roughness": null,
+              "normal": null,
+              "normal_scale": 1.0,
+              "occlusion": null,
+              "occlusion_strength": 1.0,
+              "advanced": {
+                "model": {
+                  "kind": "dielectric",
+                  "ior": 1.5
+                },
+                "opacity": {
+                  "kind": "opaque"
+                }
+              }
+            },
+            "roughness": 0,
+            "texture": null
+          }
+        },
+        {
+          "operation": "put_material",
+          "material": {
+            "base_color": [
+              0.6000000238418579,
+              0.6000000238418579,
+              0.6000000238418579
+            ],
+            "emission": [
+              0.4000000059604645,
+              0.4000000059604645,
+              0.4000000059604645
+            ],
+            "id": "ac14d553e97f1293b37d49238ff92d7a",
+            "metallic": 0,
+            "pbr": {
+              "base_color": {
+                "image": "sha256:3556d121389264ae8f7857ad00f7609a4ebfabe3c98cef234e9675ffe92b59a3",
+                "role": "srgb_color",
+                "sampler": {
+                  "mag": "nearest",
+                  "min": "nearest",
+                  "wrap_s": "clamp",
+                  "wrap_t": "clamp"
+                }
+              },
+              "double_sided": true,
+              "emission": {
+                "image": "sha256:3556d121389264ae8f7857ad00f7609a4ebfabe3c98cef234e9675ffe92b59a3",
+                "role": "srgb_color",
+                "sampler": {
+                  "mag": "nearest",
+                  "min": "nearest",
+                  "wrap_s": "clamp",
+                  "wrap_t": "clamp"
+                },
+                "uv_attribute": "00000000000000000000000000000065"
+              },
+              "metallic_roughness": {
+                "image": "sha256:d9674c32dd06884834927cf4ab2dd9f6dc5ac0af03cfa13e197f923013acb46c",
+                "role": "linear_data",
+                "sampler": {
+                  "mag": "nearest",
+                  "min": "nearest",
+                  "wrap_s": "clamp",
+                  "wrap_t": "clamp"
+                },
+                "uv_attribute": "0000000000000000000000000000006b"
+              },
+              "normal": {
+                "image": "sha256:e541c31346e4dca8dcec1c341be0dbc3fb182bdaec2096cb6cb89a243055750f",
+                "role": "linear_data",
+                "sampler": {
+                  "mag": "nearest",
+                  "min": "nearest",
+                  "wrap_s": "clamp",
+                  "wrap_t": "clamp"
+                },
+                "uv_attribute": "00000000000000000000000000000065"
+              },
+              "normal_scale": 1.0,
+              "occlusion": {
+                "image": "sha256:d9674c32dd06884834927cf4ab2dd9f6dc5ac0af03cfa13e197f923013acb46c",
+                "role": "linear_data",
+                "sampler": {
+                  "mag": "nearest",
+                  "min": "nearest",
+                  "wrap_s": "clamp",
+                  "wrap_t": "clamp"
+                },
+                "uv_attribute": "00000000000000000000000000000066"
+              },
+              "occlusion_strength": 1.0,
+              "advanced": {
+                "model": {
+                  "kind": "dielectric",
+                  "ior": 1.5
+                },
+                "opacity": {
+                  "kind": "opaque"
+                }
+              }
+            },
+            "roughness": 0,
+            "texture": null
+          }
+        }
+      ]
+    }
+  }
+}

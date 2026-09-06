@@ -411,15 +411,26 @@ fn gpu_profile_preflight_deadline_and_authored_names_have_safe_output_semantics(
     let out=t.wire(&t.project,json!({"version":0,"operation":{"method":"export","revision":t.inspect()["revision"],"output":t.root.join("unknown"),"content":{"format":"document","ignored":true}}}));
     assert!(!out.status.success());
     assert!(!t.root.join("unknown").exists());
-    let mut material = t.inspect()["snapshot"]["materials"][id(2)].clone();
-    // Keep this preflight test on a valid, still-unsupported GPU material.
-    material["roughness"] = json!(0);
-    material["metallic"] = json!(0);
-    material["pbr"] = json!({"advanced":{"model":{"kind":"dielectric","ior":1.5},"opacity":{"kind":"opaque"}},"double_sided":false,"base_color":null,"metallic_roughness":null,"normal":null,"emission":null,"occlusion":null,"normal_scale":1,"occlusion_strength":1});
-    t.apply(
-        "cli:surface:0001",
-        json!([{"operation":"put_material","material":material}]),
-    );
+    // Sparse media remains a valid but explicitly unsupported GPU profile.
+    let asset = render_core::volumes::Asset {
+        origin: [0.; 3],
+        voxel_size: [1.; 3],
+        cells: vec![render_core::volumes::Cell {
+            coordinate: [0; 3],
+            density: 1.,
+            emission: [0.; 3],
+        }],
+        absorption: [0.1; 3],
+        scattering: [0.; 3],
+        anisotropy: 0.,
+        max_step_meters: 1.,
+    };
+    let key = asset.content_id().unwrap();
+    t.apply("cli:unsupported:media",json!([
+        {"operation":"put_volume","asset":asset},
+        {"operation":"create_entity","entity":{"id":id(9991),"name":"unsupported GPU media","parent":null,"mesh":null,"material":null,"transform":{"columns":[[1,0,0],[0,1,0],[0,0,1],[0,0,0]],"operations":[]}}},
+        {"operation":"set_volume","entity":id(9991),"asset":key}
+    ]));
     let state = t.inspect();
     let gpu = t.root.join("unsupported");
     t.fail(json!({"version":0,"operation":{"method":"render","revision":state["revision"],"backend":"gpu","output":gpu}}),"unsupported_profile");

@@ -1,0 +1,906 @@
+{
+  "license": "CC0-1.0",
+  "oracle": "Snell target geometry, geometric-interface Fresnel/radiance factors and independently evaluated counter samples; no renderer outputs",
+  "cases": [
+    {
+      "name": "analytic-single-ior1",
+      "source": "fixtures/gpu-dielectric/data/single.glb",
+      "source_sha256": "8aff2f473e2bda0875aded14afdeaddda088f2fef0982eb8467dfae12c988e06",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1
+      },
+      "opacity": {
+        "kind": "opaque"
+      },
+      "animated": false,
+      "secondary": true,
+      "glass_only": true,
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 16,
+        "seed": 42,
+        "max_depth": 2
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          1
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1e-07,
+          "ymag": 1e-07,
+          "near": 0.01,
+          "far": 10
+        }
+      },
+      "transforms": [],
+      "expected": [
+        0.6000000238418579,
+        0.44999998807907104,
+        0.25
+      ]
+    },
+    {
+      "name": "analytic-single-ior1_5",
+      "source": "fixtures/gpu-dielectric/data/single.glb",
+      "source_sha256": "8aff2f473e2bda0875aded14afdeaddda088f2fef0982eb8467dfae12c988e06",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "opacity": {
+        "kind": "opaque"
+      },
+      "animated": false,
+      "secondary": true,
+      "glass_only": true,
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 16,
+        "seed": 42,
+        "max_depth": 2
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          1
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1e-07,
+          "ymag": 1e-07,
+          "near": 0.01,
+          "far": 10
+        }
+      },
+      "transforms": [],
+      "expected": [
+        0.2666666805744171,
+        0.19999998807907104,
+        0.1111111119389534
+      ]
+    },
+    {
+      "name": "analytic-single-ior3",
+      "source": "fixtures/gpu-dielectric/data/single.glb",
+      "source_sha256": "8aff2f473e2bda0875aded14afdeaddda088f2fef0982eb8467dfae12c988e06",
+      "model": {
+        "kind": "dielectric",
+        "ior": 3
+      },
+      "opacity": {
+        "kind": "opaque"
+      },
+      "animated": false,
+      "secondary": true,
+      "glass_only": true,
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 16,
+        "seed": 42,
+        "max_depth": 2
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          1
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1e-07,
+          "ymag": 1e-07,
+          "near": 0.01,
+          "far": 10
+        }
+      },
+      "transforms": [],
+      "expected": [
+        0.05000000074505806,
+        0.03749999776482582,
+        0.02083333395421505
+      ]
+    },
+    {
+      "name": "analytic-slab-ior1",
+      "source": "fixtures/gpu-dielectric/data/slab.glb",
+      "source_sha256": "4e5540884963d5972d151c534232e24c344f9ac9e35341b04804a760fed2e927",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1
+      },
+      "opacity": {
+        "kind": "opaque"
+      },
+      "animated": false,
+      "secondary": true,
+      "glass_only": true,
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 16,
+        "seed": 42,
+        "max_depth": 3
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          1
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1e-07,
+          "ymag": 1e-07,
+          "near": 0.01,
+          "far": 10
+        }
+      },
+      "transforms": [],
+      "expected": [
+        0.48000001907348633,
+        0.4049999713897705,
+        0.25
+      ]
+    },
+    {
+      "name": "analytic-slab-ior1_5",
+      "source": "fixtures/gpu-dielectric/data/slab.glb",
+      "source_sha256": "4e5540884963d5972d151c534232e24c344f9ac9e35341b04804a760fed2e927",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "opacity": {
+        "kind": "opaque"
+      },
+      "animated": false,
+      "secondary": true,
+      "glass_only": true,
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 16,
+        "seed": 42,
+        "max_depth": 3
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          1
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1e-07,
+          "ymag": 1e-07,
+          "near": 0.01,
+          "far": 10
+        }
+      },
+      "transforms": [],
+      "expected": [
+        0.48000001907348633,
+        0.4049999713897705,
+        0.25
+      ]
+    },
+    {
+      "name": "analytic-slab-ior3",
+      "source": "fixtures/gpu-dielectric/data/slab.glb",
+      "source_sha256": "4e5540884963d5972d151c534232e24c344f9ac9e35341b04804a760fed2e927",
+      "model": {
+        "kind": "dielectric",
+        "ior": 3
+      },
+      "opacity": {
+        "kind": "opaque"
+      },
+      "animated": false,
+      "secondary": true,
+      "glass_only": true,
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 16,
+        "seed": 42,
+        "max_depth": 3
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          1
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1e-07,
+          "ymag": 1e-07,
+          "near": 0.01,
+          "far": 10
+        }
+      },
+      "transforms": [],
+      "expected": [
+        0.33000001311302185,
+        0.2784374952316284,
+        0.171875
+      ]
+    },
+    {
+      "name": "analytic-tilted-frame",
+      "source": "fixtures/gpu-dielectric/data/tilted.glb",
+      "source_sha256": "7dcc511521bb6b2bff2ea884e742f7dc5d67bec13554573810b9de3fbe213683",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "opacity": {
+        "kind": "opaque"
+      },
+      "animated": false,
+      "secondary": true,
+      "glass_only": true,
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 16,
+        "seed": 42,
+        "max_depth": 2
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          1
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1e-07,
+          "ymag": 1e-07,
+          "near": 0.01,
+          "far": 10
+        }
+      },
+      "transforms": [],
+      "expected": [
+        0.2666666805744171,
+        0.19999998807907104,
+        0.1111111119389534
+      ]
+    },
+    {
+      "name": "analytic-mirror-x",
+      "source": "fixtures/gpu-dielectric/data/single.glb",
+      "source_sha256": "8aff2f473e2bda0875aded14afdeaddda088f2fef0982eb8467dfae12c988e06",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "opacity": {
+        "kind": "opaque"
+      },
+      "animated": false,
+      "secondary": true,
+      "glass_only": true,
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 16,
+        "seed": 42,
+        "max_depth": 2
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          1
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1e-07,
+          "ymag": 1e-07,
+          "near": 0.01,
+          "far": 10
+        }
+      },
+      "transforms": [
+        {
+          "name": "glass-front",
+          "transform": {
+            "columns": [
+              [
+                -1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "expected": [
+        0.2666666805744171,
+        0.19999998807907104,
+        0.1111111119389534
+      ]
+    },
+    {
+      "name": "analytic-mirror-z",
+      "source": "fixtures/gpu-dielectric/data/single.glb",
+      "source_sha256": "8aff2f473e2bda0875aded14afdeaddda088f2fef0982eb8467dfae12c988e06",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "opacity": {
+        "kind": "opaque"
+      },
+      "animated": false,
+      "secondary": true,
+      "glass_only": true,
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 16,
+        "seed": 42,
+        "max_depth": 2
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          1
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1e-07,
+          "ymag": 1e-07,
+          "near": 0.01,
+          "far": 10
+        }
+      },
+      "transforms": [
+        {
+          "name": "glass-front",
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                -1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "expected": [
+        1.350000023841858,
+        1.0124999284744263,
+        0.5625
+      ]
+    },
+    {
+      "name": "analytic-snell",
+      "source": "fixtures/gpu-dielectric/data/single.glb",
+      "source_sha256": "8aff2f473e2bda0875aded14afdeaddda088f2fef0982eb8467dfae12c988e06",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "opacity": {
+        "kind": "opaque"
+      },
+      "animated": false,
+      "secondary": true,
+      "glass_only": true,
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 16,
+        "seed": 42,
+        "max_depth": 2
+      },
+      "camera": {
+        "position": [
+          -0.5773502691896258,
+          0,
+          1
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1e-07,
+          "ymag": 1e-07,
+          "near": 0.01,
+          "far": 10
+        }
+      },
+      "transforms": [
+        {
+          "name": "emitter-target",
+          "transform": {
+            "columns": [
+              [
+                0.05,
+                0,
+                0
+              ],
+              [
+                0,
+                4,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0.35355339059327373,
+                0,
+                -1
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "expected": [
+        0.2666666805744171,
+        0.19999998807907104,
+        0.1111111119389534
+      ]
+    },
+    {
+      "name": "analytic-tir",
+      "source": "fixtures/gpu-dielectric/data/single.glb",
+      "source_sha256": "8aff2f473e2bda0875aded14afdeaddda088f2fef0982eb8467dfae12c988e06",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "opacity": {
+        "kind": "opaque"
+      },
+      "animated": false,
+      "secondary": true,
+      "glass_only": true,
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 16,
+        "seed": 42,
+        "max_depth": 2
+      },
+      "camera": {
+        "position": [
+          -1.032370802417528,
+          0,
+          -0.5
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1e-07,
+          "ymag": 1e-07,
+          "near": 0.01,
+          "far": 10
+        }
+      },
+      "transforms": [
+        {
+          "name": "emitter-target",
+          "transform": {
+            "columns": [
+              [
+                0.05,
+                0,
+                0
+              ],
+              [
+                0,
+                4,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                2.064741604835056,
+                0,
+                -1
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "expected": [
+        0.75,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "name": "analytic-grazing",
+      "source": "fixtures/gpu-dielectric/data/single.glb",
+      "source_sha256": "8aff2f473e2bda0875aded14afdeaddda088f2fef0982eb8467dfae12c988e06",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "opacity": {
+        "kind": "opaque"
+      },
+      "animated": false,
+      "secondary": true,
+      "glass_only": true,
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 16,
+        "seed": 42,
+        "max_depth": 2
+      },
+      "camera": {
+        "position": [
+          -4.9749371855331,
+          0,
+          0.5
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1e-07,
+          "ymag": 1e-07,
+          "near": 0.01,
+          "far": 10
+        }
+      },
+      "transforms": [
+        {
+          "name": "emitter-target",
+          "transform": {
+            "columns": [
+              [
+                0.05,
+                0,
+                0
+              ],
+              [
+                0,
+                4,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0.8864052604279182,
+                0,
+                -1
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "expected": [
+        0.10000000149011612,
+        0.07499999552965164,
+        0.0416666679084301
+      ]
+    },
+    {
+      "name": "analytic-near-clipped",
+      "source": "fixtures/gpu-dielectric/data/single.glb",
+      "source_sha256": "8aff2f473e2bda0875aded14afdeaddda088f2fef0982eb8467dfae12c988e06",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "opacity": {
+        "kind": "opaque"
+      },
+      "animated": false,
+      "secondary": true,
+      "glass_only": true,
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 16,
+        "seed": 42,
+        "max_depth": 2
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          1
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1e-07,
+          "ymag": 1e-07,
+          "near": 1.1,
+          "far": 10
+        }
+      },
+      "transforms": [],
+      "expected": [
+        0.75,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "name": "analytic-far-clipped",
+      "source": "fixtures/gpu-dielectric/data/single.glb",
+      "source_sha256": "8aff2f473e2bda0875aded14afdeaddda088f2fef0982eb8467dfae12c988e06",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "opacity": {
+        "kind": "opaque"
+      },
+      "animated": false,
+      "secondary": true,
+      "glass_only": true,
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 16,
+        "seed": 42,
+        "max_depth": 2
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          1
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1e-07,
+          "ymag": 1e-07,
+          "near": 0.01,
+          "far": 0.9
+        }
+      },
+      "transforms": [],
+      "expected": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "analytic-mask-clear",
+      "source": "fixtures/gpu-dielectric/data/single.glb",
+      "source_sha256": "8aff2f473e2bda0875aded14afdeaddda088f2fef0982eb8467dfae12c988e06",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "opacity": {
+        "kind": "mask",
+        "factor": 0,
+        "cutoff": 0.5
+      },
+      "animated": false,
+      "secondary": true,
+      "glass_only": true,
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 16,
+        "seed": 42,
+        "max_depth": 2
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          1
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1e-07,
+          "ymag": 1e-07,
+          "near": 0.01,
+          "far": 10
+        }
+      },
+      "transforms": [],
+      "expected": [
+        0.75,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "name": "analytic-blend-half",
+      "source": "fixtures/gpu-dielectric/data/single.glb",
+      "source_sha256": "8aff2f473e2bda0875aded14afdeaddda088f2fef0982eb8467dfae12c988e06",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "opacity": {
+        "kind": "blend",
+        "factor": 0.5
+      },
+      "animated": false,
+      "secondary": true,
+      "glass_only": true,
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 16,
+        "seed": 42,
+        "max_depth": 2
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          1
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1e-07,
+          "ymag": 1e-07,
+          "near": 0.01,
+          "far": 10
+        }
+      },
+      "transforms": [],
+      "expected": [
+        0.5687500238418579,
+        0.38749998807907104,
+        0.1979166716337204
+      ]
+    }
+  ]
+}

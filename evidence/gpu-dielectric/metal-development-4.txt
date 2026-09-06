@@ -1,0 +1,18 @@
+   Compiling render-host v0.1.0 (/private/tmp/render-gpu-dielectric-20260906/crates/host)
+error[E0369]: binary operation `==` cannot be applied to type `RenderReceipt`
+   --> crates/host/tests/gpu_dielectric.rs:171:5
+    |
+171 |     assert_eq!(before.receipt, after.receipt);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     |
+    |     RenderReceipt
+    |     RenderReceipt
+    |
+note: `RenderReceipt` does not implement `PartialEq`
+   --> crates/core/src/render.rs:870:1
+    |
+870 | pub struct RenderReceipt {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^ `RenderReceipt` is defined in another crate
+
+For more information about this error, try `rustc --explain E0369`.
+error: could not compile `render-host` (test "gpu_dielectric") due to 1 previous error

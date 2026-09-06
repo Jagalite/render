@@ -184,10 +184,11 @@ fn run() -> Result<()> {
                 None => render_kernel::path::kernel(),
                 Some("--alpha") if args.len() == 2 => render_kernel::path::alpha_kernel(),
                 Some("--surfaces") if args.len() == 2 => render_kernel::path::surface_kernel(),
+                Some("--dielectric") if args.len() == 2 => render_kernel::path::dielectric_kernel(),
                 _ => {
                     return Err(Error::new(
                         "arguments",
-                        "kernel accepts only --alpha or --surfaces",
+                        "kernel accepts only --alpha, --surfaces or --dielectric",
                     ));
                 }
             };

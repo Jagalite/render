@@ -1,0 +1,66 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "import",
+    "base_revision": "sha256:e5e4550ecf3c8b49d420113e0980c6fc770318bafc5182710e09b685ee94b9a7",
+    "idempotency_key": "surfaces:import:001",
+    "max_added_bytes": 8388608,
+    "source": {
+      "format": "glb",
+      "path": "/private/tmp/render-gpu-dielectric-20260906/fixtures/gpu-alpha/data/named-mask.glb",
+      "policy": {
+        "allow_approximations": true
+      }
+    },
+    "settings": {
+      "width": 16,
+      "height": 16,
+      "samples": 16,
+      "seed": 73,
+      "max_depth": 4,
+      "max_bytes": 16777216,
+      "environment": [
+        0.125,
+        0.25,
+        0.5
+      ],
+      "light": {
+        "position": [
+          1,
+          2,
+          3
+        ],
+        "intensity": [
+          1,
+          1,
+          1
+        ]
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          3
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "vertical_fov_radians": 0.65,
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 2.5,
+          "ymag": 2.5,
+          "near": 0.1,
+          "far": 10
+        }
+      }
+    }
+  }
+}

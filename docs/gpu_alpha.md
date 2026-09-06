@@ -5,7 +5,8 @@ Principled OPAQUE, MASK and BLEND surfaces on Metal and browser WebGPU. It uses
 ordinary immutable evaluated scenes and the existing static/frame/sequence APIs.
 No document schema, ABI, runtime dependency or editor mutation path is added.
 [Conductor and single-interface coat](gpu_surfaces.md) now have a separate GPU profile.
-Dielectric and sparse media remain explicit `unsupported_profile` errors.
+[Ideal dielectric](gpu_dielectric.md) also has a separate validated GPU profile.
+Sparse media remains an explicit `unsupported_profile` error.
 [Acceptance evidence](../evidence/gpu-alpha/README.md) records 145 native tests,
 124 Wasm tests, real Metal/Chrome workflows and unchanged prior opaque artifacts.
 
@@ -55,7 +56,7 @@ Analytic zero/full/partial AO tests reproduce the original error and verify reco
 Primary PBR color textures use camera differentials; secondary color textures use
 zero derivatives and base-level magnification filtering. The subsequent shared
 [secondary footprint correction](secondary_textures.md) validates the extended CPU
-path against this contract. Small emissive lights, MIS, richer layering, refraction,
+path against this contract. Small emissive lights, MIS, richer layering, rough transmission,
 fiber shading and participating media retain separate gates.
 
 Reproduce with `python3 scripts/validate-gpu-alpha.py` after serving the exact

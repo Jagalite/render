@@ -49,6 +49,7 @@ try:
     call('import',{'method':'import','base_revision':empty['revision'],'idempotency_key':'alpha:shutter:import','max_added_bytes':8388608,'source':{'format':'glb','path':str(Path('fixtures/named-uv/data/roles.glb').resolve()),'policy':{'allow_approximations':True}},'settings':settings},project)
     state=inspect('imported',project);snapshot=state['snapshot'];original=next(e for e in snapshot['entities'] if e['mesh'] is not None)
     material=copy.deepcopy(snapshot['materials'][original['material']]);material['pbr']['advanced']={'model':model,'opacity':{'kind':'mask','factor':0,'cutoff':0.5}}
+    if model['kind']=='dielectric':material.update(roughness=0,metallic=0)
     commands=[{'operation':'put_material','material':material}];leaves=[original]
     for i in range(1,65):
         entity=copy.deepcopy(original);entity.update(id=identifier(20000+i),parent=None)

@@ -1,0 +1,484 @@
+{
+  "status": "passed",
+  "profile": "gltf2-morph-frames-v1",
+  "calls": [
+    {
+      "name": "dense-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/dense",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/000-dense-init.json"
+      ],
+      "seconds": 0.026860875004786067,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-base",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/dense",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/001-dense-base.json"
+      ],
+      "seconds": 0.007274208008311689,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/dense",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/002-dense-import.json"
+      ],
+      "seconds": 0.047613667004043236,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17629184,
+        "peak memory footprint": 3687552
+      }
+    },
+    {
+      "name": "dense-retry",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/dense",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/003-dense-retry.json"
+      ],
+      "seconds": 0.04034737499023322,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/dense",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/004-dense-state.json"
+      ],
+      "seconds": 0.022293625006568618,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/dense",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/005-dense-cpu.json"
+      ],
+      "seconds": 0.219624625009601,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 19775488,
+        "peak memory footprint": 4260992
+      }
+    },
+    {
+      "name": "dense-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/dense",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/006-dense-gpu.json"
+      ],
+      "seconds": 0.18293862500286195,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 35880960,
+        "peak memory footprint": 11699840
+      }
+    },
+    {
+      "name": "dense-archive",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/dense",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/007-dense-archive.json"
+      ],
+      "seconds": 0.041706459000124596,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-restore",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/dense-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/008-dense-restore.json"
+      ],
+      "seconds": 0.03996370799723081,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-restored-frame",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/dense-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/009-dense-restored-frame.json"
+      ],
+      "seconds": 0.17811141700076405,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-stale",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/dense",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/010-dense-stale.json"
+      ],
+      "seconds": 0.04088754100666847,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "dense-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/dense",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/011-dense-unchanged.json"
+      ],
+      "seconds": 0.03816045800340362,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/012-sparse-init.json"
+      ],
+      "seconds": 0.023178083007223904,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/013-sparse-base.json"
+      ],
+      "seconds": 0.0077529999980470166,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/014-sparse-import.json"
+      ],
+      "seconds": 0.04758387499896344,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17661952,
+        "peak memory footprint": 3720320
+      }
+    },
+    {
+      "name": "sparse-retry",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/015-sparse-retry.json"
+      ],
+      "seconds": 0.036048374997335486,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/016-sparse-state.json"
+      ],
+      "seconds": 0.0216786250093719,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/017-sparse-cpu.json"
+      ],
+      "seconds": 0.2205056670063641,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 19742720,
+        "peak memory footprint": 4228224
+      }
+    },
+    {
+      "name": "sparse-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/018-sparse-gpu.json"
+      ],
+      "seconds": 0.17884466699615587,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 35979264,
+        "peak memory footprint": 11765312
+      }
+    },
+    {
+      "name": "sparse-archive",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/019-sparse-archive.json"
+      ],
+      "seconds": 0.04668883299746085,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-restore",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/sparse-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/020-sparse-restore.json"
+      ],
+      "seconds": 0.03874833299778402,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-restored-frame",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/sparse-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/021-sparse-restored-frame.json"
+      ],
+      "seconds": 0.19045916700270027,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-stale",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/022-sparse-stale.json"
+      ],
+      "seconds": 0.040833041988662444,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "sparse-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/023-sparse-unchanged.json"
+      ],
+      "seconds": 0.02309025000431575,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "negative-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/negative",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/024-negative-init.json"
+      ],
+      "seconds": 0.02155124999990221,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "negative-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/negative",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/025-negative-state.json"
+      ],
+      "seconds": 0.006863625007099472,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "malformed",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/negative",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/026-malformed.json"
+      ],
+      "seconds": 0.007578625009045936,
+      "exit_code": 1,
+      "expected_error": "gltf_scene"
+    },
+    {
+      "name": "cancelled",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/negative",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/027-cancelled.json"
+      ],
+      "seconds": 0.005911041007493623,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "budget",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/negative",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/028-budget.json"
+      ],
+      "seconds": 0.006629750001593493,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "negative-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/negative",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/029-negative-unchanged.json"
+      ],
+      "seconds": 0.006669917012914084,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "explicit-valid",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/negative",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/morph-regression/requests/030-explicit-valid.json"
+      ],
+      "seconds": 0.04229929200664628,
+      "exit_code": 0,
+      "expected_error": null
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "settings": {
+    "width": 32,
+    "height": 32,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.15,
+      0.15,
+      0.15
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        30,
+        30,
+        30
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        5
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 2,
+        "ymag": 2.5,
+        "near": 0.1,
+        "far": 10
+      }
+    }
+  },
+  "variants": [
+    {
+      "name": "dense",
+      "revision": "sha256:a0280f22328822394df1999e451f15c3b0c7a62250a7a466680c643862532084",
+      "clip": "9828e5547ba6047cba3ee457c60a76c7",
+      "linear_rmse": 0.000118356824385386,
+      "object_mismatches": 0,
+      "document_bytes": 14990
+    },
+    {
+      "name": "sparse",
+      "revision": "sha256:a3658379e0c38b15daf0dd20f3a185ef9207e63c8579f3644043ade59fe7e05a",
+      "clip": "3aaef354ffe20d4fbe06a694319477ee",
+      "linear_rmse": 0.000118356824385386,
+      "object_mismatches": 0,
+      "document_bytes": 14990
+    }
+  ],
+  "dense_sparse_pixels_identical": true
+}

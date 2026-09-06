@@ -1,0 +1,90 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:eafe1047c43047bf2187ef5a3f8d5638cc5f58810e22596a30a1863beb0a1fdb",
+      "idempotency_key": "surfaces:material:001",
+      "max_added_bytes": 8388608,
+      "commands": [
+        {
+          "operation": "put_material",
+          "material": {
+            "base_color": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "emission": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "id": "0a9ae863dc06da43f1ec0030977dcc1b",
+            "metallic": 0,
+            "pbr": {
+              "base_color": null,
+              "double_sided": false,
+              "emission": null,
+              "metallic_roughness": null,
+              "normal": null,
+              "normal_scale": 1.0,
+              "occlusion": null,
+              "occlusion_strength": 1.0,
+              "advanced": {
+                "model": {
+                  "kind": "dielectric",
+                  "ior": 3
+                },
+                "opacity": {
+                  "kind": "opaque"
+                }
+              }
+            },
+            "roughness": 0,
+            "texture": null
+          }
+        },
+        {
+          "operation": "put_material",
+          "material": {
+            "base_color": [
+              0.800000011920929,
+              0.8999999761581421,
+              1.0
+            ],
+            "emission": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "id": "2efc93e96fd923e256bed252a0f832ba",
+            "metallic": 0,
+            "pbr": {
+              "base_color": null,
+              "double_sided": false,
+              "emission": null,
+              "metallic_roughness": null,
+              "normal": null,
+              "normal_scale": 1.0,
+              "occlusion": null,
+              "occlusion_strength": 1.0,
+              "advanced": {
+                "model": {
+                  "kind": "dielectric",
+                  "ior": 3
+                },
+                "opacity": {
+                  "kind": "opaque"
+                }
+              }
+            },
+            "roughness": 0,
+            "texture": null
+          }
+        }
+      ]
+    }
+  }
+}

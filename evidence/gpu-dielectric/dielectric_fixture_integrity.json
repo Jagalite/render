@@ -1,0 +1,13 @@
+{
+  "recipes": [
+    {
+      "path": "fixtures/gpu-dielectric/cases.json",
+      "sha256": "b489437d71886e319a42946a3e2315a7387b6eb9fa5dca3bd73dd03bd3889a64"
+    },
+    {
+      "path": "fixtures/gpu-dielectric/data/analytic-cases.json",
+      "sha256": "9bc8f3648addc69e6e2b609372867bf4b8de5ae56726034b87217e5e67758d3f"
+    }
+  ],
+  "reproduction": "Original generated source GLBs and analytic recipes reproduce identically; all native material transactions retry identically and archives recover exact GPU pixels."
+}

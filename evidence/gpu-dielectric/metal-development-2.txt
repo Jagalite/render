@@ -1,0 +1,19 @@
+   Compiling render-host v0.1.0 (/private/tmp/render-gpu-dielectric-20260906/crates/host)
+    Finished `test` profile [unoptimized] target(s) in 1.11s
+     Running tests/gpu_dielectric.rs (target/debug/deps/gpu_dielectric-68941461ad50f3fd)
+
+running 1 test
+
+thread 'analytic_ideal_interfaces_match_metal_and_keep_prior_shaders_exact' (4180202) panicked at crates/host/tests/../../core/tests/support/dielectric.rs:72:14:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test analytic_ideal_interfaces_match_metal_and_keep_prior_shaders_exact ... FAILED
+
+failures:
+
+failures:
+    analytic_ideal_interfaces_match_metal_and_keep_prior_shaders_exact
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.50s
+
+error: test failed, to rerun pass `-p render-host --test gpu_dielectric`

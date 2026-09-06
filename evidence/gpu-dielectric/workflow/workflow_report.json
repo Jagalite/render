@@ -1,0 +1,3067 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "uv-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/uv",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/000-uv-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02692695900623221
+    },
+    {
+      "name": "uv-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/uv",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/001-uv-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007393542007775977
+    },
+    {
+      "name": "uv-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/uv",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/002-uv-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03642570899683051
+    },
+    {
+      "name": "uv-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/uv",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/003-uv-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01706558300065808
+    },
+    {
+      "name": "uv-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/uv",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/004-uv-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04436512499523815,
+      "resources": {
+        "maximum resident set size": 17645568,
+        "peak memory footprint": 3048448
+      }
+    },
+    {
+      "name": "uv-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/uv",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/005-uv-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04038949999085162
+    },
+    {
+      "name": "uv-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/uv-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/006-uv-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0192940830020234
+    },
+    {
+      "name": "uv-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/uv-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/007-uv-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006916208993061446
+    },
+    {
+      "name": "uv-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/uv-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/008-uv-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03636554199329112,
+      "resources": {
+        "maximum resident set size": 16416768,
+        "peak memory footprint": 3048512
+      }
+    },
+    {
+      "name": "uv-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/uv-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/009-uv-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016891332998056896
+    },
+    {
+      "name": "uv-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/uv",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/010-uv-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.057096000004094094,
+      "resources": {
+        "maximum resident set size": 17661952,
+        "peak memory footprint": 3228736
+      }
+    },
+    {
+      "name": "uv-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/uv-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/011-uv-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06152062499313615,
+      "resources": {
+        "maximum resident set size": 17661952,
+        "peak memory footprint": 3228736
+      }
+    },
+    {
+      "name": "uv-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/uv",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/012-uv-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13825545899453573,
+      "resources": {
+        "maximum resident set size": 34160640,
+        "peak memory footprint": 11241088
+      }
+    },
+    {
+      "name": "uv-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/uv-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/013-uv-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13374400000611786,
+      "resources": {
+        "maximum resident set size": 33996800,
+        "peak memory footprint": 11060800
+      }
+    },
+    {
+      "name": "uv-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/uv-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/014-uv-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.035746958004892804
+    },
+    {
+      "name": "uv-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/uv-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/015-uv-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.027471958004753105
+    },
+    {
+      "name": "uv-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/uv-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/016-uv-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05554929201025516
+    },
+    {
+      "name": "uv-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/uv",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/017-uv-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.015391583001473919
+    },
+    {
+      "name": "uv-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/uv",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/018-uv-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015248958006850444
+    },
+    {
+      "name": "color-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/019-color-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02039741699991282
+    },
+    {
+      "name": "color-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/020-color-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006770666994270869
+    },
+    {
+      "name": "color-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/021-color-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0364505830075359
+    },
+    {
+      "name": "color-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/022-color-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014332499995362014
+    },
+    {
+      "name": "color-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/023-color-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.036792917002458125,
+      "resources": {
+        "maximum resident set size": 17612800,
+        "peak memory footprint": 2933824
+      }
+    },
+    {
+      "name": "color-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/024-color-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03867145799449645
+    },
+    {
+      "name": "color-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/025-color-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01939662500808481
+    },
+    {
+      "name": "color-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/026-color-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007163458998547867
+    },
+    {
+      "name": "color-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/027-color-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03812108299462125,
+      "resources": {
+        "maximum resident set size": 16203776,
+        "peak memory footprint": 2835520
+      }
+    },
+    {
+      "name": "color-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/028-color-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014507583997328766
+    },
+    {
+      "name": "color-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/029-color-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05522091599414125,
+      "resources": {
+        "maximum resident set size": 17547264,
+        "peak memory footprint": 3163200
+      }
+    },
+    {
+      "name": "color-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/030-color-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.055461750001995824,
+      "resources": {
+        "maximum resident set size": 17547264,
+        "peak memory footprint": 3163200
+      }
+    },
+    {
+      "name": "color-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/031-color-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1379533330036793,
+      "resources": {
+        "maximum resident set size": 34045952,
+        "peak memory footprint": 11109952
+      }
+    },
+    {
+      "name": "color-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/032-color-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13269208400743082,
+      "resources": {
+        "maximum resident set size": 33931264,
+        "peak memory footprint": 10995264
+      }
+    },
+    {
+      "name": "color-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/033-color-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.031791083005373366
+    },
+    {
+      "name": "color-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/034-color-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.034197500004665926
+    },
+    {
+      "name": "color-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/035-color-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.056820583005901426
+    },
+    {
+      "name": "color-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/036-color-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.014064250004594214
+    },
+    {
+      "name": "color-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/037-color-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013558458012994379
+    },
+    {
+      "name": "morph-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/morph",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/038-morph-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019349333000718616
+    },
+    {
+      "name": "morph-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/morph",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/039-morph-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006895915998029523
+    },
+    {
+      "name": "morph-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/morph",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/040-morph-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.041838042001472786
+    },
+    {
+      "name": "morph-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/morph",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/041-morph-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02431662500021048
+    },
+    {
+      "name": "morph-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/morph",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/042-morph-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.058066041994607076,
+      "resources": {
+        "maximum resident set size": 19283968,
+        "peak memory footprint": 3703936
+      }
+    },
+    {
+      "name": "morph-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/morph",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/043-morph-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.052633083003456704
+    },
+    {
+      "name": "morph-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/morph-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/044-morph-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019349458001670428
+    },
+    {
+      "name": "morph-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/morph-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/045-morph-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007281540994881652
+    },
+    {
+      "name": "morph-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/morph-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/046-morph-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.036765583005035296,
+      "resources": {
+        "maximum resident set size": 16384000,
+        "peak memory footprint": 2999360
+      }
+    },
+    {
+      "name": "morph-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/morph-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/047-morph-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01734020799631253
+    },
+    {
+      "name": "morph-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/morph",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/048-morph-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09097766601189505,
+      "resources": {
+        "maximum resident set size": 19283968,
+        "peak memory footprint": 3802240
+      }
+    },
+    {
+      "name": "morph-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/morph-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/049-morph-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07033258299634326,
+      "resources": {
+        "maximum resident set size": 17661952,
+        "peak memory footprint": 3245184
+      }
+    },
+    {
+      "name": "morph-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/morph",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/050-morph-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.15297087498765904,
+      "resources": {
+        "maximum resident set size": 35258368,
+        "peak memory footprint": 11355712
+      }
+    },
+    {
+      "name": "morph-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/morph-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/051-morph-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14338045800104737,
+      "resources": {
+        "maximum resident set size": 34177024,
+        "peak memory footprint": 11257472
+      }
+    },
+    {
+      "name": "morph-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/morph-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/052-morph-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03500808299577329
+    },
+    {
+      "name": "morph-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/morph-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/053-morph-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03172275000542868
+    },
+    {
+      "name": "morph-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/morph-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/054-morph-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06516050000209361
+    },
+    {
+      "name": "morph-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/morph",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/055-morph-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.021221417002379894
+    },
+    {
+      "name": "morph-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/morph",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/056-morph-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021706500003347173
+    },
+    {
+      "name": "mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/057-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018228665998321958
+    },
+    {
+      "name": "mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/058-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.00684220899711363
+    },
+    {
+      "name": "mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/059-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03212104098929558
+    },
+    {
+      "name": "mask-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/060-mask-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013046541993389837
+    },
+    {
+      "name": "mask-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/061-mask-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03773945799912326,
+      "resources": {
+        "maximum resident set size": 17547264,
+        "peak memory footprint": 2851904
+      }
+    },
+    {
+      "name": "mask-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/062-mask-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03791749999800231
+    },
+    {
+      "name": "mask-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/063-mask-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019162958997185342
+    },
+    {
+      "name": "mask-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/064-mask-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007436332991346717
+    },
+    {
+      "name": "mask-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/065-mask-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03467754099983722,
+      "resources": {
+        "maximum resident set size": 16269312,
+        "peak memory footprint": 2884672
+      }
+    },
+    {
+      "name": "mask-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/066-mask-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013006042005144991
+    },
+    {
+      "name": "mask-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/067-mask-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.055755959008820355,
+      "resources": {
+        "maximum resident set size": 17301504,
+        "peak memory footprint": 2999360
+      }
+    },
+    {
+      "name": "mask-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/068-mask-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05591024999739602,
+      "resources": {
+        "maximum resident set size": 17350656,
+        "peak memory footprint": 3048512
+      }
+    },
+    {
+      "name": "mask-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/069-mask-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20414620799419936,
+      "resources": {
+        "maximum resident set size": 35110912,
+        "peak memory footprint": 12240512
+      }
+    },
+    {
+      "name": "mask-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/070-mask-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20391250000102445,
+      "resources": {
+        "maximum resident set size": 34914304,
+        "peak memory footprint": 12076672
+      }
+    },
+    {
+      "name": "mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/071-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03335983300348744
+    },
+    {
+      "name": "mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/mask-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/072-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02994737500557676
+    },
+    {
+      "name": "mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/mask-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/073-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.051740875001996756
+    },
+    {
+      "name": "mask-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/074-mask-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.012168041008408181
+    },
+    {
+      "name": "mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/075-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012309457990340889
+    },
+    {
+      "name": "blend-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/076-blend-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01891929199337028
+    },
+    {
+      "name": "blend-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/077-blend-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006898749998072162
+    },
+    {
+      "name": "blend-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/078-blend-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.029927541996585205
+    },
+    {
+      "name": "blend-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/079-blend-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014291583996964619
+    },
+    {
+      "name": "blend-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/080-blend-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03725137500441633,
+      "resources": {
+        "maximum resident set size": 17580032,
+        "peak memory footprint": 2901056
+      }
+    },
+    {
+      "name": "blend-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/081-blend-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03604474999883678
+    },
+    {
+      "name": "blend-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/blend-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/082-blend-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020921999996062368
+    },
+    {
+      "name": "blend-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/blend-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/083-blend-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007575582989375107
+    },
+    {
+      "name": "blend-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/blend-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/084-blend-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03381949999311473,
+      "resources": {
+        "maximum resident set size": 16236544,
+        "peak memory footprint": 2851904
+      }
+    },
+    {
+      "name": "blend-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/blend-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/085-blend-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013151791994459927
+    },
+    {
+      "name": "blend-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/086-blend-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.058850041998084635,
+      "resources": {
+        "maximum resident set size": 17432576,
+        "peak memory footprint": 3130432
+      }
+    },
+    {
+      "name": "blend-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/blend-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/087-blend-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05516800000623334,
+      "resources": {
+        "maximum resident set size": 17317888,
+        "peak memory footprint": 3015744
+      }
+    },
+    {
+      "name": "blend-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/088-blend-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20340629100974184,
+      "resources": {
+        "maximum resident set size": 34816000,
+        "peak memory footprint": 11978368
+      }
+    },
+    {
+      "name": "blend-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/blend-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/089-blend-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20030712500738446,
+      "resources": {
+        "maximum resident set size": 35078144,
+        "peak memory footprint": 12207680
+      }
+    },
+    {
+      "name": "blend-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/blend-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/090-blend-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02823629199701827
+    },
+    {
+      "name": "blend-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/blend-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/091-blend-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.028963167002075352
+    },
+    {
+      "name": "blend-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/blend-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/092-blend-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.052563124991138466
+    },
+    {
+      "name": "blend-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/093-blend-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.012152334005804732
+    },
+    {
+      "name": "blend-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/094-blend-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012280374998226762
+    },
+    {
+      "name": "named-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/095-named-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018037582995020784
+    },
+    {
+      "name": "named-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/096-named-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007260500002303161
+    },
+    {
+      "name": "named-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/097-named-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03715145800379105
+    },
+    {
+      "name": "named-mask-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/098-named-mask-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016606165998382494
+    },
+    {
+      "name": "named-mask-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/099-named-mask-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.042053540993947536,
+      "resources": {
+        "maximum resident set size": 17694720,
+        "peak memory footprint": 3081344
+      }
+    },
+    {
+      "name": "named-mask-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/100-named-mask-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04375091700057965
+    },
+    {
+      "name": "named-mask-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/101-named-mask-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021185082994634286
+    },
+    {
+      "name": "named-mask-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/102-named-mask-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007291000001714565
+    },
+    {
+      "name": "named-mask-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/103-named-mask-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03958516700367909,
+      "resources": {
+        "maximum resident set size": 16433152,
+        "peak memory footprint": 3015744
+      }
+    },
+    {
+      "name": "named-mask-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/104-named-mask-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016772958988440223
+    },
+    {
+      "name": "named-mask-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/105-named-mask-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05264416598947719,
+      "resources": {
+        "maximum resident set size": 17580032,
+        "peak memory footprint": 3228800
+      }
+    },
+    {
+      "name": "named-mask-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/106-named-mask-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05407354200724512,
+      "resources": {
+        "maximum resident set size": 17629184,
+        "peak memory footprint": 3277952
+      }
+    },
+    {
+      "name": "named-mask-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/107-named-mask-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.204062332995818,
+      "resources": {
+        "maximum resident set size": 35209216,
+        "peak memory footprint": 12322432
+      }
+    },
+    {
+      "name": "named-mask-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/108-named-mask-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20121812498837244,
+      "resources": {
+        "maximum resident set size": 35225600,
+        "peak memory footprint": 12355200
+      }
+    },
+    {
+      "name": "named-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/109-named-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0360098340024706
+    },
+    {
+      "name": "named-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-mask-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/110-named-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.031541207994450815
+    },
+    {
+      "name": "named-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-mask-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/111-named-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05467783300264273
+    },
+    {
+      "name": "named-mask-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/112-named-mask-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.015316959004849195
+    },
+    {
+      "name": "named-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/113-named-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015306916000554338
+    },
+    {
+      "name": "named-blend-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/114-named-blend-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017623834006371908
+    },
+    {
+      "name": "named-blend-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/115-named-blend-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006644042005063966
+    },
+    {
+      "name": "named-blend-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/116-named-blend-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03585324999585282
+    },
+    {
+      "name": "named-blend-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/117-named-blend-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016542124998522922
+    },
+    {
+      "name": "named-blend-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/118-named-blend-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04109783400781453,
+      "resources": {
+        "maximum resident set size": 17694720,
+        "peak memory footprint": 3064960
+      }
+    },
+    {
+      "name": "named-blend-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/119-named-blend-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.041614000001573004
+    },
+    {
+      "name": "named-blend-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-blend-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/120-named-blend-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017205541997100227
+    },
+    {
+      "name": "named-blend-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-blend-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/121-named-blend-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007080957992002368
+    },
+    {
+      "name": "named-blend-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-blend-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/122-named-blend-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.037469750008312985,
+      "resources": {
+        "maximum resident set size": 16400384,
+        "peak memory footprint": 2982976
+      }
+    },
+    {
+      "name": "named-blend-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-blend-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/123-named-blend-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01674220799759496
+    },
+    {
+      "name": "named-blend-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/124-named-blend-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.059678457997506484,
+      "resources": {
+        "maximum resident set size": 17596416,
+        "peak memory footprint": 3245184
+      }
+    },
+    {
+      "name": "named-blend-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-blend-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/125-named-blend-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05679958299151622,
+      "resources": {
+        "maximum resident set size": 17580032,
+        "peak memory footprint": 3228800
+      }
+    },
+    {
+      "name": "named-blend-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/126-named-blend-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21309420799661893,
+      "resources": {
+        "maximum resident set size": 35110912,
+        "peak memory footprint": 12240512
+      }
+    },
+    {
+      "name": "named-blend-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-blend-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/127-named-blend-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21553070799564011,
+      "resources": {
+        "maximum resident set size": 34996224,
+        "peak memory footprint": 12142208
+      }
+    },
+    {
+      "name": "named-blend-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-blend-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/128-named-blend-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03504808399884496
+    },
+    {
+      "name": "named-blend-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-blend-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/129-named-blend-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03470020899840165
+    },
+    {
+      "name": "named-blend-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-blend-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/130-named-blend-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05480891698971391
+    },
+    {
+      "name": "named-blend-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/131-named-blend-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.017679124997812323
+    },
+    {
+      "name": "named-blend-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/named-blend",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/132-named-blend-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016099500004202127
+    },
+    {
+      "name": "ao-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/ao-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/133-ao-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02085837499180343
+    },
+    {
+      "name": "ao-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/ao-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/134-ao-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007116709006368183
+    },
+    {
+      "name": "ao-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/ao-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/135-ao-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03700591600500047
+    },
+    {
+      "name": "ao-mask-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/ao-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/136-ao-mask-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0161262089968659
+    },
+    {
+      "name": "ao-mask-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/ao-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/137-ao-mask-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03892808299860917,
+      "resources": {
+        "maximum resident set size": 17547264,
+        "peak memory footprint": 2966592
+      }
+    },
+    {
+      "name": "ao-mask-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/ao-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/138-ao-mask-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.052282208009273745
+    },
+    {
+      "name": "ao-mask-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/ao-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/139-ao-mask-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021881708002183586
+    },
+    {
+      "name": "ao-mask-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/ao-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/140-ao-mask-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007375834000413306
+    },
+    {
+      "name": "ao-mask-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/ao-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/141-ao-mask-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04043737499159761,
+      "resources": {
+        "maximum resident set size": 16203776,
+        "peak memory footprint": 2819136
+      }
+    },
+    {
+      "name": "ao-mask-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/ao-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/142-ao-mask-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017239166991203092
+    },
+    {
+      "name": "ao-mask-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/ao-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/143-ao-mask-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.057205292003345676,
+      "resources": {
+        "maximum resident set size": 17481728,
+        "peak memory footprint": 3146816
+      }
+    },
+    {
+      "name": "ao-mask-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/ao-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/144-ao-mask-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06335245800437406,
+      "resources": {
+        "maximum resident set size": 17432576,
+        "peak memory footprint": 3114048
+      }
+    },
+    {
+      "name": "ao-mask-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/ao-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/145-ao-mask-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21473579099983908,
+      "resources": {
+        "maximum resident set size": 35225600,
+        "peak memory footprint": 12322368
+      }
+    },
+    {
+      "name": "ao-mask-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/ao-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/146-ao-mask-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2079423749964917,
+      "resources": {
+        "maximum resident set size": 34881536,
+        "peak memory footprint": 12043904
+      }
+    },
+    {
+      "name": "ao-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/ao-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/147-ao-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04287695899256505
+    },
+    {
+      "name": "ao-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/ao-mask-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/148-ao-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03498104200116359
+    },
+    {
+      "name": "ao-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/ao-mask-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/149-ao-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05704841700207908
+    },
+    {
+      "name": "ao-mask-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/ao-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/150-ao-mask-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.015068124994286336
+    },
+    {
+      "name": "ao-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/ao-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/151-ao-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014968667004723102
+    },
+    {
+      "name": "boundary-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/boundary-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/152-boundary-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02175720800005365
+    },
+    {
+      "name": "boundary-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/boundary-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/153-boundary-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0072391249996144325
+    },
+    {
+      "name": "boundary-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/boundary-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/154-boundary-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03694029100006446
+    },
+    {
+      "name": "boundary-mask-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/boundary-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/155-boundary-mask-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01691216700419318
+    },
+    {
+      "name": "boundary-mask-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/boundary-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/156-boundary-mask-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.042142582999076694,
+      "resources": {
+        "maximum resident set size": 17743872,
+        "peak memory footprint": 3097728
+      }
+    },
+    {
+      "name": "boundary-mask-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/boundary-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/157-boundary-mask-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04510941600892693
+    },
+    {
+      "name": "boundary-mask-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/boundary-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/158-boundary-mask-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020267250001779757
+    },
+    {
+      "name": "boundary-mask-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/boundary-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/159-boundary-mask-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007041791992378421
+    },
+    {
+      "name": "boundary-mask-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/boundary-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/160-boundary-mask-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03740158298751339,
+      "resources": {
+        "maximum resident set size": 16400384,
+        "peak memory footprint": 2982976
+      }
+    },
+    {
+      "name": "boundary-mask-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/boundary-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/161-boundary-mask-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01681770899449475
+    },
+    {
+      "name": "boundary-mask-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/boundary-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/162-boundary-mask-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05511333300091792,
+      "resources": {
+        "maximum resident set size": 17694720,
+        "peak memory footprint": 3343488
+      }
+    },
+    {
+      "name": "boundary-mask-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/boundary-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/163-boundary-mask-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.058150541997747496,
+      "resources": {
+        "maximum resident set size": 17645568,
+        "peak memory footprint": 3294336
+      }
+    },
+    {
+      "name": "boundary-mask-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/boundary-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/164-boundary-mask-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2080442500009667,
+      "resources": {
+        "maximum resident set size": 35192832,
+        "peak memory footprint": 12355200
+      }
+    },
+    {
+      "name": "boundary-mask-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/boundary-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/165-boundary-mask-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20180520899884868,
+      "resources": {
+        "maximum resident set size": 35209216,
+        "peak memory footprint": 12338816
+      }
+    },
+    {
+      "name": "boundary-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/boundary-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/166-boundary-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03216933298972435
+    },
+    {
+      "name": "boundary-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/boundary-mask-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/167-boundary-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03207270801067352
+    },
+    {
+      "name": "boundary-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/boundary-mask-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/168-boundary-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04883450000488665
+    },
+    {
+      "name": "boundary-mask-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/boundary-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/169-boundary-mask-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.015153790998738259
+    },
+    {
+      "name": "boundary-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/boundary-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/170-boundary-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015315124997869134
+    },
+    {
+      "name": "subnormal-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/subnormal-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/171-subnormal-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017040833001374267
+    },
+    {
+      "name": "subnormal-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/subnormal-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/172-subnormal-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006735791990649886
+    },
+    {
+      "name": "subnormal-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/subnormal-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/173-subnormal-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.035593416992924176
+    },
+    {
+      "name": "subnormal-mask-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/subnormal-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/174-subnormal-mask-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01662570799817331
+    },
+    {
+      "name": "subnormal-mask-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/subnormal-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/175-subnormal-mask-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04657791600038763,
+      "resources": {
+        "maximum resident set size": 17760256,
+        "peak memory footprint": 3097664
+      }
+    },
+    {
+      "name": "subnormal-mask-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/subnormal-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/176-subnormal-mask-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04397400000016205
+    },
+    {
+      "name": "subnormal-mask-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/subnormal-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/177-subnormal-mask-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020267957996111363
+    },
+    {
+      "name": "subnormal-mask-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/subnormal-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/178-subnormal-mask-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006972000002861023
+    },
+    {
+      "name": "subnormal-mask-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/subnormal-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/179-subnormal-mask-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04882116601220332,
+      "resources": {
+        "maximum resident set size": 16416768,
+        "peak memory footprint": 2999360
+      }
+    },
+    {
+      "name": "subnormal-mask-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/subnormal-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/180-subnormal-mask-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017385625003953464
+    },
+    {
+      "name": "subnormal-mask-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/subnormal-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/181-subnormal-mask-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07521287498821039,
+      "resources": {
+        "maximum resident set size": 17661952,
+        "peak memory footprint": 3310720
+      }
+    },
+    {
+      "name": "subnormal-mask-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/subnormal-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/182-subnormal-mask-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06787708299816586,
+      "resources": {
+        "maximum resident set size": 17596416,
+        "peak memory footprint": 3245184
+      }
+    },
+    {
+      "name": "subnormal-mask-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/subnormal-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/183-subnormal-mask-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21538333399803378,
+      "resources": {
+        "maximum resident set size": 34947072,
+        "peak memory footprint": 12076672
+      }
+    },
+    {
+      "name": "subnormal-mask-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/subnormal-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/184-subnormal-mask-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2039415830076905,
+      "resources": {
+        "maximum resident set size": 35061760,
+        "peak memory footprint": 12191360
+      }
+    },
+    {
+      "name": "subnormal-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/subnormal-mask-round",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/185-subnormal-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03423150000162423
+    },
+    {
+      "name": "subnormal-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/subnormal-mask-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/186-subnormal-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03110779100097716
+    },
+    {
+      "name": "subnormal-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/subnormal-mask-restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/187-subnormal-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05383074999554083
+    },
+    {
+      "name": "subnormal-mask-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/subnormal-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/188-subnormal-mask-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.01510312499885913
+    },
+    {
+      "name": "subnormal-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/subnormal-mask",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/189-subnormal-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015424042008817196
+    },
+    {
+      "name": "negative-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/190-negative-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012396209000144154
+    },
+    {
+      "name": "core-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/191-core-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.028458459011744708
+    },
+    {
+      "name": "vertex-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/192-vertex-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.03225904199643992
+    },
+    {
+      "name": "output-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/193-output-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.03816325000661891
+    },
+    {
+      "name": "consent",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/194-consent.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_gltf",
+      "seconds": 0.030672666005557403
+    },
+    {
+      "name": "cancelled",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/195-cancelled.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.007567209002445452
+    },
+    {
+      "name": "negative-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/color",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/workflow/196-negative-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013328875007573515
+    }
+  ],
+  "variants": [
+    {
+      "name": "uv",
+      "source": "fixtures/named-uv/data/roles.glb",
+      "gpu": true,
+      "revision": "sha256:a41c0736d4b43e82ccd814f894a57681ef0b8c56b96847ab0d5d2291caf18279",
+      "at": null,
+      "round_revision": "sha256:ced234f1305215dd9d97d732d2624114569ed7cef74eda7641385335b4300b1c",
+      "glb_digest": "sha256:bb24883fe2e14d2d36abc45443a7b7f4870b02ce224a9570c5379796ad567a3c",
+      "glb_bytes": 3732,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "d4b3c8bb8971e6fa66f3a12e3c2a0320": "004556830bbc3bd22349a745c94a2d3c"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "d4b3c8bb8971e6fa66f3a12e3c2a0320": "004556830bbc3bd22349a745c94a2d3c"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "color",
+      "source": "fixtures/vertex-colors/data/rgba.glb",
+      "gpu": true,
+      "revision": "sha256:7a27d4ce8521c972dd4d2197b5c0c7cf2076dab33d163ad4f7a8755caaee56c3",
+      "at": null,
+      "round_revision": "sha256:92ef1e441b5d64e650b0d9e8a2aac287be37cfc86c114921c289f02e6f541528",
+      "glb_digest": "sha256:300bdc341185c578bf4961dadad89904240f684ef45559f9869b5a585e8e4dc9",
+      "glb_bytes": 2732,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "38c60459d1c7caba541c31be0c02e223": "f7721c214c6666804c6d03305df12090",
+            "8e2af0c392e2f0b4ca07e2c07fac6ab2": "2b579589d575c750da26973ec066c06a"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "38c60459d1c7caba541c31be0c02e223": "f7721c214c6666804c6d03305df12090",
+            "8e2af0c392e2f0b4ca07e2c07fac6ab2": "2b579589d575c750da26973ec066c06a"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "morph",
+      "source": "fixtures/morph-frames/data/dense.glb",
+      "gpu": true,
+      "time": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "revision": "sha256:a66785272053787db49bcd516cd5a59f5af32c4c90410d764cefe2655584d65a",
+      "at": {
+        "clip": "b6e31a69e2fddcd8a2842db1f6733f0f",
+        "time": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      "round_revision": "sha256:6f949a69515408e44b53e3a584a9e9d9cde315b71a296ef501d312cf76647f18",
+      "glb_digest": "sha256:083fde0662e36558b95eae70fa562ef1533302457ab8ea2560af83c842a91986",
+      "glb_bytes": 3996,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "3e8517c2902a6be90ebef5865de3441a": "66987d9ede2a6d6f5cec4c030bea9b72"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "3e8517c2902a6be90ebef5865de3441a": "66987d9ede2a6d6f5cec4c030bea9b72"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "mask",
+      "source": "fixtures/alpha-gltf/data/mask.glb",
+      "gpu": true,
+      "revision": "sha256:1f1ec9929babc50d4e2d390a37284cc4645121994a7aab754dc05811be46be56",
+      "at": null,
+      "round_revision": "sha256:0324e3a6db4901380d834dfb5e0b7082506db6b1f55ebd5a33b1fb24327a52a6",
+      "glb_digest": "sha256:ef2a1a911a7aee7a6684801ec0e113421658f53f21d7859ddbc405e6e17b58f3",
+      "glb_bytes": 2052,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "77db4b4b2da4259618486fde62de7e39": "ecddff24ad1d744edb7e56989cf0b601",
+            "a8a022ea971884137fba769f6df06b7d": "52201a6aa934807878887363a863c8a3"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "77db4b4b2da4259618486fde62de7e39": "ecddff24ad1d744edb7e56989cf0b601",
+            "a8a022ea971884137fba769f6df06b7d": "52201a6aa934807878887363a863c8a3"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "blend",
+      "source": "fixtures/alpha-gltf/data/blend.glb",
+      "gpu": true,
+      "revision": "sha256:1832c8f0b8f0c77989868aa220f1c5e762afd40922d886461383977060c014ac",
+      "at": null,
+      "round_revision": "sha256:a74df86fa5eb74829ad1b1178ef9645b6db5b29024cee340fcd248d7f31a85f3",
+      "glb_digest": "sha256:985480c362e75318cfbeb4ee193af551e2513fad81ccb78077e5c358c5a13eb4",
+      "glb_bytes": 2036,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "04c1bd580ee3a8552419f894142a4977": "6524dda95fcbff003fd4f5cef3489fd1",
+            "2bb2257d26e198e39492fec4ed8e7637": "ebbafed01d9f6f47d8367df964b41f7b"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "04c1bd580ee3a8552419f894142a4977": "6524dda95fcbff003fd4f5cef3489fd1",
+            "2bb2257d26e198e39492fec4ed8e7637": "ebbafed01d9f6f47d8367df964b41f7b"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "named-mask",
+      "source": "fixtures/gpu-alpha/data/named-mask.glb",
+      "gpu": true,
+      "revision": "sha256:371d88ee78a8ecabeafca88e1ed480b92c6382ba86cb6761ba5eb6ffea1a4271",
+      "at": null,
+      "round_revision": "sha256:09e26afe61a15e2a604870836475b0d14585ead8a84079ec00add16322beb819",
+      "glb_digest": "sha256:aa8169bce729151d9644e5d73416443c07c0371534383e79d2dadbcf38718cc3",
+      "glb_bytes": 3748,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "4528865a4a4e09ca903bcdde326629f9": "8ae142562d6bb41b711cf2f2745ad033"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "4528865a4a4e09ca903bcdde326629f9": "8ae142562d6bb41b711cf2f2745ad033"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "named-blend",
+      "source": "fixtures/gpu-alpha/data/named-blend.glb",
+      "gpu": true,
+      "revision": "sha256:c7054b55858f1b28dcf38bfecc5d659ae864f2a784f0603b4c949d436a334d22",
+      "at": null,
+      "round_revision": "sha256:1f278d0f9b88c2244b083a88fd1afef46c664ea828c82a6a7895e2fc2cc12664",
+      "glb_digest": "sha256:dc27d011da94fb6683444c11f92b2ca02e6103587b643d36e4fe5e7cce76b4ff",
+      "glb_bytes": 3732,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "50bae1eeef863c018592e8145a6c51c8": "8e2d1f0f37acc5c7f9165d667a682523"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "50bae1eeef863c018592e8145a6c51c8": "8e2d1f0f37acc5c7f9165d667a682523"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "ao-mask",
+      "source": "fixtures/gpu-alpha/data/ao-mask.glb",
+      "gpu": true,
+      "revision": "sha256:83c83d04985288fe727ca613608b7f7d6ac8f87cee32c1555093f73b38651f5e",
+      "at": null,
+      "round_revision": "sha256:991b033d6b1ac2cee618a351847d819c49a53b13763638f6247b6fcc0548a218",
+      "glb_digest": "sha256:530123a84124a0ac7a5964a5319c294a1ddb795252efc2961a79f75f1b32529b",
+      "glb_bytes": 2940,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "7d76a9678d646b9980d2993224b8f395": "fbdb06ce8cc105a675d3c8525441bf2f"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "7d76a9678d646b9980d2993224b8f395": "fbdb06ce8cc105a675d3c8525441bf2f"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "boundary-mask",
+      "source": "fixtures/gpu-alpha/data/boundary-mask.glb",
+      "gpu": true,
+      "revision": "sha256:c7b25339b91fa98098df557e6e9e1fff3f52429d173720792daaf6139e56bed6",
+      "at": null,
+      "round_revision": "sha256:eb377637f19dfe1bbdca776e066bcb9d4c0acc0f93fcdbcf5383ed621992fb54",
+      "glb_digest": "sha256:8bde44183104bfed5819bc82a99c377569060779949a7e6d161c3ba1a1724311",
+      "glb_bytes": 3772,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "6c859bb21cbbe730ce1f7fbc97527c15": "d25130515171612d5fffe20671ec5762"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "6c859bb21cbbe730ce1f7fbc97527c15": "d25130515171612d5fffe20671ec5762"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "subnormal-mask",
+      "source": "fixtures/gpu-alpha/data/subnormal-mask.glb",
+      "gpu": true,
+      "revision": "sha256:431ca79022ed242180b039b75e2e8dd195e84a6b923fc866e0c86ef5f25548ea",
+      "at": null,
+      "round_revision": "sha256:6be77826253b6f99f3530640bf4b07a8577d97e0e999561176268f43c721de3e",
+      "glb_digest": "sha256:165270e6239c5a2ebd4367e6cc14f70892fdb63195126e205839c3d5bb59046a",
+      "glb_bytes": 3756,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "b5db933efd668219e8ad854018cdb2cb": "e3161fa5f8fe3399e398da90ef27a8e8"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "b5db933efd668219e8ad854018cdb2cb": "e3161fa5f8fe3399e398da90ef27a8e8"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    }
+  ],
+  "settings": {
+    "width": 32,
+    "height": 16,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        2,
+        2,
+        2
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        3
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 2.5,
+        "ymag": 2.5,
+        "near": 0.1,
+        "far": 8
+      }
+    }
+  }
+}

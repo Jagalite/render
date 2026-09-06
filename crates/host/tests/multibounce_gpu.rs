@@ -18,7 +18,7 @@ fn fixture() -> (Scene, Settings) {
 }
 #[test]
 fn gpu_depth_admission_and_unsupported_materials_are_explicit() {
-    let (mut scene, mut settings) = fixture();
+    let (scene, mut settings) = fixture();
     for depth in [1, 2, 4, 16] {
         settings.max_depth = depth;
         assert_eq!(
@@ -34,10 +34,10 @@ fn gpu_depth_admission_and_unsupported_materials_are_explicit() {
         );
     }
     settings.max_depth = 4;
-    scene.instances[0].material.pbr.as_mut().unwrap().advanced = Some(scattering::Surface {
-        model: scattering::Model::Dielectric { ior: 1.5 },
-        opacity: scattering::Opacity::Opaque,
-    });
+    let media_document = feature_fixtures::volume_document().unwrap();
+    let scene = Evaluator::default()
+        .evaluate(media_document.snapshot())
+        .unwrap();
     assert_eq!(
         render_gpu::pack(&scene, &settings, 0).err().unwrap().code,
         "unsupported_profile"

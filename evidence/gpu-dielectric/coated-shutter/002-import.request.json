@@ -1,0 +1,66 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "import",
+    "base_revision": "sha256:ee187933e4723bee2309f397746fb69732481ce13a90ccb50f40e8af435a8788",
+    "idempotency_key": "alpha:shutter:import",
+    "max_added_bytes": 8388608,
+    "source": {
+      "format": "glb",
+      "path": "/private/tmp/render-gpu-dielectric-20260906/fixtures/named-uv/data/roles.glb",
+      "policy": {
+        "allow_approximations": true
+      }
+    },
+    "settings": {
+      "width": 2,
+      "height": 2,
+      "samples": 1,
+      "seed": 73,
+      "max_depth": 1,
+      "max_bytes": 16777216,
+      "environment": [
+        0.125,
+        0.25,
+        0.5
+      ],
+      "light": {
+        "position": [
+          -2,
+          4,
+          3
+        ],
+        "intensity": [
+          0,
+          0,
+          0
+        ]
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          3
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "vertical_fov_radians": 0.65,
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1,
+          "ymag": 1,
+          "near": 0.1,
+          "far": 8
+        }
+      }
+    }
+  }
+}

@@ -3,8 +3,8 @@
 The `gpu-f32-conductor-coat-v1` profile renders the existing native-authored typed
 conductor and coated surfaces through static, exact-time frame and streaming sequence
 APIs. It shares Principled texture, normal, selected UV, vertex color, alpha coverage
-and indirect occlusion consumers. Dielectric transmission and sparse media retain
-explicit `unsupported_profile` errors. This does not add glTF material extensions.
+and indirect occlusion consumers. [Ideal dielectric transmission](gpu_dielectric.md) has its own later GPU profile.
+Sparse media retains an explicit `unsupported_profile` error. This does not add glTF material extensions.
 
 Conductor compiles the CPU f64 eta/k expression into RGB F0, then evaluates Schlick
 Fresnel and the existing GGX reflection distribution in f32. Sampling chooses the

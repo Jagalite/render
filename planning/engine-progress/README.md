@@ -5,13 +5,13 @@ working on feasible remaining steps. M09 interactive editor remains deferred.
 Each completed increment requires implementation, native/browser workflow evidence,
 negative/cancellation/stale checks, resource/provenance records and documentation.
 
-Current completed increment: GPU conductor and single-interface coat; evidence/gpu-surfaces.
+Current completed increment: GPU ideal dielectric interfaces; evidence/gpu-dielectric.
 
 | Order | Increment | Status |
 |---|---|---|
 | 1 | GPU shutter frames and streaming sequences | Validated on feat/gpu-shutter-sequences; evidence/gpu-shutter |
 | 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Sparse/UV0, CPU alpha, named UV, morph frames, vertex colors and evaluated PBR GLB export validated |
-| 3 | Richer GPU scattering and transport quality | GPU alpha, conductor, single-interface coat and shared footprints validated; dielectric transmission next |
+| 3 | Richer GPU scattering and transport quality | GPU alpha, conductor, coat and ideal dielectric validated; broader lighting/sampling quality remains separate |
 | 4 | External hair/volume inputs, fiber shading and sparse GPU media | Pending |
 | 5 | Scoped native .blend/USD/MaterialX interchange | Pending |
 | 6 | M10 engine UV/paint/sculpt/remesh/retopology operations | Pending |
@@ -100,3 +100,11 @@ named UV/normal/alpha consumers and animated morph sequences. All396 previous
 image/pass files,132 receipts and135 fixture files remain unchanged. A third lazy
 kernel preserves both earlier shader hashes. GPU dielectric transmission is next;
 no major blocker is parked. Evidence: `evidence/gpu-surfaces/README.md`.
+
+GPU ideal dielectric acceptance:153 native and130 Wasm tests,16 analytic interface
+cases, mixed-model/four-pipeline Metal checks,375 CLI calls over22 material cases,
+and a19-call alpha/shutter failure workflow, all with actual Chrome WebGPU/OPFS.
+All522 prior image/pass files,174 receipts and137 fixture files remain unchanged.
+Three earlier generated shaders retain their exact hashes. Native dielectric optics
+now share Metal/WebGPU coverage; external volume input is next in the engine order.
+Evidence: `evidence/gpu-dielectric/README.md`. No major blocker is parked.

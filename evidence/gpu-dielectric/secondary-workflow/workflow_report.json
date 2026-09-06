@@ -1,0 +1,1925 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/000-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05540629199822433
+    },
+    {
+      "name": "empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/001-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.008046209011808969
+    },
+    {
+      "name": "import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/002-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.031547459002467804
+    },
+    {
+      "name": "imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/003-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01312083299853839
+    },
+    {
+      "name": "opaque-nearest-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/004-opaque-nearest-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012038957996992394
+    },
+    {
+      "name": "opaque-nearest",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/005-opaque-nearest.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.036392291003721766
+    },
+    {
+      "name": "opaque-nearest-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/006-opaque-nearest-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016745624991017394
+    },
+    {
+      "name": "opaque-nearest-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/007-opaque-nearest-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06769816599262413,
+      "resources": {
+        "maximum resident set size": 17399808,
+        "peak memory footprint": 2999360
+      }
+    },
+    {
+      "name": "opaque-nearest-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/008-opaque-nearest-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1342902499891352,
+      "resources": {
+        "maximum resident set size": 33734656,
+        "peak memory footprint": 10782272
+      }
+    },
+    {
+      "name": "opaque-nearest-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/009-opaque-nearest-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0342563330050325
+    },
+    {
+      "name": "opaque-mip-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/010-opaque-mip-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017409125008271076
+    },
+    {
+      "name": "opaque-mip",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/011-opaque-mip.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.047263625005143695
+    },
+    {
+      "name": "opaque-mip-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/012-opaque-mip-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021028540999395773
+    },
+    {
+      "name": "opaque-mip-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/013-opaque-mip-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0700519170059124,
+      "resources": {
+        "maximum resident set size": 17465344,
+        "peak memory footprint": 3064896
+      }
+    },
+    {
+      "name": "opaque-mip-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/014-opaque-mip-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14024395801243372,
+      "resources": {
+        "maximum resident set size": 34193408,
+        "peak memory footprint": 11208256
+      }
+    },
+    {
+      "name": "opaque-mip-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/015-opaque-mip-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0375455419998616
+    },
+    {
+      "name": "principled-nearest-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/016-principled-nearest-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021686167005100287
+    },
+    {
+      "name": "principled-nearest",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/017-principled-nearest.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05857841701072175
+    },
+    {
+      "name": "principled-nearest-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/018-principled-nearest-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.025586540999938734
+    },
+    {
+      "name": "principled-nearest-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/019-principled-nearest-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07216387501102872,
+      "resources": {
+        "maximum resident set size": 17498112,
+        "peak memory footprint": 3212416
+      }
+    },
+    {
+      "name": "principled-nearest-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/020-principled-nearest-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2189152089995332,
+      "resources": {
+        "maximum resident set size": 35291136,
+        "peak memory footprint": 12420736
+      }
+    },
+    {
+      "name": "principled-nearest-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/021-principled-nearest-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04516400001011789
+    },
+    {
+      "name": "principled-mip-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/022-principled-mip-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.026476624989300035
+    },
+    {
+      "name": "principled-mip",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/023-principled-mip.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06950362499628682
+    },
+    {
+      "name": "principled-mip-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/024-principled-mip-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030802416004007682
+    },
+    {
+      "name": "principled-mip-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/025-principled-mip-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07637849998718593,
+      "resources": {
+        "maximum resident set size": 17596416,
+        "peak memory footprint": 3310720
+      }
+    },
+    {
+      "name": "principled-mip-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/026-principled-mip-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2225547920097597,
+      "resources": {
+        "maximum resident set size": 35274752,
+        "peak memory footprint": 12371520
+      }
+    },
+    {
+      "name": "principled-mip-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/027-principled-mip-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.050037249995511957
+    },
+    {
+      "name": "coated-nearest-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/028-coated-nearest-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03168645899859257
+    },
+    {
+      "name": "coated-nearest",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/029-coated-nearest.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0915217500005383
+    },
+    {
+      "name": "coated-nearest-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/030-coated-nearest-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03703750000568107
+    },
+    {
+      "name": "coated-nearest-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/031-coated-nearest-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08295054199697915,
+      "resources": {
+        "maximum resident set size": 17809408,
+        "peak memory footprint": 3523712
+      }
+    },
+    {
+      "name": "coated-nearest-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/032-coated-nearest-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5636015420022886,
+      "resources": {
+        "maximum resident set size": 35569664,
+        "peak memory footprint": 12650048
+      }
+    },
+    {
+      "name": "coated-nearest-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/033-coated-nearest-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.057927582995034754
+    },
+    {
+      "name": "coated-mip-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/034-coated-mip-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.036946167005226016
+    },
+    {
+      "name": "coated-mip",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/035-coated-mip.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10108270800265018
+    },
+    {
+      "name": "coated-mip-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/036-coated-mip-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04222745800507255
+    },
+    {
+      "name": "coated-mip-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/037-coated-mip-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08967266599938739,
+      "resources": {
+        "maximum resident set size": 17874944,
+        "peak memory footprint": 3589248
+      }
+    },
+    {
+      "name": "coated-mip-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/038-coated-mip-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.24132962500152644,
+      "resources": {
+        "maximum resident set size": 35520512,
+        "peak memory footprint": 12600896
+      }
+    },
+    {
+      "name": "coated-mip-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/039-coated-mip-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.061949374998221174
+    },
+    {
+      "name": "conductor-nearest-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/040-conductor-nearest-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04079870799614582
+    },
+    {
+      "name": "conductor-nearest",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/041-conductor-nearest.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11573637499532197
+    },
+    {
+      "name": "conductor-nearest-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/042-conductor-nearest-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.048769250002806075
+    },
+    {
+      "name": "conductor-nearest-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/043-conductor-nearest-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09355058400251437,
+      "resources": {
+        "maximum resident set size": 17973248,
+        "peak memory footprint": 3687552
+      }
+    },
+    {
+      "name": "conductor-nearest-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/044-conductor-nearest-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2447429580060998,
+      "resources": {
+        "maximum resident set size": 35356672,
+        "peak memory footprint": 12453504
+      }
+    },
+    {
+      "name": "conductor-nearest-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/045-conductor-nearest-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0699279169930378
+    },
+    {
+      "name": "conductor-mip-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/046-conductor-mip-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.049377709001419134
+    },
+    {
+      "name": "conductor-mip",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/047-conductor-mip.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13282566599082202
+    },
+    {
+      "name": "conductor-mip-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/048-conductor-mip-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05615512501390185
+    },
+    {
+      "name": "conductor-mip-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/049-conductor-mip-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11074687499785796,
+      "resources": {
+        "maximum resident set size": 18087936,
+        "peak memory footprint": 3802240
+      }
+    },
+    {
+      "name": "conductor-mip-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/050-conductor-mip-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.24440149999281857,
+      "resources": {
+        "maximum resident set size": 35536896,
+        "peak memory footprint": 12633728
+      }
+    },
+    {
+      "name": "conductor-mip-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/051-conductor-mip-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07434845900570508
+    },
+    {
+      "name": "dielectric-nearest-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/052-dielectric-nearest-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05553083399718162
+    },
+    {
+      "name": "dielectric-nearest",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/053-dielectric-nearest.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.15222858398919925
+    },
+    {
+      "name": "dielectric-nearest-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/054-dielectric-nearest-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06238091699196957
+    },
+    {
+      "name": "dielectric-nearest-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/055-dielectric-nearest-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09845033299643546,
+      "resources": {
+        "maximum resident set size": 18202624,
+        "peak memory footprint": 3916928
+      }
+    },
+    {
+      "name": "dielectric-nearest-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/056-dielectric-nearest-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2653057919960702,
+      "resources": {
+        "maximum resident set size": 35815424,
+        "peak memory footprint": 12895872
+      }
+    },
+    {
+      "name": "dielectric-nearest-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/057-dielectric-nearest-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08134820799750742
+    },
+    {
+      "name": "dielectric-mip-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/058-dielectric-mip-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0628025830083061
+    },
+    {
+      "name": "dielectric-mip",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/059-dielectric-mip.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1732310410006903
+    },
+    {
+      "name": "dielectric-mip-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/060-dielectric-mip-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06992516700120177
+    },
+    {
+      "name": "dielectric-mip-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/061-dielectric-mip-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10450320800009649,
+      "resources": {
+        "maximum resident set size": 18202624,
+        "peak memory footprint": 3916928
+      }
+    },
+    {
+      "name": "dielectric-mip-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/062-dielectric-mip-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.26954008400207385,
+      "resources": {
+        "maximum resident set size": 35962880,
+        "peak memory footprint": 13043328
+      }
+    },
+    {
+      "name": "dielectric-mip-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/063-dielectric-mip-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09165195901005063
+    },
+    {
+      "name": "final",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/064-final.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07127166700956877
+    },
+    {
+      "name": "restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/065-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.027616084000328556
+    },
+    {
+      "name": "restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/restored",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/066-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05671933300618548
+    },
+    {
+      "name": "stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/067-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.13149775000056252
+    },
+    {
+      "name": "cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/068-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.005525750006199814
+    },
+    {
+      "name": "budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/069-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.0811138330027461
+    },
+    {
+      "name": "unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/project",
+        "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/070-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06969262500933837
+    }
+  ],
+  "variants": [
+    {
+      "name": "opaque",
+      "model": null,
+      "gpu": true,
+      "filters": [
+        {
+          "name": "nearest",
+          "revision": "sha256:9300de863aaedbc63c5b05ef9d242d2d3171965068123923504969fca3decb4e",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": null,
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "nearest",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/opaque-nearest-archive/document/document.json"
+        },
+        {
+          "name": "mip",
+          "revision": "sha256:ddb40cf1d6429626a631ccb4ead42bb469b874f815b0a0ecb436443117990df1",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": null,
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "linear_mip_linear",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/opaque-mip-archive/document/document.json"
+        }
+      ],
+      "gpu_linear_rmse": 6.556405092328058e-08
+    },
+    {
+      "name": "principled",
+      "model": {
+        "kind": "principled"
+      },
+      "gpu": true,
+      "filters": [
+        {
+          "name": "nearest",
+          "revision": "sha256:16de561a25b9f5981fe22c59aa20fdb56ba265dade95435c5f44b3b3ecd4e8f8",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "principled"
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "nearest",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/principled-nearest-archive/document/document.json"
+        },
+        {
+          "name": "mip",
+          "revision": "sha256:36b6d6b0cb493f15a6d2858b88765f5886e2741edd7390971bf87565748f8585",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "principled"
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "linear_mip_linear",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/principled-mip-archive/document/document.json"
+        }
+      ],
+      "gpu_linear_rmse": 6.00973732952091e-08
+    },
+    {
+      "name": "coated",
+      "model": {
+        "kind": "coated",
+        "weight": 0.5,
+        "ior": 1.5,
+        "roughness": 0.2
+      },
+      "gpu": true,
+      "filters": [
+        {
+          "name": "nearest",
+          "revision": "sha256:814bfb4da387766b049d1d86a068020c2ede0375431c495ffcff2af111cedd94",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "coated",
+                      "weight": 0.5,
+                      "ior": 1.5,
+                      "roughness": 0.2
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "nearest",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/coated-nearest-archive/document/document.json"
+        },
+        {
+          "name": "mip",
+          "revision": "sha256:a30514af83d163cfc65949688f7f80e8b878dcf4f289110a4ec1bb96051beeca",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "coated",
+                      "weight": 0.5,
+                      "ior": 1.5,
+                      "roughness": 0.2
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "linear_mip_linear",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/coated-mip-archive/document/document.json"
+        }
+      ],
+      "gpu_linear_rmse": 1.7828199821794978e-07
+    },
+    {
+      "name": "conductor",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.2,
+          0.2
+        ],
+        "k": [
+          3,
+          3,
+          3
+        ]
+      },
+      "gpu": true,
+      "filters": [
+        {
+          "name": "nearest",
+          "revision": "sha256:9d2573570deb6b6616c0565358f8502f455134332718157bf918690b6532cf08",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "conductor",
+                      "eta": [
+                        0.2,
+                        0.2,
+                        0.2
+                      ],
+                      "k": [
+                        3,
+                        3,
+                        3
+                      ]
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "nearest",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/conductor-nearest-archive/document/document.json"
+        },
+        {
+          "name": "mip",
+          "revision": "sha256:79ce06cc3c2e94cd96c6108fa8831f8c0fbbc6e386c6e205d83fdbc1d66e1f6a",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "conductor",
+                      "eta": [
+                        0.2,
+                        0.2,
+                        0.2
+                      ],
+                      "k": [
+                        3,
+                        3,
+                        3
+                      ]
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "linear_mip_linear",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/conductor-mip-archive/document/document.json"
+        }
+      ],
+      "gpu_linear_rmse": 3.573172929370939e-08
+    },
+    {
+      "name": "dielectric",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "gpu": true,
+      "filters": [
+        {
+          "name": "nearest",
+          "revision": "sha256:229a3492882c3f62007b64fe65c9c3f4a1bad5f93a1130e0daf2c79c5091c122",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "dielectric",
+                      "ior": 1.5
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "nearest",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/dielectric-nearest-archive/document/document.json"
+        },
+        {
+          "name": "mip",
+          "revision": "sha256:bcf5192199adcb59659c1a6952acbd2f206f278f6f8e2f41eb1773e8187abb9e",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "dielectric",
+                      "ior": 1.5
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "linear_mip_linear",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/secondary-workflow/dielectric-mip-archive/document/document.json"
+        }
+      ],
+      "gpu_linear_rmse": 0.0
+    }
+  ],
+  "settings": {
+    "width": 8,
+    "height": 8,
+    "samples": 32,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0,
+      0,
+      0
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        0,
+        0,
+        0
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        1
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 0.9,
+        "ymag": 0.9,
+        "near": 0.01,
+        "far": 10
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 //! Portable diffuse transport built from typed Rust IR nodes.
 use super::*;
 mod alpha;
+mod dielectric;
 mod pbr;
 mod surfaces;
 fn v(n: &str) -> Expr {
@@ -80,15 +81,18 @@ fn when(enabled: bool, statement: Stmt) -> Stmt {
     Stmt::Sequence(if enabled { vec![statement] } else { vec![] })
 }
 pub fn kernel() -> Kernel {
-    build(false, false)
+    build(false, false, false)
 }
 pub fn alpha_kernel() -> Kernel {
-    build(true, false)
+    build(true, false, false)
 }
 pub fn surface_kernel() -> Kernel {
-    build(true, true)
+    build(true, true, false)
 }
-fn build(extended: bool, surfaces: bool) -> Kernel {
+pub fn dielectric_kernel() -> Kernel {
+    build(true, true, true)
+}
+fn build(extended: bool, surfaces: bool, dielectric: bool) -> Kernel {
     let random_fn = function(
         "random",
         &[
@@ -511,7 +515,7 @@ fn build(extended: bool, surfaces: bool) -> Kernel {
                             ),
                             Stmt::If(
                                 inst(i("base") + u(8)).field("z").gt(f(0.)),
-                                pbr::body(extended, surfaces),
+                                pbr::body(extended, surfaces, dielectric),
                                 vec![
                                     var("color", xyz(inst(i("base") + u(6)))),
                                     let_(
@@ -744,6 +748,9 @@ fn build(extended: bool, surfaces: bool) -> Kernel {
             if surfaces {
                 functions.extend(self::surfaces::functions());
             }
+            if dielectric {
+                functions.extend(self::dielectric::functions());
+            }
             if extended {
                 functions.extend(alpha::functions());
             }
@@ -812,5 +819,20 @@ mod tests {
                     .any(|(_, f)| f.name.as_deref() == Some(name))
             );
         }
+    }
+    #[test]
+    fn generated_dielectric_profile_validates_and_preserves_surface_shader() {
+        assert_eq!(
+            render_core::digest(super::surface_kernel().generate().unwrap().as_bytes()),
+            "sha256:cf5b558cef24671d760df416ccd1b82b7b8166bc26dbf2dfd4e2d3d616808f07"
+        );
+        let source = super::dielectric_kernel().generate().unwrap();
+        let module = naga::front::wgsl::parse_str(&source).unwrap();
+        assert!(
+            module
+                .functions
+                .iter()
+                .any(|(_, f)| f.name.as_deref() == Some("dielectric_fresnel"))
+        );
     }
 }

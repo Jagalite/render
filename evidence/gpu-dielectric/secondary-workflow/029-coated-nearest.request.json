@@ -1,0 +1,92 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:36b6d6b0cb493f15a6d2858b88765f5886e2741edd7390971bf87565748f8585",
+      "idempotency_key": "footprint:coated-nearest",
+      "max_added_bytes": 8388608,
+      "commands": [
+        {
+          "operation": "put_material",
+          "material": {
+            "base_color": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "emission": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "id": "51ac1c0474092c40a9f1da09665c6f03",
+            "metallic": 0.0,
+            "pbr": {
+              "advanced": {
+                "model": {
+                  "kind": "coated",
+                  "weight": 0.5,
+                  "ior": 1.5,
+                  "roughness": 0.2
+                },
+                "opacity": {
+                  "kind": "opaque"
+                }
+              },
+              "base_color": null,
+              "double_sided": true,
+              "emission": null,
+              "metallic_roughness": null,
+              "normal": null,
+              "normal_scale": 1.0,
+              "occlusion": null,
+              "occlusion_strength": 1.0
+            },
+            "roughness": 0.5,
+            "texture": null
+          }
+        },
+        {
+          "operation": "put_material",
+          "material": {
+            "base_color": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "emission": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+            "metallic": 0.0,
+            "pbr": {
+              "base_color": null,
+              "double_sided": true,
+              "emission": {
+                "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                "role": "srgb_color",
+                "sampler": {
+                  "mag": "nearest",
+                  "min": "nearest",
+                  "wrap_s": "clamp",
+                  "wrap_t": "clamp"
+                }
+              },
+              "metallic_roughness": null,
+              "normal": null,
+              "normal_scale": 1.0,
+              "occlusion": null,
+              "occlusion_strength": 1.0
+            },
+            "roughness": 1.0,
+            "texture": null
+          }
+        }
+      ]
+    }
+  }
+}

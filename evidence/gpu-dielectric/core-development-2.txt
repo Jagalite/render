@@ -1,0 +1,19 @@
+   Compiling render-core v0.1.0 (/private/tmp/render-gpu-dielectric-20260906/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 1.38s
+     Running tests/dielectric_interfaces.rs (target/debug/deps/dielectric_interfaces-8ed1c45c0b1db946)
+
+running 1 test
+
+thread 'analytic_ideal_interfaces_snell_tir_frames_and_mirrors_survive_recovery' (4180120) panicked at crates/core/tests/support/dielectric.rs:72:14:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test analytic_ideal_interfaces_snell_tir_frames_and_mirrors_survive_recovery ... FAILED
+
+failures:
+
+failures:
+    analytic_ideal_interfaces_snell_tir_frames_and_mirrors_survive_recovery
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+error: test failed, to rerun pass `-p render-core --test dielectric_interfaces`

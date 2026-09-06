@@ -1,0 +1,33 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "sequence",
+    "backend": "gpu",
+    "request": {
+      "revision": "sha256:6094291360a31abd576625c4c81c30badbb58e8a56f4740a5b3ab70650a3255b",
+      "clip": "467e6e12ffc8158594d66c96bc5c770b",
+      "shutter": {
+        "open": {
+          "numerator": -1,
+          "denominator": 32
+        },
+        "close": {
+          "numerator": 1,
+          "denominator": 32
+        },
+        "samples": 3
+      },
+      "times": [
+        {
+          "numerator": 1,
+          "denominator": 4
+        },
+        {
+          "numerator": 3,
+          "denominator": 4
+        }
+      ]
+    },
+    "output": "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/dielectric-workflow/dielectric-morph-sequence"
+  }
+}

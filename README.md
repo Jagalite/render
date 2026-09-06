@@ -82,3 +82,6 @@ Principled MASK/BLEND on Metal and browser WebGPU: [profile](docs/gpu_alpha.md),
 [Shared secondary texture footprints](docs/secondary_textures.md) and
 [GPU conductor/coat surfaces](docs/gpu_surfaces.md):
 [material recipes](fixtures/gpu-surfaces/README.md), [acceptance](evidence/gpu-surfaces/README.md).
+
+[GPU ideal dielectric interfaces](docs/gpu_dielectric.md):
+[analytic recipes](fixtures/gpu-dielectric/README.md), [acceptance](evidence/gpu-dielectric/README.md).

@@ -1,0 +1,17 @@
+{
+  "scope": "2x2, one spatial sample; 65 shared native quad instances, exact-time step translation; resource observations are not benchmarks",
+  "observations": [
+    {
+      "name": "cpu-valid",
+      "seconds": 0.10748683400743175,
+      "maximum resident set size": 22282240,
+      "peak memory footprint": 7177344
+    },
+    {
+      "name": "gpu-valid",
+      "seconds": 0.26329291600268334,
+      "maximum resident set size": 39550976,
+      "peak memory footprint": 15959680
+    }
+  ]
+}

@@ -49,7 +49,7 @@ try:
     call('import',{'method':'import','base_revision':empty['revision'],'idempotency_key':'footprint:import:001','max_added_bytes':8388608,'source':{'format':'glb','path':str(fixture/'mask-nearest.glb'),'policy':{'allow_approximations':True}},'settings':settings},project)
     original=inspect('imported',project)['snapshot'];floor=next(m for m in original['materials'].values() if m.get('pbr',{}).get('advanced'));emitter=next(m for m in original['materials'].values() if m.get('pbr',{}).get('emission'))
     for name,model in models:
-        row={'name':name,'model':model,'gpu':name!='dielectric','filters':[]}
+        row={'name':name,'model':model,'gpu':True,'filters':[]}
         for filtering,min_filter in [('nearest','nearest'),('mip','linear_mip_linear')]:
             f=copy.deepcopy(floor);e=copy.deepcopy(emitter);f['roughness']=0 if name=='dielectric' else .5;f['pbr']['advanced']={'model':model,'opacity':{'kind':'opaque'}} if model else None;e['pbr']['emission']['sampler']['min']=min_filter
             commands=[{'operation':'put_material','material':m} for m in [f,e]];apply(name+'-'+filtering,commands);state=inspect(name+'-'+filtering+'-state',project);revision=state['revision']

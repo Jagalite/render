@@ -1,0 +1,30 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "frame",
+    "request": {
+      "revision": "sha256:6094291360a31abd576625c4c81c30badbb58e8a56f4740a5b3ab70650a3255b",
+      "clip": "467e6e12ffc8158594d66c96bc5c770b",
+      "time": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "shutter": {
+        "open": {
+          "numerator": -1,
+          "denominator": 32
+        },
+        "close": {
+          "numerator": 1,
+          "denominator": 32
+        },
+        "samples": 3
+      }
+    },
+    "backend": "gpu",
+    "output": "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/dielectric-workflow/dielectric-morph-cancel"
+  },
+  "limits": {
+    "cancel_file": "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/dielectric-workflow/cancel"
+  }
+}

@@ -38,6 +38,7 @@ pub struct Renderer {
     pipeline: wgpu::ComputePipeline,
     alpha_pipeline: Option<wgpu::ComputePipeline>,
     surface_pipeline: Option<wgpu::ComputePipeline>,
+    dielectric_pipeline: Option<wgpu::ComputePipeline>,
     pub capabilities: Capabilities,
     lost: Arc<AtomicBool>,
     geometry_cache: Option<(String, wgpu::Buffer)>,
@@ -122,18 +123,6 @@ pub struct Packed {
 }
 pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
     scene.validate_geometry_bindings()?;
-    if scene.instances.iter().any(|i| {
-        i.material.pbr.as_ref().is_some_and(|p| {
-            p.advanced.as_ref().is_some_and(|a| {
-                matches!(a.model, render_core::scattering::Model::Dielectric { .. })
-            })
-        })
-    }) {
-        return Err(Error::new(
-            "unsupported_profile",
-            "ideal dielectric requires the Rust CPU backend",
-        ));
-    }
     if !scene.media.is_empty() {
         return Err(Error::new(
             "unsupported_profile",
@@ -182,6 +171,13 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
                         | render_core::scattering::Model::Coated { .. }
                 )
             })
+    });
+    let dielectric = scene.instances.iter().any(|i| {
+        i.material
+            .pbr
+            .as_ref()
+            .and_then(|p| p.advanced.as_ref())
+            .is_some_and(|a| matches!(a.model, render_core::scattering::Model::Dielectric { .. }))
     });
     let alpha_images: std::collections::BTreeSet<_> = scene
         .instances
@@ -280,7 +276,12 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
             width as f32,
             height as f32,
             f32::from(surface.is_some()),
-            f32::from(surface.is_none_or(|p| p.double_sided)),
+            f32::from(surface.is_none_or(|p| {
+                p.double_sided
+                    || p.advanced.as_ref().is_some_and(|a| {
+                        matches!(a.model, render_core::scattering::Model::Dielectric { .. })
+                    })
+            })),
         ]);
         instances.push([
             inst.material.roughness,
@@ -365,6 +366,11 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
         };
         use render_core::scattering::Model;
         match surface.and_then(|p| p.advanced.as_ref()).map(|a| &a.model) {
+            Some(Model::Dielectric { ior }) => {
+                coverage[3] = (geometry.len() + 1) as f32;
+                geometry.push([3., 0., *ior as f32, 0.]);
+                geometry.push([0.; 4]);
+            }
             Some(Model::Conductor { eta, k }) => {
                 coverage[3] = (geometry.len() + 1) as f32;
                 geometry.push([1., 0., 0., 0.]);
@@ -469,7 +475,9 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
             } else {
                 2.
             },
-            if surface_models {
+            if dielectric {
+                3.
+            } else if surface_models {
                 2.
             } else {
                 f32::from(extended)
@@ -563,6 +571,7 @@ impl Renderer {
             pipeline,
             alpha_pipeline: None,
             surface_pipeline: None,
+            dielectric_pipeline: None,
             capabilities,
             lost,
             geometry_cache: None,
@@ -631,11 +640,43 @@ impl Renderer {
         self.surface_pipeline = Some(pipeline);
         Ok(())
     }
+    async fn ensure_dielectric_pipeline(&mut self) -> Result<()> {
+        if self.dielectric_pipeline.is_some() {
+            return Ok(());
+        }
+        let source = render_kernel::path::dielectric_kernel().generate()?;
+        self.device.push_error_scope(wgpu::ErrorFilter::OutOfMemory);
+        self.device.push_error_scope(wgpu::ErrorFilter::Validation);
+        let module = self
+            .device
+            .create_shader_module(wgpu::ShaderModuleDescriptor {
+                label: Some("Rust-generated ideal dielectric traversal"),
+                source: wgpu::ShaderSource::Wgsl(source.into()),
+            });
+        let pipeline = self
+            .device
+            .create_compute_pipeline(&wgpu::ComputePipelineDescriptor {
+                label: Some("portable dielectric path tracing"),
+                layout: None,
+                module: &module,
+                entry_point: Some("main"),
+                compilation_options: Default::default(),
+                cache: None,
+            });
+        let validation = self.device.pop_error_scope().await;
+        let allocation = self.device.pop_error_scope().await;
+        if let Some(error) = validation.or(allocation) {
+            return Err(fail("gpu_validation", error));
+        }
+        self.dielectric_pipeline = Some(pipeline);
+        Ok(())
+    }
     pub fn destroy(&mut self) {
         self.lost.store(true, Ordering::Release);
         self.geometry_cache = None;
         self.alpha_pipeline = None;
         self.surface_pipeline = None;
+        self.dielectric_pipeline = None;
         self.device.destroy();
     }
     pub fn is_lost(&self) -> bool {
@@ -753,7 +794,10 @@ impl Renderer {
         }
         let extended = p.params[9][3] > 0.;
         let surface_models = p.params[9][3] == 2.;
-        if surface_models {
+        let dielectric = p.params[9][3] == 3.;
+        if dielectric {
+            self.ensure_dielectric_pipeline().await?;
+        } else if surface_models {
             self.ensure_surface_pipeline().await?;
         } else if extended {
             self.ensure_alpha_pipeline().await?;
@@ -823,7 +867,11 @@ impl Renderer {
                 resource: b.as_entire_binding(),
             })
             .collect::<Vec<_>>();
-        let pipeline = if surface_models {
+        let pipeline = if dielectric {
+            self.dielectric_pipeline
+                .as_ref()
+                .expect("created dielectric pipeline")
+        } else if surface_models {
             self.surface_pipeline
                 .as_ref()
                 .expect("created surface pipeline")
@@ -1012,6 +1060,18 @@ impl Renderer {
         }) {
             receipt.backend = format!("gpu-f32-conductor-coat-v1/{}", self.capabilities.backend);
             receipt.approximation.push_str("; conductor Schlick from compiled eta/k F0; single-interface GGX coat with Fresnel base attenuation and matching mixture PDF; no inter-layer multiple scattering");
+        }
+        if scene.instances.iter().any(|i| {
+            i.material
+                .pbr
+                .as_ref()
+                .and_then(|p| p.advanced.as_ref())
+                .is_some_and(|a| {
+                    matches!(a.model, render_core::scattering::Model::Dielectric { .. })
+                })
+        }) {
+            receipt.backend = format!("gpu-f32-dielectric-v1/{}", self.capabilities.backend);
+            receipt.approximation.push_str("; ideal dielectric Fresnel and Snell/TIR radiance eta-squared transport; geometric interface normals; f32 optical parameters and sampled branches; no directly sampled glass point-light caustics");
         }
         if !scene.displacements.is_empty() {
             receipt.approximation.push_str(

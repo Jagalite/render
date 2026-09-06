@@ -1,0 +1,145 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:a7870880ca49805ea1ebc9e150d8e17372ecca1fbbfb615cbc23ee04c7aae9f7",
+      "idempotency_key": "surfaces:material:001",
+      "max_added_bytes": 8388608,
+      "commands": [
+        {
+          "operation": "put_material",
+          "material": {
+            "base_color": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "emission": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "id": "0a098c16b7e0e06809ba0222ad692924",
+            "metallic": 0.0,
+            "pbr": {
+              "base_color": null,
+              "double_sided": true,
+              "emission": {
+                "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                "role": "srgb_color",
+                "sampler": {
+                  "mag": "nearest",
+                  "min": "nearest",
+                  "wrap_s": "clamp",
+                  "wrap_t": "clamp"
+                }
+              },
+              "metallic_roughness": null,
+              "normal": null,
+              "normal_scale": 1.0,
+              "occlusion": null,
+              "occlusion_strength": 1.0,
+              "advanced": {
+                "model": {
+                  "kind": "coated",
+                  "weight": 0.7,
+                  "ior": 1.5,
+                  "roughness": 0.25
+                },
+                "opacity": {
+                  "kind": "opaque"
+                }
+              }
+            },
+            "roughness": 1.0,
+            "texture": null
+          }
+        },
+        {
+          "operation": "put_material",
+          "material": {
+            "base_color": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "emission": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "id": "0ac25c96c4cdaa59475ddbe0622b8107",
+            "metallic": 1.0,
+            "pbr": {
+              "base_color": null,
+              "double_sided": false,
+              "emission": null,
+              "metallic_roughness": null,
+              "normal": null,
+              "normal_scale": 1.0,
+              "occlusion": null,
+              "occlusion_strength": 1.0,
+              "advanced": {
+                "model": {
+                  "kind": "coated",
+                  "weight": 0.7,
+                  "ior": 1.5,
+                  "roughness": 0.25
+                },
+                "opacity": {
+                  "kind": "opaque"
+                }
+              }
+            },
+            "roughness": 1.0,
+            "texture": null
+          }
+        },
+        {
+          "operation": "put_material",
+          "material": {
+            "base_color": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "emission": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "id": "abbb7f375c7396693eedbdcd38aef320",
+            "metallic": 0.0,
+            "pbr": {
+              "advanced": {
+                "model": {
+                  "kind": "coated",
+                  "weight": 0.7,
+                  "ior": 1.5,
+                  "roughness": 0.25
+                },
+                "opacity": {
+                  "cutoff": 0.5,
+                  "factor": 1.0,
+                  "kind": "mask"
+                }
+              },
+              "base_color": null,
+              "double_sided": true,
+              "emission": null,
+              "metallic_roughness": null,
+              "normal": null,
+              "normal_scale": 1.0,
+              "occlusion": null,
+              "occlusion_strength": 1.0
+            },
+            "roughness": 0.5,
+            "texture": null
+          }
+        }
+      ]
+    }
+  }
+}

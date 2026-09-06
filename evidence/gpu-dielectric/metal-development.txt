@@ -1,0 +1,22 @@
+   Compiling render-core v0.1.0 (/private/tmp/render-gpu-dielectric-20260906/crates/core)
+   Compiling render-kernel v0.1.0 (/private/tmp/render-gpu-dielectric-20260906/crates/kernel)
+   Compiling render-gpu v0.1.0 (/private/tmp/render-gpu-dielectric-20260906/crates/gpu)
+   Compiling render-host v0.1.0 (/private/tmp/render-gpu-dielectric-20260906/crates/host)
+error[E0609]: no field `name` on type `&&Material`
+  --> crates/host/tests/../../core/tests/support/dielectric.rs:69:27
+   |
+69 |             .filter(|m| m.name == "glass")
+   |                           ^^^^ unknown field
+   |
+   = note: available fields are: `id`, `base_color`, `emission`, `roughness`, `metallic` ... and 2 others
+
+error[E0433]: cannot find type `Evaluator` in this scope
+  --> crates/host/tests/gpu_dielectric.rs:11:21
+   |
+11 |         let scene = Evaluator::default()
+   |                     ^^^^^^^^^ use of undeclared type `Evaluator`
+
+Some errors have detailed explanations: E0433, E0609.
+For more information about an error, try `rustc --explain E0433`.
+error: could not compile `render-host` (test "gpu_dielectric") due to 2 previous errors
+warning: build failed, waiting for other jobs to finish...

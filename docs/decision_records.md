@@ -382,3 +382,20 @@ schema, ABI or dependency changes; dielectric and media remain separate gates.
 **Revisit trigger:** Transmission, repeated inter-layer scattering, source material
 extensions, propagated footprints or broader precision profiles require distinct
 numerical, failure, resource and platform acceptance evidence.
+
+## ADR-028 — Ideal dielectric GPU transport uses geometric interface orientation
+
+**Decision:** Lower existing ideal dielectric Fresnel, Snell/TIR and radiance eta²
+transport into Rust kernel IR. Preserve geometric interface normals and admit exits
+regardless of the authored one-sided flag. Keep the existing air/material interface
+approximation, alpha coverage, finite depth and lack of sampled point-light caustics.
+
+**Integration boundary:** The [dielectric contract](gpu_dielectric.md) connects typed
+material validation, immutable packing, mixed BSDFs, camera/alpha traversal and
+static/shutter/sequence publication. A fourth lazy shader variant preserves all three
+prior programs. Independent analytic target geometry and sampled optical expectations
+complement CPU/GPU and recovery workflows. No public schema or dependency changes.
+
+**Revisit trigger:** Nested media, rough transmission, absorption thickness, source
+material extensions, critical-angle precision or directly sampled glass caustics need
+separate physical, numerical, failure, resource and native/browser acceptance evidence.

@@ -1,0 +1,27 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "frame",
+    "backend": "cpu",
+    "request": {
+      "revision": "sha256:4d1d4a7905a1895b483adcfbfceaf97d24ea2da96def93699590291427f7253e",
+      "clip": "00000000000000000000000000007532",
+      "time": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "shutter": {
+        "open": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "close": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "samples": 1
+      }
+    },
+    "output": "/private/tmp/render-gpu-dielectric-20260906/artifacts/gpu-dielectric/run-20260906T105317Z/conductor-shutter/cpu-valid"
+  }
+}

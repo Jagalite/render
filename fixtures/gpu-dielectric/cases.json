@@ -1,0 +1,78 @@
+{
+  "license": "CC0-1.0",
+  "scope": "Native ideal dielectric recipes; no external transmission extension admission",
+  "cases": [
+    {
+      "name": "dielectric-single",
+      "source": "fixtures/gpu-dielectric/data/single.glb",
+      "source_sha256": "8aff2f473e2bda0875aded14afdeaddda088f2fef0982eb8467dfae12c988e06",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "animated": false,
+      "secondary": true,
+      "glass_only": true
+    },
+    {
+      "name": "dielectric-slab",
+      "source": "fixtures/gpu-dielectric/data/slab.glb",
+      "source_sha256": "4e5540884963d5972d151c534232e24c344f9ac9e35341b04804a760fed2e927",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "animated": false,
+      "secondary": true,
+      "glass_only": true
+    },
+    {
+      "name": "dielectric-tilted",
+      "source": "fixtures/gpu-dielectric/data/tilted.glb",
+      "source_sha256": "7dcc511521bb6b2bff2ea884e742f7dc5d67bec13554573810b9de3fbe213683",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "animated": false,
+      "secondary": true,
+      "glass_only": true
+    },
+    {
+      "name": "dielectric-named-mask",
+      "source": "fixtures/gpu-alpha/data/named-mask.glb",
+      "source_sha256": "1912d4e8c0f4093e1c6fd392be09a92c5ae285c446197f8f9137112e20295bf1",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "animated": false,
+      "secondary": false,
+      "glass_only": false
+    },
+    {
+      "name": "dielectric-named-blend",
+      "source": "fixtures/gpu-alpha/data/named-blend.glb",
+      "source_sha256": "40bfddc669d71fb33828f7dd6f6e0a3e1750e93d106455b0accedc678a148fb6",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "animated": false,
+      "secondary": false,
+      "glass_only": false
+    },
+    {
+      "name": "dielectric-morph",
+      "source": "fixtures/morph-frames/data/dense.glb",
+      "source_sha256": "284917f1bf2bd5f666ba2f5b48590222b6d0bbdeff91be0801492ca20025de49",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "animated": true,
+      "secondary": false,
+      "glass_only": false
+    }
+  ]
+}

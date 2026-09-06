@@ -5,12 +5,12 @@ working on feasible remaining steps. M09 interactive editor remains deferred.
 Each completed increment requires implementation, native/browser workflow evidence,
 negative/cancellation/stale checks, resource/provenance records and documentation.
 
-Current checkpoint: `5416cfa` (validated GPU shutter frames and sequences).
+Current checkpoint: `2fc718f` (validated sparse glTF accessors and normalized UV0).
 
 | Order | Increment | Status |
 |---|---|---|
 | 1 | GPU shutter frames and streaming sequences | Validated on feat/gpu-shutter-sequences; evidence/gpu-shutter |
-| 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Sparse accessors/normalized UV0 validated; alpha import next |
+| 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Sparse accessors/normalized UV0 validated; alpha import in progress |
 | 3 | Richer GPU scattering and transport quality | Pending |
 | 4 | External hair/volume inputs, fiber shading and sparse GPU media | Pending |
 | 5 | Scoped native .blend/USD/MaterialX interchange | Pending |

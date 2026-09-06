@@ -147,14 +147,41 @@ fn binding(
     }))
 }
 pub fn surface(root: &Value, ids: &[String], material: &Value) -> Result<Surface> {
-    if material.get("extensions").is_some()
-        || material.get("alphaMode").is_some_and(|v| v != "OPAQUE")
-    {
-        return Err(unsupported("material extension or non-opaque alpha mode"));
+    if material.get("extensions").is_some() {
+        return Err(unsupported("material extension"));
     }
     let p = &material["pbrMetallicRoughness"];
+    let mode = material
+        .get("alphaMode")
+        .map(|v| {
+            v.as_str()
+                .ok_or_else(|| invalid("alphaMode must be a string"))
+        })
+        .transpose()?
+        .unwrap_or("OPAQUE");
+    let cutoff = material
+        .get("alphaCutoff")
+        .map(number)
+        .transpose()?
+        .unwrap_or(0.5);
+    if cutoff < 0. || (material.get("alphaCutoff").is_some() && material.get("alphaMode").is_none())
+    {
+        return Err(invalid(
+            "alphaCutoff must be nonnegative and requires alphaMode",
+        ));
+    }
+    let factor = crate::gltf_scene::vector(p.get("baseColorFactor"), [1.; 4])?[3];
+    let opacity = match mode {
+        "OPAQUE" => None,
+        "MASK" => Some(scattering::Opacity::Mask { factor, cutoff }),
+        "BLEND" => Some(scattering::Opacity::Blend { factor }),
+        _ => return Err(unsupported("unknown alphaMode")),
+    };
     let surface = Surface {
-        advanced: None,
+        advanced: opacity.map(|opacity| scattering::Surface {
+            model: scattering::Model::Principled,
+            opacity,
+        }),
         displacement: None,
         double_sided: material
             .get("doubleSided")

@@ -226,3 +226,21 @@ runtime-index durable IDs. Render/persistence behavior uses existing Rust APIs.
 **Revisit trigger:** Larger valid sources require measured streaming expansion or
 additional attribute/material semantics. Broader UV, alpha, morph and quantization
 profiles must pass their own renderer/numerical and state-recovery gates.
+
+## ADR-019 — Imported alpha uses typed CPU coverage semantics
+
+**Decision:** Convert glTF MASK/BLEND to the existing Principled opacity model;
+retain an explicit GPU rejection until its material transport is implemented.
+Expand the native cutoff domain to finite nonnegative values to preserve valid
+source thresholds above one. No public field layout or runtime dependency changes.
+The [alpha contract](gltf_alpha.md) specifies the import and approximation limits.
+
+**Integration boundary:** Source factor/linear texture alpha, transaction validation,
+snapshot-v8 persistence, CPU ray continuation and first-sample passes must agree.
+The integration review found and reproduced camera clipping after discarded hits
+and orthographic depth defects; analytic tests constrain their corrected behavior.
+Existing opaque import/render receipts retain their previous path and wording.
+
+**Revisit trigger:** Derivative-filtered alpha, GPU coverage or rough transmission
+requires separate numerical/image and cancellation evidence. Older engines may
+reject newly admitted cutoffs above one; no silent threshold conversion is allowed.

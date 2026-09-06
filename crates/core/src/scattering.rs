@@ -76,9 +76,10 @@ impl Surface {
             Opacity::Blend { factor } => (factor, 0.),
             Opacity::Mask { factor, cutoff } => (factor, cutoff),
         };
-        if [factor, cutoff]
-            .iter()
-            .any(|x| !x.is_finite() || !(0.0..=1.).contains(x))
+        if !factor.is_finite()
+            || !(0.0..=1.).contains(&factor)
+            || !cutoff.is_finite()
+            || cutoff < 0.
         {
             return Err(Error::new("material", "invalid alpha coverage"));
         }
@@ -296,15 +297,33 @@ pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) 
                 let px = f64::from(x) + random(pixel, sample, 0, s.seed);
                 let py = f64::from(y) + random(pixel, sample, 1, s.seed);
                 let mut ray = s.camera.ray(px, py, s.width, s.height)?;
+                let primary_origin = ray.origin;
+                let primary_clip = s.camera.clip(ray);
                 let mut throughput = DVec3::ONE;
                 let mut bounce = 0;
                 let mut transparent = 0;
                 while bounce < s.max_depth {
-                    let (near, far) = if bounce == 0 && transparent == 0 {
-                        s.camera.clip(ray)
+                    let (near, far) = if bounce == 0 {
+                        // Alpha continuation still belongs to the original camera
+                        // segment. Secondary scattering rays have their own extent.
+                        let travelled = (ray.origin - primary_origin).dot(ray.direction);
+                        (
+                            if transparent == 0 {
+                                primary_clip.0
+                            } else {
+                                (primary_clip.0 - travelled).max(1e-5)
+                            },
+                            primary_clip.1 - travelled,
+                        )
                     } else {
                         (1e-5, f64::INFINITY)
                     };
+                    // A discarded hit on the far plane may advance beyond the
+                    // remaining segment. There is no more surface/media to visit.
+                    if far < near {
+                        total += throughput * DVec3::from_array(s.environment.map(f64::from));
+                        break;
+                    }
                     let hit = scene.intersect(ray, near, far);
                     let limit = hit.as_ref().map_or(far, |h| h.distance);
                     if !scene.media.is_empty() {
@@ -359,8 +378,7 @@ pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) 
                     let n = shading.normal;
                     let view = -ray.direction;
                     if bounce == 0 && sample == 0 {
-                        depth[pixel as usize] =
-                            hit.position.distance(DVec3::from_array(s.camera.position)) as f32;
+                        depth[pixel as usize] = hit.position.distance(primary_origin) as f32;
                         normals[pixel as usize] = n.as_vec3().to_array();
                         objects[pixel as usize] = Some(scene.instances[hit.instance].id);
                     }

@@ -709,6 +709,12 @@ fn import_scene_mode(
             material.metallic = metallic as f32;
             material.roughness = roughness as f32;
             material.pbr = Some(crate::gltf_materials::surface(&root, &image_ids, m)?);
+            if material.pbr.as_ref().is_some_and(|p| p.advanced.is_some()) {
+                let loss = "MASK/BLEND use the Rust CPU alpha-coverage profile: linear base-color alpha at base mip, stochastic BLEND coverage, inclusive MASK cutoff; GPU alpha is unsupported.";
+                if !report.losses.iter().any(|v| v == loss) {
+                    report.losses.push(loss.into());
+                }
+            }
         }
         material.validate()?;
         commands.push(Command::PutMaterial { material });

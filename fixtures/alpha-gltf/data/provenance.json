@@ -1,0 +1,52 @@
+{
+  "license": "CC0-1.0",
+  "authorship": "Original analytic quads and directly encoded RGBA PNG",
+  "oracle": "Orthographic stripes have alpha 0, 1/3, 2/3, 1; red rear, green front. At depth 1, R=1-coverage, G=coverage, B=0.",
+  "artifacts": [
+    {
+      "file": "blend.bin",
+      "bytes": 218,
+      "sha256": "26721afc2b820d31c6860234b801f1a342c7226c2beb83ef5dde72bdc74f0813"
+    },
+    {
+      "file": "blend.glb",
+      "bytes": 1760,
+      "sha256": "4d2551bbfcb36db3c5b9d32797a59be437ab13c442cd1cd1824dd68526e43239"
+    },
+    {
+      "file": "blend.gltf",
+      "bytes": 2928,
+      "sha256": "bd07c171a54acb00fe859cbbf9d5d128939bf7422e820149351bfe55ccbcafd9"
+    },
+    {
+      "file": "mask.bin",
+      "bytes": 218,
+      "sha256": "26721afc2b820d31c6860234b801f1a342c7226c2beb83ef5dde72bdc74f0813"
+    },
+    {
+      "file": "mask.glb",
+      "bytes": 1756,
+      "sha256": "bfc12fcf3be21bcf0162c479aebd3a7755445d41a993ec27f80240e32aff1864"
+    },
+    {
+      "file": "mask.gltf",
+      "bytes": 2924,
+      "sha256": "2bd43810295b76b0fafa382804e441506e3491e1a02d56b2409b6162b55c8b5b"
+    },
+    {
+      "file": "opaque.bin",
+      "bytes": 218,
+      "sha256": "26721afc2b820d31c6860234b801f1a342c7226c2beb83ef5dde72bdc74f0813"
+    },
+    {
+      "file": "opaque.glb",
+      "bytes": 1756,
+      "sha256": "08300dbe61fe1c52e768359c8ce30797dc17cc23e371d3c3de60380c45f110fa"
+    },
+    {
+      "file": "opaque.gltf",
+      "bytes": 2928,
+      "sha256": "2dce7076880424dd1347119481dda28c9105dfc81a1a1b10c0076a78b2606a11"
+    }
+  ]
+}

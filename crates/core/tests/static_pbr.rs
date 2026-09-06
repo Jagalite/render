@@ -335,7 +335,7 @@ fn static_pbr_transaction_roundtrip_render_and_failures() {
             .any(|c| matches!(c, Command::PutImage { .. }))
     );
     for (pointer, value) in [
-        ("/materials/0/alphaMode", json!("BLEND")),
+        ("/materials/0/alphaMode", json!("UNKNOWN")),
         (
             "/materials/0/pbrMetallicRoughness/baseColorTexture/texCoord",
             json!(1),

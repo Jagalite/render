@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "profile": "gltf2-morph-frames-v1",
+  "results": [
+    {
+      "name": "dense",
+      "revision": "sha256:5ab48fb042e3eda146623fdf7d419d17b02518ede137ff9c5e009c49e8a34fa9",
+      "linear_rmse": 0.00011835622947962851,
+      "object_mismatches": 0,
+      "opfs_restored": true,
+      "staleRender": true,
+      "staleBranch": true,
+      "cancelled": true
+    },
+    {
+      "name": "sparse",
+      "revision": "sha256:a98a2b09e16f5b33dc156237ddba3827e8a4633ab7e37fc5592deef951e66355",
+      "linear_rmse": 0.00011835622947962851,
+      "object_mismatches": 0,
+      "opfs_restored": true,
+      "staleRender": true,
+      "staleBranch": true,
+      "cancelled": true
+    }
+  ],
+  "malformed_atomic": true,
+  "dense_sparse_pixels_identical": true,
+  "seconds": 0.20219999999552965,
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/152.0.7977.76",
+    "revision": "@0d89dfa2dd7c1ec4b8a14b9f303f887bb63b6174",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+    "jsVersion": "15.2.124.19"
+  }
+}

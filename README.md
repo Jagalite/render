@@ -64,3 +64,6 @@ records exact passes and the corrected camera clipping/depth cases.
 
 Named UV texture bindings: [profile](docs/named_uv.md),
 [fixture](fixtures/named-uv/README.md), and [validation](evidence/named-uv/README.md).
+
+Normal/tangent morphs and authored skinning frames: [profile](docs/morph_frames.md),
+[fixture](fixtures/morph-frames/README.md), and [validation](evidence/morph-frames/README.md).

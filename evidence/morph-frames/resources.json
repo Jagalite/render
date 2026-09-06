@@ -1,0 +1,41 @@
+{
+  "scope": "32x32, 8 samples, depth2, three temporal samples, two triangles, two joints and three morph semantics; individual process observations are not a benchmark or allocator limit",
+  "observations": [
+    {
+      "name": "dense-import",
+      "seconds": 0.04419741599849658,
+      "maximum resident set size": 16990208,
+      "peak memory footprint": 3540096
+    },
+    {
+      "name": "dense-cpu",
+      "seconds": 0.209708166999917,
+      "maximum resident set size": 18923520,
+      "peak memory footprint": 4064384
+    },
+    {
+      "name": "dense-gpu",
+      "seconds": 0.1744059170014225,
+      "maximum resident set size": 35045376,
+      "peak memory footprint": 11437632
+    },
+    {
+      "name": "sparse-import",
+      "seconds": 0.0446859579969896,
+      "maximum resident set size": 17022976,
+      "peak memory footprint": 3572864
+    },
+    {
+      "name": "sparse-cpu",
+      "seconds": 0.22053233299811836,
+      "maximum resident set size": 19038208,
+      "peak memory footprint": 4179072
+    },
+    {
+      "name": "sparse-gpu",
+      "seconds": 0.17084083300142083,
+      "maximum resident set size": 35094528,
+      "peak memory footprint": 11470464
+    }
+  ]
+}

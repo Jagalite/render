@@ -33,14 +33,16 @@ The [CLI contract](project_cli.md) covers paths, transactions and artifact publi
   Mesh-node world transforms cancel in skin evaluation, as required by glTF skinning.
 - POSITION-only morph targets, mesh defaults and node overrides, with independently
   animated target weights. Default and key weights must be within [-8,8]; cubic overshoot is diagnosed during evaluation. Morphs precede LBS. Target counts must agree across all
-  primitives. [Sparse accessors](gltf_accessors.md) are now supported; normal/tangent
-  morph targets remain unsupported.
+  primitives. [Sparse accessors](gltf_accessors.md) are now supported; [normal/tangent
+  morph targets](morph_frames.md) now have a separately validated snapshot-v13 profile.
 
 Approximation consent remains required. Rotation keys whose squared-norm error is
 at most 1e-3 are renormalized; the conversion report records the largest source
 error. This admits the rounded quaternion samples in the original Khronos SimpleSkin
-asset. Larger errors fail. Tangents remain source derivatives. Deformation recomputes
-flat geometric normals and discards stale normal/tangent attributes. Existing PBR
+asset. Larger errors fail. Tangents remain source derivatives. The original deformation profile recomputes
+flat geometric normals and discards stale normal/tangent attributes. The newer
+[authored-frame profile](morph_frames.md) explicitly opts selected entities into
+transformed shading directions. Existing PBR
 roughness and tangent approximations remain reported. Source files are never edited;
 callers must retain them for original metadata and source-format round trips.
 

@@ -1,0 +1,66 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "import",
+    "base_revision": "sha256:b69c9c2292ded64b90d20aec4fb791bfb4bd2e802ac657667354c4bff6966b67",
+    "idempotency_key": "morphframe:stale:0001",
+    "max_added_bytes": 8388608,
+    "source": {
+      "format": "glb",
+      "path": "fixtures/morph-frames/data/dense.glb",
+      "policy": {
+        "allow_approximations": true
+      }
+    },
+    "settings": {
+      "width": 32,
+      "height": 32,
+      "samples": 8,
+      "seed": 73,
+      "max_depth": 2,
+      "max_bytes": 16777216,
+      "environment": [
+        0.15,
+        0.15,
+        0.15
+      ],
+      "light": {
+        "position": [
+          -2,
+          4,
+          3
+        ],
+        "intensity": [
+          30,
+          30,
+          30
+        ]
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          5
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "vertical_fov_radians": 0.65,
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 2,
+          "ymag": 2.5,
+          "near": 0.1,
+          "far": 10
+        }
+      }
+    }
+  }
+}

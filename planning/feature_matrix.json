@@ -11,14 +11,14 @@
         "M05",
         "M13"
       ],
-      "qualification": "Transactional typed snapshot-v12 assets and shared geometry, procedural/groom/media bindings, animation and imaging; no full editor.",
+      "qualification": "Transactional typed snapshot-v13 assets and shared geometry, procedural/groom/media bindings, animation and imaging; no full editor.",
       "capability_axes": {
         "native_authoring": "implemented_api_v0",
         "native_evaluation": "implemented_polygon_profile",
         "final_render": "implemented_cpu_gpu_diffuse_and_opaque_static_pbr_profiles",
         "preview": "portable_path_PBR; flat_raster_legacy_only",
         "human_editing": "planned_M09",
-        "import": "scoped_OBJ_static_PBR_and_gltf2_animated_pbr_v0_with_explicit_resources; gltf2_sparse_uv0_v1; gltf2_alpha_cpu_v1_MASK_BLEND; gltf2_named_uv_v1_per_role_UV0_to_UV7",
+        "import": "scoped_OBJ_static_PBR_and_gltf2_animated_pbr_v0_with_explicit_resources; gltf2_sparse_uv0_v1; gltf2_alpha_cpu_v1_MASK_BLEND; gltf2_named_uv_v1_per_role_UV0_to_UV7; gltf2_morph_frames_v1",
         "export": "canonical_json_and_native_package"
       },
       "platform_profiles": {
@@ -35,7 +35,8 @@
         "evidence/animated-gltf/README.md",
         "evidence/sparse-gltf/README.md",
         "evidence/alpha-gltf/README.md",
-        "evidence/named-uv/README.md"
+        "evidence/named-uv/README.md",
+        "evidence/morph-frames/README.md"
       ]
     },
     {
@@ -53,7 +54,7 @@
         "final_render": "native_CPU_GPU_scene_and_shutter_sequences; CPU_imaging_products",
         "preview": "implemented_candidates_and_render_api",
         "human_editing": "planned_M09",
-        "import": "typed_JSON_requests_and_explicit_OBJ_static_or_animated_GLB_glTF_bundles; gltf2_sparse_uv0_v1; gltf2_alpha_cpu_v1_MASK_BLEND; gltf2_named_uv_v1_per_role_UV0_to_UV7",
+        "import": "typed_JSON_requests_and_explicit_OBJ_static_or_animated_GLB_glTF_bundles; gltf2_sparse_uv0_v1; gltf2_alpha_cpu_v1_MASK_BLEND; gltf2_named_uv_v1_per_role_UV0_to_UV7; gltf2_morph_frames_v1",
         "export": "native_document_lossy_evaluated_OBJ_and_render_artifact_manifests"
       },
       "platform_profiles": {
@@ -73,7 +74,8 @@
         "evidence/gpu-shutter/README.md",
         "evidence/sparse-gltf/README.md",
         "evidence/alpha-gltf/README.md",
-        "evidence/named-uv/README.md"
+        "evidence/named-uv/README.md",
+        "evidence/morph-frames/README.md"
       ]
     },
     {
@@ -236,7 +238,7 @@
         "M09",
         "M14"
       ],
-      "qualification": "Exact rational clips/retiming, Euler/quaternion step/linear/cubic tracks, stable rigs/rest/bind, CopyPosition/TwoBoneIk, triangle LBS/morphs and sampled shutter sequences. Imported absolute TRS clips, per-skin inverse binds and default POSITION morph weights; immutable default/random-time evaluation. GPU f32 shutter frames/streaming sequences for opaque material profiles with nominal-time passes.",
+      "qualification": "Exact rational clips/retiming, Euler/quaternion step/linear/cubic tracks, stable rigs/rest/bind, CopyPosition/TwoBoneIk, triangle LBS/morphs and sampled shutter sequences. Imported absolute TRS clips, per-skin inverse binds and default POSITION morph weights; immutable default/random-time evaluation. GPU f32 shutter frames/streaming sequences for opaque material profiles with nominal-time passes. Snapshot-v13 authored point/corner frames and imported normal/tangent morph deltas under explicit affine skinning.",
       "capability_axes": {
         "native_authoring": "ordinary_revision_checked_typed_transactions",
         "native_evaluation": "named_Rust_profiles_in_docs/m07_m08.md",
@@ -254,7 +256,8 @@
         "evidence/m06-m08/README.md",
         "evidence/animated-gltf/README.md",
         "evidence/gpu-shutter/README.md",
-        "evidence/sparse-gltf/README.md"
+        "evidence/sparse-gltf/README.md",
+        "evidence/morph-frames/README.md"
       ]
     },
     {
@@ -416,7 +419,7 @@
         "final_render": "implemented_cpu_gpu_diffuse_and_opaque_static_pbr_profiles",
         "preview": "portable_path_PBR; flat_raster_legacy_only",
         "human_editing": "planned_M09",
-        "import": "scoped_OBJ_static_PBR_and_gltf2_animated_pbr_v0_with_explicit_resources; gltf2_sparse_uv0_v1; gltf2_alpha_cpu_v1_MASK_BLEND; gltf2_named_uv_v1_per_role_UV0_to_UV7",
+        "import": "scoped_OBJ_static_PBR_and_gltf2_animated_pbr_v0_with_explicit_resources; gltf2_sparse_uv0_v1; gltf2_alpha_cpu_v1_MASK_BLEND; gltf2_named_uv_v1_per_role_UV0_to_UV7; gltf2_morph_frames_v1",
         "export": "named_static_OBJ_glTF_profiles_and_lossless_native_JSON; no_animated_glTF_export"
       },
       "platform_profiles": {
@@ -432,7 +435,8 @@
         "evidence/gpu-shutter/README.md",
         "evidence/sparse-gltf/README.md",
         "evidence/alpha-gltf/README.md",
-        "evidence/named-uv/README.md"
+        "evidence/named-uv/README.md",
+        "evidence/morph-frames/README.md"
       ]
     },
     {

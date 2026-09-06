@@ -5,12 +5,12 @@ working on feasible remaining steps. M09 interactive editor remains deferred.
 Each completed increment requires implementation, native/browser workflow evidence,
 negative/cancellation/stale checks, resource/provenance records and documentation.
 
-Current implementation checkpoint: `68edeb3` (named UV bindings); full acceptance is in evidence/named-uv.
+Current implementation checkpoint: `246288c` (authored morph frames); full acceptance is in evidence/morph-frames.
 
 | Order | Increment | Status |
 |---|---|---|
 | 1 | GPU shutter frames and streaming sequences | Validated on feat/gpu-shutter-sequences; evidence/gpu-shutter |
-| 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Sparse/UV0, CPU alpha and named UV bindings validated; morph shading frames in isolated candidate branch |
+| 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Sparse/UV0, CPU alpha, named UV and morph frames validated; vertex colors and broader export next |
 | 3 | Richer GPU scattering and transport quality | Pending |
 | 4 | External hair/volume inputs, fiber shading and sparse GPU media | Pending |
 | 5 | Scoped native .blend/USD/MaterialX interchange | Pending |
@@ -43,4 +43,10 @@ Named UV acceptance: 121 native and 102 Wasm tests, three Metal comparison cases
 are exact; GPU RMSE is below 0.000047. All 108 previous images/passes and 36
 receipts are unchanged; 66 existing fixture files are unchanged. Displacement
 derived UV identity intentionally changes under uniform-named-uv-v1. Morph-frame
-work is isolated in feat/morph-shading-frames.
+acceptance follows in evidence/morph-frames.
+
+Morph-frame acceptance: 126 native and 107 Wasm tests, 12 explicit Metal
+frame/shutter comparisons, 31 CLI requests and dense/sparse Chrome CPU/WebGPU/OPFS
+workflows. CPU native/Wasm and dense/sparse pixels are exact; GPU RMSE is below
+0.000119. All 117 prior images/passes, 39 receipts and 72 fixture files remain
+unchanged. Native snapshot-v13 frame bindings preserve stable point/corner IDs.

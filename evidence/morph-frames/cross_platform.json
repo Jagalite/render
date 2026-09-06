@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "comparisons": [
+    {
+      "variant": "dense",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "object_mismatches": 0
+    },
+    {
+      "variant": "dense",
+      "browser": "gpu",
+      "linear_rmse": 0.00011835622947962851,
+      "object_mismatches": 0
+    },
+    {
+      "variant": "sparse",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "object_mismatches": 0
+    },
+    {
+      "variant": "sparse",
+      "browser": "gpu",
+      "linear_rmse": 0.00011835622947962851,
+      "object_mismatches": 0
+    }
+  ]
+}

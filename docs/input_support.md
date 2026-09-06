@@ -4,7 +4,8 @@ M06–M08 now have [named implementation profiles](m07_m08.md) and [complete mil
 
 The limited M00–M04 rendering profile is the starting point. The requested target includes complete scene assets, richer materials, animation and rigs, hair, volumes, and native Blender file profiles. These remain staged capabilities. M05 now delivers a bounded static glTF/GLB scene profile and complete restricted-variant workflow; INPUT-01–05 remain partial: M07/M08 supply native authored rendering and animation, while the external-format and wider GPU portions retain their own gates. INPUT-06 remains planned. [Animated glTF/GLB import](animated_gltf.md) now delivers
 the named INPUT-03 import/save/reopen/render workflow on native and browser Rust,
-with [separate evidence](../evidence/animated-gltf/README.md). Normal/tangent morphs, extensions and animated source-format export remain open.
+with [separate evidence](../evidence/animated-gltf/README.md). [Normal/tangent morphs](morph_frames.md) now have their own authored-frame profile;
+extensions and animated source-format export remain open.
 
 The machine-readable work and acceptance criteria are in [planning/input_support.json](../planning/input_support.json). Existing milestone dependencies remain in force. M05 proves the agent workflow and narrow ABI before the broader product gates. Its [explicit profile](agent_alpha.md#static-scene-profile) does not claim cameras, textures, complete PBR or arbitrary glTF compatibility.
 
@@ -48,3 +49,8 @@ workflow checks. GPU alpha remains explicitly unsupported.
 including displacement preservation and CPU alpha/bake consumers. The
 [acceptance evidence](../evidence/named-uv/README.md) records analytic samples,
 CLI/browser recovery and unchanged prior render artifacts.
+
+[Authored morph frames](morph_frames.md) support normal/tangent deltas before
+affine skinning, including dense/sparse inputs and snapshot-v13 point/corner
+correspondence. [Evidence](../evidence/morph-frames/README.md) covers native and
+browser frames, shutters, persistence and numerical direction checks.

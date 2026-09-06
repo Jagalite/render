@@ -1,0 +1,309 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "roles-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/roles",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/000-roles-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021483999997144565
+    },
+    {
+      "name": "roles-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/roles",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/001-roles-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.008137458004057407
+    },
+    {
+      "name": "roles-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/roles",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/002-roles-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03698370799975237,
+      "resources": {
+        "maximum resident set size": 15908864,
+        "peak memory footprint": 2950208
+      }
+    },
+    {
+      "name": "roles-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/roles",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/003-roles-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0215815420015133
+    },
+    {
+      "name": "roles-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/roles",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/004-roles-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013881999999284744
+    },
+    {
+      "name": "roles-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/roles",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/005-roles-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07292758300172864,
+      "resources": {
+        "maximum resident set size": 17186816,
+        "peak memory footprint": 3327040
+      }
+    },
+    {
+      "name": "roles-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/roles",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/006-roles-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1391792920039734,
+      "resources": {
+        "maximum resident set size": 33423360,
+        "peak memory footprint": 11044480
+      }
+    },
+    {
+      "name": "roles-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/roles",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/007-roles-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.019878666993463412
+    },
+    {
+      "name": "roles-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/roles",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/008-roles-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.031225083002937026
+    },
+    {
+      "name": "roles-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/roles-restored",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/009-roles-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030490582998027094
+    },
+    {
+      "name": "roles-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/roles-restored",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/010-roles-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07385270899976604
+    },
+    {
+      "name": "roles-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/roles",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/011-roles-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016075709005235694
+    },
+    {
+      "name": "negative-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/negative",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/012-negative-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02046758299547946
+    },
+    {
+      "name": "negative-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/negative",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/013-negative-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006927000002178829
+    },
+    {
+      "name": "malformed",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/negative",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/014-malformed.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "reference",
+      "seconds": 0.007393749998300336
+    },
+    {
+      "name": "cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/negative",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/015-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.006050333002349362
+    },
+    {
+      "name": "budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/negative",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/016-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.005867457999556791
+    },
+    {
+      "name": "negative-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/negative",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/017-negative-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006563832997926511
+    },
+    {
+      "name": "explicit-valid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/negative",
+        "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/named-uv-regression/018-explicit-valid.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.031214208000164945
+    }
+  ],
+  "variants": [
+    {
+      "name": "roles",
+      "revision": "sha256:1f30e19008706385ce3bee83e34e3a7f82cd31b4c366133243990d135f3a0d50",
+      "cpu_metal_rmse": 4.674940214629955e-05,
+      "restored_pixels_identical": true
+    }
+  ],
+  "settings": {
+    "width": 32,
+    "height": 16,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        2,
+        2,
+        2
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        3
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 1,
+        "ymag": 1,
+        "near": 0.1,
+        "far": 5
+      }
+    }
+  }
+}

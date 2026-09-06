@@ -53,3 +53,6 @@ The source contract is [glTF 2.0 sections 3.7.2.2 and 3.7.3](https://registry.kh
 See the [original fixture](../fixtures/morph-frames/README.md). Morphing UV/color
 attributes, general source export, dual-quaternion skinning and smooth-normal
 reconstruction for missing normals remain separate profiles. M09 stays deferred.
+
+[Acceptance evidence](../evidence/morph-frames/README.md) records complete workflows,
+resource use, dependency review, numeric oracles and prior-profile identity.

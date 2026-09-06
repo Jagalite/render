@@ -1,0 +1,27 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "frame",
+    "backend": "gpu",
+    "request": {
+      "revision": "sha256:5ab48fb042e3eda146623fdf7d419d17b02518ede137ff9c5e009c49e8a34fa9",
+      "clip": "b099388ad83c89353fdc3536325558d7",
+      "time": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "shutter": {
+        "open": {
+          "numerator": -1,
+          "denominator": 32
+        },
+        "close": {
+          "numerator": 1,
+          "denominator": 32
+        },
+        "samples": 3
+      }
+    },
+    "output": "/private/tmp/render-morph-frames-20260906/artifacts/morph-frames/run-20260906T071435Z/workflow/dense-gpu"
+  }
+}

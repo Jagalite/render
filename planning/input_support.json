@@ -116,10 +116,11 @@
         "evidence/m06-m08/README.md",
         "evidence/animated-gltf/README.md",
         "evidence/gpu-shutter/README.md",
-        "evidence/sparse-gltf/README.md"
+        "evidence/sparse-gltf/README.md",
+        "evidence/morph-frames/README.md"
       ],
-      "implemented_profile": "native-authored affine-lbs-shutter-v0 and gltf2-animated-pbr-v0 on native/Wasm; gpu-f32-animation-v0 frames and streaming sequences on Metal/WebGPU; gltf2-sparse-uv0-v1 accessor capability",
-      "remaining_scope": "Normal/tangent morph targets, extensions, larger source profiles and animated glTF export remain unsupported."
+      "implemented_profile": "native-authored affine-lbs-shutter-v0 and gltf2-animated-pbr-v0 on native/Wasm; gpu-f32-animation-v0 frames and streaming sequences on Metal/WebGPU; gltf2-sparse-uv0-v1 accessor capability; gltf2-morph-frames-v1 POSITION/NORMAL/TANGENT deltas with opt-in authored deformation frames",
+      "remaining_scope": "Morph UV/color attributes, extensions, larger source profiles and animated glTF export remain unsupported. Authored normal/tangent directions use the explicit snapshot-v13 affine frame policy."
     },
     {
       "id": "INPUT-04",

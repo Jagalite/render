@@ -1,0 +1,284 @@
+{
+  "status": "passed",
+  "scope": "macOS ARM64 CPU/Metal, Rust Wasm in Node, Chrome WebGPU/OPFS; Linux and Windows compile only",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5432885000045644,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "morph_frame_regressions",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "morph_frames",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 0.2612122080026893,
+      "log": "logs/morph_frame_regressions.txt"
+    },
+    {
+      "name": "morph_frame_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "morph_frames_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 1.6604711249965476,
+      "log": "logs/morph_frame_gpu.txt"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6195177080007852,
+      "log": "logs/clippy.txt"
+    },
+    {
+      "name": "native_tests",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 42.954463334004686,
+      "log": "logs/native_tests.txt"
+    },
+    {
+      "name": "wasm_tests",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 43.4353860409974,
+      "log": "logs/wasm_tests.txt"
+    },
+    {
+      "name": "linux_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-unknown-linux-gnu",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 3.9555699999982608,
+      "log": "logs/linux_check.txt"
+    },
+    {
+      "name": "windows_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-pc-windows-msvc",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 3.7504642919957405,
+      "log": "logs/windows_check.txt"
+    },
+    {
+      "name": "browser_clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "-p",
+        "render-web",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 4.772133959006169,
+      "log": "logs/browser_clippy.txt"
+    },
+    {
+      "name": "native_build",
+      "command": [
+        "cargo",
+        "build",
+        "-p",
+        "render-host",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1548994999975548,
+      "log": "logs/native_build.txt"
+    },
+    {
+      "name": "browser_build",
+      "command": [
+        "sh",
+        "scripts/build-web.sh"
+      ],
+      "exit_code": 0,
+      "seconds": 54.525626541995734,
+      "log": "logs/browser_build.txt"
+    },
+    {
+      "name": "camera_regression",
+      "command": [
+        "python3",
+        "scripts/alpha-camera-workflow.py",
+        "artifacts/morph-frames/run-20260906T071435Z/camera-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 1.5346793749995413,
+      "log": "logs/camera_regression.txt"
+    },
+    {
+      "name": "dependency_audit",
+      "command": [
+        "python3",
+        "scripts/dependency-audit.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.35125512500235345,
+      "log": "logs/dependency_audit.txt"
+    },
+    {
+      "name": "animated_regression",
+      "command": [
+        "python3",
+        "scripts/animated-gltf-workflow.py",
+        "artifacts/morph-frames/run-20260906T071435Z/animated-regression",
+        "--gpu"
+      ],
+      "exit_code": 0,
+      "seconds": 2.57838383300259,
+      "log": "logs/animated_regression.txt"
+    },
+    {
+      "name": "shutter_regression",
+      "command": [
+        "python3",
+        "scripts/gpu-shutter-workflow.py",
+        "artifacts/morph-frames/run-20260906T071435Z/shutter-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 1.5865698749985313,
+      "log": "logs/shutter_regression.txt"
+    },
+    {
+      "name": "sparse_regression",
+      "command": [
+        "python3",
+        "scripts/sparse-gltf-workflow.py",
+        "artifacts/morph-frames/run-20260906T071435Z/sparse-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 2.6336690000025555,
+      "log": "logs/sparse_regression.txt"
+    },
+    {
+      "name": "alpha_workflow",
+      "command": [
+        "python3",
+        "scripts/alpha-gltf-workflow.py",
+        "artifacts/morph-frames/run-20260906T071435Z/alpha-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 2.5685780000058003,
+      "log": "logs/alpha_workflow.txt"
+    },
+    {
+      "name": "named_uv_regression",
+      "command": [
+        "python3",
+        "scripts/named-uv-workflow.py",
+        "artifacts/morph-frames/run-20260906T071435Z/named-uv-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6166563330043573,
+      "log": "logs/named_uv_regression.txt"
+    },
+    {
+      "name": "morph_workflow",
+      "command": [
+        "python3",
+        "scripts/morph-frames-workflow.py",
+        "artifacts/morph-frames/run-20260906T071435Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.8003127909978502,
+      "log": "logs/morph_workflow.txt"
+    },
+    {
+      "name": "browser_workflow",
+      "command": [
+        "node",
+        "scripts/morph-frames-browser.mjs",
+        "artifacts/morph-frames/run-20260906T071435Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.9412524999934249,
+      "log": "logs/browser_workflow.txt"
+    }
+  ],
+  "build_environment": {
+    "CARGO_NET_OFFLINE": "true",
+    "CARGO_BUILD_JOBS": "2",
+    "CARGO_INCREMENTAL": "0",
+    "CARGO_PROFILE_DEV_DEBUG": "0",
+    "CARGO_PROFILE_TEST_DEBUG": "0",
+    "CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUNNER": "wasm-bindgen-test-runner",
+    "RENDER_TEST_ORIGIN": "http://127.0.0.1:8768"
+  },
+  "native_test_count": 126,
+  "wasm_test_count": 107
+}

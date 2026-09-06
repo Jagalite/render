@@ -1,0 +1,3067 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "uv-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/uv",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/000-uv-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10590783299994655
+    },
+    {
+      "name": "uv-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/uv",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/001-uv-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017887416994199157
+    },
+    {
+      "name": "uv-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/uv",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/002-uv-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.18352358299307525
+    },
+    {
+      "name": "uv-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/uv",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/003-uv-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.047432999999728054
+    },
+    {
+      "name": "uv-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/uv",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/004-uv-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2414112499973271,
+      "resources": {
+        "maximum resident set size": 17956864,
+        "peak memory footprint": 3048512
+      }
+    },
+    {
+      "name": "uv-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/uv",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/005-uv-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.18275570799596608
+    },
+    {
+      "name": "uv-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/uv-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/006-uv-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10130695800762624
+    },
+    {
+      "name": "uv-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/uv-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/007-uv-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024091665996820666
+    },
+    {
+      "name": "uv-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/uv-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/008-uv-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2637387499999022,
+      "resources": {
+        "maximum resident set size": 16695296,
+        "peak memory footprint": 3032128
+      }
+    },
+    {
+      "name": "uv-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/uv-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/009-uv-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.051130375009961426
+    },
+    {
+      "name": "uv-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/uv",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/010-uv-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6298739579942776,
+      "resources": {
+        "maximum resident set size": 17793024,
+        "peak memory footprint": 3212352
+      }
+    },
+    {
+      "name": "uv-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/uv-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/011-uv-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2880720410030335,
+      "resources": {
+        "maximum resident set size": 17825792,
+        "peak memory footprint": 3245120
+      }
+    },
+    {
+      "name": "uv-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/uv",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/012-uv-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.7471065839927178,
+      "resources": {
+        "maximum resident set size": 34570240,
+        "peak memory footprint": 11372096
+      }
+    },
+    {
+      "name": "uv-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/uv-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/013-uv-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5723739579989342,
+      "resources": {
+        "maximum resident set size": 34799616,
+        "peak memory footprint": 11601536
+      }
+    },
+    {
+      "name": "uv-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/uv-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/014-uv-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.18135941699438263
+    },
+    {
+      "name": "uv-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/uv-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/015-uv-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1393826659914339
+    },
+    {
+      "name": "uv-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/uv-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/016-uv-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.26916370799881406
+    },
+    {
+      "name": "uv-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/uv",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/017-uv-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.03876199999649543
+    },
+    {
+      "name": "uv-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/uv",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/018-uv-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.046574624997447245
+    },
+    {
+      "name": "color-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/019-color-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11354500000015832
+    },
+    {
+      "name": "color-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/020-color-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017686874998616986
+    },
+    {
+      "name": "color-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/021-color-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1823173750017304
+    },
+    {
+      "name": "color-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/022-color-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030167999997502193
+    },
+    {
+      "name": "color-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/023-color-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2486786670051515,
+      "resources": {
+        "maximum resident set size": 18022400,
+        "peak memory footprint": 2982976
+      }
+    },
+    {
+      "name": "color-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/024-color-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.15682470900355838
+    },
+    {
+      "name": "color-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/025-color-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09140220900007989
+    },
+    {
+      "name": "color-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/026-color-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015400040996610187
+    },
+    {
+      "name": "color-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/027-color-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.16377862500667106,
+      "resources": {
+        "maximum resident set size": 16580608,
+        "peak memory footprint": 2868288
+      }
+    },
+    {
+      "name": "color-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/028-color-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0414125840034103
+    },
+    {
+      "name": "color-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/029-color-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.23890908299654257,
+      "resources": {
+        "maximum resident set size": 17776640,
+        "peak memory footprint": 3163200
+      }
+    },
+    {
+      "name": "color-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/030-color-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.26307287499366794,
+      "resources": {
+        "maximum resident set size": 17760256,
+        "peak memory footprint": 3146816
+      }
+    },
+    {
+      "name": "color-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/031-color-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5784544579946669,
+      "resources": {
+        "maximum resident set size": 34373632,
+        "peak memory footprint": 11241088
+      }
+    },
+    {
+      "name": "color-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/032-color-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5741526250058087,
+      "resources": {
+        "maximum resident set size": 34570240,
+        "peak memory footprint": 11437696
+      }
+    },
+    {
+      "name": "color-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/033-color-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22588716699101496
+    },
+    {
+      "name": "color-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/034-color-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.16975208299118094
+    },
+    {
+      "name": "color-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/035-color-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22482479200698435
+    },
+    {
+      "name": "color-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/036-color-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.03222141599690076
+    },
+    {
+      "name": "color-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/037-color-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03549483300594147
+    },
+    {
+      "name": "morph-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/morph",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/038-morph-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10087837500032037
+    },
+    {
+      "name": "morph-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/morph",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/039-morph-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02923499999451451
+    },
+    {
+      "name": "morph-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/morph",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/040-morph-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1985313749901252
+    },
+    {
+      "name": "morph-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/morph",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/041-morph-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0677796660020249
+    },
+    {
+      "name": "morph-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/morph",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/042-morph-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.26583820799714886,
+      "resources": {
+        "maximum resident set size": 19644416,
+        "peak memory footprint": 3654784
+      }
+    },
+    {
+      "name": "morph-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/morph",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/043-morph-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2339797919994453
+    },
+    {
+      "name": "morph-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/morph-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/044-morph-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08992708299774677
+    },
+    {
+      "name": "morph-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/morph-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/045-morph-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014135541990981437
+    },
+    {
+      "name": "morph-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/morph-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/046-morph-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.161827916992479,
+      "resources": {
+        "maximum resident set size": 16744448,
+        "peak memory footprint": 3015744
+      }
+    },
+    {
+      "name": "morph-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/morph-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/047-morph-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0386463329923572
+    },
+    {
+      "name": "morph-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/morph",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/048-morph-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3677368749922607,
+      "resources": {
+        "maximum resident set size": 19578880,
+        "peak memory footprint": 3736704
+      }
+    },
+    {
+      "name": "morph-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/morph-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/049-morph-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.24827662500320002,
+      "resources": {
+        "maximum resident set size": 17842176,
+        "peak memory footprint": 3277952
+      }
+    },
+    {
+      "name": "morph-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/morph",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/050-morph-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.40252745799080003,
+      "resources": {
+        "maximum resident set size": 35946496,
+        "peak memory footprint": 11667008
+      }
+    },
+    {
+      "name": "morph-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/morph-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/051-morph-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.39221437499509193,
+      "resources": {
+        "maximum resident set size": 34537472,
+        "peak memory footprint": 11437696
+      }
+    },
+    {
+      "name": "morph-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/morph-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/052-morph-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14264129201183096
+    },
+    {
+      "name": "morph-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/morph-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/053-morph-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.27331962500466034
+    },
+    {
+      "name": "morph-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/morph-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/054-morph-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6653428749996237
+    },
+    {
+      "name": "morph-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/morph",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/055-morph-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.029688208989682607
+    },
+    {
+      "name": "morph-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/morph",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/056-morph-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04035075000138022
+    },
+    {
+      "name": "mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/057-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08586991700576618
+    },
+    {
+      "name": "mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/058-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011727999997674488
+    },
+    {
+      "name": "mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/059-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1336644170078216
+    },
+    {
+      "name": "mask-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/060-mask-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02089749999868218
+    },
+    {
+      "name": "mask-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/061-mask-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.15896295799757354,
+      "resources": {
+        "maximum resident set size": 17956864,
+        "peak memory footprint": 2901056
+      }
+    },
+    {
+      "name": "mask-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/062-mask-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14708945900201797
+    },
+    {
+      "name": "mask-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/063-mask-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09002545899420511
+    },
+    {
+      "name": "mask-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/064-mask-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014986249996582046
+    },
+    {
+      "name": "mask-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/065-mask-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.129379499994684,
+      "resources": {
+        "maximum resident set size": 16547840,
+        "peak memory footprint": 2835520
+      }
+    },
+    {
+      "name": "mask-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/066-mask-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02130229199246969
+    },
+    {
+      "name": "mask-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/067-mask-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2485478750022594,
+      "resources": {
+        "maximum resident set size": 17612800,
+        "peak memory footprint": 3015744
+      }
+    },
+    {
+      "name": "mask-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/068-mask-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.28191483300179243,
+      "resources": {
+        "maximum resident set size": 17596416,
+        "peak memory footprint": 2999360
+      }
+    },
+    {
+      "name": "mask-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/069-mask-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5034351670037722,
+      "resources": {
+        "maximum resident set size": 35405824,
+        "peak memory footprint": 12338816
+      }
+    },
+    {
+      "name": "mask-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/070-mask-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6468040829931851,
+      "resources": {
+        "maximum resident set size": 34308096,
+        "peak memory footprint": 12371584
+      }
+    },
+    {
+      "name": "mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/071-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20810516699566506
+    },
+    {
+      "name": "mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/mask-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/072-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11193487499258481
+    },
+    {
+      "name": "mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/mask-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/073-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2244804160000058
+    },
+    {
+      "name": "mask-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/074-mask-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.028657583010499366
+    },
+    {
+      "name": "mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/075-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.035143415996572
+    },
+    {
+      "name": "blend-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/076-blend-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11210291599854827
+    },
+    {
+      "name": "blend-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/077-blend-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015532459001406096
+    },
+    {
+      "name": "blend-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/078-blend-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12926158400659915
+    },
+    {
+      "name": "blend-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/079-blend-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.038814957995782606
+    },
+    {
+      "name": "blend-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/080-blend-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.17273470800137147,
+      "resources": {
+        "maximum resident set size": 17940480,
+        "peak memory footprint": 2901056
+      }
+    },
+    {
+      "name": "blend-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/081-blend-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.15766541600169148
+    },
+    {
+      "name": "blend-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/blend-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/082-blend-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0894519580033375
+    },
+    {
+      "name": "blend-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/blend-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/083-blend-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017404625003109686
+    },
+    {
+      "name": "blend-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/blend-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/084-blend-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12591987499035895,
+      "resources": {
+        "maximum resident set size": 16564224,
+        "peak memory footprint": 2851904
+      }
+    },
+    {
+      "name": "blend-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/blend-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/085-blend-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0305456670030253
+    },
+    {
+      "name": "blend-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/086-blend-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22723487499752082,
+      "resources": {
+        "maximum resident set size": 17760256,
+        "peak memory footprint": 3163200
+      }
+    },
+    {
+      "name": "blend-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/blend-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/087-blend-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21531466700253077,
+      "resources": {
+        "maximum resident set size": 17711104,
+        "peak memory footprint": 3114048
+      }
+    },
+    {
+      "name": "blend-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/088-blend-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.7123042919993168,
+      "resources": {
+        "maximum resident set size": 35618816,
+        "peak memory footprint": 12551808
+      }
+    },
+    {
+      "name": "blend-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/blend-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/089-blend-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6551794169936329,
+      "resources": {
+        "maximum resident set size": 35749888,
+        "peak memory footprint": 12650048
+      }
+    },
+    {
+      "name": "blend-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/blend-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/090-blend-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13987354199343827
+    },
+    {
+      "name": "blend-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/blend-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/091-blend-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11379479200695641
+    },
+    {
+      "name": "blend-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/blend-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/092-blend-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21397108300880063
+    },
+    {
+      "name": "blend-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/093-blend-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.02188025000214111
+    },
+    {
+      "name": "blend-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/094-blend-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022981416987022385
+    },
+    {
+      "name": "named-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/095-named-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09859266699641012
+    },
+    {
+      "name": "named-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/096-named-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.010997375007718801
+    },
+    {
+      "name": "named-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/097-named-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.16665704100159928
+    },
+    {
+      "name": "named-mask-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/098-named-mask-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.026543332991423085
+    },
+    {
+      "name": "named-mask-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/099-named-mask-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.17625295800098684,
+      "resources": {
+        "maximum resident set size": 17989632,
+        "peak memory footprint": 3064960
+      }
+    },
+    {
+      "name": "named-mask-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/100-named-mask-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.15745762501319405
+    },
+    {
+      "name": "named-mask-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/101-named-mask-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20161137499962933
+    },
+    {
+      "name": "named-mask-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/102-named-mask-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.009683832991868258
+    },
+    {
+      "name": "named-mask-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/103-named-mask-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12664016700000502,
+      "resources": {
+        "maximum resident set size": 16728064,
+        "peak memory footprint": 3015744
+      }
+    },
+    {
+      "name": "named-mask-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/104-named-mask-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.023464042009436525
+    },
+    {
+      "name": "named-mask-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/105-named-mask-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2591367499990156,
+      "resources": {
+        "maximum resident set size": 17907712,
+        "peak memory footprint": 3310720
+      }
+    },
+    {
+      "name": "named-mask-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/106-named-mask-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21798737499921117,
+      "resources": {
+        "maximum resident set size": 17825792,
+        "peak memory footprint": 3228800
+      }
+    },
+    {
+      "name": "named-mask-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/107-named-mask-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5023794580047252,
+      "resources": {
+        "maximum resident set size": 35635200,
+        "peak memory footprint": 12568192
+      }
+    },
+    {
+      "name": "named-mask-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/108-named-mask-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5282355829986045,
+      "resources": {
+        "maximum resident set size": 35651584,
+        "peak memory footprint": 12568192
+      }
+    },
+    {
+      "name": "named-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/109-named-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13204783300170675
+    },
+    {
+      "name": "named-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-mask-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/110-named-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11516895900422242
+    },
+    {
+      "name": "named-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-mask-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/111-named-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.23057741699449252
+    },
+    {
+      "name": "named-mask-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/112-named-mask-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.020891958993161097
+    },
+    {
+      "name": "named-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/113-named-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.023533500003395602
+    },
+    {
+      "name": "named-blend-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/114-named-blend-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09078920898900833
+    },
+    {
+      "name": "named-blend-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/115-named-blend-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.00914220800041221
+    },
+    {
+      "name": "named-blend-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/116-named-blend-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11566245800349861
+    },
+    {
+      "name": "named-blend-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/117-named-blend-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024683208001079038
+    },
+    {
+      "name": "named-blend-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/118-named-blend-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.24401558299723547,
+      "resources": {
+        "maximum resident set size": 18038784,
+        "peak memory footprint": 3081344
+      }
+    },
+    {
+      "name": "named-blend-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/119-named-blend-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.15767537499777973
+    },
+    {
+      "name": "named-blend-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-blend-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/120-named-blend-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09170545799133833
+    },
+    {
+      "name": "named-blend-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-blend-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/121-named-blend-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.00901400001021102
+    },
+    {
+      "name": "named-blend-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-blend-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/122-named-blend-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12582116598787252,
+      "resources": {
+        "maximum resident set size": 16662528,
+        "peak memory footprint": 2950208
+      }
+    },
+    {
+      "name": "named-blend-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-blend-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/123-named-blend-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021740791999036446
+    },
+    {
+      "name": "named-blend-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/124-named-blend-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20427699999709148,
+      "resources": {
+        "maximum resident set size": 17809408,
+        "peak memory footprint": 3212416
+      }
+    },
+    {
+      "name": "named-blend-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-blend-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/125-named-blend-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20486591699591372,
+      "resources": {
+        "maximum resident set size": 17825792,
+        "peak memory footprint": 3228800
+      }
+    },
+    {
+      "name": "named-blend-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/126-named-blend-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.9849324999959208,
+      "resources": {
+        "maximum resident set size": 34504704,
+        "peak memory footprint": 12600896
+      }
+    },
+    {
+      "name": "named-blend-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-blend-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/127-named-blend-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.7849098750011763,
+      "resources": {
+        "maximum resident set size": 35471360,
+        "peak memory footprint": 12437120
+      }
+    },
+    {
+      "name": "named-blend-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-blend-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/128-named-blend-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14304204200743698
+    },
+    {
+      "name": "named-blend-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-blend-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/129-named-blend-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21535520799807273
+    },
+    {
+      "name": "named-blend-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-blend-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/130-named-blend-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2904898749984568
+    },
+    {
+      "name": "named-blend-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/131-named-blend-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.027166749991010875
+    },
+    {
+      "name": "named-blend-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/named-blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/132-named-blend-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030156166991218925
+    },
+    {
+      "name": "ao-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/ao-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/133-ao-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09723975000088103
+    },
+    {
+      "name": "ao-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/ao-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/134-ao-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011916624993318692
+    },
+    {
+      "name": "ao-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/ao-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/135-ao-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12505891600449104
+    },
+    {
+      "name": "ao-mask-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/ao-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/136-ao-mask-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.055376624994096346
+    },
+    {
+      "name": "ao-mask-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/ao-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/137-ao-mask-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.17544254199310672,
+      "resources": {
+        "maximum resident set size": 17924096,
+        "peak memory footprint": 3032128
+      }
+    },
+    {
+      "name": "ao-mask-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/ao-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/138-ao-mask-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22383900001295842
+    },
+    {
+      "name": "ao-mask-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/ao-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/139-ao-mask-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12402970799303148
+    },
+    {
+      "name": "ao-mask-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/ao-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/140-ao-mask-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013564666005549952
+    },
+    {
+      "name": "ao-mask-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/ao-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/141-ao-mask-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.16575120799825527,
+      "resources": {
+        "maximum resident set size": 16564224,
+        "peak memory footprint": 2868288
+      }
+    },
+    {
+      "name": "ao-mask-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/ao-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/142-ao-mask-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.029965500012622215
+    },
+    {
+      "name": "ao-mask-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/ao-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/143-ao-mask-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.26130754200858064,
+      "resources": {
+        "maximum resident set size": 17743872,
+        "peak memory footprint": 3163200
+      }
+    },
+    {
+      "name": "ao-mask-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/ao-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/144-ao-mask-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22498341699247248,
+      "resources": {
+        "maximum resident set size": 17678336,
+        "peak memory footprint": 3097664
+      }
+    },
+    {
+      "name": "ao-mask-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/ao-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/145-ao-mask-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6560312500077998,
+      "resources": {
+        "maximum resident set size": 35749888,
+        "peak memory footprint": 12732032
+      }
+    },
+    {
+      "name": "ao-mask-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/ao-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/146-ao-mask-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6380280409939587,
+      "resources": {
+        "maximum resident set size": 35569664,
+        "peak memory footprint": 12535424
+      }
+    },
+    {
+      "name": "ao-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/ao-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/147-ao-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12124037499597762
+    },
+    {
+      "name": "ao-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/ao-mask-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/148-ao-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1475564169959398
+    },
+    {
+      "name": "ao-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/ao-mask-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/149-ao-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.24711241699696984
+    },
+    {
+      "name": "ao-mask-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/ao-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/150-ao-mask-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.01616424998792354
+    },
+    {
+      "name": "ao-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/ao-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/151-ao-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018209083005785942
+    },
+    {
+      "name": "boundary-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/boundary-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/152-boundary-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08599900000263005
+    },
+    {
+      "name": "boundary-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/boundary-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/153-boundary-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.008000415997230448
+    },
+    {
+      "name": "boundary-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/boundary-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/154-boundary-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12543666700366884
+    },
+    {
+      "name": "boundary-mask-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/boundary-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/155-boundary-mask-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.041507207992253825
+    },
+    {
+      "name": "boundary-mask-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/boundary-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/156-boundary-mask-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.16410787499626167,
+      "resources": {
+        "maximum resident set size": 18055168,
+        "peak memory footprint": 3081344
+      }
+    },
+    {
+      "name": "boundary-mask-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/boundary-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/157-boundary-mask-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22239645800436847
+    },
+    {
+      "name": "boundary-mask-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/boundary-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/158-boundary-mask-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1262927500065416
+    },
+    {
+      "name": "boundary-mask-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/boundary-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/159-boundary-mask-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.008108249996439554
+    },
+    {
+      "name": "boundary-mask-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/boundary-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/160-boundary-mask-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1280767080024816,
+      "resources": {
+        "maximum resident set size": 16711680,
+        "peak memory footprint": 2999360
+      }
+    },
+    {
+      "name": "boundary-mask-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/boundary-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/161-boundary-mask-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017306957990513183
+    },
+    {
+      "name": "boundary-mask-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/boundary-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/162-boundary-mask-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.24270854200585745,
+      "resources": {
+        "maximum resident set size": 17842176,
+        "peak memory footprint": 3245184
+      }
+    },
+    {
+      "name": "boundary-mask-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/boundary-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/163-boundary-mask-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19416225000168197,
+      "resources": {
+        "maximum resident set size": 17858560,
+        "peak memory footprint": 3261568
+      }
+    },
+    {
+      "name": "boundary-mask-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/boundary-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/164-boundary-mask-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4160862080025254,
+      "resources": {
+        "maximum resident set size": 35356672,
+        "peak memory footprint": 12289664
+      }
+    },
+    {
+      "name": "boundary-mask-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/boundary-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/165-boundary-mask-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4630006249935832,
+      "resources": {
+        "maximum resident set size": 35635200,
+        "peak memory footprint": 12535424
+      }
+    },
+    {
+      "name": "boundary-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/boundary-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/166-boundary-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1215585000027204
+    },
+    {
+      "name": "boundary-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/boundary-mask-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/167-boundary-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.16136941700824536
+    },
+    {
+      "name": "boundary-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/boundary-mask-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/168-boundary-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19143250001070555
+    },
+    {
+      "name": "boundary-mask-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/boundary-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/169-boundary-mask-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.015763709001475945
+    },
+    {
+      "name": "boundary-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/boundary-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/170-boundary-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01744954199239146
+    },
+    {
+      "name": "subnormal-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/subnormal-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/171-subnormal-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07970716599083971
+    },
+    {
+      "name": "subnormal-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/subnormal-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/172-subnormal-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007654250002815388
+    },
+    {
+      "name": "subnormal-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/subnormal-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/173-subnormal-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1161745840072399
+    },
+    {
+      "name": "subnormal-mask-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/subnormal-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/174-subnormal-mask-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017285209003603086
+    },
+    {
+      "name": "subnormal-mask-export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/subnormal-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/175-subnormal-mask-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1525551670056302,
+      "resources": {
+        "maximum resident set size": 18038784,
+        "peak memory footprint": 3064960
+      }
+    },
+    {
+      "name": "subnormal-mask-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/subnormal-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/176-subnormal-mask-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1476318339991849
+    },
+    {
+      "name": "subnormal-mask-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/subnormal-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/177-subnormal-mask-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10287083299772348
+    },
+    {
+      "name": "subnormal-mask-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/subnormal-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/178-subnormal-mask-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012143333005951717
+    },
+    {
+      "name": "subnormal-mask-reimport",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/subnormal-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/179-subnormal-mask-reimport.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21500737500900868,
+      "resources": {
+        "maximum resident set size": 16728064,
+        "peak memory footprint": 3015744
+      }
+    },
+    {
+      "name": "subnormal-mask-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/subnormal-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/180-subnormal-mask-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01576383398787584
+    },
+    {
+      "name": "subnormal-mask-source-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/subnormal-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/181-subnormal-mask-source-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22250595899822656,
+      "resources": {
+        "maximum resident set size": 17891328,
+        "peak memory footprint": 3294336
+      }
+    },
+    {
+      "name": "subnormal-mask-round-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/subnormal-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/182-subnormal-mask-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20461070799501613,
+      "resources": {
+        "maximum resident set size": 17793024,
+        "peak memory footprint": 3196032
+      }
+    },
+    {
+      "name": "subnormal-mask-source-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/subnormal-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/183-subnormal-mask-source-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.37115774999256246,
+      "resources": {
+        "maximum resident set size": 35487744,
+        "peak memory footprint": 12453504
+      }
+    },
+    {
+      "name": "subnormal-mask-round-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/subnormal-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/184-subnormal-mask-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4298303340037819,
+      "resources": {
+        "maximum resident set size": 35356672,
+        "peak memory footprint": 12289664
+      }
+    },
+    {
+      "name": "subnormal-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/subnormal-mask-round",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/185-subnormal-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.15498587500769645
+    },
+    {
+      "name": "subnormal-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/subnormal-mask-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/186-subnormal-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1452015420072712
+    },
+    {
+      "name": "subnormal-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/subnormal-mask-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/187-subnormal-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22671837500820402
+    },
+    {
+      "name": "subnormal-mask-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/subnormal-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/188-subnormal-mask-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.02293745799397584
+    },
+    {
+      "name": "subnormal-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/subnormal-mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/189-subnormal-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.026705874988692813
+    },
+    {
+      "name": "negative-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/190-negative-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13374954200116917
+    },
+    {
+      "name": "core-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/191-core-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.0832384999957867
+    },
+    {
+      "name": "vertex-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/192-vertex-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.06555349999689497
+    },
+    {
+      "name": "output-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/193-output-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.06753712499630637
+    },
+    {
+      "name": "consent",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/194-consent.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_gltf",
+      "seconds": 0.07854345800296869
+    },
+    {
+      "name": "cancelled",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/195-cancelled.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.009492625002167188
+    },
+    {
+      "name": "negative-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/color",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/workflow/196-negative-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021807834011269733
+    }
+  ],
+  "variants": [
+    {
+      "name": "uv",
+      "source": "fixtures/named-uv/data/roles.glb",
+      "gpu": true,
+      "revision": "sha256:a41c0736d4b43e82ccd814f894a57681ef0b8c56b96847ab0d5d2291caf18279",
+      "at": null,
+      "round_revision": "sha256:ced234f1305215dd9d97d732d2624114569ed7cef74eda7641385335b4300b1c",
+      "glb_digest": "sha256:bb24883fe2e14d2d36abc45443a7b7f4870b02ce224a9570c5379796ad567a3c",
+      "glb_bytes": 3732,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "d4b3c8bb8971e6fa66f3a12e3c2a0320": "004556830bbc3bd22349a745c94a2d3c"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "d4b3c8bb8971e6fa66f3a12e3c2a0320": "004556830bbc3bd22349a745c94a2d3c"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "color",
+      "source": "fixtures/vertex-colors/data/rgba.glb",
+      "gpu": true,
+      "revision": "sha256:7a27d4ce8521c972dd4d2197b5c0c7cf2076dab33d163ad4f7a8755caaee56c3",
+      "at": null,
+      "round_revision": "sha256:92ef1e441b5d64e650b0d9e8a2aac287be37cfc86c114921c289f02e6f541528",
+      "glb_digest": "sha256:300bdc341185c578bf4961dadad89904240f684ef45559f9869b5a585e8e4dc9",
+      "glb_bytes": 2732,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "38c60459d1c7caba541c31be0c02e223": "f7721c214c6666804c6d03305df12090",
+            "8e2af0c392e2f0b4ca07e2c07fac6ab2": "2b579589d575c750da26973ec066c06a"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "38c60459d1c7caba541c31be0c02e223": "f7721c214c6666804c6d03305df12090",
+            "8e2af0c392e2f0b4ca07e2c07fac6ab2": "2b579589d575c750da26973ec066c06a"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "morph",
+      "source": "fixtures/morph-frames/data/dense.glb",
+      "gpu": true,
+      "time": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "revision": "sha256:a66785272053787db49bcd516cd5a59f5af32c4c90410d764cefe2655584d65a",
+      "at": {
+        "clip": "b6e31a69e2fddcd8a2842db1f6733f0f",
+        "time": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      "round_revision": "sha256:6f949a69515408e44b53e3a584a9e9d9cde315b71a296ef501d312cf76647f18",
+      "glb_digest": "sha256:083fde0662e36558b95eae70fa562ef1533302457ab8ea2560af83c842a91986",
+      "glb_bytes": 3996,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "3e8517c2902a6be90ebef5865de3441a": "66987d9ede2a6d6f5cec4c030bea9b72"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "3e8517c2902a6be90ebef5865de3441a": "66987d9ede2a6d6f5cec4c030bea9b72"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "mask",
+      "source": "fixtures/alpha-gltf/data/mask.glb",
+      "gpu": true,
+      "revision": "sha256:1f1ec9929babc50d4e2d390a37284cc4645121994a7aab754dc05811be46be56",
+      "at": null,
+      "round_revision": "sha256:0324e3a6db4901380d834dfb5e0b7082506db6b1f55ebd5a33b1fb24327a52a6",
+      "glb_digest": "sha256:ef2a1a911a7aee7a6684801ec0e113421658f53f21d7859ddbc405e6e17b58f3",
+      "glb_bytes": 2052,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "77db4b4b2da4259618486fde62de7e39": "ecddff24ad1d744edb7e56989cf0b601",
+            "a8a022ea971884137fba769f6df06b7d": "52201a6aa934807878887363a863c8a3"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "77db4b4b2da4259618486fde62de7e39": "ecddff24ad1d744edb7e56989cf0b601",
+            "a8a022ea971884137fba769f6df06b7d": "52201a6aa934807878887363a863c8a3"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "blend",
+      "source": "fixtures/alpha-gltf/data/blend.glb",
+      "gpu": true,
+      "revision": "sha256:1832c8f0b8f0c77989868aa220f1c5e762afd40922d886461383977060c014ac",
+      "at": null,
+      "round_revision": "sha256:a74df86fa5eb74829ad1b1178ef9645b6db5b29024cee340fcd248d7f31a85f3",
+      "glb_digest": "sha256:985480c362e75318cfbeb4ee193af551e2513fad81ccb78077e5c358c5a13eb4",
+      "glb_bytes": 2036,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "04c1bd580ee3a8552419f894142a4977": "6524dda95fcbff003fd4f5cef3489fd1",
+            "2bb2257d26e198e39492fec4ed8e7637": "ebbafed01d9f6f47d8367df964b41f7b"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "04c1bd580ee3a8552419f894142a4977": "6524dda95fcbff003fd4f5cef3489fd1",
+            "2bb2257d26e198e39492fec4ed8e7637": "ebbafed01d9f6f47d8367df964b41f7b"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "named-mask",
+      "source": "fixtures/gpu-alpha/data/named-mask.glb",
+      "gpu": true,
+      "revision": "sha256:371d88ee78a8ecabeafca88e1ed480b92c6382ba86cb6761ba5eb6ffea1a4271",
+      "at": null,
+      "round_revision": "sha256:09e26afe61a15e2a604870836475b0d14585ead8a84079ec00add16322beb819",
+      "glb_digest": "sha256:aa8169bce729151d9644e5d73416443c07c0371534383e79d2dadbcf38718cc3",
+      "glb_bytes": 3748,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "4528865a4a4e09ca903bcdde326629f9": "8ae142562d6bb41b711cf2f2745ad033"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "4528865a4a4e09ca903bcdde326629f9": "8ae142562d6bb41b711cf2f2745ad033"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "named-blend",
+      "source": "fixtures/gpu-alpha/data/named-blend.glb",
+      "gpu": true,
+      "revision": "sha256:c7054b55858f1b28dcf38bfecc5d659ae864f2a784f0603b4c949d436a334d22",
+      "at": null,
+      "round_revision": "sha256:1f278d0f9b88c2244b083a88fd1afef46c664ea828c82a6a7895e2fc2cc12664",
+      "glb_digest": "sha256:dc27d011da94fb6683444c11f92b2ca02e6103587b643d36e4fe5e7cce76b4ff",
+      "glb_bytes": 3732,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "50bae1eeef863c018592e8145a6c51c8": "8e2d1f0f37acc5c7f9165d667a682523"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "50bae1eeef863c018592e8145a6c51c8": "8e2d1f0f37acc5c7f9165d667a682523"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "ao-mask",
+      "source": "fixtures/gpu-alpha/data/ao-mask.glb",
+      "gpu": true,
+      "revision": "sha256:83c83d04985288fe727ca613608b7f7d6ac8f87cee32c1555093f73b38651f5e",
+      "at": null,
+      "round_revision": "sha256:991b033d6b1ac2cee618a351847d819c49a53b13763638f6247b6fcc0548a218",
+      "glb_digest": "sha256:530123a84124a0ac7a5964a5319c294a1ddb795252efc2961a79f75f1b32529b",
+      "glb_bytes": 2940,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "7d76a9678d646b9980d2993224b8f395": "fbdb06ce8cc105a675d3c8525441bf2f"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "7d76a9678d646b9980d2993224b8f395": "fbdb06ce8cc105a675d3c8525441bf2f"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "boundary-mask",
+      "source": "fixtures/gpu-alpha/data/boundary-mask.glb",
+      "gpu": true,
+      "revision": "sha256:c7b25339b91fa98098df557e6e9e1fff3f52429d173720792daaf6139e56bed6",
+      "at": null,
+      "round_revision": "sha256:eb377637f19dfe1bbdca776e066bcb9d4c0acc0f93fcdbcf5383ed621992fb54",
+      "glb_digest": "sha256:8bde44183104bfed5819bc82a99c377569060779949a7e6d161c3ba1a1724311",
+      "glb_bytes": 3772,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "6c859bb21cbbe730ce1f7fbc97527c15": "d25130515171612d5fffe20671ec5762"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "6c859bb21cbbe730ce1f7fbc97527c15": "d25130515171612d5fffe20671ec5762"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "subnormal-mask",
+      "source": "fixtures/gpu-alpha/data/subnormal-mask.glb",
+      "gpu": true,
+      "revision": "sha256:431ca79022ed242180b039b75e2e8dd195e84a6b923fc866e0c86ef5f25548ea",
+      "at": null,
+      "round_revision": "sha256:6be77826253b6f99f3530640bf4b07a8577d97e0e999561176268f43c721de3e",
+      "glb_digest": "sha256:165270e6239c5a2ebd4367e6cc14f70892fdb63195126e205839c3d5bb59046a",
+      "glb_bytes": 3756,
+      "comparisons": [
+        {
+          "backend": "cpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "b5db933efd668219e8ad854018cdb2cb": "e3161fa5f8fe3399e398da90ef27a8e8"
+          }
+        },
+        {
+          "backend": "gpu",
+          "roundtrip_linear_rmse": 0.0,
+          "object_mapping": {
+            "b5db933efd668219e8ad854018cdb2cb": "e3161fa5f8fe3399e398da90ef27a8e8"
+          }
+        }
+      ],
+      "restored_pixels_identical": true
+    }
+  ],
+  "settings": {
+    "width": 32,
+    "height": 16,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        2,
+        2,
+        2
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        3
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 2.5,
+        "ymag": 2.5,
+        "near": 0.1,
+        "far": 8
+      }
+    }
+  }
+}

@@ -1,0 +1,660 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/000-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08797925000544637
+    },
+    {
+      "name": "mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/001-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018647916993359104
+    },
+    {
+      "name": "mask-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/002-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.16068316699238494,
+      "resources": {
+        "maximum resident set size": 16564224,
+        "peak memory footprint": 2868288
+      }
+    },
+    {
+      "name": "mask-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/003-mask-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06106904099578969
+    },
+    {
+      "name": "mask-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/004-mask-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.043086124991532415
+    },
+    {
+      "name": "mask-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/005-mask-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.9416346670041094,
+      "resources": {
+        "maximum resident set size": 17563648,
+        "peak memory footprint": 3179584
+      }
+    },
+    {
+      "name": "mask-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/006-mask-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.6257344589976128,
+      "resources": {
+        "maximum resident set size": 34308096,
+        "peak memory footprint": 12666496
+      }
+    },
+    {
+      "name": "mask-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/007-mask-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.0671814590023132
+    },
+    {
+      "name": "mask-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/008-mask-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14181145900511183
+    },
+    {
+      "name": "mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/mask-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/009-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1268373339989921
+    },
+    {
+      "name": "mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/mask-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/010-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.9763083750003716
+    },
+    {
+      "name": "mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/mask",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/011-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05023883399553597
+    },
+    {
+      "name": "blend-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/012-blend-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.197032041993225
+    },
+    {
+      "name": "blend-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/013-blend-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.023810416998458095
+    },
+    {
+      "name": "blend-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/014-blend-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.31435458300984465,
+      "resources": {
+        "maximum resident set size": 16564224,
+        "peak memory footprint": 2868288
+      }
+    },
+    {
+      "name": "blend-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/015-blend-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0518527499953052
+    },
+    {
+      "name": "blend-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/016-blend-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08652716600045096
+    },
+    {
+      "name": "blend-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/017-blend-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.1304594999965047,
+      "resources": {
+        "maximum resident set size": 17055744,
+        "peak memory footprint": 3163200
+      }
+    },
+    {
+      "name": "blend-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/018-blend-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.14123500000278,
+      "resources": {
+        "maximum resident set size": 35127296,
+        "peak memory footprint": 12731968
+      }
+    },
+    {
+      "name": "blend-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/019-blend-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.0818924170016544
+    },
+    {
+      "name": "blend-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/020-blend-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.17949124998995103
+    },
+    {
+      "name": "blend-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/blend-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/021-blend-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1244345000013709
+    },
+    {
+      "name": "blend-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/blend-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/022-blend-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.535276958005852
+    },
+    {
+      "name": "blend-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/blend",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/023-blend-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08690941700479016
+    },
+    {
+      "name": "opaque-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/opaque",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/024-opaque-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.42716149998886976
+    },
+    {
+      "name": "opaque-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/opaque",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/025-opaque-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04479958400770556
+    },
+    {
+      "name": "opaque-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/opaque",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/026-opaque-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6378005829901667,
+      "resources": {
+        "maximum resident set size": 16384000,
+        "peak memory footprint": 2868288
+      }
+    },
+    {
+      "name": "opaque-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/opaque",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/027-opaque-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1534154589899117
+    },
+    {
+      "name": "opaque-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/opaque",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/028-opaque-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06100416599656455
+    },
+    {
+      "name": "opaque-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/opaque",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/029-opaque-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.0830989170062821,
+      "resources": {
+        "maximum resident set size": 16908288,
+        "peak memory footprint": 3146816
+      }
+    },
+    {
+      "name": "opaque-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/opaque",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/030-opaque-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.0277355410071323,
+      "resources": {
+        "maximum resident set size": 33505280,
+        "peak memory footprint": 11372160
+      }
+    },
+    {
+      "name": "opaque-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/opaque",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/031-opaque-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.09073887500562705
+    },
+    {
+      "name": "opaque-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/opaque",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/032-opaque-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.24819454200041946
+    },
+    {
+      "name": "opaque-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/opaque-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/033-opaque-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12458854200667702
+    },
+    {
+      "name": "opaque-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/opaque-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/034-opaque-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.035683458991116
+    },
+    {
+      "name": "opaque-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/opaque",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/035-opaque-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0650419590092497
+    },
+    {
+      "name": "negative-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/036-negative-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11445387499406934
+    },
+    {
+      "name": "negative-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/037-negative-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02612145899911411
+    },
+    {
+      "name": "malformed",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/038-malformed.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "gltf_scene",
+      "seconds": 0.0615105409960961
+    },
+    {
+      "name": "cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/039-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.016847500010044314
+    },
+    {
+      "name": "budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/040-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.015914125004201196
+    },
+    {
+      "name": "negative-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/041-negative-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021194250002736226
+    },
+    {
+      "name": "explicit-valid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/alpha-regression/042-explicit-valid.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.15340937500877772
+    }
+  ],
+  "variants": [
+    {
+      "name": "mask",
+      "revision": "sha256:2e1ec385c9fecff4718ce345deea75afafee469a2b55ca1163fc212ffb108f09",
+      "stripe_green_means": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "blend",
+      "revision": "sha256:0bea9ed561385d5d64b6c6e33ea28e02519b9b07fdf20275ebd399d39552ee48",
+      "stripe_green_means": [
+        0.0,
+        0.1640625,
+        0.3394775390625,
+        0.497802734375
+      ],
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "opaque",
+      "revision": "sha256:461b9dd03f58685a18796a5c359d55772b367c7254bbff72060a85bc5536a65b",
+      "stripe_green_means": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "restored_pixels_identical": true
+    }
+  ],
+  "settings": {
+    "width": 32,
+    "height": 16,
+    "samples": 64,
+    "seed": 73,
+    "max_depth": 1,
+    "max_bytes": 16777216,
+    "environment": [
+      0,
+      0,
+      0
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        0,
+        0,
+        0
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        3
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 1,
+        "ymag": 1,
+        "near": 0.1,
+        "far": 5
+      }
+    }
+  }
+}

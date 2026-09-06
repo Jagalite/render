@@ -1,0 +1,647 @@
+{
+  "status": "passed",
+  "profile": "gltf2-sparse-uv0-v1",
+  "calls": [
+    {
+      "name": "dense-init",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/dense",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/000-dense-init.json"
+      ],
+      "seconds": 0.10514870900078677,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/dense",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/001-dense-base.json"
+      ],
+      "seconds": 0.01763029198627919,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/dense",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/002-dense-import.json"
+      ],
+      "seconds": 0.2490288329863688,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 18268160,
+        "peak memory footprint": 3736704
+      }
+    },
+    {
+      "name": "dense-retry",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/dense",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/003-dense-retry.json"
+      ],
+      "seconds": 0.11268008300976362,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-state",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/dense",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/004-dense-state.json"
+      ],
+      "seconds": 0.10484333398926537,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/dense",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/005-dense-cpu.json"
+      ],
+      "seconds": 0.873664375001681,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20250624,
+        "peak memory footprint": 5637248
+      }
+    },
+    {
+      "name": "dense-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/dense",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/006-dense-gpu.json"
+      ],
+      "seconds": 0.840088332988671,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 37715968,
+        "peak memory footprint": 12617344
+      }
+    },
+    {
+      "name": "dense-archive",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/dense",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/007-dense-archive.json"
+      ],
+      "seconds": 0.21993020799709484,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-restore",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/dense-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/008-dense-restore.json"
+      ],
+      "seconds": 0.14167924999492243,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-restored-frame",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/dense-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/009-dense-restored-frame.json"
+      ],
+      "seconds": 0.7268224160070531,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-stale",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/dense",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/010-dense-stale.json"
+      ],
+      "seconds": 0.1301685000071302,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "dense-unchanged",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/dense",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/011-dense-unchanged.json"
+      ],
+      "seconds": 0.07524087499768939,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-init",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/012-sparse-zero-u16-init.json"
+      ],
+      "seconds": 0.12301250000018626,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/013-sparse-zero-u16-base.json"
+      ],
+      "seconds": 0.024045416997978464,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/014-sparse-zero-u16-import.json"
+      ],
+      "seconds": 0.17271516600158066,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 18300928,
+        "peak memory footprint": 3769472
+      }
+    },
+    {
+      "name": "sparse-zero-u16-retry",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/015-sparse-zero-u16-retry.json"
+      ],
+      "seconds": 0.12469712500751484,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-state",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/016-sparse-zero-u16-state.json"
+      ],
+      "seconds": 0.07880874999682419,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/017-sparse-zero-u16-cpu.json"
+      ],
+      "seconds": 1.0317081660032272,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20299776,
+        "peak memory footprint": 5375104
+      }
+    },
+    {
+      "name": "sparse-zero-u16-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/018-sparse-zero-u16-gpu.json"
+      ],
+      "seconds": 0.860901833002572,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36110336,
+        "peak memory footprint": 12600960
+      }
+    },
+    {
+      "name": "sparse-zero-u16-archive",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/019-sparse-zero-u16-archive.json"
+      ],
+      "seconds": 0.31855570900370367,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-restore",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-zero-u16-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/020-sparse-zero-u16-restore.json"
+      ],
+      "seconds": 0.1709810419997666,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-restored-frame",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-zero-u16-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/021-sparse-zero-u16-restored-frame.json"
+      ],
+      "seconds": 1.0766047079960117,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-stale",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/022-sparse-zero-u16-stale.json"
+      ],
+      "seconds": 0.2011678330018185,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "sparse-zero-u16-unchanged",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-zero-u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/023-sparse-zero-u16-unchanged.json"
+      ],
+      "seconds": 0.07097241700103041,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-init",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/024-sparse-base-u8-init.json"
+      ],
+      "seconds": 0.09913483299897052,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/025-sparse-base-u8-base.json"
+      ],
+      "seconds": 0.033164458989631385,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/026-sparse-base-u8-import.json"
+      ],
+      "seconds": 0.3723861670005135,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17842176,
+        "peak memory footprint": 3720320
+      }
+    },
+    {
+      "name": "sparse-base-u8-retry",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/027-sparse-base-u8-retry.json"
+      ],
+      "seconds": 0.13192604199866764,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-state",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/028-sparse-base-u8-state.json"
+      ],
+      "seconds": 0.0869936660019448,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/029-sparse-base-u8-cpu.json"
+      ],
+      "seconds": 1.9448056249966612,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 19349504,
+        "peak memory footprint": 5325952
+      }
+    },
+    {
+      "name": "sparse-base-u8-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/030-sparse-base-u8-gpu.json"
+      ],
+      "seconds": 1.089229291988886,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36405248,
+        "peak memory footprint": 12617344
+      }
+    },
+    {
+      "name": "sparse-base-u8-archive",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/031-sparse-base-u8-archive.json"
+      ],
+      "seconds": 0.1647750419942895,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-restore",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-base-u8-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/032-sparse-base-u8-restore.json"
+      ],
+      "seconds": 0.15197529100987595,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-restored-frame",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-base-u8-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/033-sparse-base-u8-restored-frame.json"
+      ],
+      "seconds": 1.0257465409958968,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-stale",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/034-sparse-base-u8-stale.json"
+      ],
+      "seconds": 0.12988983299874235,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "sparse-base-u8-unchanged",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/sparse-base-u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/035-sparse-base-u8-unchanged.json"
+      ],
+      "seconds": 0.07680125000479165,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "negative-init",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/036-negative-init.json"
+      ],
+      "seconds": 0.12193633300194051,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "negative-state",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/037-negative-state.json"
+      ],
+      "seconds": 0.03172754100523889,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "malformed",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/038-malformed.json"
+      ],
+      "seconds": 0.048076958002639,
+      "exit_code": 1,
+      "expected_error": "gltf_scene"
+    },
+    {
+      "name": "cancelled",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/039-cancelled.json"
+      ],
+      "seconds": 0.045349000007263385,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "budget",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/040-budget.json"
+      ],
+      "seconds": 0.028747250005835667,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "negative-unchanged",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/041-negative-unchanged.json"
+      ],
+      "seconds": 0.04298941700835712,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "explicit-valid",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/sparse-regression/requests/042-explicit-valid.json"
+      ],
+      "seconds": 0.17999883399170358,
+      "exit_code": 0,
+      "expected_error": null
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "settings": {
+    "width": 64,
+    "height": 64,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.15,
+      0.15,
+      0.15
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        30,
+        30,
+        30
+      ]
+    },
+    "camera": {
+      "position": [
+        1,
+        1,
+        5
+      ],
+      "target": [
+        0,
+        1,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65
+    }
+  },
+  "variants": [
+    {
+      "name": "dense",
+      "revision": "sha256:a51a5e7111defc04c23efc61b487ddecb4b5a11fab43a11f8126c1c82dc1a505",
+      "clip": "018903b040fab8788cf9c997635d0066",
+      "linear_rmse": 2.3070609148956016e-05,
+      "object_mismatches": 0,
+      "document_bytes": 13624
+    },
+    {
+      "name": "sparse-zero-u16",
+      "revision": "sha256:ddea16da144796356b6539cc7b21870563bbdb67151ff8680c194d7b5a3f9083",
+      "clip": "162f1a3cac4149b4c924a5b82c734322",
+      "linear_rmse": 2.3070609148956016e-05,
+      "object_mismatches": 0,
+      "document_bytes": 13624
+    },
+    {
+      "name": "sparse-base-u8",
+      "revision": "sha256:19ced2b513de24719976221392021e17ebb608f43208f4224d29cf46b3233284",
+      "clip": "9d21f2477178975d566e53a59f34d62e",
+      "linear_rmse": 2.3070609148956016e-05,
+      "object_mismatches": 0,
+      "document_bytes": 13624
+    }
+  ],
+  "dense_sparse_pixels_identical": true
+}

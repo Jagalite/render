@@ -2,6 +2,7 @@
 pub mod agent;
 pub mod animation;
 pub mod api;
+pub mod blend;
 pub mod cameras;
 pub mod curves;
 pub mod displacement;
@@ -26,6 +27,7 @@ pub mod render;
 pub mod rigging;
 pub mod scattering;
 pub mod sequence;
+pub mod source;
 pub mod storage;
 pub mod textures;
 pub mod topology;

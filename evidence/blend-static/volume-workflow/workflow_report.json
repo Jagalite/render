@@ -1,0 +1,2755 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "homogeneous-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/000-homogeneous-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09562341700075194
+    },
+    {
+      "name": "homogeneous-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/001-homogeneous-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012374541998724453
+    },
+    {
+      "name": "homogeneous-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/002-homogeneous-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12433004099875689,
+      "resources": {
+        "maximum resident set size": 15335424,
+        "peak memory footprint": 2688064
+      }
+    },
+    {
+      "name": "homogeneous-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/003-homogeneous-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019925082990084775
+    },
+    {
+      "name": "homogeneous-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/004-homogeneous-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020285541992052458
+    },
+    {
+      "name": "homogeneous-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/005-homogeneous-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21797562501160428,
+      "resources": {
+        "maximum resident set size": 16105472,
+        "peak memory footprint": 2622528
+      }
+    },
+    {
+      "name": "homogeneous-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/006-homogeneous-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.1785200830054237,
+      "resources": {
+        "maximum resident set size": 34111488,
+        "peak memory footprint": 12371584
+      }
+    },
+    {
+      "name": "homogeneous-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/007-homogeneous-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12020345799101051
+    },
+    {
+      "name": "homogeneous-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/homogeneous-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/008-homogeneous-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09074666700325906
+    },
+    {
+      "name": "homogeneous-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/homogeneous-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/009-homogeneous-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1920420000096783
+    },
+    {
+      "name": "homogeneous-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/homogeneous-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/010-homogeneous-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6275188750005327
+    },
+    {
+      "name": "homogeneous-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/011-homogeneous-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.018923875002656132
+    },
+    {
+      "name": "scattering-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/scattering-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/012-scattering-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07111316699592862
+    },
+    {
+      "name": "scattering-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/scattering-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/013-scattering-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11265162499330472
+    },
+    {
+      "name": "scattering-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/scattering-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/014-scattering-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017345375003060326
+    },
+    {
+      "name": "scattering-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/scattering-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/015-scattering-gpu.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_profile",
+      "seconds": 0.05999583299853839
+    },
+    {
+      "name": "scattering-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/scattering-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/016-scattering-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015253499994287267
+    },
+    {
+      "name": "negative",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/017-negative.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "vol",
+      "seconds": 0.014889875004882924
+    },
+    {
+      "name": "encoding",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/018-encoding.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_vol",
+      "seconds": 0.015189124998869374
+    },
+    {
+      "name": "trailing",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/019-trailing.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "vol",
+      "seconds": 0.015373000002000481
+    },
+    {
+      "name": "cancel-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/020-cancel-import.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.011017708995495923
+    },
+    {
+      "name": "input-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/021-input-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.010945374990114942
+    },
+    {
+      "name": "budget-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/budget-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/022-budget-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08132745799957775
+    },
+    {
+      "name": "transaction-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/budget-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/023-transaction-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.012398209000821225
+    },
+    {
+      "name": "budget-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/budget-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/024-budget-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011808958995970897
+    },
+    {
+      "name": "homogeneous-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/025-homogeneous-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01685116700537037
+    },
+    {
+      "name": "emission-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/026-emission-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08154845799435861
+    },
+    {
+      "name": "emission-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/027-emission-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011321582991513424
+    },
+    {
+      "name": "emission-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/028-emission-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08944300000439398,
+      "resources": {
+        "maximum resident set size": 15302656,
+        "peak memory footprint": 2622528
+      }
+    },
+    {
+      "name": "emission-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/029-emission-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022364125004969537
+    },
+    {
+      "name": "emission-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/030-emission-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018190208997111768
+    },
+    {
+      "name": "emission-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/031-emission-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19469612499233335,
+      "resources": {
+        "maximum resident set size": 16089088,
+        "peak memory footprint": 2606144
+      }
+    },
+    {
+      "name": "emission-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/032-emission-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6063398330006748,
+      "resources": {
+        "maximum resident set size": 34357248,
+        "peak memory footprint": 12617344
+      }
+    },
+    {
+      "name": "emission-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/033-emission-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12152945800335146
+    },
+    {
+      "name": "emission-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/034-emission-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09117300000798423
+    },
+    {
+      "name": "emission-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/035-emission-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19306429200514685
+    },
+    {
+      "name": "emission-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/036-emission-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6496863329957705
+    },
+    {
+      "name": "emission-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/037-emission-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.01979895800468512
+    },
+    {
+      "name": "emission-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/038-emission-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017527666001114994
+    },
+    {
+      "name": "axis-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/039-axis-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0837157079949975
+    },
+    {
+      "name": "axis-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/040-axis-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0137169170047855
+    },
+    {
+      "name": "axis-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/041-axis-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10021324999979697,
+      "resources": {
+        "maximum resident set size": 15286272,
+        "peak memory footprint": 2638912
+      }
+    },
+    {
+      "name": "axis-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/042-axis-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.023556083004223183
+    },
+    {
+      "name": "axis-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/043-axis-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021831958001712337
+    },
+    {
+      "name": "axis-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/044-axis-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21723100000235718,
+      "resources": {
+        "maximum resident set size": 16121856,
+        "peak memory footprint": 2638912
+      }
+    },
+    {
+      "name": "axis-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/045-axis-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5956657089991495,
+      "resources": {
+        "maximum resident set size": 34160640,
+        "peak memory footprint": 12404288
+      }
+    },
+    {
+      "name": "axis-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/046-axis-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2075832080008695
+    },
+    {
+      "name": "axis-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/axis-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/047-axis-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09134654099761974
+    },
+    {
+      "name": "axis-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/axis-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/048-axis-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2311983749968931
+    },
+    {
+      "name": "axis-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/axis-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/049-axis-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6773544589959783
+    },
+    {
+      "name": "axis-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/050-axis-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.028187707997858524
+    },
+    {
+      "name": "axis-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/051-axis-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020296457994845696
+    },
+    {
+      "name": "empty-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/052-empty-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09120008299942128
+    },
+    {
+      "name": "empty-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/053-empty-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01481187499302905
+    },
+    {
+      "name": "empty-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/054-empty-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09829816699493676,
+      "resources": {
+        "maximum resident set size": 14761984,
+        "peak memory footprint": 2573376
+      }
+    },
+    {
+      "name": "empty-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/055-empty-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024784624998574145
+    },
+    {
+      "name": "empty-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/056-empty-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022623917000601068
+    },
+    {
+      "name": "empty-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/057-empty-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19609787499939557,
+      "resources": {
+        "maximum resident set size": 14958592,
+        "peak memory footprint": 2540608
+      }
+    },
+    {
+      "name": "empty-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/058-empty-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3824046670051757,
+      "resources": {
+        "maximum resident set size": 32014336,
+        "peak memory footprint": 10978944
+      }
+    },
+    {
+      "name": "empty-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/059-empty-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1239637499966193
+    },
+    {
+      "name": "empty-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/empty-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/060-empty-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07900987500033807
+    },
+    {
+      "name": "empty-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/empty-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/061-empty-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19227433399646543
+    },
+    {
+      "name": "empty-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/empty-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/062-empty-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.350179749992094
+    },
+    {
+      "name": "empty-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/063-empty-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.016205292005906813
+    },
+    {
+      "name": "empty-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/064-empty-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014833459004876204
+    },
+    {
+      "name": "emission-only-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/065-emission-only-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07754499999282416
+    },
+    {
+      "name": "emission-only-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/066-emission-only-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0109677079890389
+    },
+    {
+      "name": "emission-only-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/067-emission-only-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09041375000379048,
+      "resources": {
+        "maximum resident set size": 15319040,
+        "peak memory footprint": 2638912
+      }
+    },
+    {
+      "name": "emission-only-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/068-emission-only-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01875462499447167
+    },
+    {
+      "name": "emission-only-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/069-emission-only-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01662670799123589
+    },
+    {
+      "name": "emission-only-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/070-emission-only-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1896059580030851,
+      "resources": {
+        "maximum resident set size": 16121856,
+        "peak memory footprint": 2638912
+      }
+    },
+    {
+      "name": "emission-only-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/071-emission-only-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.515382415993372,
+      "resources": {
+        "maximum resident set size": 33996800,
+        "peak memory footprint": 12240512
+      }
+    },
+    {
+      "name": "emission-only-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/072-emission-only-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1125794169929577
+    },
+    {
+      "name": "emission-only-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-only-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/073-emission-only-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09056366600270849
+    },
+    {
+      "name": "emission-only-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-only-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/074-emission-only-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1923466250009369
+    },
+    {
+      "name": "emission-only-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-only-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/075-emission-only-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5834069580014329
+    },
+    {
+      "name": "emission-only-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/076-emission-only-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.0191699580027489
+    },
+    {
+      "name": "emission-only-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/077-emission-only-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015011541996500455
+    },
+    {
+      "name": "unit-cube-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/078-unit-cube-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07512449999921955
+    },
+    {
+      "name": "unit-cube-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/079-unit-cube-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01151183400361333
+    },
+    {
+      "name": "unit-cube-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/080-unit-cube-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08952679199865088,
+      "resources": {
+        "maximum resident set size": 15286272,
+        "peak memory footprint": 2638912
+      }
+    },
+    {
+      "name": "unit-cube-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/081-unit-cube-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017878500002552755
+    },
+    {
+      "name": "unit-cube-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/082-unit-cube-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01500029100861866
+    },
+    {
+      "name": "unit-cube-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/083-unit-cube-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20416691699938383,
+      "resources": {
+        "maximum resident set size": 16121856,
+        "peak memory footprint": 2638912
+      }
+    },
+    {
+      "name": "unit-cube-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/084-unit-cube-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5226317079941509,
+      "resources": {
+        "maximum resident set size": 33947648,
+        "peak memory footprint": 12174912
+      }
+    },
+    {
+      "name": "unit-cube-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/085-unit-cube-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13132437500462402
+    },
+    {
+      "name": "unit-cube-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/unit-cube-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/086-unit-cube-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0797046249936102
+    },
+    {
+      "name": "unit-cube-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/unit-cube-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/087-unit-cube-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1813028329925146
+    },
+    {
+      "name": "unit-cube-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/unit-cube-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/088-unit-cube-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4946972079924308
+    },
+    {
+      "name": "unit-cube-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/089-unit-cube-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.019102042002486996
+    },
+    {
+      "name": "unit-cube-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/090-unit-cube-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015402457996970043
+    },
+    {
+      "name": "scaled-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/091-scaled-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08634349999192636
+    },
+    {
+      "name": "scaled-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/092-scaled-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.010622791000059806
+    },
+    {
+      "name": "scaled-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/093-scaled-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08966250000230502,
+      "resources": {
+        "maximum resident set size": 15302656,
+        "peak memory footprint": 2655296
+      }
+    },
+    {
+      "name": "scaled-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/094-scaled-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13876754100783728
+    },
+    {
+      "name": "scaled-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/095-scaled-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015523417008807883
+    },
+    {
+      "name": "scaled-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/096-scaled-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19332229199062567,
+      "resources": {
+        "maximum resident set size": 16072704,
+        "peak memory footprint": 2589760
+      }
+    },
+    {
+      "name": "scaled-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/097-scaled-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4829238329984946,
+      "resources": {
+        "maximum resident set size": 34013184,
+        "peak memory footprint": 12273280
+      }
+    },
+    {
+      "name": "scaled-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/098-scaled-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12263416701171082
+    },
+    {
+      "name": "scaled-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/scaled-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/099-scaled-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09141495800577104
+    },
+    {
+      "name": "scaled-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/scaled-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/100-scaled-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19154266601253767
+    },
+    {
+      "name": "scaled-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/scaled-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/101-scaled-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.49528945800557267
+    },
+    {
+      "name": "scaled-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/102-scaled-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.021997250005370006
+    },
+    {
+      "name": "scaled-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/103-scaled-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018478708996553905
+    },
+    {
+      "name": "sparse-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/104-sparse-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07997770799556747
+    },
+    {
+      "name": "sparse-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/105-sparse-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014487250009551644
+    },
+    {
+      "name": "sparse-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/106-sparse-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.44008145898988005,
+      "resources": {
+        "maximum resident set size": 16367616,
+        "peak memory footprint": 3720256
+      }
+    },
+    {
+      "name": "sparse-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/107-sparse-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13680800001020543
+    },
+    {
+      "name": "sparse-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/108-sparse-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016091750003397465
+    },
+    {
+      "name": "sparse-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/109-sparse-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19323224999243394,
+      "resources": {
+        "maximum resident set size": 15990784,
+        "peak memory footprint": 2556992
+      }
+    },
+    {
+      "name": "sparse-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/110-sparse-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5052748330053873,
+      "resources": {
+        "maximum resident set size": 34324480,
+        "peak memory footprint": 12584576
+      }
+    },
+    {
+      "name": "sparse-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/111-sparse-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21118774999922607
+    },
+    {
+      "name": "sparse-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/sparse-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/112-sparse-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09119862499937881
+    },
+    {
+      "name": "sparse-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/sparse-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/113-sparse-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19208929099841043
+    },
+    {
+      "name": "sparse-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/sparse-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/114-sparse-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.501671209000051
+    },
+    {
+      "name": "sparse-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/115-sparse-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.13969100000394974
+    },
+    {
+      "name": "sparse-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/116-sparse-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01980245899176225
+    }
+  ],
+  "variants": [
+    {
+      "name": "homogeneous",
+      "source": {
+        "format": "vol",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/volume-import/data/homogeneous.vol",
+        "emission": null,
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            1,
+            1,
+            5
+          ],
+          "target": [
+            1,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:41c2055de8b1933cb46a8f9e99b5cf9191879838ae79605cae21276a644aba11",
+      "report": {
+        "asset_json_bytes": 650,
+        "density_digest": "sha256:cb82d299be2da29648ce670ed31227a3132ea969526050c7dd51b2fbdf810cf5",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "emission_digest": null,
+        "entity": "7982fdfe7fbf481186b8f2bbdfb6326e",
+        "input_bytes": 80,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:af195f26335f76f303505e17432dae1c7c9c22cef9509e1df82571b0bc998eea",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:63cc060f60b8e5898e97b4564b2d948ed98559dcda044809ece9d8388c710103",
+        "voxel_size_meters": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "expected": [
+        0.36787944117144233,
+        0.1353352832366127,
+        0.01831563888873418
+      ],
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/homogeneous-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "emission",
+      "source": {
+        "format": "vol",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/volume-import/data/homogeneous.vol",
+        "emission": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/volume-import/data/emission.vol",
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            1,
+            1,
+            5
+          ],
+          "target": [
+            1,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:8715cf5b9672ac4991722184a7d8819fc58f544538e33913cf893861334625cf",
+      "report": {
+        "asset_json_bytes": 658,
+        "density_digest": "sha256:cb82d299be2da29648ce670ed31227a3132ea969526050c7dd51b2fbdf810cf5",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "emission_digest": "sha256:6be5f445bdb8113f8297755c30fc9d75cd1a847a28d95c7bd07590d0243e5d73",
+        "entity": "7a3f21eb2cde061877efe2c215526136",
+        "input_bytes": 224,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:4964e59ac6177b38675b7816fb1e87d6ec92f79bc3d373345da4265e090d04ad",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:0c6ea258f4b515adbd3a015820f705f1aa7baaec3a07f8a15ed5fc62653863c5",
+        "voxel_size_meters": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "expected": [
+        0.6839397205857212,
+        0.5676676416183064,
+        0.5091578194443671
+      ],
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "axis",
+      "source": {
+        "format": "vol",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/volume-import/data/axis.vol",
+        "emission": null,
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            0.5,
+            0.5,
+            5
+          ],
+          "target": [
+            0.5,
+            0.5,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:ad9f8c32afc2bcf4075487fc2a3cf9d524ff34efaa4a3fc6bea34f44320022f2",
+      "report": {
+        "asset_json_bytes": 650,
+        "density_digest": "sha256:890b7e4c124d15c1469e79bae19e0d060ba3b7f0c14b4e4c363b3ed60706b5d8",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "emission_digest": null,
+        "entity": "974c6f475f42056e6e190044f50ce194",
+        "input_bytes": 80,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:cf343a8e53aef2ae31b96d712a992fb590ee389e12a3483b10630db07b9705be",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:870da4e6296bac8a875731f9506806c8dd504fbbed0382c04fe9c3018e0c7ea9",
+        "voxel_size_meters": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "expected": [
+        0.049787068367863944,
+        0.0024787521766663585,
+        6.14421235332821e-06
+      ],
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/axis-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "empty",
+      "source": {
+        "format": "vol",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/volume-import/data/empty.vol",
+        "emission": null,
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            1,
+            1,
+            5
+          ],
+          "target": [
+            1,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:d3cdd3f5cc08be2e6a4ef02f0a8489f84865a7362ab463ebdc524656ae160db0",
+      "report": {
+        "asset_json_bytes": 0,
+        "density_digest": "sha256:1e1fdd73a579ad24da8b97c8a8b7a5478f7ae08b5ecf9362b8db55c1b8426498",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "emission_digest": null,
+        "entity": "b65ad539bc40a0893c1e8709143b11fe",
+        "input_bytes": 80,
+        "occupied_cells": 0,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:9a87b167fe41b9c7892384037bf959e78ce1961b6c578916a96aa21a6154087c",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": null,
+        "voxel_size_meters": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "expected": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/empty-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "emission-only",
+      "source": {
+        "format": "vol",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/volume-import/data/empty.vol",
+        "emission": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/volume-import/data/emission.vol",
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            1,
+            1,
+            5
+          ],
+          "target": [
+            1,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:ed2a7ae9ee55bcf7314662641b963c71299bcf0a6f2596e72ad86a82ad07036b",
+      "report": {
+        "asset_json_bytes": 658,
+        "density_digest": "sha256:1e1fdd73a579ad24da8b97c8a8b7a5478f7ae08b5ecf9362b8db55c1b8426498",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "emission_digest": "sha256:6be5f445bdb8113f8297755c30fc9d75cd1a847a28d95c7bd07590d0243e5d73",
+        "entity": "9e65b39b7efa6dd0551bef46d8e58562",
+        "input_bytes": 224,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:5c0202627277b5f2dcfe9ab867ed392802cb8bbed1588f91a6f945fee9993170",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:880e5e80cab40ee5b7e7c56bcb502444bb08ff7bf97772b0e4c7750cb3a8d09a",
+        "voxel_size_meters": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "expected": [
+        1.5,
+        2.0,
+        3.0
+      ],
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/emission-only-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "unit-cube",
+      "source": {
+        "format": "vol",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/volume-import/data/homogeneous.vol",
+        "emission": null,
+        "policy": {
+          "bounds": "unit_cube",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            0.5,
+            0.5,
+            5
+          ],
+          "target": [
+            0.5,
+            0.5,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:c9e2e27dd65cb773bf4c570dbd2f36d2f1ab3e644e424a492946a41120c9644a",
+      "report": {
+        "asset_json_bytes": 650,
+        "density_digest": "sha256:cb82d299be2da29648ce670ed31227a3132ea969526050c7dd51b2fbdf810cf5",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "emission_digest": null,
+        "entity": "1c8e550e4fc829f6b94831cb1fdc51ad",
+        "input_bytes": 80,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "unit_cube",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:af195f26335f76f303505e17432dae1c7c9c22cef9509e1df82571b0bc998eea",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:e4afbfe15d40d62f34f914dc80ff4ae4932a721549b961efa4614a07b76f941e",
+        "voxel_size_meters": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "expected": [
+        0.6065306597126334,
+        0.36787944117144233,
+        0.1353352832366127
+      ],
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/unit-cube-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "scaled",
+      "source": {
+        "format": "vol",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/volume-import/data/homogeneous.vol",
+        "emission": null,
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 2,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            1,
+            1,
+            5
+          ],
+          "target": [
+            1,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:cb8159aaa0ada022d216cf6c46e376d9cb15c31f2554254a8f0a52d8e4022ad0",
+      "report": {
+        "asset_json_bytes": 650,
+        "density_digest": "sha256:cb82d299be2da29648ce670ed31227a3132ea969526050c7dd51b2fbdf810cf5",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          4.0,
+          4.0,
+          4.0
+        ],
+        "emission_digest": null,
+        "entity": "d4b42bf5b6f77023d3f3d1f3854a9123",
+        "input_bytes": 80,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 2.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:af195f26335f76f303505e17432dae1c7c9c22cef9509e1df82571b0bc998eea",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:604d3a0eba99c39320acbc70c1d96ce17e76f00c71b1610c018ed55aac8a3dde",
+        "voxel_size_meters": [
+          2.0,
+          2.0,
+          2.0
+        ]
+      },
+      "expected": [
+        0.1353352832366127,
+        0.01831563888873418,
+        0.00033546262790251185
+      ],
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/scaled-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "sparse",
+      "source": {
+        "format": "vol",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/volume-import/data/sparse.vol",
+        "emission": null,
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            0.984375,
+            0.984375,
+            5
+          ],
+          "target": [
+            0.984375,
+            0.984375,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:a29751888b39caaf1fc281ea449c2d3e4802d67fc0690d95dabc68a70d3db738",
+      "report": {
+        "asset_json_bytes": 485,
+        "density_digest": "sha256:d8678e444688f9016463fc5eb3cba5c24d6890f7d85ddee7c971439e144ded05",
+        "domain_meters": [
+          -1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "emission_digest": null,
+        "entity": "9a1572a5fcf5ba458d1c78bf48bcaab2",
+        "input_bytes": 1048624,
+        "occupied_cells": 5,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          -1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "source_cells": 262144,
+        "source_digest": "sha256:e19722e6b7907a3e31cc78ad4d6571af93b4e8d5f8e1490d9267cbfb3179b657",
+        "source_dimensions": [
+          64,
+          64,
+          64
+        ],
+        "volume_asset": "sha256:95ed0c676272729b7cb8db13b8842d61388d74dd66927f85e6ded5e422890463",
+        "voxel_size_meters": [
+          0.03125,
+          0.03125,
+          0.03125
+        ]
+      },
+      "expected": [
+        0.9248488132162048,
+        0.8553453273074225,
+        0.7316156289466418
+      ],
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/volume-workflow/sparse-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "package": "libm",
+  "version": "0.2.16",
+  "license_expression": "MIT",
+  "registry_checksum": "b6d2cec3eae94f9f509c767b45932f1ada8350c4bdb85af2fcab4a3c14807981",
+  "source": "https://github.com/rust-lang/compiler-builtins",
+  "scope": "New Blender camera field-of-view atan only; no legacy transform/render math changed",
+  "dependency_change": "Direct render-core edge with default-features=false; package already in Cargo.lock",
+  "review": "Rust implementation and Rust cfg-only build script, no foreign compiler/runtime link; atan retains its upstream Sun/FreeBSD attribution inside the crate",
+  "files": [
+    {
+      "path": "Cargo.toml.orig",
+      "sha256": "5cef83cc9b297dcf1b6853237371d839a8c3ece4adb0e7fe9f7ba8958f319b0e"
+    },
+    {
+      "path": "build.rs",
+      "sha256": "85dfa93693f40e282ecf2d9a3115280d8f508f056063862add9e529b8143b71b"
+    },
+    {
+      "path": "configure.rs",
+      "sha256": "884fa9c05c600d03450b15651665848e88b09cf602f86c843e55e5e1ee0a4772"
+    },
+    {
+      "path": "src/lib.rs",
+      "sha256": "d565c5f29ae9f502edca78d536436e85bbc4b955595328a6cfd4a97c1dbbac9b"
+    },
+    {
+      "path": "src/math/atan.rs",
+      "sha256": "54181dbddf4f77b90b32b9f6819ac989da570dc02b791f3685d20a23d51324be"
+    },
+    {
+      "path": "LICENSE.txt",
+      "sha256": "3823dda7cf046602f4b4e77ec8e227863dc4736037cc85bb33d9f19febe16bb7"
+    }
+  ]
+}

@@ -70,6 +70,10 @@ enum Backend {
 #[derive(Deserialize)]
 #[serde(tag = "format", rename_all = "snake_case", deny_unknown_fields)]
 enum Source {
+    Blend {
+        path: PathBuf,
+        policy: blend::Policy,
+    },
     Hair {
         path: PathBuf,
         policy: hair_import::Policy,
@@ -99,6 +103,9 @@ enum Source {
 #[derive(Deserialize)]
 #[serde(tag = "format", rename_all = "snake_case", deny_unknown_fields)]
 enum Export {
+    Source {
+        asset: String,
+    },
     Document {},
     Obj {
         entity: Id,
@@ -544,9 +551,30 @@ fn execute(root: &Path, operation: Operation, control: &mut Control) -> Result<V
             idempotency_key,
             max_added_bytes,
             source,
-            settings,
+            mut settings,
         } => {
             let (mut commands, report) = match source {
+                Source::Blend { path, policy } => {
+                    let bytes = control.read_limited(&path, blend::MAX_INPUT_BYTES as u64)?;
+                    let initial = settings
+                        .take()
+                        .map(|s| *s)
+                        .or_else(|| doc.snapshot().render_settings.clone())
+                        .ok_or_else(|| {
+                            Error::new(
+                                "render_settings",
+                                "blend import requires caller sampling/output settings",
+                            )
+                        })?;
+                    let imported = blend::import(
+                        &bytes,
+                        doc.snapshot().document_id,
+                        &policy,
+                        initial,
+                        || control.cancelled(),
+                    )?;
+                    (imported.commands, json!(imported.report))
+                }
                 Source::Hair { path, policy } => {
                     let bytes = control.read_limited(&path, hair_import::MAX_INPUT_BYTES as u64)?;
                     let imported =
@@ -809,6 +837,26 @@ fn execute(root: &Path, operation: Operation, control: &mut Control) -> Result<V
             pinned(&doc, &revision)?;
             let mut out = Output::new(output, revision, control.limits.max_output_bytes)?;
             let result = (|| match content {
+                Export::Source { asset } => {
+                    let exported = source::export(
+                        doc.snapshot(),
+                        &source::ExportRequest {
+                            revision: doc.snapshot().revision()?,
+                            asset,
+                        },
+                        || control.cancelled(),
+                    )?;
+                    let report = json!({"profile":exported.profile,"source_asset":exported.source_asset,"source_digest":exported.source_digest,"version":exported.version,"bytes":exported.bytes.len(),"native_edits_applied":false});
+                    out.bundle(
+                        "source",
+                        vec![
+                            ("original.blend", exported.bytes),
+                            ("report.json", canonical(&report)?),
+                        ],
+                        report,
+                        control,
+                    )
+                }
                 Export::Document {} => out.bundle(
                     "document",
                     vec![("document.json", canonical(&doc)?)],
@@ -891,7 +939,8 @@ pub fn help() -> &'static str {
 One versioned JSON request per process. Relative paths use the working directory.
 Request: {\"version\":0,\"operation\":{\"method\":\"inspect\"}}
 Methods: init, restore, inspect, apply, import, evaluate, render, frame, sequence, products, export.
-Import formats: OBJ, GLB, glTF, VOL3 density/emission and bounded HAIR polylines.
+Import formats: OBJ, GLB, glTF, VOL3, bounded HAIR and Blender293 static profiles.
+Source export returns exact original .blend bytes; native edits remain in the native archive.
 Mutations use existing revision-checked document transactions. Reads/renders pin revision.
 Optional limits: max_input_bytes, max_output_bytes, max_wall_ms, cancel_file.
 Outputs require a fresh directory; manifest.json records complete/failed/cancelled status.

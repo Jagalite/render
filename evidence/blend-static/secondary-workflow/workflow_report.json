@@ -1,0 +1,1925 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/000-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14488595799775794
+    },
+    {
+      "name": "empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/001-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.008637292005005293
+    },
+    {
+      "name": "import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/002-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1857242080004653
+    },
+    {
+      "name": "imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/003-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014506624997011386
+    },
+    {
+      "name": "opaque-nearest-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/004-opaque-nearest-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016968500000075437
+    },
+    {
+      "name": "opaque-nearest",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/005-opaque-nearest.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14504149999993388
+    },
+    {
+      "name": "opaque-nearest-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/006-opaque-nearest-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021095874995808117
+    },
+    {
+      "name": "opaque-nearest-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/007-opaque-nearest-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3162496659933822,
+      "resources": {
+        "maximum resident set size": 17596416,
+        "peak memory footprint": 2999360
+      }
+    },
+    {
+      "name": "opaque-nearest-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/008-opaque-nearest-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.29401916699134745,
+      "resources": {
+        "maximum resident set size": 34226176,
+        "peak memory footprint": 11093632
+      }
+    },
+    {
+      "name": "opaque-nearest-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/009-opaque-nearest-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12387933299760334
+    },
+    {
+      "name": "opaque-mip-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/010-opaque-mip-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016306459001498297
+    },
+    {
+      "name": "opaque-mip",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/011-opaque-mip.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3590439170075115
+    },
+    {
+      "name": "opaque-mip-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/012-opaque-mip-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06787508400157094
+    },
+    {
+      "name": "opaque-mip-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/013-opaque-mip-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.23042879099375568,
+      "resources": {
+        "maximum resident set size": 17711104,
+        "peak memory footprint": 3114048
+      }
+    },
+    {
+      "name": "opaque-mip-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/014-opaque-mip-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.350188167009037,
+      "resources": {
+        "maximum resident set size": 34308096,
+        "peak memory footprint": 11175552
+      }
+    },
+    {
+      "name": "opaque-mip-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/015-opaque-mip-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12438141599704977
+    },
+    {
+      "name": "principled-nearest-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/016-principled-nearest-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021577666004304774
+    },
+    {
+      "name": "principled-nearest",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/017-principled-nearest.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12409758300054818
+    },
+    {
+      "name": "principled-nearest-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/018-principled-nearest-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.035229290995630436
+    },
+    {
+      "name": "principled-nearest-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/019-principled-nearest-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2466487500059884,
+      "resources": {
+        "maximum resident set size": 17809408,
+        "peak memory footprint": 3245184
+      }
+    },
+    {
+      "name": "principled-nearest-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/020-principled-nearest-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.49526704200252425,
+      "resources": {
+        "maximum resident set size": 35618816,
+        "peak memory footprint": 12584576
+      }
+    },
+    {
+      "name": "principled-nearest-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/021-principled-nearest-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13387016700289678
+    },
+    {
+      "name": "principled-mip-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/022-principled-mip-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030249249990447424
+    },
+    {
+      "name": "principled-mip",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/023-principled-mip.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1828660829924047
+    },
+    {
+      "name": "principled-mip-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/024-principled-mip-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03202191699529067
+    },
+    {
+      "name": "principled-mip-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/025-principled-mip-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22864874999504536,
+      "resources": {
+        "maximum resident set size": 17924096,
+        "peak memory footprint": 3359872
+      }
+    },
+    {
+      "name": "principled-mip-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/026-principled-mip-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.39434133398754057,
+      "resources": {
+        "maximum resident set size": 35536896,
+        "peak memory footprint": 12502656
+      }
+    },
+    {
+      "name": "principled-mip-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/027-principled-mip-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14674520799599122
+    },
+    {
+      "name": "coated-nearest-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/028-coated-nearest-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03312729099707212
+    },
+    {
+      "name": "coated-nearest",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/029-coated-nearest.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2348550409951713
+    },
+    {
+      "name": "coated-nearest-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/030-coated-nearest-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0374885410128627
+    },
+    {
+      "name": "coated-nearest-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/031-coated-nearest-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.31069825000304263,
+      "resources": {
+        "maximum resident set size": 18006016,
+        "peak memory footprint": 3441792
+      }
+    },
+    {
+      "name": "coated-nearest-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/032-coated-nearest-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.7626612089952687,
+      "resources": {
+        "maximum resident set size": 36208640,
+        "peak memory footprint": 13158016
+      }
+    },
+    {
+      "name": "coated-nearest-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/033-coated-nearest-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.16590341700066347
+    },
+    {
+      "name": "coated-mip-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/034-coated-mip-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06504712501191534
+    },
+    {
+      "name": "coated-mip",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/035-coated-mip.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.24706062499899417
+    },
+    {
+      "name": "coated-mip-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/036-coated-mip-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08594025000638794
+    },
+    {
+      "name": "coated-mip-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/037-coated-mip-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2981101250043139,
+      "resources": {
+        "maximum resident set size": 18169856,
+        "peak memory footprint": 3605632
+      }
+    },
+    {
+      "name": "coated-mip-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/038-coated-mip-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5737504169956082,
+      "resources": {
+        "maximum resident set size": 35946496,
+        "peak memory footprint": 12879424
+      }
+    },
+    {
+      "name": "coated-mip-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/039-coated-mip-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.15730829100357369
+    },
+    {
+      "name": "conductor-nearest-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/040-conductor-nearest-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05781800000113435
+    },
+    {
+      "name": "conductor-nearest",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/041-conductor-nearest.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.367648541010567
+    },
+    {
+      "name": "conductor-nearest-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/042-conductor-nearest-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06064137499197386
+    },
+    {
+      "name": "conductor-nearest-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/043-conductor-nearest-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2777795830043033,
+      "resources": {
+        "maximum resident set size": 18284544,
+        "peak memory footprint": 3687552
+      }
+    },
+    {
+      "name": "conductor-nearest-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/044-conductor-nearest-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4988318329997128,
+      "resources": {
+        "maximum resident set size": 35979264,
+        "peak memory footprint": 12895872
+      }
+    },
+    {
+      "name": "conductor-nearest-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/045-conductor-nearest-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.456865458007087
+    },
+    {
+      "name": "conductor-mip-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/046-conductor-mip-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05328666699642781
+    },
+    {
+      "name": "conductor-mip",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/047-conductor-mip.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.2822557499894174
+    },
+    {
+      "name": "conductor-mip-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/048-conductor-mip-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06479041700367816
+    },
+    {
+      "name": "conductor-mip-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/049-conductor-mip-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2740522910025902,
+      "resources": {
+        "maximum resident set size": 18300928,
+        "peak memory footprint": 3703936
+      }
+    },
+    {
+      "name": "conductor-mip-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/050-conductor-mip-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4052737080055522,
+      "resources": {
+        "maximum resident set size": 36093952,
+        "peak memory footprint": 13010560
+      }
+    },
+    {
+      "name": "conductor-mip-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/051-conductor-mip-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1691677500057267
+    },
+    {
+      "name": "dielectric-nearest-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/052-dielectric-nearest-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06080550000478979
+    },
+    {
+      "name": "dielectric-nearest",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/053-dielectric-nearest.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2522612500033574
+    },
+    {
+      "name": "dielectric-nearest-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/054-dielectric-nearest-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08159491700644139
+    },
+    {
+      "name": "dielectric-nearest-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/055-dielectric-nearest-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.31095683299645316,
+      "resources": {
+        "maximum resident set size": 18464768,
+        "peak memory footprint": 3867776
+      }
+    },
+    {
+      "name": "dielectric-nearest-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/056-dielectric-nearest-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6629604170011589,
+      "resources": {
+        "maximum resident set size": 36487168,
+        "peak memory footprint": 13387392
+      }
+    },
+    {
+      "name": "dielectric-nearest-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/057-dielectric-nearest-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1670553750009276
+    },
+    {
+      "name": "dielectric-mip-base",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/058-dielectric-mip-base.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06474737499956973
+    },
+    {
+      "name": "dielectric-mip",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/059-dielectric-mip.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2716502080002101
+    },
+    {
+      "name": "dielectric-mip-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/060-dielectric-mip-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0815739170066081
+    },
+    {
+      "name": "dielectric-mip-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/061-dielectric-mip-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5576443750032922,
+      "resources": {
+        "maximum resident set size": 18546688,
+        "peak memory footprint": 3949696
+      }
+    },
+    {
+      "name": "dielectric-mip-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/062-dielectric-mip-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6707125000102678,
+      "resources": {
+        "maximum resident set size": 36421632,
+        "peak memory footprint": 13321856
+      }
+    },
+    {
+      "name": "dielectric-mip-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/063-dielectric-mip-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21194570799707435
+    },
+    {
+      "name": "final",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/064-final.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09750366699881852
+    },
+    {
+      "name": "restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/065-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14891262500896119
+    },
+    {
+      "name": "restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/066-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2269830000004731
+    },
+    {
+      "name": "stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/067-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.14301695799804293
+    },
+    {
+      "name": "cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/068-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.005915708999964409
+    },
+    {
+      "name": "budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/069-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.13956070799031295
+    },
+    {
+      "name": "unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/070-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07428562499990221
+    }
+  ],
+  "variants": [
+    {
+      "name": "opaque",
+      "model": null,
+      "gpu": true,
+      "filters": [
+        {
+          "name": "nearest",
+          "revision": "sha256:9300de863aaedbc63c5b05ef9d242d2d3171965068123923504969fca3decb4e",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": null,
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "nearest",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/opaque-nearest-archive/document/document.json"
+        },
+        {
+          "name": "mip",
+          "revision": "sha256:ddb40cf1d6429626a631ccb4ead42bb469b874f815b0a0ecb436443117990df1",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": null,
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "linear_mip_linear",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/opaque-mip-archive/document/document.json"
+        }
+      ],
+      "gpu_linear_rmse": 6.556405092328058e-08
+    },
+    {
+      "name": "principled",
+      "model": {
+        "kind": "principled"
+      },
+      "gpu": true,
+      "filters": [
+        {
+          "name": "nearest",
+          "revision": "sha256:16de561a25b9f5981fe22c59aa20fdb56ba265dade95435c5f44b3b3ecd4e8f8",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "principled"
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "nearest",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/principled-nearest-archive/document/document.json"
+        },
+        {
+          "name": "mip",
+          "revision": "sha256:36b6d6b0cb493f15a6d2858b88765f5886e2741edd7390971bf87565748f8585",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "principled"
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "linear_mip_linear",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/principled-mip-archive/document/document.json"
+        }
+      ],
+      "gpu_linear_rmse": 6.00973732952091e-08
+    },
+    {
+      "name": "coated",
+      "model": {
+        "kind": "coated",
+        "weight": 0.5,
+        "ior": 1.5,
+        "roughness": 0.2
+      },
+      "gpu": true,
+      "filters": [
+        {
+          "name": "nearest",
+          "revision": "sha256:814bfb4da387766b049d1d86a068020c2ede0375431c495ffcff2af111cedd94",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "coated",
+                      "weight": 0.5,
+                      "ior": 1.5,
+                      "roughness": 0.2
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "nearest",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/coated-nearest-archive/document/document.json"
+        },
+        {
+          "name": "mip",
+          "revision": "sha256:a30514af83d163cfc65949688f7f80e8b878dcf4f289110a4ec1bb96051beeca",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "coated",
+                      "weight": 0.5,
+                      "ior": 1.5,
+                      "roughness": 0.2
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "linear_mip_linear",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/coated-mip-archive/document/document.json"
+        }
+      ],
+      "gpu_linear_rmse": 1.7828199821794978e-07
+    },
+    {
+      "name": "conductor",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.2,
+          0.2
+        ],
+        "k": [
+          3,
+          3,
+          3
+        ]
+      },
+      "gpu": true,
+      "filters": [
+        {
+          "name": "nearest",
+          "revision": "sha256:9d2573570deb6b6616c0565358f8502f455134332718157bf918690b6532cf08",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "conductor",
+                      "eta": [
+                        0.2,
+                        0.2,
+                        0.2
+                      ],
+                      "k": [
+                        3,
+                        3,
+                        3
+                      ]
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "nearest",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/conductor-nearest-archive/document/document.json"
+        },
+        {
+          "name": "mip",
+          "revision": "sha256:79ce06cc3c2e94cd96c6108fa8831f8c0fbbc6e386c6e205d83fdbc1d66e1f6a",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "conductor",
+                      "eta": [
+                        0.2,
+                        0.2,
+                        0.2
+                      ],
+                      "k": [
+                        3,
+                        3,
+                        3
+                      ]
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0.5,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "linear_mip_linear",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/conductor-mip-archive/document/document.json"
+        }
+      ],
+      "gpu_linear_rmse": 3.573172929370939e-08
+    },
+    {
+      "name": "dielectric",
+      "model": {
+        "kind": "dielectric",
+        "ior": 1.5
+      },
+      "gpu": true,
+      "filters": [
+        {
+          "name": "nearest",
+          "revision": "sha256:229a3492882c3f62007b64fe65c9c3f4a1bad5f93a1130e0daf2c79c5091c122",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "dielectric",
+                      "ior": 1.5
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "nearest",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/dielectric-nearest-archive/document/document.json"
+        },
+        {
+          "name": "mip",
+          "revision": "sha256:bcf5192199adcb59659c1a6952acbd2f206f278f6f8e2f41eb1773e8187abb9e",
+          "commands": [
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "id": "51ac1c0474092c40a9f1da09665c6f03",
+                "metallic": 0.0,
+                "pbr": {
+                  "advanced": {
+                    "model": {
+                      "kind": "dielectric",
+                      "ior": 1.5
+                    },
+                    "opacity": {
+                      "kind": "opaque"
+                    }
+                  },
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": null,
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 0,
+                "texture": null
+              }
+            },
+            {
+              "operation": "put_material",
+              "material": {
+                "base_color": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "emission": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "id": "8b1f9823de20e5ac1624eb6c8bc8c3b7",
+                "metallic": 0.0,
+                "pbr": {
+                  "base_color": null,
+                  "double_sided": true,
+                  "emission": {
+                    "image": "sha256:b1f03c1630fa22fb0329bcad887a38a53fde38eec3986362ef4aaea94b285d08",
+                    "role": "srgb_color",
+                    "sampler": {
+                      "mag": "nearest",
+                      "min": "linear_mip_linear",
+                      "wrap_s": "clamp",
+                      "wrap_t": "clamp"
+                    }
+                  },
+                  "metallic_roughness": null,
+                  "normal": null,
+                  "normal_scale": 1.0,
+                  "occlusion": null,
+                  "occlusion_strength": 1.0
+                },
+                "roughness": 1.0,
+                "texture": null
+              }
+            }
+          ],
+          "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/secondary-workflow/dielectric-mip-archive/document/document.json"
+        }
+      ],
+      "gpu_linear_rmse": 0.0
+    }
+  ],
+  "settings": {
+    "width": 8,
+    "height": 8,
+    "samples": 32,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0,
+      0,
+      0
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        0,
+        0,
+        0
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        1
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 0.9,
+        "ymag": 0.9,
+        "near": 0.01,
+        "far": 10
+      }
+    }
+  }
+}

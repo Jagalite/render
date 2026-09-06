@@ -1,0 +1,2473 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "conductor-secondary-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/000-conductor-secondary-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08392504201037809
+    },
+    {
+      "name": "conductor-secondary-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/001-conductor-secondary-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006966083004954271
+    },
+    {
+      "name": "conductor-secondary-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/002-conductor-secondary-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10678550000011455
+    },
+    {
+      "name": "conductor-secondary-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/003-conductor-secondary-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.042124458006583154
+    },
+    {
+      "name": "conductor-secondary-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/004-conductor-secondary-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09215108300850261
+    },
+    {
+      "name": "conductor-secondary-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/005-conductor-secondary-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02494112499698531
+    },
+    {
+      "name": "conductor-secondary-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/006-conductor-secondary-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016789874993264675
+    },
+    {
+      "name": "conductor-secondary-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/007-conductor-secondary-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.25112337501195725,
+      "resources": {
+        "maximum resident set size": 17711104,
+        "peak memory footprint": 3097664
+      }
+    },
+    {
+      "name": "conductor-secondary-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/008-conductor-secondary-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3606282079999801,
+      "resources": {
+        "maximum resident set size": 35667968,
+        "peak memory footprint": 12568128
+      }
+    },
+    {
+      "name": "conductor-secondary-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/009-conductor-secondary-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12322449999919627
+    },
+    {
+      "name": "conductor-secondary-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-secondary-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/010-conductor-secondary-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11438454200106207
+    },
+    {
+      "name": "conductor-secondary-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-secondary-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/011-conductor-secondary-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.35947387499618344
+    },
+    {
+      "name": "conductor-secondary-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/012-conductor-secondary-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.02539795800112188
+    },
+    {
+      "name": "conductor-secondary-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/013-conductor-secondary-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.024396916007390246
+    },
+    {
+      "name": "conductor-secondary-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/014-conductor-secondary-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.005660750000970438
+    },
+    {
+      "name": "conductor-secondary-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/015-conductor-secondary-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.27078058299957775
+    },
+    {
+      "name": "conductor-secondary-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/016-conductor-secondary-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01683120800589677
+    },
+    {
+      "name": "conductor-named-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/017-conductor-named-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11308229199494235
+    },
+    {
+      "name": "conductor-named-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/018-conductor-named-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006630958989262581
+    },
+    {
+      "name": "conductor-named-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/019-conductor-named-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13711841600888874
+    },
+    {
+      "name": "conductor-named-mask-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/020-conductor-named-mask-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015161999996053055
+    },
+    {
+      "name": "conductor-named-mask-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/021-conductor-named-mask-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09694237500661984
+    },
+    {
+      "name": "conductor-named-mask-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/022-conductor-named-mask-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03566345799481496
+    },
+    {
+      "name": "conductor-named-mask-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/023-conductor-named-mask-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021465749989147298
+    },
+    {
+      "name": "conductor-named-mask-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/024-conductor-named-mask-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.23611741699278355,
+      "resources": {
+        "maximum resident set size": 17924096,
+        "peak memory footprint": 3294336
+      }
+    },
+    {
+      "name": "conductor-named-mask-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/025-conductor-named-mask-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5167289170058211,
+      "resources": {
+        "maximum resident set size": 35586048,
+        "peak memory footprint": 12486272
+      }
+    },
+    {
+      "name": "conductor-named-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/026-conductor-named-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12224537500878796
+    },
+    {
+      "name": "conductor-named-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-mask-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/027-conductor-named-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1164346659934381
+    },
+    {
+      "name": "conductor-named-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-mask-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/028-conductor-named-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3588513750000857
+    },
+    {
+      "name": "conductor-named-mask-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/029-conductor-named-mask-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.03658845799509436
+    },
+    {
+      "name": "conductor-named-mask-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/030-conductor-named-mask-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.045759458997054026
+    },
+    {
+      "name": "conductor-named-mask-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/031-conductor-named-mask-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.02023195799847599
+    },
+    {
+      "name": "conductor-named-mask-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/032-conductor-named-mask-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.42836429200542625
+    },
+    {
+      "name": "conductor-named-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/033-conductor-named-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02881645799789112
+    },
+    {
+      "name": "conductor-named-blend-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/034-conductor-named-blend-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2516891669947654
+    },
+    {
+      "name": "conductor-named-blend-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/035-conductor-named-blend-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.009695958011434413
+    },
+    {
+      "name": "conductor-named-blend-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/036-conductor-named-blend-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.17786795800202526
+    },
+    {
+      "name": "conductor-named-blend-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/037-conductor-named-blend-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016261374999885447
+    },
+    {
+      "name": "conductor-named-blend-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/038-conductor-named-blend-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1184439589997055
+    },
+    {
+      "name": "conductor-named-blend-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/039-conductor-named-blend-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03573137501371093
+    },
+    {
+      "name": "conductor-named-blend-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/040-conductor-named-blend-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021878875006223097
+    },
+    {
+      "name": "conductor-named-blend-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/041-conductor-named-blend-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22433683299459517,
+      "resources": {
+        "maximum resident set size": 17973248,
+        "peak memory footprint": 3343488
+      }
+    },
+    {
+      "name": "conductor-named-blend-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/042-conductor-named-blend-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3717045419907663,
+      "resources": {
+        "maximum resident set size": 35700736,
+        "peak memory footprint": 12568192
+      }
+    },
+    {
+      "name": "conductor-named-blend-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/043-conductor-named-blend-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21413879201281816
+    },
+    {
+      "name": "conductor-named-blend-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-blend-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/044-conductor-named-blend-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12156883299758192
+    },
+    {
+      "name": "conductor-named-blend-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-blend-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/045-conductor-named-blend-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.360200833005365
+    },
+    {
+      "name": "conductor-named-blend-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/046-conductor-named-blend-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.036338166988571174
+    },
+    {
+      "name": "conductor-named-blend-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/047-conductor-named-blend-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.08514287500292994
+    },
+    {
+      "name": "conductor-named-blend-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/048-conductor-named-blend-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.006007749994751066
+    },
+    {
+      "name": "conductor-named-blend-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/049-conductor-named-blend-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.2386647079983959
+    },
+    {
+      "name": "conductor-named-blend-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/050-conductor-named-blend-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022853834001580253
+    },
+    {
+      "name": "conductor-morph-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/051-conductor-morph-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07670200000575278
+    },
+    {
+      "name": "conductor-morph-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/052-conductor-morph-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006940457999007776
+    },
+    {
+      "name": "conductor-morph-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/053-conductor-morph-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1631672079965938
+    },
+    {
+      "name": "conductor-morph-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/054-conductor-morph-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02291529200738296
+    },
+    {
+      "name": "conductor-morph-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/055-conductor-morph-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14473408399499021
+    },
+    {
+      "name": "conductor-morph-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/056-conductor-morph-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05654725000204053
+    },
+    {
+      "name": "conductor-morph-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/057-conductor-morph-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03432679199613631
+    },
+    {
+      "name": "conductor-morph-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/058-conductor-morph-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.368075582999154,
+      "resources": {
+        "maximum resident set size": 19890176,
+        "peak memory footprint": 3982464
+      }
+    },
+    {
+      "name": "conductor-morph-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/059-conductor-morph-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5284582500025863,
+      "resources": {
+        "maximum resident set size": 37896192,
+        "peak memory footprint": 13403776
+      }
+    },
+    {
+      "name": "conductor-morph-sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/060-conductor-morph-sequence.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.785992332996102,
+      "resources": {
+        "maximum resident set size": 38027264,
+        "peak memory footprint": 13354560
+      }
+    },
+    {
+      "name": "conductor-morph-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/061-conductor-morph-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13399483299872372
+    },
+    {
+      "name": "conductor-morph-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-morph-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/062-conductor-morph-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13726879100431688
+    },
+    {
+      "name": "conductor-morph-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-morph-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/063-conductor-morph-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4249200829945039
+    },
+    {
+      "name": "conductor-morph-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/064-conductor-morph-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.05804187500325497
+    },
+    {
+      "name": "conductor-morph-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/065-conductor-morph-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.05682091700145975
+    },
+    {
+      "name": "conductor-morph-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/066-conductor-morph-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.006061625012080185
+    },
+    {
+      "name": "conductor-morph-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/067-conductor-morph-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.2915636249963427
+    },
+    {
+      "name": "conductor-morph-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/068-conductor-morph-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03448558300442528
+    },
+    {
+      "name": "coated-secondary-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/069-coated-secondary-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11042095800803509
+    },
+    {
+      "name": "coated-secondary-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/070-coated-secondary-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006978666002396494
+    },
+    {
+      "name": "coated-secondary-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/071-coated-secondary-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10597966700152028
+    },
+    {
+      "name": "coated-secondary-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/072-coated-secondary-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012621333997230977
+    },
+    {
+      "name": "coated-secondary-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/073-coated-secondary-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08937045899801888
+    },
+    {
+      "name": "coated-secondary-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/074-coated-secondary-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.025268792000133544
+    },
+    {
+      "name": "coated-secondary-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/075-coated-secondary-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01599583298957441
+    },
+    {
+      "name": "coated-secondary-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/076-coated-secondary-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.24028412500047125,
+      "resources": {
+        "maximum resident set size": 17645568,
+        "peak memory footprint": 3064896
+      }
+    },
+    {
+      "name": "coated-secondary-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/077-coated-secondary-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.37212145898956805,
+      "resources": {
+        "maximum resident set size": 35504128,
+        "peak memory footprint": 12437056
+      }
+    },
+    {
+      "name": "coated-secondary-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/078-coated-secondary-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12321441600215621
+    },
+    {
+      "name": "coated-secondary-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-secondary-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/079-coated-secondary-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12491358300030697
+    },
+    {
+      "name": "coated-secondary-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-secondary-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/080-coated-secondary-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3603316249937052
+    },
+    {
+      "name": "coated-secondary-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/081-coated-secondary-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.025902791996486485
+    },
+    {
+      "name": "coated-secondary-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/082-coated-secondary-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.024659624992636964
+    },
+    {
+      "name": "coated-secondary-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/083-coated-secondary-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.005965915988781489
+    },
+    {
+      "name": "coated-secondary-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/084-coated-secondary-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.2449052500014659
+    },
+    {
+      "name": "coated-secondary-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-secondary-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/085-coated-secondary-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016754417010815814
+    },
+    {
+      "name": "coated-named-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/086-coated-named-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12814304100174922
+    },
+    {
+      "name": "coated-named-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/087-coated-named-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007305250008357689
+    },
+    {
+      "name": "coated-named-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/088-coated-named-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10572650001267903
+    },
+    {
+      "name": "coated-named-mask-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/089-coated-named-mask-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016404875001171604
+    },
+    {
+      "name": "coated-named-mask-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/090-coated-named-mask-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1525522909942083
+    },
+    {
+      "name": "coated-named-mask-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/091-coated-named-mask-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03569037499255501
+    },
+    {
+      "name": "coated-named-mask-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/092-coated-named-mask-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024311667002621107
+    },
+    {
+      "name": "coated-named-mask-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/093-coated-named-mask-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.31182124999759253,
+      "resources": {
+        "maximum resident set size": 17956864,
+        "peak memory footprint": 3359872
+      }
+    },
+    {
+      "name": "coated-named-mask-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/094-coated-named-mask-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.39256100000056904,
+      "resources": {
+        "maximum resident set size": 35586048,
+        "peak memory footprint": 12486208
+      }
+    },
+    {
+      "name": "coated-named-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/095-coated-named-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13247383300040383
+    },
+    {
+      "name": "coated-named-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-mask-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/096-coated-named-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11363954200351145
+    },
+    {
+      "name": "coated-named-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-mask-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/097-coated-named-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5817969999916386
+    },
+    {
+      "name": "coated-named-mask-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/098-coated-named-mask-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.03524099999049213
+    },
+    {
+      "name": "coated-named-mask-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/099-coated-named-mask-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.0343009579955833
+    },
+    {
+      "name": "coated-named-mask-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/100-coated-named-mask-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.005614082998363301
+    },
+    {
+      "name": "coated-named-mask-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/101-coated-named-mask-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.25883254199288785
+    },
+    {
+      "name": "coated-named-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-mask-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/102-coated-named-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02370008299476467
+    },
+    {
+      "name": "coated-named-blend-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/103-coated-named-blend-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07681199999933597
+    },
+    {
+      "name": "coated-named-blend-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/104-coated-named-blend-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006804667005781084
+    },
+    {
+      "name": "coated-named-blend-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/105-coated-named-blend-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.17251416700310074
+    },
+    {
+      "name": "coated-named-blend-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/106-coated-named-blend-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015287207992514595
+    },
+    {
+      "name": "coated-named-blend-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/107-coated-named-blend-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.33270533398899715
+    },
+    {
+      "name": "coated-named-blend-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/108-coated-named-blend-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0902271670056507
+    },
+    {
+      "name": "coated-named-blend-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/109-coated-named-blend-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.050427000009221956
+    },
+    {
+      "name": "coated-named-blend-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/110-coated-named-blend-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.29648745800659526,
+      "resources": {
+        "maximum resident set size": 17858560,
+        "peak memory footprint": 3261568
+      }
+    },
+    {
+      "name": "coated-named-blend-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/111-coated-named-blend-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.38240912501350977,
+      "resources": {
+        "maximum resident set size": 35717120,
+        "peak memory footprint": 12617344
+      }
+    },
+    {
+      "name": "coated-named-blend-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/112-coated-named-blend-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12295437500870321
+    },
+    {
+      "name": "coated-named-blend-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-blend-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/113-coated-named-blend-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.118119624996325
+    },
+    {
+      "name": "coated-named-blend-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-blend-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/114-coated-named-blend-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3568188750068657
+    },
+    {
+      "name": "coated-named-blend-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/115-coated-named-blend-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.03644349999376573
+    },
+    {
+      "name": "coated-named-blend-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/116-coated-named-blend-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.03616166699794121
+    },
+    {
+      "name": "coated-named-blend-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/117-coated-named-blend-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.0159060000005411
+    },
+    {
+      "name": "coated-named-blend-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/118-coated-named-blend-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.23421749999397434
+    },
+    {
+      "name": "coated-named-blend-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-blend-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/119-coated-named-blend-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02295912499539554
+    },
+    {
+      "name": "coated-morph-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/120-coated-morph-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07823495900083799
+    },
+    {
+      "name": "coated-morph-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/121-coated-morph-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.00707529200008139
+    },
+    {
+      "name": "coated-morph-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/122-coated-morph-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12843187499674968
+    },
+    {
+      "name": "coated-morph-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/123-coated-morph-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02461750000657048
+    },
+    {
+      "name": "coated-morph-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/124-coated-morph-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.17649270800757222
+    },
+    {
+      "name": "coated-morph-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/125-coated-morph-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.056406042000162415
+    },
+    {
+      "name": "coated-morph-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/126-coated-morph-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.034086874991771765
+    },
+    {
+      "name": "coated-morph-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/127-coated-morph-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4252213340078015,
+      "resources": {
+        "maximum resident set size": 19873792,
+        "peak memory footprint": 3966080
+      }
+    },
+    {
+      "name": "coated-morph-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/128-coated-morph-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4277201249933569,
+      "resources": {
+        "maximum resident set size": 37715968,
+        "peak memory footprint": 13190784
+      }
+    },
+    {
+      "name": "coated-morph-sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/129-coated-morph-sequence.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.7994129169965163,
+      "resources": {
+        "maximum resident set size": 37978112,
+        "peak memory footprint": 13354624
+      }
+    },
+    {
+      "name": "coated-morph-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/130-coated-morph-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1638437499932479
+    },
+    {
+      "name": "coated-morph-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-morph-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/131-coated-morph-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11683183300192468
+    },
+    {
+      "name": "coated-morph-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-morph-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/132-coated-morph-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5358309999865014
+    },
+    {
+      "name": "coated-morph-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/133-coated-morph-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.055104375001974404
+    },
+    {
+      "name": "coated-morph-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/134-coated-morph-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.05504483300319407
+    },
+    {
+      "name": "coated-morph-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/135-coated-morph-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.0062124169926391914
+    },
+    {
+      "name": "coated-morph-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/136-coated-morph-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.2738377089990536
+    },
+    {
+      "name": "coated-morph-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-morph-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/137-coated-morph-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03624362499976996
+    }
+  ],
+  "variants": [
+    {
+      "name": "conductor-secondary",
+      "source": "fixtures/secondary-textures/data/mask-nearest.glb",
+      "source_sha256": "f66e8c9415a663af7f19c7d1e62eec9b31a5041e7562d8f10fa06b1edb8beb04",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": false,
+      "secondary": true,
+      "revision": "sha256:e4aca3359c1dbe7f1cf0bbb24b46ee73207f223eaa1e1ea00082122e861b34c4",
+      "settings": {
+        "width": 8,
+        "height": 8,
+        "samples": 32,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0,
+          0,
+          0
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 0.9,
+            "ymag": 0.9,
+            "near": 0.01,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 2.514570951461792e-08,
+      "folder": "image",
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-secondary-archive/document/document.json"
+    },
+    {
+      "name": "conductor-named-mask",
+      "source": "fixtures/gpu-alpha/data/named-mask.glb",
+      "source_sha256": "1912d4e8c0f4093e1c6fd392be09a92c5ae285c446197f8f9137112e20295bf1",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": false,
+      "secondary": false,
+      "revision": "sha256:fb75fbbc2bb5154f63876449705b568abacc50d7e762ab5cb218cea439178be8",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 1.609829641723087e-05,
+      "folder": "image",
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-mask-archive/document/document.json"
+    },
+    {
+      "name": "conductor-named-blend",
+      "source": "fixtures/gpu-alpha/data/named-blend.glb",
+      "source_sha256": "40bfddc669d71fb33828f7dd6f6e0a3e1750e93d106455b0accedc678a148fb6",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": false,
+      "secondary": false,
+      "revision": "sha256:b4a508c9830657af637c9696fceba6e5be13d1a6e119987c90373942b9ca55de",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 8.87319270797084e-06,
+      "folder": "image",
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-named-blend-archive/document/document.json"
+    },
+    {
+      "name": "conductor-morph",
+      "source": "fixtures/morph-frames/data/dense.glb",
+      "source_sha256": "284917f1bf2bd5f666ba2f5b48590222b6d0bbdeff91be0801492ca20025de49",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": true,
+      "secondary": false,
+      "revision": "sha256:c0144aaa9368646a06bf2839a80661edab2f1e111e80d455ad06733ea8fee9be",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "request": {
+        "revision": "sha256:c0144aaa9368646a06bf2839a80661edab2f1e111e80d455ad06733ea8fee9be",
+        "clip": "467e6e12ffc8158594d66c96bc5c770b",
+        "time": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "shutter": {
+          "open": {
+            "numerator": -1,
+            "denominator": 32
+          },
+          "close": {
+            "numerator": 1,
+            "denominator": 32
+          },
+          "samples": 3
+        }
+      },
+      "gpu_linear_rmse": 0.00034138011582237785,
+      "folder": "frame",
+      "sequence": {
+        "revision": "sha256:c0144aaa9368646a06bf2839a80661edab2f1e111e80d455ad06733ea8fee9be",
+        "clip": "467e6e12ffc8158594d66c96bc5c770b",
+        "shutter": {
+          "open": {
+            "numerator": -1,
+            "denominator": 32
+          },
+          "close": {
+            "numerator": 1,
+            "denominator": 32
+          },
+          "samples": 3
+        },
+        "times": [
+          {
+            "numerator": 1,
+            "denominator": 4
+          },
+          {
+            "numerator": 3,
+            "denominator": 4
+          }
+        ]
+      },
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/conductor-morph-archive/document/document.json"
+    },
+    {
+      "name": "coated-secondary",
+      "source": "fixtures/secondary-textures/data/mask-nearest.glb",
+      "source_sha256": "f66e8c9415a663af7f19c7d1e62eec9b31a5041e7562d8f10fa06b1edb8beb04",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": false,
+      "secondary": true,
+      "revision": "sha256:51140c5486893a6e4ef48f3fdcd471c69847d98bc5de770ba2fa1a39f0cbb053",
+      "settings": {
+        "width": 8,
+        "height": 8,
+        "samples": 32,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0,
+          0,
+          0
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 0.9,
+            "ymag": 0.9,
+            "near": 0.01,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 1.591362958725866e-07,
+      "folder": "image",
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-secondary-archive/document/document.json"
+    },
+    {
+      "name": "coated-named-mask",
+      "source": "fixtures/gpu-alpha/data/named-mask.glb",
+      "source_sha256": "1912d4e8c0f4093e1c6fd392be09a92c5ae285c446197f8f9137112e20295bf1",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": false,
+      "secondary": false,
+      "revision": "sha256:09f4ad59991bf0c067223f8c8ff06ad48e245bb1fa2f625c67c7b2c984bb42fa",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 1.996711517170901e-05,
+      "folder": "image",
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-mask-archive/document/document.json"
+    },
+    {
+      "name": "coated-named-blend",
+      "source": "fixtures/gpu-alpha/data/named-blend.glb",
+      "source_sha256": "40bfddc669d71fb33828f7dd6f6e0a3e1750e93d106455b0accedc678a148fb6",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": false,
+      "secondary": false,
+      "revision": "sha256:45a13fc6ccc0e7ca9b44b55e072b91bcd7da7cdd8d0c68a6f1fa36c940c975cb",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 1.0843975906315296e-05,
+      "folder": "image",
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-named-blend-archive/document/document.json"
+    },
+    {
+      "name": "coated-morph",
+      "source": "fixtures/morph-frames/data/dense.glb",
+      "source_sha256": "284917f1bf2bd5f666ba2f5b48590222b6d0bbdeff91be0801492ca20025de49",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": true,
+      "secondary": false,
+      "revision": "sha256:7636946a60bc825231e49eb73a336429d175554eb0db3cc216bb2270b282b7ff",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "request": {
+        "revision": "sha256:7636946a60bc825231e49eb73a336429d175554eb0db3cc216bb2270b282b7ff",
+        "clip": "467e6e12ffc8158594d66c96bc5c770b",
+        "time": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "shutter": {
+          "open": {
+            "numerator": -1,
+            "denominator": 32
+          },
+          "close": {
+            "numerator": 1,
+            "denominator": 32
+          },
+          "samples": 3
+        }
+      },
+      "gpu_linear_rmse": 0.00014605246131684524,
+      "folder": "frame",
+      "sequence": {
+        "revision": "sha256:7636946a60bc825231e49eb73a336429d175554eb0db3cc216bb2270b282b7ff",
+        "clip": "467e6e12ffc8158594d66c96bc5c770b",
+        "shutter": {
+          "open": {
+            "numerator": -1,
+            "denominator": 32
+          },
+          "close": {
+            "numerator": 1,
+            "denominator": 32
+          },
+          "samples": 3
+        },
+        "times": [
+          {
+            "numerator": 1,
+            "denominator": 4
+          },
+          {
+            "numerator": 3,
+            "denominator": 4
+          }
+        ]
+      },
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/surface-workflow/coated-morph-archive/document/document.json"
+    }
+  ],
+  "settings": {
+    "width": 8,
+    "height": 8,
+    "samples": 32,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0,
+      0,
+      0
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        0,
+        0,
+        0
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        1
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 0.9,
+        "ymag": 0.9,
+        "near": 0.01,
+        "far": 10
+      }
+    }
+  }
+}

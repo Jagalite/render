@@ -1,0 +1,102 @@
+{
+  "artifacts": [
+    {
+      "artifact": "path.generated.wgsl",
+      "sha256": "e0bae9a561867ddc4622b68e9d52635ce3d380bbf6f4aeb109e63b46c8d89247",
+      "baseline": "9f7b4bd",
+      "unchanged": true,
+      "generator": [
+        "target/debug/render-host",
+        "kernel"
+      ]
+    },
+    {
+      "artifact": "path.alpha.generated.wgsl",
+      "sha256": "82177b8262a499bad4e9997fe15d04975b9635e0817ea4caeeb38d713a0648dc",
+      "baseline": "9f7b4bd",
+      "unchanged": true,
+      "generator": [
+        "target/debug/render-host",
+        "kernel",
+        "--alpha"
+      ]
+    },
+    {
+      "artifact": "path.surfaces.generated.wgsl",
+      "sha256": "cf5b558cef24671d760df416ccd1b82b7b8166bc26dbf2dfd4e2d3d616808f07",
+      "baseline": "9f7b4bd",
+      "unchanged": true,
+      "generator": [
+        "target/debug/render-host",
+        "kernel",
+        "--surfaces"
+      ]
+    },
+    {
+      "artifact": "path.dielectric.generated.wgsl",
+      "sha256": "afa6f881610497e4c8cdf63f6a28c10ff2a243a23c4f23dcac7aae5179130eea",
+      "baseline": "9f7b4bd",
+      "unchanged": true,
+      "generator": [
+        "target/debug/render-host",
+        "kernel",
+        "--dielectric"
+      ]
+    },
+    {
+      "artifact": "path.media.generated.wgsl",
+      "sha256": "e373ef0db23254a1266473bb64b3a351c6b0c1261e435a8ca0867d08b4b3881b",
+      "baseline": "9f7b4bd",
+      "unchanged": true,
+      "generator": [
+        "target/debug/render-host",
+        "kernel",
+        "--media"
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "path": "crates/kernel/src/lib.rs",
+      "bytes": 10874,
+      "sha256": "a7cd4024d3ef294c6a3baa597c5a0f86f4410565e3536ad28e596f3bb513e791",
+      "unchanged_during_validation": true
+    },
+    {
+      "path": "crates/kernel/src/path.rs",
+      "bytes": 39339,
+      "sha256": "6e86a5bae8a2a1d851dd9d01c27c316033fac72d46514f17f2062dc3c1a833d9",
+      "unchanged_during_validation": true
+    },
+    {
+      "path": "crates/kernel/src/path/alpha.rs",
+      "bytes": 8994,
+      "sha256": "745815ef10ab5f912aa3851a658af814962aba4f3bf715511fa6a734705965d8",
+      "unchanged_during_validation": true
+    },
+    {
+      "path": "crates/kernel/src/path/dielectric.rs",
+      "bytes": 3363,
+      "sha256": "e5973e6e17e25515bb1ad07bf0f3fda8ced864e55fd2a69ceb109d3bdf998f9a",
+      "unchanged_during_validation": true
+    },
+    {
+      "path": "crates/kernel/src/path/media.rs",
+      "bytes": 11650,
+      "sha256": "190aefe24b62bb8fd63fd9b1daf7dafa1c852c69f6c6732a2c231216638ffeda",
+      "unchanged_during_validation": true
+    },
+    {
+      "path": "crates/kernel/src/path/pbr.rs",
+      "bytes": 31990,
+      "sha256": "df96806e8908e65162f712ae0e8030a164a150e00560379b157b90cb6bfbe9b7",
+      "unchanged_during_validation": true
+    },
+    {
+      "path": "crates/kernel/src/path/surfaces.rs",
+      "bytes": 9181,
+      "sha256": "fac0b478302a122b8b82e8e6fe99ea1edab7c7859db904a7dccfd41daa6c21f5",
+      "unchanged_during_validation": true
+    }
+  ]
+}

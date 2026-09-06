@@ -5,7 +5,8 @@ working on feasible remaining steps. M09 interactive editor remains deferred.
 Each completed increment requires implementation, native/browser workflow evidence,
 negative/cancellation/stale checks, resource/provenance records and documentation.
 
-Current completed increment: bounded GPU sparse RGB absorption/emission; evidence/gpu-media.
+Current completed increment: native Blender 2.93 static import and exact source preservation; evidence/blend-static.
+Next engine subgate: UV authoring for textured assets, followed by tiled painting.
 
 | Order | Increment | Status |
 |---|---|---|
@@ -13,7 +14,7 @@ Current completed increment: bounded GPU sparse RGB absorption/emission; evidenc
 | 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Sparse/UV0, CPU alpha, named UV, morph frames, vertex colors and evaluated PBR GLB export validated |
 | 3 | Richer GPU scattering and transport quality | GPU alpha, conductor, coat and ideal dielectric validated; broader lighting/sampling quality remains separate |
 | 4 | External hair/volume inputs, fiber shading and sparse GPU media | VOL3, HAIR surface inputs, polyline control RGBA and bounded GPU media validated; physical fiber remains a separate gate |
-| 5 | Scoped native .blend/USD/MaterialX interchange | Pending |
+| 5 | Scoped native .blend/USD/MaterialX interchange | Blender 2.93 static profile validated; additional USD/MaterialX profiles remain future format work |
 | 6 | M10 engine UV/paint/sculpt/remesh/retopology operations | Pending |
 | 7 | M11 solver families with checkpoint/seek semantics | Pending |
 | 8 | M12 compositor/drawing/media/tracking engines | Pending |
@@ -137,3 +138,6 @@ Evidence: `evidence/curve-colors/README.md`.
 
 GPU sparse media acceptance: 167 native and 142 Wasm tests, 376 media CLI calls over 21 cases, 117 external VOL3 CLI calls and 13 shutter/sequence calls, with actual Chrome CPU/WebGPU/OPFS recovery. All 993 prior images/passes and 331 receipts remain byte identical, as do all four prior shaders and Cargo files. Maximum browser GPU analytic channel error is 3.24428673e-07. The named profile admits 64 zero-scattering cells and ordinary opaque PBR surfaces under explicit work/precision limits. Scattering, joint advanced surfaces and larger paging remain separate gates; M09 stays deferred.
 Evidence: `evidence/gpu-media/README.md`. No major blocker is parked. Scoped native interchange is next.
+
+Static Blender acceptance: 179 native and 154 Wasm tests; 137 CLI calls across seven cases; exact native/Wasm import revisions and CPU pixels; actual Metal/WebGPU and OPFS recovery. 1308 prior images/passes and 436 receipts remain byte identical, with all five shaders and existing fixtures unchanged.
+Evidence: `evidence/blend-static/README.md`. No major blocker parked.

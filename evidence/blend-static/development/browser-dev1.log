@@ -1,0 +1,9 @@
+file:///Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/scripts/blend-static-browser.mjs:12
+const evaluate=async expression=>{const r=await command('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw new Error(JSON.stringify(r.exceptionDetails));return r.result.value;};
+                                                                                                                                                          ^
+
+Error: {"exceptionId":149,"text":"Uncaught (in promise) Error: quad-32-little: same native revision: sha256:f87382bf940ef4fcabd3654d75856a1a56eb7450e1ec5a2e75c8798428fb7c42 versus sha256:774dc640350d35fc3c0ac576650b7ebc149df7cbc1b88ec35be583949ffe78f9","lineNumber":0,"columnNumber":0,"exception":{"type":"object","subtype":"error","className":"Error","description":"Error: quad-32-little: same native revision: sha256:f87382bf940ef4fcabd3654d75856a1a56eb7450e1ec5a2e75c8798428fb7c42 versus sha256:774dc640350d35fc3c0ac576650b7ebc149df7cbc1b88ec35be583949ffe78f9\n    at check (<anonymous>:2:30443)\n    at <anonymous>:8:32","objectId":"-106541566979535419.145.1"}}
+    at evaluate (file:///Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/scripts/blend-static-browser.mjs:12:155)
+    at async file:///Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/scripts/blend-static-browser.mjs:20:16
+
+Node.js v23.5.0

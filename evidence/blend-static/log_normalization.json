@@ -1,0 +1,126 @@
+{
+  "scope": "Copied text logs only: line endings, trailing whitespace, trailing blank lines",
+  "raw_artifact_root": "artifacts/blend-static/run-20260906T163349Z",
+  "files": [
+    {
+      "path": "development/run-20260906T162911Z/logs/format.txt",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copied_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "development/run-20260906T162911Z/logs/gltf_export_gpu.txt",
+      "raw_sha256": "4451e8d1de582ad845695399f7646607527f1288e7ca8ddff6751798ae2858ab",
+      "copied_sha256": "dff1861015a5c83323d1c1297848f60c3566fd8612b499e1609db9c6ad2c3194"
+    },
+    {
+      "path": "development/run-20260906T162911Z/logs/gpu_alpha.txt",
+      "raw_sha256": "4f54a4ab8e887761575d45e07dff87d78100adb89f2442e67ff4715388bb1e76",
+      "copied_sha256": "4aed9aad7e99d863711feb8c319750e02af95f324524ce6b8ddea071b63492ab"
+    },
+    {
+      "path": "development/run-20260906T162911Z/logs/gpu_dielectric.txt",
+      "raw_sha256": "b6b3286d3986a584843af1bc5083ec889c570e7058a80a845099586c8e1ec39b",
+      "copied_sha256": "5fca16675da66264abb8e0e63239c7bd2c98b0b81a8abbadc48826265d4457bf"
+    },
+    {
+      "path": "development/run-20260906T162911Z/logs/gpu_surfaces.txt",
+      "raw_sha256": "3d905cc0d0194c70ba77e7a061208024c96620a14abd08f40a374c5d6174d771",
+      "copied_sha256": "c12362e1b694bde2c8d528299bdc99e72b1bea8c04ed994c159d6703c42e4c29"
+    },
+    {
+      "path": "development/run-20260906T162911Z/logs/morph_frame_regressions.txt",
+      "raw_sha256": "8ca4c4fba56553409db366b5e579415468024935067dc397bc587103ff0f254d",
+      "copied_sha256": "86d52dfdc090adec8b05359fa463d81d8b18a5ba5bb48d95de84e151e12d3cf5"
+    },
+    {
+      "path": "development/run-20260906T162911Z/logs/named_uv_gpu.txt",
+      "raw_sha256": "4d87295265af3d7b164bb28d686530bd1aa5cea60c75a9f154d986e87d997c09",
+      "copied_sha256": "71013f76f97f8cf1d178e87435b163291286997d7b6a904e8cb13363ad402a9a"
+    },
+    {
+      "path": "development/run-20260906T162911Z/logs/secondary_gpu.txt",
+      "raw_sha256": "bcc2a104856d92c37dfaf4a011f0f6d2233c5b6df140e360d79a700be283644b",
+      "copied_sha256": "ec42dc9a10b2a7944e21857a51ec034da47f7e22a756715e3835d998049f1af8"
+    },
+    {
+      "path": "development/run-20260906T162911Z/logs/vertex_colors_gpu.txt",
+      "raw_sha256": "09645affce0b4a238aa9c7b400ba4a4763a96e8a05bdaee3b25f98c894627776",
+      "copied_sha256": "83d9debda6e61e8d3ae9f96e1f66951f08cdf01ec205dcae14a86485ba3344e3"
+    },
+    {
+      "path": "logs/format.txt",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copied_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "logs/gltf_export_gpu.txt",
+      "raw_sha256": "ca716ebb46dd4699704324fed490f96a39f3943d133359a785b1fb89df807cf8",
+      "copied_sha256": "e1d17d087a859b1bd890782d9595cb6e14355c4dd58cb66cc39b8fcf1ad4b874"
+    },
+    {
+      "path": "logs/gpu_alpha.txt",
+      "raw_sha256": "d4f0fe8b693ed7bf0cfc9e579c5ae270607bca82c05746c575491dbc43fa5537",
+      "copied_sha256": "ff96afe72ef79787f700bf7146a2d6ce0f0c7fdece11129258a13a0b9a6af1f1"
+    },
+    {
+      "path": "logs/gpu_dielectric.txt",
+      "raw_sha256": "22a59816b7cd853fabc45591821da61363c5dabf0150d449006c518045ed9b89",
+      "copied_sha256": "ba3d72964d67be42bf60304f159f19c266e10783a28e07624016a1370943e259"
+    },
+    {
+      "path": "logs/gpu_surfaces.txt",
+      "raw_sha256": "53dac22f296ec4c2a1e1705daf31dbc06993ee479dab50f12448de7ed162f859",
+      "copied_sha256": "7e253ad612666df4847ff84a10aa6cf89a0b0cfdf8fafc380bdfe473abda63c9"
+    },
+    {
+      "path": "logs/media_exact_rays.txt",
+      "raw_sha256": "6c1f246a7c9cd62fdac1574a4a775bb129c83e9768dabeedc32983e1202d7b94",
+      "copied_sha256": "7c84ade478b1faa909fc87abd8138385e279e15263a7aae1098277ca504069a2"
+    },
+    {
+      "path": "logs/media_gpu.txt",
+      "raw_sha256": "3013b87a4cee372e5e4b3df4c9e1d3affdf671d15150e403fb50077697b4fac0",
+      "copied_sha256": "e47418a7f55f35caaa9a70d2c8028396f1117c934709fb62adf1985308f60264"
+    },
+    {
+      "path": "logs/morph_frame_gpu.txt",
+      "raw_sha256": "2c053f1f13d4cd288181145165cfbc4c2b8b8c4e3b466e83679647cd5ada1f0c",
+      "copied_sha256": "9f5d999931be0e6a06e15889260753e7ca1013c9277229130427952315e3c7f8"
+    },
+    {
+      "path": "logs/morph_frame_regressions.txt",
+      "raw_sha256": "ce71a97d0f8a4a8c5b26e276b4fcd2b074620ebfc3134abee5f36c03c8e1752f",
+      "copied_sha256": "f7dccf96f0c1b7ac77af3df996b26d81c1b7cb7bf91e1b4e98750e8d1f8a595a"
+    },
+    {
+      "path": "logs/named_uv_cross_platform.txt",
+      "raw_sha256": "e6ed56486c7ebb7ecf686b2c80adc3933bfa1b0ab9daf946a8e89cd66b07cbe1",
+      "copied_sha256": "692d502f89131226a21fa11f98396ee6fcf8fda4f3f71f0724bd15280a0da208"
+    },
+    {
+      "path": "logs/named_uv_gpu.txt",
+      "raw_sha256": "8cb183578ac160d8121c1ac80996e5bbafa70a80e2e76fe7384a4654dba553b8",
+      "copied_sha256": "f08c66e8c836695cc01b2afcc9264504a63b20f9a22449673fbeab9e9c2c4241"
+    },
+    {
+      "path": "logs/native_tests.txt",
+      "raw_sha256": "018ecbe133868add532328888823aec244ac981fe3e4dd87e90049d4520167ce",
+      "copied_sha256": "e2fe56137b543f4dabf8d93e1e17901c14622fdfc4a3548fae066e40e2477604"
+    },
+    {
+      "path": "logs/secondary_gpu.txt",
+      "raw_sha256": "2e19e3185ac61f0ed0af536334c663db92a76b4629604e41913a0c8d1024361d",
+      "copied_sha256": "a7ff21a43eb2ad0e03909b9840fbcb136fc1c3b422a1b5fc7f5eecda3ec1e27c"
+    },
+    {
+      "path": "logs/vertex_colors_gpu.txt",
+      "raw_sha256": "492122f28afd096e78d23c67be1f7402aad3dac9ce0fabbfc98fe32990de28a2",
+      "copied_sha256": "2575a4e234bc6cb3ed414bea6ea142230e060a499a2fc64dfb2ebaa08ab5ac01"
+    },
+    {
+      "path": "logs/wasm_tests.txt",
+      "raw_sha256": "170ab5fc2c7c3c6e217503b8ccf9c812e95d511772456cead929bb6adedb5225",
+      "copied_sha256": "a4665f77ff08aa3019239c1fef34248bfa4957a0f4906317bc9ba166f97b1f34"
+    }
+  ]
+}

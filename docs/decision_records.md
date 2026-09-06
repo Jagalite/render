@@ -473,3 +473,30 @@ sequence publication pass through the ordinary interfaces.
 **Revisit trigger:** Scattering, alpha/advanced-surface combinations, larger sparse
 acceleration/paging or stronger near-parallel precision guarantees require new
 numerical, resource and native/browser evidence. CPU media semantics stay unchanged.
+
+
+## ADR-033 — Static Blender conversion preserves an inert source asset
+
+**Decision:** A bounded independent SDNA reader feeds a named Blender 2.93 static
+profile. Authored scene membership, parenting, polygon/corner geometry, constant
+materials and lenses become existing native commands. Explicit policy and loss
+reports distinguish supported evaluation from approximated lighting/materials.
+Unsupported active dependencies reject before publication.
+
+**Integration boundary:** Snapshot 16 adds a typed optional source-asset table and
+ordinary `put_source` operation. Exact source export is revision-pinned and separate
+from editing or regenerating Blender files. Empty tables are omitted, preserving
+older snapshots and hashes. The shared agent and CLI retain existing authorization,
+idempotency, cancellation, budgets and storage publication rules. No private SDNA
+layout, source pointer or executable metadata crosses into the public identity model.
+
+**Numerical boundary:** A measured native/Wasm `atan` difference changed persisted
+camera fields. Only this new field-of-view conversion uses pinned pure Rust libm;
+legacy transform, transport and shader math remain unchanged. The existing package
+gets one explicit core dependency edge, with provenance and resolved-feature review.
+
+**Acceptance boundary:** See the [profile](blend_static.md) and its final validation
+record. The adapter is a selected static profile, not arbitrary Blender evaluation.
+Further versions, animation, node graphs, modifiers, textures, smoothing, area lights,
+compressed containers or writing edited Blender files require their own fixtures,
+resource bounds, compatibility tests and native/browser workflows.

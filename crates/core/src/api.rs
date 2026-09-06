@@ -11,6 +11,13 @@ pub struct Operation {
 pub fn registry() -> Vec<Operation> {
     let mut operations = vec![
         Operation {
+            name: "put_source",
+            version: 0,
+            mutation: true,
+            effects: "retain bounded inert original source container in snapshot16",
+            cancellation: "before publication",
+        },
+        Operation {
             name: "create_box",
             version: 0,
             mutation: true,

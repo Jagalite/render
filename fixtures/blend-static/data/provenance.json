@@ -1,0 +1,51 @@
+{
+  "author": "Render project",
+  "license": "CC0-1.0",
+  "purpose": "Independent analytic SDNA static profile corpus, not evidence that Blender itself accepts these minimal synthetic containers",
+  "files": [
+    {
+      "file": "quad-32-little.blend",
+      "bytes": 10416,
+      "sha256": "1c943a2785d78497371dd2ce2e524df24ec350de00a9ff278b4ac34f4ccb96ce",
+      "pointer_bytes": 4,
+      "byte_order": "little"
+    },
+    {
+      "file": "quad-32-big.blend",
+      "bytes": 10416,
+      "sha256": "e6752d8556a7327f22c8333f9edac340a430475c3bab26d843a13785693be36c",
+      "pointer_bytes": 4,
+      "byte_order": "big"
+    },
+    {
+      "file": "quad-64-little.blend",
+      "bytes": 12440,
+      "sha256": "c6dab947bd1b0a341fe9051db8a9409957e708d8db9285401bfdfb87251d87a5",
+      "pointer_bytes": 8,
+      "byte_order": "little"
+    },
+    {
+      "file": "quad-64-big.blend",
+      "bytes": 12440,
+      "sha256": "9e01eca8c2f3d09a5eba67ef60efd4c580f4839b452bcea2983a03bc37faae70",
+      "pointer_bytes": 8,
+      "byte_order": "big"
+    },
+    {
+      "file": "quad-tilted.blend",
+      "bytes": 12440,
+      "sha256": "1fee9a5e64684c685da5bf3dd2d1ce6870339a3f50de025af1b4490a934510f3",
+      "pointer_bytes": 8,
+      "byte_order": "little",
+      "scenario": "Nontrivial authored XYZ camera rotation"
+    },
+    {
+      "file": "quad-instances.blend",
+      "bytes": 12440,
+      "sha256": "bdbf85806266a3bff956df52dede5352043a0fddc24b65f9eecbb6cecfd9b537",
+      "pointer_bytes": 8,
+      "byte_order": "little",
+      "scenario": "Two spatial instances share one authored mesh and material"
+    }
+  ]
+}

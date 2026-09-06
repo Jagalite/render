@@ -1,0 +1,5505 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "quad-32-little-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/000-quad-32-little-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 9.669973125011893
+    },
+    {
+      "name": "quad-32-little-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/001-quad-32-little-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.009535207995213568
+    },
+    {
+      "name": "quad-32-little-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/002-quad-32-little-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2065487500076415,
+      "resources": {
+        "maximum resident set size": 19628032,
+        "peak memory footprint": 5063808
+      }
+    },
+    {
+      "name": "quad-32-little-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/003-quad-32-little-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10060662499745376
+    },
+    {
+      "name": "quad-32-little-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/004-quad-32-little-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.062224124994827434
+    },
+    {
+      "name": "quad-32-little-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/005-quad-32-little-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3500838750042021,
+      "resources": {
+        "maximum resident set size": 19873792,
+        "peak memory footprint": 4916352
+      }
+    },
+    {
+      "name": "quad-32-little-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/006-quad-32-little-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.38237804200616665,
+      "resources": {
+        "maximum resident set size": 35733504,
+        "peak memory footprint": 12273280
+      }
+    },
+    {
+      "name": "quad-32-little-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/007-quad-32-little-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1691122920019552
+    },
+    {
+      "name": "quad-32-little-source",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/008-quad-32-little-source.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22582529101055115
+    },
+    {
+      "name": "quad-32-little-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-little-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/009-quad-32-little-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.15086670899472665
+    },
+    {
+      "name": "quad-32-little-restored-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-little-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/010-quad-32-little-restored-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.054385041003115475
+    },
+    {
+      "name": "quad-32-little-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-little-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/011-quad-32-little-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.40025424999475945
+    },
+    {
+      "name": "quad-32-little-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-little-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/012-quad-32-little-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.42634929199994076
+    },
+    {
+      "name": "quad-32-little-recovered-source",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-little-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/013-quad-32-little-recovered-source.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2371104589983588
+    },
+    {
+      "name": "quad-32-little-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/014-quad-32-little-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.09511562500847504
+    },
+    {
+      "name": "quad-32-little-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/015-quad-32-little-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.047609916000510566
+    },
+    {
+      "name": "quad-32-little-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/016-quad-32-little-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.054558333999011666
+    },
+    {
+      "name": "quad-32-big-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/017-quad-32-big-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09127795799577143
+    },
+    {
+      "name": "quad-32-big-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/018-quad-32-big-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.008409250003751367
+    },
+    {
+      "name": "quad-32-big-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/019-quad-32-big-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2267352920025587,
+      "resources": {
+        "maximum resident set size": 19513344,
+        "peak memory footprint": 4949120
+      }
+    },
+    {
+      "name": "quad-32-big-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/020-quad-32-big-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09369908399821725
+    },
+    {
+      "name": "quad-32-big-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/021-quad-32-big-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05950975000450853
+    },
+    {
+      "name": "quad-32-big-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/022-quad-32-big-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3168697500077542,
+      "resources": {
+        "maximum resident set size": 20004864,
+        "peak memory footprint": 5047424
+      }
+    },
+    {
+      "name": "quad-32-big-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/023-quad-32-big-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.37170141701062676,
+      "resources": {
+        "maximum resident set size": 35733504,
+        "peak memory footprint": 12240512
+      }
+    },
+    {
+      "name": "quad-32-big-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/024-quad-32-big-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.16738737499690615
+    },
+    {
+      "name": "quad-32-big-source",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/025-quad-32-big-source.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20336354199389461
+    },
+    {
+      "name": "quad-32-big-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-big-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/026-quad-32-big-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13195275000180118
+    },
+    {
+      "name": "quad-32-big-restored-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-big-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/027-quad-32-big-restored-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06768049999664072
+    },
+    {
+      "name": "quad-32-big-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-big-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/028-quad-32-big-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.295585875006509
+    },
+    {
+      "name": "quad-32-big-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-big-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/029-quad-32-big-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.2281339590117568
+    },
+    {
+      "name": "quad-32-big-recovered-source",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-big-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/030-quad-32-big-recovered-source.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2556017499882728
+    },
+    {
+      "name": "quad-32-big-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/031-quad-32-big-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.19943295800476335
+    },
+    {
+      "name": "quad-32-big-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/032-quad-32-big-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.06864479200157803
+    },
+    {
+      "name": "quad-32-big-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/033-quad-32-big-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08840891599538736
+    },
+    {
+      "name": "quad-64-little-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/034-quad-64-little-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09190416599449236
+    },
+    {
+      "name": "quad-64-little-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/035-quad-64-little-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01214866699592676
+    },
+    {
+      "name": "quad-64-little-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/036-quad-64-little-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3199024999921676,
+      "resources": {
+        "maximum resident set size": 20414464,
+        "peak memory footprint": 5850240
+      }
+    },
+    {
+      "name": "quad-64-little-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/037-quad-64-little-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.15657237499544863
+    },
+    {
+      "name": "quad-64-little-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/038-quad-64-little-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08199004200287163
+    },
+    {
+      "name": "quad-64-little-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/039-quad-64-little-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.29039424999791663,
+      "resources": {
+        "maximum resident set size": 20316160,
+        "peak memory footprint": 5358720
+      }
+    },
+    {
+      "name": "quad-64-little-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/040-quad-64-little-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.47244304200285114,
+      "resources": {
+        "maximum resident set size": 36470784,
+        "peak memory footprint": 12961408
+      }
+    },
+    {
+      "name": "quad-64-little-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/041-quad-64-little-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2006454170041252
+    },
+    {
+      "name": "quad-64-little-source",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/042-quad-64-little-source.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.23437837499659508
+    },
+    {
+      "name": "quad-64-little-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/043-quad-64-little-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14467462500033434
+    },
+    {
+      "name": "quad-64-little-restored-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/044-quad-64-little-restored-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07329450000543147
+    },
+    {
+      "name": "quad-64-little-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/045-quad-64-little-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.265503707996686
+    },
+    {
+      "name": "quad-64-little-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/046-quad-64-little-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3925482079939684
+    },
+    {
+      "name": "quad-64-little-recovered-source",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/047-quad-64-little-recovered-source.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20405283299623989
+    },
+    {
+      "name": "quad-64-little-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/048-quad-64-little-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.14303704199846834
+    },
+    {
+      "name": "quad-64-little-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/049-quad-64-little-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.08211004199984018
+    },
+    {
+      "name": "quad-64-little-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/050-quad-64-little-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08803241699934006
+    },
+    {
+      "name": "version",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/051-version.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_blend",
+      "seconds": 0.0741473340021912
+    },
+    {
+      "name": "trailing",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/052-trailing.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "blend",
+      "seconds": 0.07445033299154602
+    },
+    {
+      "name": "compressed",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/053-compressed.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_blend",
+      "seconds": 0.0921594169922173
+    },
+    {
+      "name": "cancel-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/054-cancel-import.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.01499766600318253
+    },
+    {
+      "name": "cancel-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/055-cancel-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.009656207999796607
+    },
+    {
+      "name": "budget-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/budget-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/056-budget-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13710408299812116
+    },
+    {
+      "name": "transaction-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/budget-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/057-transaction-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.025970415998017415
+    },
+    {
+      "name": "budget-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/budget-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/058-budget-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.008450666995486245
+    },
+    {
+      "name": "input-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/budget-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/059-input-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.00767716699920129
+    },
+    {
+      "name": "source-output-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/060-source-output-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.1134464999922784
+    },
+    {
+      "name": "missing-source",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/061-missing-source.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "reference",
+      "seconds": 0.12213599999086
+    },
+    {
+      "name": "old-client-journal",
+      "command": [
+        "artifacts/blend-static/baseline/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/old-client-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/062-old-client-journal.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "encoding",
+      "seconds": 0.38602283399086446
+    },
+    {
+      "name": "new-client-checkpoint",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/checkpoint-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/063-new-client-checkpoint.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14533579201088287
+    },
+    {
+      "name": "checkpoint-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/checkpoint-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/064-checkpoint-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.061204832993098535
+    },
+    {
+      "name": "old-client-version",
+      "command": [
+        "artifacts/blend-static/baseline/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/old-client-checkpoint",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/065-old-client-version.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "schema_version",
+      "seconds": 0.017145875011919998
+    },
+    {
+      "name": "native-edit",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/066-native-edit.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6361315410031239
+    },
+    {
+      "name": "native-edited-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/067-native-edited-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13327883300371468
+    },
+    {
+      "name": "source-after-edit",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/068-source-after-edit.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.29467108300013933
+    },
+    {
+      "name": "quad-64-big-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/069-quad-64-big-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09266058300272562
+    },
+    {
+      "name": "quad-64-big-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/070-quad-64-big-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.010142416998860426
+    },
+    {
+      "name": "quad-64-big-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/071-quad-64-big-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.17096412500541192,
+      "resources": {
+        "maximum resident set size": 19922944,
+        "peak memory footprint": 5358720
+      }
+    },
+    {
+      "name": "quad-64-big-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/072-quad-64-big-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.16120908400625922
+    },
+    {
+      "name": "quad-64-big-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/073-quad-64-big-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08342854100919794
+    },
+    {
+      "name": "quad-64-big-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/074-quad-64-big-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.31215962499845773,
+      "resources": {
+        "maximum resident set size": 20578304,
+        "peak memory footprint": 5751936
+      }
+    },
+    {
+      "name": "quad-64-big-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/075-quad-64-big-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.46791358300833963,
+      "resources": {
+        "maximum resident set size": 36585472,
+        "peak memory footprint": 13076096
+      }
+    },
+    {
+      "name": "quad-64-big-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/076-quad-64-big-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.17576529199141078
+    },
+    {
+      "name": "quad-64-big-source",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/077-quad-64-big-source.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2560628750070464
+    },
+    {
+      "name": "quad-64-big-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-big-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/078-quad-64-big-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1589192079991335
+    },
+    {
+      "name": "quad-64-big-restored-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-big-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/079-quad-64-big-restored-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09159533400088549
+    },
+    {
+      "name": "quad-64-big-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-big-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/080-quad-64-big-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3230942910013255
+    },
+    {
+      "name": "quad-64-big-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-big-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/081-quad-64-big-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4384976659930544
+    },
+    {
+      "name": "quad-64-big-recovered-source",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-big-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/082-quad-64-big-recovered-source.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21303362501203083
+    },
+    {
+      "name": "quad-64-big-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/083-quad-64-big-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.18953133300237823
+    },
+    {
+      "name": "quad-64-big-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/084-quad-64-big-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.09209474999806844
+    },
+    {
+      "name": "quad-64-big-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-big-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/085-quad-64-big-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07745295901258942
+    },
+    {
+      "name": "quad-tilted-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-tilted-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/086-quad-tilted-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08167670900002122
+    },
+    {
+      "name": "quad-tilted-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-tilted-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/087-quad-tilted-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.009776499995496124
+    },
+    {
+      "name": "quad-tilted-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-tilted-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/088-quad-tilted-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.18232841600547545,
+      "resources": {
+        "maximum resident set size": 19955712,
+        "peak memory footprint": 5391488
+      }
+    },
+    {
+      "name": "quad-tilted-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-tilted-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/089-quad-tilted-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14765291700314265
+    },
+    {
+      "name": "quad-tilted-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-tilted-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/090-quad-tilted-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07556441599444952
+    },
+    {
+      "name": "quad-tilted-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-tilted-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/091-quad-tilted-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.8716342499974417,
+      "resources": {
+        "maximum resident set size": 20234240,
+        "peak memory footprint": 5391488
+      }
+    },
+    {
+      "name": "quad-tilted-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-tilted-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/092-quad-tilted-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.8659534579928732,
+      "resources": {
+        "maximum resident set size": 35913728,
+        "peak memory footprint": 12387904
+      }
+    },
+    {
+      "name": "quad-tilted-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-tilted-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/093-quad-tilted-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20499650000419933
+    },
+    {
+      "name": "quad-tilted-source",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-tilted-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/094-quad-tilted-source.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.23730887498822995
+    },
+    {
+      "name": "quad-tilted-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-tilted-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/095-quad-tilted-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.15616095799487084
+    },
+    {
+      "name": "quad-tilted-restored-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-tilted-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/096-quad-tilted-restored-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09167574999446515
+    },
+    {
+      "name": "quad-tilted-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-tilted-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/097-quad-tilted-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2890933329908876
+    },
+    {
+      "name": "quad-tilted-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-tilted-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/098-quad-tilted-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.448979958993732
+    },
+    {
+      "name": "quad-tilted-recovered-source",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-tilted-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/099-quad-tilted-recovered-source.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.25999266699363943
+    },
+    {
+      "name": "quad-tilted-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-tilted-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/100-quad-tilted-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.14557437499752268
+    },
+    {
+      "name": "quad-tilted-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-tilted-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/101-quad-tilted-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.07099899998866022
+    },
+    {
+      "name": "quad-tilted-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-tilted-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/102-quad-tilted-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08400695800082758
+    },
+    {
+      "name": "quad-instances-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-instances-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/103-quad-instances-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0872974170051748
+    },
+    {
+      "name": "quad-instances-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-instances-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/104-quad-instances-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.010243750002700835
+    },
+    {
+      "name": "quad-instances-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-instances-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/105-quad-instances-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19990691701241303,
+      "resources": {
+        "maximum resident set size": 19988480,
+        "peak memory footprint": 5407872
+      }
+    },
+    {
+      "name": "quad-instances-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-instances-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/106-quad-instances-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.17135937498824205
+    },
+    {
+      "name": "quad-instances-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-instances-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/107-quad-instances-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10014724999200553
+    },
+    {
+      "name": "quad-instances-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-instances-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/108-quad-instances-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3300710000039544,
+      "resources": {
+        "maximum resident set size": 20643840,
+        "peak memory footprint": 5686400
+      }
+    },
+    {
+      "name": "quad-instances-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-instances-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/109-quad-instances-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.45082937499682885,
+      "resources": {
+        "maximum resident set size": 36454400,
+        "peak memory footprint": 12961408
+      }
+    },
+    {
+      "name": "quad-instances-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-instances-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/110-quad-instances-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19658025000535417
+    },
+    {
+      "name": "quad-instances-source",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-instances-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/111-quad-instances-source.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2139639579982031
+    },
+    {
+      "name": "quad-instances-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-instances-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/112-quad-instances-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.15557270900171716
+    },
+    {
+      "name": "quad-instances-restored-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-instances-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/113-quad-instances-restored-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09555820799141657
+    },
+    {
+      "name": "quad-instances-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-instances-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/114-quad-instances-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.28631083300570026
+    },
+    {
+      "name": "quad-instances-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-instances-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/115-quad-instances-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4114282919908874
+    },
+    {
+      "name": "quad-instances-recovered-source",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-instances-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/116-quad-instances-recovered-source.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19880783300322946
+    },
+    {
+      "name": "quad-instances-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-instances-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/117-quad-instances-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.10411745800229255
+    },
+    {
+      "name": "quad-instances-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-instances-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/118-quad-instances-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.050753624993376434
+    },
+    {
+      "name": "quad-instances-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-instances-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/119-quad-instances-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.060171167002408765
+    },
+    {
+      "name": "startup-293-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/startup-293-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/120-startup-293-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09160208300454542
+    },
+    {
+      "name": "startup-293-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/startup-293-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/121-startup-293-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007687332996283658
+    },
+    {
+      "name": "startup-293-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/startup-293-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/122-startup-293-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 3.7807317080005305,
+      "resources": {
+        "maximum resident set size": 186531840,
+        "peak memory footprint": 173278720
+      }
+    },
+    {
+      "name": "startup-293-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/startup-293-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/123-startup-293-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 6.55504566700256
+    },
+    {
+      "name": "startup-293-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/startup-293-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/124-startup-293-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 6.678368792010588
+    },
+    {
+      "name": "startup-293-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/startup-293-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/125-startup-293-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 7.960748792000231,
+      "resources": {
+        "maximum resident set size": 217006080,
+        "peak memory footprint": 275154688
+      }
+    },
+    {
+      "name": "startup-293-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/startup-293-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/126-startup-293-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 8.614076083002146,
+      "resources": {
+        "maximum resident set size": 235061248,
+        "peak memory footprint": 282216640
+      }
+    },
+    {
+      "name": "startup-293-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/startup-293-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/127-startup-293-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 8.198931291000918
+    },
+    {
+      "name": "startup-293-source",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/startup-293-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/128-startup-293-source.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 8.721312875000876
+    },
+    {
+      "name": "startup-293-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/startup-293-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/129-startup-293-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 5.748048292007297
+    },
+    {
+      "name": "startup-293-restored-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/startup-293-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/130-startup-293-restored-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 8.053877583006397
+    },
+    {
+      "name": "startup-293-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/startup-293-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/131-startup-293-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 9.425654665988986
+    },
+    {
+      "name": "startup-293-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/startup-293-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/132-startup-293-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 10.346548959001666
+    },
+    {
+      "name": "startup-293-recovered-source",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/startup-293-restored",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/133-startup-293-recovered-source.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 10.215283500001533
+    },
+    {
+      "name": "startup-293-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/startup-293-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/134-startup-293-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 15.6188664999936
+    },
+    {
+      "name": "startup-293-stale-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/startup-293-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/135-startup-293-stale-export.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 7.723854249998112
+    },
+    {
+      "name": "startup-293-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/startup-293-project",
+        "artifacts/blend-static/run-20260906T163349Z/blend-workflow/136-startup-293-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 8.912654709012713
+    }
+  ],
+  "variants": [
+    {
+      "name": "quad-32-little",
+      "source": {
+        "format": "blend",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/blend-static/data/quad-32-little.blend",
+        "policy": {
+          "scene": "Scene",
+          "meters_per_unit": 1,
+          "allow_principled_approximation": true,
+          "allow_point_light_approximation": true
+        }
+      },
+      "external_reference": false,
+      "settings": {
+        "width": 32,
+        "height": 32,
+        "samples": 4,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.15,
+          0.15,
+          0.15
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            30,
+            30,
+            30
+          ]
+        },
+        "camera": {
+          "position": [
+            2.5,
+            2,
+            4
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65
+        }
+      },
+      "revision": "sha256:69240663202709b3b56a1ccd5b3ee9d8fe27300ae9a95eee1350504ab76071e5",
+      "report": {
+        "byte_order": "little",
+        "entities": {
+          "Camera": "ff36c83bbba9b96abf24e61532730e9d",
+          "Light": "2ed3241e4575f5b101b41c8bc815956c",
+          "Parent": "c28012c4042f4ea58a95c6c32824e613",
+          "Quad": "7569c00b372be9f6278f81c111689ff0"
+        },
+        "losses": [
+          "Exact original container retained as inert provenance; scripts, UI, custom properties and non-render mesh metadata are source-only. Exporting that source does not incorporate native edits.",
+          "Source render engine, sampling, display transform and compositor outputs are not reproduced; native caller sampling/output settings apply.",
+          "The explicit meters_per_unit policy controls all geometry, translations and clipping; source unit scale is reported separately.",
+          "Light converted to one isotropic point using RGB times source power divided by4pi; source radius 0m and source engine shadow controls are not evaluated. Lighting is a static render-setting value, not bound to later entity edits.",
+          "Constant Principled base color, metallic, roughness and emission use the native single-scattering metallic/roughness BRDF; source distribution/subsurface implementation and exact renderer parity are not claimed."
+        ],
+        "materials": {
+          "Material": "820cce9fa640bd073a937a169a64985d"
+        },
+        "pointer_bits": 32,
+        "policy": {
+          "allow_point_light_approximation": true,
+          "allow_principled_approximation": true,
+          "meters_per_unit": 1.0,
+          "scene": "Scene"
+        },
+        "profile": "blend-293-static-v1",
+        "selected_camera": "ff36c83bbba9b96abf24e61532730e9d",
+        "selected_light": "2ed3241e4575f5b101b41c8bc815956c",
+        "source_asset": "sha256:a0fb40a41e8844ee509ecdbc577443cea6063ebc94a8203f8b1e6a3110a0701e",
+        "source_asset_json_bytes": 25507,
+        "source_bytes": 10416,
+        "source_digest": "sha256:1c943a2785d78497371dd2ce2e524df24ec350de00a9ff278b4ac34f4ccb96ce",
+        "source_unit_scale": 1.0,
+        "version": 293
+      },
+      "empty_revision": "sha256:698d17fa7ce8e4337b830fe0dac329c38d06193dd65263df269e478f741a3096",
+      "archive": "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-little-archive/document/document.json",
+      "cpu_gpu_rmse": 9.314074569194861e-09,
+      "native_mesh": {
+        "attributes": {
+          "UVMap": {
+            "domain": "Corner",
+            "id": "168e7b07f42cc968df02c4f1e699e986",
+            "semantic": "uv",
+            "transfer": "Linear",
+            "values": {
+              "type": "Vec2",
+              "values": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ]
+              ]
+            }
+          }
+        },
+        "corner_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "corners": [
+          {
+            "edge": 0,
+            "vertex": 0
+          },
+          {
+            "edge": 1,
+            "vertex": 1
+          },
+          {
+            "edge": 2,
+            "vertex": 2
+          },
+          {
+            "edge": 3,
+            "vertex": 3
+          }
+        ],
+        "edge_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "face_ids": [
+          1
+        ],
+        "face_offsets": [
+          0,
+          4
+        ],
+        "point_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "positions": {
+          "precision": "F64",
+          "values": [
+            [
+              -1.0,
+              -1.0,
+              0.0
+            ],
+            [
+              1.0,
+              -1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.0
+            ],
+            [
+              -1.0,
+              1.0,
+              0.0
+            ]
+          ]
+        }
+      },
+      "native_entities": [
+        {
+          "id": "2ed3241e4575f5b101b41c8bc815956c",
+          "material": null,
+          "mesh": null,
+          "name": "Light",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  0.0,
+                  0.0,
+                  3.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "7569c00b372be9f6278f81c111689ff0",
+          "material": "820cce9fa640bd073a937a169a64985d",
+          "mesh": "sha256:641fbb72148bf09803389c63e9d92c2e5ab87d8fec277dcc1fc29950b91ecc17",
+          "name": "Quad",
+          "parent": "c28012c4042f4ea58a95c6c32824e613",
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  -1.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c28012c4042f4ea58a95c6c32824e613",
+          "material": null,
+          "mesh": null,
+          "name": "Parent",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  1.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "ff36c83bbba9b96abf24e61532730e9d",
+          "material": null,
+          "mesh": null,
+          "name": "Camera",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  0.0,
+                  0.0,
+                  4.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "native_settings": {
+        "camera": {
+          "lens": {
+            "aspect_ratio": 1.0,
+            "far": 100.0,
+            "kind": "perspective",
+            "near": 0.10000000149011612,
+            "vertical_fov_radians": 0.6911111611634242
+          },
+          "position": [
+            0.0,
+            0.0,
+            4.0
+          ],
+          "target": [
+            0.0,
+            0.0,
+            3.0
+          ],
+          "up": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "vertical_fov_radians": 0.6911111611634242
+        },
+        "environment": [
+          0.0625,
+          0.125,
+          0.25
+        ],
+        "height": 32,
+        "light": {
+          "intensity": [
+            2.5464789867401123,
+            1.2732394933700562,
+            0.6366197466850281
+          ],
+          "position": [
+            0.0,
+            0.0,
+            3.0
+          ]
+        },
+        "max_bytes": 16777216,
+        "max_depth": 4,
+        "samples": 4,
+        "seed": 73,
+        "width": 32
+      }
+    },
+    {
+      "name": "quad-32-big",
+      "source": {
+        "format": "blend",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/blend-static/data/quad-32-big.blend",
+        "policy": {
+          "scene": "Scene",
+          "meters_per_unit": 1,
+          "allow_principled_approximation": true,
+          "allow_point_light_approximation": true
+        }
+      },
+      "external_reference": false,
+      "settings": {
+        "width": 32,
+        "height": 32,
+        "samples": 4,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.15,
+          0.15,
+          0.15
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            30,
+            30,
+            30
+          ]
+        },
+        "camera": {
+          "position": [
+            2.5,
+            2,
+            4
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65
+        }
+      },
+      "revision": "sha256:5ae1257b6788d2c22ec7c6552316ab984118c8e0a9e1b5c305c960a6150266f2",
+      "report": {
+        "byte_order": "big",
+        "entities": {
+          "Camera": "9783dd9437f525f7404f9f83b1adf851",
+          "Light": "fac9b1671df42f98c2984d4e4cf1d370",
+          "Parent": "7661a4787c0c47642ab3c8e5a8915396",
+          "Quad": "dcdb588a1df8eba1a22af86a19f8995c"
+        },
+        "losses": [
+          "Exact original container retained as inert provenance; scripts, UI, custom properties and non-render mesh metadata are source-only. Exporting that source does not incorporate native edits.",
+          "Source render engine, sampling, display transform and compositor outputs are not reproduced; native caller sampling/output settings apply.",
+          "The explicit meters_per_unit policy controls all geometry, translations and clipping; source unit scale is reported separately.",
+          "Light converted to one isotropic point using RGB times source power divided by4pi; source radius 0m and source engine shadow controls are not evaluated. Lighting is a static render-setting value, not bound to later entity edits.",
+          "Constant Principled base color, metallic, roughness and emission use the native single-scattering metallic/roughness BRDF; source distribution/subsurface implementation and exact renderer parity are not claimed."
+        ],
+        "materials": {
+          "Material": "e15686895fd507ac1325c55a883e40dd"
+        },
+        "pointer_bits": 32,
+        "policy": {
+          "allow_point_light_approximation": true,
+          "allow_principled_approximation": true,
+          "meters_per_unit": 1.0,
+          "scene": "Scene"
+        },
+        "profile": "blend-293-static-v1",
+        "selected_camera": "9783dd9437f525f7404f9f83b1adf851",
+        "selected_light": "fac9b1671df42f98c2984d4e4cf1d370",
+        "source_asset": "sha256:ce786648be5c71bc1b2c57236154f0883affc5bc09b503bc044fb2a6a2eeaddf",
+        "source_asset_json_bytes": 25506,
+        "source_bytes": 10416,
+        "source_digest": "sha256:e6752d8556a7327f22c8333f9edac340a430475c3bab26d843a13785693be36c",
+        "source_unit_scale": 1.0,
+        "version": 293
+      },
+      "empty_revision": "sha256:698d17fa7ce8e4337b830fe0dac329c38d06193dd65263df269e478f741a3096",
+      "archive": "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-32-big-archive/document/document.json",
+      "cpu_gpu_rmse": 9.314074569194861e-09,
+      "native_mesh": {
+        "attributes": {
+          "UVMap": {
+            "domain": "Corner",
+            "id": "168e7b07f42cc968df02c4f1e699e986",
+            "semantic": "uv",
+            "transfer": "Linear",
+            "values": {
+              "type": "Vec2",
+              "values": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ]
+              ]
+            }
+          }
+        },
+        "corner_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "corners": [
+          {
+            "edge": 0,
+            "vertex": 0
+          },
+          {
+            "edge": 1,
+            "vertex": 1
+          },
+          {
+            "edge": 2,
+            "vertex": 2
+          },
+          {
+            "edge": 3,
+            "vertex": 3
+          }
+        ],
+        "edge_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "face_ids": [
+          1
+        ],
+        "face_offsets": [
+          0,
+          4
+        ],
+        "point_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "positions": {
+          "precision": "F64",
+          "values": [
+            [
+              -1.0,
+              -1.0,
+              0.0
+            ],
+            [
+              1.0,
+              -1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.0
+            ],
+            [
+              -1.0,
+              1.0,
+              0.0
+            ]
+          ]
+        }
+      },
+      "native_entities": [
+        {
+          "id": "7661a4787c0c47642ab3c8e5a8915396",
+          "material": null,
+          "mesh": null,
+          "name": "Parent",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  1.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "9783dd9437f525f7404f9f83b1adf851",
+          "material": null,
+          "mesh": null,
+          "name": "Camera",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  0.0,
+                  0.0,
+                  4.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "dcdb588a1df8eba1a22af86a19f8995c",
+          "material": "e15686895fd507ac1325c55a883e40dd",
+          "mesh": "sha256:641fbb72148bf09803389c63e9d92c2e5ab87d8fec277dcc1fc29950b91ecc17",
+          "name": "Quad",
+          "parent": "7661a4787c0c47642ab3c8e5a8915396",
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  -1.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "fac9b1671df42f98c2984d4e4cf1d370",
+          "material": null,
+          "mesh": null,
+          "name": "Light",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  0.0,
+                  0.0,
+                  3.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "native_settings": {
+        "camera": {
+          "lens": {
+            "aspect_ratio": 1.0,
+            "far": 100.0,
+            "kind": "perspective",
+            "near": 0.10000000149011612,
+            "vertical_fov_radians": 0.6911111611634242
+          },
+          "position": [
+            0.0,
+            0.0,
+            4.0
+          ],
+          "target": [
+            0.0,
+            0.0,
+            3.0
+          ],
+          "up": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "vertical_fov_radians": 0.6911111611634242
+        },
+        "environment": [
+          0.0625,
+          0.125,
+          0.25
+        ],
+        "height": 32,
+        "light": {
+          "intensity": [
+            2.5464789867401123,
+            1.2732394933700562,
+            0.6366197466850281
+          ],
+          "position": [
+            0.0,
+            0.0,
+            3.0
+          ]
+        },
+        "max_bytes": 16777216,
+        "max_depth": 4,
+        "samples": 4,
+        "seed": 73,
+        "width": 32
+      }
+    },
+    {
+      "name": "quad-64-little",
+      "source": {
+        "format": "blend",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/blend-static/data/quad-64-little.blend",
+        "policy": {
+          "scene": "Scene",
+          "meters_per_unit": 1,
+          "allow_principled_approximation": true,
+          "allow_point_light_approximation": true
+        }
+      },
+      "external_reference": false,
+      "settings": {
+        "width": 32,
+        "height": 32,
+        "samples": 4,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.15,
+          0.15,
+          0.15
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            30,
+            30,
+            30
+          ]
+        },
+        "camera": {
+          "position": [
+            2.5,
+            2,
+            4
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65
+        }
+      },
+      "revision": "sha256:ba9bba8158d947a842c76881c79bc68528450341aa127c99ea0f826106272a44",
+      "report": {
+        "byte_order": "little",
+        "entities": {
+          "Camera": "85948a66397f24885c844891c3d44665",
+          "Light": "4885dad99ebeb048d694f2c239582669",
+          "Parent": "027ee7271280c05b73797308e3e72209",
+          "Quad": "4d37fa707990c2d7d65aa1583d5c4a4f"
+        },
+        "losses": [
+          "Exact original container retained as inert provenance; scripts, UI, custom properties and non-render mesh metadata are source-only. Exporting that source does not incorporate native edits.",
+          "Source render engine, sampling, display transform and compositor outputs are not reproduced; native caller sampling/output settings apply.",
+          "The explicit meters_per_unit policy controls all geometry, translations and clipping; source unit scale is reported separately.",
+          "Light converted to one isotropic point using RGB times source power divided by4pi; source radius 0m and source engine shadow controls are not evaluated. Lighting is a static render-setting value, not bound to later entity edits.",
+          "Constant Principled base color, metallic, roughness and emission use the native single-scattering metallic/roughness BRDF; source distribution/subsurface implementation and exact renderer parity are not claimed."
+        ],
+        "materials": {
+          "Material": "83736e2b51093e4c97913664c757c3ca"
+        },
+        "pointer_bits": 64,
+        "policy": {
+          "allow_point_light_approximation": true,
+          "allow_principled_approximation": true,
+          "meters_per_unit": 1.0,
+          "scene": "Scene"
+        },
+        "profile": "blend-293-static-v1",
+        "selected_camera": "85948a66397f24885c844891c3d44665",
+        "selected_light": "4885dad99ebeb048d694f2c239582669",
+        "source_asset": "sha256:ba61fe021011c1bc84b7b1e333dc5dfa4de25fa4cb1be4aeb68cdc608900c38a",
+        "source_asset_json_bytes": 29561,
+        "source_bytes": 12440,
+        "source_digest": "sha256:c6dab947bd1b0a341fe9051db8a9409957e708d8db9285401bfdfb87251d87a5",
+        "source_unit_scale": 1.0,
+        "version": 293
+      },
+      "empty_revision": "sha256:698d17fa7ce8e4337b830fe0dac329c38d06193dd65263df269e478f741a3096",
+      "archive": "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-little-archive/document/document.json",
+      "cpu_gpu_rmse": 9.314074569194861e-09,
+      "native_mesh": {
+        "attributes": {
+          "UVMap": {
+            "domain": "Corner",
+            "id": "168e7b07f42cc968df02c4f1e699e986",
+            "semantic": "uv",
+            "transfer": "Linear",
+            "values": {
+              "type": "Vec2",
+              "values": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ]
+              ]
+            }
+          }
+        },
+        "corner_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "corners": [
+          {
+            "edge": 0,
+            "vertex": 0
+          },
+          {
+            "edge": 1,
+            "vertex": 1
+          },
+          {
+            "edge": 2,
+            "vertex": 2
+          },
+          {
+            "edge": 3,
+            "vertex": 3
+          }
+        ],
+        "edge_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "face_ids": [
+          1
+        ],
+        "face_offsets": [
+          0,
+          4
+        ],
+        "point_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "positions": {
+          "precision": "F64",
+          "values": [
+            [
+              -1.0,
+              -1.0,
+              0.0
+            ],
+            [
+              1.0,
+              -1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.0
+            ],
+            [
+              -1.0,
+              1.0,
+              0.0
+            ]
+          ]
+        }
+      },
+      "native_entities": [
+        {
+          "id": "027ee7271280c05b73797308e3e72209",
+          "material": null,
+          "mesh": null,
+          "name": "Parent",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  1.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "4885dad99ebeb048d694f2c239582669",
+          "material": null,
+          "mesh": null,
+          "name": "Light",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  0.0,
+                  0.0,
+                  3.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "4d37fa707990c2d7d65aa1583d5c4a4f",
+          "material": "83736e2b51093e4c97913664c757c3ca",
+          "mesh": "sha256:641fbb72148bf09803389c63e9d92c2e5ab87d8fec277dcc1fc29950b91ecc17",
+          "name": "Quad",
+          "parent": "027ee7271280c05b73797308e3e72209",
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  -1.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "85948a66397f24885c844891c3d44665",
+          "material": null,
+          "mesh": null,
+          "name": "Camera",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  0.0,
+                  0.0,
+                  4.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "native_settings": {
+        "camera": {
+          "lens": {
+            "aspect_ratio": 1.0,
+            "far": 100.0,
+            "kind": "perspective",
+            "near": 0.10000000149011612,
+            "vertical_fov_radians": 0.6911111611634242
+          },
+          "position": [
+            0.0,
+            0.0,
+            4.0
+          ],
+          "target": [
+            0.0,
+            0.0,
+            3.0
+          ],
+          "up": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "vertical_fov_radians": 0.6911111611634242
+        },
+        "environment": [
+          0.0625,
+          0.125,
+          0.25
+        ],
+        "height": 32,
+        "light": {
+          "intensity": [
+            2.5464789867401123,
+            1.2732394933700562,
+            0.6366197466850281
+          ],
+          "position": [
+            0.0,
+            0.0,
+            3.0
+          ]
+        },
+        "max_bytes": 16777216,
+        "max_depth": 4,
+        "samples": 4,
+        "seed": 73,
+        "width": 32
+      }
+    },
+    {
+      "name": "quad-64-big",
+      "source": {
+        "format": "blend",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/blend-static/data/quad-64-big.blend",
+        "policy": {
+          "scene": "Scene",
+          "meters_per_unit": 1,
+          "allow_principled_approximation": true,
+          "allow_point_light_approximation": true
+        }
+      },
+      "external_reference": false,
+      "settings": {
+        "width": 32,
+        "height": 32,
+        "samples": 4,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.15,
+          0.15,
+          0.15
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            30,
+            30,
+            30
+          ]
+        },
+        "camera": {
+          "position": [
+            2.5,
+            2,
+            4
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65
+        }
+      },
+      "revision": "sha256:20d38201210f9a31eceb5a4d0bbed909046e4c4c5013514a418879e055b2b8ab",
+      "report": {
+        "byte_order": "big",
+        "entities": {
+          "Camera": "9245421075ad53341890fb1edd0d705f",
+          "Light": "6894642cd586f7db49ea8b961a9f790f",
+          "Parent": "47d0309c38e4a81c557f018512ce181e",
+          "Quad": "34626429c38e5b9c1c8cbd060cb91788"
+        },
+        "losses": [
+          "Exact original container retained as inert provenance; scripts, UI, custom properties and non-render mesh metadata are source-only. Exporting that source does not incorporate native edits.",
+          "Source render engine, sampling, display transform and compositor outputs are not reproduced; native caller sampling/output settings apply.",
+          "The explicit meters_per_unit policy controls all geometry, translations and clipping; source unit scale is reported separately.",
+          "Light converted to one isotropic point using RGB times source power divided by4pi; source radius 0m and source engine shadow controls are not evaluated. Lighting is a static render-setting value, not bound to later entity edits.",
+          "Constant Principled base color, metallic, roughness and emission use the native single-scattering metallic/roughness BRDF; source distribution/subsurface implementation and exact renderer parity are not claimed."
+        ],
+        "materials": {
+          "Material": "f58504f866d2b28198aa27f64b22080c"
+        },
+        "pointer_bits": 64,
+        "policy": {
+          "allow_point_light_approximation": true,
+          "allow_principled_approximation": true,
+          "meters_per_unit": 1.0,
+          "scene": "Scene"
+        },
+        "profile": "blend-293-static-v1",
+        "selected_camera": "9245421075ad53341890fb1edd0d705f",
+        "selected_light": "6894642cd586f7db49ea8b961a9f790f",
+        "source_asset": "sha256:21243cc1ab6cc509974e6d31da408fb5f7a136878ccd2246f31d2f65d8698368",
+        "source_asset_json_bytes": 29560,
+        "source_bytes": 12440,
+        "source_digest": "sha256:9e01eca8c2f3d09a5eba67ef60efd4c580f4839b452bcea2983a03bc37faae70",
+        "source_unit_scale": 1.0,
+        "version": 293
+      },
+      "empty_revision": "sha256:698d17fa7ce8e4337b830fe0dac329c38d06193dd65263df269e478f741a3096",
+      "archive": "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-64-big-archive/document/document.json",
+      "cpu_gpu_rmse": 9.314074569194861e-09,
+      "native_mesh": {
+        "attributes": {
+          "UVMap": {
+            "domain": "Corner",
+            "id": "168e7b07f42cc968df02c4f1e699e986",
+            "semantic": "uv",
+            "transfer": "Linear",
+            "values": {
+              "type": "Vec2",
+              "values": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ]
+              ]
+            }
+          }
+        },
+        "corner_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "corners": [
+          {
+            "edge": 0,
+            "vertex": 0
+          },
+          {
+            "edge": 1,
+            "vertex": 1
+          },
+          {
+            "edge": 2,
+            "vertex": 2
+          },
+          {
+            "edge": 3,
+            "vertex": 3
+          }
+        ],
+        "edge_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "face_ids": [
+          1
+        ],
+        "face_offsets": [
+          0,
+          4
+        ],
+        "point_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "positions": {
+          "precision": "F64",
+          "values": [
+            [
+              -1.0,
+              -1.0,
+              0.0
+            ],
+            [
+              1.0,
+              -1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.0
+            ],
+            [
+              -1.0,
+              1.0,
+              0.0
+            ]
+          ]
+        }
+      },
+      "native_entities": [
+        {
+          "id": "34626429c38e5b9c1c8cbd060cb91788",
+          "material": "f58504f866d2b28198aa27f64b22080c",
+          "mesh": "sha256:641fbb72148bf09803389c63e9d92c2e5ab87d8fec277dcc1fc29950b91ecc17",
+          "name": "Quad",
+          "parent": "47d0309c38e4a81c557f018512ce181e",
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  -1.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "47d0309c38e4a81c557f018512ce181e",
+          "material": null,
+          "mesh": null,
+          "name": "Parent",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  1.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "6894642cd586f7db49ea8b961a9f790f",
+          "material": null,
+          "mesh": null,
+          "name": "Light",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  0.0,
+                  0.0,
+                  3.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "9245421075ad53341890fb1edd0d705f",
+          "material": null,
+          "mesh": null,
+          "name": "Camera",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  0.0,
+                  0.0,
+                  4.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "native_settings": {
+        "camera": {
+          "lens": {
+            "aspect_ratio": 1.0,
+            "far": 100.0,
+            "kind": "perspective",
+            "near": 0.10000000149011612,
+            "vertical_fov_radians": 0.6911111611634242
+          },
+          "position": [
+            0.0,
+            0.0,
+            4.0
+          ],
+          "target": [
+            0.0,
+            0.0,
+            3.0
+          ],
+          "up": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "vertical_fov_radians": 0.6911111611634242
+        },
+        "environment": [
+          0.0625,
+          0.125,
+          0.25
+        ],
+        "height": 32,
+        "light": {
+          "intensity": [
+            2.5464789867401123,
+            1.2732394933700562,
+            0.6366197466850281
+          ],
+          "position": [
+            0.0,
+            0.0,
+            3.0
+          ]
+        },
+        "max_bytes": 16777216,
+        "max_depth": 4,
+        "samples": 4,
+        "seed": 73,
+        "width": 32
+      }
+    },
+    {
+      "name": "quad-tilted",
+      "source": {
+        "format": "blend",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/blend-static/data/quad-tilted.blend",
+        "policy": {
+          "scene": "Scene",
+          "meters_per_unit": 1,
+          "allow_principled_approximation": true,
+          "allow_point_light_approximation": true
+        }
+      },
+      "external_reference": false,
+      "settings": {
+        "width": 32,
+        "height": 32,
+        "samples": 4,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.15,
+          0.15,
+          0.15
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            30,
+            30,
+            30
+          ]
+        },
+        "camera": {
+          "position": [
+            2.5,
+            2,
+            4
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65
+        }
+      },
+      "revision": "sha256:3dac325b3bfb18b66b1c4ac48ac785a8accb9b67278e254654040cdb6f6f9403",
+      "report": {
+        "byte_order": "little",
+        "entities": {
+          "Camera": "81fb66b53639b0e50d8deb37d507fc9b",
+          "Light": "a2db4e8c6b44b0b95513ac469db0dcb2",
+          "Parent": "c59b95dddcad79e20129d411299d0306",
+          "Quad": "92b0521edb37156700bffcf02ea3b0f0"
+        },
+        "losses": [
+          "Exact original container retained as inert provenance; scripts, UI, custom properties and non-render mesh metadata are source-only. Exporting that source does not incorporate native edits.",
+          "Source render engine, sampling, display transform and compositor outputs are not reproduced; native caller sampling/output settings apply.",
+          "The explicit meters_per_unit policy controls all geometry, translations and clipping; source unit scale is reported separately.",
+          "Light converted to one isotropic point using RGB times source power divided by4pi; source radius 0m and source engine shadow controls are not evaluated. Lighting is a static render-setting value, not bound to later entity edits.",
+          "Constant Principled base color, metallic, roughness and emission use the native single-scattering metallic/roughness BRDF; source distribution/subsurface implementation and exact renderer parity are not claimed."
+        ],
+        "materials": {
+          "Material": "2ec0b8ee86f5be91bac0d410324e0722"
+        },
+        "pointer_bits": 64,
+        "policy": {
+          "allow_point_light_approximation": true,
+          "allow_principled_approximation": true,
+          "meters_per_unit": 1.0,
+          "scene": "Scene"
+        },
+        "profile": "blend-293-static-v1",
+        "selected_camera": "81fb66b53639b0e50d8deb37d507fc9b",
+        "selected_light": "a2db4e8c6b44b0b95513ac469db0dcb2",
+        "source_asset": "sha256:3b35f83934751aab6825ad02baab4dce11a3afb0787bb71c2638e1fbb542d5b1",
+        "source_asset_json_bytes": 29581,
+        "source_bytes": 12440,
+        "source_digest": "sha256:1fee9a5e64684c685da5bf3dd2d1ce6870339a3f50de025af1b4490a934510f3",
+        "source_unit_scale": 1.0,
+        "version": 293
+      },
+      "empty_revision": "sha256:698d17fa7ce8e4337b830fe0dac329c38d06193dd65263df269e478f741a3096",
+      "archive": "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-tilted-archive/document/document.json",
+      "cpu_gpu_rmse": 9.064087288558905e-09,
+      "native_mesh": {
+        "attributes": {
+          "UVMap": {
+            "domain": "Corner",
+            "id": "168e7b07f42cc968df02c4f1e699e986",
+            "semantic": "uv",
+            "transfer": "Linear",
+            "values": {
+              "type": "Vec2",
+              "values": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ]
+              ]
+            }
+          }
+        },
+        "corner_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "corners": [
+          {
+            "edge": 0,
+            "vertex": 0
+          },
+          {
+            "edge": 1,
+            "vertex": 1
+          },
+          {
+            "edge": 2,
+            "vertex": 2
+          },
+          {
+            "edge": 3,
+            "vertex": 3
+          }
+        ],
+        "edge_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "face_ids": [
+          1
+        ],
+        "face_offsets": [
+          0,
+          4
+        ],
+        "point_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "positions": {
+          "precision": "F64",
+          "values": [
+            [
+              -1.0,
+              -1.0,
+              0.0
+            ],
+            [
+              1.0,
+              -1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.0
+            ],
+            [
+              -1.0,
+              1.0,
+              0.0
+            ]
+          ]
+        }
+      },
+      "native_entities": [
+        {
+          "id": "81fb66b53639b0e50d8deb37d507fc9b",
+          "material": null,
+          "mesh": null,
+          "name": "Camera",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  0.0,
+                  0.0,
+                  4.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.30000001192092896,
+                    0.20000000298023224,
+                    0.10000000149011612
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "92b0521edb37156700bffcf02ea3b0f0",
+          "material": "2ec0b8ee86f5be91bac0d410324e0722",
+          "mesh": "sha256:641fbb72148bf09803389c63e9d92c2e5ab87d8fec277dcc1fc29950b91ecc17",
+          "name": "Quad",
+          "parent": "c59b95dddcad79e20129d411299d0306",
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  -1.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "a2db4e8c6b44b0b95513ac469db0dcb2",
+          "material": null,
+          "mesh": null,
+          "name": "Light",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  0.0,
+                  0.0,
+                  3.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c59b95dddcad79e20129d411299d0306",
+          "material": null,
+          "mesh": null,
+          "name": "Parent",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  1.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "native_settings": {
+        "camera": {
+          "lens": {
+            "aspect_ratio": 1.0,
+            "far": 100.0,
+            "kind": "perspective",
+            "near": 0.10000000149011612,
+            "vertical_fov_radians": 0.6911111611634242
+          },
+          "position": [
+            0.0,
+            0.0,
+            4.0
+          ],
+          "target": [
+            -0.21835066677325257,
+            0.036957011488015834,
+            3.024829673533105
+          ],
+          "up": [
+            -0.2750958581157791,
+            0.9564250826009366,
+            0.0978433964012633
+          ],
+          "vertical_fov_radians": 0.6911111611634242
+        },
+        "environment": [
+          0.0625,
+          0.125,
+          0.25
+        ],
+        "height": 32,
+        "light": {
+          "intensity": [
+            2.5464789867401123,
+            1.2732394933700562,
+            0.6366197466850281
+          ],
+          "position": [
+            0.0,
+            0.0,
+            3.0
+          ]
+        },
+        "max_bytes": 16777216,
+        "max_depth": 4,
+        "samples": 4,
+        "seed": 73,
+        "width": 32
+      }
+    },
+    {
+      "name": "quad-instances",
+      "source": {
+        "format": "blend",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/blend-static/data/quad-instances.blend",
+        "policy": {
+          "scene": "Scene",
+          "meters_per_unit": 1,
+          "allow_principled_approximation": true,
+          "allow_point_light_approximation": true
+        }
+      },
+      "external_reference": false,
+      "settings": {
+        "width": 32,
+        "height": 32,
+        "samples": 4,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.15,
+          0.15,
+          0.15
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            30,
+            30,
+            30
+          ]
+        },
+        "camera": {
+          "position": [
+            2.5,
+            2,
+            4
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65
+        }
+      },
+      "revision": "sha256:a4f0a6621e29f9e2a30be32eda330dbe613edd60847c111d03aa33ebeb74496b",
+      "report": {
+        "byte_order": "little",
+        "entities": {
+          "Camera": "812fef3c70b2f4f464f949afb6fd3db4",
+          "Light": "c84723d211f5508ed31c5cd0a56cfcb6",
+          "Parent": "7ded80404c71cc8796c810b478b35220",
+          "Quad": "a137350d82e395674c8d4626cb51fb30"
+        },
+        "losses": [
+          "Exact original container retained as inert provenance; scripts, UI, custom properties and non-render mesh metadata are source-only. Exporting that source does not incorporate native edits.",
+          "Source render engine, sampling, display transform and compositor outputs are not reproduced; native caller sampling/output settings apply.",
+          "The explicit meters_per_unit policy controls all geometry, translations and clipping; source unit scale is reported separately.",
+          "Light converted to one isotropic point using RGB times source power divided by4pi; source radius 0m and source engine shadow controls are not evaluated. Lighting is a static render-setting value, not bound to later entity edits.",
+          "Constant Principled base color, metallic, roughness and emission use the native single-scattering metallic/roughness BRDF; source distribution/subsurface implementation and exact renderer parity are not claimed."
+        ],
+        "materials": {
+          "Material": "3181536a3ee93ef405e5b08b59ce16be"
+        },
+        "pointer_bits": 64,
+        "policy": {
+          "allow_point_light_approximation": true,
+          "allow_principled_approximation": true,
+          "meters_per_unit": 1.0,
+          "scene": "Scene"
+        },
+        "profile": "blend-293-static-v1",
+        "selected_camera": "812fef3c70b2f4f464f949afb6fd3db4",
+        "selected_light": "c84723d211f5508ed31c5cd0a56cfcb6",
+        "source_asset": "sha256:4635c607cd2ca10f00810ff1fda80354803b8c29450aec7b581d86bc712c2e3d",
+        "source_asset_json_bytes": 29562,
+        "source_bytes": 12440,
+        "source_digest": "sha256:bdbf85806266a3bff956df52dede5352043a0fddc24b65f9eecbb6cecfd9b537",
+        "source_unit_scale": 1.0,
+        "version": 293
+      },
+      "empty_revision": "sha256:698d17fa7ce8e4337b830fe0dac329c38d06193dd65263df269e478f741a3096",
+      "archive": "artifacts/blend-static/run-20260906T163349Z/blend-workflow/quad-instances-archive/document/document.json",
+      "cpu_gpu_rmse": 1.2583494711713392e-08,
+      "native_mesh": {
+        "attributes": {
+          "UVMap": {
+            "domain": "Corner",
+            "id": "168e7b07f42cc968df02c4f1e699e986",
+            "semantic": "uv",
+            "transfer": "Linear",
+            "values": {
+              "type": "Vec2",
+              "values": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ]
+              ]
+            }
+          }
+        },
+        "corner_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "corners": [
+          {
+            "edge": 0,
+            "vertex": 0
+          },
+          {
+            "edge": 1,
+            "vertex": 1
+          },
+          {
+            "edge": 2,
+            "vertex": 2
+          },
+          {
+            "edge": 3,
+            "vertex": 3
+          }
+        ],
+        "edge_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "face_ids": [
+          1
+        ],
+        "face_offsets": [
+          0,
+          4
+        ],
+        "point_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "positions": {
+          "precision": "F64",
+          "values": [
+            [
+              -1.0,
+              -1.0,
+              0.0
+            ],
+            [
+              1.0,
+              -1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.0
+            ],
+            [
+              -1.0,
+              1.0,
+              0.0
+            ]
+          ]
+        }
+      },
+      "native_entities": [
+        {
+          "id": "7ded80404c71cc8796c810b478b35220",
+          "material": "3181536a3ee93ef405e5b08b59ce16be",
+          "mesh": "sha256:641fbb72148bf09803389c63e9d92c2e5ab87d8fec277dcc1fc29950b91ecc17",
+          "name": "Parent",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  2.25,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "812fef3c70b2f4f464f949afb6fd3db4",
+          "material": null,
+          "mesh": null,
+          "name": "Camera",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  0.0,
+                  0.0,
+                  4.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "a137350d82e395674c8d4626cb51fb30",
+          "material": "3181536a3ee93ef405e5b08b59ce16be",
+          "mesh": "sha256:641fbb72148bf09803389c63e9d92c2e5ab87d8fec277dcc1fc29950b91ecc17",
+          "name": "Quad",
+          "parent": "7ded80404c71cc8796c810b478b35220",
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  -2.25,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c84723d211f5508ed31c5cd0a56cfcb6",
+          "material": null,
+          "mesh": null,
+          "name": "Light",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  0.0,
+                  0.0,
+                  3.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "native_settings": {
+        "camera": {
+          "lens": {
+            "aspect_ratio": 1.0,
+            "far": 100.0,
+            "kind": "perspective",
+            "near": 0.10000000149011612,
+            "vertical_fov_radians": 0.6911111611634242
+          },
+          "position": [
+            0.0,
+            0.0,
+            4.0
+          ],
+          "target": [
+            0.0,
+            0.0,
+            3.0
+          ],
+          "up": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "vertical_fov_radians": 0.6911111611634242
+        },
+        "environment": [
+          0.0625,
+          0.125,
+          0.25
+        ],
+        "height": 32,
+        "light": {
+          "intensity": [
+            2.5464789867401123,
+            1.2732394933700562,
+            0.6366197466850281
+          ],
+          "position": [
+            0.0,
+            0.0,
+            3.0
+          ]
+        },
+        "max_bytes": 16777216,
+        "max_depth": 4,
+        "samples": 4,
+        "seed": 73,
+        "width": 32
+      }
+    },
+    {
+      "name": "startup-293",
+      "source": {
+        "format": "blend",
+        "path": "/private/tmp/render-blend-research-20260906/startup-293.blend",
+        "policy": {
+          "scene": "Scene",
+          "meters_per_unit": 1,
+          "allow_principled_approximation": true,
+          "allow_point_light_approximation": true
+        }
+      },
+      "external_reference": true,
+      "settings": {
+        "width": 32,
+        "height": 18,
+        "samples": 4,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.15,
+          0.15,
+          0.15
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            30,
+            30,
+            30
+          ]
+        },
+        "camera": {
+          "position": [
+            2.5,
+            2,
+            4
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65
+        }
+      },
+      "revision": "sha256:57424a530db371d24c1b9120099820a72118df91ad307401049a186e509d61c5",
+      "report": {
+        "byte_order": "little",
+        "entities": {
+          "Camera": "aa6ef51a2d4c62627c0f7c8ecffd4f83",
+          "Cube": "30224f67c8d1e5bff595779819ab39fe",
+          "Light": "326b89c1156ed7885bc8f2656e3f670e"
+        },
+        "losses": [
+          "Exact original container retained as inert provenance; scripts, UI, custom properties and non-render mesh metadata are source-only. Exporting that source does not incorporate native edits.",
+          "Source render engine, sampling, display transform and compositor outputs are not reproduced; native caller sampling/output settings apply.",
+          "The explicit meters_per_unit policy controls all geometry, translations and clipping; source unit scale is reported separately.",
+          "Light converted to one isotropic point using RGB times source power divided by4pi; source radius 3m and source engine shadow controls are not evaluated. Lighting is a static render-setting value, not bound to later entity edits.",
+          "Constant Principled base color, metallic, roughness and emission use the native single-scattering metallic/roughness BRDF; source distribution/subsurface implementation and exact renderer parity are not claimed."
+        ],
+        "materials": {
+          "Material": "446adcae7297995e44778902b8baef37"
+        },
+        "pointer_bits": 64,
+        "policy": {
+          "allow_point_light_approximation": true,
+          "allow_principled_approximation": true,
+          "meters_per_unit": 1.0,
+          "scene": "Scene"
+        },
+        "profile": "blend-293-static-v1",
+        "selected_camera": "aa6ef51a2d4c62627c0f7c8ecffd4f83",
+        "selected_light": "326b89c1156ed7885bc8f2656e3f670e",
+        "source_asset": "sha256:14fb145263d902ba75146b25f663679f5d3d2fba279075dfc9417ffa3addb824",
+        "source_asset_json_bytes": 1914238,
+        "source_bytes": 804804,
+        "source_digest": "sha256:339bc1c5cdc7fb0f3a9250f66d9616b4511e42bf08feb31ccf01344b5db655ea",
+        "source_unit_scale": 1.0,
+        "version": 293
+      },
+      "empty_revision": "sha256:698d17fa7ce8e4337b830fe0dac329c38d06193dd65263df269e478f741a3096",
+      "archive": "artifacts/blend-static/run-20260906T163349Z/blend-workflow/startup-293-archive/document/document.json",
+      "cpu_gpu_rmse": 1.069480302241087e-08,
+      "native_mesh": {
+        "attributes": {
+          "UVMap": {
+            "domain": "Corner",
+            "id": "168e7b07f42cc968df02c4f1e699e986",
+            "semantic": "uv",
+            "transfer": "Linear",
+            "values": {
+              "type": "Vec2",
+              "values": [
+                [
+                  0.625,
+                  0.5
+                ],
+                [
+                  0.875,
+                  0.5
+                ],
+                [
+                  0.875,
+                  0.75
+                ],
+                [
+                  0.625,
+                  0.75
+                ],
+                [
+                  0.375,
+                  0.75
+                ],
+                [
+                  0.625,
+                  0.75
+                ],
+                [
+                  0.625,
+                  1.0
+                ],
+                [
+                  0.375,
+                  1.0
+                ],
+                [
+                  0.375,
+                  0.0
+                ],
+                [
+                  0.625,
+                  0.0
+                ],
+                [
+                  0.625,
+                  0.25
+                ],
+                [
+                  0.375,
+                  0.25
+                ],
+                [
+                  0.125,
+                  0.5
+                ],
+                [
+                  0.375,
+                  0.5
+                ],
+                [
+                  0.375,
+                  0.75
+                ],
+                [
+                  0.125,
+                  0.75
+                ],
+                [
+                  0.375,
+                  0.5
+                ],
+                [
+                  0.625,
+                  0.5
+                ],
+                [
+                  0.625,
+                  0.75
+                ],
+                [
+                  0.375,
+                  0.75
+                ],
+                [
+                  0.375,
+                  0.25
+                ],
+                [
+                  0.625,
+                  0.25
+                ],
+                [
+                  0.625,
+                  0.5
+                ],
+                [
+                  0.375,
+                  0.5
+                ]
+              ]
+            }
+          }
+        },
+        "corner_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "corners": [
+          {
+            "edge": 0,
+            "vertex": 0
+          },
+          {
+            "edge": 1,
+            "vertex": 4
+          },
+          {
+            "edge": 2,
+            "vertex": 6
+          },
+          {
+            "edge": 3,
+            "vertex": 2
+          },
+          {
+            "edge": 4,
+            "vertex": 3
+          },
+          {
+            "edge": 2,
+            "vertex": 2
+          },
+          {
+            "edge": 5,
+            "vertex": 6
+          },
+          {
+            "edge": 6,
+            "vertex": 7
+          },
+          {
+            "edge": 5,
+            "vertex": 7
+          },
+          {
+            "edge": 1,
+            "vertex": 6
+          },
+          {
+            "edge": 7,
+            "vertex": 4
+          },
+          {
+            "edge": 8,
+            "vertex": 5
+          },
+          {
+            "edge": 9,
+            "vertex": 5
+          },
+          {
+            "edge": 10,
+            "vertex": 1
+          },
+          {
+            "edge": 6,
+            "vertex": 3
+          },
+          {
+            "edge": 8,
+            "vertex": 7
+          },
+          {
+            "edge": 11,
+            "vertex": 1
+          },
+          {
+            "edge": 3,
+            "vertex": 0
+          },
+          {
+            "edge": 4,
+            "vertex": 2
+          },
+          {
+            "edge": 10,
+            "vertex": 3
+          },
+          {
+            "edge": 7,
+            "vertex": 5
+          },
+          {
+            "edge": 0,
+            "vertex": 4
+          },
+          {
+            "edge": 11,
+            "vertex": 0
+          },
+          {
+            "edge": 9,
+            "vertex": 1
+          }
+        ],
+        "edge_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "edges": [
+          [
+            0,
+            4
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "face_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "face_offsets": [
+          0,
+          4,
+          8,
+          12,
+          16,
+          20,
+          24
+        ],
+        "point_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "positions": {
+          "precision": "F64",
+          "values": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              -1.0
+            ],
+            [
+              1.0,
+              -1.0,
+              1.0
+            ],
+            [
+              1.0,
+              -1.0,
+              -1.0
+            ],
+            [
+              -1.0,
+              1.0,
+              1.0
+            ],
+            [
+              -1.0,
+              1.0,
+              -1.0
+            ],
+            [
+              -1.0,
+              -1.0,
+              1.0
+            ],
+            [
+              -1.0,
+              -1.0,
+              -1.0
+            ]
+          ]
+        }
+      },
+      "native_entities": [
+        {
+          "id": "30224f67c8d1e5bff595779819ab39fe",
+          "material": "446adcae7297995e44778902b8baef37",
+          "mesh": "sha256:c709f62e67a60acd3ff72118b39ba72d4618ccf634ede54e6e0cbae1281ef12b",
+          "name": "Cube",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "326b89c1156ed7885bc8f2656e3f670e",
+          "material": null,
+          "mesh": null,
+          "name": "Light",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  4.076245307922363,
+                  1.0054539442062378,
+                  5.903861999511719
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    1.8663908243179321,
+                    0.055217113345861435,
+                    0.6503279805183411
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "aa6ef51a2d4c62627c0f7c8ecffd4f83",
+          "material": null,
+          "mesh": null,
+          "name": "Camera",
+          "parent": null,
+          "transform": {
+            "columns": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  7.358891487121582,
+                  -6.925790786743164,
+                  4.958309173583984
+                ]
+              },
+              {
+                "kind": "RotationRadians",
+                "value": {
+                  "angles": [
+                    0.8149281740188599,
+                    0.0,
+                    1.1093189716339111
+                  ],
+                  "order": "Zyx"
+                }
+              },
+              {
+                "kind": "Scale",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "native_settings": {
+        "camera": {
+          "lens": {
+            "aspect_ratio": 1.7777777777777777,
+            "far": 100.0,
+            "kind": "perspective",
+            "near": 0.10000000149011612,
+            "vertical_fov_radians": 0.3995964924806295
+          },
+          "position": [
+            7.358891487121582,
+            -6.925790786743164,
+            4.958309173583984
+          ],
+          "target": [
+            6.707333262807129,
+            -6.311620409769658,
+            4.5130377637939345
+          ],
+          "up": [
+            -0.32401346691161703,
+            0.30542085985789036,
+            0.8953956508848931
+          ],
+          "vertical_fov_radians": 0.3995964924806295
+        },
+        "environment": [
+          0.05087608844041824,
+          0.05087608844041824,
+          0.05087608844041824
+        ],
+        "height": 18,
+        "light": {
+          "intensity": [
+            79.57746887207031,
+            79.57746887207031,
+            79.57746887207031
+          ],
+          "position": [
+            4.076245307922363,
+            1.0054539442062378,
+            5.903861999511719
+          ]
+        },
+        "max_bytes": 16777216,
+        "max_depth": 4,
+        "samples": 4,
+        "seed": 73,
+        "width": 32
+      }
+    }
+  ]
+}

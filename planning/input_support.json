@@ -227,7 +227,12 @@
         "Never treat preserved node/modifier/driver bytes as evaluated behavior"
       ],
       "qualification": "Arbitrary .blend fidelity, embedded Python and unrestricted add-on execution are not promised. Animated, hair and volume profiles additionally depend on INPUT-03/04/05; procedural modifiers depend on M06.",
-      "status": "planned"
+      "status": "partial",
+      "implemented_profile": "blend-293-static-v1: uncompressed version293 static scene with authored hierarchy, flat polygon/corner meshes and named UVs, explicit constant Principled/point-light approximation policy, cameras, exact inert source assets and original-source extraction; native CLI and Wasm/browser CPU/Metal/WebGPU/OPFS workflows",
+      "remaining_scope": "Additional versions, compressed containers, textures and broader materials, animation/rigs, modifiers, node evaluation, hair/volume dependencies, linked libraries and writing edited Blender files remain separate profiles.",
+      "evidence": [
+        "evidence/blend-static/README.md"
+      ]
     }
   ]
 }

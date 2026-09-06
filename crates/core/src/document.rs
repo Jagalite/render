@@ -301,6 +301,8 @@ pub struct Snapshot {
     #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
     pub volume_assets: BTreeMap<String, Arc<crate::volumes::Asset>>,
     #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub source_assets: BTreeMap<String, Arc<crate::source::Asset>>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
     pub volume_bindings: BTreeMap<Id, String>,
     #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
     pub grooms: BTreeMap<Id, crate::groom::Groom>,
@@ -331,6 +333,7 @@ impl Snapshot {
             geometry_assets: BTreeMap::new(),
             geometry_bindings: BTreeMap::new(),
             volume_assets: BTreeMap::new(),
+            source_assets: BTreeMap::new(),
             volume_bindings: BTreeMap::new(),
             grooms: BTreeMap::new(),
             animation: None,
@@ -346,7 +349,8 @@ impl Snapshot {
         Ok(digest(&canonical(self)?))
     }
     pub fn validate(&self) -> Result<()> {
-        if self.version > 15
+        if self.version > 16
+            || (self.version < 16 && !self.source_assets.is_empty())
             || (self.version < 15
                 && (self.geometry_assets.values().any(|a| a.has_colors())
                     || self.grooms.values().any(|g| g.has_colors())))
@@ -442,6 +446,23 @@ impl Snapshot {
                     "reference",
                     "typed geometry attachment is missing or conflicts with a mesh",
                 ));
+            }
+        }
+        if self.source_assets.len() > crate::source::MAX_ASSETS
+            || self
+                .source_assets
+                .values()
+                .try_fold(0usize, |n, a| n.checked_add(a.bytes().len()))
+                .is_none_or(|n| n > crate::source::MAX_TOTAL_BYTES)
+        {
+            return Err(Error::new(
+                "budget",
+                "source assets exceed four containers or 4MiB",
+            ));
+        }
+        for (key, asset) in &self.source_assets {
+            if asset.content_id()? != *key {
+                return Err(Error::new("integrity", "source container digest mismatch"));
             }
         }
         if self.volume_assets.len() > 256 {
@@ -751,6 +772,9 @@ pub enum Command {
     SetGroom {
         entity: Id,
         groom: Option<crate::groom::Groom>,
+    },
+    PutSource {
+        asset: crate::source::Asset,
     },
     PutVolume {
         asset: crate::volumes::Asset,
@@ -1194,6 +1218,11 @@ fn apply(s: &mut Snapshot, c: &Command) -> Result<()> {
                 } else {
                     5
                 });
+        }
+        Command::PutSource { asset } => {
+            s.source_assets
+                .insert(asset.content_id()?, Arc::new(asset.clone()));
+            s.version = s.version.max(16);
         }
         Command::PutVolume { asset } => {
             s.volume_assets

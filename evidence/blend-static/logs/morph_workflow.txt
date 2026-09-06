@@ -1,0 +1,31 @@
+dense-init: passed
+dense-base: passed
+dense-import: passed
+dense-retry: passed
+dense-state: passed
+dense-cpu: passed
+dense-gpu: passed
+dense-archive: passed
+dense-restore: passed
+dense-restored-frame: passed
+dense-stale: expected stale_revision
+dense-unchanged: passed
+sparse-init: passed
+sparse-base: passed
+sparse-import: passed
+sparse-retry: passed
+sparse-state: passed
+sparse-cpu: passed
+sparse-gpu: passed
+sparse-archive: passed
+sparse-restore: passed
+sparse-restored-frame: passed
+sparse-stale: expected stale_revision
+sparse-unchanged: passed
+negative-init: passed
+negative-state: passed
+malformed: expected gltf_scene
+cancelled: expected cancelled
+budget: expected budget
+negative-unchanged: passed
+explicit-valid: passed

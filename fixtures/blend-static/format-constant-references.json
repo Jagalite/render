@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/blender/blender/cb886aba06d562ee629f2ee64f3692d008c68a35/source/blender/makesdna/DNA_layer_types.h",
+    "sha256": "464cce77489cc38e04053ea716a39ad0236cf46ae8fa52925265380d88055f3c",
+    "format_constant_declarations": [
+      "VIEW_LAYER_RENDER = (1 << 0),"
+    ],
+    "implementation_source_reused": false
+  },
+  {
+    "url": "https://raw.githubusercontent.com/blender/blender/cb886aba06d562ee629f2ee64f3692d008c68a35/source/blender/makesdna/DNA_camera_types.h",
+    "sha256": "0eb8cc3326a6909bf9ffde2cd9339dac13d5d9fad75416ad5966b099e0ebb287",
+    "format_constant_declarations": [
+      "CAM_DOF_ENABLED = (1 << 0),"
+    ],
+    "implementation_source_reused": false
+  },
+  {
+    "url": "https://raw.githubusercontent.com/blender/blender/cb886aba06d562ee629f2ee64f3692d008c68a35/source/blender/makesdna/DNA_node_types.h",
+    "sha256": "de36e84df062b0f37ae2efc619d7f512db5909984ae0453c6c3592e719e8285e",
+    "format_constant_declarations": [
+      "#define NODE_MUTED 512"
+    ],
+    "implementation_source_reused": false
+  }
+]

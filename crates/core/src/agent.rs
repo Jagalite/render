@@ -28,6 +28,16 @@ pub struct Edits {
 #[serde(tag = "method", rename_all = "snake_case", deny_unknown_fields)]
 pub enum Operation {
     Inspect,
+    ImportBlend {
+        bytes: Vec<u8>,
+        policy: blend::Policy,
+        settings: Settings,
+        base_revision: String,
+        idempotency_key: String,
+    },
+    ExportSource {
+        request: source::ExportRequest,
+    },
     ImportHair {
         bytes: Vec<u8>,
         policy: hair_import::Policy,
@@ -383,11 +393,28 @@ impl Session {
         idempotency_key: String,
         cancelled: &mut impl FnMut() -> bool,
     ) -> Result<Value> {
+        let (mut commands, report) = imported;
+        commands.push(Command::SetRenderSettings { settings });
+        self.import_commands(
+            principal,
+            (commands, report),
+            base_revision,
+            idempotency_key,
+            cancelled,
+        )
+    }
+    fn import_commands<R: Serialize>(
+        &mut self,
+        principal: &Principal,
+        imported: (Vec<Command>, R),
+        base_revision: String,
+        idempotency_key: String,
+        cancelled: &mut impl FnMut() -> bool,
+    ) -> Result<Value> {
         if cancelled() {
             return Err(Error::new("cancelled", "import cancelled before admission"));
         }
-        let (mut commands, report) = imported;
-        commands.push(Command::SetRenderSettings { settings });
+        let (commands, report) = imported;
         let request = document::Request {
             version: 0,
             base_revision,
@@ -422,7 +449,7 @@ impl Session {
     pub fn dispatch(&mut self, principal: &Principal, request: Request) -> Result<Value> {
         self.dispatch_cancellable(principal, request, || false)
     }
-    /// Checks cancellation at admission and throughout volume/HAIR import/evaluation.
+    /// Checks cancellation at admission and throughout blend/volume/HAIR import/evaluation.
     /// Other synchronous operations retain their existing bounded dispatch behavior.
     pub fn dispatch_cancellable(
         &mut self,
@@ -450,6 +477,34 @@ impl Session {
             Inspect => Ok(
                 json!({"revision":self.document.snapshot().revision()?,"document_digest":digest(&canonical(&self.document)?),"snapshot":self.document.snapshot(),"protected_digest":protected_digest(self.document.snapshot())?,"branches":self.branches.iter().filter(|(_,b)| b.owner == principal.id).map(|(n,_)| n).collect::<Vec<_>>(),"profile":"agent-rendering-v0","durability":"memory; explicit host save/export required"}),
             ),
+            ImportBlend {
+                bytes,
+                policy,
+                settings,
+                base_revision,
+                idempotency_key,
+            } => {
+                write_permission(principal)?;
+                let imported = blend::import(
+                    &bytes,
+                    self.document.snapshot().document_id,
+                    &policy,
+                    settings,
+                    &mut cancelled,
+                )?;
+                self.import_commands(
+                    principal,
+                    (imported.commands, imported.report),
+                    base_revision,
+                    idempotency_key,
+                    &mut cancelled,
+                )
+            }
+            ExportSource { request } => Ok(serde_json::to_value(source::export(
+                self.document.snapshot(),
+                &request,
+                &mut cancelled,
+            )?)?),
             ImportHair {
                 bytes,
                 policy,
@@ -777,7 +832,8 @@ impl Session {
     ) -> Result<Value> {
         let root_mutation = matches!(
             &request.operation,
-            Operation::ImportHair { .. }
+            Operation::ImportBlend { .. }
+                | Operation::ImportHair { .. }
                 | Operation::ImportVol { .. }
                 | Operation::ImportGlb { .. }
                 | Operation::ImportScene { .. }
@@ -831,6 +887,8 @@ impl Session {
 /// Stable names/versions and effects are reviewed independently of Session layout.
 pub fn registry() -> Vec<crate::api::Operation> {
     [
+        ("agent.import_blend",true,"bounded uncompressed Blender293 static scene with exact inert source preservation and explicit material/point-light approximations","decode, evaluation and before atomic publication; synchronous browser dispatch"),
+        ("agent.export_source",false,"export exact original source bytes at a pinned revision; does not apply native edits to source","before source access and delivery"),
         ("agent.import_hair",true,"HAIR polylines with explicit byte order, units, thickness, uniform-per-strand appearance or explicit linear_rgba_f32 controls, and bounded native sweep; 4 MiB input","decode, sweep evaluation and before atomic publication; synchronous browser dispatch"),
         ("agent.import_vol",true,"VOL3 density and optional aligned linear RGB emission; explicit cell-constant metric policy; 4 MiB input, 16384 occupied cells","decode, evaluation and before atomic publication; synchronous browser dispatch"),
         ("agent.render_root_cpu",false,"bounded CPU rendering for extended materials at a pinned root revision","evaluation and render boundaries"),

@@ -354,6 +354,73 @@
             "base_revision",
             "idempotency_key"
           ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "import_blend"
+            },
+            "bytes": {
+              "type": "array",
+              "maxItems": 1048576,
+              "items": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 255
+              }
+            },
+            "policy": {
+              "$ref": "#/$defs/blend_policy"
+            },
+            "settings": {
+              "$ref": "#/$defs/settings"
+            },
+            "base_revision": {
+              "$ref": "#/$defs/revision"
+            },
+            "idempotency_key": {
+              "$ref": "#/$defs/key"
+            }
+          },
+          "required": [
+            "method",
+            "bytes",
+            "policy",
+            "settings",
+            "base_revision",
+            "idempotency_key"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "export_source"
+            },
+            "request": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "revision": {
+                  "$ref": "#/$defs/revision"
+                },
+                "asset": {
+                  "$ref": "#/$defs/revision"
+                }
+              },
+              "required": [
+                "revision",
+                "asset"
+              ]
+            }
+          },
+          "required": [
+            "method",
+            "request"
+          ]
         }
       ]
     }
@@ -939,6 +1006,33 @@
         "representation",
         "roughness",
         "tessellation"
+      ]
+    },
+    "blend_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "scene": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "meters_per_unit": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "allow_principled_approximation": {
+          "type": "boolean"
+        },
+        "allow_point_light_approximation": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "scene",
+        "meters_per_unit",
+        "allow_principled_approximation",
+        "allow_point_light_approximation"
       ]
     }
   }

@@ -101,6 +101,8 @@ All output paths must be new and have existing parent directories.
 
 Import `source` variants:
 
+- `{ "format": "blend", "path": "scene.blend", "policy": { "scene": "Scene", "meters_per_unit": 1, "allow_principled_approximation": true, "allow_point_light_approximation": true } }`. The [bounded Blender 2.93 static profile](blend_static.md) requires caller sampling/output settings or an existing recipe. It supplies camera/lighting and preserves the exact inert source in the ordinary transaction.
+
 - `{ "format": "obj", "path": "mesh.obj", "entity": "<ID>", "name": "Mesh", "material": "<existing material ID>" }`. Material may be null; rendering still requires a supported material assignment. OBJ reports attribute/material losses.
 - `{ "format": "hair", "path": "strands.hair", "policy": { ... } }`. [HAIR strand input](hair_import.md) requires explicit byte order, units, thickness and color/coverage interpretation. It preserves native polylines and preflights bounded surface sweeps before publication.
 - `{ "format": "vol", "path": "density.vol", "emission": "emission.vol", "policy": { ... } }`. The optional emission path is an aligned RGB grid. [VOL3 input](volume_import.md) requires explicit units, bounds, cell reconstruction and optical settings; binary input is capped at4MiB and retained occupancy at16,384 cells. It renders through the native/browser Rust CPU profile.
@@ -111,9 +113,16 @@ Imported commands append transactionally to the current project. Stable-ID
 collisions reject; this interface does not silently replace the scene or invent a
 new namespace. An import retry rereads its explicit resources and uses the converted command
 payload as transaction identity. Changes that alter those commands reject under
-the same retry key; semantically ignored metadata does not create a new mutation. Native document replacement is explicit `restore` into a fresh project.
+the same retry key. Adapters that discard inert metadata may produce identical
+commands after such a metadata change. The Blender profile retains every source
+byte, so even an inert metadata change alters its source asset and import identity.
+Native document replacement is explicit `restore` into a fresh project.
 
-Export `content` is `{ "format": "document" }` or
+Exact original-source extraction accepts `{ "format": "source", "asset": "<content-key>" }`
+and writes `source/original.blend` plus a report. Native edits remain in native
+Document export; source extraction does not rewrite Blender data.
+
+Export `content` also accepts `{ "format": "document" }` or
 `{ "format": "obj", "entity": "<ID>", "at": { "clip": "<ID>", "time": { "numerator": 1, "denominator": 2 } } }`.
 OBJ `at` is optional. The OBJ path realizes visible evaluated surface triangles in
 world coordinates, including procedural geometry and deformation. It duplicates

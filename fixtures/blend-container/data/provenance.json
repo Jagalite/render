@@ -1,0 +1,39 @@
+{
+  "author": "Render project",
+  "license": "CC0-1.0",
+  "purpose": "Original minimal SDNA and relocation test corpus; not a Blender scene compatibility claim",
+  "files": [
+    {
+      "name": "32-little.blend",
+      "bytes": 276,
+      "sha256": "c48a2b3024d7e7ba65efb2cf70b025f23adc7090f4be06a7571246d188de828e",
+      "pointer_bytes": 4,
+      "byte_order": "little",
+      "version": 293
+    },
+    {
+      "name": "32-big.blend",
+      "bytes": 276,
+      "sha256": "b8abe7a45f9501846dcfd23756dd6c5e7c33e6bddff7035766fea4c6672725b3",
+      "pointer_bytes": 4,
+      "byte_order": "big",
+      "version": 293
+    },
+    {
+      "name": "64-little.blend",
+      "bytes": 308,
+      "sha256": "08f81907680f1c59dc8e343c38db30c327019e3efb28fb2f82a51e06ac6ab0b4",
+      "pointer_bytes": 8,
+      "byte_order": "little",
+      "version": 293
+    },
+    {
+      "name": "64-big.blend",
+      "bytes": 308,
+      "sha256": "7e5eee8b89ee77e5888bd57ce5a392ff951fede8195860181353e52d4caf66d2",
+      "pointer_bytes": 8,
+      "byte_order": "big",
+      "version": 293
+    }
+  ]
+}

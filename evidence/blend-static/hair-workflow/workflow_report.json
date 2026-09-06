@@ -1,0 +1,2005 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "default-le-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/000-default-le-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21649254100339022
+    },
+    {
+      "name": "default-le-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/001-default-le-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01242195900704246
+    },
+    {
+      "name": "default-le-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/002-default-le-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11553812499914784,
+      "resources": {
+        "maximum resident set size": 17088512,
+        "peak memory footprint": 2884672
+      }
+    },
+    {
+      "name": "default-le-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/003-default-le-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.028783041998394765
+    },
+    {
+      "name": "default-le-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/004-default-le-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02465916599612683
+    },
+    {
+      "name": "default-le-evaluate",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/005-default-le-evaluate.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024917999995523132
+    },
+    {
+      "name": "default-le-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/006-default-le-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20077675000356976,
+      "resources": {
+        "maximum resident set size": 18300928,
+        "peak memory footprint": 3245120
+      }
+    },
+    {
+      "name": "default-le-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/007-default-le-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5279512080014683,
+      "resources": {
+        "maximum resident set size": 36421632,
+        "peak memory footprint": 12895872
+      }
+    },
+    {
+      "name": "default-le-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/008-default-le-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1221019590011565
+    },
+    {
+      "name": "default-le-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/009-default-le-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09036208399629686
+    },
+    {
+      "name": "default-le-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/010-default-le-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20378683399758302
+    },
+    {
+      "name": "default-le-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/011-default-le-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5938349589996506
+    },
+    {
+      "name": "default-le-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/012-default-le-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.02505212499818299
+    },
+    {
+      "name": "zero-radius",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/013-zero-radius.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "curve",
+      "seconds": 0.015135499997995794
+    },
+    {
+      "name": "flags",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/014-flags.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_hair",
+      "seconds": 0.015432333995704539
+    },
+    {
+      "name": "trailing",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/015-trailing.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "hair",
+      "seconds": 0.014898167006322183
+    },
+    {
+      "name": "sweep-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/016-sweep-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.016711916992790066
+    },
+    {
+      "name": "cancel-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/017-cancel-import.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.010667750000720844
+    },
+    {
+      "name": "input-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/018-input-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.00997870801074896
+    },
+    {
+      "name": "cancel-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/019-cancel-render.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.011713041996699758
+    },
+    {
+      "name": "budget-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/budget-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/020-budget-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07681225000123959
+    },
+    {
+      "name": "transaction-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/budget-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/021-transaction-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.01662462500098627
+    },
+    {
+      "name": "budget-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/budget-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/022-budget-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012694165998254903
+    },
+    {
+      "name": "default-le-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/023-default-le-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020418457992491312
+    },
+    {
+      "name": "default-be-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/024-default-be-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08299266600806732
+    },
+    {
+      "name": "default-be-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/025-default-be-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012134417003835551
+    },
+    {
+      "name": "default-be-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/026-default-be-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10086312500061467,
+      "resources": {
+        "maximum resident set size": 17121280,
+        "peak memory footprint": 2917440
+      }
+    },
+    {
+      "name": "default-be-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/027-default-be-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.045059500000206754
+    },
+    {
+      "name": "default-be-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/028-default-be-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02027308300603181
+    },
+    {
+      "name": "default-be-evaluate",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/029-default-be-evaluate.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.026616290997480974
+    },
+    {
+      "name": "default-be-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/030-default-be-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3529649999982212,
+      "resources": {
+        "maximum resident set size": 18350080,
+        "peak memory footprint": 3294272
+      }
+    },
+    {
+      "name": "default-be-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/031-default-be-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6496366250066785,
+      "resources": {
+        "maximum resident set size": 36454400,
+        "peak memory footprint": 12928640
+      }
+    },
+    {
+      "name": "default-be-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/032-default-be-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12325183299253695
+    },
+    {
+      "name": "default-be-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-be-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/033-default-be-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09014979199855588
+    },
+    {
+      "name": "default-be-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-be-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/034-default-be-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20271549999597482
+    },
+    {
+      "name": "default-be-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-be-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/035-default-be-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6173061669978779
+    },
+    {
+      "name": "default-be-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/036-default-be-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.028996374996495433
+    },
+    {
+      "name": "default-be-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/037-default-be-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0198848750005709
+    },
+    {
+      "name": "arrays-le-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/038-arrays-le-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0833515419944888
+    },
+    {
+      "name": "arrays-le-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/039-arrays-le-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011040249999496154
+    },
+    {
+      "name": "arrays-le-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/040-arrays-le-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09067187500477303,
+      "resources": {
+        "maximum resident set size": 17399808,
+        "peak memory footprint": 3114112
+      }
+    },
+    {
+      "name": "arrays-le-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/041-arrays-le-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03391070899670012
+    },
+    {
+      "name": "arrays-le-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/042-arrays-le-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022394332991098054
+    },
+    {
+      "name": "arrays-le-evaluate",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/043-arrays-le-evaluate.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02690783399157226
+    },
+    {
+      "name": "arrays-le-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/044-arrays-le-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.35010862500348594,
+      "resources": {
+        "maximum resident set size": 18628608,
+        "peak memory footprint": 3507328
+      }
+    },
+    {
+      "name": "arrays-le-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/045-arrays-le-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5239527090016054,
+      "resources": {
+        "maximum resident set size": 36356096,
+        "peak memory footprint": 12748416
+      }
+    },
+    {
+      "name": "arrays-le-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/046-arrays-le-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13014620800095145
+    },
+    {
+      "name": "arrays-le-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-le-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/047-arrays-le-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09191466700576711
+    },
+    {
+      "name": "arrays-le-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-le-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/048-arrays-le-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20270904200151563
+    },
+    {
+      "name": "arrays-le-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-le-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/049-arrays-le-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6499119170039194
+    },
+    {
+      "name": "arrays-le-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/050-arrays-le-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.03949037499842234
+    },
+    {
+      "name": "arrays-le-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/051-arrays-le-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024724208007683046
+    },
+    {
+      "name": "arrays-be-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/052-arrays-be-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0893948329903651
+    },
+    {
+      "name": "arrays-be-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/053-arrays-be-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014439291000599042
+    },
+    {
+      "name": "arrays-be-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/054-arrays-be-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09782312499010004,
+      "resources": {
+        "maximum resident set size": 17416192,
+        "peak memory footprint": 3130496
+      }
+    },
+    {
+      "name": "arrays-be-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/055-arrays-be-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03798633399128448
+    },
+    {
+      "name": "arrays-be-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/056-arrays-be-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.026977874993463047
+    },
+    {
+      "name": "arrays-be-evaluate",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/057-arrays-be-evaluate.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03605450000031851
+    },
+    {
+      "name": "arrays-be-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/058-arrays-be-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.23283266701037064,
+      "resources": {
+        "maximum resident set size": 18628608,
+        "peak memory footprint": 3490880
+      }
+    },
+    {
+      "name": "arrays-be-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/059-arrays-be-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5499644170049578,
+      "resources": {
+        "maximum resident set size": 36274176,
+        "peak memory footprint": 12666496
+      }
+    },
+    {
+      "name": "arrays-be-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/060-arrays-be-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12058149999938905
+    },
+    {
+      "name": "arrays-be-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-be-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/061-arrays-be-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09240850000060163
+    },
+    {
+      "name": "arrays-be-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-be-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/062-arrays-be-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2256345829955535
+    },
+    {
+      "name": "arrays-be-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-be-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/063-arrays-be-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5821094999992056
+    },
+    {
+      "name": "arrays-be-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/064-arrays-be-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.03452895800000988
+    },
+    {
+      "name": "arrays-be-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/065-arrays-be-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021768582999357022
+    },
+    {
+      "name": "srgb-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/066-srgb-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08736883300298359
+    },
+    {
+      "name": "srgb-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/067-srgb-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.010693541989894584
+    },
+    {
+      "name": "srgb-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/068-srgb-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1013610840018373,
+      "resources": {
+        "maximum resident set size": 17121280,
+        "peak memory footprint": 2901056
+      }
+    },
+    {
+      "name": "srgb-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/069-srgb-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02377483301097527
+    },
+    {
+      "name": "srgb-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/070-srgb-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01622745800705161
+    },
+    {
+      "name": "srgb-evaluate",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/071-srgb-evaluate.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01827229099581018
+    },
+    {
+      "name": "srgb-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/072-srgb-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20022404099290725,
+      "resources": {
+        "maximum resident set size": 18300928,
+        "peak memory footprint": 3245120
+      }
+    },
+    {
+      "name": "srgb-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/073-srgb-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.41565008299949113,
+      "resources": {
+        "maximum resident set size": 36093952,
+        "peak memory footprint": 12568192
+      }
+    },
+    {
+      "name": "srgb-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/074-srgb-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12240662499971222
+    },
+    {
+      "name": "srgb-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/srgb-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/075-srgb-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10053949999564793
+    },
+    {
+      "name": "srgb-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/srgb-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/076-srgb-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21791095900698565
+    },
+    {
+      "name": "srgb-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/srgb-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/077-srgb-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.349754374998156
+    },
+    {
+      "name": "srgb-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/078-srgb-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.023664709005970508
+    },
+    {
+      "name": "srgb-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/079-srgb-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01344158299616538
+    },
+    {
+      "name": "scaled-radius-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/080-scaled-radius-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07317016599699855
+    },
+    {
+      "name": "scaled-radius-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/081-scaled-radius-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.00869608300854452
+    },
+    {
+      "name": "scaled-radius-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/082-scaled-radius-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09147679099987727,
+      "resources": {
+        "maximum resident set size": 17432576,
+        "peak memory footprint": 3228736
+      }
+    },
+    {
+      "name": "scaled-radius-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/083-scaled-radius-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018546332998084836
+    },
+    {
+      "name": "scaled-radius-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/084-scaled-radius-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01068829199357424
+    },
+    {
+      "name": "scaled-radius-evaluate",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/085-scaled-radius-evaluate.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012352000005193986
+    },
+    {
+      "name": "scaled-radius-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/086-scaled-radius-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19569720899744425,
+      "resources": {
+        "maximum resident set size": 18546688,
+        "peak memory footprint": 3490880
+      }
+    },
+    {
+      "name": "scaled-radius-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/087-scaled-radius-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.38378004099649843,
+      "resources": {
+        "maximum resident set size": 36339712,
+        "peak memory footprint": 12797504
+      }
+    },
+    {
+      "name": "scaled-radius-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/088-scaled-radius-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12161437500617467
+    },
+    {
+      "name": "scaled-radius-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/scaled-radius-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/089-scaled-radius-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09566895899479277
+    },
+    {
+      "name": "scaled-radius-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/scaled-radius-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/090-scaled-radius-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20344420899346005
+    },
+    {
+      "name": "scaled-radius-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/scaled-radius-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/091-scaled-radius-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3702672500076005
+    },
+    {
+      "name": "scaled-radius-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/092-scaled-radius-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.026313708003726788
+    },
+    {
+      "name": "scaled-radius-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/093-scaled-radius-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014708832997712307
+    }
+  ],
+  "variants": [
+    {
+      "name": "default-le",
+      "source": {
+        "format": "hair",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/hair-import/data/default-le.hair",
+        "policy": {
+          "byte_order": "little_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          }
+        }
+      },
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:b7885324513f40d39f0e28bc7972119e43fa54369620f0cd9e9b53ebb13becc5",
+      "report": {
+        "derived_samples": 6,
+        "derived_triangles": 72,
+        "derived_vertices": 40,
+        "geometry_asset_json_bytes": 1116,
+        "input_bytes": 200,
+        "material_groups": 1,
+        "observed_derived_json_bytes": 14303,
+        "policy": {
+          "byte_order": "little_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 1.0,
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-surface-v1",
+        "source_digest": "sha256:90b742445543dc6b3aef63c8bebb04946e0d0404c018fe7b5db0cd87dc04e2f3",
+        "source_flags": 2,
+        "source_points": 6,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "2840e4c83da6e13e457f18ba34172c61",
+            "entity": "00e88b0fef49e0112fed837cc85b516e",
+            "geometry_asset": "sha256:49b6c1173b3e5a5c05a8545e24d2ec6424b96b95636ef82c9058025ec44643ff",
+            "material": "9d4c1738a7d1b87fe5c2ad345ebd8c24",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "16e3108d24f1da2e35ac9c846ae73366",
+            "entity": "00e88b0fef49e0112fed837cc85b516e",
+            "geometry_asset": "sha256:49b6c1173b3e5a5c05a8545e24d2ec6424b96b95636ef82c9058025ec44643ff",
+            "material": "9d4c1738a7d1b87fe5c2ad345ebd8c24",
+            "point_count": 3,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "gpu_linear_rmse": 1.4047877612955271e-08,
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-le-archive/document/document.json",
+      "empty_revision": "sha256:7a4bd9cbf6adb9dddb30db1abe80c8a6169d6b154722d9b2d05802a720155193"
+    },
+    {
+      "name": "default-be",
+      "source": {
+        "format": "hair",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/hair-import/data/default-be.hair",
+        "policy": {
+          "byte_order": "big_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          }
+        }
+      },
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:59a5432865c5800aae930af2684d4dd0a93de56ac00e39c41c81b1e0b8f14a55",
+      "report": {
+        "derived_samples": 6,
+        "derived_triangles": 72,
+        "derived_vertices": 40,
+        "geometry_asset_json_bytes": 1116,
+        "input_bytes": 200,
+        "material_groups": 1,
+        "observed_derived_json_bytes": 14303,
+        "policy": {
+          "byte_order": "big_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 1.0,
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-surface-v1",
+        "source_digest": "sha256:b8dd3765251ee545d0dfbd9067ce035aaeb6741f67a234e6fe6a00c7da6af3e4",
+        "source_flags": 2,
+        "source_points": 6,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "3b89fa2db1fef115f358df37f17a30a4",
+            "entity": "cec6560b92029558d067bccd4b6d7e46",
+            "geometry_asset": "sha256:e001817d5a1cee1bc3f2809a2970f9a99395092ff905e96c1597cd554a6c6e5b",
+            "material": "32e1f70ab559bcd478eddf37bdde2f2d",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "9c437f9ba0b87ece1f3e49d797f3c1cf",
+            "entity": "cec6560b92029558d067bccd4b6d7e46",
+            "geometry_asset": "sha256:e001817d5a1cee1bc3f2809a2970f9a99395092ff905e96c1597cd554a6c6e5b",
+            "material": "32e1f70ab559bcd478eddf37bdde2f2d",
+            "point_count": 3,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "gpu_linear_rmse": 1.4047877612955271e-08,
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/default-be-archive/document/document.json",
+      "empty_revision": "sha256:7a4bd9cbf6adb9dddb30db1abe80c8a6169d6b154722d9b2d05802a720155193"
+    },
+    {
+      "name": "arrays-le",
+      "source": {
+        "format": "hair",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/hair-import/data/arrays-le.hair",
+        "policy": {
+          "byte_order": "little_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          }
+        }
+      },
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:c8d5956eb0bfd5a7fa37c812869a4f6a7c0870283a5d80197498f446f4283028",
+      "report": {
+        "derived_samples": 11,
+        "derived_triangles": 132,
+        "derived_vertices": 70,
+        "geometry_asset_json_bytes": 1422,
+        "input_bytes": 356,
+        "material_groups": 2,
+        "observed_derived_json_bytes": 29509,
+        "policy": {
+          "byte_order": "little_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 1.0,
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-surface-v1",
+        "source_digest": "sha256:5b65b9a8747601bfaaa0d60bf048421a689cfc1cf90163695c0226c6a9761d5f",
+        "source_flags": 31,
+        "source_points": 7,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "ead631d91f1455b129bc4153e6666959",
+            "entity": "ba9548df1de9f8170776fd960551bd49",
+            "geometry_asset": "sha256:eee79d6d559b5e24f2980bc2c5372586d90df54794e7b082d8132dbaa2a7f573",
+            "material": "bfb2e086928bb548ab22df3e4bdf99f1",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "fba0fc9e60f15f5e044dc35abb00d12b",
+            "entity": "b6b87b138415c09ff7afa9e4be737f90",
+            "geometry_asset": "sha256:392592f33801add75228827b33f2a12dc88f09eda220623a532d4f800b28cc59",
+            "material": "2240c3b4bdc1b358ddaa9b5fdd83b867",
+            "point_count": 4,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "gpu_linear_rmse": 1.420330539793946e-08,
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-le-archive/document/document.json",
+      "empty_revision": "sha256:7a4bd9cbf6adb9dddb30db1abe80c8a6169d6b154722d9b2d05802a720155193"
+    },
+    {
+      "name": "arrays-be",
+      "source": {
+        "format": "hair",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/hair-import/data/arrays-be.hair",
+        "policy": {
+          "byte_order": "big_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          }
+        }
+      },
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:a85b76475ac38ee6a8de8d21c03fc0b9cb08e40cb932a06ce4e6d88c9f422299",
+      "report": {
+        "derived_samples": 11,
+        "derived_triangles": 132,
+        "derived_vertices": 70,
+        "geometry_asset_json_bytes": 1422,
+        "input_bytes": 356,
+        "material_groups": 2,
+        "observed_derived_json_bytes": 29509,
+        "policy": {
+          "byte_order": "big_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 1.0,
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-surface-v1",
+        "source_digest": "sha256:7a7d7a32ad2240a9b569fa4dcf38bf190e0acc8a8af2cc631354f638454db472",
+        "source_flags": 31,
+        "source_points": 7,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "cd7a43f90260f34a04045ac5c1f67ab4",
+            "entity": "1311cedc59765824ada6570cc3c9b24d",
+            "geometry_asset": "sha256:23d609a0cdc62b343a64b969005c5cc236df899153c415a8e8ed6dad27f00ae4",
+            "material": "781c7c18f3ab19f291462182f7ada260",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "d8044e4538e7bb964504a90c05dfc151",
+            "entity": "3007b82167ef927a2b36cc999e0143c4",
+            "geometry_asset": "sha256:51566720f7c02943e7d77d2f7d6922bba44de4c1339a2e1ba3af99e2f96b3cd8",
+            "material": "881c74c79572111b7f692ecc76173417",
+            "point_count": 4,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "gpu_linear_rmse": 1.420330539793946e-08,
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/arrays-be-archive/document/document.json",
+      "empty_revision": "sha256:7a4bd9cbf6adb9dddb30db1abe80c8a6169d6b154722d9b2d05802a720155193"
+    },
+    {
+      "name": "srgb",
+      "source": {
+        "format": "hair",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/hair-import/data/default-le.hair",
+        "policy": {
+          "byte_order": "little_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          }
+        }
+      },
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:3e486abc8a1d06e58ff3db415710a5a4e9d3c949e4ea6a8d67255c6d75e44e44",
+      "report": {
+        "derived_samples": 6,
+        "derived_triangles": 72,
+        "derived_vertices": 40,
+        "geometry_asset_json_bytes": 1116,
+        "input_bytes": 200,
+        "material_groups": 1,
+        "observed_derived_json_bytes": 14303,
+        "policy": {
+          "byte_order": "little_endian",
+          "color_space": "srgb",
+          "meters_per_unit": 1.0,
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-surface-v1",
+        "source_digest": "sha256:90b742445543dc6b3aef63c8bebb04946e0d0404c018fe7b5db0cd87dc04e2f3",
+        "source_flags": 2,
+        "source_points": 6,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "0ff4deb8adfbc0d4c1a233a267d9f105",
+            "entity": "dbf3901c45697d95e3d117ae121efbca",
+            "geometry_asset": "sha256:f8d3f77cd26cf44258d1c6b76faa9530465900725aacff684a50f408dd044e83",
+            "material": "67c69db36f77957fd01bba01974c8667",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "1151243ee262b595cea40b7fe84c96b2",
+            "entity": "dbf3901c45697d95e3d117ae121efbca",
+            "geometry_asset": "sha256:f8d3f77cd26cf44258d1c6b76faa9530465900725aacff684a50f408dd044e83",
+            "material": "67c69db36f77957fd01bba01974c8667",
+            "point_count": 3,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "gpu_linear_rmse": 1.3883757528782675e-08,
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/srgb-archive/document/document.json",
+      "empty_revision": "sha256:7a4bd9cbf6adb9dddb30db1abe80c8a6169d6b154722d9b2d05802a720155193"
+    },
+    {
+      "name": "scaled-radius",
+      "source": {
+        "format": "hair",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/fixtures/hair-import/data/default-le.hair",
+        "policy": {
+          "byte_order": "little_endian",
+          "meters_per_unit": 2,
+          "thickness": "radius",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          }
+        }
+      },
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            5
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2,
+            "ymag": 2,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:046cd97bc9895bf903b9285de6272eea51199936ab0a02d2bb73efa8add13861",
+      "report": {
+        "derived_samples": 6,
+        "derived_triangles": 132,
+        "derived_vertices": 70,
+        "geometry_asset_json_bytes": 1108,
+        "input_bytes": 200,
+        "material_groups": 1,
+        "observed_derived_json_bytes": 27691,
+        "policy": {
+          "byte_order": "little_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 2.0,
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "radius",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-surface-v1",
+        "source_digest": "sha256:90b742445543dc6b3aef63c8bebb04946e0d0404c018fe7b5db0cd87dc04e2f3",
+        "source_flags": 2,
+        "source_points": 6,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "ef2f010e160ee5a02c1e9fe34f778609",
+            "entity": "9b38bf7e15f96d7c05b7dec17c54fa2d",
+            "geometry_asset": "sha256:8ac3f3519324c3aaf0c47ec7cef3a8e482a7b0440afc196e0d40add067330a3e",
+            "material": "8a699bd68cce81eb85850171be63b6b3",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "ece63bd56861c77b570c4ef2dce4955c",
+            "entity": "9b38bf7e15f96d7c05b7dec17c54fa2d",
+            "geometry_asset": "sha256:8ac3f3519324c3aaf0c47ec7cef3a8e482a7b0440afc196e0d40add067330a3e",
+            "material": "8a699bd68cce81eb85850171be63b6b3",
+            "point_count": 3,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "gpu_linear_rmse": 1.3619265918800826e-08,
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/hair-workflow/scaled-radius-archive/document/document.json",
+      "empty_revision": "sha256:7a4bd9cbf6adb9dddb30db1abe80c8a6169d6b154722d9b2d05802a720155193"
+    }
+  ]
+}

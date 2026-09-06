@@ -1,0 +1,386 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/000-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09404450000147335
+    },
+    {
+      "name": "empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/001-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.009818542006541975
+    },
+    {
+      "name": "import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/002-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11496420799812768
+    },
+    {
+      "name": "imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/003-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.033203333005076274
+    },
+    {
+      "name": "author-stack",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/004-author-stack.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.45322654099436477
+    },
+    {
+      "name": "authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/005-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14315874999738298
+    },
+    {
+      "name": "cpu-nominal-failure",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/006-cpu-nominal-failure.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.2096741249988554
+    },
+    {
+      "name": "cpu-temporal-failure",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/007-cpu-temporal-failure.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.3109813750052126
+    },
+    {
+      "name": "cpu-valid",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/008-cpu-valid.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3594699590030359,
+      "resources": {
+        "maximum resident set size": 22659072,
+        "peak memory footprint": 7177344
+      }
+    },
+    {
+      "name": "cpu-partial",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/009-cpu-partial.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.4368462080019526
+    },
+    {
+      "name": "gpu-nominal-failure",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/010-gpu-nominal-failure.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.6339903749903897
+    },
+    {
+      "name": "gpu-temporal-failure",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/011-gpu-temporal-failure.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.65627829200821
+    },
+    {
+      "name": "gpu-valid",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/012-gpu-valid.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.7020964590046788,
+      "resources": {
+        "maximum resident set size": 40615936,
+        "peak memory footprint": 16582208
+      }
+    },
+    {
+      "name": "gpu-partial",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/013-gpu-partial.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.6951781670068158
+    },
+    {
+      "name": "archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/014-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.31092179199913517
+    },
+    {
+      "name": "restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/015-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.30811233300482854
+    },
+    {
+      "name": "restored-valid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/016-restored-valid.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.7377957919961773
+    },
+    {
+      "name": "stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/017-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.12230849999468774
+    },
+    {
+      "name": "unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/blend-static-profile/artifacts/blend-static/run-20260906T163349Z/coated-shutter/018-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.17034837500250433
+    }
+  ],
+  "variants": [],
+  "model": {
+    "kind": "coated",
+    "weight": 0.7,
+    "ior": 1.5,
+    "roughness": 0.25
+  },
+  "settings": {
+    "width": 2,
+    "height": 2,
+    "samples": 1,
+    "seed": 73,
+    "max_depth": 1,
+    "max_bytes": 16777216,
+    "environment": [
+      0.125,
+      0.25,
+      0.5
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        0,
+        0,
+        0
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        3
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 1,
+        "ymag": 1,
+        "near": 0.1,
+        "far": 8
+      }
+    }
+  },
+  "revision": "sha256:6801a1914ba6d95347afc640991d624cbf52c702a15b8a7d88b37de1519a450b",
+  "clip": "00000000000000000000000000007532",
+  "nominal_request": {
+    "revision": "sha256:6801a1914ba6d95347afc640991d624cbf52c702a15b8a7d88b37de1519a450b",
+    "clip": "00000000000000000000000000007532",
+    "time": {
+      "numerator": 0,
+      "denominator": 1
+    },
+    "shutter": {
+      "open": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "close": {
+        "numerator": 2,
+        "denominator": 1
+      },
+      "samples": 2
+    }
+  },
+  "temporal_request": {
+    "revision": "sha256:6801a1914ba6d95347afc640991d624cbf52c702a15b8a7d88b37de1519a450b",
+    "clip": "00000000000000000000000000007532",
+    "time": {
+      "numerator": 1,
+      "denominator": 1
+    },
+    "shutter": {
+      "open": {
+        "numerator": -1,
+        "denominator": 1
+      },
+      "close": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "samples": 2
+    }
+  },
+  "valid_request": {
+    "revision": "sha256:6801a1914ba6d95347afc640991d624cbf52c702a15b8a7d88b37de1519a450b",
+    "clip": "00000000000000000000000000007532",
+    "time": {
+      "numerator": 1,
+      "denominator": 1
+    },
+    "shutter": {
+      "open": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "close": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "samples": 1
+    }
+  },
+  "sequence_request": {
+    "revision": "sha256:6801a1914ba6d95347afc640991d624cbf52c702a15b8a7d88b37de1519a450b",
+    "clip": "00000000000000000000000000007532",
+    "shutter": {
+      "open": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "close": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "samples": 1
+    },
+    "times": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 2,
+        "denominator": 1
+      }
+    ]
+  }
+}

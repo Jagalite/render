@@ -1,0 +1,196 @@
+{
+  "scope": "Per-process import and 32x32 synthetic or 32x18 real CPU/Metal render observations; not benchmarks, allocator caps or broad file-size support",
+  "observations": [
+    {
+      "name": "quad-32-little-import",
+      "seconds": 0.2065487500076415,
+      "maximum resident set size": 19628032,
+      "peak memory footprint": 5063808
+    },
+    {
+      "name": "quad-32-little-cpu",
+      "seconds": 0.3500838750042021,
+      "maximum resident set size": 19873792,
+      "peak memory footprint": 4916352
+    },
+    {
+      "name": "quad-32-little-gpu",
+      "seconds": 0.38237804200616665,
+      "maximum resident set size": 35733504,
+      "peak memory footprint": 12273280
+    },
+    {
+      "name": "quad-32-big-import",
+      "seconds": 0.2267352920025587,
+      "maximum resident set size": 19513344,
+      "peak memory footprint": 4949120
+    },
+    {
+      "name": "quad-32-big-cpu",
+      "seconds": 0.3168697500077542,
+      "maximum resident set size": 20004864,
+      "peak memory footprint": 5047424
+    },
+    {
+      "name": "quad-32-big-gpu",
+      "seconds": 0.37170141701062676,
+      "maximum resident set size": 35733504,
+      "peak memory footprint": 12240512
+    },
+    {
+      "name": "quad-64-little-import",
+      "seconds": 0.3199024999921676,
+      "maximum resident set size": 20414464,
+      "peak memory footprint": 5850240
+    },
+    {
+      "name": "quad-64-little-cpu",
+      "seconds": 0.29039424999791663,
+      "maximum resident set size": 20316160,
+      "peak memory footprint": 5358720
+    },
+    {
+      "name": "quad-64-little-gpu",
+      "seconds": 0.47244304200285114,
+      "maximum resident set size": 36470784,
+      "peak memory footprint": 12961408
+    },
+    {
+      "name": "quad-64-big-import",
+      "seconds": 0.17096412500541192,
+      "maximum resident set size": 19922944,
+      "peak memory footprint": 5358720
+    },
+    {
+      "name": "quad-64-big-cpu",
+      "seconds": 0.31215962499845773,
+      "maximum resident set size": 20578304,
+      "peak memory footprint": 5751936
+    },
+    {
+      "name": "quad-64-big-gpu",
+      "seconds": 0.46791358300833963,
+      "maximum resident set size": 36585472,
+      "peak memory footprint": 13076096
+    },
+    {
+      "name": "quad-tilted-import",
+      "seconds": 0.18232841600547545,
+      "maximum resident set size": 19955712,
+      "peak memory footprint": 5391488
+    },
+    {
+      "name": "quad-tilted-cpu",
+      "seconds": 0.8716342499974417,
+      "maximum resident set size": 20234240,
+      "peak memory footprint": 5391488
+    },
+    {
+      "name": "quad-tilted-gpu",
+      "seconds": 0.8659534579928732,
+      "maximum resident set size": 35913728,
+      "peak memory footprint": 12387904
+    },
+    {
+      "name": "quad-instances-import",
+      "seconds": 0.19990691701241303,
+      "maximum resident set size": 19988480,
+      "peak memory footprint": 5407872
+    },
+    {
+      "name": "quad-instances-cpu",
+      "seconds": 0.3300710000039544,
+      "maximum resident set size": 20643840,
+      "peak memory footprint": 5686400
+    },
+    {
+      "name": "quad-instances-gpu",
+      "seconds": 0.45082937499682885,
+      "maximum resident set size": 36454400,
+      "peak memory footprint": 12961408
+    },
+    {
+      "name": "startup-293-import",
+      "seconds": 3.7807317080005305,
+      "maximum resident set size": 186531840,
+      "peak memory footprint": 173278720
+    },
+    {
+      "name": "startup-293-cpu",
+      "seconds": 7.960748792000231,
+      "maximum resident set size": 217006080,
+      "peak memory footprint": 275154688
+    },
+    {
+      "name": "startup-293-gpu",
+      "seconds": 8.614076083002146,
+      "maximum resident set size": 235061248,
+      "peak memory footprint": 282216640
+    }
+  ],
+  "source_storage": [
+    {
+      "name": "quad-32-little",
+      "source_bytes": 10416,
+      "canonical_asset_bytes": 25507,
+      "archive_json_bytes": 58862,
+      "meshes": 1,
+      "materials": 1,
+      "entities": 4
+    },
+    {
+      "name": "quad-32-big",
+      "source_bytes": 10416,
+      "canonical_asset_bytes": 25506,
+      "archive_json_bytes": 58860,
+      "meshes": 1,
+      "materials": 1,
+      "entities": 4
+    },
+    {
+      "name": "quad-64-little",
+      "source_bytes": 12440,
+      "canonical_asset_bytes": 29561,
+      "archive_json_bytes": 66970,
+      "meshes": 1,
+      "materials": 1,
+      "entities": 4
+    },
+    {
+      "name": "quad-64-big",
+      "source_bytes": 12440,
+      "canonical_asset_bytes": 29560,
+      "archive_json_bytes": 66968,
+      "meshes": 1,
+      "materials": 1,
+      "entities": 4
+    },
+    {
+      "name": "quad-tilted",
+      "source_bytes": 12440,
+      "canonical_asset_bytes": 29581,
+      "archive_json_bytes": 67294,
+      "meshes": 1,
+      "materials": 1,
+      "entities": 4
+    },
+    {
+      "name": "quad-instances",
+      "source_bytes": 12440,
+      "canonical_asset_bytes": 29562,
+      "archive_json_bytes": 67174,
+      "meshes": 1,
+      "materials": 1,
+      "entities": 4
+    },
+    {
+      "name": "startup-293",
+      "source_bytes": 804804,
+      "canonical_asset_bytes": 1914238,
+      "archive_json_bytes": 3838273,
+      "meshes": 1,
+      "materials": 1,
+      "entities": 3
+    }
+  ]
+}

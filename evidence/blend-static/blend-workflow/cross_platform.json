@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "name": "quad-32-little",
+      "native_wasm_cpu_pixels_identical": true,
+      "browser_cpu_gpu_rmse": 1.1064968609441493e-08,
+      "native_browser_gpu_max_channel_error": 3.725290298461914e-08,
+      "object_pass_identical": true
+    },
+    {
+      "name": "quad-32-big",
+      "native_wasm_cpu_pixels_identical": true,
+      "browser_cpu_gpu_rmse": 1.1064968609441493e-08,
+      "native_browser_gpu_max_channel_error": 3.725290298461914e-08,
+      "object_pass_identical": true
+    },
+    {
+      "name": "quad-64-little",
+      "native_wasm_cpu_pixels_identical": true,
+      "browser_cpu_gpu_rmse": 1.1064968609441493e-08,
+      "native_browser_gpu_max_channel_error": 3.725290298461914e-08,
+      "object_pass_identical": true
+    },
+    {
+      "name": "quad-64-big",
+      "native_wasm_cpu_pixels_identical": true,
+      "browser_cpu_gpu_rmse": 1.1064968609441493e-08,
+      "native_browser_gpu_max_channel_error": 3.725290298461914e-08,
+      "object_pass_identical": true
+    },
+    {
+      "name": "quad-tilted",
+      "native_wasm_cpu_pixels_identical": true,
+      "browser_cpu_gpu_rmse": 1.0743427148816293e-08,
+      "native_browser_gpu_max_channel_error": 4.842877388000488e-08,
+      "object_pass_identical": true
+    },
+    {
+      "name": "quad-instances",
+      "native_wasm_cpu_pixels_identical": true,
+      "browser_cpu_gpu_rmse": 1.4042892246540853e-08,
+      "native_browser_gpu_max_channel_error": 3.725290298461914e-08,
+      "object_pass_identical": true
+    },
+    {
+      "name": "startup-293",
+      "native_wasm_cpu_pixels_identical": true,
+      "browser_cpu_gpu_rmse": 1.2190054836664671e-08,
+      "native_browser_gpu_max_channel_error": 5.960464477539063e-08,
+      "object_pass_identical": true
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "results": [
+    {
+      "name": "quad-32-little",
+      "revision": "sha256:69240663202709b3b56a1ccd5b3ee9d8fe27300ae9a95eee1350504ab76071e5",
+      "source_digest": "sha256:1c943a2785d78497371dd2ce2e524df24ec350de00a9ff278b4ac34f4ccb96ce",
+      "source_bytes": 10416,
+      "opfs_restored": true,
+      "seconds": 0.23929999999701976
+    },
+    {
+      "name": "quad-32-big",
+      "revision": "sha256:5ae1257b6788d2c22ec7c6552316ab984118c8e0a9e1b5c305c960a6150266f2",
+      "source_digest": "sha256:e6752d8556a7327f22c8333f9edac340a430475c3bab26d843a13785693be36c",
+      "source_bytes": 10416,
+      "opfs_restored": true,
+      "seconds": 0.18829999999701977
+    },
+    {
+      "name": "quad-64-little",
+      "revision": "sha256:ba9bba8158d947a842c76881c79bc68528450341aa127c99ea0f826106272a44",
+      "source_digest": "sha256:c6dab947bd1b0a341fe9051db8a9409957e708d8db9285401bfdfb87251d87a5",
+      "source_bytes": 12440,
+      "opfs_restored": true,
+      "seconds": 0.1981000000089407
+    },
+    {
+      "name": "quad-64-big",
+      "revision": "sha256:20d38201210f9a31eceb5a4d0bbed909046e4c4c5013514a418879e055b2b8ab",
+      "source_digest": "sha256:9e01eca8c2f3d09a5eba67ef60efd4c580f4839b452bcea2983a03bc37faae70",
+      "source_bytes": 12440,
+      "opfs_restored": true,
+      "seconds": 0.1828999999910593
+    },
+    {
+      "name": "quad-tilted",
+      "revision": "sha256:3dac325b3bfb18b66b1c4ac48ac785a8accb9b67278e254654040cdb6f6f9403",
+      "source_digest": "sha256:1fee9a5e64684c685da5bf3dd2d1ce6870339a3f50de025af1b4490a934510f3",
+      "source_bytes": 12440,
+      "opfs_restored": true,
+      "seconds": 0.19859999999403954
+    },
+    {
+      "name": "quad-instances",
+      "revision": "sha256:a4f0a6621e29f9e2a30be32eda330dbe613edd60847c111d03aa33ebeb74496b",
+      "source_digest": "sha256:bdbf85806266a3bff956df52dede5352043a0fddc24b65f9eecbb6cecfd9b537",
+      "source_bytes": 12440,
+      "opfs_restored": true,
+      "seconds": 0.20239999999105932
+    },
+    {
+      "name": "startup-293",
+      "revision": "sha256:57424a530db371d24c1b9120099820a72118df91ad307401049a186e509d61c5",
+      "source_digest": "sha256:339bc1c5cdc7fb0f3a9250f66d9616b4511e42bf08feb31ccf01344b5db655ea",
+      "source_bytes": 804804,
+      "opfs_restored": true,
+      "seconds": 6.2206000000089405
+    }
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/152.0.7977.76",
+    "revision": "@0d89dfa2dd7c1ec4b8a14b9f303f887bb63b6174",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+    "jsVersion": "15.2.124.19"
+  }
+}

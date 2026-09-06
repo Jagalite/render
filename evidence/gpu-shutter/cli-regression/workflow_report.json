@@ -1,0 +1,441 @@
+{
+  "status": "passed",
+  "profile": "project-cli-v0",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/000-init.json"
+      ],
+      "seconds": 5.555909125003382,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "create-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/001-create-base.json"
+      ],
+      "seconds": 0.009513375000096858,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "create",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/002-create.json"
+      ],
+      "seconds": 0.10483383300015703,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/003-inspect.json"
+      ],
+      "seconds": 0.011501916997076478,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "bevel-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/004-bevel-base.json"
+      ],
+      "seconds": 0.011223749999771826,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "bevel",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/005-bevel.json"
+      ],
+      "seconds": 0.12413483399723191,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/006-inspect.json"
+      ],
+      "seconds": 0.024490834002790507,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "import-obj",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/007-import-obj.json"
+      ],
+      "seconds": 0.14372158300102456,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "animate-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/008-animate-base.json"
+      ],
+      "seconds": 0.032637083997542504,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "animate",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/009-animate.json"
+      ],
+      "seconds": 0.3686211660024128,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "authored",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/010-authored.json"
+      ],
+      "seconds": 0.045176874999015126,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-0",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/011-evaluate-0.json"
+      ],
+      "seconds": 0.11251729100331431,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-2",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/012-evaluate-2.json"
+      ],
+      "seconds": 0.05411070799891604,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-4",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/013-evaluate-4.json"
+      ],
+      "seconds": 0.07570408399624284,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-1",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/014-evaluate-1.json"
+      ],
+      "seconds": 0.06467104100011056,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-3",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/015-evaluate-3.json"
+      ],
+      "seconds": 0.0833637079995242,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-2",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/016-evaluate-2.json"
+      ],
+      "seconds": 0.0704729999997653,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/017-render.json"
+      ],
+      "seconds": 0.7539768339993316,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20135936,
+        "peak memory footprint": 4801664
+      }
+    },
+    {
+      "name": "frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/018-frame.json"
+      ],
+      "seconds": 0.5061480420044973,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20430848,
+        "peak memory footprint": 4899968
+      }
+    },
+    {
+      "name": "sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/019-sequence.json"
+      ],
+      "seconds": 2.200009666994447,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20627456,
+        "peak memory footprint": 5014656
+      }
+    },
+    {
+      "name": "products",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/020-products.json"
+      ],
+      "seconds": 0.5396072909934446,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20676608,
+        "peak memory footprint": 5063808
+      }
+    },
+    {
+      "name": "export-document",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/021-export-document.json"
+      ],
+      "seconds": 0.14533524999569636,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restore",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/restored",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/022-restore.json"
+      ],
+      "seconds": 0.18511375000525732,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "reopened",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/restored",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/023-reopened.json"
+      ],
+      "seconds": 0.023427459003869444,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "export-obj",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/024-export-obj.json"
+      ],
+      "seconds": 0.17342566700244788,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "stale-render",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/025-stale-render.json"
+      ],
+      "seconds": 0.050157499994384125,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "cancel-evaluation",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/026-cancel-evaluation.json"
+      ],
+      "seconds": 0.006582667003385723,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "output-budget",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/027-output-budget.json"
+      ],
+      "seconds": 0.14380237499426585,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "existing-output",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/028-existing-output.json"
+      ],
+      "seconds": 0.04504908400122076,
+      "exit_code": 1,
+      "expected_error": "output_exists"
+    },
+    {
+      "name": "gpu-cpu-reference",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/029-gpu-cpu-reference.json"
+      ],
+      "seconds": 0.29392262500186916,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20054016,
+        "peak memory footprint": 4719744
+      }
+    },
+    {
+      "name": "gpu-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/030-gpu-render.json"
+      ],
+      "seconds": 0.7273519589944044,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36159488,
+        "peak memory footprint": 11683456
+      }
+    },
+    {
+      "name": "final",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/cli-regression/requests/031-final.json"
+      ],
+      "seconds": 0.050936291001562495,
+      "exit_code": 0,
+      "expected_error": null
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "cpu_gpu": {
+    "linear_rmse": 7.685052442938142e-09,
+    "object_mismatches": 0,
+    "authored_revision": "sha256:4ec93862c2775b928a54e934179300aa4e01962224e559dcb8348c9da7e13d8e",
+    "max_depth": 2,
+    "depth_two_rendered": true
+  },
+  "revision": "sha256:4ec93862c2775b928a54e934179300aa4e01962224e559dcb8348c9da7e13d8e",
+  "random_access": true,
+  "restore_equal": true,
+  "rendering_preserves_source": true,
+  "sequence_frames": 5,
+  "fixture": "fixtures/project-cli",
+  "dependency_delta": "none"
+}

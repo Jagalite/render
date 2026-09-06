@@ -1,0 +1,223 @@
+{
+  "status": "passed",
+  "scope": "macOS ARM64 CPU/Metal, Rust Wasm in Node, Chrome WebGPU/OPFS; Linux and Windows compile only",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3336848330000066,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 5.901761374996568,
+      "log": "logs/clippy.txt"
+    },
+    {
+      "name": "native_tests",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 115.10363770900585,
+      "log": "logs/native_tests.txt"
+    },
+    {
+      "name": "gpu_tests",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_sequence",
+        "--test",
+        "multibounce_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored"
+      ],
+      "exit_code": 0,
+      "seconds": 20.215344833006384,
+      "log": "logs/gpu_tests.txt"
+    },
+    {
+      "name": "wasm_tests",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 229.73416649999854,
+      "log": "logs/wasm_tests.txt"
+    },
+    {
+      "name": "linux_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-unknown-linux-gnu",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 13.915456125003402,
+      "log": "logs/linux_check.txt"
+    },
+    {
+      "name": "windows_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-pc-windows-msvc",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 11.25999650000449,
+      "log": "logs/windows_check.txt"
+    },
+    {
+      "name": "browser_clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "-p",
+        "render-web",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 3.067496333998861,
+      "log": "logs/browser_clippy.txt"
+    },
+    {
+      "name": "native_build",
+      "command": [
+        "cargo",
+        "build",
+        "-p",
+        "render-host",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 5.090209333997336,
+      "log": "logs/native_build.txt"
+    },
+    {
+      "name": "browser_build",
+      "command": [
+        "sh",
+        "scripts/build-web.sh"
+      ],
+      "exit_code": 0,
+      "seconds": 74.77856604100089,
+      "log": "logs/browser_build.txt"
+    },
+    {
+      "name": "dependency_audit",
+      "command": [
+        "python3",
+        "scripts/dependency-audit.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7016736250006943,
+      "log": "logs/dependency_audit.txt"
+    },
+    {
+      "name": "cli_regression",
+      "command": [
+        "python3",
+        "scripts/project-cli-workflow.py",
+        "artifacts/gpu-shutter/run-20260906T042706Z/cli-regression",
+        "--gpu"
+      ],
+      "exit_code": 0,
+      "seconds": 12.87208633300179,
+      "log": "logs/cli_regression.txt"
+    },
+    {
+      "name": "animated_regression",
+      "command": [
+        "python3",
+        "scripts/animated-gltf-workflow.py",
+        "artifacts/gpu-shutter/run-20260906T042706Z/animated-regression",
+        "--gpu"
+      ],
+      "exit_code": 0,
+      "seconds": 5.087261291999312,
+      "log": "logs/animated_regression.txt"
+    },
+    {
+      "name": "gpu_shutter_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-shutter-workflow.py",
+        "artifacts/gpu-shutter/run-20260906T042706Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 4.150621666994994,
+      "log": "logs/gpu_shutter_workflow.txt"
+    },
+    {
+      "name": "browser_workflow",
+      "command": [
+        "node",
+        "scripts/gpu-shutter-browser.mjs",
+        "artifacts/gpu-shutter/run-20260906T042706Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 2.122818040996208,
+      "log": "logs/browser_workflow.txt"
+    }
+  ],
+  "build_environment": {
+    "CARGO_NET_OFFLINE": "true",
+    "CARGO_BUILD_JOBS": "2",
+    "CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUNNER": "wasm-bindgen-test-runner"
+  },
+  "native_test_count": 105,
+  "wasm_test_count": 86,
+  "gpu_test_count": 2
+}

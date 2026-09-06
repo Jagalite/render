@@ -94,7 +94,7 @@ cooperative cancellation. Completed frame artifacts remain explicit on interrupt
 | Import and exact-time evaluation | Rust | Same Rust/Wasm |
 | CPU frames and shutter sequences | Rust CPU | Same Rust/Wasm; existing API resource limits |
 | Individual evaluated opaque surfaces | Metal | WebGPU material/geometry subset |
-| GPU shutter sequence accumulation | Unsupported | Unsupported |
+| GPU shutter sequence accumulation | [GPU f32 frames/sequences](gpu_shutter.md) on Metal | WebGPU frames and awaited per-frame consumer |
 | Native document round trip | Journal/JSON | OPFS/JSON |
 | Animated glTF export, retargeting, drivers, extensions | Unsupported | Unsupported |
 

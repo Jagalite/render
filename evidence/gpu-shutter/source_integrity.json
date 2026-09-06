@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "runtime_and_tests_unchanged_during_successful_suite": true,
+  "runtime_files_verified": 72,
+  "post_capture_changes": [
+    "README.md",
+    "docs/animated_gltf.md",
+    "docs/input_support.md",
+    "docs/m07_m08.md",
+    "docs/multibounce_pbr.md",
+    "docs/project_cli.md",
+    "planning/engine-progress/README.md",
+    "planning/feature_matrix.json",
+    "planning/input_support.json",
+    "planning/milestones.json",
+    "scripts/gpu-shutter-browser.mjs"
+  ],
+  "browser_client_note": "Added stale sequence consumer mutation case before browser workflow execution; passed result records staleSequence conflict after one acknowledged frame. Other changes are documentation and capability status after workflow success."
+}

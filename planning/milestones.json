@@ -305,9 +305,10 @@
       "implemented_profile": "affine-lbs-shutter-v0",
       "evidence": [
         "evidence/m06-m08/README.md",
-        "evidence/m06-m08/acceptance_index.json"
+        "evidence/m06-m08/acceptance_index.json",
+        "evidence/gpu-shutter/README.md"
       ],
-      "qualification": "Canonical milestone gates completed for named experimental profiles in docs/m07_m08.md; advanced compatibility extensions remain explicit separate capabilities."
+      "qualification": "Canonical milestone gates completed for named experimental profiles in docs/m07_m08.md; advanced compatibility extensions remain explicit separate capabilities. gpu-f32-animation-v0 extends the CPU shutter profile to Metal/WebGPU."
     },
     {
       "id": "M09",

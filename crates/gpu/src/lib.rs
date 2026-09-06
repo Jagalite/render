@@ -1,5 +1,6 @@
 //! Disposable GPU resources consuming immutable evaluated snapshots.
 mod raster;
+mod sequence;
 use render_core::{
     Error, Result, canonical, digest,
     render::{Geometry, Image, RenderReceipt, Scene, Settings},
@@ -23,6 +24,13 @@ pub struct Capabilities {
     pub max_storage_binding_bytes: u32,
     pub max_workgroups: u32,
     pub hardware_ray_required: bool,
+}
+struct FrameTarget<'a> {
+    buffer: &'a wgpu::Buffer,
+    weight: f32,
+    accumulate: bool,
+    preserve_passes: bool,
+    readback: bool,
 }
 pub struct Renderer {
     device: wgpu::Device,
@@ -295,7 +303,7 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
             1e30,
         ),
     };
-    let params = vec![
+    let mut params = vec![
         [
             s.width as f32,
             s.height as f32,
@@ -334,6 +342,7 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
             0.,
         ],
     ];
+    params.push([1., 0., 0., 0.]);
     if geometry
         .iter()
         .chain(&instances)
@@ -477,6 +486,20 @@ impl Renderer {
         cancelled: &AtomicBool,
         submitted: impl FnOnce(),
     ) -> Result<Image> {
+        let values = self
+            .render_pixels(scene, s, start_sample, cancelled, submitted, None)
+            .await?;
+        self.image_from_values(scene, s, start_sample, values)
+    }
+    async fn render_pixels(
+        &mut self,
+        scene: &Scene,
+        s: &Settings,
+        start_sample: u32,
+        cancelled: &AtomicBool,
+        submitted: impl FnOnce(),
+        target: Option<FrameTarget<'_>>,
+    ) -> Result<Vec<f32>> {
         if cancelled.load(Ordering::Acquire) {
             return Err(Error::new(
                 "cancelled",
@@ -489,8 +512,21 @@ impl Renderer {
                 "recreate GPU resources from snapshot",
             ));
         }
-        let p = pack(scene, s, start_sample)?;
+        let mut p = pack(scene, s, start_sample)?;
+        if let Some(t) = &target {
+            p.params[10] = [
+                t.weight,
+                f32::from(t.accumulate),
+                f32::from(t.preserve_passes),
+                0.,
+            ];
+        }
         let output_size = u64::from(s.width) * u64::from(s.height) * 32;
+        let readback_size = if target.as_ref().is_some_and(|t| !t.readback) {
+            4
+        } else {
+            output_size
+        };
         let sizes = [
             p.geometry.len() as u64 * 16,
             p.instances.len() as u64 * 16,
@@ -501,7 +537,7 @@ impl Renderer {
         if sizes.iter().any(|&size| {
             size > self.capabilities.max_buffer_bytes
                 || size > u64::from(self.capabilities.max_storage_binding_bytes)
-        }) || sizes.iter().sum::<u64>() + output_size > s.max_bytes
+        }) || sizes.iter().sum::<u64>() + readback_size > s.max_bytes
         {
             return Err(Error::new(
                 "budget",
@@ -551,26 +587,27 @@ impl Renderer {
                 contents: &bytes(&p.params),
                 usage: wgpu::BufferUsages::STORAGE,
             });
-        let output = self.device.create_buffer(&wgpu::BufferDescriptor {
-            label: Some("linear color and diagnostic passes"),
-            size: output_size,
-            usage: wgpu::BufferUsages::STORAGE | wgpu::BufferUsages::COPY_SRC,
-            mapped_at_creation: false,
+        let owned_output = target.is_none().then(|| {
+            self.device.create_buffer(&wgpu::BufferDescriptor {
+                label: Some("linear color and diagnostic passes"),
+                size: output_size,
+                usage: wgpu::BufferUsages::STORAGE | wgpu::BufferUsages::COPY_SRC,
+                mapped_at_creation: false,
+            })
         });
+        let output = target
+            .as_ref()
+            .map(|t| t.buffer)
+            .or(owned_output.as_ref())
+            .expect("output target");
         let staging = self.device.create_buffer(&wgpu::BufferDescriptor {
-            label: Some("bounded readback"),
-            size: output_size,
+            label: Some("bounded readback or submission fence"),
+            size: readback_size,
             usage: wgpu::BufferUsages::MAP_READ | wgpu::BufferUsages::COPY_DST,
             mapped_at_creation: false,
         });
         let geometry = &self.geometry_cache.as_ref().expect("uploaded").1;
-        let buffers = [
-            geometry,
-            &instance_buffer,
-            &params,
-            &output,
-            &texture_buffer,
-        ];
+        let buffers = [geometry, &instance_buffer, &params, output, &texture_buffer];
         let entries = buffers
             .iter()
             .enumerate()
@@ -594,7 +631,7 @@ impl Renderer {
             pass.set_bind_group(0, &bind, &[]);
             pass.dispatch_workgroups(workgroups, 1, 1);
         }
-        encoder.copy_buffer_to_buffer(&output, 0, &staging, 0, output_size);
+        encoder.copy_buffer_to_buffer(output, 0, &staging, 0, readback_size);
         self.queue.submit([encoder.finish()]);
         submitted();
         let state = Arc::new(Mutex::new((None, None::<std::task::Waker>)));
@@ -657,6 +694,18 @@ impl Renderer {
         staging.unmap();
         if values.iter().any(|v| !v.is_finite()) {
             return Err(Error::new("numerics", "GPU produced nonfinite output"));
+        }
+        Ok(values)
+    }
+    fn image_from_values(
+        &self,
+        scene: &Scene,
+        s: &Settings,
+        start_sample: u32,
+        values: Vec<f32>,
+    ) -> Result<Image> {
+        if values.len() != (s.width as usize * s.height as usize * 8) {
+            return Err(Error::new("readback", "complete image readback required"));
         }
         let mut linear = vec![];
         let mut depth = vec![];

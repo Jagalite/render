@@ -51,8 +51,8 @@ work without increasing per-path storage. CPU polls cancellation at each path
 vertex; native/browser GPU cancellation is acknowledged at the existing submission
 and completion boundaries, not by preempting a running GPU dispatch. CLI wall and
 output budgets, revisions, permissions, idempotency and artifact publication retain
-the ordinary adapters. GPU advanced scattering, sparse media and shutter sequence
-accumulation remain separate unsupported profiles.
+the ordinary adapters. GPU advanced scattering and sparse media remain unsupported.
+[GPU shutter frames/sequences](gpu_shutter.md) now have separate acceptance evidence.
 
 ## Validation and reproduction
 

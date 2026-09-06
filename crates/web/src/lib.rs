@@ -39,6 +39,17 @@ mod browser {
         }
         Ok(())
     }
+    struct PreviewGuard(std::rc::Rc<std::cell::Cell<bool>>);
+    impl Drop for PreviewGuard {
+        fn drop(&mut self) {
+            self.0.set(false);
+        }
+    }
+    fn frame_json(frame: &sequence::Frame) -> Result<String> {
+        let image = &frame.image;
+        serde_json::to_string(&serde_json::json!({"receipt":image.receipt,"evaluation":frame.evaluation,"temporal_times":frame.temporal_times,"inspection":{"visible_pixels":image.objects.iter().filter(|id|id.is_some()).count()},"passes":{"linear_rgb":image.linear,"depth_meters":image.depth,"normals_world":image.normals,"object_ids":image.objects}}))
+            .map_err(|e| Error::new("serialization", e.to_string()))
+    }
     #[wasm_bindgen]
     impl BrowserAgent {
         #[wasm_bindgen(constructor)]
@@ -78,13 +89,7 @@ mod browser {
             if self.busy.replace(true) {
                 return Err(js("one GPU preview per agent session"));
             }
-            struct Guard(std::rc::Rc<std::cell::Cell<bool>>);
-            impl Drop for Guard {
-                fn drop(&mut self) {
-                    self.0.set(false);
-                }
-            }
-            let guard = Guard(self.busy.clone());
+            let guard = PreviewGuard(self.busy.clone());
             self.cancelled
                 .store(false, std::sync::atomic::Ordering::Release);
             let (snapshot, settings) = self
@@ -115,6 +120,108 @@ mod browser {
                 Ok(JsValue::from_str(
                     &serde_json::to_string(&result).map_err(js)?,
                 ))
+            }))
+        }
+        /// A pinned animated preview does not qualify a static variant for commit.
+        pub fn preview_frame_gpu(
+            &self,
+            branch: &str,
+            request_json: &str,
+        ) -> std::result::Result<js_sys::Promise, JsValue> {
+            if request_json.len() > 1024 * 1024 {
+                return Err(js("budget: frame request exceeds 1 MiB"));
+            }
+            let request: sequence::FrameRequest = serde_json::from_str(request_json).map_err(js)?;
+            if self.busy.replace(true) {
+                return Err(js("one GPU preview per agent session"));
+            }
+            let guard = PreviewGuard(self.busy.clone());
+            self.cancelled
+                .store(false, std::sync::atomic::Ordering::Release);
+            let (snapshot, _) = self
+                .session
+                .borrow()
+                .render_input(&agent_principal(), branch, &request.revision)
+                .map_err(js)?;
+            request.validate(&snapshot).map_err(js)?;
+            let session = self.session.clone();
+            let cancelled = self.cancelled.clone();
+            let branch = branch.to_owned();
+            Ok(future_to_promise(async move {
+                let _guard = guard;
+                if cancelled.load(std::sync::atomic::Ordering::Acquire) {
+                    return Err(js("cancelled: frame discarded"));
+                }
+                let mut gpu = render_gpu::Renderer::new().await.map_err(js)?;
+                let frame = gpu
+                    .render_frame(&snapshot, &request, &cancelled)
+                    .await
+                    .map_err(js)?;
+                session
+                    .borrow()
+                    .render_input(&agent_principal(), &branch, &request.revision)
+                    .map_err(js)?;
+                Ok(JsValue::from_str(&frame_json(&frame).map_err(js)?))
+            }))
+        }
+        /// Await the consumer after each completed frame. The consumer owns
+        /// artifact publication; rejection leaves explicitly partial delivery.
+        pub fn preview_sequence_gpu(
+            &self,
+            branch: &str,
+            request_json: &str,
+            emit: js_sys::Function,
+        ) -> std::result::Result<js_sys::Promise, JsValue> {
+            if request_json.len() > 1024 * 1024 {
+                return Err(js("budget: sequence request exceeds 1 MiB"));
+            }
+            let request: sequence::SequenceRequest =
+                serde_json::from_str(request_json).map_err(js)?;
+            if self.busy.replace(true) {
+                return Err(js("one GPU preview per agent session"));
+            }
+            let guard = PreviewGuard(self.busy.clone());
+            self.cancelled
+                .store(false, std::sync::atomic::Ordering::Release);
+            let (snapshot, _) = self
+                .session
+                .borrow()
+                .render_input(&agent_principal(), branch, &request.revision)
+                .map_err(js)?;
+            request.validate(&snapshot).map_err(js)?;
+            let session = self.session.clone();
+            let cancelled = self.cancelled.clone();
+            let branch = branch.to_owned();
+            Ok(future_to_promise(async move {
+                let _guard = guard;
+                let mut delivered = 0usize;
+                let mut acknowledged = 0usize;
+                let result: std::result::Result<JsValue, JsValue> = async {
+                    let check = || -> std::result::Result<(), JsValue> {
+                        if cancelled.load(std::sync::atomic::Ordering::Acquire) { return Err(js("cancelled: sequence stopped")); }
+                        session.borrow().render_input(&agent_principal(), &branch, &request.revision).map_err(js)?;
+                        Ok(())
+                    };
+                    check()?;
+                    let mut gpu = render_gpu::Renderer::new().await.map_err(js)?;
+                    let mut receipts = vec![];
+                    for (index, &time) in request.times.iter().enumerate() {
+                        check()?;
+                        let frame = gpu.render_frame(&snapshot, &sequence::FrameRequest {
+                            revision: request.revision.clone(), clip: request.clip, time, shutter: request.shutter.clone(),
+                        }, &cancelled).await.map_err(js)?;
+                        check()?;
+                        let data = frame_json(&frame).map_err(js)?;
+                        delivered += 1;
+                        let accepted = emit.call2(&JsValue::UNDEFINED, &JsValue::from_f64(index as f64), &JsValue::from_str(&data))?;
+                        JsFuture::from(js_sys::Promise::resolve(&accepted)).await?;
+                        acknowledged += 1;
+                        receipts.push(frame.image.receipt);
+                        check()?;
+                    }
+                    Ok(JsValue::from_str(&serde_json::json!({"status":"complete","authored_revision":request.revision,"frames":acknowledged,"receipts":receipts}).to_string()))
+                }.await;
+                result.map_err(|error| js(serde_json::json!({"status":"partial","delivered_frames":delivered,"acknowledged_frames":acknowledged,"error":error.as_string().unwrap_or_else(|| format!("{error:?}"))})))
             }))
         }
         /// Web Lock plus compare-and-publish. Null expected_document_digest creates a

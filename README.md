@@ -51,3 +51,6 @@ authoring, explicit file imports, exact-time evaluation, scene/frame/sequence
 rendering, imaging and exports. Run `target/debug/render-host project --help`.
 [CLI validation evidence](evidence/project-cli/README.md) includes a complete
 independent command-line workflow and cancellation/recovery tests.
+
+[GPU shutter frames and streaming sequences](docs/gpu_shutter.md) are validated
+on Metal/WebGPU through the CLI and browser APIs; see [acceptance evidence](evidence/gpu-shutter/README.md).

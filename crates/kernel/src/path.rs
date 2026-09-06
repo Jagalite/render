@@ -627,9 +627,39 @@ pub fn kernel() -> Kernel {
             set(i("sample"), i("sample") + u(1)),
         ],
     ));
+    // Each invocation exclusively owns its pixel. Temporal samples are separate
+    // ordered dispatches, so accumulation needs no atomics or cross-lane barriers.
+    body.push(var(
+        "color",
+        v("sum") / param(0).field("z") * param(10).field("x"),
+    ));
+    body.push(if_(
+        param(10).field("y").gt(f(0.)),
+        vec![set(
+            v("color"),
+            xyz(read("output", i("pixel") * u(2))) + v("color"),
+        )],
+    ));
+    body.push(if_(
+        param(10).field("z").gt(f(0.)),
+        vec![
+            set(
+                s("first_depth"),
+                read("output", i("pixel") * u(2)).field("w"),
+            ),
+            set(
+                v("first_normal"),
+                xyz(read("output", i("pixel") * u(2) + u(1))),
+            ),
+            set(
+                s("first_instance"),
+                read("output", i("pixel") * u(2) + u(1)).field("w"),
+            ),
+        ],
+    ));
     body.push(set(
         read("output", i("pixel") * u(2)),
-        vec4(v("sum") / param(0).field("z"), s("first_depth")),
+        vec4(v("color"), s("first_depth")),
     ));
     body.push(set(
         read("output", i("pixel") * u(2) + u(1)),

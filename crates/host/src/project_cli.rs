@@ -60,9 +60,10 @@ struct Sample {
     clip: Id,
     time: Time,
 }
-#[derive(Deserialize)]
+#[derive(Default, Deserialize)]
 #[serde(rename_all = "snake_case")]
 enum Backend {
+    #[default]
     Cpu,
     Gpu,
 }
@@ -123,10 +124,14 @@ enum Operation {
         output: PathBuf,
     },
     Frame {
+        #[serde(default)]
+        backend: Backend,
         request: sequence::FrameRequest,
         output: PathBuf,
     },
     Sequence {
+        #[serde(default)]
+        backend: Backend,
         request: sequence::SequenceRequest,
         output: PathBuf,
     },
@@ -407,6 +412,15 @@ fn gpu(scene: &Scene, settings: &Settings, control: &Control) -> Result<Image> {
     control.check()?;
     // Reject unsupported scene profiles before attempting native device creation.
     render_gpu::pack(scene, settings, 0)?;
+    with_gpu(control, |renderer, cancelled| {
+        pollster::block_on(renderer.render(scene, settings, 0, cancelled))
+    })
+}
+fn with_gpu<T>(
+    control: &Control,
+    run: impl FnOnce(&mut render_gpu::Renderer, &AtomicBool) -> Result<T>,
+) -> Result<T> {
+    control.check()?;
     let cancelled = AtomicBool::new(false);
     let done = AtomicBool::new(false);
     std::thread::scope(|scope| {
@@ -420,7 +434,7 @@ fn gpu(scene: &Scene, settings: &Settings, control: &Control) -> Result<Image> {
         });
         let _finished = FinishFlag(&done);
         let mut renderer = pollster::block_on(render_gpu::Renderer::new())?;
-        pollster::block_on(renderer.render(scene, settings, 0, &cancelled))
+        run(&mut renderer, &cancelled)
     })
 }
 
@@ -627,7 +641,11 @@ fn execute(root: &Path, operation: Operation, control: &mut Control) -> Result<V
             })();
             out.finish(result)
         }
-        Operation::Frame { request, output } => {
+        Operation::Frame {
+            request,
+            output,
+            backend,
+        } => {
             pinned(&doc, &request.revision)?;
             let mut out = Output::new(
                 output,
@@ -635,8 +653,14 @@ fn execute(root: &Path, operation: Operation, control: &mut Control) -> Result<V
                 control.limits.max_output_bytes,
             )?;
             let result = (|| {
-                let frame =
-                    sequence::render_frame(doc.snapshot(), &request, || control.cancelled())?;
+                let frame = match backend {
+                    Backend::Cpu => {
+                        sequence::render_frame(doc.snapshot(), &request, || control.cancelled())?
+                    }
+                    Backend::Gpu => with_gpu(control, |gpu, cancelled| {
+                        pollster::block_on(gpu.render_frame(doc.snapshot(), &request, cancelled))
+                    })?,
+                };
                 out.image(
                     "frame",
                     &frame.image,
@@ -646,14 +670,39 @@ fn execute(root: &Path, operation: Operation, control: &mut Control) -> Result<V
             })();
             out.finish(result)
         }
-        Operation::Sequence { request, output } => {
+        Operation::Sequence {
+            request,
+            output,
+            backend,
+        } => {
             pinned(&doc, &request.revision)?;
             let mut out = Output::new(
                 output,
                 request.revision.clone(),
                 control.limits.max_output_bytes,
             )?;
-            let result=sequence::render_sequence(doc.snapshot(),&request,|i,frame|out.image(&format!("frame-{i:06}"),&frame.image,json!({"evaluation":frame.evaluation,"temporal_times":frame.temporal_times}),control),||control.cancelled()).map(|_|());
+            let emit = |i: usize, frame: &sequence::Frame| {
+                out.image(
+                    &format!("frame-{i:06}"),
+                    &frame.image,
+                    json!({"evaluation":frame.evaluation,"temporal_times":frame.temporal_times}),
+                    control,
+                )
+            };
+            let result = match backend {
+                Backend::Cpu => sequence::render_sequence(doc.snapshot(), &request, emit, || {
+                    control.cancelled()
+                }),
+                Backend::Gpu => with_gpu(control, |gpu, cancelled| {
+                    pollster::block_on(gpu.render_sequence(
+                        doc.snapshot(),
+                        &request,
+                        emit,
+                        cancelled,
+                    ))
+                }),
+            }
+            .map(|_| ());
             out.finish(result)
         }
         Operation::Products { revision, output } => {

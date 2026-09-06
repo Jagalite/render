@@ -1,0 +1,897 @@
+[
+  {
+    "path": ".gitattributes",
+    "bytes": 53,
+    "sha256": "4e2f0624ab45948659053418d56c0cd2e7d4c5bb34b9f0f2dc165317eca30d75"
+  },
+  {
+    "path": ".gitignore",
+    "bytes": 42,
+    "sha256": "f9d112ec76376488ab5693a92a8cbbad470e13e0a3327b3af2d6b2465a270634"
+  },
+  {
+    "path": "AGENTS.md",
+    "bytes": 2401,
+    "sha256": "332a5415843d9c6f097c06e499c9306f76babf75c22184295380989b98d6f2a1"
+  },
+  {
+    "path": "Cargo.lock",
+    "bytes": 37507,
+    "sha256": "4f6c11c32e966f791611b40cf7773771ecc0bef6491cb1cd484a4369c75bc59d"
+  },
+  {
+    "path": "Cargo.toml",
+    "bytes": 864,
+    "sha256": "30f2bf6f877b47d7cf3ff8c091be20db9ed0002087c0cb61fbc1756e12bccf21"
+  },
+  {
+    "path": "README.md",
+    "bytes": 4200,
+    "sha256": "b18af103fed21ecd179f79d2631c123303949ed3f0d8860ecc2807bb97bc6e34"
+  },
+  {
+    "path": "SHA256SUMS",
+    "bytes": 2385,
+    "sha256": "cb8fd07c1b96ddd2ccbbbfa4d578249f19688fa7bcb4187bf626cf69ea046273"
+  },
+  {
+    "path": "crates/core/Cargo.toml",
+    "bytes": 447,
+    "sha256": "2e56aec61a5c08e545ee9fffbf026e7a50608f3ff6166a2cfe2e95e640990365"
+  },
+  {
+    "path": "crates/core/src/agent.rs",
+    "bytes": 30322,
+    "sha256": "ba3e727cbe7aa49404334cd4fba295aba681730f7b4ce5b4fdc1234398a53c99"
+  },
+  {
+    "path": "crates/core/src/animation.rs",
+    "bytes": 30403,
+    "sha256": "c6dc473678e460fac8208ec106cf159a61459da394b9fb8b32fc489108741b83"
+  },
+  {
+    "path": "crates/core/src/api.rs",
+    "bytes": 6772,
+    "sha256": "2c80f45ae5aef1db959c22afe721b17b0ee236851073f1fb6558660d24b07aec"
+  },
+  {
+    "path": "crates/core/src/cameras.rs",
+    "bytes": 1698,
+    "sha256": "12b5950d8eb79b604ed20745675feecfc313902c6c3d54249ce3963355da0abe"
+  },
+  {
+    "path": "crates/core/src/curves.rs",
+    "bytes": 28783,
+    "sha256": "5ddabfa24ec53c730f24af081fc253a33c33bb14677335d5cc0f26e28bd6cfdc"
+  },
+  {
+    "path": "crates/core/src/displacement.rs",
+    "bytes": 10135,
+    "sha256": "0f0bee02aad4ae1bd52c2b4e61d36b3bde72b4dedbc0ae21fa4da3c2fb312fe3"
+  },
+  {
+    "path": "crates/core/src/document.rs",
+    "bytes": 43440,
+    "sha256": "d895d8334070c5c1b2971f36e88a61324458217ded2d86a7bb8119ae8a237625"
+  },
+  {
+    "path": "crates/core/src/feature_fixtures.rs",
+    "bytes": 29660,
+    "sha256": "7cd835e95c46cee6993ba291d98ed76bcea1292a6a16c4dcfb3aa11d7bc863b1"
+  },
+  {
+    "path": "crates/core/src/fixtures.rs",
+    "bytes": 7454,
+    "sha256": "d8bc91e88dcb3c4f2a3cd269d6a0cea86d4191ddaf13c6e238eacb47a130decb"
+  },
+  {
+    "path": "crates/core/src/geometry.rs",
+    "bytes": 13015,
+    "sha256": "c420703e8914b8680a4fa57e63cc499602edf7bdd9c86386051c7c2f925ff5f0"
+  },
+  {
+    "path": "crates/core/src/gltf_materials.rs",
+    "bytes": 8300,
+    "sha256": "036dd099850b7c8bf853b412bd6af3aab16b6cabb4f51c66a3eb647545c5b02f"
+  },
+  {
+    "path": "crates/core/src/gltf_scene.rs",
+    "bytes": 30325,
+    "sha256": "bd40bb88ed57f9b245fda158478566ded7a5998d7f7ec7a108492b10ed9403b2"
+  },
+  {
+    "path": "crates/core/src/gltf_scene/animated.rs",
+    "bytes": 29186,
+    "sha256": "dd1721e88e72aa94d6ec476edcbfd47c60665d975ed1ea2f4094d09431589615"
+  },
+  {
+    "path": "crates/core/src/groom.rs",
+    "bytes": 10546,
+    "sha256": "964142ec16d0268095811a86526438d96c96421d47d6d70b72a8bf934a3ce66b"
+  },
+  {
+    "path": "crates/core/src/imaging.rs",
+    "bytes": 2843,
+    "sha256": "9af32e4fbb2cffe48a8d682a7f1f3eb4c054776d45dd2d9860a2254577f91cd8"
+  },
+  {
+    "path": "crates/core/src/interchange.rs",
+    "bytes": 12803,
+    "sha256": "2e499ccf24246ab3b94b48877d26659685de386fca7ba8e68478ead5f08d8aa8"
+  },
+  {
+    "path": "crates/core/src/jobs.rs",
+    "bytes": 6361,
+    "sha256": "c5cc0dd83c0702932751d8580fbdae8441dcd1f80068bf2cf220df20c7bbeba6"
+  },
+  {
+    "path": "crates/core/src/lib.rs",
+    "bytes": 4332,
+    "sha256": "31ae4cc5821d40b29f0aaa4054ea061fb7d2428bb4b1e5e19a08ca187974ea29"
+  },
+  {
+    "path": "crates/core/src/mesh_codec.rs",
+    "bytes": 5680,
+    "sha256": "8422e06b65486334da9bbcc14d44a2ee7e3514f2f6ede7f7ab6ec034d2faacf8"
+  },
+  {
+    "path": "crates/core/src/modeling.rs",
+    "bytes": 53438,
+    "sha256": "c187ca965dfe247158f2ef9b6f1f990630b7188c31217ecfbef133b35b8222d0"
+  },
+  {
+    "path": "crates/core/src/pbr.rs",
+    "bytes": 5052,
+    "sha256": "864bd816f603c7b8433e988998da83e93aee16c984189551543bb05b7cc08aba"
+  },
+  {
+    "path": "crates/core/src/procedural.rs",
+    "bytes": 16384,
+    "sha256": "14870f3052f3bda35d5db06dd41d4e720a40a6358d482ed2c11221b9e2d033d6"
+  },
+  {
+    "path": "crates/core/src/products.rs",
+    "bytes": 22200,
+    "sha256": "b51e537f518c8a933c6242946f44546a96db91762aa986a5ca5008c87863033d"
+  },
+  {
+    "path": "crates/core/src/render.rs",
+    "bytes": 51449,
+    "sha256": "c9480b402f602ed6d54169405288fc10d966d1e5547c1f7d5e058df72e7db9ca"
+  },
+  {
+    "path": "crates/core/src/rigging.rs",
+    "bytes": 18371,
+    "sha256": "d260f08f86fd0aa41e8d1009c8811fb510ed01b8b737b48f1fab119977b61638"
+  },
+  {
+    "path": "crates/core/src/scattering.rs",
+    "bytes": 20480,
+    "sha256": "33e6a39336004f5ad4f1eace6ee47e95f3c74c2217ac7d053a074953db732bd4"
+  },
+  {
+    "path": "crates/core/src/sequence.rs",
+    "bytes": 8112,
+    "sha256": "27286d07c8de16a4a7d5ec233fc540fa0e5f495bdd40c50f0995f093bd5e7d7b"
+  },
+  {
+    "path": "crates/core/src/storage.rs",
+    "bytes": 13143,
+    "sha256": "b2ed8f37fa83859fb5132988467afc63bc5c3bb6884d9edbad603bb1286a5e21"
+  },
+  {
+    "path": "crates/core/src/textures.rs",
+    "bytes": 9798,
+    "sha256": "346883ec8ad66841cc428c19164c6c18b0fe38a19c0135a90194766eb4d75084"
+  },
+  {
+    "path": "crates/core/src/topology.rs",
+    "bytes": 9420,
+    "sha256": "282a772af1d906ec43be65918a2e603ba3b18405bd8db54364b5021dc41578bf"
+  },
+  {
+    "path": "crates/core/src/uploads.rs",
+    "bytes": 3439,
+    "sha256": "958a2423431e990de0a306ef9180d9d0712147fed2980b1e28e0ba94238fc091"
+  },
+  {
+    "path": "crates/core/src/volumes.rs",
+    "bytes": 13543,
+    "sha256": "25425e769b523241bd8f01c0d9014b0e77f6038c6300702f7a2ac9cad309900d"
+  },
+  {
+    "path": "crates/core/tests/agent_workflow.rs",
+    "bytes": 21320,
+    "sha256": "5a14df5987aa759ddc6b2d5e0fa3da973ebc30f30419f06ec9bafa24dae1540f"
+  },
+  {
+    "path": "crates/core/tests/animated_gltf.rs",
+    "bytes": 17320,
+    "sha256": "3141fa1edfecb24cf6c9457adafba39f4fb2a919d6c8420739448a744b64da43"
+  },
+  {
+    "path": "crates/core/tests/animation.rs",
+    "bytes": 18815,
+    "sha256": "8fb8a6edd6fa1083b035aed32166e0e89d05b86406e16726cdfdbb1fb61227ac"
+  },
+  {
+    "path": "crates/core/tests/conformance.rs",
+    "bytes": 36185,
+    "sha256": "ee3b9ec4057978a05899bf8250faacde01d9a862215e11d6417a7fe7565d9ecc"
+  },
+  {
+    "path": "crates/core/tests/curves.rs",
+    "bytes": 10865,
+    "sha256": "1b95327a6ac36ea7e9f9ef2941bee7994a0fcf689d1d82ff65ffa90626247ce7"
+  },
+  {
+    "path": "crates/core/tests/displacement.rs",
+    "bytes": 5295,
+    "sha256": "b0ca72af9db377b4fc73a5565eeab82de952dfc8849e9efab5000a2e1b37b676"
+  },
+  {
+    "path": "crates/core/tests/groom.rs",
+    "bytes": 5486,
+    "sha256": "07653fe4a6c64ff83f31a93b986431887eca489cac2b6fba63a15f30ddcd6f6f"
+  },
+  {
+    "path": "crates/core/tests/modeling.rs",
+    "bytes": 15774,
+    "sha256": "98d84d9b21f2c1f047c436e1df01cb37cad1e75179cb7fe474a771b057b15a32"
+  },
+  {
+    "path": "crates/core/tests/multibounce.rs",
+    "bytes": 7775,
+    "sha256": "d914c402911f56b696e83aa7264b0a655db0d90066ff994b132bc5c67a3087bc"
+  },
+  {
+    "path": "crates/core/tests/products.rs",
+    "bytes": 7226,
+    "sha256": "989d37ebd0a6a0c830b1c6f4e347442b00c25f26e8c8dd084e9364a036b67659"
+  },
+  {
+    "path": "crates/core/tests/scattering.rs",
+    "bytes": 8361,
+    "sha256": "727a65c110ac080a76bb86e99c1c6467fd631b7827833d7cd9b12940c8781c37"
+  },
+  {
+    "path": "crates/core/tests/static_pbr.rs",
+    "bytes": 22705,
+    "sha256": "372025091f29c6d2e4a5627679ee1e47b023f3aa640627605d1c6c27bcc17876"
+  },
+  {
+    "path": "crates/core/tests/volumes.rs",
+    "bytes": 9144,
+    "sha256": "ac261fc90eb28649f4512b91ab6e31508854872483ead70b2b2590ed1fa52907"
+  },
+  {
+    "path": "crates/ffi/Cargo.toml",
+    "bytes": 311,
+    "sha256": "a73a443608037a9c7c9b2991e5e0aeca27385cf38605cf21f41a2ddd2946a9d3"
+  },
+  {
+    "path": "crates/ffi/src/lib.rs",
+    "bytes": 9387,
+    "sha256": "37a57f809e9aff70b29b16318abeaf83cfe6498fd85d884509c4c70d7e22b260"
+  },
+  {
+    "path": "crates/gpu/Cargo.toml",
+    "bytes": 356,
+    "sha256": "6275711a12367eb3085eceafa29d7d6456beb0d711d1c655f14298324f078c16"
+  },
+  {
+    "path": "crates/gpu/src/lib.rs",
+    "bytes": 30301,
+    "sha256": "dc9df692477277014e53d066873f2031fcceb694117d58c78fe1e9c7a1db3f34"
+  },
+  {
+    "path": "crates/gpu/src/raster.rs",
+    "bytes": 11020,
+    "sha256": "e79cf5b75ae1399945cebaa3eba0f06b0a0bd47cf720907321a4d5cfe3351cbe"
+  },
+  {
+    "path": "crates/gpu/src/sequence.rs",
+    "bytes": 7207,
+    "sha256": "d3575b13d9a4bea31a5d4cfbbeca6f218cd21fc5a55b5f07041ee4b74184561a"
+  },
+  {
+    "path": "crates/host/Cargo.toml",
+    "bytes": 347,
+    "sha256": "74296656ace7267550cbe7cec5f6064c3a5ca9b4f15219f85d79306d7981cacf"
+  },
+  {
+    "path": "crates/host/examples/m00.rs",
+    "bytes": 10306,
+    "sha256": "00479cea5899706b5924dc2ed72a1547bc3cc5e1dc9837846db54ec3948c48b1"
+  },
+  {
+    "path": "crates/host/src/agent_workflow.rs",
+    "bytes": 10221,
+    "sha256": "2d4d06145514719e721daa8a8cf5d032f91059031d616b294054fcc43d044fe3"
+  },
+  {
+    "path": "crates/host/src/job_host.rs",
+    "bytes": 19565,
+    "sha256": "6c2046136b6b9fdaf85c2cf19b85f10587ecc53ed86e9f85435d83c737b041dc"
+  },
+  {
+    "path": "crates/host/src/main.rs",
+    "bytes": 22624,
+    "sha256": "f96fd47528f124634e468934e9c7fab3f3f810c5e08e91cd75eacd53de22b37a"
+  },
+  {
+    "path": "crates/host/src/milestone_workflow.rs",
+    "bytes": 20839,
+    "sha256": "bd6a57ed4e98304efab70d31569a017a83154adb2e9ab765d52c0e4cec1c740b"
+  },
+  {
+    "path": "crates/host/src/project_cli.rs",
+    "bytes": 31725,
+    "sha256": "b4a8029f26d0227be2dcd0c1a6a120bdf7a3d525d66020f4bea8308236fcd0fc"
+  },
+  {
+    "path": "crates/host/src/static_pbr.rs",
+    "bytes": 12148,
+    "sha256": "61c11a938c43a53cf1c7bcbdf941a1c85b54d0f5bad9476a77bfa9ff4696c7c8"
+  },
+  {
+    "path": "crates/host/tests/gpu_sequence.rs",
+    "bytes": 8552,
+    "sha256": "8f77c3155c7fadbc6f75271fd375c6da71efd4c06b8894825681f2f0fbb67fc4"
+  },
+  {
+    "path": "crates/host/tests/multibounce_gpu.rs",
+    "bytes": 5965,
+    "sha256": "dea416f472b7d4188b8de942a538697af26206771df2a6a42a1f4b15a2cf88d5"
+  },
+  {
+    "path": "crates/host/tests/project_cli.rs",
+    "bytes": 20177,
+    "sha256": "64fdbdbd6ef51803cc751410685f100ed3c8208429160b8342d91921d731bb0a"
+  },
+  {
+    "path": "crates/kernel/Cargo.toml",
+    "bytes": 199,
+    "sha256": "7cd2433582517c87a99ac064763b6c98134e0d54bff643712bdcd81189eeeba8"
+  },
+  {
+    "path": "crates/kernel/src/lib.rs",
+    "bytes": 10626,
+    "sha256": "ec11cab4aa678d0624c693d1f33bb25bbfb407826f7ef7b6e4fb922e6fee3a8c"
+  },
+  {
+    "path": "crates/kernel/src/path.rs",
+    "bytes": 33284,
+    "sha256": "4eb9622e2df2337b9500e040c7a3da06ad041e264d96b6b6ddb74c226a7f388e"
+  },
+  {
+    "path": "crates/kernel/src/path/pbr.rs",
+    "bytes": 26714,
+    "sha256": "a25750c73d42a09bb7132dc31267393d6e67d6d3513de4fb528b491442caa3d0"
+  },
+  {
+    "path": "crates/web/Cargo.toml",
+    "bytes": 890,
+    "sha256": "855c7eb86ec57d8cb0cfd940234e124e0888e123c88d1893bd570b03396ad2bf"
+  },
+  {
+    "path": "crates/web/src/lib.rs",
+    "bytes": 37510,
+    "sha256": "145b660ec8cafd19d99ebd065265dbe77272b7c0c0a2b40f976ab1328ddb1fff"
+  },
+  {
+    "path": "docs/agent_alpha.md",
+    "bytes": 12402,
+    "sha256": "48876b08e6d4e4589624c084107a1c3729ef86fb6823ddcf8659dfa37886bfcf"
+  },
+  {
+    "path": "docs/animated_gltf.md",
+    "bytes": 8550,
+    "sha256": "d2a2ad24248294c11d49601b36dabebc92bb886a0b423cc87e7757bee3e4a21f"
+  },
+  {
+    "path": "docs/api_and_agent_contracts.md",
+    "bytes": 9640,
+    "sha256": "cd57f0c9d4bd5eec2911916e37821f834d966f19a348bfd7794ac4e9d7b8485c"
+  },
+  {
+    "path": "docs/architecture.md",
+    "bytes": 90323,
+    "sha256": "1001767794c304384cc8cb3b7558a77a81eb108dcb54e4aa20d6adfd18ba36fe"
+  },
+  {
+    "path": "docs/decision_records.md",
+    "bytes": 11567,
+    "sha256": "6929508d3aca88fe2b51257e243c3bb03a9f4f7fe0cc75dcf1f0c05861c74171"
+  },
+  {
+    "path": "docs/gpu_shutter.md",
+    "bytes": 6710,
+    "sha256": "c4d79441c35be551656081b30fb2184b80395809eb888c2bf5dd9cf471ac4ab2"
+  },
+  {
+    "path": "docs/implementation.md",
+    "bytes": 14658,
+    "sha256": "a5b94b32d623a3dde290c78ae3bc23e7e2ef67e5496d22df92394636d6069c35"
+  },
+  {
+    "path": "docs/input_support.md",
+    "bytes": 4363,
+    "sha256": "8ad60bae39adaee7ce335fa8911a6e80580de3b12ffcacdb483597c2b76ce5a7"
+  },
+  {
+    "path": "docs/m06_modeling_contract.md",
+    "bytes": 6653,
+    "sha256": "3ec34f340d1ce6a837af1f7de24a4ef963519efb1b12e04acbefdc3ba04d21c6"
+  },
+  {
+    "path": "docs/m07_m08.md",
+    "bytes": 11141,
+    "sha256": "6e5db04dee86f5a6938c2e7ac422e971b5093c7560f109a3679a3ce5ead4b575"
+  },
+  {
+    "path": "docs/m07_m08_execution.md",
+    "bytes": 4700,
+    "sha256": "a0f3c4608cf59172efc5caa5d5f63974149120f8974c2a2cf1336ca7ad46b21f"
+  },
+  {
+    "path": "docs/milestones.md",
+    "bytes": 14959,
+    "sha256": "d0f3a5d5a7f677074cb9990dbdbf8e82bc5420a8b9c40ff8058fd91768a6c390"
+  },
+  {
+    "path": "docs/multibounce_pbr.md",
+    "bytes": 5809,
+    "sha256": "022fb88c77b82e6abb5a09e3ae5c9e905f418a795368a9f35524dfbab5a47b9b"
+  },
+  {
+    "path": "docs/project_cli.md",
+    "bytes": 10533,
+    "sha256": "77dfde68718766512cd0699f94eb9e68f865dc34e2ad09fe1925498fc75fe532"
+  },
+  {
+    "path": "docs/representation_decisions.md",
+    "bytes": 18400,
+    "sha256": "d267c17c1dfebd248aba53520027477b60e8ba24194d37fbb3a6000a3fee5428"
+  },
+  {
+    "path": "docs/static_pbr.md",
+    "bytes": 8235,
+    "sha256": "29dd0ef6a92fc8828117579faaa8bafd179eabea1b6483ae6b05ae65df1e35f4"
+  },
+  {
+    "path": "examples/README.md",
+    "bytes": 941,
+    "sha256": "6042cf50434210d967e805ccc12c58c1ad02e1ecb4b469543b3c568d060b5b4e"
+  },
+  {
+    "path": "examples/material_edit.invalid.json",
+    "bytes": 540,
+    "sha256": "8f489b3d435a167179af13b0625bafb8bdeeaa27041e73bb7677a4512e8c9088"
+  },
+  {
+    "path": "examples/material_edit.prepare.json",
+    "bytes": 541,
+    "sha256": "3669f80b067116a40599b567ec985a0703087776db2f86bd862b466f9c80b0f8"
+  },
+  {
+    "path": "fixtures/animated-gltf/README.md",
+    "bytes": 1240,
+    "sha256": "2131b28de9ecae65de8ceb0fcaaa8d3e106ceb8d9e40f69e8d3e4cbd310cd05b"
+  },
+  {
+    "path": "fixtures/animated-gltf/character.bin",
+    "bytes": 448,
+    "sha256": "dadae66cb1aab78f4fa13b404d46bda325f2680042e5af2912524d28ea9cb725"
+  },
+  {
+    "path": "fixtures/animated-gltf/character.glb",
+    "bytes": 2780,
+    "sha256": "3e5da95401a78585196617eabeeed6876ab3dda88a534c9abf3bfa2435a1b760"
+  },
+  {
+    "path": "fixtures/animated-gltf/character.gltf",
+    "bytes": 4666,
+    "sha256": "ae8e6f29cfd0571f0bb36b990780a29eb1eb9e0f113abe5676010a823c8486ba"
+  },
+  {
+    "path": "fixtures/animated-gltf/generate.py",
+    "bytes": 3361,
+    "sha256": "a81160373f06b40d806a381772812fccdee3b1f3209b43ec11209968bb967646"
+  },
+  {
+    "path": "fixtures/animated-gltf/khronos-simple-skin/README.md",
+    "bytes": 1314,
+    "sha256": "6545a0f376b1418c1b2fb3a54706c828c60239a6d9483e03276dca24ebdcc996"
+  },
+  {
+    "path": "fixtures/animated-gltf/khronos-simple-skin/SimpleSkin.gltf",
+    "bytes": 2386,
+    "sha256": "8d92e9888340eb98e82a65a1f8b037d9a1d9f09e5fd0b6ba6d40fd93700b3239"
+  },
+  {
+    "path": "fixtures/animated-gltf/khronos-simple-skin/SimpleSkin_animation.bin",
+    "bytes": 240,
+    "sha256": "ff21b1bc3d0abbe53f7665060ec6c22d873b6e85a7669171a2b6b8ae01c39347"
+  },
+  {
+    "path": "fixtures/animated-gltf/khronos-simple-skin/SimpleSkin_geometry.bin",
+    "bytes": 168,
+    "sha256": "35f0ca6bc07976c0aadc163d4737758989cfcc9870a99800004c4478fe698b63"
+  },
+  {
+    "path": "fixtures/animated-gltf/khronos-simple-skin/SimpleSkin_inverseBindMatrices.bin",
+    "bytes": 128,
+    "sha256": "5844ab221cd2ad367420a248f6387b46e5f8498604427730a37ee96b4d4ec599"
+  },
+  {
+    "path": "fixtures/animated-gltf/khronos-simple-skin/SimpleSkin_skinningData.bin",
+    "bytes": 320,
+    "sha256": "413bc8a8c0da673df767874e6f05f0b00c9261756a08586b9d555bd5535414b5"
+  },
+  {
+    "path": "fixtures/animated-gltf/provenance.json",
+    "bytes": 3621,
+    "sha256": "7811c2bc6a97e6cbd1fa9fd0544c910c1d8911402082b71ac56c5dbc6634619e"
+  },
+  {
+    "path": "fixtures/khronos-box/Box.glb",
+    "bytes": 1664,
+    "sha256": "ed52f7192b8311d700ac0ce80644e3852cd01537e4d62241b9acba023da3d54e"
+  },
+  {
+    "path": "fixtures/khronos-box/Box.gltf",
+    "bytes": 2898,
+    "sha256": "4a0d69eecfce0672a50b71dc218cbacec6c53fe2445040c235c6314b1b2c41b9"
+  },
+  {
+    "path": "fixtures/khronos-box/Box0.bin",
+    "bytes": 648,
+    "sha256": "3266a8e39b9f425b3341cbe5eec7849f44310256bfa651e6b8b40c85ce0ccafb"
+  },
+  {
+    "path": "fixtures/khronos-box/README.md",
+    "bytes": 735,
+    "sha256": "d3a4a518baf3c9fffd7e49c8d92faf1ad3e2ebed203177a75abb5c4c3a0c973b"
+  },
+  {
+    "path": "fixtures/khronos-box/provenance.json",
+    "bytes": 1143,
+    "sha256": "1b9bb83865ddd3f8c3d700f0c8f241ef9b4414ad923571e3dde0c863b1332199"
+  },
+  {
+    "path": "fixtures/multibounce-pbr/README.md",
+    "bytes": 757,
+    "sha256": "e6d909805c60d29d4b4458154724506da4ccb6721c83114da18911858c3b625c"
+  },
+  {
+    "path": "fixtures/multibounce-pbr/create.json",
+    "bytes": 5740,
+    "sha256": "af4e58be62eec24eba5488b92a8b404cfc94ceeb10d11b30a758493bdbb26857"
+  },
+  {
+    "path": "fixtures/multibounce-pbr/generate.py",
+    "bytes": 1551,
+    "sha256": "09893eaa85335d33c463c5d8dfb337fcf19af28c06ba86915552224d38a0637b"
+  },
+  {
+    "path": "fixtures/multibounce-pbr/provenance.json",
+    "bytes": 432,
+    "sha256": "daf2eda8ebb7401db4ff44e3b2e9b8b34b660c95d8d217352405257264be77f3"
+  },
+  {
+    "path": "fixtures/project-cli/README.md",
+    "bytes": 879,
+    "sha256": "5a4bf06f0fed85003c61c9116908fcfe20908d01e8175a5e965c7b336c4a2b5c"
+  },
+  {
+    "path": "fixtures/project-cli/animate.json",
+    "bytes": 2566,
+    "sha256": "c27328e9643d3d6ff600c080ef8d587cdd975a372dab50e04057338312a33fcf"
+  },
+  {
+    "path": "fixtures/project-cli/create.json",
+    "bytes": 2148,
+    "sha256": "2b3e0f8db2d7cb3ace058e28046d6872d81e639971e5ac13966416c39b3aad10"
+  },
+  {
+    "path": "fixtures/project-cli/floor.obj",
+    "bytes": 168,
+    "sha256": "69b6abcaad6ff2a680194ec37e9c299dc1c8d3e3ff78d6f959ce9fad384889ae"
+  },
+  {
+    "path": "fixtures/project-cli/provenance.json",
+    "bytes": 716,
+    "sha256": "0bdc8d2ff976279ac1b9b93caae776d0f2f6dfa23452fba630ccff4ee7f30103"
+  },
+  {
+    "path": "fixtures/static-pbr/BoxTextured/BoxTextured.glb",
+    "bytes": 5956,
+    "sha256": "b510eca2e2ef33f62f9ed57d6e7ce2d10ebb2bdebc4a8e59d347719ba81abdf4"
+  },
+  {
+    "path": "fixtures/static-pbr/BoxTextured/BoxTextured.gltf",
+    "bytes": 3695,
+    "sha256": "1e9003a4a2a8822ff60da529357bd8e4dec4a59b1a479017993e7e2ad5fcebef"
+  },
+  {
+    "path": "fixtures/static-pbr/BoxTextured/BoxTextured0.bin",
+    "bytes": 840,
+    "sha256": "2e8c0483fa6665c686ec345f89dcbb2a694a587442584d09f8a83a59633327bc"
+  },
+  {
+    "path": "fixtures/static-pbr/BoxTextured/CesiumLogoFlat.png",
+    "bytes": 3750,
+    "sha256": "9c22b05c5b136d03c5621a8765e50a8322be6c35b9de53e9fe22685840d7f469"
+  },
+  {
+    "path": "fixtures/static-pbr/BoxTextured/LicenseRef-LegalMark-Cesium.txt",
+    "bytes": 625,
+    "sha256": "7bafc8dbff0b9d04297bced53a47809e3ab6721cb35b4a2d780533476b28ebd4"
+  },
+  {
+    "path": "fixtures/static-pbr/BoxTextured/UPSTREAM_README.md",
+    "bytes": 1159,
+    "sha256": "5ccb8002776081436039f9538dd9eaa9d9faa7843e62efcfaf6ff60eee0f07cc"
+  },
+  {
+    "path": "fixtures/static-pbr/BoxTextured/provenance.json",
+    "bytes": 1853,
+    "sha256": "2c2e3367a90446f4595c2765dd9278184d2c1cbfee4dfc97e2166e4389e7cae5"
+  },
+  {
+    "path": "fixtures/static-pbr/NormalTangentMirrorTest/NormalTangentMirrorTest.bin",
+    "bytes": 164400,
+    "sha256": "4cc94ba24a39bdf34f5db6c1b38a8423ff4bd33a5b2d6f52db7959c6021273b7"
+  },
+  {
+    "path": "fixtures/static-pbr/NormalTangentMirrorTest/NormalTangentMirrorTest.glb",
+    "bytes": 1567084,
+    "sha256": "31ce5f3c873fc55531a17ccacf001e3d1d482a508695aa826fa79cc196e0ce78"
+  },
+  {
+    "path": "fixtures/static-pbr/NormalTangentMirrorTest/NormalTangentMirrorTest.gltf",
+    "bytes": 4962,
+    "sha256": "2da070d2036a51cf645c40a2ded94c1c72cc38de94039a321257610bfdd2e163"
+  },
+  {
+    "path": "fixtures/static-pbr/NormalTangentMirrorTest/NormalTangentMirrorTest_BaseColor.png",
+    "bytes": 35542,
+    "sha256": "879c6296d80189e4d1a871d8cbf788e087d2f6b1a822647b449348dc1734934f"
+  },
+  {
+    "path": "fixtures/static-pbr/NormalTangentMirrorTest/NormalTangentMirrorTest_Normal.png",
+    "bytes": 179799,
+    "sha256": "95b14c4a91309fc5834e30030dfb8898297b96754a05733d37e6c04f2e45a6fb"
+  },
+  {
+    "path": "fixtures/static-pbr/NormalTangentMirrorTest/NormalTangentMirrorTest_OcclusionRoughnessMetallic.png",
+    "bytes": 1185050,
+    "sha256": "4edb5c336d3d7b2c131d6aee925b967c2ae15ca8c011823bb17551c75d060ee8"
+  },
+  {
+    "path": "fixtures/static-pbr/NormalTangentMirrorTest/UPSTREAM_README.md",
+    "bytes": 4437,
+    "sha256": "03031b823926ec032f9cb9d5c27735d12e86fe0a6d0a0ca9ffd3a2c306397339"
+  },
+  {
+    "path": "fixtures/static-pbr/NormalTangentMirrorTest/provenance.json",
+    "bytes": 2449,
+    "sha256": "c57efce019317f2ec48dfc66f3af90ac86878aad78ba76e8985fb5ef72903e6f"
+  },
+  {
+    "path": "fixtures/static-pbr/README.md",
+    "bytes": 823,
+    "sha256": "1efa449f3c759193e8facf60f3f81725775dc82a8917f9e04dd36f6ef9cf5020"
+  },
+  {
+    "path": "include/render.h",
+    "bytes": 648,
+    "sha256": "380987343c0217414598d37622442c6de11314ea445d7a966ab289b0ca482b0d"
+  },
+  {
+    "path": "planning/document_validation_report.json",
+    "bytes": 615,
+    "sha256": "bc28785fcfa8bbdb64096011fa9ddaed961b8e403bb3eac0da65befd74efd459"
+  },
+  {
+    "path": "planning/engine-progress/README.md",
+    "bytes": 1481,
+    "sha256": "c9787c962e777d38a1d68b3e9019023cdc5bf84104526f3ad60d7f8d69619ba0"
+  },
+  {
+    "path": "planning/feature_matrix.json",
+    "bytes": 20230,
+    "sha256": "d7d0de281f2c6e3e8c0776f64d6a6cfee4a4f3c5d91a1b00cbe17472bcbeefb7"
+  },
+  {
+    "path": "planning/initial_backlog.json",
+    "bytes": 5263,
+    "sha256": "e872aed75c538111d77ad45793a5267c2478ebf79bddb3aa27c2cbb6ce16a879"
+  },
+  {
+    "path": "planning/input_support.json",
+    "bytes": 9860,
+    "sha256": "56d314ead164ec4755c0054ee60e13f3e4f3146b5e82905dac20da06027577f4"
+  },
+  {
+    "path": "planning/milestones.json",
+    "bytes": 21201,
+    "sha256": "72a97b61b6574fccdfe8f0e73374db3ac7403d25714b8be5ef17e8d24086b4aa"
+  },
+  {
+    "path": "rust-toolchain.toml",
+    "bytes": 123,
+    "sha256": "e69b917f97a114b87388e17a0fe30540d213288af076d192fe4ab3dbfbd3a6c7"
+  },
+  {
+    "path": "schemas/agent_request.schema.json",
+    "bytes": 11481,
+    "sha256": "5f7009c7265ccaabb6ababb83b49937e952d6f6272b687885a3a0cd3f1baf40c"
+  },
+  {
+    "path": "schemas/material_edit_request.schema.json",
+    "bytes": 2564,
+    "sha256": "511f3544362ed2e757e4c297b1d05be073b79c7ad4cff80717391e1019fbebf5"
+  },
+  {
+    "path": "scripts/abi-v1-client.c",
+    "bytes": 1865,
+    "sha256": "5b22628e54a3eb1d340fd233b4563a00c7a309d85be817d8ead903b08bd7a5b6"
+  },
+  {
+    "path": "scripts/agent-browser-conformance.mjs",
+    "bytes": 8872,
+    "sha256": "028e1f0d30d468f7515eb88812176a63299e90112f0f6d8d84255d791e912d9f"
+  },
+  {
+    "path": "scripts/agent-ffi-conformance.py",
+    "bytes": 5775,
+    "sha256": "ae583eece7ac8c0723f18bc68b4b7382e0e7c6108142532ad41837cced5bc7fc"
+  },
+  {
+    "path": "scripts/agent-native-client.py",
+    "bytes": 3292,
+    "sha256": "b43814743c18bbed2ccc613a204fddbd89fc0193d22e7068709c53ee71f08a92"
+  },
+  {
+    "path": "scripts/animated-gltf-browser.mjs",
+    "bytes": 5234,
+    "sha256": "a2098dcce7ecdcbe04ab746d664efa165130f96841f65fd62659b1a2490fef8e"
+  },
+  {
+    "path": "scripts/animated-gltf-workflow.py",
+    "bytes": 8425,
+    "sha256": "a969d3cc8de77748b5441d88cf296c2d41de9810293ab931dc573e8382e5addf"
+  },
+  {
+    "path": "scripts/browser-conformance.mjs",
+    "bytes": 4693,
+    "sha256": "1cee1b5afe37ad241546f822e1c0805a6d7466ef9001567a93164ff917178e7a"
+  },
+  {
+    "path": "scripts/build-web.sh",
+    "bytes": 439,
+    "sha256": "0184487ce90e38c0868bad2b764c33e9537bfaa73baddbce2c41bc5c88d0c149"
+  },
+  {
+    "path": "scripts/dependency-audit.py",
+    "bytes": 3812,
+    "sha256": "8bec6dba162c4bf60f0a2448fd3b034d4a8758ce40fa23851e6776da9b367329"
+  },
+  {
+    "path": "scripts/ffi-conformance.py",
+    "bytes": 2769,
+    "sha256": "3f74535740e18b4414ae0407a8c07559d13394a7bd34536bf707c22cd5185fc5"
+  },
+  {
+    "path": "scripts/generate-abi-header.py",
+    "bytes": 1317,
+    "sha256": "20178a9b6c431513d0bcd0119c04887e0ff19f89b7a5cc5e7231d853f467292a"
+  },
+  {
+    "path": "scripts/gpu-shutter-browser.mjs",
+    "bytes": 6622,
+    "sha256": "91c8b0e7e382347f5156847ca04d96cb45d486bfff24af6a40112e51be145708"
+  },
+  {
+    "path": "scripts/gpu-shutter-workflow.py",
+    "bytes": 7701,
+    "sha256": "53662afa65c6c719e8c0edb1b0c5cc75df00bf9b412128d8c493d1fbb792c2e9"
+  },
+  {
+    "path": "scripts/m07-browser-conformance.mjs",
+    "bytes": 4413,
+    "sha256": "3123988f47fa761e4a240419b2670375c155906181fb5019a00966d979d5de92"
+  },
+  {
+    "path": "scripts/m07-products-browser.mjs",
+    "bytes": 3091,
+    "sha256": "2ca1f98ddbe42615104febedc5e80cfb7925cebd3dbf8c1a72509d2aa6ca9c5d"
+  },
+  {
+    "path": "scripts/m08-browser-conformance.mjs",
+    "bytes": 3665,
+    "sha256": "bd3c59aea2e54999c54ffbba4fcf900adca79099512380ddcbdab4940603988a"
+  },
+  {
+    "path": "scripts/multibounce-browser.mjs",
+    "bytes": 3792,
+    "sha256": "92d87a73006bdc256fe1ef9af88f94e3b2d7fbf7726b99b1ea38c721b2a0ce8a"
+  },
+  {
+    "path": "scripts/multibounce-workflow.py",
+    "bytes": 5302,
+    "sha256": "2cefd588d5f8494b96170fe7fdba3c18aa92233f03aca4a19b726d5afa55d4e1"
+  },
+  {
+    "path": "scripts/project-cli-workflow.py",
+    "bytes": 8903,
+    "sha256": "6a7707f3e5e0998143ddbc819de4c01ff28f46f5c4bcaf43ccf2227724f68cc4"
+  },
+  {
+    "path": "scripts/static-pbr-browser-conformance.mjs",
+    "bytes": 5232,
+    "sha256": "8ae6a4397302ed0faa3983404b2a9c801460f201dd0e81829170d3d0e317f268"
+  },
+  {
+    "path": "scripts/static-pbr-compare.py",
+    "bytes": 1489,
+    "sha256": "e24dc0cd45c4b0cb768b0ef37ac8e61edb28907670affe2923387a0818c2cebf"
+  },
+  {
+    "path": "scripts/summarize-evidence.py",
+    "bytes": 8907,
+    "sha256": "e1fc9194bf6e9d59da42eb9ae443507155daef252bf090ed7cbebedf333f2f3d"
+  },
+  {
+    "path": "scripts/summarize-milestones.py",
+    "bytes": 8914,
+    "sha256": "a011db4c7fa132151792e6ae51d2b6ac55008dc7e9e21c384faa0a530a9beddd"
+  },
+  {
+    "path": "scripts/validate-agent.py",
+    "bytes": 3438,
+    "sha256": "58faafa6e73f3c667ec44627d19e2d9515343d4d151bc7b663128cb92fa5dc6d"
+  },
+  {
+    "path": "scripts/validate-animated-gltf.py",
+    "bytes": 5995,
+    "sha256": "e9ef261ca1c1253288ce516078b1cea02fcedcf80a92a58dfd7b37c08f7200c1"
+  },
+  {
+    "path": "scripts/validate-foundation.py",
+    "bytes": 3373,
+    "sha256": "0ef477d30b7d6b34b88348432683eb73657fb20d04151e107402af0487aec6e0"
+  },
+  {
+    "path": "scripts/validate-gpu-shutter.py",
+    "bytes": 4368,
+    "sha256": "b0be4d80134537199e97a1215a4fb5b97fa1d48dec26f3dcaf7340b1ce6adfa4"
+  },
+  {
+    "path": "scripts/validate-milestones.py",
+    "bytes": 6469,
+    "sha256": "08d0442a5eaef332d70197463aac79852eb6b3ae0e112842d969d6b2b5381cc3"
+  },
+  {
+    "path": "scripts/validate-multibounce.py",
+    "bytes": 4312,
+    "sha256": "0e9f465e50959d29de16082446b858c98f8387d905a1998fe09017d695d84eb7"
+  },
+  {
+    "path": "scripts/validate-project-cli.py",
+    "bytes": 4058,
+    "sha256": "f882c0b505cce2c1064d91c57963e03dfa5f0ad9da92afeb314fde9562bbf8ea"
+  },
+  {
+    "path": "scripts/validate-static-pbr.py",
+    "bytes": 3216,
+    "sha256": "528e5b806bccf1428bbfe4628047840aac29baa45c37fed33220d0100b6078f9"
+  },
+  {
+    "path": "web/index.html",
+    "bytes": 879,
+    "sha256": "5738b3e52866a4596a726085c794d7f3b1cd0fe59f3e7308ce696336ac8f2e54"
+  }
+]

@@ -47,7 +47,7 @@
       "capability_axes": {
         "native_authoring": "implemented_transactions_v0_and_project_cli_v0",
         "native_evaluation": "inspect_and_pinned_static_or_exact_time_evaluation",
-        "final_render": "native_CPU_GPU_scene_and_CPU_shutter_sequence_imaging_profiles",
+        "final_render": "native_CPU_GPU_scene_and_shutter_sequences; CPU_imaging_products",
         "preview": "implemented_candidates_and_render_api",
         "human_editing": "planned_M09",
         "import": "typed_JSON_requests_and_explicit_OBJ_static_or_animated_GLB_glTF_bundles",
@@ -55,7 +55,7 @@
       },
       "platform_profiles": {
         "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
-        "browser_local": "validated_restricted_variants_GPU_cancellation_OPFS_CAS_export_recovery; no_durable_browser_job_worker"
+        "browser_local": "validated_restricted_variants_GPU_cancellation_OPFS_CAS_export_recovery; no_durable_browser_job_worker; validated_WebGPU_shutter_frames_and_bounded_sequence_consumers"
       },
       "evidence": [
         "evidence/m00-m04/api_conformance.json",
@@ -66,7 +66,8 @@
         "evidence/m05/native_client_report.json",
         "evidence/m05/browser_workflow_report.json",
         "evidence/project-cli/README.md",
-        "evidence/animated-gltf/README.md"
+        "evidence/animated-gltf/README.md",
+        "evidence/gpu-shutter/README.md"
       ]
     },
     {
@@ -79,7 +80,7 @@
         "M07",
         "M08"
       ],
-      "qualification": "Opaque PBR/diffuse paths at depth 1–16 on CPU/Metal/WebGPU, with primary mipmaps and secondary LOD0; Rust CPU extended scattering/media, imaging products and exact-time shutter accumulation. Explicit unsupported GPU profiles.",
+      "qualification": "Opaque PBR/diffuse paths at depth 1–16 on CPU/Metal/WebGPU, with primary mipmaps and secondary LOD0; Rust CPU extended scattering/media, imaging products; exact-time CPU/Metal/WebGPU shutter frames and streaming sequences. Explicit unsupported GPU material/media profiles.",
       "capability_axes": {
         "native_authoring": "ordinary_revision_checked_typed_transactions",
         "native_evaluation": "named_Rust_profiles_in_docs/m07_m08.md",
@@ -91,7 +92,7 @@
       },
       "platform_profiles": {
         "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
-        "browser_local": "validated_Chromium_Rust_Wasm_OPFS; WebGPU_named_subset"
+        "browser_local": "validated_Chromium_Rust_Wasm_OPFS; WebGPU_named_subset; validated_WebGPU_shutter_frames_and_bounded_sequence_consumers"
       },
       "evidence": [
         "evidence/m00-m04/renderer_cpu_conformance.json",
@@ -100,7 +101,8 @@
         "evidence/static-pbr/README.md",
         "evidence/m06-m08/README.md",
         "evidence/animated-gltf/README.md",
-        "evidence/multibounce-pbr/README.md"
+        "evidence/multibounce-pbr/README.md",
+        "evidence/gpu-shutter/README.md"
       ]
     },
     {
@@ -225,7 +227,7 @@
         "M09",
         "M14"
       ],
-      "qualification": "Exact rational clips/retiming, Euler/quaternion step/linear/cubic tracks, stable rigs/rest/bind, CopyPosition/TwoBoneIk, triangle LBS/morphs and sampled shutter sequences. Imported absolute TRS clips, per-skin inverse binds and default POSITION morph weights; immutable default/random-time evaluation.",
+      "qualification": "Exact rational clips/retiming, Euler/quaternion step/linear/cubic tracks, stable rigs/rest/bind, CopyPosition/TwoBoneIk, triangle LBS/morphs and sampled shutter sequences. Imported absolute TRS clips, per-skin inverse binds and default POSITION morph weights; immutable default/random-time evaluation. GPU f32 shutter frames/streaming sequences for opaque material profiles with nominal-time passes.",
       "capability_axes": {
         "native_authoring": "ordinary_revision_checked_typed_transactions",
         "native_evaluation": "named_Rust_profiles_in_docs/m07_m08.md",
@@ -237,11 +239,12 @@
       },
       "platform_profiles": {
         "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
-        "browser_local": "validated_Chromium_Rust_Wasm_OPFS; WebGPU_named_subset"
+        "browser_local": "validated_Chromium_Rust_Wasm_OPFS; WebGPU_named_subset; validated_WebGPU_shutter_frames_and_bounded_sequence_consumers"
       },
       "evidence": [
         "evidence/m06-m08/README.md",
-        "evidence/animated-gltf/README.md"
+        "evidence/animated-gltf/README.md",
+        "evidence/gpu-shutter/README.md"
       ]
     },
     {
@@ -408,14 +411,15 @@
       },
       "platform_profiles": {
         "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
-        "browser_local": "validated_Rust_Wasm_GLB_import_OPFS_shutter_frames_and_default_pose_WebGPU"
+        "browser_local": "validated_Rust_Wasm_GLB_import_OPFS_shutter_frames_and_default_pose_WebGPU; validated_WebGPU_shutter_frames_and_bounded_sequence_consumers"
       },
       "evidence": [
         "evidence/m00-m04/interchange_profile_report.json",
         "evidence/m05/agent_workflow_report.json",
         "evidence/m05/browser_workflow_report.json",
         "evidence/static-pbr/README.md",
-        "evidence/animated-gltf/README.md"
+        "evidence/animated-gltf/README.md",
+        "evidence/gpu-shutter/README.md"
       ]
     },
     {

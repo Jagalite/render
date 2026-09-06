@@ -1,0 +1,255 @@
+{
+  "status": "passed",
+  "profile": "gpu-f32-animation-v0",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/requests/000-init.json"
+      ],
+      "seconds": 0.11741283399896929,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/requests/001-inspect.json"
+      ],
+      "seconds": 0.008117249999486376,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "import",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/requests/002-import.json"
+      ],
+      "seconds": 0.11690512500354089,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/requests/003-inspect.json"
+      ],
+      "seconds": 0.030336040996189695,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "cpu-frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/requests/004-cpu-frame.json"
+      ],
+      "seconds": 0.37378941700444557,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20594688,
+        "peak memory footprint": 5063808
+      }
+    },
+    {
+      "name": "gpu-frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/requests/005-gpu-frame.json"
+      ],
+      "seconds": 0.3390582909996738,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36929536,
+        "peak memory footprint": 12273216
+      }
+    },
+    {
+      "name": "gpu-sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/requests/006-gpu-sequence.json"
+      ],
+      "seconds": 0.9858364999963669,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 37437440,
+        "peak memory footprint": 13010560
+      }
+    },
+    {
+      "name": "archive",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/requests/007-archive.json"
+      ],
+      "seconds": 0.1223752920050174,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restore",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/requests/008-restore.json"
+      ],
+      "seconds": 0.11556937499699416,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restored-frame",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/requests/009-restored-frame.json"
+      ],
+      "seconds": 0.3707086659997003,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "stale",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/requests/010-stale.json"
+      ],
+      "seconds": 0.0193134170040139,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "invalid",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/requests/011-invalid.json"
+      ],
+      "seconds": 0.7528930840053363,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "limited",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/requests/012-limited.json"
+      ],
+      "seconds": 0.22826129099848913,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "partial",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/requests/013-partial.json"
+      ],
+      "seconds": 0.3267267089977395,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "unchanged",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/requests/014-unchanged.json"
+      ],
+      "seconds": 0.02273208300175611,
+      "exit_code": 0,
+      "expected_error": null
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "revision": "sha256:1980ec2bf4ec22f8159c11f8f4bc8703f2f608b72b2dbfa2ec52c01948a0cf68",
+  "clip": "15c77c8677038a00d22b7921d37af01e",
+  "settings": {
+    "width": 64,
+    "height": 64,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.15,
+      0.15,
+      0.15
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        30,
+        30,
+        30
+      ]
+    },
+    "camera": {
+      "position": [
+        1,
+        1,
+        5
+      ],
+      "target": [
+        0,
+        1,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65
+    }
+  },
+  "gpu_comparison": {
+    "linear_rmse": 4.59514983409537e-09,
+    "object_mismatches": 0
+  },
+  "partial_frames": 1
+}

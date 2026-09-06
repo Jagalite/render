@@ -1,0 +1,39 @@
+{
+  "generator": [
+    "crates/kernel/src/path.rs",
+    "crates/kernel/src/path/pbr.rs"
+  ],
+  "command": [
+    "target/debug/render-host",
+    "kernel"
+  ],
+  "sha256": "0eefe434ea58d2630020d0ae37dccb5b4ab1d2646e4bd0fa38ca250bf651a9e5",
+  "maintained_shader_source": false,
+  "inputs": [
+    {
+      "path": "crates/kernel/src/lib.rs",
+      "sha256": "ec11cab4aa678d0624c693d1f33bb25bbfb407826f7ef7b6e4fb922e6fee3a8c"
+    },
+    {
+      "path": "crates/kernel/src/path.rs",
+      "sha256": "4eb9622e2df2337b9500e040c7a3da06ad041e264d96b6b6ddb74c226a7f388e"
+    },
+    {
+      "path": "crates/kernel/src/path/pbr.rs",
+      "sha256": "a25750c73d42a09bb7132dc31267393d6e67d6d3513de4fb528b491442caa3d0"
+    },
+    {
+      "path": "crates/gpu/src/lib.rs",
+      "sha256": "dc9df692477277014e53d066873f2031fcceb694117d58c78fe1e9c7a1db3f34"
+    },
+    {
+      "path": "crates/gpu/src/sequence.rs",
+      "sha256": "d3575b13d9a4bea31a5d4cfbbeca6f218cd21fc5a55b5f07041ee4b74184561a"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "4f6c11c32e966f791611b40cf7773771ecc0bef6491cb1cd484a4369c75bc59d"
+    }
+  ],
+  "toolchain": "rustc 1.95.0 (59807616e 2026-04-14)"
+}

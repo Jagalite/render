@@ -17,7 +17,7 @@ The control JSON has a fixed 16 MiB cap. The request contains `version: 0`, opti
 `limits`, and `operation` with a `method`
 tag. Operations cover explicit init/restore, inspect, ordinary document apply,
 bounded OBJ/GLB/explicit glTF bundles, exact-time evaluation, CPU/GPU scene rendering,
-CPU shutter frames/sequences, authored imaging products and document/evaluated OBJ
+CPU/GPU shutter frames/sequences, authored imaging products and document/evaluated OBJ
 exports. Import resource paths are supplied by the caller; asset metadata never
 causes URI, filesystem or network fetching.
 
@@ -94,8 +94,8 @@ All output paths must be new and have existing parent directories.
 | `import` | `base_revision`, `idempotency_key`, `max_added_bytes`, typed `source`, optional `settings` |
 | `evaluate` | `revision`, optional `at` (`clip`, `time`) |
 | `render` | `revision`, `backend` (`cpu` or `gpu`), `output`, optional `at` |
-| `frame` | `request` (`revision`, `clip`, `time`, `shutter`), `output`; Rust CPU shutter integration |
-| `sequence` | `request` (`revision`, `clip`, `times`, `shutter`), `output`; Rust CPU shutter integration |
+| `frame` | `request` (`revision`, `clip`, `time`, `shutter`), `output`, optional `backend` (default `cpu`); Rust CPU or GPU shutter integration |
+| `sequence` | `request` (`revision`, `clip`, `times`, `shutter`), `output`, optional `backend` (default `cpu`); Rust CPU or GPU shutter integration |
 | `products` | `revision`, `output`; uses authored views/bakes/color/denoising |
 | `export` | `revision`, `output`, typed `content` |
 
@@ -125,8 +125,8 @@ GPU rendering at a single clip/time is supported for compatible scene profiles.
 Opaque PBR and diffuse CPU/GPU transport now supports depth 1–16 under the
 [multi-bounce contract](multibounce_pbr.md). The CLI workflow compares the same
 authored depth-two scene on CPU/Metal;
-GPU shutter accumulation remains unsupported and is not an accepted `frame` or
-`sequence` field.
+`frame` and `sequence` now accept optional `backend: "gpu"` under the
+[GPU shutter contract](gpu_shutter.md); omitted backend remains `cpu`.
 
 ## Example
 

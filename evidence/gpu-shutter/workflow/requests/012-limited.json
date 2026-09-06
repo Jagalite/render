@@ -1,0 +1,48 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "sequence",
+    "backend": "gpu",
+    "request": {
+      "revision": "sha256:1980ec2bf4ec22f8159c11f8f4bc8703f2f608b72b2dbfa2ec52c01948a0cf68",
+      "clip": "15c77c8677038a00d22b7921d37af01e",
+      "times": [
+        {
+          "numerator": 0,
+          "denominator": 1
+        },
+        {
+          "numerator": 1,
+          "denominator": 2
+        },
+        {
+          "numerator": 1,
+          "denominator": 1
+        },
+        {
+          "numerator": 3,
+          "denominator": 2
+        },
+        {
+          "numerator": 2,
+          "denominator": 1
+        }
+      ],
+      "shutter": {
+        "open": {
+          "numerator": -1,
+          "denominator": 32
+        },
+        "close": {
+          "numerator": 1,
+          "denominator": 32
+        },
+        "samples": 3
+      }
+    },
+    "output": "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/limited"
+  },
+  "limits": {
+    "max_output_bytes": 32
+  }
+}

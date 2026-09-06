@@ -1,0 +1,426 @@
+{
+  "baseline": "4bfe27f",
+  "baseline_artifacts": "artifacts/multibounce-pbr/run-20260906T031706Z",
+  "comparisons": [
+    {
+      "path": "animated-regression/sequence/frame-000000/image.pfm",
+      "sha256": "d40de9e87b02e3fe75635e1f4e9db044b9b57c802969216ca62e6bc3b2f2c6e8",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000000/image.ppm",
+      "sha256": "54375dd5b43ddee7571a5c8a9d3043bbf59a6f401e6e6240cc549db756fdffb8",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000000/passes.json",
+      "sha256": "fd420fc932627a1ee3175677d6d3ef800002563e601b0e2b930f0d8a3d184b7b",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000000/receipt.json",
+      "sha256": "0471d8ccd1522c48d780c3f3b5056aefab470b7d18d8634a5977022ab1659dc8",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000001/image.pfm",
+      "sha256": "c0da03e7728282ff996f71fcf8bd2fb5d2e414c5ca1ba96edef826285feb90cb",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000001/image.ppm",
+      "sha256": "1c470cb77aca0f264f0e6846b4fe6a8aebfd4ecb8100ba82e82afb220d50c610",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000001/passes.json",
+      "sha256": "35e70440e5d9876d022a57dd3ddbdd3ecadfb436f8b3790c247316fd6adbd371",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000001/receipt.json",
+      "sha256": "6baf6819f8c7a71b52390e846cf3ab45f65b30a96466c1246febaca21f38a9fc",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000002/image.pfm",
+      "sha256": "2e103f0574052f2e8e702c83bcaccf98cbb8f02ad9d5e490634392a7cd79e9e1",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000002/image.ppm",
+      "sha256": "79fbb9b65fb6a46b047974a90eb73c2304643194bacf50f80ba632a6e5372fd7",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000002/passes.json",
+      "sha256": "8c4efdf7cd4822cbdcebc352aa4bc238471d341ce07279cff4c77d47c1153316",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000002/receipt.json",
+      "sha256": "3e350f6438928ba1cd59777170ca0803ff4cc8f4c5cee967a660957a0c567cfa",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000003/image.pfm",
+      "sha256": "85de156f16a09a3ad0a46edbca1703519706ee75da3f8037410b392ae82420cd",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000003/image.ppm",
+      "sha256": "cec49e762b1d054c6ccebe748936cbcd93e6cd4399eaeba09a6e3d372580bc39",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000003/passes.json",
+      "sha256": "12763075d63ee65bd02c9f03aa88a7b81cfef7413b5e840d57e87fffb9593636",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000003/receipt.json",
+      "sha256": "676f6a59295ef88e8c9e64efe9bf248bd75908e8d7e9eb8b1edffe5a5cf1ef78",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000004/image.pfm",
+      "sha256": "7529d1186ee5e55b0254b294c3e0d2fb4b83ede93940d8d442bfb9740e288a47",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000004/image.ppm",
+      "sha256": "5a7b97a6e53a93a02ef0cffd5c90a8dcac0d3cebbb1a3977d057545567a8e6b3",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000004/passes.json",
+      "sha256": "4b10e5968a4be1aaf97cf16e7eeb6aca75f9d5aed878f34a285cc705bb36c8f6",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/sequence/frame-000004/receipt.json",
+      "sha256": "01c0681dfed9ebe83726389e3f8030c33318f6a156ef24b2756603639bcaa37a",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/restored-frame/frame/image.pfm",
+      "sha256": "2e103f0574052f2e8e702c83bcaccf98cbb8f02ad9d5e490634392a7cd79e9e1",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/restored-frame/frame/image.ppm",
+      "sha256": "79fbb9b65fb6a46b047974a90eb73c2304643194bacf50f80ba632a6e5372fd7",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/restored-frame/frame/passes.json",
+      "sha256": "8c4efdf7cd4822cbdcebc352aa4bc238471d341ce07279cff4c77d47c1153316",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/restored-frame/frame/receipt.json",
+      "sha256": "3e350f6438928ba1cd59777170ca0803ff4cc8f4c5cee967a660957a0c567cfa",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/gpu/image/image.pfm",
+      "sha256": "9f221b49f754f04dd0547d8c161712ad837ee27c039ed7df54cc759f6ef48987",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/gpu/image/image.ppm",
+      "sha256": "f3e73c97f7c789c7d73869839dfc301a10bb7ec8c6ff92593487ed68c4a85d06",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/gpu/image/passes.json",
+      "sha256": "75f38ba90affd4a66966a5a0f7039734dbae91e1e055e3d93979adac6eebed15",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/gpu/image/receipt.json",
+      "sha256": "3912fd448cbdea5c4dd989699823e64e4b5814525aebec5b62bf324661624d5f",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/frame/frame/image.pfm",
+      "sha256": "2e103f0574052f2e8e702c83bcaccf98cbb8f02ad9d5e490634392a7cd79e9e1",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/frame/frame/image.ppm",
+      "sha256": "79fbb9b65fb6a46b047974a90eb73c2304643194bacf50f80ba632a6e5372fd7",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/frame/frame/passes.json",
+      "sha256": "8c4efdf7cd4822cbdcebc352aa4bc238471d341ce07279cff4c77d47c1153316",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/frame/frame/receipt.json",
+      "sha256": "3e350f6438928ba1cd59777170ca0803ff4cc8f4c5cee967a660957a0c567cfa",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/external-frame/frame/image.pfm",
+      "sha256": "8b0858fb48d8e7dfbce22c469bb464704995127fca52f4369ffe2a52c7183e31",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/external-frame/frame/image.ppm",
+      "sha256": "025e18e60b82e3a5e52cceb3515966f6309849ca5b7c7f7c7127374e47c99db8",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/external-frame/frame/passes.json",
+      "sha256": "8d9b2dbd50c75b60cd6741258bc4dc2328b6d27a3440674396cfaf5c1e93da59",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/external-frame/frame/receipt.json",
+      "sha256": "a9ca88d193ff636e3361845d3dbff460171a4ae64953d1292d6f2d6bf2db9923",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/default/image/image.pfm",
+      "sha256": "00c99524bb9c71c18f1560c562be3993d415536cc598d4d29aad2c84569e4714",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/default/image/image.ppm",
+      "sha256": "2faa400f435cce23611f2ed040d6ae70a3e9944751dcdb9f1950e97a53ebef62",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/default/image/passes.json",
+      "sha256": "fd420fc932627a1ee3175677d6d3ef800002563e601b0e2b930f0d8a3d184b7b",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/default/image/receipt.json",
+      "sha256": "4dc48e2cf87ef1d54922b77af4514876a7483e0f7bb1197f978de542a8ccad6f",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/cpu/image/image.pfm",
+      "sha256": "62362bcf50fb5a05ec851ce4f8ef3940e9e7a33f88e58e5d1d77b433a4e572dd",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/cpu/image/image.ppm",
+      "sha256": "f3e73c97f7c789c7d73869839dfc301a10bb7ec8c6ff92593487ed68c4a85d06",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/cpu/image/passes.json",
+      "sha256": "8c4efdf7cd4822cbdcebc352aa4bc238471d341ce07279cff4c77d47c1153316",
+      "byte_identical": true
+    },
+    {
+      "path": "animated-regression/cpu/image/receipt.json",
+      "sha256": "6f63df145c4f5673670318295cadace8025bdf06504c40e5946f8379ac4c8481",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000000/image.pfm",
+      "sha256": "6001d9f9d5b602659c9ce5b79db25d271f6e83c479e76689b22ecc7c1c9d05a4",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000000/image.ppm",
+      "sha256": "2126f41f8f57850841ea729d4402d6ce3d8b6ba61d36abd6648859d216d05013",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000000/passes.json",
+      "sha256": "0e32f5bd321e0da1c6004af5c582042db1b0f7f5f4dcba83c63657501c1b2c0f",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000000/receipt.json",
+      "sha256": "7a799af6e04ffe8424039c27f7e7392b07f76b370ac78ef6bb60fc2c6f956523",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000001/image.pfm",
+      "sha256": "1c645fdaa53d41292b6feb18189da2ca1d61b856a1a84211a9f1c16dd73f41af",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000001/image.ppm",
+      "sha256": "9023dd242819a94bd99236dc4c504a264dcba65c4dfd117b5e31457223e68841",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000001/passes.json",
+      "sha256": "3a01446ef8f1cce1dd22454e58d5b5e4a3143ba3b6379fdc586d2bd4e3bf6b50",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000001/receipt.json",
+      "sha256": "e7e9812dc9d47cea6ca03c60f75d3cb34b65e7c7aa86d2157f1c33b835c0f6af",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000002/image.pfm",
+      "sha256": "1ce3409937f346bbe58134ad33c9c119f2fec4c1935524e66b2abaaae251f42c",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000002/image.ppm",
+      "sha256": "e74b1fdadc3059db662532e2f19adb49ce2c6ea0c221ba1af0facf0e675dcc72",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000002/passes.json",
+      "sha256": "3b421bd63310b157f45417564438f1b1b78d9abfa6628c881aafd00c902cb399",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000002/receipt.json",
+      "sha256": "af316d8b73d98a524aaccfea05d882410d81bf8bce0752c2ff90d391f4dd152f",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000003/image.pfm",
+      "sha256": "bbe332dd9daa1649a1d498f5fd6f43148167404380aa588b5aed61aa637ea078",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000003/image.ppm",
+      "sha256": "f7955c2ac725eac33c2f114d3664608f30d47033534a9544bf6780059c2dfa19",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000003/passes.json",
+      "sha256": "d0785a96593dac2a3df8e778f9ef11d3c8f0079001be2ee592e024979eb69968",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000003/receipt.json",
+      "sha256": "60dac7ffe6f0ce6c42ca6eee2fba5a2bf1f191108fde534c08817ce98b72e8dd",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000004/image.pfm",
+      "sha256": "182f68acbd9f06ed54d4db79f48163ac41a5af5b3c8b07a7521a3a81ff279ac5",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000004/image.ppm",
+      "sha256": "d128ffad41ded09e9df25063242e6124eb6073854d6b8388b820849ecb0c42ac",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000004/passes.json",
+      "sha256": "42ecf5bc6ca35975b99b8d8fe218702b26b3fb91a30658680f6317c42b597b48",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/sequence/frame-000004/receipt.json",
+      "sha256": "dd7d8b3ce2883d14632f752a571c6a7a9f6bcebd256e6341f678f2c47c93e048",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/products/view-0000/image.pfm",
+      "sha256": "5f4a86e841bc7d0da1ae109bedec50ee05f639444945212024ff3c7014a18f56",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/products/view-0000/image.ppm",
+      "sha256": "3f8e4b13a63a00a221ec73d53805d6b742f2b28818ed9f3cf78c09e7af96ba6c",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/products/view-0000/passes.json",
+      "sha256": "86010868d2a987081c1d498430eb488e43c7c97ac8768c128be8cd7a2bba3fec",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/products/view-0000/receipt.json",
+      "sha256": "d7f0cb749d32eb53874c5ba3252a9431cc0f2d8f170f439ee88ca810afb0aa00",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/gpu-reference/image/image.pfm",
+      "sha256": "5f4a86e841bc7d0da1ae109bedec50ee05f639444945212024ff3c7014a18f56",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/gpu-reference/image/image.ppm",
+      "sha256": "3f8e4b13a63a00a221ec73d53805d6b742f2b28818ed9f3cf78c09e7af96ba6c",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/gpu-reference/image/passes.json",
+      "sha256": "86010868d2a987081c1d498430eb488e43c7c97ac8768c128be8cd7a2bba3fec",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/gpu-reference/image/receipt.json",
+      "sha256": "d7f0cb749d32eb53874c5ba3252a9431cc0f2d8f170f439ee88ca810afb0aa00",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/gpu/image/image.pfm",
+      "sha256": "cae2c0414afba34838f80920db20c6d8530f6c234669f66c061ececb70cd0f72",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/gpu/image/image.ppm",
+      "sha256": "3f8e4b13a63a00a221ec73d53805d6b742f2b28818ed9f3cf78c09e7af96ba6c",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/gpu/image/passes.json",
+      "sha256": "c6200d5cb6572faee279d884a0cd587236f03142df451cfe16bb0a46d1c3e280",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/gpu/image/receipt.json",
+      "sha256": "e72b2dd1919564d883750dd3eb3f92882bd1c792ec3681ebe7b59b3a2f34c34a",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/frame/frame/image.pfm",
+      "sha256": "1ce3409937f346bbe58134ad33c9c119f2fec4c1935524e66b2abaaae251f42c",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/frame/frame/image.ppm",
+      "sha256": "e74b1fdadc3059db662532e2f19adb49ce2c6ea0c221ba1af0facf0e675dcc72",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/frame/frame/passes.json",
+      "sha256": "3b421bd63310b157f45417564438f1b1b78d9abfa6628c881aafd00c902cb399",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/frame/frame/receipt.json",
+      "sha256": "af316d8b73d98a524aaccfea05d882410d81bf8bce0752c2ff90d391f4dd152f",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/cpu/image/image.pfm",
+      "sha256": "5f4a86e841bc7d0da1ae109bedec50ee05f639444945212024ff3c7014a18f56",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/cpu/image/image.ppm",
+      "sha256": "3f8e4b13a63a00a221ec73d53805d6b742f2b28818ed9f3cf78c09e7af96ba6c",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/cpu/image/passes.json",
+      "sha256": "86010868d2a987081c1d498430eb488e43c7c97ac8768c128be8cd7a2bba3fec",
+      "byte_identical": true
+    },
+    {
+      "path": "cli-regression/cpu/image/receipt.json",
+      "sha256": "d7f0cb749d32eb53874c5ba3252a9431cc0f2d8f170f439ee88ca810afb0aa00",
+      "byte_identical": true
+    }
+  ]
+}

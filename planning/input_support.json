@@ -109,10 +109,11 @@
       "status": "partially_implemented_profile",
       "evidence": [
         "evidence/m06-m08/README.md",
-        "evidence/animated-gltf/README.md"
+        "evidence/animated-gltf/README.md",
+        "evidence/gpu-shutter/README.md"
       ],
-      "implemented_profile": "native-authored affine-lbs-shutter-v0 and gltf2-animated-pbr-v0 on native/Wasm",
-      "remaining_scope": "Sparse accessors, normal/tangent morph targets, extensions, larger source profiles, animated glTF export and GPU shutter accumulation remain unsupported."
+      "implemented_profile": "native-authored affine-lbs-shutter-v0 and gltf2-animated-pbr-v0 on native/Wasm; gpu-f32-animation-v0 frames and streaming sequences on Metal/WebGPU",
+      "remaining_scope": "Sparse accessors, normal/tangent morph targets, extensions, larger source profiles and animated glTF export remain unsupported."
     },
     {
       "id": "INPUT-04",

@@ -31,3 +31,7 @@ Every track includes an external or independently authored fixture with provenan
 Native and browser implementations share authored semantics and Rust-owned computation. No Blender/Cycles process, conversion service, non-Rust shading/geometry library, or required remote renderer may implement these capabilities. Embedded scripts and arbitrary add-ons are not executed. Existing `.blend` limits in architecture section 21.2 remain applicable: selected versions and native feature semantics expand through measured profiles.
 
 The core glTF target is grounded in the [Khronos glTF 2.0 specification](https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html), including scene hierarchy, accessors, materials, animations and the GLB container. Extensions require their own declared support and tests.
+
+[GPU shutter frames and streaming sequences](gpu_shutter.md) now extend the
+opaque animation profile on Metal/WebGPU, with explicit nominal-time passes and
+partial-output semantics. Format coverage remains separately qualified.

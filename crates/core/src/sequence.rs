@@ -55,6 +55,31 @@ pub struct FrameRequest {
     pub time: Time,
     pub shutter: Shutter,
 }
+impl FrameRequest {
+    pub fn validate(&self, snapshot: &Snapshot) -> Result<Vec<Time>> {
+        if snapshot.revision()? != self.revision {
+            return Err(Error::new(
+                "stale_revision",
+                "frame request does not match authored revision",
+            ));
+        }
+        let times = self.shutter.times(self.time)?;
+        let settings = snapshot.render_settings.as_ref().ok_or_else(|| {
+            Error::new(
+                "render_settings",
+                "sequence requires authored render settings",
+            )
+        })?;
+        settings.validate()?;
+        if settings.max_bytes < u64::from(settings.width) * u64::from(settings.height) * 128 {
+            return Err(Error::new(
+                "budget",
+                "shutter rendering requires 128 bytes per pixel working storage",
+            ));
+        }
+        Ok(times)
+    }
+}
 #[derive(Clone, Debug)]
 pub struct Frame {
     pub image: Image,
@@ -83,26 +108,11 @@ pub fn render_frame(
     if cancelled() {
         return Err(Error::new("cancelled", "frame render cancelled"));
     }
-    if snapshot.revision()? != request.revision {
-        return Err(Error::new(
-            "stale_revision",
-            "frame request does not match authored revision",
-        ));
-    }
-    let times = request.shutter.times(request.time)?;
-    let settings = snapshot.render_settings.as_ref().ok_or_else(|| {
-        Error::new(
-            "render_settings",
-            "sequence requires authored render settings",
-        )
-    })?;
-    // Per-frame output is bounded; no full sequence framebuffer accumulation.
-    if settings.max_bytes < u64::from(settings.width) * u64::from(settings.height) * 128 {
-        return Err(Error::new(
-            "budget",
-            "shutter rendering requires 128 bytes per pixel working storage",
-        ));
-    }
+    let times = request.validate(snapshot)?;
+    let settings = snapshot
+        .render_settings
+        .as_ref()
+        .expect("validated settings");
     let mut evaluator = Evaluator::default();
     let (center, evaluation) =
         evaluator.evaluate_at(snapshot, request.clip, request.time, &mut cancelled)?;
@@ -113,7 +123,8 @@ pub fn render_frame(
             if cancelled() {
                 return Err(Error::new("cancelled", "shutter render cancelled"));
             }
-            let (scene, _) = evaluator.evaluate_at(snapshot, request.clip, at, &mut cancelled)?;
+            let (scene, _) =
+                Evaluator::default().evaluate_at(snapshot, request.clip, at, &mut cancelled)?;
             let frame = render(&scene, settings, &mut cancelled)?;
             for (out, pixel) in sums.iter_mut().zip(frame.linear) {
                 for c in 0..3 {
@@ -126,8 +137,18 @@ pub fn render_frame(
             .map(|p| p.map(|x| (x / times.len() as f64) as f32))
             .collect();
     }
+    finish_frame(request, evaluation, times, image, "cpu-f64-animation-v0")
+}
+/// Finalize backend-independent frame identity and nominal-time evaluation metadata.
+pub fn finish_frame(
+    request: &FrameRequest,
+    evaluation: animation::Receipt,
+    times: Vec<Time>,
+    mut image: Image,
+    backend: &str,
+) -> Result<Frame> {
     image.receipt.revision = digest(&canonical(&(request, "midpoint-shutter-v0"))?);
-    image.receipt.backend = "cpu-f64-animation-v0".into();
+    image.receipt.backend = backend.into();
     image.receipt.approximation.push_str(&format!("; {}; {} exact-time midpoint shutter samples; rigid and LBS/morph geometry evaluated independently at each time; depth/normal/object passes at nominal frame time",evaluation.approximation,times.len()));
     image.receipt.output_digest = digest(
         &image
@@ -159,19 +180,9 @@ pub fn render_sequence(
     mut emit: impl FnMut(usize, &Frame) -> Result<()>,
     mut cancelled: impl FnMut() -> bool,
 ) -> Result<Vec<RenderReceipt>> {
-    if request.times.is_empty() || request.times.len() > 1024 {
-        return Err(Error::new("budget", "sequence requires 1..1024 frames"));
-    }
-    if snapshot.revision()? != request.revision {
-        return Err(Error::new("stale_revision", "sequence revision changed"));
-    }
-    for pair in request.times.windows(2) {
-        if pair[0].compare(pair[1])? != std::cmp::Ordering::Less {
-            return Err(Error::new(
-                "time",
-                "sequence output times must strictly increase",
-            ));
-        }
+    request.validate(snapshot)?;
+    if cancelled() {
+        return Err(Error::new("cancelled", "sequence cancelled"));
     }
     let mut receipts = Vec::new();
     for (i, &time) in request.times.iter().enumerate() {
@@ -185,8 +196,44 @@ pub fn render_sequence(
             },
             &mut cancelled,
         )?;
+        if cancelled() {
+            return Err(Error::new(
+                "cancelled",
+                "sequence cancelled before frame publication",
+            ));
+        }
         emit(i, &frame)?;
         receipts.push(frame.image.receipt);
     }
     Ok(receipts)
+}
+
+impl SequenceRequest {
+    pub fn validate(&self, snapshot: &Snapshot) -> Result<()> {
+        if self.times.is_empty() || self.times.len() > 1024 {
+            return Err(Error::new("budget", "sequence requires 1..1024 frames"));
+        }
+        if snapshot.revision()? != self.revision {
+            return Err(Error::new("stale_revision", "sequence revision changed"));
+        }
+        for pair in self.times.windows(2) {
+            if pair[0].compare(pair[1])? != std::cmp::Ordering::Less {
+                return Err(Error::new(
+                    "time",
+                    "sequence output times must strictly increase",
+                ));
+            }
+        }
+        FrameRequest {
+            revision: self.revision.clone(),
+            clip: self.clip,
+            time: self.times[0],
+            shutter: self.shutter.clone(),
+        }
+        .validate(snapshot)?;
+        for &time in &self.times[1..] {
+            self.shutter.times(time)?;
+        }
+        Ok(())
+    }
 }

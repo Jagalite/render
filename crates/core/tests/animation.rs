@@ -517,3 +517,41 @@ fn quaternion_layer_schema_gate_and_transaction_upgrade() {
     assert_eq!(d.snapshot().version, 6);
     d.snapshot().validate().unwrap();
 }
+
+#[cfg_attr(target_arch = "wasm32", wasm_bindgen_test::wasm_bindgen_test)]
+#[cfg_attr(not(target_arch = "wasm32"), test)]
+fn sequence_preflights_all_exact_times_and_rejects_invalid_dimensions_without_overflow() {
+    use render_core::sequence::*;
+    let doc = feature_fixtures::character_document().unwrap();
+    let mut snapshot = doc.snapshot().clone();
+    let mut request = SequenceRequest {
+        revision: snapshot.revision().unwrap(),
+        clip: Id(8400),
+        times: vec![time(0, 1), time(i64::MAX, 1)],
+        shutter: Shutter {
+            open: time(0, 1),
+            close: time(2, 1),
+            samples: 1,
+        },
+    };
+    assert_eq!(
+        render_sequence(
+            &snapshot,
+            &request,
+            |_, _| panic!("invalid later time must fail before any publication"),
+            || false
+        )
+        .unwrap_err()
+        .code,
+        "overflow"
+    );
+    let settings = snapshot.render_settings.as_mut().unwrap();
+    settings.width = u32::MAX;
+    settings.height = u32::MAX;
+    settings.max_bytes = u64::MAX;
+    request.times = vec![time(0, 1)];
+    assert_eq!(
+        request.validate(&snapshot).unwrap_err().code,
+        "render_settings"
+    );
+}

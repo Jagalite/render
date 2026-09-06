@@ -1,0 +1,65 @@
+{
+  "profile": "64x64 pixels, 8 spatial samples, 3 temporal midpoint samples, depth 2",
+  "output_buffer_bytes": 131072,
+  "full_readback_bytes": 131072,
+  "intermediate_fence_readback_bytes_per_frame": 12,
+  "dispatches_per_shutter_frame": 4,
+  "working_storage_admission_bytes": 524288,
+  "whole_process_allocator_cap": false,
+  "observations": [
+    {
+      "name": "cpu-frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/requests/004-cpu-frame.json"
+      ],
+      "seconds": 0.37378941700444557,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20594688,
+        "peak memory footprint": 5063808
+      }
+    },
+    {
+      "name": "gpu-frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/requests/005-gpu-frame.json"
+      ],
+      "seconds": 0.3390582909996738,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36929536,
+        "peak memory footprint": 12273216
+      }
+    },
+    {
+      "name": "gpu-sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/gpu-shutter/run-20260906T042706Z/workflow/requests/006-gpu-sequence.json"
+      ],
+      "seconds": 0.9858364999963669,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 37437440,
+        "peak memory footprint": 13010560
+      }
+    }
+  ]
+}

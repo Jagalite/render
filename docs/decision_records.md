@@ -188,3 +188,24 @@ shutter accumulation remain separate profiles. See [contract](multibounce_pbr.md
 **Revisit trigger:** Measured small-emitter variance or texture aliasing motivates
 continuous light sampling/MIS or propagated secondary footprints, with independent
 numerical evidence before changing the named policy.
+
+## ADR-017 — Exact-time GPU shutter accumulation and bounded consumers
+
+**Decision:** Share the existing frame validation/identity semantics across Rust
+CPU and GPU backends. Evaluate derived poses in Rust, accumulate weighted linear
+color in a persistent device buffer, and preserve nominal-time passes. A 4-byte
+intermediate readback fences each dispatch; one full readback completes the frame.
+Dispose temporal evaluator caches between samples. Sequence consumers accept one
+completed frame at a time, with browser Promise backpressure and explicit partial
+counts. No authored schema version or runtime dependency changes.
+
+**Integration boundary:** Core exact-time evaluation, generated kernel private
+packing, GPU resource/cancellation lifecycle, optional CLI backend and browser
+branch authority meet at the [GPU shutter contract](gpu_shutter.md). Animated
+previews never qualify a static branch for commit. Existing CPU default requests
+and exact frame identities retain their meaning.
+
+**Revisit trigger:** Measured scene rebuild/fence overhead justifies a bounded cache
+or asynchronous dispatch ring with equivalent cancellation, budget and publication
+semantics. Driver preemption, unbounded consumer buffering and automatic CPU
+fallback are not part of this profile.

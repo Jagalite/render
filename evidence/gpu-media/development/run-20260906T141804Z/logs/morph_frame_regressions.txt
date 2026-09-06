@@ -1,0 +1,13 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 5.07s
+     Running tests/morph_frames.rs (target/debug/deps/morph_frames-2af1dd94885b5c4b)
+
+running 6 tests
+test morph_frame_import_rejects_missing_base_unknown_semantics_and_bad_counts ... ok
+test animation_input_bounds_are_required_and_match_decoded_endpoints ... ok
+test native_corner_direction_offsets_preserve_seam_domain_and_stable_ids ... ok
+test morph_reflection_and_singular_blends_are_explicit ... ok
+test morph_frame_versions_invalid_edits_zero_directions_and_cancellation_are_atomic ... ok
+test morph_directions_and_affine_skin_match_analytic_frames_and_recovery ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.11s

@@ -198,10 +198,11 @@
       "status": "partially_implemented_profile",
       "evidence": [
         "evidence/m06-m08/README.md",
-        "evidence/volume-import/README.md"
+        "evidence/volume-import/README.md",
+        "evidence/gpu-media/README.md"
       ],
-      "implemented_profile": "native typed sparse-media-v0, native/browser Rust CPU; vol3-cell-constant-v1 external scalar density and optional aligned RGB emission with explicit metric/optical policy, native CLI and browser import/recovery",
-      "remaining_scope": "Additional external formats, trilinear reconstruction, source-container history, paging and GPU transport remain unsupported."
+      "implemented_profile": "native typed sparse-media-v0, native/browser Rust CPU; vol3-cell-constant-v1 external scalar density and optional aligned RGB emission with explicit metric/optical policy, native CLI and browser import/recovery; gpu-f32-sparse-medium-v1 on Metal/Chrome WebGPU, at most64 zero-scattering cells with ordinary opaque PBR surfaces, native/VOL3/OPFS recovery and shutter sequences",
+      "remaining_scope": "Additional external formats, trilinear reconstruction, source-container history, paging, GPU scattering and joint alpha/advanced surface profiles remain unsupported."
     },
     {
       "id": "INPUT-06",

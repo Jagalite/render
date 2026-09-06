@@ -1,0 +1,109 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:1cae3c29ebb8999992fc42591298de287a6542ff9fb5ec104e3d023f195bc020",
+      "idempotency_key": "media:shutter:author:001",
+      "max_added_bytes": 8388608,
+      "commands": [
+        {
+          "operation": "set_animation",
+          "animation": {
+            "clips": {
+              "000000000000000000000000000029cc": {
+                "id": "000000000000000000000000000029cc",
+                "start": {
+                  "numerator": 0,
+                  "denominator": 1
+                },
+                "end": {
+                  "numerator": 2,
+                  "denominator": 1
+                },
+                "extrapolation": "clamp",
+                "remap": {
+                  "rate": {
+                    "numerator": 1,
+                    "denominator": 1
+                  },
+                  "offset": {
+                    "numerator": 0,
+                    "denominator": 1
+                  }
+                },
+                "tracks": [
+                  {
+                    "id": "000000000000000000000000000029cd",
+                    "target": {
+                      "kind": "entity",
+                      "entity": "00000000000000000000000000002969"
+                    },
+                    "property": {
+                      "kind": "translation"
+                    },
+                    "interpolation": "step",
+                    "keys": [
+                      {
+                        "time": {
+                          "numerator": 0,
+                          "denominator": 1
+                        },
+                        "value": {
+                          "kind": "vector",
+                          "value": [
+                            0,
+                            0,
+                            0
+                          ]
+                        },
+                        "incoming": null,
+                        "outgoing": null
+                      },
+                      {
+                        "time": {
+                          "numerator": 1,
+                          "denominator": 1
+                        },
+                        "value": {
+                          "kind": "vector",
+                          "value": [
+                            100000000.3,
+                            0,
+                            0
+                          ]
+                        },
+                        "incoming": null,
+                        "outgoing": null
+                      },
+                      {
+                        "time": {
+                          "numerator": 2,
+                          "denominator": 1
+                        },
+                        "value": {
+                          "kind": "vector",
+                          "value": [
+                            0,
+                            0,
+                            0
+                          ]
+                        },
+                        "incoming": null,
+                        "outgoing": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "rigs": {},
+            "skins": {},
+            "morphs": {}
+          }
+        }
+      ]
+    }
+  }
+}

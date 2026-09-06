@@ -1,0 +1,30 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling num-traits v0.2.19
+   Compiling quote v1.0.47
+   Compiling syn v2.0.119
+   Compiling moxcms v0.8.1
+   Compiling serde_derive v1.0.228
+   Compiling image v0.25.10
+   Compiling serde v1.0.228
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 28.63s
+     Running tests/gpu_media_reference.rs (target/debug/deps/gpu_media_reference-38921e05d2e7d577)
+
+running 1 test
+test analytic_sparse_emission_extinction_camera_and_affine_corpus ... FAILED
+
+failures:
+
+---- analytic_sparse_emission_extinction_camera_and_affine_corpus stdout ----
+
+thread 'analytic_sparse_emission_extinction_camera_and_affine_corpus' (4779976) panicked at crates/core/tests/gpu_media_reference.rs:13:13:
+inside: [0.32211953, 0.46065366, 0.44715473] != [0.32211992, 0.46065307, 0.44715178]
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    analytic_sparse_emission_extinction_camera_and_affine_corpus
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+error: test failed, to rerun pass `-p render-core --test gpu_media_reference`

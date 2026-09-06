@@ -1,0 +1,19 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:6ef7c369fe4c3262cdb6d23f0c659500d49c6b7fe2672107fe08eabf88f60add",
+      "idempotency_key": "gpu:media:tiny-attach:stale",
+      "max_added_bytes": 8388608,
+      "commands": [
+        {
+          "operation": "set_volume",
+          "entity": "00000000000000000000000000002969",
+          "asset": "sha256:cac56d95019e901fa2e31c22aa0059639a3cdf7533e6c69d9c7e2ff1d3f867ff"
+        }
+      ]
+    }
+  }
+}

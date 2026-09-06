@@ -88,3 +88,6 @@ Principled MASK/BLEND on Metal and browser WebGPU: [profile](docs/gpu_alpha.md),
 
 Polyline control RGBA and HAIR point appearance: [profile](docs/curve_colors.md),
 [acceptance evidence](evidence/curve-colors/README.md).
+
+Sparse RGB absorption/emission on Metal and browser WebGPU: [profile](docs/gpu_media.md),
+[analytic corpus](fixtures/gpu-media/README.md), [acceptance](evidence/gpu-media/README.md).

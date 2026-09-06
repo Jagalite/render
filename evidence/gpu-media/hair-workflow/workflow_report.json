@@ -1,0 +1,2005 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "default-le-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/000-default-le-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 2.9348188750009285
+    },
+    {
+      "name": "default-le-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/001-default-le-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.027146416003233753
+    },
+    {
+      "name": "default-le-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/002-default-le-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.41397666599368677,
+      "resources": {
+        "maximum resident set size": 17121280,
+        "peak memory footprint": 2933824
+      }
+    },
+    {
+      "name": "default-le-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/003-default-le-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05051766701217275
+    },
+    {
+      "name": "default-le-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/004-default-le-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.026536292003584094
+    },
+    {
+      "name": "default-le-evaluate",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/005-default-le-evaluate.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05673162500897888
+    },
+    {
+      "name": "default-le-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/006-default-le-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.9134773749974556,
+      "resources": {
+        "maximum resident set size": 18579456,
+        "peak memory footprint": 3261504
+      }
+    },
+    {
+      "name": "default-le-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/007-default-le-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.965827416992397,
+      "resources": {
+        "maximum resident set size": 36175872,
+        "peak memory footprint": 12568128
+      }
+    },
+    {
+      "name": "default-le-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/008-default-le-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4178770830039866
+    },
+    {
+      "name": "default-le-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/009-default-le-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.7675662500114413
+    },
+    {
+      "name": "default-le-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/010-default-le-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.34229595799115486
+    },
+    {
+      "name": "default-le-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/011-default-le-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.7613553749979474
+    },
+    {
+      "name": "default-le-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/012-default-le-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.19611900000018068
+    },
+    {
+      "name": "zero-radius",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/013-zero-radius.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "curve",
+      "seconds": 0.0294706670101732
+    },
+    {
+      "name": "flags",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/014-flags.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_hair",
+      "seconds": 0.025197208000463434
+    },
+    {
+      "name": "trailing",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/015-trailing.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "hair",
+      "seconds": 0.02819308399921283
+    },
+    {
+      "name": "sweep-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/016-sweep-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.03141933299775701
+    },
+    {
+      "name": "cancel-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/017-cancel-import.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.018054500003927387
+    },
+    {
+      "name": "input-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/018-input-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.02266241700272076
+    },
+    {
+      "name": "cancel-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/019-cancel-render.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.051226541996584274
+    },
+    {
+      "name": "budget-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/budget-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/020-budget-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.33765866699104663
+    },
+    {
+      "name": "transaction-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/budget-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/021-transaction-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.03057295799953863
+    },
+    {
+      "name": "budget-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/budget-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/022-budget-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02366549998987466
+    },
+    {
+      "name": "default-le-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/023-default-le-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.042799917006050237
+    },
+    {
+      "name": "default-be-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/024-default-be-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2111689579905942
+    },
+    {
+      "name": "default-be-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/025-default-be-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01914000000397209
+    },
+    {
+      "name": "default-be-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/026-default-be-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.23884541699953843,
+      "resources": {
+        "maximum resident set size": 17121280,
+        "peak memory footprint": 2933824
+      }
+    },
+    {
+      "name": "default-be-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/027-default-be-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05214495900145266
+    },
+    {
+      "name": "default-be-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/028-default-be-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04831574999843724
+    },
+    {
+      "name": "default-be-evaluate",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/029-default-be-evaluate.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.039133541999035515
+    },
+    {
+      "name": "default-be-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/030-default-be-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.9652836250024848,
+      "resources": {
+        "maximum resident set size": 18579456,
+        "peak memory footprint": 3261504
+      }
+    },
+    {
+      "name": "default-be-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/031-default-be-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.4212467910110718,
+      "resources": {
+        "maximum resident set size": 36405248,
+        "peak memory footprint": 12846720
+      }
+    },
+    {
+      "name": "default-be-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/032-default-be-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22067716700257733
+    },
+    {
+      "name": "default-be-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-be-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/033-default-be-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.16756112499570008
+    },
+    {
+      "name": "default-be-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-be-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/034-default-be-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.36643845798971597
+    },
+    {
+      "name": "default-be-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-be-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/035-default-be-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.8850725420052186
+    },
+    {
+      "name": "default-be-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/036-default-be-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.03984958300134167
+    },
+    {
+      "name": "default-be-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/037-default-be-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.028719540991005488
+    },
+    {
+      "name": "arrays-le-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/038-arrays-le-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10481979200267233
+    },
+    {
+      "name": "arrays-le-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/039-arrays-le-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012611416997970082
+    },
+    {
+      "name": "arrays-le-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/040-arrays-le-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.16608783300034702,
+      "resources": {
+        "maximum resident set size": 17383424,
+        "peak memory footprint": 3114112
+      }
+    },
+    {
+      "name": "arrays-le-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/041-arrays-le-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.028747207994456403
+    },
+    {
+      "name": "arrays-le-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/042-arrays-le-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01792449998902157
+    },
+    {
+      "name": "arrays-le-evaluate",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/043-arrays-le-evaluate.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02355895799701102
+    },
+    {
+      "name": "arrays-le-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/044-arrays-le-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.162740625004517,
+      "resources": {
+        "maximum resident set size": 18677760,
+        "peak memory footprint": 3441728
+      }
+    },
+    {
+      "name": "arrays-le-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/045-arrays-le-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.512738207995426,
+      "resources": {
+        "maximum resident set size": 36077568,
+        "peak memory footprint": 12371520
+      }
+    },
+    {
+      "name": "arrays-le-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/046-arrays-le-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12985154100169893
+    },
+    {
+      "name": "arrays-le-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-le-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/047-arrays-le-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08101666600850876
+    },
+    {
+      "name": "arrays-le-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-le-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/048-arrays-le-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5826997499971185
+    },
+    {
+      "name": "arrays-le-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-le-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/049-arrays-le-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3823129579977831
+    },
+    {
+      "name": "arrays-le-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/050-arrays-le-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.0168581249890849
+    },
+    {
+      "name": "arrays-le-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-le-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/051-arrays-le-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.010774916998343542
+    },
+    {
+      "name": "arrays-be-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/052-arrays-be-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07306433298799675
+    },
+    {
+      "name": "arrays-be-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/053-arrays-be-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007557125005405396
+    },
+    {
+      "name": "arrays-be-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/054-arrays-be-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1287352910003392,
+      "resources": {
+        "maximum resident set size": 17350656,
+        "peak memory footprint": 3081344
+      }
+    },
+    {
+      "name": "arrays-be-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/055-arrays-be-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017439582996303216
+    },
+    {
+      "name": "arrays-be-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/056-arrays-be-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011430833998019807
+    },
+    {
+      "name": "arrays-be-evaluate",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/057-arrays-be-evaluate.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01351370800693985
+    },
+    {
+      "name": "arrays-be-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/058-arrays-be-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21625679200224113,
+      "resources": {
+        "maximum resident set size": 18874368,
+        "peak memory footprint": 3458112
+      }
+    },
+    {
+      "name": "arrays-be-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/059-arrays-be-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4287952090089675,
+      "resources": {
+        "maximum resident set size": 36175872,
+        "peak memory footprint": 12453504
+      }
+    },
+    {
+      "name": "arrays-be-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/060-arrays-be-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13338949999888428
+    },
+    {
+      "name": "arrays-be-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-be-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/061-arrays-be-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09182775000226684
+    },
+    {
+      "name": "arrays-be-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-be-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/062-arrays-be-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19343341699277516
+    },
+    {
+      "name": "arrays-be-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-be-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/063-arrays-be-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6162246660096571
+    },
+    {
+      "name": "arrays-be-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/064-arrays-be-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.02653808399918489
+    },
+    {
+      "name": "arrays-be-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-be-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/065-arrays-be-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016400041000451893
+    },
+    {
+      "name": "srgb-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/066-srgb-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08875616700970568
+    },
+    {
+      "name": "srgb-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/067-srgb-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.010031208003056236
+    },
+    {
+      "name": "srgb-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/068-srgb-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10319154200260527,
+      "resources": {
+        "maximum resident set size": 17154048,
+        "peak memory footprint": 2950208
+      }
+    },
+    {
+      "name": "srgb-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/069-srgb-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020609250001143664
+    },
+    {
+      "name": "srgb-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/070-srgb-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014243249999708496
+    },
+    {
+      "name": "srgb-evaluate",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/071-srgb-evaluate.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016257666997262277
+    },
+    {
+      "name": "srgb-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/072-srgb-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.24592641700292006,
+      "resources": {
+        "maximum resident set size": 18399232,
+        "peak memory footprint": 3261504
+      }
+    },
+    {
+      "name": "srgb-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/073-srgb-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5579323330020998,
+      "resources": {
+        "maximum resident set size": 35799040,
+        "peak memory footprint": 12486272
+      }
+    },
+    {
+      "name": "srgb-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/074-srgb-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1227300830068998
+    },
+    {
+      "name": "srgb-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/srgb-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/075-srgb-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11498741600371432
+    },
+    {
+      "name": "srgb-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/srgb-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/076-srgb-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.29151295899646357
+    },
+    {
+      "name": "srgb-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/srgb-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/077-srgb-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3940396670077462
+    },
+    {
+      "name": "srgb-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/078-srgb-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.01613662499585189
+    },
+    {
+      "name": "srgb-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/srgb-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/079-srgb-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011005083011696115
+    },
+    {
+      "name": "scaled-radius-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/080-scaled-radius-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07294958300190046
+    },
+    {
+      "name": "scaled-radius-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/081-scaled-radius-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007313333000638522
+    },
+    {
+      "name": "scaled-radius-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/082-scaled-radius-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08389504099613987,
+      "resources": {
+        "maximum resident set size": 17383424,
+        "peak memory footprint": 3195968
+      }
+    },
+    {
+      "name": "scaled-radius-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/083-scaled-radius-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016669000004185364
+    },
+    {
+      "name": "scaled-radius-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/084-scaled-radius-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.027976375000434928
+    },
+    {
+      "name": "scaled-radius-evaluate",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/085-scaled-radius-evaluate.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013877332996344194
+    },
+    {
+      "name": "scaled-radius-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/086-scaled-radius-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2330647500057239,
+      "resources": {
+        "maximum resident set size": 18841600,
+        "peak memory footprint": 3523648
+      }
+    },
+    {
+      "name": "scaled-radius-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/087-scaled-radius-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3957864999974845,
+      "resources": {
+        "maximum resident set size": 36372480,
+        "peak memory footprint": 12781184
+      }
+    },
+    {
+      "name": "scaled-radius-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/088-scaled-radius-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12266366698895581
+    },
+    {
+      "name": "scaled-radius-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/scaled-radius-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/089-scaled-radius-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07983433299523313
+    },
+    {
+      "name": "scaled-radius-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/scaled-radius-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/090-scaled-radius-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19323354099469725
+    },
+    {
+      "name": "scaled-radius-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/scaled-radius-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/091-scaled-radius-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.38348887499887496
+    },
+    {
+      "name": "scaled-radius-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/092-scaled-radius-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.016050457998062484
+    },
+    {
+      "name": "scaled-radius-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/scaled-radius-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/093-scaled-radius-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.010333875005017035
+    }
+  ],
+  "variants": [
+    {
+      "name": "default-le",
+      "source": {
+        "format": "hair",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/fixtures/hair-import/data/default-le.hair",
+        "policy": {
+          "byte_order": "little_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          }
+        }
+      },
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:b7885324513f40d39f0e28bc7972119e43fa54369620f0cd9e9b53ebb13becc5",
+      "report": {
+        "derived_samples": 6,
+        "derived_triangles": 72,
+        "derived_vertices": 40,
+        "geometry_asset_json_bytes": 1116,
+        "input_bytes": 200,
+        "material_groups": 1,
+        "observed_derived_json_bytes": 14303,
+        "policy": {
+          "byte_order": "little_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 1.0,
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-surface-v1",
+        "source_digest": "sha256:90b742445543dc6b3aef63c8bebb04946e0d0404c018fe7b5db0cd87dc04e2f3",
+        "source_flags": 2,
+        "source_points": 6,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "2840e4c83da6e13e457f18ba34172c61",
+            "entity": "00e88b0fef49e0112fed837cc85b516e",
+            "geometry_asset": "sha256:49b6c1173b3e5a5c05a8545e24d2ec6424b96b95636ef82c9058025ec44643ff",
+            "material": "9d4c1738a7d1b87fe5c2ad345ebd8c24",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "16e3108d24f1da2e35ac9c846ae73366",
+            "entity": "00e88b0fef49e0112fed837cc85b516e",
+            "geometry_asset": "sha256:49b6c1173b3e5a5c05a8545e24d2ec6424b96b95636ef82c9058025ec44643ff",
+            "material": "9d4c1738a7d1b87fe5c2ad345ebd8c24",
+            "point_count": 3,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "gpu_linear_rmse": 1.4047877612955271e-08,
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-le-archive/document/document.json",
+      "empty_revision": "sha256:7a4bd9cbf6adb9dddb30db1abe80c8a6169d6b154722d9b2d05802a720155193"
+    },
+    {
+      "name": "default-be",
+      "source": {
+        "format": "hair",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/fixtures/hair-import/data/default-be.hair",
+        "policy": {
+          "byte_order": "big_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          }
+        }
+      },
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:59a5432865c5800aae930af2684d4dd0a93de56ac00e39c41c81b1e0b8f14a55",
+      "report": {
+        "derived_samples": 6,
+        "derived_triangles": 72,
+        "derived_vertices": 40,
+        "geometry_asset_json_bytes": 1116,
+        "input_bytes": 200,
+        "material_groups": 1,
+        "observed_derived_json_bytes": 14303,
+        "policy": {
+          "byte_order": "big_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 1.0,
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-surface-v1",
+        "source_digest": "sha256:b8dd3765251ee545d0dfbd9067ce035aaeb6741f67a234e6fe6a00c7da6af3e4",
+        "source_flags": 2,
+        "source_points": 6,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "3b89fa2db1fef115f358df37f17a30a4",
+            "entity": "cec6560b92029558d067bccd4b6d7e46",
+            "geometry_asset": "sha256:e001817d5a1cee1bc3f2809a2970f9a99395092ff905e96c1597cd554a6c6e5b",
+            "material": "32e1f70ab559bcd478eddf37bdde2f2d",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "9c437f9ba0b87ece1f3e49d797f3c1cf",
+            "entity": "cec6560b92029558d067bccd4b6d7e46",
+            "geometry_asset": "sha256:e001817d5a1cee1bc3f2809a2970f9a99395092ff905e96c1597cd554a6c6e5b",
+            "material": "32e1f70ab559bcd478eddf37bdde2f2d",
+            "point_count": 3,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "gpu_linear_rmse": 1.4047877612955271e-08,
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/default-be-archive/document/document.json",
+      "empty_revision": "sha256:7a4bd9cbf6adb9dddb30db1abe80c8a6169d6b154722d9b2d05802a720155193"
+    },
+    {
+      "name": "arrays-le",
+      "source": {
+        "format": "hair",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/fixtures/hair-import/data/arrays-le.hair",
+        "policy": {
+          "byte_order": "little_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          }
+        }
+      },
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:c8d5956eb0bfd5a7fa37c812869a4f6a7c0870283a5d80197498f446f4283028",
+      "report": {
+        "derived_samples": 11,
+        "derived_triangles": 132,
+        "derived_vertices": 70,
+        "geometry_asset_json_bytes": 1422,
+        "input_bytes": 356,
+        "material_groups": 2,
+        "observed_derived_json_bytes": 29509,
+        "policy": {
+          "byte_order": "little_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 1.0,
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-surface-v1",
+        "source_digest": "sha256:5b65b9a8747601bfaaa0d60bf048421a689cfc1cf90163695c0226c6a9761d5f",
+        "source_flags": 31,
+        "source_points": 7,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "ead631d91f1455b129bc4153e6666959",
+            "entity": "ba9548df1de9f8170776fd960551bd49",
+            "geometry_asset": "sha256:eee79d6d559b5e24f2980bc2c5372586d90df54794e7b082d8132dbaa2a7f573",
+            "material": "bfb2e086928bb548ab22df3e4bdf99f1",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "fba0fc9e60f15f5e044dc35abb00d12b",
+            "entity": "b6b87b138415c09ff7afa9e4be737f90",
+            "geometry_asset": "sha256:392592f33801add75228827b33f2a12dc88f09eda220623a532d4f800b28cc59",
+            "material": "2240c3b4bdc1b358ddaa9b5fdd83b867",
+            "point_count": 4,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "gpu_linear_rmse": 1.420330539793946e-08,
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-le-archive/document/document.json",
+      "empty_revision": "sha256:7a4bd9cbf6adb9dddb30db1abe80c8a6169d6b154722d9b2d05802a720155193"
+    },
+    {
+      "name": "arrays-be",
+      "source": {
+        "format": "hair",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/fixtures/hair-import/data/arrays-be.hair",
+        "policy": {
+          "byte_order": "big_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          }
+        }
+      },
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:a85b76475ac38ee6a8de8d21c03fc0b9cb08e40cb932a06ce4e6d88c9f422299",
+      "report": {
+        "derived_samples": 11,
+        "derived_triangles": 132,
+        "derived_vertices": 70,
+        "geometry_asset_json_bytes": 1422,
+        "input_bytes": 356,
+        "material_groups": 2,
+        "observed_derived_json_bytes": 29509,
+        "policy": {
+          "byte_order": "big_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 1.0,
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-surface-v1",
+        "source_digest": "sha256:7a7d7a32ad2240a9b569fa4dcf38bf190e0acc8a8af2cc631354f638454db472",
+        "source_flags": 31,
+        "source_points": 7,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "cd7a43f90260f34a04045ac5c1f67ab4",
+            "entity": "1311cedc59765824ada6570cc3c9b24d",
+            "geometry_asset": "sha256:23d609a0cdc62b343a64b969005c5cc236df899153c415a8e8ed6dad27f00ae4",
+            "material": "781c7c18f3ab19f291462182f7ada260",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "d8044e4538e7bb964504a90c05dfc151",
+            "entity": "3007b82167ef927a2b36cc999e0143c4",
+            "geometry_asset": "sha256:51566720f7c02943e7d77d2f7d6922bba44de4c1339a2e1ba3af99e2f96b3cd8",
+            "material": "881c74c79572111b7f692ecc76173417",
+            "point_count": 4,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "gpu_linear_rmse": 1.420330539793946e-08,
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/arrays-be-archive/document/document.json",
+      "empty_revision": "sha256:7a4bd9cbf6adb9dddb30db1abe80c8a6169d6b154722d9b2d05802a720155193"
+    },
+    {
+      "name": "srgb",
+      "source": {
+        "format": "hair",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/fixtures/hair-import/data/default-le.hair",
+        "policy": {
+          "byte_order": "little_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          }
+        }
+      },
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:3e486abc8a1d06e58ff3db415710a5a4e9d3c949e4ea6a8d67255c6d75e44e44",
+      "report": {
+        "derived_samples": 6,
+        "derived_triangles": 72,
+        "derived_vertices": 40,
+        "geometry_asset_json_bytes": 1116,
+        "input_bytes": 200,
+        "material_groups": 1,
+        "observed_derived_json_bytes": 14303,
+        "policy": {
+          "byte_order": "little_endian",
+          "color_space": "srgb",
+          "meters_per_unit": 1.0,
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-surface-v1",
+        "source_digest": "sha256:90b742445543dc6b3aef63c8bebb04946e0d0404c018fe7b5db0cd87dc04e2f3",
+        "source_flags": 2,
+        "source_points": 6,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "0ff4deb8adfbc0d4c1a233a267d9f105",
+            "entity": "dbf3901c45697d95e3d117ae121efbca",
+            "geometry_asset": "sha256:f8d3f77cd26cf44258d1c6b76faa9530465900725aacff684a50f408dd044e83",
+            "material": "67c69db36f77957fd01bba01974c8667",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "1151243ee262b595cea40b7fe84c96b2",
+            "entity": "dbf3901c45697d95e3d117ae121efbca",
+            "geometry_asset": "sha256:f8d3f77cd26cf44258d1c6b76faa9530465900725aacff684a50f408dd044e83",
+            "material": "67c69db36f77957fd01bba01974c8667",
+            "point_count": 3,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "gpu_linear_rmse": 1.3883757528782675e-08,
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/srgb-archive/document/document.json",
+      "empty_revision": "sha256:7a4bd9cbf6adb9dddb30db1abe80c8a6169d6b154722d9b2d05802a720155193"
+    },
+    {
+      "name": "scaled-radius",
+      "source": {
+        "format": "hair",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/fixtures/hair-import/data/default-le.hair",
+        "policy": {
+          "byte_order": "little_endian",
+          "meters_per_unit": 2,
+          "thickness": "radius",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          }
+        }
+      },
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            5
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2,
+            "ymag": 2,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:046cd97bc9895bf903b9285de6272eea51199936ab0a02d2bb73efa8add13861",
+      "report": {
+        "derived_samples": 6,
+        "derived_triangles": 132,
+        "derived_vertices": 70,
+        "geometry_asset_json_bytes": 1108,
+        "input_bytes": 200,
+        "material_groups": 1,
+        "observed_derived_json_bytes": 27691,
+        "policy": {
+          "byte_order": "little_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 2.0,
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "radius",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-surface-v1",
+        "source_digest": "sha256:90b742445543dc6b3aef63c8bebb04946e0d0404c018fe7b5db0cd87dc04e2f3",
+        "source_flags": 2,
+        "source_points": 6,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "ef2f010e160ee5a02c1e9fe34f778609",
+            "entity": "9b38bf7e15f96d7c05b7dec17c54fa2d",
+            "geometry_asset": "sha256:8ac3f3519324c3aaf0c47ec7cef3a8e482a7b0440afc196e0d40add067330a3e",
+            "material": "8a699bd68cce81eb85850171be63b6b3",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "ece63bd56861c77b570c4ef2dce4955c",
+            "entity": "9b38bf7e15f96d7c05b7dec17c54fa2d",
+            "geometry_asset": "sha256:8ac3f3519324c3aaf0c47ec7cef3a8e482a7b0440afc196e0d40add067330a3e",
+            "material": "8a699bd68cce81eb85850171be63b6b3",
+            "point_count": 3,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "gpu_linear_rmse": 1.3619265918800826e-08,
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/hair-workflow/scaled-radius-archive/document/document.json",
+      "empty_revision": "sha256:7a4bd9cbf6adb9dddb30db1abe80c8a6169d6b154722d9b2d05802a720155193"
+    }
+  ]
+}

@@ -85,8 +85,11 @@ Nested media, rough transmission and external transmission extensions remain sep
 [VOL3 density/emission input](volume_import.md) now decodes external scalar and
 aligned RGB grids under explicit cell, metric and optical policy. Native and
 browser CPU imports, rendering and recovery share exact corpus results in
-[acceptance evidence](../evidence/volume-import/README.md). Sparse paging, other
-formats and GPU media transport retain separate INPUT-05 gates.
+[acceptance evidence](../evidence/volume-import/README.md).
+[Bounded zero-scattering RGB media](gpu_media.md) now renders on Metal and browser
+WebGPU through native archives, VOL3 imports, OPFS, shutter frames and streaming
+sequences. Sparse paging, other formats, GPU scattering and joint advanced surface
+profiles retain separate INPUT-05 gates.
 
 [HAIR strand input](hair_import.md) now preserves external polylines, varying
 thickness and uniform-per-strand color/coverage under explicit interpretation.

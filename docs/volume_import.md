@@ -73,8 +73,11 @@ source/occupied cell counts and serialized native asset bytes. Raw VOL container
 and their source layout metadata are not stored as native authoring history. Retain
 the report/source files when source provenance or later re-export is required.
 
-Occupied media remains explicitly unsupported on Metal/WebGPU. Paging, trilinear
-fields, other volume formats and GPU transport have separate acceptance gates.
+Occupied media can render through the [bounded GPU sparse-media profile](gpu_media.md):
+at most 64 cells, zero evaluated scattering and ordinary opaque PBR surfaces, with
+explicit work and precision admission. All eight existing VOL3 fixtures pass Metal
+and Chrome WebGPU recovery workflows. Paging, trilinear fields, other formats and
+GPU scattering/joint advanced surfaces retain separate acceptance gates.
 Reproduce the original CC0 fixtures with
 `python3 fixtures/volume-import/generate.py <new-directory>`. Run acceptance using
 `python3 scripts/validate-volume-import.py`, the exact built browser package served

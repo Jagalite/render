@@ -455,3 +455,21 @@ GLB COLOR_0 export consume the derived attribute; no foreign runtime is introduc
 grooms, physical fibers or analytic intersections require separate numerical and
 native/browser acceptance gates. Native authoring remains distinct from evaluated
 GLB losses and platform-local disposable geometry serialization.
+
+## ADR-032 — Bounded GPU media retains typed sparse semantics
+
+**Decision:** Expose immutable evaluated cell inputs to a fifth Rust-IR shader for
+RGB absorption/emission, with ordinary opaque PBR surfaces and zero scattering.
+Preserve source cells, overlaps, metric transforms and half-open ownership. Pack
+translated bounds separately from ray origins to avoid shared-face rounding holes.
+
+**Integration boundary:** [GPU media](gpu_media.md) joins core evaluation, f32
+packing, generated transport and existing CLI/browser jobs. Seven private vec4 rows
+per cell have explicit work, count and corner-error bounds. No schema, FFI or Cargo
+change. Existing shaders and media-free render artifacts remain byte identical.
+Cancellation, progressive identity, device recreation, archives, OPFS and partial
+sequence publication pass through the ordinary interfaces.
+
+**Revisit trigger:** Scattering, alpha/advanced-surface combinations, larger sparse
+acceleration/paging or stronger near-parallel precision guarantees require new
+numerical, resource and native/browser evidence. CPU media semantics stay unchanged.

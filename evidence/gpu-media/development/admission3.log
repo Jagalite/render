@@ -1,0 +1,12 @@
+   Compiling render-kernel v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/crates/kernel)
+   Compiling render-gpu v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/crates/gpu)
+   Compiling render-host v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/crates/host)
+    Finished `test` profile [unoptimized] target(s) in 21.19s
+     Running tests/gpu_media.rs (target/debug/deps/gpu_media-d15bc033be93d3bc)
+
+running 3 tests
+test analytic_sparse_media_matches_metal_and_preserves_cancellation ... ignored, requires actual GPU; mandatory sparse media acceptance
+test opaque_surfaces_light_shadows_and_finite_depth_media_match_reference ... ignored, requires actual GPU; mandatory surface/media integration
+test sparse_media_admission_bounds_precision_and_surface_profiles ... ok
+
+test result: ok. 1 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.03s

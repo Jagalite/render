@@ -572,7 +572,7 @@ pub(super) fn functions(extended: bool) -> Vec<Function> {
     ));
     result
 }
-pub(super) fn body(extended: bool, surfaces: bool, dielectric: bool) -> Vec<Stmt> {
+pub(super) fn body(extended: bool, surfaces: bool, dielectric: bool, media: bool) -> Vec<Stmt> {
     let bary = |origin, direction| {
         call(
             "project_bary",
@@ -868,8 +868,9 @@ pub(super) fn body(extended: bool, surfaces: bool, dielectric: bool) -> Vec<Stmt
                     s("cosine")
                         .gt(f(0.))
                         .and(dot(v("geometric"), v("light_dir")).gt(f(0.))),
-                    vec![alpha::illuminate(
+                    vec![media::illuminate(
                         extended,
+                        media,
                         v("offset"),
                         v("light_dir"),
                         s("distance") - f(2e-5),
@@ -899,8 +900,9 @@ pub(super) fn body(extended: bool, surfaces: bool, dielectric: bool) -> Vec<Stmt
                         * (dot(v("normal"), v("secondary")) / s("pdf"))
                         * s("occlusion"),
                 ),
-                alpha::last_bounce(
+                media::last_bounce(
                     extended,
+                    media,
                     v("offset"),
                     v("secondary"),
                     brdf(v("secondary"))

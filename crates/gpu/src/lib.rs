@@ -1,4 +1,5 @@
 //! Disposable GPU resources consuming immutable evaluated snapshots.
+mod media;
 mod raster;
 mod sequence;
 use render_core::{
@@ -39,6 +40,7 @@ pub struct Renderer {
     alpha_pipeline: Option<wgpu::ComputePipeline>,
     surface_pipeline: Option<wgpu::ComputePipeline>,
     dielectric_pipeline: Option<wgpu::ComputePipeline>,
+    media_pipeline: Option<wgpu::ComputePipeline>,
     pub capabilities: Capabilities,
     lost: Arc<AtomicBool>,
     geometry_cache: Option<(String, wgpu::Buffer)>,
@@ -123,12 +125,6 @@ pub struct Packed {
 }
 pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
     scene.validate_geometry_bindings()?;
-    if !scene.media.is_empty() {
-        return Err(Error::new(
-            "unsupported_profile",
-            "sparse media transport requires the Rust CPU backend on native and browser",
-        ));
-    }
     s.validate()?;
     if start_sample
         .checked_add(s.samples)
@@ -137,6 +133,7 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
         return Err(Error::new("budget", "GPU sample index profile exceeded"));
     }
     let origin = glam::DVec3::from_array(s.camera.position);
+    let media = media::pack(scene, s, origin)?;
     let mut geometry = vec![];
     let mut instances = vec![];
     let mut shared = BTreeMap::new();
@@ -475,7 +472,9 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
             } else {
                 2.
             },
-            if dielectric {
+            if media.is_some() {
+                4.
+            } else if dielectric {
                 3.
             } else if surface_models {
                 2.
@@ -485,6 +484,21 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
         ],
     ];
     params.push([1., 0., 0., 0.]);
+    if let Some(media) = media {
+        if geometry.len() > 16_777_216 {
+            return Err(Error::new(
+                "precision",
+                "GPU medium offset exceeds exact f32 indexing",
+            ));
+        }
+        params.push([
+            geometry.len() as f32,
+            media.count as f32,
+            media.max_corner_error as f32,
+            0.,
+        ]);
+        geometry.extend(media.rows);
+    }
     if geometry
         .iter()
         .chain(&instances)
@@ -572,6 +586,7 @@ impl Renderer {
             alpha_pipeline: None,
             surface_pipeline: None,
             dielectric_pipeline: None,
+            media_pipeline: None,
             capabilities,
             lost,
             geometry_cache: None,
@@ -671,12 +686,44 @@ impl Renderer {
         self.dielectric_pipeline = Some(pipeline);
         Ok(())
     }
+    async fn ensure_media_pipeline(&mut self) -> Result<()> {
+        if self.media_pipeline.is_some() {
+            return Ok(());
+        }
+        let source = render_kernel::path::media_kernel().generate()?;
+        self.device.push_error_scope(wgpu::ErrorFilter::OutOfMemory);
+        self.device.push_error_scope(wgpu::ErrorFilter::Validation);
+        let module = self
+            .device
+            .create_shader_module(wgpu::ShaderModuleDescriptor {
+                label: Some("Rust-generated sparse medium traversal"),
+                source: wgpu::ShaderSource::Wgsl(source.into()),
+            });
+        let pipeline = self
+            .device
+            .create_compute_pipeline(&wgpu::ComputePipelineDescriptor {
+                label: Some("portable media path tracing"),
+                layout: None,
+                module: &module,
+                entry_point: Some("main"),
+                compilation_options: Default::default(),
+                cache: None,
+            });
+        let validation = self.device.pop_error_scope().await;
+        let allocation = self.device.pop_error_scope().await;
+        if let Some(error) = validation.or(allocation) {
+            return Err(fail("gpu_validation", error));
+        }
+        self.media_pipeline = Some(pipeline);
+        Ok(())
+    }
     pub fn destroy(&mut self) {
         self.lost.store(true, Ordering::Release);
         self.geometry_cache = None;
         self.alpha_pipeline = None;
         self.surface_pipeline = None;
         self.dielectric_pipeline = None;
+        self.media_pipeline = None;
         self.device.destroy();
     }
     pub fn is_lost(&self) -> bool {
@@ -792,10 +839,13 @@ impl Renderer {
                 "dispatch exceeds negotiated workgroup count",
             ));
         }
-        let extended = p.params[9][3] > 0.;
+        let media = p.params[9][3] == 4.;
+        let extended = p.params[9][3] > 0. && !media;
         let surface_models = p.params[9][3] == 2.;
         let dielectric = p.params[9][3] == 3.;
-        if dielectric {
+        if media {
+            self.ensure_media_pipeline().await?;
+        } else if dielectric {
             self.ensure_dielectric_pipeline().await?;
         } else if surface_models {
             self.ensure_surface_pipeline().await?;
@@ -867,7 +917,11 @@ impl Renderer {
                 resource: b.as_entire_binding(),
             })
             .collect::<Vec<_>>();
-        let pipeline = if dielectric {
+        let pipeline = if media {
+            self.media_pipeline
+                .as_ref()
+                .expect("created media pipeline")
+        } else if dielectric {
             self.dielectric_pipeline
                 .as_ref()
                 .expect("created dielectric pipeline")
@@ -1072,6 +1126,10 @@ impl Renderer {
         }) {
             receipt.backend = format!("gpu-f32-dielectric-v1/{}", self.capabilities.backend);
             receipt.approximation.push_str("; ideal dielectric Fresnel and Snell/TIR radiance eta-squared transport; geometric interface normals; f32 optical parameters and sampled branches; no directly sampled glass point-light caustics");
+        }
+        if !scene.media.is_empty() {
+            receipt.backend = format!("gpu-f32-sparse-medium-v1/{}", self.capabilities.backend);
+            receipt.approximation.push_str("; sparse RGB absorption/emission with overlapping half-open affine unit cells; f32 Beer integration and small-optical-depth series; ordinary opaque PBR only; no in-scattering; 64 occupied cells and 8388608 cell visits per dispatch; reconstructed cell-corner packing error <=1e-5m; camera-relative corners and inverse components <=1e12; nonzero packed values normal f32; no universal grazing-ray error bound");
         }
         if !scene.displacements.is_empty() {
             receipt.approximation.push_str(

@@ -1,0 +1,284 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "restore-source",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/000-restore-source.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.9279784160025883
+    },
+    {
+      "name": "source-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/001-source-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09168250000220723
+    },
+    {
+      "name": "author-animation",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/002-author-animation.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 2.2080094999982975
+    },
+    {
+      "name": "authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/003-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.23168995899322908
+    },
+    {
+      "name": "nominal-failure",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/004-nominal-failure.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "precision",
+      "seconds": 1.4127056669967715
+    },
+    {
+      "name": "temporal-failure",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/005-temporal-failure.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "precision",
+      "seconds": 1.625088083994342
+    },
+    {
+      "name": "cpu-valid",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/006-cpu-valid.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 3.0184744170110207,
+      "resources": {
+        "maximum resident set size": 16547840,
+        "peak memory footprint": 2737216
+      }
+    },
+    {
+      "name": "gpu-valid",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/007-gpu-valid.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 3.4064458329958143,
+      "resources": {
+        "maximum resident set size": 33128448,
+        "peak memory footprint": 12322368
+      }
+    },
+    {
+      "name": "gpu-partial",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/008-gpu-partial.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "precision",
+      "seconds": 5.412920542003121
+    },
+    {
+      "name": "gpu-complete",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/009-gpu-complete.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 8.393940542009659
+    },
+    {
+      "name": "archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/010-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.406794209004147
+    },
+    {
+      "name": "stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/011-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.127472874999512
+    },
+    {
+      "name": "unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/shutter-dev/012-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03333283400570508
+    }
+  ],
+  "variants": [],
+  "revision": "sha256:bac90faaf79e6a95493e5d6e358224ef3b6aea65cb4b69875f43acfe3cabe103",
+  "clip": "000000000000000000000000000029cc",
+  "nominal_request": {
+    "revision": "sha256:bac90faaf79e6a95493e5d6e358224ef3b6aea65cb4b69875f43acfe3cabe103",
+    "clip": "000000000000000000000000000029cc",
+    "time": {
+      "numerator": 1,
+      "denominator": 1
+    },
+    "shutter": {
+      "open": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "close": {
+        "numerator": 2,
+        "denominator": 1
+      },
+      "samples": 2
+    }
+  },
+  "temporal_request": {
+    "revision": "sha256:bac90faaf79e6a95493e5d6e358224ef3b6aea65cb4b69875f43acfe3cabe103",
+    "clip": "000000000000000000000000000029cc",
+    "time": {
+      "numerator": 0,
+      "denominator": 1
+    },
+    "shutter": {
+      "open": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "close": {
+        "numerator": 2,
+        "denominator": 1
+      },
+      "samples": 2
+    }
+  },
+  "valid_request": {
+    "revision": "sha256:bac90faaf79e6a95493e5d6e358224ef3b6aea65cb4b69875f43acfe3cabe103",
+    "clip": "000000000000000000000000000029cc",
+    "time": {
+      "numerator": 0,
+      "denominator": 1
+    },
+    "shutter": {
+      "open": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "close": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "samples": 2
+    }
+  },
+  "sequence_request": {
+    "revision": "sha256:bac90faaf79e6a95493e5d6e358224ef3b6aea65cb4b69875f43acfe3cabe103",
+    "clip": "000000000000000000000000000029cc",
+    "shutter": {
+      "open": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "close": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "samples": 2
+    },
+    "times": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      }
+    ]
+  },
+  "complete_request": {
+    "revision": "sha256:bac90faaf79e6a95493e5d6e358224ef3b6aea65cb4b69875f43acfe3cabe103",
+    "clip": "000000000000000000000000000029cc",
+    "shutter": {
+      "open": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "close": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "samples": 2
+    },
+    "times": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 2,
+        "denominator": 1
+      }
+    ]
+  },
+  "max_absolute_error": 2.9802322387695312e-08
+}

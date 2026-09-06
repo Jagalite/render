@@ -86,18 +86,18 @@ impl Asset {
     }
 }
 #[derive(Clone, Debug)]
-struct EvaluatedCell {
-    bounds: Bounds,
-    inverse: DAffine3,
-    extinction: DVec3,
-    scattering: DVec3,
-    emission: DVec3,
+pub struct TransportCell {
+    pub bounds: Bounds,
+    pub inverse: DAffine3,
+    pub extinction: DVec3,
+    pub scattering: DVec3,
+    pub emission: DVec3,
     g: f64,
     step: f64,
 }
 #[derive(Clone, Debug, Default)]
 pub struct Media {
-    cells: Vec<EvaluatedCell>,
+    cells: Vec<TransportCell>,
     bvh: Bvh,
 }
 #[derive(Clone, Debug)]
@@ -153,6 +153,10 @@ impl Media {
     pub fn is_empty(&self) -> bool {
         self.cells.is_empty()
     }
+    /// Read-only evaluated transport inputs; authoring and BVH remain private.
+    pub fn transport_cells(&self) -> &[TransportCell] {
+        &self.cells
+    }
     pub fn cell_count(&self) -> usize {
         self.cells.len()
     }
@@ -206,7 +210,7 @@ impl Media {
                     wb.max = wb.max.max(p);
                 }
                 world_bounds.push(wb);
-                cells.push(EvaluatedCell {
+                cells.push(TransportCell {
                     bounds,
                     inverse: world.inverse(),
                     extinction: (DVec3::from_array(asset.absorption)
@@ -277,7 +281,7 @@ impl Media {
                 let mut emission = DVec3::ZERO;
                 let mut step = f64::INFINITY;
                 for &j in &active {
-                    let c: &EvaluatedCell = &self.cells[j];
+                    let c: &TransportCell = &self.cells[j];
                     extinction += c.extinction;
                     emission += c.emission;
                     step = step.min(c.step);

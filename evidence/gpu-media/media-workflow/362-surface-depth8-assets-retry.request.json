@@ -1,0 +1,456 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:fd397c0cbf0c0e2b76d267d9d1497ff3d77e1645878149ef4ae59ef1b1095812",
+      "idempotency_key": "gpu:media:surface-depth8-assets:001",
+      "max_added_bytes": 8388608,
+      "commands": [
+        {
+          "operation": "put_material",
+          "material": {
+            "id": "00000000000000000000000000000065",
+            "base_color": [
+              0.8,
+              0.5,
+              0.25
+            ],
+            "emission": [
+              0,
+              0,
+              0
+            ],
+            "roughness": 1,
+            "metallic": 0.5,
+            "texture": null,
+            "pbr": {
+              "double_sided": false,
+              "base_color": null,
+              "metallic_roughness": null,
+              "normal": null,
+              "emission": null,
+              "occlusion": null,
+              "normal_scale": 1,
+              "occlusion_strength": 1
+            }
+          }
+        },
+        {
+          "operation": "create_entity",
+          "entity": {
+            "id": "00000000000000000000000000000001",
+            "name": "plate 1",
+            "parent": null,
+            "mesh": null,
+            "material": "00000000000000000000000000000065",
+            "transform": {
+              "columns": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "operations": []
+            }
+          }
+        },
+        {
+          "operation": "create_box",
+          "entity": "00000000000000000000000000000001",
+          "min": [
+            -20,
+            -20,
+            -0.1
+          ],
+          "max": [
+            20,
+            20,
+            0
+          ]
+        },
+        {
+          "operation": "put_material",
+          "material": {
+            "id": "00000000000000000000000000000066",
+            "base_color": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "emission": [
+              1,
+              0.8,
+              0.5
+            ],
+            "roughness": 1,
+            "metallic": 0,
+            "texture": null,
+            "pbr": {
+              "double_sided": false,
+              "base_color": null,
+              "metallic_roughness": null,
+              "normal": null,
+              "emission": null,
+              "occlusion": null,
+              "normal_scale": 1,
+              "occlusion_strength": 1
+            }
+          }
+        },
+        {
+          "operation": "create_entity",
+          "entity": {
+            "id": "00000000000000000000000000000002",
+            "name": "plate 2",
+            "parent": null,
+            "mesh": null,
+            "material": "00000000000000000000000000000066",
+            "transform": {
+              "columns": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "operations": []
+            }
+          }
+        },
+        {
+          "operation": "create_box",
+          "entity": "00000000000000000000000000000002",
+          "min": [
+            -20,
+            -20,
+            2
+          ],
+          "max": [
+            20,
+            20,
+            2.1
+          ]
+        },
+        {
+          "operation": "put_material",
+          "material": {
+            "id": "00000000000000000000000000000067",
+            "base_color": [
+              0.5,
+              0.2,
+              0.2
+            ],
+            "emission": [
+              0,
+              0,
+              0
+            ],
+            "roughness": 1,
+            "metallic": 0,
+            "texture": null,
+            "pbr": {
+              "double_sided": false,
+              "base_color": null,
+              "metallic_roughness": null,
+              "normal": null,
+              "emission": null,
+              "occlusion": null,
+              "normal_scale": 1,
+              "occlusion_strength": 1
+            }
+          }
+        },
+        {
+          "operation": "create_entity",
+          "entity": {
+            "id": "00000000000000000000000000000003",
+            "name": "plate 3",
+            "parent": null,
+            "mesh": null,
+            "material": "00000000000000000000000000000067",
+            "transform": {
+              "columns": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "operations": []
+            }
+          }
+        },
+        {
+          "operation": "create_box",
+          "entity": "00000000000000000000000000000003",
+          "min": [
+            -20,
+            -20,
+            0
+          ],
+          "max": [
+            -19,
+            20,
+            2
+          ]
+        },
+        {
+          "operation": "put_material",
+          "material": {
+            "id": "00000000000000000000000000000068",
+            "base_color": [
+              0.2,
+              0.5,
+              0.2
+            ],
+            "emission": [
+              0,
+              0,
+              0
+            ],
+            "roughness": 1,
+            "metallic": 0,
+            "texture": null,
+            "pbr": {
+              "double_sided": false,
+              "base_color": null,
+              "metallic_roughness": null,
+              "normal": null,
+              "emission": null,
+              "occlusion": null,
+              "normal_scale": 1,
+              "occlusion_strength": 1
+            }
+          }
+        },
+        {
+          "operation": "create_entity",
+          "entity": {
+            "id": "00000000000000000000000000000004",
+            "name": "plate 4",
+            "parent": null,
+            "mesh": null,
+            "material": "00000000000000000000000000000068",
+            "transform": {
+              "columns": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "operations": []
+            }
+          }
+        },
+        {
+          "operation": "create_box",
+          "entity": "00000000000000000000000000000004",
+          "min": [
+            19,
+            -20,
+            0
+          ],
+          "max": [
+            20,
+            20,
+            2
+          ]
+        },
+        {
+          "operation": "set_render_settings",
+          "settings": {
+            "width": 16,
+            "height": 16,
+            "samples": 16,
+            "seed": 73,
+            "max_depth": 8,
+            "max_bytes": 16777216,
+            "environment": [
+              0.1,
+              0.1,
+              0.1
+            ],
+            "light": {
+              "position": [
+                0.6,
+                0.3,
+                1
+              ],
+              "intensity": [
+                2,
+                2,
+                2
+              ]
+            },
+            "camera": {
+              "position": [
+                0,
+                0,
+                1
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "up": [
+                0,
+                1,
+                0
+              ],
+              "vertical_fov_radians": 0.5,
+              "lens": {
+                "kind": "orthographic",
+                "xmag": 1,
+                "ymag": 1,
+                "near": 0.01,
+                "far": 1.5
+              }
+            }
+          }
+        },
+        {
+          "operation": "create_entity",
+          "entity": {
+            "id": "0000000000000000000000000000299b",
+            "name": "room medium",
+            "parent": null,
+            "mesh": null,
+            "material": null,
+            "transform": {
+              "columns": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "operations": []
+            }
+          }
+        },
+        {
+          "operation": "put_volume",
+          "asset": {
+            "origin": [
+              -2,
+              -2,
+              -0.2
+            ],
+            "voxel_size": [
+              4,
+              4,
+              2.4
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.01,
+                  0.02,
+                  0.03
+                ]
+              }
+            ],
+            "absorption": [
+              0.2,
+              0.4,
+              0.8
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:9bea7cd695c0c6b04960a829b6d63cf95c26027679fc78c6f16987a2b9ff0ce2",
+      "idempotency_key": "gpu:media:ordered-overlap-attach:001",
+      "max_added_bytes": 8388608,
+      "commands": [
+        {
+          "operation": "set_volume",
+          "entity": "00000000000000000000000000002969",
+          "asset": "sha256:c71c3f6c062e65864fe548e39c44e9deb53096b0a8f65910f7a608a5e4fae4aa"
+        },
+        {
+          "operation": "set_volume",
+          "entity": "0000000000000000000000000000296a",
+          "asset": "sha256:58ebba275528033659d054c1da0fffac2c81f07454054847f7edf7d42551cab4"
+        }
+      ]
+    }
+  }
+}

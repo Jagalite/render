@@ -1,0 +1,42 @@
+   Compiling libc v0.2.189
+   Compiling bitflags v2.13.1
+   Compiling bytemuck v1.25.2
+   Compiling thiserror v2.0.20
+   Compiling core-foundation v0.10.1
+   Compiling malloc_buf v0.0.6
+   Compiling naga v26.0.0
+   Compiling core-graphics-types v0.2.0
+   Compiling parking_lot_core v0.9.12
+   Compiling foreign-types v0.5.0
+   Compiling objc v0.2.7
+   Compiling metal v0.32.0
+   Compiling parking_lot v0.12.5
+   Compiling wgpu-types v26.0.0
+   Compiling wgpu-hal v26.0.6
+   Compiling png v0.18.1
+   Compiling cpufeatures v0.2.17
+   Compiling sha2 v0.10.9
+   Compiling image v0.25.10
+   Compiling wgpu-core-deps-apple v26.0.0
+   Compiling wgpu-core v26.0.1
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/crates/core)
+   Compiling wgpu v26.0.1
+   Compiling ahash v0.8.12
+   Compiling hashbrown v0.14.5
+   Compiling hecs v0.10.5
+   Compiling render-kernel v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/crates/kernel)
+   Compiling render-gpu v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/crates/gpu)
+   Compiling render-host v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/crates/host)
+error: float literals must have an integer part
+  --> crates/host/tests/gpu_media.rs:61:61
+   |
+61 |     let mut scattering=asset.clone();scattering.scattering=[.1,0.,0.];
+   |                                                             ^^
+   |
+help: must have an integer part
+   |
+61 |     let mut scattering=asset.clone();scattering.scattering=[0.1,0.,0.];
+   |                                                             +
+
+error: could not compile `render-host` (test "gpu_media") due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

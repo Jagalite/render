@@ -185,10 +185,11 @@ fn run() -> Result<()> {
                 Some("--alpha") if args.len() == 2 => render_kernel::path::alpha_kernel(),
                 Some("--surfaces") if args.len() == 2 => render_kernel::path::surface_kernel(),
                 Some("--dielectric") if args.len() == 2 => render_kernel::path::dielectric_kernel(),
+                Some("--media") if args.len() == 2 => render_kernel::path::media_kernel(),
                 _ => {
                     return Err(Error::new(
                         "arguments",
-                        "kernel accepts only --alpha, --surfaces or --dielectric",
+                        "kernel accepts only --alpha, --surfaces, --dielectric or --media",
                     ));
                 }
             };
@@ -228,7 +229,7 @@ fn run() -> Result<()> {
         ),
         _ => Err(Error::new(
             "usage",
-            "render-host project <project> <request.json|-> | agent <project> | agent-workflow [GLB] [output] [--gpu] | demo [directory] [--gpu] | verify [directory] [--gpu] | kernel [--alpha] | api <project> | jobs <project> | serve [web-root] [port]",
+            "render-host project <project> <request.json|-> | agent <project> | agent-workflow [GLB] [output] [--gpu] | demo [directory] [--gpu] | verify [directory] [--gpu] | kernel [--alpha|--surfaces|--dielectric|--media] | api <project> | jobs <project> | serve [web-root] [port]",
         )),
     }
 }

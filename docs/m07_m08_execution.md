@@ -66,3 +66,11 @@ quaternion linear interpolation uses shortest-arc slerp and cubic uses normalize
 component Hermite. Pose deltas append T*R*S to authored affine/rest transforms.
 Animation sampling never changes the published document. These semantics are
 validated by the native and browser character workflow and numerical tests.
+
+## Subsequent GPU sparse media acceptance
+
+GPU sparse media acceptance: 167 native and 142 Wasm tests, 376 media CLI calls over 21 cases, 117 external VOL3 CLI calls and 13 shutter/sequence calls, with actual Chrome CPU/WebGPU/OPFS recovery. All 993 prior images/passes and 331 receipts remain byte identical, as do all four prior shaders and Cargo files. Maximum browser GPU analytic channel error is 3.24428673e-07. The named profile admits 64 zero-scattering cells and ordinary opaque PBR surfaces under explicit work/precision limits. Scattering, joint advanced surfaces and larger paging remain separate gates; M09 stays deferred.
+
+The original CPU-only media evidence above remains historical. The new profile and
+shared-face precision regression are documented in [GPU media](gpu_media.md) and
+[its acceptance evidence](../evidence/gpu-media/README.md).

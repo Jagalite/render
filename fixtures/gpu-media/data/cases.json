@@ -1,0 +1,1967 @@
+{
+  "license": "CC0-1.0",
+  "author": "Render project original analytic corpus",
+  "generator": "fixtures/gpu-media/generate.py",
+  "environment": [
+    0.3,
+    0.5,
+    0.7
+  ],
+  "cases": [
+    {
+      "name": "homogeneous",
+      "media": [
+        {
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              }
+            ],
+            "absorption": [
+              0.5,
+              1,
+              2
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          },
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "camera": {
+        "position": [
+          0.5,
+          0.5,
+          4
+        ],
+        "target": [
+          0.5,
+          0.5,
+          3
+        ],
+        "near": 0.01,
+        "far": 10
+      },
+      "segments_front_to_back": [
+        {
+          "extinction": [
+            0.5,
+            1,
+            2
+          ],
+          "emission": [
+            0.2,
+            0.4,
+            0.6
+          ],
+          "length": 1
+        }
+      ],
+      "expected": [
+        0.33934693402873667,
+        0.4367879441171442,
+        0.35413411329464506
+      ]
+    },
+    {
+      "name": "vacuum",
+      "media": [
+        {
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              }
+            ],
+            "absorption": [
+              0,
+              0,
+              0
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          },
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "camera": {
+        "position": [
+          0.5,
+          0.5,
+          4
+        ],
+        "target": [
+          0.5,
+          0.5,
+          3
+        ],
+        "near": 0.01,
+        "far": 10
+      },
+      "segments_front_to_back": [
+        {
+          "extinction": [
+            0,
+            0,
+            0
+          ],
+          "emission": [
+            0.2,
+            0.4,
+            0.6
+          ],
+          "length": 1
+        }
+      ],
+      "expected": [
+        0.5,
+        0.9,
+        1.2999999999999998
+      ]
+    },
+    {
+      "name": "tiny",
+      "media": [
+        {
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              }
+            ],
+            "absorption": [
+              1e-09,
+              1e-07,
+              1e-05
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          },
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "camera": {
+        "position": [
+          0.5,
+          0.5,
+          4
+        ],
+        "target": [
+          0.5,
+          0.5,
+          3
+        ],
+        "near": 0.01,
+        "far": 10
+      },
+      "segments_front_to_back": [
+        {
+          "extinction": [
+            1e-09,
+            1e-07,
+            1e-05
+          ],
+          "emission": [
+            0.2,
+            0.4,
+            0.6
+          ],
+          "length": 1
+        }
+      ],
+      "expected": [
+        0.4999999996,
+        0.8999999300000032,
+        1.2999900000449998
+      ]
+    },
+    {
+      "name": "small-optical-depth",
+      "media": [
+        {
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              }
+            ],
+            "absorption": [
+              0.0099,
+              0.01,
+              0.0101
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          },
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "camera": {
+        "position": [
+          0.5,
+          0.5,
+          4
+        ],
+        "target": [
+          0.5,
+          0.5,
+          3
+        ],
+        "near": 0.01,
+        "far": 10
+      },
+      "segments_front_to_back": [
+        {
+          "extinction": [
+            0.0099,
+            0.01,
+            0.0101
+          ],
+          "emission": [
+            0.2,
+            0.4,
+            0.6
+          ],
+          "length": 1
+        }
+      ],
+      "expected": [
+        0.4960579120350457,
+        0.8930315669078619,
+        1.2899457588955316
+      ]
+    },
+    {
+      "name": "series-boundary",
+      "media": [
+        {
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              }
+            ],
+            "absorption": [
+              0.0999,
+              0.1,
+              0.1001
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          },
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "camera": {
+        "position": [
+          0.5,
+          0.5,
+          4
+        ],
+        "target": [
+          0.5,
+          0.5,
+          3
+        ],
+        "near": 0.01,
+        "far": 10
+      },
+      "segments_front_to_back": [
+        {
+          "extinction": [
+            0.0999,
+            0.1,
+            0.1001
+          ],
+          "emission": [
+            0.2,
+            0.4,
+            0.6
+          ],
+          "length": 1
+        }
+      ],
+      "expected": [
+        0.4618128938083459,
+        0.8330690368741415,
+        1.2042702768439097
+      ]
+    },
+    {
+      "name": "opaque",
+      "media": [
+        {
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              }
+            ],
+            "absorption": [
+              100,
+              1000,
+              1000000.0
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          },
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "camera": {
+        "position": [
+          0.5,
+          0.5,
+          4
+        ],
+        "target": [
+          0.5,
+          0.5,
+          3
+        ],
+        "near": 0.01,
+        "far": 10
+      },
+      "segments_front_to_back": [
+        {
+          "extinction": [
+            100,
+            1000,
+            1000000.0
+          ],
+          "emission": [
+            0.2,
+            0.4,
+            0.6
+          ],
+          "length": 1
+        }
+      ],
+      "expected": [
+        0.002,
+        0.0004,
+        6e-07
+      ]
+    },
+    {
+      "name": "overlap",
+      "media": [
+        {
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              }
+            ],
+            "absorption": [
+              0.5,
+              1,
+              2
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          },
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        },
+        {
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              }
+            ],
+            "absorption": [
+              0.5,
+              1,
+              2
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          },
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "camera": {
+        "position": [
+          0.5,
+          0.5,
+          4
+        ],
+        "target": [
+          0.5,
+          0.5,
+          3
+        ],
+        "near": 0.01,
+        "far": 10
+      },
+      "segments_front_to_back": [
+        {
+          "extinction": [
+            1.0,
+            2,
+            4
+          ],
+          "emission": [
+            0.4,
+            0.8,
+            1.2
+          ],
+          "length": 1
+        }
+      ],
+      "expected": [
+        0.36321205588285577,
+        0.4135335283236613,
+        0.30732625555549364
+      ]
+    },
+    {
+      "name": "ordered-overlap",
+      "media": [
+        {
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              }
+            ],
+            "absorption": [
+              0.5,
+              1,
+              2
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          },
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        },
+        {
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.8,
+                  0.1,
+                  0.3
+                ]
+              }
+            ],
+            "absorption": [
+              1.5,
+              0.2,
+              0.7
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          },
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0.5
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "camera": {
+        "position": [
+          0.5,
+          0.5,
+          4
+        ],
+        "target": [
+          0.5,
+          0.5,
+          3
+        ],
+        "near": 0.01,
+        "far": 10
+      },
+      "segments_front_to_back": [
+        {
+          "extinction": [
+            1.5,
+            0.2,
+            0.7
+          ],
+          "emission": [
+            0.8,
+            0.1,
+            0.3
+          ],
+          "length": 0.5
+        },
+        {
+          "extinction": [
+            2.0,
+            1.2,
+            2.7
+          ],
+          "emission": [
+            1.0,
+            0.5,
+            0.8999999999999999
+          ],
+          "length": 0.5
+        },
+        {
+          "extinction": [
+            0.5,
+            1,
+            2
+          ],
+          "emission": [
+            0.2,
+            0.4,
+            0.6
+          ],
+          "length": 0.5
+        }
+      ],
+      "expected": [
+        0.48667685890659373,
+        0.44643988129170004,
+        0.38225103146378847
+      ]
+    },
+    {
+      "name": "sparse-hole",
+      "media": [
+        {
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              },
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  2
+                ],
+                "density": 1,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              }
+            ],
+            "absorption": [
+              0.5,
+              1,
+              2
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          },
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "camera": {
+        "position": [
+          0.5,
+          0.5,
+          4
+        ],
+        "target": [
+          0.5,
+          0.5,
+          3
+        ],
+        "near": 0.01,
+        "far": 10
+      },
+      "segments_front_to_back": [
+        {
+          "extinction": [
+            0.5,
+            1,
+            2
+          ],
+          "emission": [
+            0.2,
+            0.4,
+            0.6
+          ],
+          "length": 1
+        },
+        {
+          "extinction": [
+            0.5,
+            1,
+            2
+          ],
+          "emission": [
+            0.2,
+            0.4,
+            0.6
+          ],
+          "length": 1
+        }
+      ],
+      "expected": [
+        0.3632120558828558,
+        0.41353352832366125,
+        0.30732625555549364
+      ]
+    },
+    {
+      "name": "metric-scale",
+      "media": [
+        {
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              }
+            ],
+            "absorption": [
+              0.5,
+              1,
+              2
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          },
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "camera": {
+        "position": [
+          0.5,
+          0.5,
+          4
+        ],
+        "target": [
+          0.5,
+          0.5,
+          3
+        ],
+        "near": 0.01,
+        "far": 10
+      },
+      "segments_front_to_back": [
+        {
+          "extinction": [
+            0.5,
+            1,
+            2
+          ],
+          "emission": [
+            0.2,
+            0.4,
+            0.6
+          ],
+          "length": 2
+        }
+      ],
+      "expected": [
+        0.36321205588285577,
+        0.4135335283236613,
+        0.30732625555549364
+      ]
+    },
+    {
+      "name": "negative-scale",
+      "media": [
+        {
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              }
+            ],
+            "absorption": [
+              0.5,
+              1,
+              2
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          },
+          "transform": {
+            "columns": [
+              [
+                -1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "camera": {
+        "position": [
+          -0.5,
+          0.5,
+          4
+        ],
+        "target": [
+          -0.5,
+          0.5,
+          3
+        ],
+        "near": 0.01,
+        "far": 10
+      },
+      "segments_front_to_back": [
+        {
+          "extinction": [
+            0.5,
+            1,
+            2
+          ],
+          "emission": [
+            0.2,
+            0.4,
+            0.6
+          ],
+          "length": 1
+        }
+      ],
+      "expected": [
+        0.33934693402873667,
+        0.4367879441171442,
+        0.35413411329464506
+      ]
+    },
+    {
+      "name": "sheared",
+      "media": [
+        {
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              }
+            ],
+            "absorption": [
+              0.5,
+              1,
+              2
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          },
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0.5,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "camera": {
+        "position": [
+          0.75,
+          0.5,
+          4
+        ],
+        "target": [
+          0.75,
+          0.5,
+          3
+        ],
+        "near": 0.01,
+        "far": 10
+      },
+      "segments_front_to_back": [
+        {
+          "extinction": [
+            0.5,
+            1,
+            2
+          ],
+          "emission": [
+            0.2,
+            0.4,
+            0.6
+          ],
+          "length": 1
+        }
+      ],
+      "expected": [
+        0.33934693402873667,
+        0.4367879441171442,
+        0.35413411329464506
+      ]
+    },
+    {
+      "name": "near-clip",
+      "media": [
+        {
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              }
+            ],
+            "absorption": [
+              0.5,
+              1,
+              2
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          },
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "camera": {
+        "position": [
+          0.5,
+          0.5,
+          4
+        ],
+        "target": [
+          0.5,
+          0.5,
+          3
+        ],
+        "near": 3.5,
+        "far": 10
+      },
+      "segments_front_to_back": [
+        {
+          "extinction": [
+            0.5,
+            1,
+            2
+          ],
+          "emission": [
+            0.2,
+            0.4,
+            0.6
+          ],
+          "length": 0.5
+        }
+      ],
+      "expected": [
+        0.3221199216928595,
+        0.4606530659712633,
+        0.44715177646857696
+      ]
+    },
+    {
+      "name": "far-clip",
+      "media": [
+        {
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              }
+            ],
+            "absorption": [
+              0.5,
+              1,
+              2
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          },
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "camera": {
+        "position": [
+          0.5,
+          0.5,
+          4
+        ],
+        "target": [
+          0.5,
+          0.5,
+          3
+        ],
+        "near": 0.01,
+        "far": 3.5
+      },
+      "segments_front_to_back": [
+        {
+          "extinction": [
+            0.5,
+            1,
+            2
+          ],
+          "emission": [
+            0.2,
+            0.4,
+            0.6
+          ],
+          "length": 0.5
+        }
+      ],
+      "expected": [
+        0.3221199216928595,
+        0.4606530659712633,
+        0.44715177646857696
+      ]
+    },
+    {
+      "name": "inside",
+      "media": [
+        {
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              }
+            ],
+            "absorption": [
+              0.5,
+              1,
+              2
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          },
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "camera": {
+        "position": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "target": [
+          0.5,
+          0.5,
+          -0.5
+        ],
+        "near": 0,
+        "far": 10
+      },
+      "segments_front_to_back": [
+        {
+          "extinction": [
+            0.5,
+            1,
+            2
+          ],
+          "emission": [
+            0.2,
+            0.4,
+            0.6
+          ],
+          "length": 0.49999
+        }
+      ],
+      "expected": [
+        0.3221195322914945,
+        0.4606536725049557,
+        0.44715471953353686
+      ]
+    },
+    {
+      "name": "miss",
+      "media": [
+        {
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              }
+            ],
+            "absorption": [
+              0.5,
+              1,
+              2
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          },
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "camera": {
+        "position": [
+          2,
+          0.5,
+          4
+        ],
+        "target": [
+          2,
+          0.5,
+          3
+        ],
+        "near": 0.01,
+        "far": 10
+      },
+      "segments_front_to_back": [],
+      "expected": [
+        0.3,
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "name": "zero-density-emission",
+      "media": [
+        {
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 0,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              }
+            ],
+            "absorption": [
+              0.5,
+              1,
+              2
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          },
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": []
+          }
+        }
+      ],
+      "camera": {
+        "position": [
+          0.5,
+          0.5,
+          4
+        ],
+        "target": [
+          0.5,
+          0.5,
+          3
+        ],
+        "near": 0.01,
+        "far": 10
+      },
+      "segments_front_to_back": [
+        {
+          "extinction": [
+            0,
+            0,
+            0
+          ],
+          "emission": [
+            0.2,
+            0.4,
+            0.6
+          ],
+          "length": 1
+        }
+      ],
+      "expected": [
+        0.5,
+        0.9,
+        1.2999999999999998
+      ]
+    }
+  ]
+}

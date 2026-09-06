@@ -1,0 +1,2755 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "homogeneous-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/000-homogeneous-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3698819999990519
+    },
+    {
+      "name": "homogeneous-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/001-homogeneous-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013920708006480709
+    },
+    {
+      "name": "homogeneous-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/002-homogeneous-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.7773040830070386,
+      "resources": {
+        "maximum resident set size": 14843904,
+        "peak memory footprint": 2622528
+      }
+    },
+    {
+      "name": "homogeneous-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/003-homogeneous-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020227415996487252
+    },
+    {
+      "name": "homogeneous-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/004-homogeneous-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018353499996010214
+    },
+    {
+      "name": "homogeneous-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/005-homogeneous-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6204470829979982,
+      "resources": {
+        "maximum resident set size": 15908864,
+        "peak memory footprint": 2573376
+      }
+    },
+    {
+      "name": "homogeneous-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/006-homogeneous-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6946756249963073,
+      "resources": {
+        "maximum resident set size": 33374208,
+        "peak memory footprint": 12191360
+      }
+    },
+    {
+      "name": "homogeneous-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/007-homogeneous-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.16652308400080074
+    },
+    {
+      "name": "homogeneous-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/homogeneous-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/008-homogeneous-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09092691600380931
+    },
+    {
+      "name": "homogeneous-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/homogeneous-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/009-homogeneous-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20308779200422578
+    },
+    {
+      "name": "homogeneous-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/homogeneous-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/010-homogeneous-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5294691669987515
+    },
+    {
+      "name": "homogeneous-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/011-homogeneous-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.04025295800238382
+    },
+    {
+      "name": "scattering-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/scattering-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/012-scattering-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07993579100002535
+    },
+    {
+      "name": "scattering-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/scattering-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/013-scattering-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07960599999933038
+    },
+    {
+      "name": "scattering-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/scattering-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/014-scattering-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01372666699171532
+    },
+    {
+      "name": "scattering-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/scattering-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/015-scattering-gpu.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_profile",
+      "seconds": 0.06451262500195298
+    },
+    {
+      "name": "scattering-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/scattering-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/016-scattering-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013297625002451241
+    },
+    {
+      "name": "negative",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/017-negative.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "vol",
+      "seconds": 0.014637667001807131
+    },
+    {
+      "name": "encoding",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/018-encoding.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_vol",
+      "seconds": 0.014698915998451412
+    },
+    {
+      "name": "trailing",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/019-trailing.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "vol",
+      "seconds": 0.016308042002492584
+    },
+    {
+      "name": "cancel-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/020-cancel-import.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.009493334000580944
+    },
+    {
+      "name": "input-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/021-input-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.009275541990064085
+    },
+    {
+      "name": "budget-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/budget-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/022-budget-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07794237500638701
+    },
+    {
+      "name": "transaction-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/budget-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/023-transaction-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.012048875010805205
+    },
+    {
+      "name": "budget-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/budget-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/024-budget-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01046712500101421
+    },
+    {
+      "name": "homogeneous-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/homogeneous-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/025-homogeneous-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015257541002938524
+    },
+    {
+      "name": "emission-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/026-emission-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0953612500015879
+    },
+    {
+      "name": "emission-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/027-emission-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.010702792002120987
+    },
+    {
+      "name": "emission-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/028-emission-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09106766599870753,
+      "resources": {
+        "maximum resident set size": 15237120,
+        "peak memory footprint": 2638912
+      }
+    },
+    {
+      "name": "emission-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/029-emission-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02612750000844244
+    },
+    {
+      "name": "emission-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/030-emission-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017345874992315657
+    },
+    {
+      "name": "emission-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/031-emission-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20436524999968242,
+      "resources": {
+        "maximum resident set size": 16171008,
+        "peak memory footprint": 2589760
+      }
+    },
+    {
+      "name": "emission-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/032-emission-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.1017828749900218,
+      "resources": {
+        "maximum resident set size": 33374208,
+        "peak memory footprint": 12191360
+      }
+    },
+    {
+      "name": "emission-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/033-emission-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13107458398735616
+    },
+    {
+      "name": "emission-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/034-emission-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09143454200238921
+    },
+    {
+      "name": "emission-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/035-emission-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19182491599349305
+    },
+    {
+      "name": "emission-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/036-emission-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.47224020899739116
+    },
+    {
+      "name": "emission-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/037-emission-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.01841141599288676
+    },
+    {
+      "name": "emission-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/038-emission-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01459716699901037
+    },
+    {
+      "name": "axis-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/039-axis-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09026212499884423
+    },
+    {
+      "name": "axis-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/040-axis-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011584624997340143
+    },
+    {
+      "name": "axis-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/041-axis-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09693204201175831,
+      "resources": {
+        "maximum resident set size": 15204352,
+        "peak memory footprint": 2638912
+      }
+    },
+    {
+      "name": "axis-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/042-axis-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017968333995668218
+    },
+    {
+      "name": "axis-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/043-axis-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014006208992213942
+    },
+    {
+      "name": "axis-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/044-axis-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.18271470899344422,
+      "resources": {
+        "maximum resident set size": 15941632,
+        "peak memory footprint": 2606144
+      }
+    },
+    {
+      "name": "axis-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/045-axis-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4719899589981651,
+      "resources": {
+        "maximum resident set size": 33226752,
+        "peak memory footprint": 11978304
+      }
+    },
+    {
+      "name": "axis-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/046-axis-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12439641600940377
+    },
+    {
+      "name": "axis-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/axis-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/047-axis-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0944257499941159
+    },
+    {
+      "name": "axis-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/axis-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/048-axis-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19863458300824277
+    },
+    {
+      "name": "axis-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/axis-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/049-axis-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.663703207988874
+    },
+    {
+      "name": "axis-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/050-axis-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.02926833400852047
+    },
+    {
+      "name": "axis-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/axis-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/051-axis-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018705541995586827
+    },
+    {
+      "name": "empty-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/052-empty-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10678179100796115
+    },
+    {
+      "name": "empty-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/053-empty-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04866095900069922
+    },
+    {
+      "name": "empty-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/054-empty-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.15813895901374053,
+      "resources": {
+        "maximum resident set size": 14581760,
+        "peak memory footprint": 2491456
+      }
+    },
+    {
+      "name": "empty-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/055-empty-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018423999994411133
+    },
+    {
+      "name": "empty-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/056-empty-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016123957990203053
+    },
+    {
+      "name": "empty-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/057-empty-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19527233300323132,
+      "resources": {
+        "maximum resident set size": 15040512,
+        "peak memory footprint": 2540608
+      }
+    },
+    {
+      "name": "empty-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/058-empty-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4799227920011617,
+      "resources": {
+        "maximum resident set size": 31571968,
+        "peak memory footprint": 10765952
+      }
+    },
+    {
+      "name": "empty-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/059-empty-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19273441699624527
+    },
+    {
+      "name": "empty-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/empty-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/060-empty-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08891158300684765
+    },
+    {
+      "name": "empty-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/empty-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/061-empty-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21380541699181776
+    },
+    {
+      "name": "empty-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/empty-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/062-empty-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4475775419996353
+    },
+    {
+      "name": "empty-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/063-empty-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.018448333008564077
+    },
+    {
+      "name": "empty-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/empty-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/064-empty-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01434595900354907
+    },
+    {
+      "name": "emission-only-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/065-emission-only-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1326062500011176
+    },
+    {
+      "name": "emission-only-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/066-emission-only-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018224749990622513
+    },
+    {
+      "name": "emission-only-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/067-emission-only-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14169283299997915,
+      "resources": {
+        "maximum resident set size": 15269888,
+        "peak memory footprint": 2671680
+      }
+    },
+    {
+      "name": "emission-only-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/068-emission-only-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07832520800002385
+    },
+    {
+      "name": "emission-only-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/069-emission-only-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.040350707990000956
+    },
+    {
+      "name": "emission-only-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/070-emission-only-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2481758749927394,
+      "resources": {
+        "maximum resident set size": 16187392,
+        "peak memory footprint": 2606144
+      }
+    },
+    {
+      "name": "emission-only-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/071-emission-only-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.622347707991139,
+      "resources": {
+        "maximum resident set size": 33947648,
+        "peak memory footprint": 12224128
+      }
+    },
+    {
+      "name": "emission-only-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/072-emission-only-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2225124159886036
+    },
+    {
+      "name": "emission-only-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-only-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/073-emission-only-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09085745899938047
+    },
+    {
+      "name": "emission-only-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-only-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/074-emission-only-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21418683299270924
+    },
+    {
+      "name": "emission-only-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-only-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/075-emission-only-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.7621462499955669
+    },
+    {
+      "name": "emission-only-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/076-emission-only-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.029602709008031525
+    },
+    {
+      "name": "emission-only-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-only-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/077-emission-only-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024047208004049025
+    },
+    {
+      "name": "unit-cube-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/078-unit-cube-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0885392500058515
+    },
+    {
+      "name": "unit-cube-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/079-unit-cube-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020762041996931657
+    },
+    {
+      "name": "unit-cube-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/080-unit-cube-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13226333299826365,
+      "resources": {
+        "maximum resident set size": 15204352,
+        "peak memory footprint": 2638912
+      }
+    },
+    {
+      "name": "unit-cube-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/081-unit-cube-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.036334750009700656
+    },
+    {
+      "name": "unit-cube-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/082-unit-cube-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.028426417004084215
+    },
+    {
+      "name": "unit-cube-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/083-unit-cube-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.23761825000110548,
+      "resources": {
+        "maximum resident set size": 16220160,
+        "peak memory footprint": 2638912
+      }
+    },
+    {
+      "name": "unit-cube-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/084-unit-cube-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.2490431250043912,
+      "resources": {
+        "maximum resident set size": 33980416,
+        "peak memory footprint": 12191360
+      }
+    },
+    {
+      "name": "unit-cube-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/085-unit-cube-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1438232080108719
+    },
+    {
+      "name": "unit-cube-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/unit-cube-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/086-unit-cube-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1005109999969136
+    },
+    {
+      "name": "unit-cube-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/unit-cube-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/087-unit-cube-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2719346670055529
+    },
+    {
+      "name": "unit-cube-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/unit-cube-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/088-unit-cube-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 2.4138510410120944
+    },
+    {
+      "name": "unit-cube-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/089-unit-cube-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.10915883298730478
+    },
+    {
+      "name": "unit-cube-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/unit-cube-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/090-unit-cube-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08822695800336078
+    },
+    {
+      "name": "scaled-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/091-scaled-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1870999170059804
+    },
+    {
+      "name": "scaled-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/092-scaled-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0849760840064846
+    },
+    {
+      "name": "scaled-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/093-scaled-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14033300000301097,
+      "resources": {
+        "maximum resident set size": 15204352,
+        "peak memory footprint": 2638912
+      }
+    },
+    {
+      "name": "scaled-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/094-scaled-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04561108299822081
+    },
+    {
+      "name": "scaled-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/095-scaled-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03441270899202209
+    },
+    {
+      "name": "scaled-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/096-scaled-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3125401669967687,
+      "resources": {
+        "maximum resident set size": 16203776,
+        "peak memory footprint": 2655296
+      }
+    },
+    {
+      "name": "scaled-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/097-scaled-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 2.2622920829890063,
+      "resources": {
+        "maximum resident set size": 32686080,
+        "peak memory footprint": 12371584
+      }
+    },
+    {
+      "name": "scaled-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/098-scaled-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.151498499995796
+    },
+    {
+      "name": "scaled-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/scaled-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/099-scaled-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1156074579921551
+    },
+    {
+      "name": "scaled-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/scaled-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/100-scaled-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2971245000080671
+    },
+    {
+      "name": "scaled-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/scaled-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/101-scaled-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.482161416002782
+    },
+    {
+      "name": "scaled-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/102-scaled-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.05928750000020955
+    },
+    {
+      "name": "scaled-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/scaled-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/103-scaled-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.040021207998506725
+    },
+    {
+      "name": "sparse-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/104-sparse-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10113299998920411
+    },
+    {
+      "name": "sparse-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/105-sparse-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0213568749895785
+    },
+    {
+      "name": "sparse-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/106-sparse-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.40125087500200607,
+      "resources": {
+        "maximum resident set size": 16318464,
+        "peak memory footprint": 3753024
+      }
+    },
+    {
+      "name": "sparse-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/107-sparse-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4111202920030337
+    },
+    {
+      "name": "sparse-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/108-sparse-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04438570799538866
+    },
+    {
+      "name": "sparse-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/109-sparse-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.25120891600090545,
+      "resources": {
+        "maximum resident set size": 16171008,
+        "peak memory footprint": 2622528
+      }
+    },
+    {
+      "name": "sparse-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/110-sparse-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.2354961250093766,
+      "resources": {
+        "maximum resident set size": 33177600,
+        "peak memory footprint": 12338816
+      }
+    },
+    {
+      "name": "sparse-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/111-sparse-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.15467845898820087
+    },
+    {
+      "name": "sparse-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/sparse-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/112-sparse-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.10002379199431743
+    },
+    {
+      "name": "sparse-recovered",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/sparse-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/113-sparse-recovered.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22408520799945109
+    },
+    {
+      "name": "sparse-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/sparse-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/114-sparse-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.9648458329902496
+    },
+    {
+      "name": "sparse-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/115-sparse-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.3706160000001546
+    },
+    {
+      "name": "sparse-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/sparse-project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/116-sparse-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03606475000560749
+    }
+  ],
+  "variants": [
+    {
+      "name": "homogeneous",
+      "source": {
+        "format": "vol",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/fixtures/volume-import/data/homogeneous.vol",
+        "emission": null,
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            1,
+            1,
+            5
+          ],
+          "target": [
+            1,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:41c2055de8b1933cb46a8f9e99b5cf9191879838ae79605cae21276a644aba11",
+      "report": {
+        "asset_json_bytes": 650,
+        "density_digest": "sha256:cb82d299be2da29648ce670ed31227a3132ea969526050c7dd51b2fbdf810cf5",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "emission_digest": null,
+        "entity": "7982fdfe7fbf481186b8f2bbdfb6326e",
+        "input_bytes": 80,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:af195f26335f76f303505e17432dae1c7c9c22cef9509e1df82571b0bc998eea",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:63cc060f60b8e5898e97b4564b2d948ed98559dcda044809ece9d8388c710103",
+        "voxel_size_meters": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "expected": [
+        0.36787944117144233,
+        0.1353352832366127,
+        0.01831563888873418
+      ],
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/homogeneous-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "emission",
+      "source": {
+        "format": "vol",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/fixtures/volume-import/data/homogeneous.vol",
+        "emission": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/fixtures/volume-import/data/emission.vol",
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            1,
+            1,
+            5
+          ],
+          "target": [
+            1,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:8715cf5b9672ac4991722184a7d8819fc58f544538e33913cf893861334625cf",
+      "report": {
+        "asset_json_bytes": 658,
+        "density_digest": "sha256:cb82d299be2da29648ce670ed31227a3132ea969526050c7dd51b2fbdf810cf5",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "emission_digest": "sha256:6be5f445bdb8113f8297755c30fc9d75cd1a847a28d95c7bd07590d0243e5d73",
+        "entity": "7a3f21eb2cde061877efe2c215526136",
+        "input_bytes": 224,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:4964e59ac6177b38675b7816fb1e87d6ec92f79bc3d373345da4265e090d04ad",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:0c6ea258f4b515adbd3a015820f705f1aa7baaec3a07f8a15ed5fc62653863c5",
+        "voxel_size_meters": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "expected": [
+        0.6839397205857212,
+        0.5676676416183064,
+        0.5091578194443671
+      ],
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "axis",
+      "source": {
+        "format": "vol",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/fixtures/volume-import/data/axis.vol",
+        "emission": null,
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            0.5,
+            0.5,
+            5
+          ],
+          "target": [
+            0.5,
+            0.5,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:ad9f8c32afc2bcf4075487fc2a3cf9d524ff34efaa4a3fc6bea34f44320022f2",
+      "report": {
+        "asset_json_bytes": 650,
+        "density_digest": "sha256:890b7e4c124d15c1469e79bae19e0d060ba3b7f0c14b4e4c363b3ed60706b5d8",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "emission_digest": null,
+        "entity": "974c6f475f42056e6e190044f50ce194",
+        "input_bytes": 80,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:cf343a8e53aef2ae31b96d712a992fb590ee389e12a3483b10630db07b9705be",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:870da4e6296bac8a875731f9506806c8dd504fbbed0382c04fe9c3018e0c7ea9",
+        "voxel_size_meters": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "expected": [
+        0.049787068367863944,
+        0.0024787521766663585,
+        6.14421235332821e-06
+      ],
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/axis-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "empty",
+      "source": {
+        "format": "vol",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/fixtures/volume-import/data/empty.vol",
+        "emission": null,
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            1,
+            1,
+            5
+          ],
+          "target": [
+            1,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:d3cdd3f5cc08be2e6a4ef02f0a8489f84865a7362ab463ebdc524656ae160db0",
+      "report": {
+        "asset_json_bytes": 0,
+        "density_digest": "sha256:1e1fdd73a579ad24da8b97c8a8b7a5478f7ae08b5ecf9362b8db55c1b8426498",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "emission_digest": null,
+        "entity": "b65ad539bc40a0893c1e8709143b11fe",
+        "input_bytes": 80,
+        "occupied_cells": 0,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:9a87b167fe41b9c7892384037bf959e78ce1961b6c578916a96aa21a6154087c",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": null,
+        "voxel_size_meters": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "expected": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/empty-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "emission-only",
+      "source": {
+        "format": "vol",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/fixtures/volume-import/data/empty.vol",
+        "emission": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/fixtures/volume-import/data/emission.vol",
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            1,
+            1,
+            5
+          ],
+          "target": [
+            1,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:ed2a7ae9ee55bcf7314662641b963c71299bcf0a6f2596e72ad86a82ad07036b",
+      "report": {
+        "asset_json_bytes": 658,
+        "density_digest": "sha256:1e1fdd73a579ad24da8b97c8a8b7a5478f7ae08b5ecf9362b8db55c1b8426498",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "emission_digest": "sha256:6be5f445bdb8113f8297755c30fc9d75cd1a847a28d95c7bd07590d0243e5d73",
+        "entity": "9e65b39b7efa6dd0551bef46d8e58562",
+        "input_bytes": 224,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:5c0202627277b5f2dcfe9ab867ed392802cb8bbed1588f91a6f945fee9993170",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:880e5e80cab40ee5b7e7c56bcb502444bb08ff7bf97772b0e4c7750cb3a8d09a",
+        "voxel_size_meters": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "expected": [
+        1.5,
+        2.0,
+        3.0
+      ],
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/emission-only-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "unit-cube",
+      "source": {
+        "format": "vol",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/fixtures/volume-import/data/homogeneous.vol",
+        "emission": null,
+        "policy": {
+          "bounds": "unit_cube",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            0.5,
+            0.5,
+            5
+          ],
+          "target": [
+            0.5,
+            0.5,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:c9e2e27dd65cb773bf4c570dbd2f36d2f1ab3e644e424a492946a41120c9644a",
+      "report": {
+        "asset_json_bytes": 650,
+        "density_digest": "sha256:cb82d299be2da29648ce670ed31227a3132ea969526050c7dd51b2fbdf810cf5",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "emission_digest": null,
+        "entity": "1c8e550e4fc829f6b94831cb1fdc51ad",
+        "input_bytes": 80,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "unit_cube",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:af195f26335f76f303505e17432dae1c7c9c22cef9509e1df82571b0bc998eea",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:e4afbfe15d40d62f34f914dc80ff4ae4932a721549b961efa4614a07b76f941e",
+        "voxel_size_meters": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "expected": [
+        0.6065306597126334,
+        0.36787944117144233,
+        0.1353352832366127
+      ],
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/unit-cube-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "scaled",
+      "source": {
+        "format": "vol",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/fixtures/volume-import/data/homogeneous.vol",
+        "emission": null,
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 2,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            1,
+            1,
+            5
+          ],
+          "target": [
+            1,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:cb8159aaa0ada022d216cf6c46e376d9cb15c31f2554254a8f0a52d8e4022ad0",
+      "report": {
+        "asset_json_bytes": 650,
+        "density_digest": "sha256:cb82d299be2da29648ce670ed31227a3132ea969526050c7dd51b2fbdf810cf5",
+        "domain_meters": [
+          0.0,
+          0.0,
+          0.0,
+          4.0,
+          4.0,
+          4.0
+        ],
+        "emission_digest": null,
+        "entity": "d4b42bf5b6f77023d3f3d1f3854a9123",
+        "input_bytes": 80,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 2.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:af195f26335f76f303505e17432dae1c7c9c22cef9509e1df82571b0bc998eea",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:604d3a0eba99c39320acbc70c1d96ce17e76f00c71b1610c018ed55aac8a3dde",
+        "voxel_size_meters": [
+          2.0,
+          2.0,
+          2.0
+        ]
+      },
+      "expected": [
+        0.1353352832366127,
+        0.01831563888873418,
+        0.00033546262790251185
+      ],
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/scaled-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    },
+    {
+      "name": "sparse",
+      "source": {
+        "format": "vol",
+        "path": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/fixtures/volume-import/data/sparse.vol",
+        "emission": null,
+        "policy": {
+          "bounds": "file",
+          "reconstruction": "cell_constant_zero_outside",
+          "meters_per_unit": 1,
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "scattering": [
+            0,
+            0,
+            0
+          ],
+          "anisotropy": 0,
+          "max_step_meters": 0.1
+        }
+      },
+      "settings": {
+        "width": 1,
+        "height": 1,
+        "samples": 1,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          1,
+          1,
+          1
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            0.984375,
+            0.984375,
+            5
+          ],
+          "target": [
+            0.984375,
+            0.984375,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1e-07,
+            "ymag": 1e-07,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:a29751888b39caaf1fc281ea449c2d3e4802d67fc0690d95dabc68a70d3db738",
+      "report": {
+        "asset_json_bytes": 485,
+        "density_digest": "sha256:d8678e444688f9016463fc5eb3cba5c24d6890f7d85ddee7c971439e144ded05",
+        "domain_meters": [
+          -1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "emission_digest": null,
+        "entity": "9a1572a5fcf5ba458d1c78bf48bcaab2",
+        "input_bytes": 1048624,
+        "occupied_cells": 5,
+        "policy": {
+          "absorption": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "anisotropy": 0.0,
+          "bounds": "file",
+          "density_scale": 1.0,
+          "emission_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1.0,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          -1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "source_cells": 262144,
+        "source_digest": "sha256:e19722e6b7907a3e31cc78ad4d6571af93b4e8d5f8e1490d9267cbfb3179b657",
+        "source_dimensions": [
+          64,
+          64,
+          64
+        ],
+        "volume_asset": "sha256:95ed0c676272729b7cb8db13b8842d61388d74dd66927f85e6ded5e422890463",
+        "voxel_size_meters": [
+          0.03125,
+          0.03125,
+          0.03125
+        ]
+      },
+      "expected": [
+        0.9248488132162048,
+        0.8553453273074225,
+        0.7316156289466418
+      ],
+      "archive": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/volume-workflow/sparse-archive/document/document.json",
+      "empty_revision": "sha256:af6c80453f2cc77c8f18c41295ef902bf82ffdada13259cf67cf1a79ad29c15a"
+    }
+  ]
+}

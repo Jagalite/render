@@ -2,6 +2,7 @@
 use super::*;
 mod alpha;
 mod dielectric;
+mod media;
 mod pbr;
 mod surfaces;
 fn v(n: &str) -> Expr {
@@ -81,18 +82,21 @@ fn when(enabled: bool, statement: Stmt) -> Stmt {
     Stmt::Sequence(if enabled { vec![statement] } else { vec![] })
 }
 pub fn kernel() -> Kernel {
-    build(false, false, false)
+    build(false, false, false, false)
 }
 pub fn alpha_kernel() -> Kernel {
-    build(true, false, false)
+    build(true, false, false, false)
 }
 pub fn surface_kernel() -> Kernel {
-    build(true, true, false)
+    build(true, true, false, false)
 }
 pub fn dielectric_kernel() -> Kernel {
-    build(true, true, true)
+    build(true, true, true, false)
 }
-fn build(extended: bool, surfaces: bool, dielectric: bool) -> Kernel {
+pub fn media_kernel() -> Kernel {
+    build(false, false, false, true)
+}
+fn build(extended: bool, surfaces: bool, dielectric: bool, media: bool) -> Kernel {
     let random_fn = function(
         "random",
         &[
@@ -131,7 +135,7 @@ fn build(extended: bool, surfaces: bool, dielectric: bool) -> Kernel {
             + xyz(inst(i("base") + u(3))) * s("w"))],
     );
     let mut bounds_body = vec![
-        var("near", f(if extended { 0. } else { 0.00001 })),
+        var("near", f(if extended || media { 0. } else { 0.00001 })),
         var("far", s("limit")),
     ];
     for axis in ["x", "y", "z"] {
@@ -209,7 +213,7 @@ fn build(extended: bool, surfaces: bool, dielectric: bool) -> Kernel {
             let_("distance", dot(v("e2"), v("qvec")) / s("det")),
             if_(
                 s("distance")
-                    .lt(f(if extended { 0. } else { 0.00001 }))
+                    .lt(f(if extended || media { 0. } else { 0.00001 }))
                     .or(s("distance").gt(s("limit"))),
                 vec![ret(splat(-1.))],
             ),
@@ -477,6 +481,7 @@ fn build(extended: bool, surfaces: bool, dielectric: bool) -> Kernel {
                             vec![set(s("alpha_failed"), f(1.)), Stmt::Break],
                         ),
                     ),
+                    when(media, self::media::integrate()),
                     Stmt::If(
                         q("hit").field("x").lt(f(0.)),
                         vec![set(v("radiance"), v("radiance") + xyz(param(7)))],
@@ -515,7 +520,7 @@ fn build(extended: bool, surfaces: bool, dielectric: bool) -> Kernel {
                             ),
                             Stmt::If(
                                 inst(i("base") + u(8)).field("z").gt(f(0.)),
-                                pbr::body(extended, surfaces, dielectric),
+                                pbr::body(extended, surfaces, dielectric, media),
                                 vec![
                                     var("color", xyz(inst(i("base") + u(6)))),
                                     let_(
@@ -619,8 +624,9 @@ fn build(extended: bool, surfaces: bool, dielectric: bool) -> Kernel {
                                     let_("cosine", max(dot(v("normal"), v("light_dir")), f(0.))),
                                     if_(
                                         s("cosine").gt(f(0.)).and(s("distance").gt(f(0.00001))),
-                                        vec![alpha::illuminate(
+                                        vec![media::illuminate(
                                             extended,
+                                            media,
                                             v("offset"),
                                             v("light_dir"),
                                             s("distance") - f(0.00002),
@@ -647,8 +653,9 @@ fn build(extended: bool, surfaces: bool, dielectric: bool) -> Kernel {
                                     set(v("next_origin"), v("offset")),
                                     set(v("next_direction"), v("secondary")),
                                     set(v("weight"), v("color")),
-                                    alpha::last_bounce(
+                                    media::last_bounce(
                                         extended,
+                                        media,
                                         v("offset"),
                                         v("secondary"),
                                         v("color") * xyz(param(7)),
@@ -745,6 +752,9 @@ fn build(extended: bool, surfaces: bool, dielectric: bool) -> Kernel {
                 cosine_fn,
             ];
             functions.extend(pbr::functions(extended));
+            if media {
+                functions.extend(self::media::functions());
+            }
             if surfaces {
                 functions.extend(self::surfaces::functions());
             }
@@ -761,6 +771,36 @@ fn build(extended: bool, surfaces: bool, dielectric: bool) -> Kernel {
 }
 #[cfg(test)]
 mod tests {
+    #[test]
+    fn generated_sparse_media_validates_and_preserves_all_prior_shaders() {
+        let source = super::media_kernel().generate().unwrap();
+        assert!(source.contains("fn medium_radiance"));
+        assert!(source.contains("fn medium_transmittance"));
+        for (kernel, expected) in [
+            (
+                super::kernel(),
+                "sha256:e0bae9a561867ddc4622b68e9d52635ce3d380bbf6f4aeb109e63b46c8d89247",
+            ),
+            (
+                super::alpha_kernel(),
+                "sha256:82177b8262a499bad4e9997fe15d04975b9635e0817ea4caeeb38d713a0648dc",
+            ),
+            (
+                super::surface_kernel(),
+                "sha256:cf5b558cef24671d760df416ccd1b82b7b8166bc26dbf2dfd4e2d3d616808f07",
+            ),
+            (
+                super::dielectric_kernel(),
+                "sha256:afa6f881610497e4c8cdf63f6a28c10ff2a243a23c4f23dcac7aae5179130eea",
+            ),
+        ] {
+            assert_eq!(
+                render_core::digest(kernel.generate().unwrap().as_bytes()),
+                expected
+            );
+        }
+    }
+
     #[test]
     fn generated_traversal_and_shading_validate() {
         let source = super::kernel().generate().unwrap();

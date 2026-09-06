@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "accepted": [
+    "homogeneous",
+    "emission",
+    "axis",
+    "empty",
+    "emission-only",
+    "unit-cube",
+    "scaled",
+    "sparse"
+  ],
+  "rejected": [
+    "bounds",
+    "reconstruction",
+    "meters_per_unit",
+    "density_scale",
+    "emission_scale",
+    "anisotropy",
+    "max_step_meters",
+    "unknown",
+    "missing bounds",
+    "missing reconstruction",
+    "missing meters_per_unit",
+    "missing density_scale",
+    "missing emission_scale",
+    "missing absorption",
+    "missing scattering",
+    "missing anisotropy",
+    "missing max_step_meters",
+    "invalid byte"
+  ],
+  "schema_sha256": "567240638b9181c8e381f5c826bdaa50908533405a3ada41978140273b250b30",
+  "scope": "Structural DTO subset; cross-field, binary, aggregate bytes, revisions, permissions and native asset bounds require Rust semantic checks."
+}

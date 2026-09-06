@@ -1,0 +1,52 @@
+   Compiling render-host v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/crates/host)
+    Finished `test` profile [unoptimized] target(s) in 26.28s
+     Running tests/gpu_surfaces.rs (target/debug/deps/gpu_surfaces-9624e2b82cc22a48)
+
+running 3 tests
+depth=1 backend=gpu-f32-pbr-v0/Metal rmse=0
+depth=2 backend=gpu-f32-pbr-path-v1/Metal rmse=0.00000005505841692483966
+depth=4 backend=gpu-f32-pbr-path-v1/Metal rmse=0.00000005687933968232002
+depth=16 backend=gpu-f32-pbr-path-v1/Metal rmse=0.00000005727444537550881
+depth=1 backend=gpu-f32-conductor-coat-v1/Metal rmse=0
+analytic Conductor { eta: [0.0, 0.0, 0.0], k: [1.0, 1.0, 1.0] } expected=1 actual=[1.0, 1.0, 1.0]
+depth=1 backend=gpu-f32-conductor-coat-v1/Metal rmse=0
+analytic Conductor { eta: [1.0, 1.0, 1.0], k: [0.0, 0.0, 0.0] } expected=0 actual=[0.0, 0.0, 0.0]
+depth=1 backend=gpu-f32-conductor-coat-v1/Metal rmse=0
+analytic Coated { weight: 1.0, ior: 1.5, roughness: 1.0 } expected=0.04 actual=[0.040000003, 0.040000003, 0.040000003]
+depth=4 backend=gpu-f32-conductor-coat-v1/Metal rmse=0.000016014231290432244
+depth=1 backend=gpu-f32-conductor-coat-v1/Metal rmse=0
+analytic Coated { weight: 0.0, ior: 1.5, roughness: 1.0 } expected=0 actual=[0.0, 0.0, 0.0]
+depth=4 backend=gpu-f32-conductor-coat-v1/Metal rmse=0.00001991490653790758
+depth=1 backend=gpu-f32-conductor-coat-v1/Metal rmse=0
+analytic Coated { weight: 1.0, ior: 1.0, roughness: 1.0 } expected=0 actual=[0.0, 0.0, 0.0]
+test normal_incidence_analytic_energy_and_coat_limits ... ok
+depth=4 backend=gpu-f32-conductor-coat-v1/Metal rmse=0.000000013077263577422466
+depth=4 backend=gpu-f32-conductor-coat-v1/Metal rmse=0.0000056439549534631196
+depth=1 backend=gpu-f32-principled-alpha-v1/Metal rmse=0
+depth=4 backend=gpu-f32-conductor-coat-v1/Metal rmse=0.000016013340552344954
+depth=2 backend=gpu-f32-principled-alpha-v1/Metal rmse=0.00000005868810323695894
+depth=4 backend=gpu-f32-conductor-coat-v1/Metal rmse=0.000019892075265742568
+depth=4 backend=gpu-f32-principled-alpha-v1/Metal rmse=0.00000005977901270941352
+depth=4 backend=gpu-f32-conductor-coat-v1/Metal rmse=0.000009626511046497464
+depth=16 backend=gpu-f32-principled-alpha-v1/Metal rmse=0.00000005969189241141851
+depth=4 backend=gpu-f32-conductor-coat-v1/Metal rmse=0.000011883559630119092
+test surface_models_keep_named_uv_vertex_color_normal_and_alpha_consumers ... ok
+depth=1 backend=gpu-f32-conductor-coat-v1/Metal rmse=0
+depth=2 backend=gpu-f32-conductor-coat-v1/Metal rmse=0.000000022039114620907665
+depth=4 backend=gpu-f32-conductor-coat-v1/Metal rmse=0.000000026275843344006473
+depth=16 backend=gpu-f32-conductor-coat-v1/Metal rmse=0.000000026275843344006473
+depth=1 backend=gpu-f32-conductor-coat-v1/Metal rmse=0
+depth=2 backend=gpu-f32-conductor-coat-v1/Metal rmse=0.00000017093511888320477
+depth=4 backend=gpu-f32-conductor-coat-v1/Metal rmse=0.00000017172487219348202
+depth=16 backend=gpu-f32-conductor-coat-v1/Metal rmse=0.0000001721259487881124
+depth=1 backend=gpu-f32-principled-alpha-v1/Metal rmse=0
+depth=2 backend=gpu-f32-principled-alpha-v1/Metal rmse=0.00000005868810323695894
+depth=4 backend=gpu-f32-principled-alpha-v1/Metal rmse=0.00000005977901270941352
+depth=16 backend=gpu-f32-principled-alpha-v1/Metal rmse=0.00000005969189241141851
+depth=1 backend=gpu-f32-pbr-v0/Metal rmse=0
+depth=2 backend=gpu-f32-pbr-path-v1/Metal rmse=0.00000005505841692483966
+depth=4 backend=gpu-f32-pbr-path-v1/Metal rmse=0.00000005687933968232002
+depth=16 backend=gpu-f32-pbr-path-v1/Metal rmse=0.00000005727444537550881
+test conductor_coat_secondary_transport_and_three_pipeline_cache_switching ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.00s

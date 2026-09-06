@@ -1,0 +1,21 @@
+   Compiling render-gpu v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/crates/gpu)
+   Compiling render-host v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/crates/host)
+    Finished `test` profile [unoptimized] target(s) in 1m 49s
+     Running tests/gpu_media.rs (target/debug/deps/gpu_media-d15bc033be93d3bc)
+
+running 5 tests
+test analytic_sparse_media_matches_metal_and_preserves_cancellation ... ignored, requires actual GPU; mandatory sparse media acceptance
+test media_maximum_cells_and_dispatch_work_execute ... ignored, requires actual GPU; execute occupied-cell and dispatch-work boundaries
+test media_progressive_cancellation_and_device_recovery ... ignored, requires actual GPU; mandatory media lifecycle and progressive identity
+test opaque_surfaces_light_shadows_and_finite_depth_media_match_reference ... ignored, requires actual GPU; mandatory surface/media integration
+test sparse_media_admission_bounds_precision_and_surface_profiles ... ok
+
+test result: ok. 1 passed; 0 failed; 4 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/multibounce_gpu.rs (target/debug/deps/multibounce_gpu-fe17f3f895f92d6e)
+
+running 2 tests
+test gpu_multibounce_parity_progressive_identity_and_cancellation ... ignored, requires a GPU adapter; run explicitly in the multi-bounce acceptance gate
+test gpu_depth_admission_and_unsupported_materials_are_explicit ... ok
+
+test result: ok. 1 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.11s

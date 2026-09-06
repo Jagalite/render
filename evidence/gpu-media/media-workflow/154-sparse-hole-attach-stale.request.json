@@ -1,0 +1,19 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:4a35bf015731bd4e2c72fd21b8d6aa1d17b0a9b998c2803c696341772f2b7456",
+      "idempotency_key": "gpu:media:sparse-hole-attach:stale",
+      "max_added_bytes": 8388608,
+      "commands": [
+        {
+          "operation": "set_volume",
+          "entity": "00000000000000000000000000002969",
+          "asset": "sha256:c3e41be47d031619e50e47e0dcd0bd5ff8337920244cd2f99a2a57c923198324"
+        }
+      ]
+    }
+  }
+}

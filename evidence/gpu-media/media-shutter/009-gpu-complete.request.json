@@ -1,0 +1,33 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "sequence",
+    "backend": "gpu",
+    "request": {
+      "revision": "sha256:bac90faaf79e6a95493e5d6e358224ef3b6aea65cb4b69875f43acfe3cabe103",
+      "clip": "000000000000000000000000000029cc",
+      "shutter": {
+        "open": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "close": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "samples": 2
+      },
+      "times": [
+        {
+          "numerator": 0,
+          "denominator": 1
+        },
+        {
+          "numerator": 2,
+          "denominator": 1
+        }
+      ]
+    },
+    "output": "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/media-shutter/gpu-complete"
+  }
+}

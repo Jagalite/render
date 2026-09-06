@@ -1,0 +1,18 @@
+   Compiling render-kernel v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/crates/kernel)
+    Finished `test` profile [unoptimized] target(s) in 9.45s
+     Running unittests src/lib.rs (target/debug/deps/render_kernel-0da1cce2c611a02d)
+
+running 5 tests
+test path::tests::generated_traversal_and_shading_validate ... ok
+test path::tests::generated_alpha_profile_validates_and_keeps_coverage_functions_separate ... ok
+test path::tests::generated_conductor_coat_profile_validates_with_coverage ... ok
+test path::tests::generated_dielectric_profile_validates_and_preserves_surface_shader ... ok
+test path::tests::generated_sparse_media_validates_and_preserves_all_prior_shaders ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.56s
+
+   Doc-tests render_kernel
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s

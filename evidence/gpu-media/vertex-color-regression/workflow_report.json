@@ -1,0 +1,981 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "rgba-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgba",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/000-rgba-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12770645799173508
+    },
+    {
+      "name": "rgba-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgba",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/001-rgba-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016846915998030454
+    },
+    {
+      "name": "rgba-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgba",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/002-rgba-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20518887499929406,
+      "resources": {
+        "maximum resident set size": 16596992,
+        "peak memory footprint": 2966592
+      }
+    },
+    {
+      "name": "rgba-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgba",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/003-rgba-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06240887500462122
+    },
+    {
+      "name": "rgba-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgba",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/004-rgba-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04129833399201743
+    },
+    {
+      "name": "rgba-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgba",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/005-rgba-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.27458233399374876,
+      "resources": {
+        "maximum resident set size": 17842176,
+        "peak memory footprint": 3163200
+      }
+    },
+    {
+      "name": "rgba-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgba",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/006-rgba-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5501339580077911,
+      "resources": {
+        "maximum resident set size": 34258944,
+        "peak memory footprint": 11142784
+      }
+    },
+    {
+      "name": "rgba-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgba",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/007-rgba-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.06152658400242217
+    },
+    {
+      "name": "rgba-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgba",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/008-rgba-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14113629200437572
+    },
+    {
+      "name": "rgba-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgba-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/009-rgba-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1840253330010455
+    },
+    {
+      "name": "rgba-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgba-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/010-rgba-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.266846375001478
+    },
+    {
+      "name": "rgba-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgba",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/011-rgba-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04854808299569413
+    },
+    {
+      "name": "rgb-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgb",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/012-rgb-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1134638750081649
+    },
+    {
+      "name": "rgb-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgb",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/013-rgb-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01784237500396557
+    },
+    {
+      "name": "rgb-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgb",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/014-rgb-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.24316920900309924,
+      "resources": {
+        "maximum resident set size": 16547840,
+        "peak memory footprint": 2933824
+      }
+    },
+    {
+      "name": "rgb-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgb",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/015-rgb-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05782195799110923
+    },
+    {
+      "name": "rgb-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgb",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/016-rgb-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.041986666998127475
+    },
+    {
+      "name": "rgb-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgb",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/017-rgb-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.26089541699911933,
+      "resources": {
+        "maximum resident set size": 17858560,
+        "peak memory footprint": 3179584
+      }
+    },
+    {
+      "name": "rgb-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgb",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/018-rgb-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4559457499999553,
+      "resources": {
+        "maximum resident set size": 34258944,
+        "peak memory footprint": 11142784
+      }
+    },
+    {
+      "name": "rgb-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgb",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/019-rgb-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.05866054199577775
+    },
+    {
+      "name": "rgb-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgb",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/020-rgb-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13612545799696818
+    },
+    {
+      "name": "rgb-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgb-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/021-rgb-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1364915000012843
+    },
+    {
+      "name": "rgb-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgb-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/022-rgb-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.24653329099237453
+    },
+    {
+      "name": "rgb-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/rgb",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/023-rgb-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03672687501239125
+    },
+    {
+      "name": "u8-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/024-u8-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09739358299702872
+    },
+    {
+      "name": "u8-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/025-u8-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016545457998290658
+    },
+    {
+      "name": "u8-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/026-u8-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.17269908300659154,
+      "resources": {
+        "maximum resident set size": 16564224,
+        "peak memory footprint": 2933824
+      }
+    },
+    {
+      "name": "u8-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/027-u8-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.054783915998996235
+    },
+    {
+      "name": "u8-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/028-u8-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05286212499777321
+    },
+    {
+      "name": "u8-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/029-u8-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2822410420048982,
+      "resources": {
+        "maximum resident set size": 17743872,
+        "peak memory footprint": 3228736
+      }
+    },
+    {
+      "name": "u8-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/030-u8-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5781105829955777,
+      "resources": {
+        "maximum resident set size": 33521664,
+        "peak memory footprint": 10978944
+      }
+    },
+    {
+      "name": "u8-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/031-u8-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.07600724999792874
+    },
+    {
+      "name": "u8-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/032-u8-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14302108400443103
+    },
+    {
+      "name": "u8-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u8-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/033-u8-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13798545800091233
+    },
+    {
+      "name": "u8-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u8-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/034-u8-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.23576295799284708
+    },
+    {
+      "name": "u8-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u8",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/035-u8-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04048279199923854
+    },
+    {
+      "name": "u16-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/036-u16-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09318487500422634
+    },
+    {
+      "name": "u16-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/037-u16-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013462959002936259
+    },
+    {
+      "name": "u16-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/038-u16-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.16752633400028571,
+      "resources": {
+        "maximum resident set size": 16580608,
+        "peak memory footprint": 2950208
+      }
+    },
+    {
+      "name": "u16-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/039-u16-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06288008400588296
+    },
+    {
+      "name": "u16-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/040-u16-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04781154199736193
+    },
+    {
+      "name": "u16-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/041-u16-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.26619608399050776,
+      "resources": {
+        "maximum resident set size": 17809408,
+        "peak memory footprint": 3130432
+      }
+    },
+    {
+      "name": "u16-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/042-u16-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4154568329977337,
+      "resources": {
+        "maximum resident set size": 34127872,
+        "peak memory footprint": 10962496
+      }
+    },
+    {
+      "name": "u16-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/043-u16-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.04022312499000691
+    },
+    {
+      "name": "u16-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/044-u16-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12574833299731836
+    },
+    {
+      "name": "u16-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u16-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/045-u16-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13729908400273416
+    },
+    {
+      "name": "u16-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u16-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/046-u16-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22461666700837668
+    },
+    {
+      "name": "u16-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/u16",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/047-u16-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030172874990967102
+    },
+    {
+      "name": "sparse-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/sparse",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/048-sparse-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0935140420042444
+    },
+    {
+      "name": "sparse-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/sparse",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/049-sparse-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01455375000659842
+    },
+    {
+      "name": "sparse-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/sparse",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/050-sparse-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14286412499495782,
+      "resources": {
+        "maximum resident set size": 16547840,
+        "peak memory footprint": 2917440
+      }
+    },
+    {
+      "name": "sparse-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/sparse",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/051-sparse-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04623041600279976
+    },
+    {
+      "name": "sparse-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/sparse",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/052-sparse-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03791849999106489
+    },
+    {
+      "name": "sparse-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/sparse",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/053-sparse-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.26864175000810064,
+      "resources": {
+        "maximum resident set size": 17842176,
+        "peak memory footprint": 3163200
+      }
+    },
+    {
+      "name": "sparse-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/sparse",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/054-sparse-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4240723330003675,
+      "resources": {
+        "maximum resident set size": 34127872,
+        "peak memory footprint": 10978944
+      }
+    },
+    {
+      "name": "sparse-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/sparse",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/055-sparse-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.051621083010104485
+    },
+    {
+      "name": "sparse-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/sparse",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/056-sparse-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13522670899692457
+    },
+    {
+      "name": "sparse-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/sparse-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/057-sparse-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1606242079869844
+    },
+    {
+      "name": "sparse-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/sparse-restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/058-sparse-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.304872291002539
+    },
+    {
+      "name": "sparse-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/sparse",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/059-sparse-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04042654200748075
+    },
+    {
+      "name": "negative-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/060-negative-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0883291670033941
+    },
+    {
+      "name": "negative-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/061-negative-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014312790997792035
+    },
+    {
+      "name": "malformed",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/062-malformed.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "gltf_scene",
+      "seconds": 0.01970733299094718
+    },
+    {
+      "name": "cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/063-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.018318999995244667
+    },
+    {
+      "name": "budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/064-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.022027541999705136
+    },
+    {
+      "name": "negative-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/065-negative-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02084662500419654
+    },
+    {
+      "name": "explicit-valid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/negative",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/artifacts/gpu-media/run-20260906T142745Z/vertex-color-regression/066-explicit-valid.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.18928191698796581
+    }
+  ],
+  "variants": [
+    {
+      "name": "rgba",
+      "revision": "sha256:90f5288e2bcd1f914d87069f97d9c2a948493837d956458d02526300c1eb3e38",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "rgb",
+      "revision": "sha256:33194423965d4e548110b98714d8ac313718b9c5c7c10c7003b35917d0fb6dbc",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "u8",
+      "revision": "sha256:9c6e3a8031810fd5a6e1a38e45166c77a98473c57ed1bf9e2502c41b1fd7b85f",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "u16",
+      "revision": "sha256:c523f97ecd5185e8873eb77dbc591c9113212b0729f28465cf4b0e3197a72405",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "sparse",
+      "revision": "sha256:290e3984c4cbf1cdcfed729bdd26965ad939758955a2506ec60cd60bbbb3b11b",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    }
+  ],
+  "settings": {
+    "width": 32,
+    "height": 16,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        2,
+        2,
+        2
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        3
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 2.5,
+        "ymag": 1,
+        "near": 0.1,
+        "far": 5
+      }
+    }
+  }
+}

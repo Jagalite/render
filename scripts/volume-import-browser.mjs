@@ -26,15 +26,16 @@ try {
   check(call('inspect').revision===row.revision,'same native revision');call('import_vol',request);
   const before=d.export_json();call('branch',{branch:'volume',base_revision:row.revision});
   const cpu=call('preview',{branch:'volume',revision:row.revision});check(cpu.passes.linear_rgb.flat().every((x,i)=>Math.abs(x-row.expected[i])<2e-6),'analytic '+row.name);
-  if(row.report.occupied_cells){let rejected=false;try{await d.preview_gpu('volume',row.revision);}catch(e){rejected=String(e).includes('unsupported_profile');}check(rejected,'GPU unsupported media');}
+  const gpu=JSON.parse(await d.preview_gpu('volume',row.revision));check(gpu.passes.linear_rgb.flat().every((x,i)=>Math.abs(x-row.expected[i])<2e-5),'GPU analytic '+row.name);check(JSON.stringify(gpu.passes.object_ids)===JSON.stringify(cpu.passes.object_ids),'GPU passes');
+  const pending=d.preview_gpu('volume',row.revision);d.cancel_preview();let cancelled=false;try{await pending;}catch(e){cancelled=String(e).includes('cancel');}check(cancelled,'GPU cancellation');
   let stale=false;try{call('import_vol',{...request,idempotency_key:'volume:stale:0001'});}catch(e){stale=String(e).includes('import_target');}check(stale,'stale nonempty import rejected');
   let invalid=false;const bad=[...row.bytes];bad[3]=2;try{call('import_vol',{...request,bytes:bad,base_revision:row.revision,idempotency_key:'volume:invalid:001'});}catch(e){invalid=String(e).includes('unsupported_vol');}check(invalid,'unsupported VOL rejected');check(d.export_json()===before,'failure root immutable');
   const project='volume-import-'+row.name+'-'+Date.now();await d.save(project,undefined,false);const restored=await m.BrowserAgent.load(project);check(restored.export_json()===before,'OPFS exact recovery');
   const loaded=(method,args={})=>JSON.parse(restored.dispatch(JSON.stringify({version:0,operation:{method,...args}})));loaded('branch',{branch:'volume',base_revision:row.revision});const again=loaded('preview',{branch:'volume',revision:row.revision});check(JSON.stringify(again.passes)===JSON.stringify(cpu.passes),'recovered CPU image');
-  results.push({name:row.name,opfs_restored:true,cpu:cpu.passes,report:imported.report});restored.free();d.free();
+  results.push({name:row.name,opfs_restored:true,cpu:cpu.passes,gpu:gpu.passes,report:imported.report});restored.free();d.free();
  }
  return {status:'passed',results,seconds:(performance.now()-at)/1000};
  })()`);
- for(const row of report.results){await fs.writeFile(root+'/browser-'+row.name+'-cpu.json',JSON.stringify(row.cpu)+'\n');delete row.cpu;}
+ for(const row of report.results){for(const backend of ['cpu','gpu']){await fs.writeFile(root+'/browser-'+row.name+'-'+backend+'.json',JSON.stringify(row[backend])+'\n');delete row[backend];}}
  report.browser=await command('Browser.getVersion');await fs.writeFile(root+'/browser_report.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
 } finally {socket.close();}

@@ -1,0 +1,144 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:901da034b31e1c513ae21ad018e8bce7fe55ef94cd6490b87be0817d6480bb9d",
+      "idempotency_key": "gpu:media:sheared-assets:stale",
+      "max_added_bytes": 8388608,
+      "commands": [
+        {
+          "operation": "set_render_settings",
+          "settings": {
+            "width": 1,
+            "height": 1,
+            "samples": 1,
+            "seed": 73,
+            "max_depth": 2,
+            "max_bytes": 16777216,
+            "environment": [
+              0.3,
+              0.5,
+              0.7
+            ],
+            "light": {
+              "position": [
+                -2,
+                4,
+                3
+              ],
+              "intensity": [
+                0,
+                0,
+                0
+              ]
+            },
+            "camera": {
+              "position": [
+                0.75,
+                0.5,
+                4
+              ],
+              "target": [
+                0.75,
+                0.5,
+                3
+              ],
+              "up": [
+                0,
+                1,
+                0
+              ],
+              "vertical_fov_radians": 0.65,
+              "lens": {
+                "kind": "orthographic",
+                "xmag": 1e-07,
+                "ymag": 1e-07,
+                "near": 0.01,
+                "far": 10
+              }
+            }
+          }
+        },
+        {
+          "operation": "create_entity",
+          "entity": {
+            "id": "00000000000000000000000000002969",
+            "name": "medium 0",
+            "parent": null,
+            "mesh": null,
+            "material": null,
+            "transform": {
+              "columns": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0.5,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "operations": []
+            }
+          }
+        },
+        {
+          "operation": "put_volume",
+          "asset": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "voxel_size": [
+              1,
+              1,
+              1
+            ],
+            "cells": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  0
+                ],
+                "density": 1,
+                "emission": [
+                  0.2,
+                  0.4,
+                  0.6
+                ]
+              }
+            ],
+            "absorption": [
+              0.5,
+              1,
+              2
+            ],
+            "scattering": [
+              0,
+              0,
+              0
+            ],
+            "anisotropy": 0,
+            "max_step_meters": 0.1
+          }
+        }
+      ]
+    }
+  }
+}

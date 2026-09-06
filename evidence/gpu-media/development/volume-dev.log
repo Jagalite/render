@@ -1,0 +1,12 @@
+homogeneous-init: passed
+homogeneous-empty: passed
+homogeneous-import: passed
+homogeneous-retry: passed
+homogeneous-inspect: passed
+homogeneous-cpu: passed
+homogeneous-gpu: passed
+Traceback (most recent call last):
+  File "/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/scripts/volume-import-workflow.py", line 46, in <module>
+    gpu=pfm(root/(name+'-gpu/image/image.pfm'));assert max(abs(a-b) for a,b in zip(gpu,expected,strict=True))<2e-5,(name,'GPU analytic',gpu,expected)
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('homogeneous', 'GPU analytic', [1.0, 1.0, 1.0], [0.36787944117144233, 0.1353352832366127, 0.01831563888873418])

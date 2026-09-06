@@ -1,0 +1,50 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling libm v0.2.16
+   Compiling quote v1.0.47
+   Compiling syn v2.0.119
+   Compiling generic-array v0.14.7
+   Compiling num-traits v0.2.19
+   Compiling crc32fast v1.5.1
+   Compiling serde_core v1.0.228
+   Compiling miniz_oxide v0.9.1
+   Compiling flate2 v1.1.10
+   Compiling zerocopy-derive v0.8.56
+   Compiling libc v0.2.189
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling miniz_oxide v0.8.9
+   Compiling syn v3.0.5
+   Compiling moxcms v0.8.1
+   Compiling thiserror-impl v2.0.20
+   Compiling zune-jpeg v0.5.15
+   Compiling png v0.18.1
+   Compiling zerocopy v0.8.56
+   Compiling digest v0.10.7
+   Compiling cpufeatures v0.2.17
+   Compiling serde_derive v1.0.228
+   Compiling serde_json v1.0.145
+   Compiling serde v1.0.228
+   Compiling image v0.25.10
+   Compiling half v2.7.1
+   Compiling sha2 v0.10.9
+   Compiling thiserror v2.0.20
+   Compiling naga v26.0.0
+   Compiling glam v0.30.10
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/crates/core)
+   Compiling render-kernel v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/crates/kernel)
+    Finished `test` profile [unoptimized] target(s) in 37.31s
+     Running unittests src/lib.rs (target/debug/deps/render_kernel-0da1cce2c611a02d)
+
+running 4 tests
+test path::tests::generated_traversal_and_shading_validate ... ok
+test path::tests::generated_alpha_profile_validates_and_keeps_coverage_functions_separate ... ok
+test path::tests::generated_conductor_coat_profile_validates_with_coverage ... ok
+test path::tests::generated_dielectric_profile_validates_and_preserves_surface_shader ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.25s
+
+   Doc-tests render_kernel
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

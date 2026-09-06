@@ -1,0 +1,67 @@
+    Checking serde_core v1.0.228
+   Compiling libc v0.2.189
+   Compiling syn v3.0.5
+    Checking bitflags v2.13.1
+    Checking libm v0.2.16
+    Checking num-traits v0.2.19
+    Checking generic-array v0.14.7
+   Compiling bytemuck_derive v1.12.0
+    Checking crc32fast v1.5.1
+    Checking miniz_oxide v0.9.1
+    Checking flate2 v1.1.10
+    Checking crypto-common v0.1.7
+    Checking block-buffer v0.10.4
+    Checking miniz_oxide v0.8.9
+    Checking bytemuck v1.25.2
+    Checking fdeflate v0.3.7
+    Checking moxcms v0.8.1
+    Checking zune-jpeg v0.5.15
+    Checking png v0.18.1
+    Checking digest v0.10.7
+    Checking cpufeatures v0.2.17
+    Checking serde_json v1.0.145
+    Checking sha2 v0.10.9
+    Checking serde v1.0.228
+    Checking glam v0.30.10
+    Checking image v0.25.10
+    Checking zerocopy v0.8.56
+   Compiling thiserror v2.0.20
+    Checking render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/crates/core)
+   Compiling thiserror-impl v2.0.20
+    Checking indexmap v2.14.2
+    Checking bit-set v0.8.0
+    Checking hashbrown v0.15.5
+   Compiling naga v26.0.0
+    Checking half v2.7.1
+   Compiling parking_lot_core v0.9.12
+    Checking core-foundation v0.10.1
+   Compiling foreign-types-macros v0.2.4
+    Checking malloc_buf v0.0.6
+    Checking lock_api v0.4.14
+    Checking foreign-types v0.5.0
+    Checking objc v0.2.7
+    Checking core-graphics-types v0.2.0
+   Compiling paste v1.0.15
+    Checking metal v0.32.0
+   Compiling wgpu-hal v26.0.6
+    Checking parking_lot v0.12.5
+    Checking wgpu-types v26.0.0
+   Compiling document-features v0.2.12
+   Compiling wgpu v26.0.1
+    Checking render-kernel v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/crates/kernel)
+    Checking ahash v0.8.12
+    Checking hashbrown v0.14.5
+    Checking wgpu-core-deps-apple v26.0.0
+    Checking wgpu-core v26.0.1
+    Checking hecs v0.10.5
+    Checking render-ffi v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/crates/ffi)
+    Checking render-gpu v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/gpu-sparse-media/crates/gpu)
+error[E0423]: expected value, found module `media`
+    --> crates/gpu/src/lib.rs:1130:12
+     |
+1130 |         if media {
+     |            ^^^^^ not a value
+
+For more information about this error, try `rustc --explain E0423`.
+error: could not compile `render-gpu` (lib) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

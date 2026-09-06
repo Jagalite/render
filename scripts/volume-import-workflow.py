@@ -42,12 +42,16 @@ try:
   for sigma,e in zip(p['absorption'],[.25,.5,1]):
    t=math.exp(-sigma*optical);expected.append(t+(e*((1-t)/sigma if optical else length) if emitting else 0))
   assert max(abs(a-b) for a,b in zip(rgb,expected,strict=True))<2e-6,(name,rgb,expected)
-  if occupied:call(name+'-unsupported-gpu',dict(render,backend='gpu',output=str(root/(name+'-gpu'))),project,error='unsupported_profile')
+  call(name+'-gpu',dict(render,backend='gpu',output=str(root/(name+'-gpu'))),project,resource=True)
+  gpu=pfm(root/(name+'-gpu/image/image.pfm'));assert max(abs(a-b) for a,b in zip(gpu,expected,strict=True))<2e-5,(name,'GPU analytic',gpu,expected)
   archive=root/(name+'-archive');call(name+'-archive',{'method':'export','revision':revision,'output':str(archive),'content':{'format':'document'}},project)
   restored=root/(name+'-restored');call(name+'-restore',{'method':'restore','source':str(archive/'document/document.json')},restored);call(name+'-recovered',dict(render,output=str(root/(name+'-recovered'))),restored)
   assert (root/(name+'-cpu/image/image.pfm')).read_bytes()==(root/(name+'-recovered/image/image.pfm')).read_bytes()
+  call(name+'-recovered-gpu',dict(render,backend='gpu',output=str(root/(name+'-recovered-gpu'))),restored)
+  assert (root/(name+'-gpu/image/image.pfm')).read_bytes()==(root/(name+'-recovered-gpu/image/image.pfm')).read_bytes()
   call(name+'-stale',dict(op,idempotency_key='volume:stale:0001'),project,error='stale_revision')
   if name=='homogeneous':
+   unsupported=root/'scattering-project';call('scattering-init',{'method':'init','document_id':f'{10100:032x}'},unsupported);scattering_policy=dict(policy,scattering=[.1,0,0]);call('scattering-import',dict(op,source=dict(source,policy=scattering_policy)),unsupported);scattering_state=call('scattering-state',{'method':'inspect'},unsupported);call('scattering-gpu',dict(render,revision=scattering_state['revision'],backend='gpu',output=str(root/'scattering-gpu')),unsupported,error='unsupported_profile');assert call('scattering-unchanged',{'method':'inspect'},unsupported)['document_digest']==scattering_state['document_digest']
    for label,mutate,error in [('negative',lambda b:b.__setitem__(slice(48,52),struct.pack('<f',-1)),'vol'),('encoding',lambda b:b.__setitem__(4,2),'unsupported_vol'),('trailing',lambda b:b.append(0),'vol')]:
     b=bytearray(Path(source['path']).read_bytes());mutate(b);bad=root/(label+'.vol');bad.write_bytes(b);call(label,dict(op,base_revision=revision,idempotency_key='volume:'+label+':0001',source=dict(source,path=str(bad))),project,error=error)
    cancel=root/'cancel';cancel.write_text('cancel');call('cancel-import',dict(op,base_revision=revision),project,error='cancelled',limits={'cancel_file':str(cancel)})

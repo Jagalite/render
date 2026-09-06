@@ -1,0 +1,19 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:33023bd3cf8fdce9c272352f1d22429e70194b5020c0c6bfeea436098e68a86a",
+      "idempotency_key": "gpu:media:surface-depth8-attach:001",
+      "max_added_bytes": 8388608,
+      "commands": [
+        {
+          "operation": "set_volume",
+          "entity": "0000000000000000000000000000299b",
+          "asset": "sha256:a978d3734e6980eb539d0a1e5610ca9685ac897e5329918cffb887895bc4a0eb"
+        }
+      ]
+    }
+  }
+}

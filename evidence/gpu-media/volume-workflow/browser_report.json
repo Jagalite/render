@@ -1,0 +1,533 @@
+{
+  "status": "passed",
+  "results": [
+    {
+      "name": "homogeneous",
+      "opfs_restored": true,
+      "report": {
+        "asset_json_bytes": 650,
+        "density_digest": "sha256:cb82d299be2da29648ce670ed31227a3132ea969526050c7dd51b2fbdf810cf5",
+        "domain_meters": [
+          0,
+          0,
+          0,
+          2,
+          2,
+          2
+        ],
+        "emission_digest": null,
+        "entity": "7982fdfe7fbf481186b8f2bbdfb6326e",
+        "input_bytes": 80,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "anisotropy": 0,
+          "bounds": "file",
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0,
+            0,
+            0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0,
+          0,
+          0,
+          2,
+          2,
+          2
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:af195f26335f76f303505e17432dae1c7c9c22cef9509e1df82571b0bc998eea",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:63cc060f60b8e5898e97b4564b2d948ed98559dcda044809ece9d8388c710103",
+        "voxel_size_meters": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "emission",
+      "opfs_restored": true,
+      "report": {
+        "asset_json_bytes": 658,
+        "density_digest": "sha256:cb82d299be2da29648ce670ed31227a3132ea969526050c7dd51b2fbdf810cf5",
+        "domain_meters": [
+          0,
+          0,
+          0,
+          2,
+          2,
+          2
+        ],
+        "emission_digest": "sha256:6be5f445bdb8113f8297755c30fc9d75cd1a847a28d95c7bd07590d0243e5d73",
+        "entity": "7a3f21eb2cde061877efe2c215526136",
+        "input_bytes": 224,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "anisotropy": 0,
+          "bounds": "file",
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0,
+            0,
+            0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0,
+          0,
+          0,
+          2,
+          2,
+          2
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:4964e59ac6177b38675b7816fb1e87d6ec92f79bc3d373345da4265e090d04ad",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:0c6ea258f4b515adbd3a015820f705f1aa7baaec3a07f8a15ed5fc62653863c5",
+        "voxel_size_meters": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "axis",
+      "opfs_restored": true,
+      "report": {
+        "asset_json_bytes": 650,
+        "density_digest": "sha256:890b7e4c124d15c1469e79bae19e0d060ba3b7f0c14b4e4c363b3ed60706b5d8",
+        "domain_meters": [
+          0,
+          0,
+          0,
+          2,
+          2,
+          2
+        ],
+        "emission_digest": null,
+        "entity": "974c6f475f42056e6e190044f50ce194",
+        "input_bytes": 80,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "anisotropy": 0,
+          "bounds": "file",
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0,
+            0,
+            0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0,
+          0,
+          0,
+          2,
+          2,
+          2
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:cf343a8e53aef2ae31b96d712a992fb590ee389e12a3483b10630db07b9705be",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:870da4e6296bac8a875731f9506806c8dd504fbbed0382c04fe9c3018e0c7ea9",
+        "voxel_size_meters": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "empty",
+      "opfs_restored": true,
+      "report": {
+        "asset_json_bytes": 0,
+        "density_digest": "sha256:1e1fdd73a579ad24da8b97c8a8b7a5478f7ae08b5ecf9362b8db55c1b8426498",
+        "domain_meters": [
+          0,
+          0,
+          0,
+          2,
+          2,
+          2
+        ],
+        "emission_digest": null,
+        "entity": "b65ad539bc40a0893c1e8709143b11fe",
+        "input_bytes": 80,
+        "occupied_cells": 0,
+        "policy": {
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "anisotropy": 0,
+          "bounds": "file",
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0,
+            0,
+            0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0,
+          0,
+          0,
+          2,
+          2,
+          2
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:9a87b167fe41b9c7892384037bf959e78ce1961b6c578916a96aa21a6154087c",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": null,
+        "voxel_size_meters": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "emission-only",
+      "opfs_restored": true,
+      "report": {
+        "asset_json_bytes": 658,
+        "density_digest": "sha256:1e1fdd73a579ad24da8b97c8a8b7a5478f7ae08b5ecf9362b8db55c1b8426498",
+        "domain_meters": [
+          0,
+          0,
+          0,
+          2,
+          2,
+          2
+        ],
+        "emission_digest": "sha256:6be5f445bdb8113f8297755c30fc9d75cd1a847a28d95c7bd07590d0243e5d73",
+        "entity": "9e65b39b7efa6dd0551bef46d8e58562",
+        "input_bytes": 224,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "anisotropy": 0,
+          "bounds": "file",
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0,
+            0,
+            0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0,
+          0,
+          0,
+          2,
+          2,
+          2
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:5c0202627277b5f2dcfe9ab867ed392802cb8bbed1588f91a6f945fee9993170",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:880e5e80cab40ee5b7e7c56bcb502444bb08ff7bf97772b0e4c7750cb3a8d09a",
+        "voxel_size_meters": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "unit-cube",
+      "opfs_restored": true,
+      "report": {
+        "asset_json_bytes": 650,
+        "density_digest": "sha256:cb82d299be2da29648ce670ed31227a3132ea969526050c7dd51b2fbdf810cf5",
+        "domain_meters": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "emission_digest": null,
+        "entity": "1c8e550e4fc829f6b94831cb1fdc51ad",
+        "input_bytes": 80,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "anisotropy": 0,
+          "bounds": "unit_cube",
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0,
+            0,
+            0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0,
+          0,
+          0,
+          2,
+          2,
+          2
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:af195f26335f76f303505e17432dae1c7c9c22cef9509e1df82571b0bc998eea",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:e4afbfe15d40d62f34f914dc80ff4ae4932a721549b961efa4614a07b76f941e",
+        "voxel_size_meters": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      }
+    },
+    {
+      "name": "scaled",
+      "opfs_restored": true,
+      "report": {
+        "asset_json_bytes": 650,
+        "density_digest": "sha256:cb82d299be2da29648ce670ed31227a3132ea969526050c7dd51b2fbdf810cf5",
+        "domain_meters": [
+          0,
+          0,
+          0,
+          4,
+          4,
+          4
+        ],
+        "emission_digest": null,
+        "entity": "d4b42bf5b6f77023d3f3d1f3854a9123",
+        "input_bytes": 80,
+        "occupied_cells": 8,
+        "policy": {
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "anisotropy": 0,
+          "bounds": "file",
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 2,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0,
+            0,
+            0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          0,
+          0,
+          0,
+          2,
+          2,
+          2
+        ],
+        "source_cells": 8,
+        "source_digest": "sha256:af195f26335f76f303505e17432dae1c7c9c22cef9509e1df82571b0bc998eea",
+        "source_dimensions": [
+          2,
+          2,
+          2
+        ],
+        "volume_asset": "sha256:604d3a0eba99c39320acbc70c1d96ce17e76f00c71b1610c018ed55aac8a3dde",
+        "voxel_size_meters": [
+          2,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "name": "sparse",
+      "opfs_restored": true,
+      "report": {
+        "asset_json_bytes": 485,
+        "density_digest": "sha256:d8678e444688f9016463fc5eb3cba5c24d6890f7d85ddee7c971439e144ded05",
+        "domain_meters": [
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1
+        ],
+        "emission_digest": null,
+        "entity": "9a1572a5fcf5ba458d1c78bf48bcaab2",
+        "input_bytes": 1048624,
+        "occupied_cells": 5,
+        "policy": {
+          "absorption": [
+            0.5,
+            1,
+            2
+          ],
+          "anisotropy": 0,
+          "bounds": "file",
+          "density_scale": 1,
+          "emission_scale": [
+            1,
+            1,
+            1
+          ],
+          "max_step_meters": 0.1,
+          "meters_per_unit": 1,
+          "reconstruction": "cell_constant_zero_outside",
+          "scattering": [
+            0,
+            0,
+            0
+          ]
+        },
+        "profile": "vol3-cell-constant-v1",
+        "source_bounds": [
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1
+        ],
+        "source_cells": 262144,
+        "source_digest": "sha256:e19722e6b7907a3e31cc78ad4d6571af93b4e8d5f8e1490d9267cbfb3179b657",
+        "source_dimensions": [
+          64,
+          64,
+          64
+        ],
+        "volume_asset": "sha256:95ed0c676272729b7cb8db13b8842d61388d74dd66927f85e6ded5e422890463",
+        "voxel_size_meters": [
+          0.03125,
+          0.03125,
+          0.03125
+        ]
+      }
+    }
+  ],
+  "seconds": 3.2470999999940395,
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/152.0.7977.76",
+    "revision": "@0d89dfa2dd7c1ec4b8a14b9f303f887bb63b6174",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+    "jsVersion": "15.2.124.19"
+  }
+}

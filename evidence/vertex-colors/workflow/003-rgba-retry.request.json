@@ -1,0 +1,66 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "import",
+    "base_revision": "sha256:2d9593143939bd8a603b27903c3200f0ee840cafedba9cd70ff1f472975304a0",
+    "idempotency_key": "vertexcolor:import:0001",
+    "max_added_bytes": 8388608,
+    "source": {
+      "format": "glb",
+      "path": "/private/tmp/render-vertex-colors-20260906/fixtures/vertex-colors/data/rgba.glb",
+      "policy": {
+        "allow_approximations": true
+      }
+    },
+    "settings": {
+      "width": 32,
+      "height": 16,
+      "samples": 8,
+      "seed": 73,
+      "max_depth": 2,
+      "max_bytes": 16777216,
+      "environment": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "light": {
+        "position": [
+          -2,
+          4,
+          3
+        ],
+        "intensity": [
+          2,
+          2,
+          2
+        ]
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          3
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "vertical_fov_radians": 0.65,
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 2.5,
+          "ymag": 1,
+          "near": 0.1,
+          "far": 5
+        }
+      }
+    }
+  }
+}

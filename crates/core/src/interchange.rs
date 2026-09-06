@@ -37,7 +37,7 @@ pub fn export_obj(mesh: &Mesh) -> Result<(String, LossReport)> {
     let mut losses = vec![
         "persistent element IDs and non-UV attributes are not representable in this profile".into(),
     ];
-    report_extra_uv(mesh, &mut losses);
+    report_omitted_attributes(mesh, &mut losses);
     Ok((
         text,
         LossReport {
@@ -46,7 +46,13 @@ pub fn export_obj(mesh: &Mesh) -> Result<(String, LossReport)> {
         },
     ))
 }
-fn report_extra_uv(mesh: &Mesh, losses: &mut Vec<String>) {
+fn report_omitted_attributes(mesh: &Mesh, losses: &mut Vec<String>) {
+    if let Some(a) = mesh.color_attribute() {
+        losses.push(format!(
+            "linear RGBA color attribute ({:032x}) omitted by the geometry export profile",
+            a.id.0
+        ));
+    }
     for (name, attribute) in mesh
         .attributes
         .iter()
@@ -215,7 +221,7 @@ pub fn export_gltf(mesh: &Mesh) -> Result<(Vec<u8>, Vec<u8>, LossReport)> {
     }
     let json = serde_json::json!({"asset":{"version":"2.0","generator":"render Rust static profile v0"},"buffers":[{"uri":"mesh.bin","byteLength":bin.len()}],"bufferViews":[{"buffer":0,"byteOffset":0,"byteLength":offset},{"buffer":0,"byteOffset":offset,"byteLength":bin.len()-offset}],"accessors":[{"bufferView":0,"componentType":5126,"count":n,"type":"VEC3","min":min,"max":max},{"bufferView":1,"componentType":5126,"count":n,"type":"VEC2"}],"meshes":[{"primitives":[{"attributes":{"POSITION":0,"TEXCOORD_0":1},"mode":4}]}],"nodes":[{"mesh":0}],"scenes":[{"nodes":[0]}],"scene":0});
     let mut losses = vec!["polygon rings triangulated; loose geometry omitted; element IDs and non-UV attributes omitted".into()];
-    report_extra_uv(mesh, &mut losses);
+    report_omitted_attributes(mesh, &mut losses);
     Ok((
         crate::canonical(&json)?,
         bin,

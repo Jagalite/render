@@ -1,0 +1,63 @@
+/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/camera-regression
+{
+  "source_checkpoint": "working alpha implementation",
+  "scattering_sha256": "e5a0bcec8f952c95681bbce88e56724d62810d1d4b93baa0c09481a12ed0e8ac",
+  "perspective_expected_visible_pixels": 0,
+  "perspective_actual_visible_pixels": 0,
+  "orthographic_expected_constant_depth": 3,
+  "orthographic_actual_depth_range": [
+    3.0,
+    3.0
+  ],
+  "orthographic_max_error": 0.0,
+  "commands": [
+    [
+      "target/debug/render-host",
+      "project",
+      "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/camera-regression/project",
+      "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/camera-regression/init.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/camera-regression/project",
+      "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/camera-regression/inspect-empty.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/camera-regression/project",
+      "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/camera-regression/author.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/camera-regression/project",
+      "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/camera-regression/inspect.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/camera-regression/project",
+      "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/camera-regression/perspective.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/camera-regression/project",
+      "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/camera-regression/orthographic-settings.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/camera-regression/project",
+      "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/camera-regression/inspect-ortho.request.json"
+    ],
+    [
+      "target/debug/render-host",
+      "project",
+      "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/camera-regression/project",
+      "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/camera-regression/orthographic.request.json"
+    ]
+  ]
+}

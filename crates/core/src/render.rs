@@ -59,6 +59,7 @@ pub struct Triangle {
     pub tangents: Option<[glam::DVec4; 3]>,
     /// Dense evaluated arrays; Geometry maps stable IDs to these disposable slots.
     pub uv_sets: Vec<[Vec2; 3]>,
+    pub colors: Option<[glam::Vec4; 3]>,
 }
 impl Triangle {
     pub fn bounds(&self) -> Bounds {
@@ -172,6 +173,7 @@ pub struct Geometry {
     pub triangles: Vec<Triangle>,
     pub bvh: Bvh,
     pub uv_attributes: Vec<Id>,
+    pub color_attribute: Option<Id>,
 }
 #[derive(Clone, Debug)]
 pub struct Instance {
@@ -419,6 +421,15 @@ impl Evaluator {
                                 mesh.positions.get(mesh.corners[i as usize].vertex as usize)
                             }),
                             uv: c.map(|i| mesh.uv(i as usize)),
+                            colors: if mesh.color_attribute().is_some() {
+                                Some([
+                                    mesh.color_rgba(c[0] as usize)?,
+                                    mesh.color_rgba(c[1] as usize)?,
+                                    mesh.color_rgba(c[2] as usize)?,
+                                ])
+                            } else {
+                                None
+                            },
                             normals,
                             tangents,
                             uv_sets: uv_attributes
@@ -436,6 +447,7 @@ impl Evaluator {
                     triangles,
                     bvh,
                     uv_attributes,
+                    color_attribute: mesh.color_attribute().map(|a| a.id),
                 });
                 self.cache.insert(key.clone(), g.clone());
                 geometry_builds += 1;
@@ -519,6 +531,16 @@ pub struct Hit {
     pub triangle: usize,
 }
 impl Hit {
+    pub fn color_rgba(&self, scene: &Scene) -> glam::Vec4 {
+        scene.instances[self.instance].geometry.triangles[self.triangle]
+            .colors
+            .map_or(glam::Vec4::ONE, |c| {
+                (c[0] * self.barycentric[0]
+                    + c[1] * self.barycentric[1]
+                    + c[2] * self.barycentric[2])
+                    .clamp(glam::Vec4::ZERO, glam::Vec4::ONE)
+            })
+    }
     pub fn uv_for(&self, scene: &Scene, attribute: Option<Id>) -> Vec2 {
         let Some(id) = attribute else {
             return self.uv;
@@ -533,8 +555,23 @@ impl Hit {
     }
 }
 impl Scene {
-    pub fn validate_uv_bindings(&self) -> Result<()> {
+    pub fn validate_geometry_bindings(&self) -> Result<()> {
         for inst in &self.instances {
+            if inst.geometry.triangles.iter().any(|t| {
+                t.colors.is_some() != inst.geometry.color_attribute.is_some()
+                    || t.colors.is_some_and(|c| {
+                        c.iter()
+                            .any(|v| !v.is_finite() || v.min_element() < 0. || v.max_element() > 1.)
+                    })
+            }) {
+                return Err(Error::new("attribute", "invalid evaluated color table"));
+            }
+            if inst.geometry.color_attribute.is_some() && inst.material.pbr.is_none() {
+                return Err(Error::new(
+                    "unsupported_profile",
+                    "vertex RGBA colors require a PBR material",
+                ));
+            }
             if inst.geometry.uv_attributes.len() > 8
                 || inst
                     .geometry
@@ -967,8 +1004,9 @@ fn shading_uv(scene: &Scene, hit: &Hit, d: [Vec2; 2], differentials: Option<[Ray
             scene.images[&(b.image.clone(), b.role)].sample(&b.sampler, uv, d[0], d[1])
         })
     };
-    let color =
-        Vec3::from_array(material.base_color) * texture(surface.base_color.as_ref()).truncate();
+    let color = Vec3::from_array(material.base_color)
+        * texture(surface.base_color.as_ref()).truncate()
+        * hit.color_rgba(scene).truncate();
     let orm = texture(surface.metallic_roughness.as_ref());
     let emission =
         Vec3::from_array(material.emission) * texture(surface.emission.as_ref()).truncate();
@@ -1101,7 +1139,7 @@ fn shade_pbr(
     Ok(radiance)
 }
 pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) -> Result<Image> {
-    scene.validate_uv_bindings()?;
+    scene.validate_geometry_bindings()?;
     if scene.instances.iter().any(|i| {
         i.material
             .pbr

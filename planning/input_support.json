@@ -44,7 +44,7 @@
       ],
       "qualification": "Static scene completeness also depends on INPUT-02 for core PBR material evaluation. Reading or preserving a field is not rendering support.",
       "status": "partially_implemented_profile",
-      "implemented_profile": "gltf2-static-pbr-v0; gltf2-sparse-uv0-v1 accessor capability; gltf2-alpha-cpu-v1 MASK/BLEND import; gltf2-named-uv-v1 per-role UV0..UV7 on CPU/Metal/WebGPU",
+      "implemented_profile": "gltf2-static-pbr-v0; gltf2-sparse-uv0-v1 accessor capability; gltf2-alpha-cpu-v1 MASK/BLEND import; gltf2-named-uv-v1 per-role UV0..UV7 on CPU/Metal/WebGPU; gltf2-vertex-color-v1 linear COLOR_0 on CPU/Metal/WebGPU with CPU MASK/BLEND coverage",
       "evidence": [
         "evidence/m05/agent_workflow_report.json",
         "evidence/m05/browser_workflow_report.json",
@@ -52,9 +52,10 @@
         "evidence/sparse-gltf/README.md",
         "evidence/alpha-gltf/README.md",
         "evidence/named-uv/README.md",
-        "evidence/indexed-attributes/README.md"
+        "evidence/indexed-attributes/README.md",
+        "evidence/vertex-colors/README.md"
       ],
-      "remaining_scope": "Vertex colors and broader scene inputs remain unsupported; sparse accessors, normalized UV/skin weights and up to eight independent UV sets are supported."
+      "remaining_scope": "Additional color sets, material extensions and broader scene export remain unsupported; sparse accessors, normalized UV/skin/color components, linear COLOR_0 and up to eight independent UV sets are supported."
     },
     {
       "id": "INPUT-02",
@@ -79,14 +80,15 @@
       ],
       "qualification": "Core glTF materials and named extensions are separate capabilities. Blender node graphs require explicitly supported node semantics.",
       "status": "partially_implemented_profile",
-      "implemented_profile": "glTF opaque CPU/Metal/WebGPU finite-depth 1\u201316 transport plus native-authored extended Rust CPU surfaces; gltf2-alpha-cpu-v1 MASK/BLEND import; gltf2-named-uv-v1 per-role UV0..UV7 on CPU/Metal/WebGPU",
+      "implemented_profile": "glTF opaque CPU/Metal/WebGPU finite-depth 1\u201316 transport plus native-authored extended Rust CPU surfaces; gltf2-alpha-cpu-v1 MASK/BLEND import; gltf2-named-uv-v1 per-role UV0..UV7 on CPU/Metal/WebGPU; gltf2-vertex-color-v1 linear COLOR_0 on CPU/Metal/WebGPU with CPU MASK/BLEND coverage",
       "evidence": [
         "evidence/static-pbr/README.md",
         "evidence/m06-m08/README.md",
         "evidence/multibounce-pbr/README.md",
         "evidence/alpha-gltf/README.md",
         "evidence/named-uv/README.md",
-        "evidence/indexed-attributes/README.md"
+        "evidence/indexed-attributes/README.md",
+        "evidence/vertex-colors/README.md"
       ],
       "remaining_scope": "Source material extensions and extended GPU scattering remain unsupported; MASK/BLEND imports use the named native/browser Rust CPU profile. Named UV selection applies across render, alpha, displacement and bake consumers."
     },
@@ -120,9 +122,10 @@
         "evidence/gpu-shutter/README.md",
         "evidence/sparse-gltf/README.md",
         "evidence/morph-frames/README.md",
-        "evidence/indexed-attributes/README.md"
+        "evidence/indexed-attributes/README.md",
+        "evidence/vertex-colors/README.md"
       ],
-      "implemented_profile": "native-authored affine-lbs-shutter-v0 and gltf2-animated-pbr-v0 on native/Wasm; gpu-f32-animation-v0 frames and streaming sequences on Metal/WebGPU; gltf2-sparse-uv0-v1 accessor capability; gltf2-morph-frames-v1 POSITION/NORMAL/TANGENT deltas with opt-in authored deformation frames",
+      "implemented_profile": "native-authored affine-lbs-shutter-v0 and gltf2-animated-pbr-v0 on native/Wasm; gpu-f32-animation-v0 frames and streaming sequences on Metal/WebGPU; gltf2-sparse-uv0-v1 accessor capability; gltf2-morph-frames-v1 POSITION/NORMAL/TANGENT deltas with opt-in authored deformation frames; gltf2-vertex-color-v1 linear COLOR_0 on CPU/Metal/WebGPU with CPU MASK/BLEND coverage",
       "remaining_scope": "Morph UV/color attributes, extensions, larger source profiles and animated glTF export remain unsupported. Authored normal/tangent directions use the explicit snapshot-v13 affine frame policy."
     },
     {

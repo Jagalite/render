@@ -323,7 +323,7 @@ pub fn bake(
     revision: &str,
     mut cancelled: impl FnMut() -> bool,
 ) -> Result<Baked> {
-    scene.validate_uv_bindings()?;
+    scene.validate_geometry_bindings()?;
     if scene.revision != revision {
         return Err(Error::new("stale_revision", "bake scene revision changed"));
     }
@@ -453,6 +453,13 @@ pub fn bake(
                             };
                             value *= scene.images[&(binding.image.clone(), binding.role)]
                                 .sample(&binding.sampler, sample_uv, dx, dy)
+                                .truncate();
+                        }
+                        if request.pass == BakePass::Albedo
+                            && let Some(colors) = tri.colors
+                        {
+                            value *= (colors[0] * w + colors[1] * u + colors[2] * v)
+                                .clamp(glam::Vec4::ZERO, glam::Vec4::ONE)
                                 .truncate();
                         }
                         value

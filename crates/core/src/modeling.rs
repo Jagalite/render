@@ -336,6 +336,7 @@ fn transfer(
         ),
         AttributeValues::Vec2(v) => AttributeValues::Vec2(weighted(|i| v[i], policy, weights)?),
         AttributeValues::Vec3(v) => AttributeValues::Vec3(weighted(|i| v[i], policy, weights)?),
+        AttributeValues::Vec4(v) => AttributeValues::Vec4(weighted(|i| v[i], policy, weights)?),
         AttributeValues::Category(v) => {
             let mut out = vec![];
             for w in weights {

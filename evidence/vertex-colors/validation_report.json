@@ -1,0 +1,378 @@
+{
+  "status": "passed",
+  "scope": "macOS ARM64 CPU/Metal, Rust Wasm in Node, Chrome WebGPU/OPFS; Linux and Windows compile only",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5635564580006758,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "independent_source_validation",
+      "command": [
+        "node",
+        "scripts/validate-gltf-fixtures.cjs",
+        "artifacts/vertex-colors/run-20260906T075516Z/source-validation"
+      ],
+      "exit_code": 0,
+      "seconds": 0.26259799999388633,
+      "log": "logs/independent_source_validation.txt"
+    },
+    {
+      "name": "vertex_colors_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "vertex_colors_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0093144999991637,
+      "log": "logs/vertex_colors_gpu.txt"
+    },
+    {
+      "name": "named_uv_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "named_uv_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 2.3535461659994326,
+      "log": "logs/named_uv_gpu.txt"
+    },
+    {
+      "name": "morph_frame_regressions",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "morph_frames",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 1.4763504169968655,
+      "log": "logs/morph_frame_regressions.txt"
+    },
+    {
+      "name": "morph_frame_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "morph_frames_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 3.2559842499977094,
+      "log": "logs/morph_frame_gpu.txt"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 0.19723608300409978,
+      "log": "logs/clippy.txt"
+    },
+    {
+      "name": "native_tests",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 43.81586141700245,
+      "log": "logs/native_tests.txt"
+    },
+    {
+      "name": "wasm_tests",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 45.33525258300506,
+      "log": "logs/wasm_tests.txt"
+    },
+    {
+      "name": "linux_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-unknown-linux-gnu",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 4.045653917004529,
+      "log": "logs/linux_check.txt"
+    },
+    {
+      "name": "windows_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-pc-windows-msvc",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 3.8024782909997157,
+      "log": "logs/windows_check.txt"
+    },
+    {
+      "name": "browser_clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "-p",
+        "render-web",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 4.844646457997442,
+      "log": "logs/browser_clippy.txt"
+    },
+    {
+      "name": "native_build",
+      "command": [
+        "cargo",
+        "build",
+        "-p",
+        "render-host",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1547504999980447,
+      "log": "logs/native_build.txt"
+    },
+    {
+      "name": "browser_build",
+      "command": [
+        "sh",
+        "scripts/build-web.sh"
+      ],
+      "exit_code": 0,
+      "seconds": 55.801734124994255,
+      "log": "logs/browser_build.txt"
+    },
+    {
+      "name": "camera_regression",
+      "command": [
+        "python3",
+        "scripts/alpha-camera-workflow.py",
+        "artifacts/vertex-colors/run-20260906T075516Z/camera-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 1.6934758339994005,
+      "log": "logs/camera_regression.txt"
+    },
+    {
+      "name": "dependency_audit",
+      "command": [
+        "python3",
+        "scripts/dependency-audit.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.35038670799985994,
+      "log": "logs/dependency_audit.txt"
+    },
+    {
+      "name": "animated_regression",
+      "command": [
+        "python3",
+        "scripts/animated-gltf-workflow.py",
+        "artifacts/vertex-colors/run-20260906T075516Z/animated-regression",
+        "--gpu"
+      ],
+      "exit_code": 0,
+      "seconds": 2.84646604199952,
+      "log": "logs/animated_regression.txt"
+    },
+    {
+      "name": "shutter_regression",
+      "command": [
+        "python3",
+        "scripts/gpu-shutter-workflow.py",
+        "artifacts/vertex-colors/run-20260906T075516Z/shutter-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 1.6178553749996354,
+      "log": "logs/shutter_regression.txt"
+    },
+    {
+      "name": "sparse_regression",
+      "command": [
+        "python3",
+        "scripts/sparse-gltf-workflow.py",
+        "artifacts/vertex-colors/run-20260906T075516Z/sparse-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 2.6391162919971975,
+      "log": "logs/sparse_regression.txt"
+    },
+    {
+      "name": "alpha_workflow",
+      "command": [
+        "python3",
+        "scripts/alpha-gltf-workflow.py",
+        "artifacts/vertex-colors/run-20260906T075516Z/alpha-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 2.357340333001048,
+      "log": "logs/alpha_workflow.txt"
+    },
+    {
+      "name": "named_uv_regression",
+      "command": [
+        "python3",
+        "scripts/named-uv-workflow.py",
+        "artifacts/vertex-colors/run-20260906T075516Z/named-uv-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6407133340035216,
+      "log": "logs/named_uv_regression.txt"
+    },
+    {
+      "name": "named_uv_browser",
+      "command": [
+        "node",
+        "scripts/named-uv-browser.mjs",
+        "artifacts/vertex-colors/run-20260906T075516Z/named-uv-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 1.6199929590002284,
+      "log": "logs/named_uv_browser.txt"
+    },
+    {
+      "name": "named_uv_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-named-uv-browser.py",
+        "artifacts/vertex-colors/run-20260906T075516Z/named-uv-regression",
+        "artifacts/vertex-colors/run-20260906T075516Z/named_uv_cross_platform.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.031175249998341314,
+      "log": "logs/named_uv_cross_platform.txt"
+    },
+    {
+      "name": "morph_workflow",
+      "command": [
+        "python3",
+        "scripts/morph-frames-workflow.py",
+        "artifacts/vertex-colors/run-20260906T075516Z/morph-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 1.8793848749992321,
+      "log": "logs/morph_workflow.txt"
+    },
+    {
+      "name": "morph_browser",
+      "command": [
+        "node",
+        "scripts/morph-frames-browser.mjs",
+        "artifacts/vertex-colors/run-20260906T075516Z/morph-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5297719170048367,
+      "log": "logs/morph_browser.txt"
+    },
+    {
+      "name": "vertex_color_workflow",
+      "command": [
+        "python3",
+        "scripts/vertex-colors-workflow.py",
+        "artifacts/vertex-colors/run-20260906T075516Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 2.484088666999014,
+      "log": "logs/vertex_color_workflow.txt"
+    },
+    {
+      "name": "vertex_color_browser",
+      "command": [
+        "node",
+        "scripts/vertex-colors-browser.mjs",
+        "artifacts/vertex-colors/run-20260906T075516Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.4919859590008855,
+      "log": "logs/vertex_color_browser.txt"
+    }
+  ],
+  "build_environment": {
+    "CARGO_NET_OFFLINE": "true",
+    "CARGO_BUILD_JOBS": "2",
+    "CARGO_INCREMENTAL": "0",
+    "CARGO_PROFILE_DEV_DEBUG": "0",
+    "CARGO_PROFILE_TEST_DEBUG": "0",
+    "CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUNNER": "wasm-bindgen-test-runner",
+    "RENDER_TEST_ORIGIN": "http://127.0.0.1:8769"
+  },
+  "native_test_count": 134,
+  "wasm_test_count": 115
+}

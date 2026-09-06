@@ -1,5 +1,5 @@
 use crate::{Error, Id, Result, canonical, digest};
-use glam::{DVec3, Vec2};
+use glam::{DVec3, Vec2, Vec4};
 use serde::{Deserialize, Serialize};
 use std::collections::{BTreeMap, BTreeSet};
 
@@ -55,6 +55,7 @@ pub enum AttributeValues {
     Scalar(Vec<f32>),
     Vec2(Vec<[f32; 2]>),
     Vec3(Vec<[f32; 3]>),
+    Vec4(Vec<[f32; 4]>),
     Category(Vec<u32>),
 }
 impl AttributeValues {
@@ -63,6 +64,7 @@ impl AttributeValues {
             Self::Scalar(v) => v.len(),
             Self::Vec2(v) => v.len(),
             Self::Vec3(v) => v.len(),
+            Self::Vec4(v) => v.len(),
             Self::Category(v) => v.len(),
         }
     }
@@ -74,6 +76,7 @@ impl AttributeValues {
             Self::Scalar(v) => v.iter().all(|v| v.is_finite()),
             Self::Vec2(v) => v.iter().flatten().all(|v| v.is_finite()),
             Self::Vec3(v) => v.iter().flatten().all(|v| v.is_finite()),
+            Self::Vec4(v) => v.iter().flatten().all(|v| v.is_finite()),
             Self::Category(_) => true,
         }
     }
@@ -220,6 +223,18 @@ impl Mesh {
                 return Err(bad("element identity mismatch"));
             }
         }
+        if self
+            .attributes
+            .values()
+            .filter(|a| a.semantic == "color_rgba")
+            .count()
+            > 1
+        {
+            return Err(Error::new(
+                "attribute",
+                "one RGBA color attribute per mesh is supported",
+            ));
+        }
         let mut attr_ids = BTreeSet::new();
         for attr in self.attributes.values() {
             let count = match attr.domain {
@@ -234,6 +249,23 @@ impl Mesh {
                     "invalid identity, length or finite-value contract",
                 ));
             }
+            if attr.semantic == "color_rgba" {
+                if !matches!(attr.domain, Domain::Point | Domain::Corner) {
+                    return Err(Error::new(
+                        "attribute",
+                        "RGBA colors require point or corner domain",
+                    ));
+                }
+                let AttributeValues::Vec4(values) = &attr.values else {
+                    return Err(Error::new("attribute", "RGBA colors require vec4 values"));
+                };
+                if values.iter().flatten().any(|v| !(0.0..=1.0).contains(v)) {
+                    return Err(Error::new(
+                        "attribute",
+                        "RGBA color components must lie in [0,1]",
+                    ));
+                }
+            }
             if attr.semantic == "uv"
                 && (attr.domain != Domain::Corner
                     || !matches!(attr.values, AttributeValues::Vec2(_)))
@@ -245,6 +277,32 @@ impl Mesh {
             }
         }
         Ok(())
+    }
+    pub fn color_attribute(&self) -> Option<&Attribute> {
+        self.attributes
+            .values()
+            .find(|a| a.semantic == "color_rgba")
+    }
+    pub fn color_rgba(&self, corner: usize) -> Result<Vec4> {
+        let c = self
+            .corners
+            .get(corner)
+            .ok_or_else(|| Error::new("attribute", "color corner index out of range"))?;
+        let Some(a) = self.color_attribute() else {
+            return Ok(Vec4::ONE);
+        };
+        let AttributeValues::Vec4(values) = &a.values else {
+            return Err(Error::new("attribute", "RGBA colors require vec4"));
+        };
+        let index = match a.domain {
+            Domain::Point => c.vertex as usize,
+            Domain::Corner => corner,
+            _ => return Err(Error::new("attribute", "color domain")),
+        };
+        values
+            .get(index)
+            .map(|v| Vec4::from_array(*v))
+            .ok_or_else(|| Error::new("attribute", "color value missing"))
     }
     pub fn content_id(&self) -> Result<String> {
         self.validate()?;

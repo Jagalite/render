@@ -296,3 +296,20 @@ depth and normals must match, while source-derived IDs/receipt hashes may change
 
 **Revisit trigger:** Broader source adapters require independent validity checks in
 addition to typed negative, resource, persistence and rendering evidence.
+
+## ADR-023 — Geometry-owned linear RGBA attributes
+
+**Decision:** Add typed Vec4 attributes under snapshot v14 and one point/corner
+`color_rgba` semantic per mesh. Import COLOR_0 with linear values, bounded source
+clamping and explicit conversion reporting. Missing colors supply white. Keep
+colors on geometry so shared materials work across colored and uncolored primitives.
+
+**Integration boundary:** The [vertex-color contract](vertex_colors.md) ties source
+admission, transactions, topology transfer, immutable evaluation, CPU alpha/bakes,
+and Rust-generated GPU shading to the same barycentric semantics. Emission is
+independent. Displacement preserves stable IDs and corner seams with a named policy.
+Legacy diffuse/raster consumers reject colors; geometry-only exports report loss.
+No runtime dependency or public material-layout change is required.
+
+**Revisit trigger:** Multiple selected color sets, color morphs, vertex paint tools,
+source material export and GPU alpha require separate bounded workflow evidence.

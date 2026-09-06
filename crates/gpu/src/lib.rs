@@ -69,8 +69,13 @@ fn pack_geometry(g: &Geometry, data: &mut Vec<[f32; 4]>) -> usize {
         let first = data.len();
         for &t in &n.items {
             let tri = &g.triangles[t];
-            for p in tri.positions {
-                data.push(point(p, 0.));
+            for (index, p) in tri.positions.into_iter().enumerate() {
+                let color_offset = if index == 0 && tri.colors.is_some() {
+                    (11 + 2 * tri.uv_sets.len()) as f32
+                } else {
+                    0.
+                };
+                data.push(point(p, color_offset));
             }
             data.push([tri.uv[0].x, tri.uv[0].y, tri.uv[1].x, tri.uv[1].y]);
             data.push([
@@ -89,12 +94,16 @@ fn pack_geometry(g: &Geometry, data: &mut Vec<[f32; 4]>) -> usize {
                 data.push([uv[0].x, uv[0].y, uv[1].x, uv[1].y]);
                 data.push([uv[2].x, uv[2].y, 0., 0.]);
             }
+            if let Some(colors) = tri.colors {
+                data.extend(colors.map(|c| c.to_array()));
+            }
         }
         data[address] = point(n.bounds.min, n.items.len() as f32);
         data[address + 1] = point(n.bounds.max, first as f32);
         data[address + 2] = [
             (base + escape * 3) as f32,
-            (11 + 2 * g.uv_attributes.len()) as f32,
+            (11 + 2 * g.uv_attributes.len() + if g.color_attribute.is_some() { 3 } else { 0 })
+                as f32,
             0.,
             0.,
         ];
@@ -110,7 +119,7 @@ pub struct Packed {
     pub params: Vec<[f32; 4]>,
 }
 pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
-    scene.validate_uv_bindings()?;
+    scene.validate_geometry_bindings()?;
     if scene.instances.iter().any(|i| {
         i.material
             .pbr

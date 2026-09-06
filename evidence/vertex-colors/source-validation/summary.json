@@ -1,0 +1,187 @@
+{
+  "status": "passed",
+  "validator": "2.0.0-dev.3.10",
+  "package": {
+    "name": "gltf-validator",
+    "description": "Library for validating glTF 2.0 assets, compiled from Dart to JS.",
+    "license": "Apache-2.0",
+    "bugs": "https://github.com/KhronosGroup/glTF-Validator/issues",
+    "homepage": "https://github.com/KhronosGroup/glTF-Validator",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/KhronosGroup/glTF-Validator"
+    },
+    "author": {
+      "name": "The Khronos Group Inc."
+    },
+    "main": "index.js",
+    "module": "module.mjs",
+    "keywords": [
+      "gltf",
+      "webgl",
+      "3d"
+    ],
+    "version": "2.0.0-dev.3.10"
+  },
+  "development_only": true,
+  "tool_files": [
+    {
+      "file": "index.js",
+      "sha256": "78deff9ea85743e86461c2d14fae76e7fc3ca0432e652f62948066b55fa16f0d"
+    },
+    {
+      "file": "gltf_validator.dart.js",
+      "sha256": "b73a7b2d455ac217567725138b46d826a13d7d1bb0c88c15f7c571bfb349298c"
+    },
+    {
+      "file": "package.json",
+      "sha256": "3578d16153fa237c72784588da2e8fcccc9cd3c1c58ef34c7912f0732d2f5fa6"
+    }
+  ],
+  "results": [
+    {
+      "file": "fixtures/vertex-colors/data/rgb.glb",
+      "sha256": "1e29300813556138e1cbf6fac189eea2bebd36a0c074d6d31f9e00625ba66faf",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 0,
+      "report": "fixtures__vertex-colors__data__rgb.glb.json"
+    },
+    {
+      "file": "fixtures/vertex-colors/data/rgba.glb",
+      "sha256": "d24d8a1957dab4150ca2ef22540d8870db3119bdee4238e14ac6c5a5a405422d",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 0,
+      "report": "fixtures__vertex-colors__data__rgba.glb.json"
+    },
+    {
+      "file": "fixtures/vertex-colors/data/sparse.glb",
+      "sha256": "665c16dfbda1ee2a94e844b28272b4b15a32bff2b933f1904ce8842b6322e57e",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 0,
+      "report": "fixtures__vertex-colors__data__sparse.glb.json"
+    },
+    {
+      "file": "fixtures/vertex-colors/data/u16.glb",
+      "sha256": "5a7db02a93bc82d1357ecf8b38785645ba00e62e027d7d66f011a204330f35c0",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 0,
+      "report": "fixtures__vertex-colors__data__u16.glb.json"
+    },
+    {
+      "file": "fixtures/vertex-colors/data/u8.glb",
+      "sha256": "97941542a9abde97ab8e4ec406b76272a15234c5192d901a640bd1c829842a79",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 0,
+      "report": "fixtures__vertex-colors__data__u8.glb.json"
+    },
+    {
+      "file": "fixtures/alpha-gltf/data/blend.glb",
+      "sha256": "4d2551bbfcb36db3c5b9d32797a59be437ab13c442cd1cd1824dd68526e43239",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 1,
+      "report": "fixtures__alpha-gltf__data__blend.glb.json"
+    },
+    {
+      "file": "fixtures/alpha-gltf/data/mask.glb",
+      "sha256": "bfc12fcf3be21bcf0162c479aebd3a7755445d41a993ec27f80240e32aff1864",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 1,
+      "report": "fixtures__alpha-gltf__data__mask.glb.json"
+    },
+    {
+      "file": "fixtures/alpha-gltf/data/opaque.glb",
+      "sha256": "08300dbe61fe1c52e768359c8ce30797dc17cc23e371d3c3de60380c45f110fa",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 1,
+      "report": "fixtures__alpha-gltf__data__opaque.glb.json"
+    },
+    {
+      "file": "fixtures/animated-gltf/character.glb",
+      "sha256": "3e5da95401a78585196617eabeeed6876ab3dda88a534c9abf3bfa2435a1b760",
+      "errors": 0,
+      "warnings": 1,
+      "infos": 0,
+      "report": "fixtures__animated-gltf__character.glb.json"
+    },
+    {
+      "file": "fixtures/khronos-box/Box.glb",
+      "sha256": "ed52f7192b8311d700ac0ce80644e3852cd01537e4d62241b9acba023da3d54e",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 0,
+      "report": "fixtures__khronos-box__Box.glb.json"
+    },
+    {
+      "file": "fixtures/morph-frames/data/dense.glb",
+      "sha256": "284917f1bf2bd5f666ba2f5b48590222b6d0bbdeff91be0801492ca20025de49",
+      "errors": 0,
+      "warnings": 1,
+      "infos": 4,
+      "report": "fixtures__morph-frames__data__dense.glb.json"
+    },
+    {
+      "file": "fixtures/morph-frames/data/sparse.glb",
+      "sha256": "cbb21b9930e7bc02c0c6a45619311df61fdd88f858bd49415474064023dadc30",
+      "errors": 0,
+      "warnings": 1,
+      "infos": 5,
+      "report": "fixtures__morph-frames__data__sparse.glb.json"
+    },
+    {
+      "file": "fixtures/named-uv/data/roles.glb",
+      "sha256": "05430169a48c09118872970b1feaf8bb51ba9e44ad3b2ff0b0ad891139120abe",
+      "errors": 0,
+      "warnings": 1,
+      "infos": 4,
+      "report": "fixtures__named-uv__data__roles.glb.json"
+    },
+    {
+      "file": "fixtures/sparse-gltf/data/dense.glb",
+      "sha256": "ef0e61c3bd5a38667a3730d0b491807a37cee5665292e5c71cc9c76d5a1e6c73",
+      "errors": 0,
+      "warnings": 1,
+      "infos": 0,
+      "report": "fixtures__sparse-gltf__data__dense.glb.json"
+    },
+    {
+      "file": "fixtures/sparse-gltf/data/sparse-base-u8.glb",
+      "sha256": "dbdc35899f4852366ce899d4403efe1d262744c1b579bad155081222b9710ebc",
+      "errors": 0,
+      "warnings": 1,
+      "infos": 0,
+      "report": "fixtures__sparse-gltf__data__sparse-base-u8.glb.json"
+    },
+    {
+      "file": "fixtures/sparse-gltf/data/sparse-zero-u16.glb",
+      "sha256": "0a3c453f143de159dd2e0598c9ef43aa3a764bed149f2f70736e7900d2c188b2",
+      "errors": 0,
+      "warnings": 1,
+      "infos": 0,
+      "report": "fixtures__sparse-gltf__data__sparse-zero-u16.glb.json"
+    },
+    {
+      "file": "fixtures/static-pbr/BoxTextured/BoxTextured.glb",
+      "sha256": "b510eca2e2ef33f62f9ed57d6e7ce2d10ebb2bdebc4a8e59d347719ba81abdf4",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 0,
+      "report": "fixtures__static-pbr__BoxTextured__BoxTextured.glb.json"
+    },
+    {
+      "file": "fixtures/static-pbr/NormalTangentMirrorTest/NormalTangentMirrorTest.glb",
+      "sha256": "31ce5f3c873fc55531a17ccacf001e3d1d482a508695aa826fa79cc196e0ce78",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 0,
+      "report": "fixtures__static-pbr__NormalTangentMirrorTest__NormalTangentMirrorTest.glb.json"
+    }
+  ]
+}

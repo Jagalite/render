@@ -346,7 +346,13 @@ impl Snapshot {
         Ok(digest(&canonical(self)?))
     }
     pub fn validate(&self) -> Result<()> {
-        if self.version > 13
+        if self.version > 14
+            || (self.version < 14
+                && self.meshes.values().any(|m| {
+                    m.attributes
+                        .values()
+                        .any(|a| matches!(a.values, crate::geometry::AttributeValues::Vec4(_)))
+                }))
             || (self.version < 13 && self.animation.as_ref().is_some_and(|a| a.needs_v13()))
             || (self.version < 12
                 && self.materials.values().any(|m| {
@@ -1240,6 +1246,13 @@ fn apply(s: &mut Snapshot, c: &Command) -> Result<()> {
         }
         Command::PutMesh { mesh } => {
             let id = mesh.content_id()?;
+            if mesh
+                .attributes
+                .values()
+                .any(|a| matches!(a.values, crate::geometry::AttributeValues::Vec4(_)))
+            {
+                s.version = s.version.max(14);
+            }
             s.meshes.insert(id, Arc::new(mesh.clone()));
         }
         Command::PutMaterial { material } => {

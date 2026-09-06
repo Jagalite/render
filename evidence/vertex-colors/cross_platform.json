@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "comparisons": [
+    {
+      "variant": "rgba",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "object_mismatches": 0
+    },
+    {
+      "variant": "rgba",
+      "browser": "gpu",
+      "linear_rmse": 4.302430628481706e-06,
+      "object_mismatches": 0
+    },
+    {
+      "variant": "rgb",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "object_mismatches": 0
+    },
+    {
+      "variant": "rgb",
+      "browser": "gpu",
+      "linear_rmse": 4.302430628481706e-06,
+      "object_mismatches": 0
+    },
+    {
+      "variant": "u8",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "object_mismatches": 0
+    },
+    {
+      "variant": "u8",
+      "browser": "gpu",
+      "linear_rmse": 4.302430628481706e-06,
+      "object_mismatches": 0
+    },
+    {
+      "variant": "u16",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "object_mismatches": 0
+    },
+    {
+      "variant": "u16",
+      "browser": "gpu",
+      "linear_rmse": 4.302430628481706e-06,
+      "object_mismatches": 0
+    },
+    {
+      "variant": "sparse",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "object_mismatches": 0
+    },
+    {
+      "variant": "sparse",
+      "browser": "gpu",
+      "linear_rmse": 4.302430628481706e-06,
+      "object_mismatches": 0
+    }
+  ]
+}

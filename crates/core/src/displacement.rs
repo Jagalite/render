@@ -153,7 +153,7 @@ impl Displacement {
         if mesh.attributes.values().any(|a| {
             !matches!(
                 a.semantic.as_str(),
-                "uv" | "normal" | "tangent" | "tangent_sign"
+                "uv" | "normal" | "tangent" | "tangent_sign" | "color_rgba"
             )
         }) {
             return Err(Error::new(
@@ -184,6 +184,11 @@ impl Displacement {
                 *normal = normal.normalize();
             }
         }
+        let color_attribute = mesh
+            .attributes
+            .iter()
+            .find(|(_, a)| a.semantic == "color_rgba");
+        let mut vertex_colors = vec![];
         let mut positions = vec![];
         let mut vertex_uv = vec![];
         let mut vertex_uv_sets = vec![Vec::<[f32; 2]>::new(); uv_attributes.len()];
@@ -196,6 +201,15 @@ impl Displacement {
             let indices = tri.map(|c| mesh.corners[c as usize].vertex as usize);
             let p = indices.map(|i| mesh.positions.get(i));
             let uv = tri.map(|c| mesh.uv(c as usize));
+            let colors = if color_attribute.is_some() {
+                Some([
+                    mesh.color_rgba(tri[0] as usize)?,
+                    mesh.color_rgba(tri[1] as usize)?,
+                    mesh.color_rgba(tri[2] as usize)?,
+                ])
+            } else {
+                None
+            };
             let selected_height_uv =
                 height_uv.map(|values| tri.map(|c| Vec2::from_array(values[c as usize])));
             let normal = indices.map(|i| normals[i]);
@@ -242,6 +256,13 @@ impl Displacement {
                     grid.insert((i, j), positions.len() as u32);
                     positions.push(position.to_array());
                     vertex_uv.push(uv.to_array());
+                    if let Some(c) = colors {
+                        vertex_colors.push(
+                            (c[0] * w[0] as f32 + c[1] * w[1] as f32 + c[2] * w[2] as f32)
+                                .clamp(glam::Vec4::ZERO, glam::Vec4::ONE)
+                                .to_array(),
+                        );
+                    }
                     for (slot, (_, attribute)) in uv_attributes.iter().enumerate() {
                         let values = mesh.uv_values(attribute.id)?;
                         let coords = tri.map(|c| Vec2::from_array(values[c as usize]));
@@ -277,7 +298,11 @@ impl Displacement {
             derived.attributes.insert(
                 "uv".into(),
                 Attribute {
-                    id: Id(1),
+                    id: if color_attribute.is_some_and(|(_, a)| a.id == Id(1)) {
+                        Id(2)
+                    } else {
+                        Id(1)
+                    },
                     domain: Domain::Corner,
                     semantic: "uv".into(),
                     transfer: Transfer::Linear,
@@ -304,8 +329,46 @@ impl Displacement {
                 );
             }
         }
+        if let Some((name, attribute)) = color_attribute {
+            derived.attributes.insert(
+                name.clone(),
+                Attribute {
+                    id: attribute.id,
+                    domain: Domain::Corner,
+                    semantic: "color_rgba".into(),
+                    transfer: Transfer::Linear,
+                    values: AttributeValues::Vec4(
+                        derived
+                            .corners
+                            .iter()
+                            .map(|c| vertex_colors[c.vertex as usize])
+                            .collect(),
+                    ),
+                },
+            );
+        }
         derived.validate()?;
-        let receipt=Receipt{source_digest:mesh.content_id()?,policy_digest:digest(&canonical(&("uniform-named-uv-v1",self))?),subdivisions:self.subdivisions,vertices:derived.positions.len(),triangles:faces.len(),derived_bytes:canonical(&derived)?.len(),approximation:"uniform-named-uv-v1: 4-way triangle dicing; barycentric corner UV transfer with stable attribute IDs; area-weighted source vertex normal displacement; object-meter height; base-level image sampling; crack detection at shared topology edges; geometric output normals; derived correspondence only".into()};
+        let policy = if color_attribute.is_some() {
+            "uniform-rgba-uv-v1"
+        } else {
+            "uniform-named-uv-v1"
+        };
+        let receipt = Receipt {
+            source_digest: mesh.content_id()?,
+            policy_digest: digest(&canonical(&(policy, self))?),
+            subdivisions: self.subdivisions,
+            vertices: derived.positions.len(),
+            triangles: faces.len(),
+            derived_bytes: canonical(&derived)?.len(),
+            approximation: format!(
+                "{policy}: 4-way triangle dicing; barycentric corner UV transfer with stable attribute IDs; area-weighted source vertex normal displacement; object-meter height; base-level image sampling; crack detection at shared topology edges; geometric output normals; derived correspondence only{}",
+                if color_attribute.is_some() {
+                    "; linear RGBA corner transfer preserves stable color ID"
+                } else {
+                    ""
+                }
+            ),
+        };
         Ok((derived, receipt))
     }
 }

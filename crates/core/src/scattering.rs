@@ -204,6 +204,7 @@ fn opacity(scene: &Scene, hit: &Hit) -> f64 {
                 .w,
         )
     });
+    let alpha = alpha * f64::from(hit.color_rgba(scene).w);
     match surface.opacity {
         Opacity::Opaque => 1.,
         Opacity::Blend { factor } => alpha * factor,
@@ -276,7 +277,7 @@ fn model(material: &Material) -> Model {
 /// Finite-depth reference integrator. Glass direct-light caustics are not sampled;
 /// continuation rays can reach emission/environment. Alpha is stochastic coverage.
 pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) -> Result<Image> {
-    scene.validate_uv_bindings()?;
+    scene.validate_geometry_bindings()?;
     s.validate()?;
     let count = (s.width * s.height) as usize;
     let mut linear = vec![[0.; 3]; count];

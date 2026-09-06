@@ -331,6 +331,23 @@ pub(super) fn functions() -> Vec<Function> {
         )))],
     ));
     result.push(function(
+        "bary_color",
+        &[("triangle", Ty::U32), ("bary", Ty::V3)],
+        Ty::V4,
+        vec![
+            let_("offset", cast(Ty::U32, data(i("triangle")).field("w"))),
+            if_(i("offset").eq(u(0)), vec![ret(vec4(splat(1.), f(1.)))]),
+            let_("start", i("triangle") + i("offset")),
+            ret(clamp(
+                data(i("start")) * v("bary").field("x")
+                    + data(i("start") + u(1)) * v("bary").field("y")
+                    + data(i("start") + u(2)) * v("bary").field("z"),
+                vec4(splat(0.), f(0.)),
+                vec4(splat(1.), f(1.)),
+            )),
+        ],
+    ));
+    result.push(function(
         "bary_uv_set",
         &[
             ("triangle", Ty::U32),
@@ -719,7 +736,12 @@ pub(super) fn body() -> Vec<Stmt> {
             "bitangent",
             cross(v("normal"), v("tangent")) * s("hand") * inst(i("base") + u(3)).field("w"),
         ),
-        let_("color", xyz(inst(i("base") + u(6))) * xyz(sample_map(0))),
+        let_(
+            "color",
+            xyz(inst(i("base") + u(6)))
+                * xyz(sample_map(0))
+                * xyz(call("bary_color", Ty::V4, vec![i("triangle"), v("bary")])),
+        ),
         let_("orm", sample_map(1)),
         let_(
             "metal",

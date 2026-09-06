@@ -59,3 +59,9 @@ browser frames, shutters, persistence and numerical direction checks.
 continuity and animation-input bounds. All 13 GLB fixtures pass the independent
 Khronos validator; [evidence](../evidence/indexed-attributes/README.md) records
 metadata corrections, preserved render values and expected source identity changes.
+
+[Linear vertex colors](vertex_colors.md) now support COLOR_0 across CPU and GPU
+PBR rendering, with CPU MASK/BLEND coverage, displacement transfer and albedo
+baking. All 18 current GLB fixtures pass independent source validation; the
+[acceptance evidence](../evidence/vertex-colors/README.md) records five source
+encodings, native/browser recovery and unchanged regression artifacts.

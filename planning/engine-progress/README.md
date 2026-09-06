@@ -5,12 +5,12 @@ working on feasible remaining steps. M09 interactive editor remains deferred.
 Each completed increment requires implementation, native/browser workflow evidence,
 negative/cancellation/stale checks, resource/provenance records and documentation.
 
-Current completed increment: glTF indexed-attribute and fixture conformance; evidence/indexed-attributes.
+Current completed increment: linear glTF vertex colors; evidence/vertex-colors.
 
 | Order | Increment | Status |
 |---|---|---|
 | 1 | GPU shutter frames and streaming sequences | Validated on feat/gpu-shutter-sequences; evidence/gpu-shutter |
-| 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Sparse/UV0, CPU alpha, named UV and morph frames validated; vertex colors and broader export next |
+| 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Sparse/UV0, CPU alpha, named UV, morph frames and vertex colors validated; broader export next |
 | 3 | Richer GPU scattering and transport quality | Pending |
 | 4 | External hair/volume inputs, fiber shading and sparse GPU media | Pending |
 | 5 | Scoped native .blend/USD/MaterialX interchange | Pending |
@@ -57,3 +57,11 @@ GLB fixtures. UV aliases/time-bound metadata are corrected with all .bin payload
 unchanged. Historical named-UV/morph source-conformance claims are amended;
 render values remain exact and source-scoped identity changes are audited.
 Vertex colors and broader source export remain next.
+
+Vertex-color acceptance: 134 native and 115 Wasm tests, ten Metal comparisons,
+67 CLI requests and five Chrome CPU/WebGPU/OPFS workflows. All 18 GLB fixtures
+have zero independent Khronos errors. CPU native/browser pixels are exact; workflow
+GPU RMSE is below 0.000004303. All 135 previous image/pass artifacts, 45 receipts
+and 81 original fixture files are unchanged. Snapshot-v14 typed RGBA attributes
+retain corner seams through displacement and multiply base color/CPU coverage.
+Broader glTF export is next. GPU alpha remains pending.

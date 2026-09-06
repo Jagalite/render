@@ -779,8 +779,15 @@ fn import_scene_mode(
             if attributes.keys().any(|k| {
                 !(["POSITION", "NORMAL", "TEXCOORD_0"].contains(&k.as_str())
                     || (pbr_mode
-                        && ["TANGENT", "JOINTS_0", "WEIGHTS_0", "JOINTS_1", "WEIGHTS_1"]
-                            .contains(&k.as_str()))
+                        && [
+                            "TANGENT",
+                            "COLOR_0",
+                            "JOINTS_0",
+                            "WEIGHTS_0",
+                            "JOINTS_1",
+                            "WEIGHTS_1",
+                        ]
+                        .contains(&k.as_str()))
                     || (pbr_mode && (1..=7).any(|n| k == &format!("TEXCOORD_{n}"))))
             }) {
                 return Err(unsupported(
@@ -891,6 +898,48 @@ fn import_scene_mode(
                 }
             }
             if pbr_mode {
+                if let Some(id) = attributes.get("COLOR_0") {
+                    let description = at(&root, "accessors", index(id)?)?;
+                    let shape = description["type"]
+                        .as_str()
+                        .ok_or_else(|| bad("color accessor type"))?;
+                    let axes = match shape {
+                        "VEC3" => 3,
+                        "VEC4" => 4,
+                        _ => return Err(bad("COLOR_0 requires VEC3 or VEC4")),
+                    };
+                    let a = vertex_accessor(&root, buffers, index(id)?, shape, axes, true)?;
+                    if a.count != mesh.positions.len() {
+                        return Err(bad("color attribute vertex count mismatch"));
+                    }
+                    let mut values = if axes == 3 {
+                        a.floats::<3>()?
+                            .into_iter()
+                            .map(|c| [c[0], c[1], c[2], 1.])
+                            .collect::<Vec<_>>()
+                    } else {
+                        a.floats::<4>()?
+                    };
+                    let mut clamped = 0usize;
+                    for value in values.iter_mut().flatten() {
+                        let bounded = value.clamp(0., 1.);
+                        if bounded != *value {
+                            clamped += 1;
+                            *value = bounded;
+                        }
+                    }
+                    report.losses.push(format!("gltf2-vertex-color-v1: linear COLOR_0 multiplies base RGB and CPU alpha coverage; {clamped} components clamped to [0,1]; missing RGB alpha defaults to one; emission unchanged."));
+                    mesh.attributes.insert(
+                        "color_0".into(),
+                        Attribute {
+                            id: Id(200),
+                            domain: Domain::Point,
+                            semantic: "color_rgba".into(),
+                            transfer: Transfer::Linear,
+                            values: AttributeValues::Vec4(values),
+                        },
+                    );
+                }
                 for n in 1..=7 {
                     if let Some(id) = attributes.get(&format!("TEXCOORD_{n}")) {
                         let a = vertex_accessor(&root, buffers, index(id)?, "VEC2", 2, true)?;

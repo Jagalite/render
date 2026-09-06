@@ -1,0 +1,95 @@
+{
+  "scope": "32x16, 8 samples, depth2, four triangles with a shared material and mixed colored/uncolored geometry; five input encodings; individual process observations are not a benchmark or allocator limit",
+  "observations": [
+    {
+      "name": "rgba-import",
+      "seconds": 0.03549241699511185,
+      "maximum resident set size": 15990784,
+      "peak memory footprint": 2851904
+    },
+    {
+      "name": "rgba-render",
+      "seconds": 0.06692204200226115,
+      "maximum resident set size": 17022976,
+      "peak memory footprint": 3114048
+    },
+    {
+      "name": "rgba-gpu",
+      "seconds": 0.140265542002453,
+      "maximum resident set size": 33308672,
+      "peak memory footprint": 10929728
+    },
+    {
+      "name": "rgb-import",
+      "seconds": 0.0360964999999851,
+      "maximum resident set size": 15958016,
+      "peak memory footprint": 2835520
+    },
+    {
+      "name": "rgb-render",
+      "seconds": 0.05998258299950976,
+      "maximum resident set size": 17022976,
+      "peak memory footprint": 3114048
+    },
+    {
+      "name": "rgb-gpu",
+      "seconds": 0.12912179099657806,
+      "maximum resident set size": 33390592,
+      "peak memory footprint": 11028096
+    },
+    {
+      "name": "u8-import",
+      "seconds": 0.036778708003112115,
+      "maximum resident set size": 15958016,
+      "peak memory footprint": 2819136
+    },
+    {
+      "name": "u8-render",
+      "seconds": 0.0634924170008162,
+      "maximum resident set size": 17022976,
+      "peak memory footprint": 3097600
+    },
+    {
+      "name": "u8-gpu",
+      "seconds": 0.13567749999492662,
+      "maximum resident set size": 33308672,
+      "peak memory footprint": 10929664
+    },
+    {
+      "name": "u16-import",
+      "seconds": 0.0369818339968333,
+      "maximum resident set size": 16056320,
+      "peak memory footprint": 2900992
+    },
+    {
+      "name": "u16-render",
+      "seconds": 0.06097516600129893,
+      "maximum resident set size": 17006592,
+      "peak memory footprint": 3097664
+    },
+    {
+      "name": "u16-gpu",
+      "seconds": 0.13857404200098244,
+      "maximum resident set size": 33488896,
+      "peak memory footprint": 11175552
+    },
+    {
+      "name": "sparse-import",
+      "seconds": 0.03867754100065213,
+      "maximum resident set size": 15958016,
+      "peak memory footprint": 2819136
+    },
+    {
+      "name": "sparse-render",
+      "seconds": 0.06418533399846638,
+      "maximum resident set size": 17022976,
+      "peak memory footprint": 3114048
+    },
+    {
+      "name": "sparse-gpu",
+      "seconds": 0.13949895800033119,
+      "maximum resident set size": 33570816,
+      "peak memory footprint": 11241088
+    }
+  ]
+}

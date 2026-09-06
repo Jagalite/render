@@ -1,0 +1,981 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "rgba-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgba",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/000-rgba-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02785625000251457
+    },
+    {
+      "name": "rgba-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgba",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/001-rgba-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007238457998028025
+    },
+    {
+      "name": "rgba-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgba",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/002-rgba-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03549241699511185,
+      "resources": {
+        "maximum resident set size": 15990784,
+        "peak memory footprint": 2851904
+      }
+    },
+    {
+      "name": "rgba-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgba",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/003-rgba-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02144383300037589
+    },
+    {
+      "name": "rgba-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgba",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/004-rgba-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014221291996364016
+    },
+    {
+      "name": "rgba-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgba",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/005-rgba-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06692204200226115,
+      "resources": {
+        "maximum resident set size": 17022976,
+        "peak memory footprint": 3114048
+      }
+    },
+    {
+      "name": "rgba-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgba",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/006-rgba-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.140265542002453,
+      "resources": {
+        "maximum resident set size": 33308672,
+        "peak memory footprint": 10929728
+      }
+    },
+    {
+      "name": "rgba-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgba",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/007-rgba-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.02218758300296031
+    },
+    {
+      "name": "rgba-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgba",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/008-rgba-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03174929099623114
+    },
+    {
+      "name": "rgba-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgba-restored",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/009-rgba-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03447995900205569
+    },
+    {
+      "name": "rgba-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgba-restored",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/010-rgba-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06355283299490111
+    },
+    {
+      "name": "rgba-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgba",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/011-rgba-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01554733300145017
+    },
+    {
+      "name": "rgb-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgb",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/012-rgb-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01817887500510551
+    },
+    {
+      "name": "rgb-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgb",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/013-rgb-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007389416998194065
+    },
+    {
+      "name": "rgb-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgb",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/014-rgb-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0360964999999851,
+      "resources": {
+        "maximum resident set size": 15958016,
+        "peak memory footprint": 2835520
+      }
+    },
+    {
+      "name": "rgb-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgb",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/015-rgb-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020322374999523163
+    },
+    {
+      "name": "rgb-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgb",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/016-rgb-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013253959004941862
+    },
+    {
+      "name": "rgb-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgb",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/017-rgb-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05998258299950976,
+      "resources": {
+        "maximum resident set size": 17022976,
+        "peak memory footprint": 3114048
+      }
+    },
+    {
+      "name": "rgb-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgb",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/018-rgb-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.12912179099657806,
+      "resources": {
+        "maximum resident set size": 33390592,
+        "peak memory footprint": 11028096
+      }
+    },
+    {
+      "name": "rgb-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgb",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/019-rgb-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.021795374996145256
+    },
+    {
+      "name": "rgb-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgb",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/020-rgb-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03216929200425511
+    },
+    {
+      "name": "rgb-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgb-restored",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/021-rgb-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03626645899930736
+    },
+    {
+      "name": "rgb-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgb-restored",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/022-rgb-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05769845799659379
+    },
+    {
+      "name": "rgb-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/rgb",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/023-rgb-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015450499995495193
+    },
+    {
+      "name": "u8-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u8",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/024-u8-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019051040995691437
+    },
+    {
+      "name": "u8-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u8",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/025-u8-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007838000004994683
+    },
+    {
+      "name": "u8-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u8",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/026-u8-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.036778708003112115,
+      "resources": {
+        "maximum resident set size": 15958016,
+        "peak memory footprint": 2819136
+      }
+    },
+    {
+      "name": "u8-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u8",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/027-u8-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020643374999053776
+    },
+    {
+      "name": "u8-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u8",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/028-u8-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013390457999776118
+    },
+    {
+      "name": "u8-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u8",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/029-u8-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0634924170008162,
+      "resources": {
+        "maximum resident set size": 17022976,
+        "peak memory footprint": 3097600
+      }
+    },
+    {
+      "name": "u8-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u8",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/030-u8-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13567749999492662,
+      "resources": {
+        "maximum resident set size": 33308672,
+        "peak memory footprint": 10929664
+      }
+    },
+    {
+      "name": "u8-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u8",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/031-u8-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.021841333000338636
+    },
+    {
+      "name": "u8-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u8",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/032-u8-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.032168792000447866
+    },
+    {
+      "name": "u8-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u8-restored",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/033-u8-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.028401708994351793
+    },
+    {
+      "name": "u8-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u8-restored",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/034-u8-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06051083300553728
+    },
+    {
+      "name": "u8-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u8",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/035-u8-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013416709000011906
+    },
+    {
+      "name": "u16-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u16",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/036-u16-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02045699999871431
+    },
+    {
+      "name": "u16-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u16",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/037-u16-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006486416001280304
+    },
+    {
+      "name": "u16-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u16",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/038-u16-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0369818339968333,
+      "resources": {
+        "maximum resident set size": 16056320,
+        "peak memory footprint": 2900992
+      }
+    },
+    {
+      "name": "u16-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u16",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/039-u16-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02039849999709986
+    },
+    {
+      "name": "u16-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u16",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/040-u16-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013327207998372614
+    },
+    {
+      "name": "u16-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u16",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/041-u16-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06097516600129893,
+      "resources": {
+        "maximum resident set size": 17006592,
+        "peak memory footprint": 3097664
+      }
+    },
+    {
+      "name": "u16-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u16",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/042-u16-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13857404200098244,
+      "resources": {
+        "maximum resident set size": 33488896,
+        "peak memory footprint": 11175552
+      }
+    },
+    {
+      "name": "u16-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u16",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/043-u16-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.022409208002500236
+    },
+    {
+      "name": "u16-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u16",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/044-u16-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03130295799928717
+    },
+    {
+      "name": "u16-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u16-restored",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/045-u16-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03632625000318512
+    },
+    {
+      "name": "u16-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u16-restored",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/046-u16-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06065495900111273
+    },
+    {
+      "name": "u16-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/u16",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/047-u16-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01539454099838622
+    },
+    {
+      "name": "sparse-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/sparse",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/048-sparse-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018260958000610117
+    },
+    {
+      "name": "sparse-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/sparse",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/049-sparse-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007412374994601123
+    },
+    {
+      "name": "sparse-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/sparse",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/050-sparse-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03867754100065213,
+      "resources": {
+        "maximum resident set size": 15958016,
+        "peak memory footprint": 2819136
+      }
+    },
+    {
+      "name": "sparse-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/sparse",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/051-sparse-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020893332999548875
+    },
+    {
+      "name": "sparse-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/sparse",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/052-sparse-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01341412500187289
+    },
+    {
+      "name": "sparse-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/sparse",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/053-sparse-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06418533399846638,
+      "resources": {
+        "maximum resident set size": 17022976,
+        "peak memory footprint": 3114048
+      }
+    },
+    {
+      "name": "sparse-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/sparse",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/054-sparse-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13949895800033119,
+      "resources": {
+        "maximum resident set size": 33570816,
+        "peak memory footprint": 11241088
+      }
+    },
+    {
+      "name": "sparse-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/sparse",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/055-sparse-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.022234500000195112
+    },
+    {
+      "name": "sparse-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/sparse",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/056-sparse-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03243891600141069
+    },
+    {
+      "name": "sparse-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/sparse-restored",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/057-sparse-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.036425291997147724
+    },
+    {
+      "name": "sparse-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/sparse-restored",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/058-sparse-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06153904199891258
+    },
+    {
+      "name": "sparse-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/sparse",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/059-sparse-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015341916994657367
+    },
+    {
+      "name": "negative-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/negative",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/060-negative-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021124124999914784
+    },
+    {
+      "name": "negative-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/negative",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/061-negative-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007508916001825128
+    },
+    {
+      "name": "malformed",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/negative",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/062-malformed.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "gltf_scene",
+      "seconds": 0.007793999997375067
+    },
+    {
+      "name": "cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/negative",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/063-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.006338790997688193
+    },
+    {
+      "name": "budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/negative",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/064-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.006011457997374237
+    },
+    {
+      "name": "negative-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/negative",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/065-negative-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006467250001151115
+    },
+    {
+      "name": "explicit-valid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/negative",
+        "/private/tmp/render-vertex-colors-20260906/artifacts/vertex-colors/run-20260906T075516Z/workflow/066-explicit-valid.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03855583300173748
+    }
+  ],
+  "variants": [
+    {
+      "name": "rgba",
+      "revision": "sha256:90f5288e2bcd1f914d87069f97d9c2a948493837d956458d02526300c1eb3e38",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "rgb",
+      "revision": "sha256:33194423965d4e548110b98714d8ac313718b9c5c7c10c7003b35917d0fb6dbc",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "u8",
+      "revision": "sha256:9c6e3a8031810fd5a6e1a38e45166c77a98473c57ed1bf9e2502c41b1fd7b85f",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "u16",
+      "revision": "sha256:c523f97ecd5185e8873eb77dbc591c9113212b0729f28465cf4b0e3197a72405",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    },
+    {
+      "name": "sparse",
+      "revision": "sha256:290e3984c4cbf1cdcfed729bdd26965ad939758955a2506ec60cd60bbbb3b11b",
+      "cpu_metal_rmse": 4.3021316859486374e-06,
+      "restored_pixels_identical": true
+    }
+  ],
+  "settings": {
+    "width": 32,
+    "height": 16,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        2,
+        2,
+        2
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        3
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 2.5,
+        "ymag": 1,
+        "near": 0.1,
+        "far": 5
+      }
+    }
+  }
+}

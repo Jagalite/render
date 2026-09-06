@@ -384,6 +384,7 @@ fn renderer_reuses_geometry_after_transform() {
 fn triangle_bvh_and_parallel_slab_analytic() {
     let t = Triangle {
         uv_sets: vec![],
+        colors: None,
         normals: None,
         tangents: None,
         positions: [

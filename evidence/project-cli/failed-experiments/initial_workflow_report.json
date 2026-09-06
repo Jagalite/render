@@ -1,0 +1,394 @@
+{
+  "status": "failed",
+  "profile": "project-cli-v0",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/000-init.json"
+      ],
+      "seconds": 5.403291791997617,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "create-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/001-create-base.json"
+      ],
+      "seconds": 0.03174633299931884,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "create",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/002-create.json"
+      ],
+      "seconds": 0.11915416600095341,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/003-inspect.json"
+      ],
+      "seconds": 0.011633000001893379,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "bevel-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/004-bevel-base.json"
+      ],
+      "seconds": 0.011309666995657608,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "bevel",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/005-bevel.json"
+      ],
+      "seconds": 0.12262337499851128,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/006-inspect.json"
+      ],
+      "seconds": 0.025715667004988063,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "import-obj",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/007-import-obj.json"
+      ],
+      "seconds": 0.3559492079948541,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "animate-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/008-animate-base.json"
+      ],
+      "seconds": 0.043187958995986264,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "animate",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/009-animate.json"
+      ],
+      "seconds": 0.19035970799450297,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "authored",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/010-authored.json"
+      ],
+      "seconds": 0.04842370899859816,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-0",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/011-evaluate-0.json"
+      ],
+      "seconds": 0.05123579200153472,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-2",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/012-evaluate-2.json"
+      ],
+      "seconds": 0.052410582997254096,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-4",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/013-evaluate-4.json"
+      ],
+      "seconds": 0.05004195800574962,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-1",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/014-evaluate-1.json"
+      ],
+      "seconds": 0.04980400000204099,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-3",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/015-evaluate-3.json"
+      ],
+      "seconds": 0.04890029100351967,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-2",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/016-evaluate-2.json"
+      ],
+      "seconds": 0.048871416998736095,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/017-render.json"
+      ],
+      "seconds": 0.28709629199875053,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 19546112,
+        "peak memory footprint": 4834432
+      }
+    },
+    {
+      "name": "frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/018-frame.json"
+      ],
+      "seconds": 0.7272522499988554,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20037632,
+        "peak memory footprint": 5014656
+      }
+    },
+    {
+      "name": "sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/019-sequence.json"
+      ],
+      "seconds": 2.323620958995889,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20168704,
+        "peak memory footprint": 5145728
+      }
+    },
+    {
+      "name": "products",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/020-products.json"
+      ],
+      "seconds": 0.5841736669972306,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20201472,
+        "peak memory footprint": 5227648
+      }
+    },
+    {
+      "name": "export-document",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/021-export-document.json"
+      ],
+      "seconds": 0.1779873330015107,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restore",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/022-restore.json"
+      ],
+      "seconds": 0.19670008400134975,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "reopened",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/023-reopened.json"
+      ],
+      "seconds": 0.04662658299639588,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "export-obj",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/024-export-obj.json"
+      ],
+      "seconds": 0.2322299169973121,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "stale-render",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/025-stale-render.json"
+      ],
+      "seconds": 0.09287279099953594,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "cancel-evaluation",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/026-cancel-evaluation.json"
+      ],
+      "seconds": 0.006266290998610202,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "output-budget",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/027-output-budget.json"
+      ],
+      "seconds": 0.3494012500013923,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "existing-output",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/028-existing-output.json"
+      ],
+      "seconds": 0.042286999996576924,
+      "exit_code": 1,
+      "expected_error": "output_exists"
+    },
+    {
+      "name": "gpu-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/requests/029-gpu-render.json"
+      ],
+      "seconds": 0.18885975000011967,
+      "exit_code": 1,
+      "expected_error": null
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "error": "AssertionError('{\"code\":\"unsupported_profile\",\"stage\":\"validation\",\"message\":\"GPU diffuse v0 supports max_depth=1\",\"retryable\":false,\"context\":{\"output_manifest\":\"/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/gpu/manifest.json\"}}\\n        0.18 real         0.04 user         0.00 sys\\n            17776640  maximum resident set size\\n                   0  average shared memory size\\n                   0  average unshared data size\\n                   0  average unshared stack size\\n                1304  page reclaims\\n                   1  page faults\\n                   0  swaps\\n                   0  block input operations\\n                  41  block output operations\\n                   0  messages sent\\n                   0  messages received\\n                   0  signals received\\n                  22  voluntary context switches\\n                 111  involuntary context switches\\n           388454566  instructions retired\\n           136974839  cycles elapsed\\n             3458176  peak memory footprint\\n')"
+}

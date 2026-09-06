@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "stopped": [
+    {
+      "pid": 86131,
+      "role": "isolated validation Chrome",
+      "port": 9224
+    },
+    {
+      "pid": 85780,
+      "role": "validation loopback server",
+      "port": 8766
+    }
+  ],
+  "listeners_remaining": false,
+  "scope": "Only processes launched for this validation were stopped; isolated profile files retained in /tmp."
+}

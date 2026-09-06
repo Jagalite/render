@@ -1,0 +1,462 @@
+{
+  "status": "passed",
+  "profile": "gltf2-animated-pbr-v0",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/000-init.json"
+      ],
+      "seconds": 0.482000459000119,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/001-inspect.json"
+      ],
+      "seconds": 0.010127458001079503,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/002-import.json"
+      ],
+      "seconds": 0.1450062079966301,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17432576,
+        "peak memory footprint": 3687552
+      }
+    },
+    {
+      "name": "retry",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/003-retry.json"
+      ],
+      "seconds": 0.041633458000433166,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/004-inspect.json"
+      ],
+      "seconds": 0.02151866700296523,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "static-defaults",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/005-static-defaults.json"
+      ],
+      "seconds": 0.3677836670030956,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20217856,
+        "peak memory footprint": 4965504
+      }
+    },
+    {
+      "name": "evaluate-2",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/006-evaluate-2.json"
+      ],
+      "seconds": 0.033446583001932595,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-0",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/007-evaluate-0.json"
+      ],
+      "seconds": 0.024824958003591746,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-4",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/008-evaluate-4.json"
+      ],
+      "seconds": 0.025630167001509108,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-1",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/009-evaluate-1.json"
+      ],
+      "seconds": 0.029942499997559935,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-3",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/010-evaluate-3.json"
+      ],
+      "seconds": 0.02057237499684561,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-2",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/011-evaluate-2.json"
+      ],
+      "seconds": 0.020500208003795706,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/012-sequence.json"
+      ],
+      "seconds": 2.0172346249964903,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20627456,
+        "peak memory footprint": 5293184
+      }
+    },
+    {
+      "name": "frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/013-frame.json"
+      ],
+      "seconds": 0.38133108399779303,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20496384,
+        "peak memory footprint": 5145728
+      }
+    },
+    {
+      "name": "archive",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/014-archive.json"
+      ],
+      "seconds": 0.14829437499429332,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restore",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/015-restore.json"
+      ],
+      "seconds": 0.13754404200153658,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restored",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/016-restored.json"
+      ],
+      "seconds": 0.02610616599849891,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restored-frame",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/017-restored-frame.json"
+      ],
+      "seconds": 1.2754607910028426,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/018-cpu.json"
+      ],
+      "seconds": 0.27147054099623347,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20316160,
+        "peak memory footprint": 4949120
+      }
+    },
+    {
+      "name": "gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/019-gpu.json"
+      ],
+      "seconds": 0.45197941699734656,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36339712,
+        "peak memory footprint": 11781760
+      }
+    },
+    {
+      "name": "stale",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/020-stale.json"
+      ],
+      "seconds": 0.021700124998460524,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "cancel",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/021-cancel.json"
+      ],
+      "seconds": 0.007185834001575131,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "limited-output",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/022-limited-output.json"
+      ],
+      "seconds": 0.11220775000401773,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "unchanged",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/023-unchanged.json"
+      ],
+      "seconds": 0.024514709002687596,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "external-init",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/external",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/024-external-init.json"
+      ],
+      "seconds": 0.08231583300221246,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "external-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/external",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/025-external-base.json"
+      ],
+      "seconds": 0.023062000000209082,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "external-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/external",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/026-external-import.json"
+      ],
+      "seconds": 0.12850041699857684,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17678336,
+        "peak memory footprint": 3622016
+      }
+    },
+    {
+      "name": "external-state",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/external",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/027-external-state.json"
+      ],
+      "seconds": 0.027050541997596156,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "external-frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/external",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023801Z/workflow/requests/028-external-frame.json"
+      ],
+      "seconds": 0.446583124998142,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20529152,
+        "peak memory footprint": 5244032
+      }
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "import": {
+    "instances": 1,
+    "losses": [
+      "Single-scattering GGX, roughness regularized to >=0.05; missing tangents use a per-triangle UV basis, not MikkTSpace seam smoothing. OPAQUE alpha is ignored as specified by glTF.",
+      "Node names are retained; extras and generator metadata are not authored components. Only the selected scene is imported.",
+      "Animation and skin names remain in the original source; native IDs and complete converted channels/bindings are retained. Imported node and rig tracks are separate native authoring components.",
+      "Maximum source quaternion squared-norm correction: 3.422854178e-8",
+      "Absolute TRS clips; float32 key times retained exactly within rational limits; unit rotation keys renormalized within 1e-3 squared-norm error. Skin weights normalized within 0.01 of unity, duplicate influences combined. Deformation recomputes flat geometric normals; POSITION-only morphs; no animation/skin glTF export. Single-time clips use a one-second constant interval."
+    ],
+    "profile": "gltf2-animated-pbr-v0",
+    "source_clips": {
+      "0": "15c77c8677038a00d22b7921d37af01e"
+    },
+    "source_digest": "sha256:60dd5e05c5bc4c889646fe69e0630bed0affe9c0702c09130cf06a579e8ff017",
+    "source_materials": {
+      "0": "c3846073cd659005c3f0352a8bf9e160"
+    },
+    "source_nodes": {
+      "0": "0f947722da939cac995c46516731eaaf",
+      "1": "75d6fb7de0af8f1f0a3954a89f84ad05",
+      "2": "a5725e26474543436536bce8e9d02f98"
+    },
+    "source_skins": {
+      "0": "ccaec64f12300e1800dcb5294cc0f24b"
+    },
+    "unique_meshes": 1
+  },
+  "revision": "sha256:4d0069d4ae88dff8a3e16f9bbcd998796f9739101b158d9bab9423d78a472580",
+  "clip": "15c77c8677038a00d22b7921d37af01e",
+  "serialized_document_bytes": 12537,
+  "gpu_comparison": {
+    "linear_rmse": 4.94231259519304e-09,
+    "object_mismatches": 0
+  },
+  "external_import": {
+    "instances": 1,
+    "losses": [
+      "Single-scattering GGX, roughness regularized to >=0.05; missing tangents use a per-triangle UV basis, not MikkTSpace seam smoothing. OPAQUE alpha is ignored as specified by glTF.",
+      "Node names are retained; extras and generator metadata are not authored components. Only the selected scene is imported.",
+      "Animation and skin names remain in the original source; native IDs and complete converted channels/bindings are retained. Imported node and rig tracks are separate native authoring components.",
+      "Maximum source quaternion squared-norm correction: 4.650354123e-4",
+      "Absolute TRS clips; float32 key times retained exactly within rational limits; unit rotation keys renormalized within 1e-3 squared-norm error. Skin weights normalized within 0.01 of unity, duplicate influences combined. Deformation recomputes flat geometric normals; POSITION-only morphs; no animation/skin glTF export. Single-time clips use a one-second constant interval."
+    ],
+    "profile": "gltf2-animated-pbr-v0",
+    "source_clips": {
+      "0": "eab05af5a11dd3519be2a4821acd588a"
+    },
+    "source_digest": "sha256:10fdd28dc28741300cb106933931a6b046216443962d823d35e24f34a3ce4d23",
+    "source_materials": {},
+    "source_nodes": {
+      "0": "7bf34272c6d60ca5d76fd5c2493e695b",
+      "1": "7968a11b4bd76e12049a8231cc0b37d0",
+      "2": "87b504e8915ad5093b118e57396dd0d4"
+    },
+    "source_skins": {
+      "0": "4bdd57af7fbca1e74f7f61e46ab344dc"
+    },
+    "unique_meshes": 1
+  }
+}

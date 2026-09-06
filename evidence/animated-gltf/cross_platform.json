@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "comparisons": [
+    {
+      "browser": "browser-frame-1.json",
+      "native": "frame/frame/image.pfm",
+      "linear_rmse": 0.0,
+      "object_mismatches": 0
+    },
+    {
+      "browser": "browser-default-gpu.json",
+      "native": "default/image/image.pfm",
+      "linear_rmse": 8.658312113364018e-09,
+      "object_mismatches": 0
+    }
+  ]
+}

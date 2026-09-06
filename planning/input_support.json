@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "status": "static_import_and_native_authored_breadth_profiles",
+  "status": "static_and_animated_import_with_native_authored_breadth_profiles",
   "scope": "All feature families requested after the M00-M04 foundation; staged input-to-render delivery.",
   "priority_order": [
     "INPUT-01",
@@ -50,7 +50,7 @@
         "evidence/m05/browser_workflow_report.json",
         "evidence/static-pbr/README.md"
       ],
-      "remaining_scope": "Sparse/normalized attributes, additional UV sets and broader scene inputs remain unsupported."
+      "remaining_scope": "Sparse/general normalized attributes, additional UV sets and broader scene inputs remain unsupported; normalized skin weights are supported by INPUT-03."
     },
     {
       "id": "INPUT-02",
@@ -107,10 +107,11 @@
       "qualification": "Animation/skin file import does not imply control-rig, IK, driver or retargeting support; those retain named M08 subgates.",
       "status": "partially_implemented_profile",
       "evidence": [
-        "evidence/m06-m08/README.md"
+        "evidence/m06-m08/README.md",
+        "evidence/animated-gltf/README.md"
       ],
-      "implemented_profile": "native-authored affine-lbs-shutter-v0; external animated glTF import not implemented",
-      "remaining_scope": "External animated character file adapters and their licensed corpus remain open."
+      "implemented_profile": "native-authored affine-lbs-shutter-v0 and gltf2-animated-pbr-v0 on native/Wasm",
+      "remaining_scope": "Sparse accessors, normal/tangent morph targets, extensions, larger source profiles, animated glTF export and GPU shutter accumulation remain unsupported."
     },
     {
       "id": "INPUT-04",

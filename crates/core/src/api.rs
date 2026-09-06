@@ -46,6 +46,13 @@ pub fn registry() -> Vec<Operation> {
             cancellation: "before commit",
         },
         Operation {
+            name: "merge_animation",
+            version: 0,
+            mutation: true,
+            effects: "append typed animation components atomically; reject all identity collisions",
+            cancellation: "before publication",
+        },
+        Operation {
             name: "set_animation",
             version: 0,
             mutation: true,

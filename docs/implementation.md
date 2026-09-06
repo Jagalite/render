@@ -102,3 +102,9 @@ Browser bindings expose `BrowserDocument` create/import/export/revision/execute/
 Project code is independently authored Rust. No Blender/Cycles implementation was ported or linked. Test scripts, comparative hecs usage and generated browser bindings are classified separately from the bundled runtime. Dependency/license expressions and environmental links are recorded by the audit; the project itself has not yet selected a distribution license.
 
 Validated runtime hosts are Apple M1/macOS and Chromium WebGPU. Other native targets need their own runtime evidence. The comparison is an experiment with the named workloads and machines, not a universal speed, memory, topology-robustness or production-readiness claim. M05 now has its own validated agent profile; M07 has the separately validated static PBR slice; other later gates remain open.
+
+For general project authoring and rendering from CLI requests, see [the project CLI contract](project_cli.md). The fixed foundation/demo commands remain regression tools.
+
+The scene adapters now also support [animated glTF/GLB](animated_gltf.md), including
+absolute TRS clips, skin-specific binds and position morphs through the same native
+and browser APIs. The mesh-only importer described above retains its original limits.

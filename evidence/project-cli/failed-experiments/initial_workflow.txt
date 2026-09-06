@@ -1,0 +1,56 @@
+init: passed
+create-base: passed
+create: passed
+inspect: passed
+bevel-base: passed
+bevel: passed
+inspect: passed
+import-obj: passed
+animate-base: passed
+animate: passed
+authored: passed
+evaluate-0: passed
+evaluate-2: passed
+evaluate-4: passed
+evaluate-1: passed
+evaluate-3: passed
+evaluate-2: passed
+render: passed
+frame: passed
+sequence: passed
+products: passed
+export-document: passed
+restore: passed
+reopened: passed
+export-obj: passed
+stale-render: expected stale_revision
+cancel-evaluation: expected cancelled
+output-budget: expected budget
+existing-output: expected output_exists
+Traceback (most recent call last):
+  File "/Volumes/seed2/Projects/render/scripts/project-cli-workflow.py", line 112, in <module>
+    call('gpu-render',{'method':'render','revision':revision,'backend':'gpu','output':str(root/'gpu')},resource=True);verify_manifest(root/'gpu')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/seed2/Projects/render/scripts/project-cli-workflow.py", line 54, in call
+    assert result.returncode==0,result.stderr
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: {"code":"unsupported_profile","stage":"validation","message":"GPU diffuse v0 supports max_depth=1","retryable":false,"context":{"output_manifest":"/Volumes/seed2/Projects/render/artifacts/project-cli/run-20260906T013009Z/workflow/gpu/manifest.json"}}
+        0.18 real         0.04 user         0.00 sys
+            17776640  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                1304  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                  41  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  22  voluntary context switches
+                 111  involuntary context switches
+           388454566  instructions retired
+           136974839  cycles elapsed
+             3458176  peak memory footprint
+

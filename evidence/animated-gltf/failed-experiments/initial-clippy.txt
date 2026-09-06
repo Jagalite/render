@@ -1,0 +1,19 @@
+    Checking render-core v0.1.0 (/Volumes/seed2/Projects/render/crates/core)
+error: the loop variable `axis` is used to index `weights`
+   --> crates/core/src/gltf_scene/animated.rs:373:37
+    |
+373 |                         for axis in 0..4 {
+    |                                     ^^^^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.95.0/index.html#needless_range_loop
+    = note: `-D clippy::needless-range-loop` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::needless_range_loop)]`
+help: consider using an iterator and enumerate()
+    |
+373 -                         for axis in 0..4 {
+373 +                         for (axis, <item>) in weights.iter().enumerate().take(4) {
+    |
+
+error: could not compile `render-core` (lib test) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `render-core` (lib) due to 1 previous error

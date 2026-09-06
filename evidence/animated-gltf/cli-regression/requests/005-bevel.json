@@ -1,0 +1,28 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:061605f9b9c1affc7a707f42dc9a87965dc4fef047f366006c8754b56be64377",
+      "idempotency_key": "cli-workflow:bevel",
+      "commands": [
+        {
+          "operation": "model_mesh",
+          "entity": "00000000000000000000000000000001",
+          "source_mesh": "sha256:43477a76c725738c74c71492d3f28a19c09a9fdcd1ac4d914d33ccc50f90cfed",
+          "operator": {
+            "kind": "bevel_box",
+            "distance_meters": 0.08
+          },
+          "budget": {
+            "vertices": 65536,
+            "faces": 65536,
+            "bytes": 8388608
+          }
+        }
+      ],
+      "max_added_bytes": 8388608
+    }
+  }
+}

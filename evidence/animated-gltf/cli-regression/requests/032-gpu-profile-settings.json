@@ -1,0 +1,60 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:4ec93862c2775b928a54e934179300aa4e01962224e559dcb8348c9da7e13d8e",
+      "idempotency_key": "cli-workflow:gpu-profile",
+      "max_added_bytes": 8388608,
+      "commands": [
+        {
+          "operation": "set_render_settings",
+          "settings": {
+            "camera": {
+              "position": [
+                2.5,
+                2.0,
+                4.0
+              ],
+              "target": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "up": [
+                0.0,
+                1.0,
+                0.0
+              ],
+              "vertical_fov_radians": 0.65
+            },
+            "environment": [
+              0.15000000596046448,
+              0.15000000596046448,
+              0.15000000596046448
+            ],
+            "height": 48,
+            "light": {
+              "intensity": [
+                30.0,
+                30.0,
+                30.0
+              ],
+              "position": [
+                -2.0,
+                4.0,
+                3.0
+              ]
+            },
+            "max_bytes": 16777216,
+            "max_depth": 1,
+            "samples": 4,
+            "seed": 73,
+            "width": 64
+          }
+        }
+      ]
+    }
+  }
+}

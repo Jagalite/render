@@ -1,0 +1,37 @@
+init: passed
+create-base: passed
+create: passed
+inspect: passed
+bevel-base: passed
+bevel: passed
+inspect: passed
+import-obj: passed
+animate-base: passed
+animate: passed
+authored: passed
+evaluate-0: passed
+evaluate-2: passed
+evaluate-4: passed
+evaluate-1: passed
+evaluate-3: passed
+evaluate-2: passed
+render: passed
+frame: passed
+sequence: passed
+products: passed
+export-document: passed
+restore: passed
+reopened: passed
+export-obj: passed
+stale-render: expected stale_revision
+cancel-evaluation: expected cancelled
+output-budget: expected budget
+existing-output: expected output_exists
+gpu-depth-rejection: expected unsupported_profile
+gpu-restore: passed
+gpu-base: passed
+gpu-profile-settings: passed
+gpu-cpu-reference: passed
+gpu-render: passed
+final: passed
+Project CLI workflow passed: /Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression

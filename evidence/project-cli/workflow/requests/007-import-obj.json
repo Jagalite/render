@@ -1,0 +1,16 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "import",
+    "base_revision": "sha256:a3830c24c040590ecb950fb31e6292320e4febb5e960656e7e533d9925995a99",
+    "idempotency_key": "cli-workflow:floor",
+    "max_added_bytes": 8388608,
+    "source": {
+      "format": "obj",
+      "path": "/Volumes/seed2/Projects/render/fixtures/project-cli/floor.obj",
+      "entity": "00000000000000000000000000000004",
+      "name": "ground plane",
+      "material": "00000000000000000000000000000003"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+[
+  {
+    "operation": "set_animation",
+    "animation": {
+      "clips": {
+        "0000000000000000000000000000000a": {
+          "id": "0000000000000000000000000000000a",
+          "start": {
+            "numerator": 0,
+            "denominator": 1
+          },
+          "end": {
+            "numerator": 1,
+            "denominator": 1
+          },
+          "extrapolation": "clamp",
+          "remap": {
+            "rate": {
+              "numerator": 1,
+              "denominator": 1
+            },
+            "offset": {
+              "numerator": 0,
+              "denominator": 1
+            }
+          },
+          "tracks": [
+            {
+              "id": "0000000000000000000000000000000b",
+              "target": {
+                "kind": "entity",
+                "entity": "00000000000000000000000000000001"
+              },
+              "property": {
+                "kind": "translation"
+              },
+              "interpolation": "linear",
+              "keys": [
+                {
+                  "time": {
+                    "numerator": 0,
+                    "denominator": 1
+                  },
+                  "value": {
+                    "kind": "vector",
+                    "value": [
+                      -0.6,
+                      0,
+                      0
+                    ]
+                  },
+                  "incoming": null,
+                  "outgoing": null
+                },
+                {
+                  "time": {
+                    "numerator": 1,
+                    "denominator": 1
+                  },
+                  "value": {
+                    "kind": "vector",
+                    "value": [
+                      0.6,
+                      0.2,
+                      0
+                    ]
+                  },
+                  "incoming": null,
+                  "outgoing": null
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "rigs": {},
+      "skins": {},
+      "morphs": {}
+    }
+  },
+  {
+    "operation": "set_imaging",
+    "imaging": {
+      "pipeline": {
+        "destination": "srgb",
+        "exposure_stops": 0,
+        "tone": "none",
+        "gamut": "clip",
+        "denoiser": null
+      },
+      "views": [
+        {
+          "name": "beauty",
+          "include": null
+        }
+      ],
+      "bakes": [
+        {
+          "name": "floor-normal",
+          "entity": "00000000000000000000000000000004",
+          "width": 16,
+          "height": 16,
+          "pass": "world_normal"
+        }
+      ]
+    }
+  }
+]

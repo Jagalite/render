@@ -1,0 +1,135 @@
+[
+  {
+    "operation": "put_material",
+    "material": {
+      "id": "00000000000000000000000000000002",
+      "base_color": [
+        0.15,
+        0.5,
+        0.8
+      ],
+      "emission": [
+        0,
+        0,
+        0
+      ],
+      "roughness": 1,
+      "metallic": 0,
+      "texture": null
+    }
+  },
+  {
+    "operation": "put_material",
+    "material": {
+      "id": "00000000000000000000000000000003",
+      "base_color": [
+        0.4,
+        0.4,
+        0.4
+      ],
+      "emission": [
+        0,
+        0,
+        0
+      ],
+      "roughness": 1,
+      "metallic": 0,
+      "texture": null
+    }
+  },
+  {
+    "operation": "create_entity",
+    "entity": {
+      "id": "00000000000000000000000000000001",
+      "name": "Animated modeled box",
+      "parent": null,
+      "mesh": null,
+      "material": "00000000000000000000000000000002",
+      "transform": {
+        "columns": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "operations": []
+      }
+    }
+  },
+  {
+    "operation": "create_box",
+    "entity": "00000000000000000000000000000001",
+    "min": [
+      -0.35,
+      -0.35,
+      -0.35
+    ],
+    "max": [
+      0.35,
+      0.35,
+      0.35
+    ]
+  },
+  {
+    "operation": "set_render_settings",
+    "settings": {
+      "width": 64,
+      "height": 48,
+      "samples": 4,
+      "seed": 73,
+      "max_depth": 2,
+      "max_bytes": 16777216,
+      "environment": [
+        0.15,
+        0.15,
+        0.15
+      ],
+      "light": {
+        "position": [
+          -2,
+          4,
+          3
+        ],
+        "intensity": [
+          30,
+          30,
+          30
+        ]
+      },
+      "camera": {
+        "position": [
+          2.5,
+          2,
+          4
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "vertical_fov_radians": 0.65
+      }
+    }
+  }
+]

@@ -1,9 +1,11 @@
-//! Static glTF 2.0 scene profile. No URI resolution or executable metadata.
+//! Bounded glTF 2.0 scene profiles. No URI resolution or executable metadata.
 use crate::{document::*, geometry::*, *};
 use glam::{DAffine3, DMat4, DQuat, DVec3};
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 use std::collections::{BTreeMap, BTreeSet};
+
+mod animated;
 
 pub const MAX_INPUT: usize = 4 * 1024 * 1024;
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -21,6 +23,10 @@ pub struct Report {
     pub source_materials: BTreeMap<usize, Id>,
     pub instances: usize,
     pub unique_meshes: usize,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub source_clips: BTreeMap<usize, Id>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub source_skins: BTreeMap<usize, Id>,
 }
 pub struct Imported {
     pub commands: Vec<Command>,
@@ -167,6 +173,7 @@ struct Accessor<'a> {
     count: usize,
     component: usize,
     width: usize,
+    normalized: bool,
 }
 impl Accessor<'_> {
     fn component(&self, element: usize, axis: usize) -> &[u8] {
@@ -198,8 +205,26 @@ fn accessor<'a>(
     shape: &str,
     axes: usize,
 ) -> Result<Accessor<'a>> {
+    accessor_mode(root, buffers, id, shape, axes, false)
+}
+fn accessor_mode<'a>(
+    root: &Value,
+    buffers: &'a [Vec<u8>],
+    id: usize,
+    shape: &str,
+    axes: usize,
+    allow_normalized: bool,
+) -> Result<Accessor<'a>> {
     let a = at(root, "accessors", id)?;
-    if a.get("sparse").is_some() || a.get("normalized").is_some_and(|v| v != false) {
+    if a.get("extensions").is_some() {
+        return Err(unsupported("accessor extensions"));
+    }
+    let normalized = a
+        .get("normalized")
+        .map(|v| v.as_bool().ok_or_else(|| bad("normalized must be boolean")))
+        .transpose()?
+        .unwrap_or(false);
+    if a.get("sparse").is_some() || (normalized && !allow_normalized) {
         return Err(unsupported("sparse/normalized accessor"));
     }
     if a["type"] != shape {
@@ -262,6 +287,7 @@ fn accessor<'a>(
         count,
         component,
         width,
+        normalized,
     })
 }
 fn transform(node: &Value) -> Result<Transform> {
@@ -357,7 +383,7 @@ fn import_scene_mode(
         "extensionsUsed",
     ] {
         if !(array(&root, key)?.is_empty()
-            || pbr_mode && ["cameras", "textures", "images"].contains(&key))
+            || pbr_mode && ["cameras", "textures", "images", "animations", "skins"].contains(&key))
         {
             return Err(unsupported(&format!(
                 "{key} outside static diffuse scene profile"
@@ -402,6 +428,8 @@ fn import_scene_mode(
         source_materials: BTreeMap::new(),
         instances: 0,
         unique_meshes: 0,
+        source_clips: BTreeMap::new(),
+        source_skins: BTreeMap::new(),
     };
     let mut commands = vec![];
     if !pbr_mode && !policy.allow_lambertian {
@@ -414,7 +442,7 @@ fn import_scene_mode(
     } else {
         report.losses.push("Opt-in Lambertian conversion omits glTF dielectric specular; renderer is two-sided and uses geometric normals. No PBR fidelity claim.".into());
     }
-    report.losses.push("Names are retained; extras and generator metadata are not authored components. Only the selected scene is imported.".into());
+    report.losses.push("Node names are retained; extras and generator metadata are not authored components. Only the selected scene is imported.".into());
     let image_assets = if pbr_mode {
         crate::gltf_materials::images(&root, buffers, external_images)?
     } else {
@@ -506,7 +534,9 @@ fn import_scene_mode(
     let mut primitive_count = 0usize;
     let mut hashes = BTreeSet::new();
     for source_mesh in array(&root, "meshes")? {
-        if source_mesh.get("weights").is_some() || source_mesh.get("extensions").is_some() {
+        if (!pbr_mode && source_mesh.get("weights").is_some())
+            || source_mesh.get("extensions").is_some()
+        {
             return Err(unsupported("mesh weights/extensions"));
         }
         let mut parts = vec![];
@@ -516,7 +546,7 @@ fn import_scene_mode(
                 return Err(Error::new("budget", "64 primitives per import"));
             }
             if p.get("mode").map(index).transpose()?.unwrap_or(4) != 4
-                || p.get("targets").is_some()
+                || (!pbr_mode && p.get("targets").is_some())
                 || p.get("extensions").is_some()
             {
                 return Err(unsupported("only static TRIANGLES primitives"));
@@ -526,7 +556,9 @@ fn import_scene_mode(
                 .ok_or_else(|| bad("primitive attributes missing"))?;
             if attributes.keys().any(|k| {
                 !(["POSITION", "NORMAL", "TEXCOORD_0"].contains(&k.as_str())
-                    || (pbr_mode && k == "TANGENT"))
+                    || (pbr_mode
+                        && ["TANGENT", "JOINTS_0", "WEIGHTS_0", "JOINTS_1", "WEIGHTS_1"]
+                            .contains(&k.as_str())))
             }) {
                 return Err(unsupported(
                     "vertex attribute outside POSITION/NORMAL/TEXCOORD_0",
@@ -733,10 +765,9 @@ fn import_scene_mode(
         if !node.is_object() {
             return Err(bad("node must be an object"));
         }
-        if ["skin", "weights", "camera", "extensions"]
-            .iter()
-            .any(|k| node.get(k).is_some() && !(pbr_mode && *k == "camera"))
-        {
+        if ["skin", "weights", "camera", "extensions"].iter().any(|k| {
+            node.get(k).is_some() && !(pbr_mode && ["camera", "skin", "weights"].contains(k))
+        }) {
             return Err(unsupported("node skin/weights/camera/extensions"));
         }
         let id = identity(document, &source, "node", i)?;
@@ -796,5 +827,8 @@ fn import_scene_mode(
         return Err(bad("selected scene has no mesh instances"));
     }
     report.unique_meshes = hashes.len();
+    if pbr_mode {
+        animated::append(&root, buffers, document, &mut commands, &mut report)?;
+    }
     Ok(Imported { commands, report })
 }

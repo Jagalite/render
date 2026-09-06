@@ -1,0 +1,49 @@
+{
+  "status": "failed",
+  "root": "artifacts/animated-gltf/run-20260906T020916Z",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 1.755062000003818,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 3.2462274999998044,
+      "log": "logs/clippy.txt"
+    },
+    {
+      "name": "native_tests",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 101,
+      "seconds": 394.8012504159997,
+      "log": "logs/native_tests.txt"
+    }
+  ],
+  "scope": "macOS ARM64 CPU/Metal runtime; Rust Wasm tests in Node; Chromium OPFS/CPU/WebGPU runtime; Linux/Windows compile only"
+}

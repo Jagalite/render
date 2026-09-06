@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "reproduced": [
+    "character.gltf",
+    "character.bin",
+    "character.glb"
+  ],
+  "generator": "python3 fixtures/animated-gltf/generate.py artifacts/animated-gltf/reproduction-02",
+  "failed_original": "generated-initial/"
+}

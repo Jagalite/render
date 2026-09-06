@@ -1,0 +1,181 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/crates/core)
+error: float literals must have an integer part
+  --> crates/core/tests/animated_gltf.rs:27:25
+   |
+27 |     let weight=if t<1. {.25} else if t<2. {1.} else {0.};
+   |                         ^^^
+   |
+help: must have an integer part
+   |
+27 |     let weight=if t<1. {0.25} else if t<2. {1.} else {0.};
+   |                         +
+
+error: float literals must have an integer part
+  --> crates/core/tests/animated_gltf.rs:29:26
+   |
+29 |     let shift=DVec3::new(.2*t,0.,0.);
+   |                          ^^
+   |
+help: must have an integer part
+   |
+29 |     let shift=DVec3::new(0.2*t,0.,0.);
+   |                          +
+
+error: float literals must have an integer part
+  --> crates/core/tests/animated_gltf.rs:30:26
+   |
+30 |     let pivot=DVec3::new(.25,1.,0.);
+   |                          ^^^
+   |
+help: must have an integer part
+   |
+30 |     let pivot=DVec3::new(0.25,1.,0.);
+   |                          +
+
+error: float literals must have an integer part
+  --> crates/core/tests/animated_gltf.rs:31:22
+   |
+31 |     vec![DVec3::new(-.5,0.,0.)+shift,DVec3::new(.5,0.,0.)+shift,
+   |                      ^^
+   |
+help: must have an integer part
+   |
+31 |     vec![DVec3::new(-0.5,0.,0.)+shift,DVec3::new(.5,0.,0.)+shift,
+   |                      +
+
+error: float literals must have an integer part
+  --> crates/core/tests/animated_gltf.rs:31:49
+   |
+31 |     vec![DVec3::new(-.5,0.,0.)+shift,DVec3::new(.5,0.,0.)+shift,
+   |                                                 ^^
+   |
+help: must have an integer part
+   |
+31 |     vec![DVec3::new(-.5,0.,0.)+shift,DVec3::new(0.5,0.,0.)+shift,
+   |                                                 +
+
+error: float literals must have an integer part
+  --> crates/core/tests/animated_gltf.rs:32:24
+   |
+32 |         q*(DVec3::new(-.5-.2*weight,2.,.2*weight)-pivot)+pivot+shift,
+   |                        ^^
+   |
+help: must have an integer part
+   |
+32 |         q*(DVec3::new(-0.5-.2*weight,2.,.2*weight)-pivot)+pivot+shift,
+   |                        +
+
+error: float literals must have an integer part
+  --> crates/core/tests/animated_gltf.rs:32:27
+   |
+32 |         q*(DVec3::new(-.5-.2*weight,2.,.2*weight)-pivot)+pivot+shift,
+   |                           ^^
+   |
+help: must have an integer part
+   |
+32 |         q*(DVec3::new(-.5-0.2*weight,2.,.2*weight)-pivot)+pivot+shift,
+   |                           +
+
+error: float literals must have an integer part
+  --> crates/core/tests/animated_gltf.rs:32:40
+   |
+32 |         q*(DVec3::new(-.5-.2*weight,2.,.2*weight)-pivot)+pivot+shift,
+   |                                        ^^
+   |
+help: must have an integer part
+   |
+32 |         q*(DVec3::new(-.5-.2*weight,2.,0.2*weight)-pivot)+pivot+shift,
+   |                                        +
+
+error: float literals must have an integer part
+  --> crates/core/tests/animated_gltf.rs:33:23
+   |
+33 |         q*(DVec3::new(.5+.2*weight,2.,.2*weight)-pivot)+pivot+shift]
+   |                       ^^
+   |
+help: must have an integer part
+   |
+33 |         q*(DVec3::new(0.5+.2*weight,2.,.2*weight)-pivot)+pivot+shift]
+   |                       +
+
+error: float literals must have an integer part
+  --> crates/core/tests/animated_gltf.rs:33:26
+   |
+33 |         q*(DVec3::new(.5+.2*weight,2.,.2*weight)-pivot)+pivot+shift]
+   |                          ^^
+   |
+help: must have an integer part
+   |
+33 |         q*(DVec3::new(.5+0.2*weight,2.,.2*weight)-pivot)+pivot+shift]
+   |                          +
+
+error: float literals must have an integer part
+  --> crates/core/tests/animated_gltf.rs:33:39
+   |
+33 |         q*(DVec3::new(.5+.2*weight,2.,.2*weight)-pivot)+pivot+shift]
+   |                                       ^^
+   |
+help: must have an integer part
+   |
+33 |         q*(DVec3::new(.5+.2*weight,2.,0.2*weight)-pivot)+pivot+shift]
+   |                                       +
+
+error: no rules expected `.`
+  --> crates/core/tests/animated_gltf.rs:75:47
+   |
+75 |         |v,_|v["meshes"][0]["weights"]=json!([.2,.3]),
+   |                                               ^ no rules expected this token in macro call
+   |
+   = note: while trying to match end of macro
+
+error: no rules expected `.`
+   --> crates/core/tests/animated_gltf.rs:101:41
+    |
+101 |     value["nodes"][2]["weights"]=json!([.5]);
+    |                                         ^ no rules expected this token in macro call
+    |
+    = note: while trying to match end of macro
+
+error: float literals must have an integer part
+   --> crates/core/tests/animated_gltf.rs:105:66
+    |
+105 |     let p=points(&out.snapshot,entity);assert!((p[0]-DVec3::new(-.25,0.,0.)).length()<1e-9);assert!((p[2]-DVec3::new(-.3,3.,.05)).l...
+    |                                                                  ^^^
+    |
+help: must have an integer part
+    |
+105 |     let p=points(&out.snapshot,entity);assert!((p[0]-DVec3::new(-0.25,0.,0.)).length()<1e-9);assert!((p[2]-DVec3::new(-.3,3.,.05)).length()<1e-7);
+    |                                                                  +
+
+error: float literals must have an integer part
+   --> crates/core/tests/animated_gltf.rs:105:119
+    |
+105 |     let p=points(&out.snapshot,entity);assert!((p[0]-DVec3::new(-.25,0.,0.)).length()<1e-9);assert!((p[2]-DVec3::new(-.3,3.,.05)).l...
+    |                                                                                                                       ^^
+    |
+help: must have an integer part
+    |
+105 |     let p=points(&out.snapshot,entity);assert!((p[0]-DVec3::new(-.25,0.,0.)).length()<1e-9);assert!((p[2]-DVec3::new(-0.3,3.,.05)).length()<1e-7);
+    |                                                                                                                       +
+
+error: float literals must have an integer part
+   --> crates/core/tests/animated_gltf.rs:105:125
+    |
+105 |     let p=points(&out.snapshot,entity);assert!((p[0]-DVec3::new(-.25,0.,0.)).length()<1e-9);assert!((p[2]-DVec3::new(-.3,3.,.05)).l...
+    |                                                                                                                             ^^^
+    |
+help: must have an integer part
+    |
+105 |     let p=points(&out.snapshot,entity);assert!((p[0]-DVec3::new(-.25,0.,0.)).length()<1e-9);assert!((p[2]-DVec3::new(-.3,3.,0.05)).length()<1e-7);
+    |                                                                                                                             +
+
+error: no rules expected `.`
+   --> crates/core/tests/animated_gltf.rs:107:80
+    |
+107 |     assert_eq!(s.animation.as_ref().unwrap().morphs[&entity][0].default_weight,.5);
+    |                                                                                ^ no rules expected this token in macro call
+    |
+note: while trying to match meta-variable `$right:expr`
+   --> /rustc/59807616e1fa2540724bfbac14d7976d7e4a3860/library/core/src/macros/mod.rs:43:17
+
+error: could not compile `render-core` (test "animated_gltf") due to 17 previous errors

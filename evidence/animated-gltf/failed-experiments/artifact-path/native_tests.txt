@@ -1,0 +1,254 @@
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 7 tests
+test importer_rejects_truncation_unsupported_features_and_invalid_accessors ... ok
+test real_glb_and_gltf_preserve_indexed_geometry_and_hierarchy ... ok
+test importer_unsigned_index_widths_multiple_primitives_and_invalid_transforms ... ok
+test durable_agent_retry_checks_target_and_retained_metadata ... ok
+test agent_admission_and_durable_dispatch_are_atomic_and_versioned ... ok
+test restricted_variants_reject_scope_budget_conflicts_cancellation_and_unrendered_selection ... ok
+test three_restricted_variants_render_and_commit_durably_with_lost_ack_retry ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.21s
+
+
+running 5 tests
+test absolute_nonuniform_scale_cubic_quaternions_and_vector_morph_channels ... ok
+test skin_specific_inverse_binds_defaults_and_multiple_imports_are_preserved ... ok
+test external_khronos_character_imports_and_renders_at_random_times ... ok
+test malformed_and_unsupported_animation_inputs_fail_without_publication ... ok
+test imported_character_matches_analytic_skin_morph_and_absolute_channels ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+
+
+running 7 tests
+test rational_time_and_interpolation_preserve_authored_modes ... ok
+test clip_random_access_retime_conflicts_and_cancellation ... ok
+test bind_affine_scale_shear_and_two_bone_solver_diagnostics ... ok
+test quaternion_layer_schema_gate_and_transaction_upgrade ... ok
+test weighted_affine_skinning_and_morph_have_independent_numeric_expectations ... ok
+test shutter_sequence_pinned_revisions_partial_output_and_agent_preview ... ok
+test character_skin_morph_transaction_random_access_and_native_state_recovery ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.91s
+
+
+running 35 tests
+test diffuse_energy_pdf_and_sample_mean ... ok
+test cancelled_jobs_release_queue_capacity_and_retries_preserve_events ... ok
+test concave_polygon_area_and_degeneracy ... ok
+test canonical_order_independent_of_table_layout ... ok
+test empty_scene_environment_is_analytic ... ok
+test jobs_events_cancellation_and_recovery ... ok
+test identity_and_rational_time ... ok
+test journal_sequence_is_checked ... ok
+test malformed_topology_rejected ... ok
+test diffuse_plane_radiance_matches_analytic_solution ... ok
+test foreign_edit_handle_and_hostile_accessor_are_rejected ... ok
+test later_layer_restores_hidden_geometry ... ok
+test mesh_preserves_seams_and_loose_elements ... ok
+test obj_and_gltf_profiles_roundtrip ... ok
+test ordered_transform_channels_and_external_texture ... ok
+test negative_shear_parent_and_layer_semantics ... ok
+test binary_mesh_chunks_preserve_precision_and_reject_truncation ... ok
+test radial_nonmanifold_and_generation_safety ... ok
+test render_reproducibility_and_color_boundaries ... ok
+test renderer_reuses_geometry_after_transform ... ok
+test durable_failure_quota_recovery_and_idempotency ... ok
+test durable_host_metadata_cannot_be_overwritten_by_stale_snapshot ... ok
+test durable_retry_publishes_to_the_requested_store ... ok
+test staged_upload_permissions_checksums_and_budget ... ok
+test snapshots_copy_only_changed_entity_chunk ... ok
+test storage_crash_child ... ok
+test triangle_bvh_and_parallel_slab_analytic ... ok
+test retries_wire_permissions_and_budgets ... ok
+test shared_browser_suite ... ok
+test transactions_are_atomic_and_revision_checked ... ok
+test unsupported_scattering_is_diagnosed ... ok
+
+running 1 test
+test native_mesh_chunks_deduplicate_and_detect_corruption ... ok
+
+running 1 test
+
+running 1 test
+
+running 1 test
+test native_publication_fault_boundaries ... ok
+test process_termination_recovers_committed_root ... ok
+test prepared_noop_candidates_cannot_overfill_retention ... ok
+
+test result: ok. 35 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 6.66s
+
+
+running 4 tests
+test curve_failures_budgets_cancellation_and_schema_versions ... ok
+test spline_basis_and_rational_knot_insertion_match_analytic_geometry ... ok
+test authored_geometry_transactions_recovery_visibility_and_render ... ok
+test generated_tubes_and_point_spheres_are_closed_and_outward ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.18s
+
+
+running 3 tests
+test displacement_loose_data_and_root_evaluation_cancellation ... ok
+test displacement_metric_height_subdivision_convergence_and_limits ... ok
+test surface_displacement_cache_transactions_and_recovery ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.18s
+
+
+running 2 tests
+test groom_root_topology_failures_permissions_cancellation_and_budgets ... ok
+test groom_authored_children_deformation_cache_visibility_and_roundtrip ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.35s
+
+
+running 6 tests
+test box_operators_reject_inward_shells ... ok
+test bridge_dissolve_attribute_transfer_invalid_selection_budget_and_cancel ... ok
+test primitives_extrude_inset_split_weld_and_correspondence ... ok
+test subdivision_mirror_array_solidify_and_box_csg_numeric ... ok
+test direct_modeling_transactions_and_field_cycle_domain_resource_diagnostics ... ok
+test procedural_groups_fields_direct_parity_bake_recovery_and_stale_edits ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.16s
+
+
+running 4 tests
+test color_profiles_numeric_white_primaries_and_signed_roundtrip ... ok
+test world_normal_bake_tracks_reflected_winding ... ok
+test denoiser_preserves_constant_regions_and_object_edges_reduces_variance ... ok
+test authored_views_passes_bakes_roundtrip_invalid_atlas_and_stale_requests ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.24s
+
+
+running 4 tests
+test dielectric_snell_fresnel_and_total_internal_reflection ... ok
+test alpha_coverage_and_ideal_glass_render_analytic_environment ... ok
+test dielectric_closed_interface_furnace_and_mixed_media_integration ... ok
+test coated_conductor_reciprocity_furnace_and_pdf_sampling ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.39s
+
+
+running 5 tests
+test encoded_images_roles_wrap_filters_and_mips ... ok
+test tangent_handedness_inverse_transpose_culling_and_jpeg_workflow ... ok
+test authored_camera_selection_clipping_and_protection ... ok
+test static_pbr_transaction_roundtrip_render_and_failures ... ok
+test ggx_analytic_reciprocity_energy_and_sampling ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.43s
+
+
+running 4 tests
+test media_invalid_input_budget_and_cancellation ... ok
+test beer_emission_overlap_scale_and_sparse_boundaries ... ok
+test phase_normalization_and_single_scatter_quadrature_convergence ... ok
+test volume_document_roundtrip_transactions_visibility_and_render ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.43s
+
+
+running 1 test
+test tests::lifecycle_and_stale_buffers ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.11s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 5 tests
+test project_cli::tests::cancellation_is_checked_after_preparation_but_not_inside_admitted_commit ... ok
+test job_host::tests::second_host_cannot_recover_an_active_worker ... ok
+test job_host::tests::jobs_pin_the_document_written_through_the_project_api ... ok
+test job_host::tests::pinned_variant_jobs_reject_changed_retries_and_recover_terminal_events ... ok
+test job_host::tests::durable_jobs_survive_reopen_and_cancel ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.64s
+
+
+running 7 tests
+test ordinary_api_and_project_cli_produce_equivalent_deltas_and_retry_receipts ... ok
+test import_files_are_explicit_bounded_transactional_and_retryable ... ok
+test stale_invalid_cancelled_and_existing_paths_never_replace_authored_state ... ok
+test animated_glb_import_is_retryable_cancellable_and_preserves_existing_animation ... ok
+test gpu_profile_preflight_deadline_and_authored_names_have_safe_output_semantics ... ok
+test sequence_cancellation_preserves_completed_bundles_and_source_revision ... ok
+test general_cli_authors_models_animates_renders_and_recovers_without_demo_commands ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.03s
+
+
+running 1 test
+test path::tests::generated_traversal_and_shading_validate ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.26s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/crates/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 14.94s
+     Running unittests src/lib.rs (target/debug/deps/render_core-4a04a93dd276f2cf)
+     Running tests/agent_workflow.rs (target/debug/deps/agent_workflow-84205a3567a67882)
+     Running tests/animated_gltf.rs (target/debug/deps/animated_gltf-0c61c632b0e4c07e)
+     Running tests/animation.rs (target/debug/deps/animation-d67c503095433448)
+     Running tests/conformance.rs (target/debug/deps/conformance-af9a3b187ba96f11)
+     Running tests/curves.rs (target/debug/deps/curves-5aa113aebbec4bc7)
+     Running tests/displacement.rs (target/debug/deps/displacement-6c3ede1022bebd97)
+     Running tests/groom.rs (target/debug/deps/groom-2dbb8f968cd505c8)
+     Running tests/modeling.rs (target/debug/deps/modeling-bc7aa88bd4f44526)
+     Running tests/products.rs (target/debug/deps/products-710b1db3659c7735)
+     Running tests/scattering.rs (target/debug/deps/scattering-9ec73747ebda7614)
+     Running tests/static_pbr.rs (target/debug/deps/static_pbr-0dffccaee6262c5c)
+     Running tests/volumes.rs (target/debug/deps/volumes-53bec713e0480ac9)
+     Running unittests src/lib.rs (target/debug/deps/render_ffi-19a3cc9c91e8ba84)
+     Running unittests src/lib.rs (target/debug/deps/render_gpu-234f4c0060fdcd2a)
+     Running unittests src/main.rs (target/debug/deps/render_host-6fb47bdccc6f9621)
+     Running tests/project_cli.rs (target/debug/deps/project_cli-f7bc8f0b90a7c7e5)
+     Running unittests src/lib.rs (target/debug/deps/render_kernel-0dfb0c7cb577f614)
+     Running unittests src/lib.rs (target/debug/deps/render_web-b8315143d132e9fc)
+   Doc-tests render_core
+   Doc-tests render_ffi
+   Doc-tests render_gpu
+   Doc-tests render_kernel
+   Doc-tests render_web

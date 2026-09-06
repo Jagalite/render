@@ -1,0 +1,134 @@
+{
+  "status": "failed",
+  "root": "artifacts/project-cli/run-20260906T013009Z",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 1.511227165996388,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 3.2954265420048614,
+      "log": "logs/clippy.txt"
+    },
+    {
+      "name": "native_tests",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 210.5523420410027,
+      "log": "logs/native_tests.txt"
+    },
+    {
+      "name": "linux_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-unknown-linux-gnu",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 7.396294833000866,
+      "log": "logs/linux_check.txt"
+    },
+    {
+      "name": "windows_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-pc-windows-msvc",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 7.28896687499946,
+      "log": "logs/windows_check.txt"
+    },
+    {
+      "name": "browser_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-web",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 11.281754875002662,
+      "log": "logs/browser_check.txt"
+    },
+    {
+      "name": "native_build",
+      "command": [
+        "cargo",
+        "build",
+        "-p",
+        "render-host",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 5.696580666997761,
+      "log": "logs/native_build.txt"
+    },
+    {
+      "name": "dependency_audit",
+      "command": [
+        "python3",
+        "scripts/dependency-audit.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7866071250027744,
+      "log": "logs/dependency_audit.txt"
+    },
+    {
+      "name": "workflow",
+      "command": [
+        "python3",
+        "scripts/project-cli-workflow.py",
+        "artifacts/project-cli/run-20260906T013009Z/workflow",
+        "--gpu"
+      ],
+      "exit_code": 1,
+      "seconds": 12.136597666001762,
+      "log": "logs/workflow.txt"
+    }
+  ],
+  "base": "d2b34a6",
+  "scope": "macOS ARM64 native CPU/Metal runtime; Linux/Windows host compile; browser compile plus unchanged shared-core proof against prior native/Wasm validation."
+}

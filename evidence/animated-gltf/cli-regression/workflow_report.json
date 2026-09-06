@@ -1,0 +1,489 @@
+{
+  "status": "passed",
+  "profile": "project-cli-v0",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/000-init.json"
+      ],
+      "seconds": 5.893653667000763,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "create-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/001-create-base.json"
+      ],
+      "seconds": 0.02905287499743281,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "create",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/002-create.json"
+      ],
+      "seconds": 0.11045358399860561,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/003-inspect.json"
+      ],
+      "seconds": 0.015425792000314686,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "bevel-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/004-bevel-base.json"
+      ],
+      "seconds": 0.0129488329985179,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "bevel",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/005-bevel.json"
+      ],
+      "seconds": 0.1521530000027269,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/006-inspect.json"
+      ],
+      "seconds": 0.026325500002712943,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "import-obj",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/007-import-obj.json"
+      ],
+      "seconds": 0.14209304199903272,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "animate-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/008-animate-base.json"
+      ],
+      "seconds": 0.03826062499865657,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "animate",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/009-animate.json"
+      ],
+      "seconds": 0.15132295900548343,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "authored",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/010-authored.json"
+      ],
+      "seconds": 0.04771033400174929,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-0",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/011-evaluate-0.json"
+      ],
+      "seconds": 0.04826445799699286,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-2",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/012-evaluate-2.json"
+      ],
+      "seconds": 0.047455166997679044,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-4",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/013-evaluate-4.json"
+      ],
+      "seconds": 0.04753375000291271,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-1",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/014-evaluate-1.json"
+      ],
+      "seconds": 0.04730583399941679,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-3",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/015-evaluate-3.json"
+      ],
+      "seconds": 0.047598584002116695,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-2",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/016-evaluate-2.json"
+      ],
+      "seconds": 0.04728400000021793,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/017-render.json"
+      ],
+      "seconds": 0.3041359580020071,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20054016,
+        "peak memory footprint": 4785280
+      }
+    },
+    {
+      "name": "frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/018-frame.json"
+      ],
+      "seconds": 0.44625729200197384,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20496384,
+        "peak memory footprint": 5014656
+      }
+    },
+    {
+      "name": "sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/019-sequence.json"
+      ],
+      "seconds": 1.8774682079965714,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20561920,
+        "peak memory footprint": 5080192
+      }
+    },
+    {
+      "name": "products",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/020-products.json"
+      ],
+      "seconds": 0.4511505840055179,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20725760,
+        "peak memory footprint": 5162112
+      }
+    },
+    {
+      "name": "export-document",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/021-export-document.json"
+      ],
+      "seconds": 0.14702116700209444,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restore",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/restored",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/022-restore.json"
+      ],
+      "seconds": 0.18786570800148183,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "reopened",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/restored",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/023-reopened.json"
+      ],
+      "seconds": 0.03390770799887832,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "export-obj",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/024-export-obj.json"
+      ],
+      "seconds": 0.18471362499985844,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "stale-render",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/025-stale-render.json"
+      ],
+      "seconds": 0.044427708999137394,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "cancel-evaluation",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/026-cancel-evaluation.json"
+      ],
+      "seconds": 0.006601583998417482,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "output-budget",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/027-output-budget.json"
+      ],
+      "seconds": 0.1498290410017944,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "existing-output",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/028-existing-output.json"
+      ],
+      "seconds": 0.044015208004566375,
+      "exit_code": 1,
+      "expected_error": "output_exists"
+    },
+    {
+      "name": "gpu-depth-rejection",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/029-gpu-depth-rejection.json"
+      ],
+      "seconds": 0.08980016699933913,
+      "exit_code": 1,
+      "expected_error": "unsupported_profile"
+    },
+    {
+      "name": "gpu-restore",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/gpu-project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/030-gpu-restore.json"
+      ],
+      "seconds": 0.17340758300269954,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "gpu-base",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/gpu-project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/031-gpu-base.json"
+      ],
+      "seconds": 0.023992499998712447,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "gpu-profile-settings",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/gpu-project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/032-gpu-profile-settings.json"
+      ],
+      "seconds": 0.13098850000096718,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "gpu-cpu-reference",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/gpu-project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/033-gpu-cpu-reference.json"
+      ],
+      "seconds": 0.29349058299703756,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20201472,
+        "peak memory footprint": 4932736
+      }
+    },
+    {
+      "name": "gpu-render",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/gpu-project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/034-gpu-render.json"
+      ],
+      "seconds": 0.3641744589986047,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 35930112,
+        "peak memory footprint": 11585152
+      }
+    },
+    {
+      "name": "final",
+      "command": [
+        "/Volumes/seed2/Projects/render/target/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/project",
+        "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/requests/035-final.json"
+      ],
+      "seconds": 0.05236266700376291,
+      "exit_code": 0,
+      "expected_error": null
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "cpu_gpu": {
+    "linear_rmse": 7.339668826118408e-09,
+    "object_mismatches": 0,
+    "authored_revision": "sha256:25f3027b64cc72f5da6b0c864ac1491bb4e7bfa607c6868d8831b652194187ed",
+    "max_depth": 1,
+    "unsupported_depth_two_rejected": true
+  },
+  "revision": "sha256:4ec93862c2775b928a54e934179300aa4e01962224e559dcb8348c9da7e13d8e",
+  "random_access": true,
+  "restore_equal": true,
+  "rendering_preserves_source": true,
+  "sequence_frames": 5,
+  "fixture": "fixtures/project-cli",
+  "dependency_delta": "none"
+}

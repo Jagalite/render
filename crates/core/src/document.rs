@@ -346,7 +346,8 @@ impl Snapshot {
         Ok(digest(&canonical(self)?))
     }
     pub fn validate(&self) -> Result<()> {
-        if self.version > 10
+        if self.version > 11
+            || (self.version < 11 && self.animation.as_ref().is_some_and(|a| a.needs_v11()))
             || (self.version < 10
                 && (!self.procedural_assets.is_empty()
                     || !self.procedural_bindings.is_empty()
@@ -704,6 +705,9 @@ pub enum Command {
     },
     SetImaging {
         imaging: Option<crate::products::State>,
+    },
+    MergeAnimation {
+        animation: crate::animation::State,
     },
     SetAnimation {
         animation: Option<crate::animation::State>,
@@ -1114,7 +1118,19 @@ fn apply(s: &mut Snapshot, c: &Command) -> Result<()> {
         }
         Command::SetAnimation { animation } => {
             s.animation = animation.clone();
-            s.version = s.version.max(6);
+            s.version = s
+                .version
+                .max(if animation.as_ref().is_some_and(|a| a.needs_v11()) {
+                    11
+                } else {
+                    6
+                });
+        }
+        Command::MergeAnimation { animation } => {
+            s.animation
+                .get_or_insert_with(Default::default)
+                .merge(animation)?;
+            s.version = s.version.max(if animation.needs_v11() { 11 } else { 6 });
         }
         Command::SetGroom { entity: id, groom } => {
             entity(s, *id)?;

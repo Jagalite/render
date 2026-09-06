@@ -1,0 +1,120 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:cd2093ad0c5c00b088c74586f0a7b4363df1694ce34c98f567773231b103efa6",
+      "idempotency_key": "cli-workflow:animate",
+      "commands": [
+        {
+          "operation": "set_animation",
+          "animation": {
+            "clips": {
+              "0000000000000000000000000000000a": {
+                "id": "0000000000000000000000000000000a",
+                "start": {
+                  "numerator": 0,
+                  "denominator": 1
+                },
+                "end": {
+                  "numerator": 1,
+                  "denominator": 1
+                },
+                "extrapolation": "clamp",
+                "remap": {
+                  "rate": {
+                    "numerator": 1,
+                    "denominator": 1
+                  },
+                  "offset": {
+                    "numerator": 0,
+                    "denominator": 1
+                  }
+                },
+                "tracks": [
+                  {
+                    "id": "0000000000000000000000000000000b",
+                    "target": {
+                      "kind": "entity",
+                      "entity": "00000000000000000000000000000001"
+                    },
+                    "property": {
+                      "kind": "translation"
+                    },
+                    "interpolation": "linear",
+                    "keys": [
+                      {
+                        "time": {
+                          "numerator": 0,
+                          "denominator": 1
+                        },
+                        "value": {
+                          "kind": "vector",
+                          "value": [
+                            -0.6,
+                            0,
+                            0
+                          ]
+                        },
+                        "incoming": null,
+                        "outgoing": null
+                      },
+                      {
+                        "time": {
+                          "numerator": 1,
+                          "denominator": 1
+                        },
+                        "value": {
+                          "kind": "vector",
+                          "value": [
+                            0.6,
+                            0.2,
+                            0
+                          ]
+                        },
+                        "incoming": null,
+                        "outgoing": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "rigs": {},
+            "skins": {},
+            "morphs": {}
+          }
+        },
+        {
+          "operation": "set_imaging",
+          "imaging": {
+            "pipeline": {
+              "destination": "srgb",
+              "exposure_stops": 0,
+              "tone": "none",
+              "gamut": "clip",
+              "denoiser": null
+            },
+            "views": [
+              {
+                "name": "beauty",
+                "include": null
+              }
+            ],
+            "bakes": [
+              {
+                "name": "floor-normal",
+                "entity": "00000000000000000000000000000004",
+                "width": 16,
+                "height": 16,
+                "pass": "world_normal"
+              }
+            ]
+          }
+        }
+      ],
+      "max_added_bytes": 8388608
+    }
+  }
+}

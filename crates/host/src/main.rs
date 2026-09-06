@@ -7,6 +7,7 @@ use render_core::{
 mod agent_workflow;
 mod job_host;
 mod milestone_workflow;
+mod project_cli;
 mod static_pbr;
 use std::{
     fs,
@@ -71,6 +72,21 @@ fn main() {
 fn run() -> Result<()> {
     let args = std::env::args().skip(1).collect::<Vec<_>>();
     match args.first().map(String::as_str) {
+        Some("project") => {
+            if args.len() == 2 && args[1] == "--help" {
+                print!("{}", project_cli::help());
+                return Ok(());
+            }
+            if args.len() != 3 {
+                return Err(Error::new(
+                    "usage",
+                    "render-host project <project-directory> <request.json|->",
+                ));
+            }
+            let value = project_cli::run(Path::new(&args[1]), &args[2])?;
+            println!("{}", serde_json::to_string(&value)?);
+            Ok(())
+        }
         Some("agent") => {
             let root = Path::new(
                 args.get(1)
@@ -200,7 +216,7 @@ fn run() -> Result<()> {
         ),
         _ => Err(Error::new(
             "usage",
-            "render-host agent <project> | agent-workflow [GLB] [output] [--gpu] | demo [directory] [--gpu] | verify [directory] [--gpu] | kernel | api <project> | jobs <project> | serve [web-root] [port]",
+            "render-host project <project> <request.json|-> | agent <project> | agent-workflow [GLB] [output] [--gpu] | demo [directory] [--gpu] | verify [directory] [--gpu] | kernel | api <project> | jobs <project> | serve [web-root] [port]",
         )),
     }
 }

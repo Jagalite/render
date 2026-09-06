@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "new_runtime_dependencies": [],
+  "lockfile_sha256": "4f6c11c32e966f791611b40cf7773771ecc0bef6491cb1cd484a4369c75bc59d",
+  "dependency_inventory": "dependency_inventory.json",
+  "shared_source_integrity": "shared_source_integrity.json",
+  "synthetic_fixture": "fixtures/project-cli/provenance.json",
+  "external_fixture_provenance": "fixtures/static-pbr/*/provenance.json",
+  "external_fixture_files_unchanged_from_base": [
+    "fixtures/static-pbr/BoxTextured/BoxTextured.glb",
+    "fixtures/static-pbr/BoxTextured/BoxTextured.gltf",
+    "fixtures/static-pbr/BoxTextured/BoxTextured0.bin",
+    "fixtures/static-pbr/BoxTextured/CesiumLogoFlat.png",
+    "fixtures/static-pbr/BoxTextured/LicenseRef-LegalMark-Cesium.txt",
+    "fixtures/static-pbr/BoxTextured/UPSTREAM_README.md",
+    "fixtures/static-pbr/BoxTextured/provenance.json",
+    "fixtures/static-pbr/NormalTangentMirrorTest/NormalTangentMirrorTest.bin",
+    "fixtures/static-pbr/NormalTangentMirrorTest/NormalTangentMirrorTest.glb",
+    "fixtures/static-pbr/NormalTangentMirrorTest/NormalTangentMirrorTest.gltf",
+    "fixtures/static-pbr/NormalTangentMirrorTest/NormalTangentMirrorTest_BaseColor.png",
+    "fixtures/static-pbr/NormalTangentMirrorTest/NormalTangentMirrorTest_Normal.png",
+    "fixtures/static-pbr/NormalTangentMirrorTest/NormalTangentMirrorTest_OcclusionRoughnessMetallic.png",
+    "fixtures/static-pbr/NormalTangentMirrorTest/UPSTREAM_README.md",
+    "fixtures/static-pbr/NormalTangentMirrorTest/provenance.json",
+    "fixtures/static-pbr/README.md"
+  ],
+  "native_environment": "Existing Rust filesystem/process and Metal exceptions; no new foreign computational runtime."
+}

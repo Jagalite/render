@@ -1,0 +1,17 @@
+init: passed
+inspect: passed
+import: passed
+retry: passed
+inspect: passed
+static-defaults: passed
+evaluate-2: passed
+evaluate-0: passed
+Traceback (most recent call last):
+  File "/Volumes/seed2/Projects/render/scripts/animated-gltf-workflow.py", line 84, in <module>
+    call('evaluate-'+str(n),{'method':'evaluate','revision':revision,'at':{'clip':clip,'time':rational(n,2)}})
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/seed2/Projects/render/scripts/animated-gltf-workflow.py", line 49, in call
+    assert result.returncode==0,result.stderr
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: {"code":"degenerate","stage":"validation","message":"polygon has zero area","retryable":false,"context":{}}
+

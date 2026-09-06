@@ -95,6 +95,17 @@ pub enum Property {
     Euler { order: RotationOrder },
     Quaternion,
     MorphWeight,
+    AbsoluteTranslation,
+    AbsoluteScale,
+    AbsoluteQuaternion,
+}
+impl Property {
+    pub fn is_absolute(self) -> bool {
+        matches!(
+            self,
+            Self::AbsoluteTranslation | Self::AbsoluteScale | Self::AbsoluteQuaternion
+        )
+    }
 }
 #[derive(Clone, Copy, Debug, PartialEq, Serialize, Deserialize)]
 #[serde(tag = "kind", content = "value", rename_all = "snake_case")]
@@ -159,7 +170,7 @@ impl Track {
             ));
         }
         let kind = match self.property {
-            Property::Quaternion => 2,
+            Property::Quaternion | Property::AbsoluteQuaternion => 2,
             Property::MorphWeight => 0,
             _ => 1,
         };
@@ -313,6 +324,7 @@ pub struct Pose {
     pub translation: Option<[f64; 3]>,
     pub scale: Option<[f64; 3]>,
     pub rotation: Option<TransformOp>,
+    pub absolute: bool,
 }
 impl Pose {
     pub fn affine(&self) -> Result<DAffine3> {
@@ -328,14 +340,29 @@ impl Pose {
         }
         t.affine()
     }
+    pub(crate) fn apply(&self, rest: DAffine3) -> Result<DAffine3> {
+        if self.absolute
+            && (self.translation.is_none() || self.scale.is_none() || self.rotation.is_none())
+        {
+            return Err(Error::new("channel", "absolute pose requires complete TRS"));
+        }
+        Ok(if self.absolute {
+            self.affine()?
+        } else {
+            rest * self.affine()?
+        })
+    }
     fn set(&mut self, property: Property, value: Value) -> Result<()> {
+        self.absolute = property.is_absolute();
         match (property, value) {
-            (Property::Translation, Value::Vector(v)) => self.translation = Some(v),
-            (Property::Scale, Value::Vector(v)) => self.scale = Some(v),
+            (Property::Translation | Property::AbsoluteTranslation, Value::Vector(v)) => {
+                self.translation = Some(v)
+            }
+            (Property::Scale | Property::AbsoluteScale, Value::Vector(v)) => self.scale = Some(v),
             (Property::Euler { order }, Value::Vector(angles)) => {
                 self.rotation = Some(TransformOp::RotationRadians { angles, order })
             }
-            (Property::Quaternion, Value::Quaternion(q)) => {
+            (Property::Quaternion | Property::AbsoluteQuaternion, Value::Quaternion(q)) => {
                 self.rotation = Some(TransformOp::Quaternion(q))
             }
             _ => return Err(Error::new("channel", "pose value/property mismatch")),
@@ -360,6 +387,7 @@ impl Clip {
         }
         let mut ids = BTreeSet::new();
         let mut targets = BTreeSet::new();
+        let mut spaces = BTreeMap::<Target, (bool, usize)>::new();
         let mut keys = 0;
         for t in &self.tracks {
             t.validate()?;
@@ -368,11 +396,21 @@ impl Clip {
                 return Err(Error::new("budget", "clip key budget exceeded"));
             }
             let p = match t.property {
-                Property::Translation => 0,
-                Property::Scale => 1,
-                Property::Euler { .. } | Property::Quaternion => 2,
+                Property::Translation | Property::AbsoluteTranslation => 0,
+                Property::Scale | Property::AbsoluteScale => 1,
+                Property::Euler { .. } | Property::Quaternion | Property::AbsoluteQuaternion => 2,
                 Property::MorphWeight => 3,
             };
+            let space = spaces
+                .entry(t.target)
+                .or_insert((t.property.is_absolute(), 0));
+            if space.0 != t.property.is_absolute() {
+                return Err(Error::new(
+                    "channel",
+                    "cannot mix absolute and delta channels on one target",
+                ));
+            }
+            space.1 += 1;
             if !ids.insert(t.id) || !targets.insert((t.target, p)) {
                 return Err(Error::new(
                     "channel",
@@ -385,6 +423,15 @@ impl Clip {
             {
                 return Err(Error::new("time", "channel keys outside clip bounds"));
             }
+        }
+        if spaces
+            .values()
+            .any(|(absolute, count)| *absolute && *count != 3)
+        {
+            return Err(Error::new(
+                "channel",
+                "absolute transforms require translation, quaternion and scale tracks",
+            ));
         }
         Ok(())
     }
@@ -463,6 +510,34 @@ fn entity_mesh(s: &Snapshot, id: Id) -> Result<&crate::geometry::Mesh> {
         })
 }
 impl State {
+    pub fn needs_v11(&self) -> bool {
+        self.clips
+            .values()
+            .any(|c| c.tracks.iter().any(|t| t.property.is_absolute()))
+            || self.skins.values().any(|s| !s.inverse_binds.is_empty())
+            || self
+                .morphs
+                .values()
+                .flatten()
+                .any(|m| m.default_weight != 0.)
+    }
+    pub fn merge(&mut self, other: &Self) -> Result<()> {
+        if other.clips.keys().any(|k| self.clips.contains_key(k))
+            || other.rigs.keys().any(|k| self.rigs.contains_key(k))
+            || other.skins.keys().any(|k| self.skins.contains_key(k))
+            || other.morphs.keys().any(|k| self.morphs.contains_key(k))
+        {
+            return Err(Error::new(
+                "duplicate_id",
+                "animation merge would replace authored components",
+            ));
+        }
+        self.clips.extend(other.clips.clone());
+        self.rigs.extend(other.rigs.clone());
+        self.skins.extend(other.skins.clone());
+        self.morphs.extend(other.morphs.clone());
+        Ok(())
+    }
     pub fn validate(&self, s: &Snapshot) -> Result<()> {
         if self.clips.len() > 128
             || self.rigs.len() > 64
@@ -585,6 +660,25 @@ pub fn evaluate(
         time,
         "affine-lbs-v0",
     ))?);
+    let (out, deformed_points) = evaluate_sample(snapshot, &sampled, &mut cancelled)?;
+    Ok(Evaluated { snapshot: out, receipt: Receipt { authored_revision, clip, time, evaluation_digest, deformed_points,
+        approximation: "typed absolute TRS or affine rest plus pose deltas; morphs before LBS; explicit skin binds; flat geometric deformation normals".into() } })
+}
+pub(crate) fn evaluate_rest(
+    snapshot: &Snapshot,
+    cancelled: impl FnMut() -> bool,
+) -> Result<Snapshot> {
+    evaluate_sample(snapshot, &SampledClip::default(), cancelled).map(|(s, _)| s)
+}
+fn evaluate_sample(
+    snapshot: &Snapshot,
+    sampled: &SampledClip,
+    mut cancelled: impl FnMut() -> bool,
+) -> Result<(Snapshot, usize)> {
+    let state = snapshot
+        .animation
+        .as_ref()
+        .ok_or_else(|| Error::new("animation", "missing state"))?;
     let (mut out, hidden) = snapshot.composition()?;
     for (target, pose) in &sampled.poses {
         if let Target::Entity { entity } = target {
@@ -592,7 +686,7 @@ pub fn evaluate(
                 .entities
                 .get_mut(*entity)
                 .expect("validated entity track");
-            let transform = e.transform.affine()? * pose.affine()?;
+            let transform = pose.apply(e.transform.affine()?)?;
             e.transform = Transform {
                 columns: transform.to_cols_array_2d(),
                 operations: vec![],
@@ -635,7 +729,7 @@ pub fn evaluate(
                     .morphs
                     .get(&(entity, morph.id))
                     .copied()
-                    .unwrap_or(0.);
+                    .unwrap_or(morph.default_weight);
                 if weight != 0. {
                     for (i, id) in mesh.point_ids.iter().enumerate() {
                         if let Some(delta) = morph.offsets.get(id) {
@@ -661,12 +755,21 @@ pub fn evaluate(
                 .iter()
                 .enumerate()
                 .map(|(i, id)| {
-                    (
+                    Ok((
                         *id,
-                        inverse * rig_world * pose[i] * plan.inverse_bind[i] * bind,
-                    )
+                        inverse
+                            * rig_world
+                            * pose[i]
+                            * skin
+                                .inverse_binds
+                                .get(id)
+                                .map(Transform::affine)
+                                .transpose()?
+                                .unwrap_or(plan.inverse_bind[i])
+                            * bind,
+                    ))
                 })
-                .collect();
+                .collect::<Result<_>>()?;
             for (i, id) in mesh.point_ids.iter().enumerate() {
                 if cancelled() {
                     return Err(Error::new("cancelled", "skinning cancelled"));
@@ -715,5 +818,5 @@ pub fn evaluate(
         });
     }
     out.validate()?;
-    Ok(Evaluated{snapshot:out,receipt:Receipt{authored_revision,clip,time,evaluation_digest,deformed_points,approximation:"affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation".into()}})
+    Ok((out, deformed_points))
 }

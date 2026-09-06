@@ -1,0 +1,26 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "frame",
+    "request": {
+      "revision": "sha256:4ec93862c2775b928a54e934179300aa4e01962224e559dcb8348c9da7e13d8e",
+      "clip": "0000000000000000000000000000000a",
+      "time": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "shutter": {
+        "open": {
+          "numerator": -1,
+          "denominator": 32
+        },
+        "close": {
+          "numerator": 1,
+          "denominator": 32
+        },
+        "samples": 3
+      }
+    },
+    "output": "/Volumes/seed2/Projects/render/artifacts/animated-gltf/run-20260906T023106Z/cli-regression/frame"
+  }
+}

@@ -122,3 +122,50 @@ profiles. Bounded named approximations remain visible in receipts.
 
 **Revisit trigger:** New authoring or backend workflows pass their own numerical,
 resource, portability and recovery gates; existing profile names keep their meaning.
+
+
+## ADR-014 — General native CLI as a filesystem adapter
+
+**Decision:** `project-cli-v0` uses a typed one-shot JSON request and ordinary
+revision-checked document transactions. Host-only paths resolve explicit user
+resources; imported metadata cannot trigger fetching. Rendering/evaluation calls
+the existing Rust APIs, with pinned authored revisions and no fixture-generated
+scene. Source/archive creation uses a new native journal directory.
+
+Artifact bundles publish through synced pending directories and a final status
+manifest. Cancellation is checked after candidate preparation at the journal
+publication boundary; an admitted commit finishes atomically. Incomplete or
+cancelled sequences retain only explicitly published frame bundles. Output names
+use host indices so authored labels cannot become filesystem paths.
+
+**Evidence:** [CLI contract](project_cli.md), [independent CLI/native API equivalence,
+recovery, faults and resource tests](../evidence/project-cli/README.md). At that CLI validation revision, shared Rust,
+Wasm and dependency sources were unchanged from the M06–M08 validated base.
+
+**Revisit trigger:** Interactive editor/remote transports require additional
+lifecycle semantics, while retaining the same public mutation authority and
+backend profiles. Native driver initialization and admitted publication remain
+explicit non-interruptible boundaries; Windows durability remains compile-only.
+
+## ADR-015 — Typed absolute animation and skin-specific bind palettes
+
+**Decision:** glTF import produces ordinary native animation components and a
+collision-rejecting `merge_animation` transaction. Snapshot v11 introduces complete
+absolute TRS channel groups and explicit per-skin inverse-bind palettes; existing
+pose deltas and strict native rig rest/inverse-bind validation retain their meaning.
+Default morph weights are authored data. Native and browser share evaluation.
+
+**Reason:** glTF channels replace local properties, and two skins can bind the same
+joint hierarchy differently. Reinterpreting native delta tracks or deriving all
+skin matrices from the skeleton rest pose would change imported motion. Imported
+source indices are converted to stable scoped IDs. New fields are typed, additive
+and omitted when empty; old snapshot versions reject the new features.
+
+**Integration review:** [profile and migration contract](animated_gltf.md),
+[acceptance and review evidence](../evidence/animated-gltf/README.md). The workflow
+crosses importer, animation, deformation, document and host/browser boundaries.
+Native JSON retains converted animation; source glTF export remains unsupported.
+
+**Revisit trigger:** Sparse/morph-normal data, additional source formats, skinning
+methods or GPU shutter accumulation require separate profiles and numerical,
+resource and persistence evidence. M09 UI work remains independent.

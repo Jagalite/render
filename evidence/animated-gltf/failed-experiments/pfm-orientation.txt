@@ -1,0 +1,19 @@
+artifacts/animated-gltf/run-20260906T023801Z
+format: retained passed check with unchanged inputs
+clippy: retained passed check with unchanged inputs
+native_tests: retained passed check with unchanged inputs
+wasm_tests: retained passed check with unchanged inputs
+linux_check: retained passed check with unchanged inputs
+windows_check: retained passed check with unchanged inputs
+browser_clippy: retained passed check with unchanged inputs
+native_build: retained passed check with unchanged inputs
+browser_build: retained passed check with unchanged inputs
+dependency_audit: retained passed check with unchanged inputs
+cli_regression: retained passed check with unchanged inputs
+animated_workflow: 0
+browser_workflow: 0
+Traceback (most recent call last):
+  File "/Volumes/seed2/Projects/render/scripts/validate-animated-gltf.py", line 51, in <module>
+    assert rmse<.025 and mismatches<=4,(rmse,mismatches)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (0.034217568933791694, 0)

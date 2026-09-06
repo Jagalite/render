@@ -418,6 +418,7 @@ pub fn character_document() -> Result<Document> {
         tolerance: 1e-8,
     });
     let skin = Skin {
+        inverse_binds: BTreeMap::new(),
         rig: Id(8200),
         topology: topology.clone(),
         mesh_bind: Transform::default(),
@@ -427,6 +428,7 @@ pub fn character_document() -> Result<Document> {
             .collect(),
     };
     let morph = Morph {
+        default_weight: 0.,
         id: Id(8300),
         topology,
         offsets: (8..16)

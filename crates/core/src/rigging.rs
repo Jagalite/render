@@ -245,12 +245,11 @@ impl Plan {
                 return Err(Error::new("cancelled", "joint evaluation cancelled"));
             }
             locals.push(
-                self.rest[i]
-                    * poses
-                        .get(&Target::Joint { rig, joint })
-                        .map(Pose::affine)
-                        .transpose()?
-                        .unwrap_or(DAffine3::IDENTITY),
+                poses
+                    .get(&Target::Joint { rig, joint })
+                    .map(|p| p.apply(self.rest[i]))
+                    .transpose()?
+                    .unwrap_or(self.rest[i]),
             );
         }
         let index: BTreeMap<_, _> = self
@@ -374,12 +373,16 @@ pub struct Skin {
     pub rig: Id,
     pub topology: String,
     pub mesh_bind: Transform,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub inverse_binds: BTreeMap<Id, Transform>,
     #[serde(with = "crate::geometry::local_map")]
     pub weights: BTreeMap<u64, Vec<Influence>>,
 }
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Morph {
+    #[serde(default, skip_serializing_if = "is_zero")]
+    pub default_weight: f64,
     pub id: Id,
     pub topology: String,
     #[serde(with = "crate::geometry::local_map")]
@@ -404,6 +407,12 @@ impl Skin {
             ));
         }
         let joints: BTreeSet<_> = rig.joints.iter().map(|j| j.id).collect();
+        for (id, bind) in &self.inverse_binds {
+            if !joints.contains(id) {
+                return Err(Error::new("reference", "skin inverse bind joint missing"));
+            }
+            bind.inverse()?;
+        }
         for id in &mesh.point_ids {
             let weights = self
                 .weights
@@ -423,6 +432,12 @@ impl Skin {
                 {
                     return Err(Error::new("skin_weights", "invalid influence"));
                 }
+                if !self.inverse_binds.is_empty() && !self.inverse_binds.contains_key(&w.joint) {
+                    return Err(Error::new(
+                        "skin_weights",
+                        "explicit palette must bind every influenced joint",
+                    ));
+                }
                 sum += w.weight;
             }
             if (sum - 1.).abs() > 1e-8 {
@@ -435,8 +450,14 @@ impl Skin {
         Ok(())
     }
 }
+fn is_zero(v: &f64) -> bool {
+    *v == 0.
+}
 impl Morph {
     pub fn validate(&self, mesh: &Mesh) -> Result<()> {
+        if !self.default_weight.is_finite() || !(-8.0..=8.).contains(&self.default_weight) {
+            return Err(Error::new("morph", "default weight outside [-8,8]"));
+        }
         if mesh.face_offsets.windows(2).any(|w| w[1] - w[0] != 3) {
             return Err(Error::new(
                 "deformation_profile",

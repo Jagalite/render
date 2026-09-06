@@ -213,7 +213,14 @@ impl Evaluator {
         }
         snapshot.validate()?;
         let revision = snapshot.revision()?;
-        let (s, hidden) = snapshot.composition()?;
+        let rest;
+        let evaluated = if snapshot.version >= 11 && snapshot.animation.is_some() {
+            rest = crate::animation::evaluate_rest(snapshot, &mut cancelled)?;
+            &rest
+        } else {
+            snapshot
+        };
+        let (s, hidden) = evaluated.composition()?;
         let mut images = BTreeMap::new();
         let mut decoded = BTreeMap::new();
         for material in s.materials.values() {

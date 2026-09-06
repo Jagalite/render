@@ -1,6 +1,8 @@
 # Input-to-render support commitments
 
-The limited M00–M04 rendering profile is the starting point. The requested target includes complete scene assets, richer materials, animation and rigs, hair, volumes, and native Blender file profiles. These remain staged capabilities. M05 now delivers a bounded static glTF/GLB scene profile and complete restricted-variant workflow; full INPUT-01 is still partial and INPUT-02–06 remain planned.
+M06–M08 now have [named implementation profiles](m07_m08.md) and [complete milestone evidence](../evidence/m06-m08/README.md). Historical M05 Lambertian and [static PBR](static_pbr.md) evidence retain their original scope. External input tracks remain separately qualified in `planning/input_support.json`.
+
+The limited M00–M04 rendering profile is the starting point. The requested target includes complete scene assets, richer materials, animation and rigs, hair, volumes, and native Blender file profiles. These remain staged capabilities. M05 now delivers a bounded static glTF/GLB scene profile and complete restricted-variant workflow; INPUT-01–05 remain partial: M07/M08 supply native authored rendering and animation, while the external-format and wider GPU portions retain their own gates. INPUT-06 remains planned.
 
 The machine-readable work and acceptance criteria are in [planning/input_support.json](../planning/input_support.json). Existing milestone dependencies remain in force. M05 proves the agent workflow and narrow ABI before the broader product gates. Its [explicit profile](agent_alpha.md#static-scene-profile) does not claim cameras, textures, complete PBR or arbitrary glTF compatibility.
 

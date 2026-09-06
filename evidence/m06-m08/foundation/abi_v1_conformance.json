@@ -1,0 +1,129 @@
+{
+  "status": "passed",
+  "abi_version": 1,
+  "scope": "trusted local synchronous ABI; domain operations version 0; explicit buffer ownership; no callbacks",
+  "clients": [
+    "Python ctypes",
+    "C11"
+  ],
+  "c_client": {
+    "status": "passed",
+    "client": "C11",
+    "abi_version": 1,
+    "checks": [
+      "version and prefix negotiation",
+      "wrong handle kind",
+      "capacity",
+      "buffer outlives engine",
+      "stale generation"
+    ]
+  },
+  "python_workflow": {
+    "variants": [
+      {
+        "name": "warm",
+        "revision": "sha256:bc36a9e417a24a9b6b6c669692a64eede49a22e037d4ca0830dd7959b85ff28b",
+        "receipt": {
+          "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light",
+          "backend": "cpu-f64-diffuse-v0",
+          "color_space": "linear-sRGB",
+          "height": 32,
+          "output_digest": "sha256:006f0c6f0d66d6108ae537abbe99f1a4a3d99290808e5927a6b581ba24c01c8a",
+          "revision": "sha256:bc36a9e417a24a9b6b6c669692a64eede49a22e037d4ca0830dd7959b85ff28b",
+          "samples": 4,
+          "seed": 42,
+          "settings_digest": "sha256:4fb7c1bc095e5cb5457aa1145d7c07c5b6d920944e2b5bfdf996c6940c2e5f51",
+          "width": 32
+        },
+        "inspection": {
+          "mean_linear_rgb": [
+            0.2203536906017689,
+            0.15161647880267992,
+            0.15161647880267992
+          ],
+          "pixel_count": 1024,
+          "visible_pixels": 299
+        }
+      },
+      {
+        "name": "green",
+        "revision": "sha256:3e114ee0a92d895815b011cabd957706160458eab530b3b6e75687f6257fb164",
+        "receipt": {
+          "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light",
+          "backend": "cpu-f64-diffuse-v0",
+          "color_space": "linear-sRGB",
+          "height": 32,
+          "output_digest": "sha256:711b8f3abb3b7236bc8342e47446c9241a4ba4eaff1bedaac9e741046008dfe2",
+          "revision": "sha256:3e114ee0a92d895815b011cabd957706160458eab530b3b6e75687f6257fb164",
+          "samples": 4,
+          "seed": 42,
+          "settings_digest": "sha256:4fb7c1bc095e5cb5457aa1145d7c07c5b6d920944e2b5bfdf996c6940c2e5f51",
+          "width": 32
+        },
+        "inspection": {
+          "mean_linear_rgb": [
+            0.15161647880267992,
+            0.2203536906017689,
+            0.15161647880267992
+          ],
+          "pixel_count": 1024,
+          "visible_pixels": 299
+        }
+      },
+      {
+        "name": "cool",
+        "revision": "sha256:9633e71bbe4ee254b63ae3cfba73fb8649fb6bf628a5d3a5521e054417a417bf",
+        "receipt": {
+          "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light",
+          "backend": "cpu-f64-diffuse-v0",
+          "color_space": "linear-sRGB",
+          "height": 32,
+          "output_digest": "sha256:8a0af919e4948d637f9658d97757b7a55b47611c0e949076d23a1bc014ea0a8e",
+          "revision": "sha256:9633e71bbe4ee254b63ae3cfba73fb8649fb6bf628a5d3a5521e054417a417bf",
+          "samples": 4,
+          "seed": 42,
+          "settings_digest": "sha256:4fb7c1bc095e5cb5457aa1145d7c07c5b6d920944e2b5bfdf996c6940c2e5f51",
+          "width": 32
+        },
+        "inspection": {
+          "mean_linear_rgb": [
+            0.15161647880267992,
+            0.15161647880267992,
+            0.2203536906017689
+          ],
+          "pixel_count": 1024,
+          "visible_pixels": 299
+        }
+      }
+    ],
+    "selected": "green",
+    "receipt": {
+      "base_revision": "sha256:bbfaf2e4808123757da473640716a04f09a07f331904dfc695b10fa68ef65df3",
+      "command_count": 2,
+      "delta_digest": "sha256:5cbb59b06eaaa1e4435b42ab3647948526ed9655555edb4996ab8620be97beca",
+      "document_id": "00000000000000000000000000000258",
+      "durable": false,
+      "revision": "sha256:3e114ee0a92d895815b011cabd957706160458eab530b3b6e75687f6257fb164"
+    },
+    "import": {
+      "instances": 1,
+      "losses": [
+        "Opt-in Lambertian conversion omits glTF dielectric specular; renderer is two-sided and uses geometric normals. No PBR fidelity claim.",
+        "Names are retained; extras and generator metadata are not authored components. Only the selected scene is imported."
+      ],
+      "profile": "gltf2-static-lambertian-v0",
+      "source_digest": "sha256:9ae3455df37634941468a6e7f462b19c92b92270b7a92077b29ad5345416f86e",
+      "source_materials": {
+        "0": "211fcf59434015e5d154bd278e4e115c"
+      },
+      "source_nodes": {
+        "0": "712dd0603d9561282547c004f1452b3e",
+        "1": "aabbc6e95b5032b623a3421508662624"
+      },
+      "unique_meshes": 1
+    }
+  },
+  "source_sha256": "ed52f7192b8311d700ac0ce80644e3852cd01537e4d62241b9acba023da3d54e",
+  "peak_response_bytes": 101216,
+  "seconds": 2.641164041997399
+}

@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "test_counts": {
+    "native": 87,
+    "wasm": 77
+  },
+  "foundation_gates": 17,
+  "milestones": [
+    "M06",
+    "M07",
+    "M08"
+  ],
+  "scope": "Complete canonical milestone gates for the documented named experimental profiles; advanced compatibility extensions remain separate.",
+  "evidence": [
+    "modeling_conformance.json",
+    "procedural_conformance.json",
+    "topology_mapping_report.json",
+    "geometry_family_report.json",
+    "render_feature_conformance.json",
+    "color_profile_vectors.json",
+    "animation_conformance.json",
+    "rig_solver_report.json",
+    "motion_blur_report.json",
+    "resource_measurements.json",
+    "dependency_provenance.json"
+  ],
+  "validation": "validation_report.json"
+}

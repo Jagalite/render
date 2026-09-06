@@ -3,6 +3,12 @@ impl Renderer {
     /// Approximate hardware raster preview: flat diffuse shading, no shadows or textures.
     pub async fn raster_preview(&self, scene: &Scene, s: &Settings) -> Result<Vec<[u8; 4]>> {
         s.validate()?;
+        if scene.instances.iter().any(|i| i.material.pbr.is_some()) || s.camera.lens.is_some() {
+            return Err(Error::new(
+                "unsupported_profile",
+                "flat raster preview does not support PBR or authored lenses; use portable path renderer",
+            ));
+        }
         if self.is_lost() {
             return Err(Error::new("device_lost", "raster device lost"));
         }

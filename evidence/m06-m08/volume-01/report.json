@@ -1,0 +1,18 @@
+{
+  "cancellation": true,
+  "changed_pixels": 2429,
+  "durable_roundtrip": true,
+  "gpu_rejection": {
+    "code": "unsupported_profile",
+    "context": {},
+    "message": "sparse media transport requires the Rust CPU backend on native and browser",
+    "retryable": false,
+    "stage": "validation"
+  },
+  "occupied_cells": 112,
+  "profile": "sparse-media-v0",
+  "revision": "sha256:981d4e1cf86c6fdd90b5c32c8fee30fff5b5ea2b470e41c0037b1b150aff733b",
+  "seconds": 1.585005958,
+  "source_snapshot_bytes": 14433,
+  "status": "passed"
+}

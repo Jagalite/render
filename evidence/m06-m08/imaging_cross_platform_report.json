@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "comparisons": [
+    {
+      "view": "beauty",
+      "display_rmse": 0.0,
+      "albedo_rmse": 0.0
+    },
+    {
+      "view": "orange-only",
+      "display_rmse": 0.0,
+      "albedo_rmse": 0.0
+    },
+    {
+      "bake": "orange-albedo",
+      "rmse": 0.0,
+      "coverage_equal": true
+    },
+    {
+      "bake": "orange-normal",
+      "rmse": 0.0,
+      "coverage_equal": true
+    }
+  ],
+  "method": "Independent Python comparison of stored native and BrowserAgent Rust outputs; RGB RMSE < 1e-6 and identical coverage.",
+  "command": "python3 scripts/summarize-milestones.py artifacts/m06-m08/run-20260906T001610Z"
+}

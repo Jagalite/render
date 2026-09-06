@@ -1,0 +1,262 @@
+{
+  "status": "passed",
+  "scope": "Rust sources, tests and dependency/toolchain manifests unchanged after full validation",
+  "checks": [
+    {
+      "path": "Cargo.lock",
+      "unchanged": true
+    },
+    {
+      "path": "Cargo.toml",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/Cargo.toml",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/agent.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/animation.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/api.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/cameras.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/curves.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/displacement.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/document.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/feature_fixtures.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/fixtures.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/geometry.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/gltf_materials.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/gltf_scene.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/groom.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/imaging.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/interchange.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/jobs.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/lib.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/mesh_codec.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/modeling.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/pbr.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/procedural.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/products.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/render.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/rigging.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/scattering.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/sequence.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/storage.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/textures.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/topology.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/uploads.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/src/volumes.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/tests/agent_workflow.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/tests/animation.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/tests/conformance.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/tests/curves.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/tests/displacement.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/tests/groom.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/tests/modeling.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/tests/products.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/tests/scattering.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/tests/static_pbr.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/tests/volumes.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/ffi/Cargo.toml",
+      "unchanged": true
+    },
+    {
+      "path": "crates/ffi/src/lib.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/gpu/Cargo.toml",
+      "unchanged": true
+    },
+    {
+      "path": "crates/gpu/src/lib.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/gpu/src/raster.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/host/Cargo.toml",
+      "unchanged": true
+    },
+    {
+      "path": "crates/host/examples/m00.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/host/src/agent_workflow.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/host/src/job_host.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/host/src/main.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/host/src/milestone_workflow.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/host/src/static_pbr.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/kernel/Cargo.toml",
+      "unchanged": true
+    },
+    {
+      "path": "crates/kernel/src/lib.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/kernel/src/path.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/kernel/src/path/pbr.rs",
+      "unchanged": true
+    },
+    {
+      "path": "crates/web/Cargo.toml",
+      "unchanged": true
+    },
+    {
+      "path": "crates/web/src/lib.rs",
+      "unchanged": true
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "unchanged": true
+    }
+  ]
+}

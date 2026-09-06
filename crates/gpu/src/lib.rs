@@ -65,7 +65,18 @@ fn pack_geometry(g: &Geometry, data: &mut Vec<[f32; 4]>) -> usize {
                 data.push(point(p, 0.));
             }
             data.push([tri.uv[0].x, tri.uv[0].y, tri.uv[1].x, tri.uv[1].y]);
-            data.push([tri.uv[2].x, tri.uv[2].y, 0., 0.]);
+            data.push([
+                tri.uv[2].x,
+                tri.uv[2].y,
+                f32::from(tri.normals.is_some()),
+                f32::from(tri.tangents.is_some()),
+            ]);
+            for n in tri.normals.unwrap_or([glam::DVec3::ZERO; 3]) {
+                data.push(point(n, 0.));
+            }
+            for t in tri.tangents.unwrap_or([glam::DVec4::ZERO; 3]) {
+                data.push(t.as_vec4().to_array());
+            }
         }
         data[address] = point(n.bounds.min, n.items.len() as f32);
         data[address + 1] = point(n.bounds.max, first as f32);
@@ -77,10 +88,28 @@ fn pack_geometry(g: &Geometry, data: &mut Vec<[f32; 4]>) -> usize {
 }
 pub struct Packed {
     pub geometry: Vec<[f32; 4]>,
+    pub texels: Vec<[f32; 4]>,
     pub instances: Vec<[f32; 4]>,
     pub params: Vec<[f32; 4]>,
 }
 pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
+    if scene.instances.iter().any(|i| {
+        i.material
+            .pbr
+            .as_ref()
+            .is_some_and(|p| p.advanced.is_some())
+    }) {
+        return Err(Error::new(
+            "unsupported_profile",
+            "extended dielectric/conductor/coat/alpha requires the Rust CPU backend",
+        ));
+    }
+    if !scene.media.is_empty() {
+        return Err(Error::new(
+            "unsupported_profile",
+            "sparse media transport requires the Rust CPU backend on native and browser",
+        ));
+    }
     s.validate()?;
     if s.max_depth != 1 {
         return Err(Error::new(
@@ -98,6 +127,53 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
     let mut geometry = vec![];
     let mut instances = vec![];
     let mut shared = BTreeMap::new();
+    let mut maps = BTreeMap::new();
+    let texel_count: usize = scene
+        .images
+        .values()
+        .flat_map(|p| &p.levels)
+        .map(|l| l.rgba.len())
+        .sum();
+    if texel_count > 16777216 {
+        return Err(Error::new(
+            "budget",
+            "PBR sampled textures exceed 16 million mip texels",
+        ));
+    }
+    let mut texels = Vec::with_capacity(texel_count.div_ceil(2));
+    let mut texel_index = 0usize;
+    for (key, pyramid) in &scene.images {
+        let header = geometry.len();
+        geometry.resize(header + pyramid.levels.len(), [0.; 4]);
+        for (j, level) in pyramid.levels.iter().enumerate() {
+            geometry[header + j] = [
+                texel_index as f32,
+                level.width as f32,
+                level.height as f32,
+                0.,
+            ];
+            for pixel in &level.rgba {
+                let pair = |a, b| {
+                    f32::from_bits(
+                        u32::from(half::f16::from_f32(a).to_bits())
+                            | (u32::from(half::f16::from_f32(b).to_bits()) << 16),
+                    )
+                };
+                if texel_index.is_multiple_of(2) {
+                    texels.push([0.; 4]);
+                }
+                let record = texels.last_mut().expect("allocated texel");
+                let offset = (texel_index % 2) * 2;
+                record[offset] = pair(pixel[0], pixel[1]);
+                record[offset + 1] = pair(pixel[2], pixel[3]);
+                texel_index += 1;
+            }
+        }
+        maps.insert(key, (header, pyramid.levels.len()));
+    }
+    if texels.is_empty() {
+        texels.push([0.; 4]);
+    }
     for inst in &scene.instances {
         let root = *shared
             .entry(&inst.geometry_id)
@@ -114,7 +190,10 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
         for c in inst.inverse.matrix3.to_cols_array_2d() {
             instances.push([c[0] as f32, c[1] as f32, c[2] as f32, 0.]);
         }
-        instances.push(point(inst.inverse.transform_point3(origin), 0.));
+        instances.push(point(
+            inst.inverse.transform_point3(origin),
+            inst.transform.matrix3.determinant().signum() as f32,
+        ));
         instances.push(point(inst.bounds.min - origin, 0.));
         instances.push(point(inst.bounds.max - origin, 0.));
         instances.push([
@@ -129,7 +208,56 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
             inst.material.emission[2],
             texoffset as f32,
         ]);
-        instances.push([width as f32, height as f32, 0., 0.]);
+        let surface = inst.material.pbr.as_ref();
+        instances.push([
+            width as f32,
+            height as f32,
+            f32::from(surface.is_some()),
+            f32::from(surface.is_none_or(|p| p.double_sided)),
+        ]);
+        instances.push([
+            inst.material.roughness,
+            inst.material.metallic,
+            surface.map_or(1., |p| p.normal_scale),
+            surface.map_or(1., |p| p.occlusion_strength),
+        ]);
+        for binding in surface
+            .map_or([None; 6], |p| p.bindings())
+            .into_iter()
+            .take(5)
+        {
+            let descriptor = if let Some(binding) = binding {
+                let (header, levels) = maps[&(binding.image.clone(), binding.role)];
+                let offset = geometry.len();
+                let sampler = &binding.sampler;
+                use render_core::textures::{Filter, MinFilter, Wrap};
+                let wrap = |w| match w {
+                    Wrap::Repeat => 0.,
+                    Wrap::Clamp => 1.,
+                    Wrap::Mirror => 2.,
+                };
+                let min = match sampler.min {
+                    MinFilter::Nearest => 0.,
+                    MinFilter::Linear => 1.,
+                    MinFilter::NearestMipNearest => 2.,
+                    MinFilter::LinearMipNearest => 3.,
+                    MinFilter::NearestMipLinear => 4.,
+                    MinFilter::LinearMipLinear => 5.,
+                };
+                geometry.push([
+                    header as f32,
+                    levels as f32,
+                    wrap(sampler.wrap_s),
+                    wrap(sampler.wrap_t),
+                ]);
+                geometry.push([f32::from(sampler.mag == Filter::Linear), min, 0., 0.]);
+                offset as f32
+            } else {
+                -1.
+            };
+            instances.push([descriptor, 0., 0., 0.]);
+        }
+        instances.push([0.; 4]);
     }
     if geometry.len() > 16777216 || instances.len() > 16777216 {
         return Err(Error::new(
@@ -144,10 +272,39 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
         instances.push([0.; 4]);
     }
     let (forward, right, up) = s.camera.basis()?;
+    let (mode, xmag, ymag, aspect, near, far) = match s.camera.lens {
+        Some(render_core::cameras::Lens::Perspective {
+            aspect_ratio,
+            near,
+            far,
+            ..
+        }) => (
+            1.,
+            0.,
+            0.,
+            aspect_ratio.unwrap_or(f64::from(s.width) / f64::from(s.height)),
+            near,
+            far.unwrap_or(1e30),
+        ),
+        Some(render_core::cameras::Lens::Orthographic {
+            xmag,
+            ymag,
+            near,
+            far,
+        }) => (2., xmag, ymag, 1., near, far),
+        None => (
+            0.,
+            0.,
+            0.,
+            f64::from(s.width) / f64::from(s.height),
+            1e-5,
+            1e30,
+        ),
+    };
     let params = vec![
         [s.width as f32, s.height as f32, s.samples as f32, 0.],
         [0., 0., 0., scene.instances.len() as f32],
-        point(forward, (s.camera.vertical_fov_radians / 2.).tan() as f32),
+        point(forward, (s.camera.fov() / 2.).tan() as f32),
         point(right, 0.),
         point(up, 0.),
         point(
@@ -166,6 +323,8 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
             s.environment[2],
             (s.seed >> 16) as f32,
         ],
+        [mode, xmag as f32, ymag as f32, aspect as f32],
+        [near as f32, far as f32, 0., 0.],
     ];
     if geometry
         .iter()
@@ -180,6 +339,7 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
         ));
     }
     Ok(Packed {
+        texels,
         geometry,
         instances,
         params,
@@ -328,6 +488,7 @@ impl Renderer {
             p.instances.len() as u64 * 16,
             p.params.len() as u64 * 16,
             output_size,
+            p.texels.len() as u64 * 16,
         ];
         if sizes.iter().any(|&size| {
             size > self.capabilities.max_buffer_bytes
@@ -361,6 +522,13 @@ impl Renderer {
             self.geometry_cache = Some((key, b));
             self.geometry_uploads += 1;
         }
+        let texture_buffer = self
+            .device
+            .create_buffer_init(&wgpu::util::BufferInitDescriptor {
+                label: Some("PBR RGBA16 mip texels"),
+                contents: &bytes(&p.texels),
+                usage: wgpu::BufferUsages::STORAGE,
+            });
         let instance_buffer = self
             .device
             .create_buffer_init(&wgpu::util::BufferInitDescriptor {
@@ -388,7 +556,13 @@ impl Renderer {
             mapped_at_creation: false,
         });
         let geometry = &self.geometry_cache.as_ref().expect("uploaded").1;
-        let buffers = [geometry, &instance_buffer, &params, &output];
+        let buffers = [
+            geometry,
+            &instance_buffer,
+            &params,
+            &output,
+            &texture_buffer,
+        ];
         let entries = buffers
             .iter()
             .enumerate()
@@ -490,16 +664,30 @@ impl Renderer {
                 scene.instances.get(p[7] as usize).map(|i| i.id)
             });
         }
-        let receipt = RenderReceipt {
+        let mut receipt = RenderReceipt {
             revision: scene.revision.clone(),
             settings_digest: digest(&canonical(s)?),
-            backend: format!("gpu-f32-diffuse-v0/{}", self.capabilities.backend),
+            backend: format!(
+                "gpu-f32-{}-v0/{}",
+                if scene.instances.iter().any(|i| i.material.pbr.is_some()) {
+                    "pbr"
+                } else {
+                    "diffuse"
+                },
+                self.capabilities.backend
+            ),
             samples: s.samples,
             seed: s.seed,
             color_space: "linear-sRGB".into(),
-            approximation: format!(
-                "finite depth 1; two-sided Lambertian; nearest repeat textures; start sample {start_sample}; camera-relative f32"
-            ),
+            approximation: if scene.instances.iter().any(|i| i.material.pbr.is_some()) {
+                format!(
+                    "single-scattering GGX; roughness >=0.05; one bounce; primary UV-differential mipmaps; RGBA16 texture precision; start sample {start_sample}; camera-relative f32"
+                )
+            } else {
+                format!(
+                    "finite depth 1; two-sided Lambertian; nearest repeat textures; start sample {start_sample}; camera-relative f32"
+                )
+            },
             width: s.width,
             height: s.height,
             output_digest: digest(
@@ -510,6 +698,14 @@ impl Renderer {
                     .collect::<Vec<_>>(),
             ),
         };
+        if !scene.displacements.is_empty() {
+            receipt.approximation.push_str(
+                "; bounded uniform geometric displacement; see displacement conversion receipts",
+            );
+        }
+        if !scene.conversions.is_empty() {
+            receipt.approximation.push_str("; typed curves/points use bounded polygon sweeps; see evaluation conversion receipts");
+        }
         Ok(Image {
             width: s.width,
             height: s.height,

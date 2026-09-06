@@ -49,6 +49,7 @@ pub fn run(input: &Path, root: &Path, gpu_enabled: bool) -> Result<()> {
             intensity: [20.; 3],
         },
         camera: Camera {
+            lens: None,
             position: [2., 1.5, 3.],
             target: [0.; 3],
             up: [0., 1., 0.],

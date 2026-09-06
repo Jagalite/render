@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "tests": [
+    {
+      "case": "primitives_extrude_inset_split_weld_and_correspondence",
+      "source": "crates/core/tests/modeling.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "subdivision_mirror_array_solidify_and_box_csg_numeric",
+      "source": "crates/core/tests/modeling.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "bridge_dissolve_attribute_transfer_invalid_selection_budget_and_cancel",
+      "source": "crates/core/tests/modeling.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "procedural_groups_fields_direct_parity_bake_recovery_and_stale_edits",
+      "source": "crates/core/tests/modeling.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "direct_modeling_transactions_and_field_cycle_domain_resource_diagnostics",
+      "source": "crates/core/tests/modeling.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "box_operators_reject_inward_shells",
+      "source": "crates/core/tests/modeling.rs",
+      "native": "passed",
+      "wasm": "passed"
+    }
+  ],
+  "native_workflow": "modeling-01/report.json",
+  "procedural": "modeling-01/procedural_conformance.json",
+  "topology_and_edit_amplification": "modeling-01/topology_mapping_report.json"
+}

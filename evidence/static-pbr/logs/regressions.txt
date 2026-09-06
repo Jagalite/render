@@ -1,0 +1,17 @@
+format: exit 0
+native_clippy: exit 0
+native_tests: exit 0
+wasm_clippy: exit 0
+wasm_tests: exit 0
+linux_check: exit 0
+windows_check: exit 0
+native_build: exit 0
+abi_header: exit 0
+ffi_v0: exit 0
+ffi_v1: exit 0
+native_client: exit 0
+web_build: exit 0
+dependency_audit: exit 0
+native_workflow: exit 0
+browser_workflow: exit 0
+browser_foundation: exit 0

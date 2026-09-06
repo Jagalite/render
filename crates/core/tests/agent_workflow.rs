@@ -17,6 +17,7 @@ fn settings() -> Settings {
     s.samples = 2;
     s.max_depth = 1;
     s.camera = Camera {
+        lens: None,
         position: [2., 1.5, 3.],
         target: [0.; 3],
         up: [0., 1., 0.],

@@ -1,6 +1,6 @@
 {
   "spec_version": "0.1",
-  "status": "foundation_and_agent_alpha_profiles_validated",
+  "status": "foundation_and_authoring_M00_M08_profiles_validated",
   "features": [
     {
       "id": "scene",
@@ -11,14 +11,14 @@
         "M05",
         "M13"
       ],
-      "qualification": "Typed polygon scene/layer foundation plus bounded static glTF/GLB hierarchy, shared geometry and authored render settings; no full editor.",
+      "qualification": "Transactional typed snapshot-v10 assets and shared geometry, procedural/groom/media bindings, animation and imaging; no full editor.",
       "capability_axes": {
         "native_authoring": "implemented_api_v0",
         "native_evaluation": "implemented_polygon_profile",
-        "final_render": "implemented_diffuse_profile",
-        "preview": "implemented_approximate_raster",
+        "final_render": "implemented_cpu_gpu_diffuse_and_opaque_static_pbr_profiles",
+        "preview": "portable_path_PBR; flat_raster_legacy_only",
         "human_editing": "planned_M09",
-        "import": "canonical_json_OBJ_mesh_and_gltf2_static_lambertian_scene_v0",
+        "import": "scoped_OBJ_glTF_GLB_and_PNG_JPEG_static_profiles",
         "export": "canonical_json_and_native_package"
       },
       "platform_profiles": {
@@ -29,7 +29,9 @@
         "evidence/m00-m04/document_conformance.json",
         "evidence/m00-m04/geometry_invariants.json",
         "evidence/m00-m04/roundtrip_report.json",
-        "evidence/m05/agent_workflow_report.json"
+        "evidence/m05/agent_workflow_report.json",
+        "evidence/static-pbr/README.md",
+        "evidence/m06-m08/README.md"
       ]
     },
     {
@@ -74,100 +76,108 @@
         "M07",
         "M08"
       ],
-      "qualification": "CPU bounded finite-depth diffuse; GPU one-bounce diffuse; approximate raster. Oversized and unsupported profiles reject explicitly.",
+      "qualification": "Supported opaque surfaces and evaluated geometry on CPU/Metal/WebGPU; Rust CPU extended scattering/media, imaging products and exact-time shutter accumulation. Explicit unsupported GPU profiles.",
       "capability_axes": {
-        "native_authoring": "implemented_scene_settings_v0",
-        "native_evaluation": "implemented_triangle_and_instance_bvh",
-        "final_render": "implemented_cpu_and_gpu_diffuse_profiles",
-        "preview": "implemented_approximate_raster",
+        "native_authoring": "ordinary_revision_checked_typed_transactions",
+        "native_evaluation": "named_Rust_profiles_in_docs/m07_m08.md",
+        "final_render": "native_and_browser_Rust_CPU; GPU_only_declared_geometry_and_surface_profiles",
+        "preview": "public_Rust_render_preview_operations; raster_legacy_only",
         "human_editing": "planned_M09",
-        "import": "scoped_mesh_and_ppm_texture",
-        "export": "ppm_pfm_passes_receipts"
+        "import": "scoped_OBJ_glTF_GLB_and_PNG_JPEG_static_profiles",
+        "export": "canonical_JSON_native_package_and_typed_render_artifacts"
       },
       "platform_profiles": {
         "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
-        "browser_local": "validated_chromium_webgpu_wasm_core; negotiated_resource_limits"
+        "browser_local": "validated_Chromium_Rust_Wasm_OPFS; WebGPU_named_subset"
       },
       "evidence": [
         "evidence/m00-m04/renderer_cpu_conformance.json",
         "evidence/m00-m04/cross_backend_report.json",
-        "evidence/m00-m04/gpu_fault_report.json"
+        "evidence/m00-m04/gpu_fault_report.json",
+        "evidence/static-pbr/README.md",
+        "evidence/m06-m08/README.md"
       ]
     },
     {
       "id": "modeling",
       "family": "Mesh modeling and modifiers",
-      "status": "planned",
+      "status": "implemented_experimental_profile",
       "first_useful_gate": "M06",
       "broader_gates": [
         "M09",
         "M10"
       ],
-      "qualification": "Operator-specific topology and degeneracy restrictions",
+      "qualification": "Box, triangulate, face extrude/inset, boundary bridge, edge split/dissolve, point weld, box bevel/Boolean, mirror/array, quad Catmull-Clark and open solidify; explicit input and correspondence policies.",
       "capability_axes": {
-        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
-        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
-        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
-        "preview": "unimplemented_or_not_applicable_to_be_resolved",
-        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
-        "import": "unimplemented_or_not_applicable_to_be_resolved",
-        "export": "unimplemented_or_not_applicable_to_be_resolved"
+        "native_authoring": "ordinary_revision_checked_typed_transactions",
+        "native_evaluation": "named_Rust_profiles_in_docs/m07_m08.md",
+        "final_render": "native_and_browser_Rust_CPU; GPU_only_declared_geometry_and_surface_profiles",
+        "preview": "public_Rust_render_preview_operations; raster_legacy_only",
+        "human_editing": "planned_M09",
+        "import": "native_typed_JSON_only; external_format_adapters_retain_INPUT_track_limits",
+        "export": "canonical_JSON_native_package_and_typed_render_artifacts"
       },
       "platform_profiles": {
-        "native_desktop": "planned",
-        "browser_local": "planned_with_explicit_resource_limits"
+        "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
+        "browser_local": "validated_Chromium_Rust_Wasm_OPFS; WebGPU_named_subset"
       },
-      "evidence": []
+      "evidence": [
+        "evidence/m06-m08/README.md"
+      ]
     },
     {
       "id": "procedural",
       "family": "Geometry nodes and fields",
-      "status": "planned",
+      "status": "implemented_experimental_profile",
       "first_useful_gate": "M06",
       "broader_gates": [
         "M08",
         "M11"
       ],
-      "qualification": "Field domains, explicit solver/state islands",
+      "qualification": "Typed geometry nodes, reusable geometry groups and bounded point scalar/vector fields; direct operation parity, explicit bake and persistence.",
       "capability_axes": {
-        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
-        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
-        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
-        "preview": "unimplemented_or_not_applicable_to_be_resolved",
-        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
-        "import": "unimplemented_or_not_applicable_to_be_resolved",
-        "export": "unimplemented_or_not_applicable_to_be_resolved"
+        "native_authoring": "ordinary_revision_checked_typed_transactions",
+        "native_evaluation": "named_Rust_profiles_in_docs/m07_m08.md",
+        "final_render": "native_and_browser_Rust_CPU; GPU_only_declared_geometry_and_surface_profiles",
+        "preview": "public_Rust_render_preview_operations; raster_legacy_only",
+        "human_editing": "planned_M09",
+        "import": "native_typed_JSON_only; external_format_adapters_retain_INPUT_track_limits",
+        "export": "canonical_JSON_native_package_and_typed_render_artifacts"
       },
       "platform_profiles": {
-        "native_desktop": "planned",
-        "browser_local": "planned_with_explicit_resource_limits"
+        "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
+        "browser_local": "validated_Chromium_Rust_Wasm_OPFS; WebGPU_named_subset"
       },
-      "evidence": []
+      "evidence": [
+        "evidence/m06-m08/README.md"
+      ]
     },
     {
       "id": "geometry",
       "family": "Curves, points, hair and volumes",
-      "status": "planned",
+      "status": "implemented_experimental_profile",
       "first_useful_gate": "M07",
       "broader_gates": [
         "M09",
         "M11"
       ],
-      "qualification": "Representation does not imply evaluated/rendered support",
+      "qualification": "Authored polyline/Bezier/rational B-spline, point radii and anchored guide/child grooms with bounded sweeps; sparse RGB cell media with Rust CPU single scattering.",
       "capability_axes": {
-        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
-        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
-        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
-        "preview": "unimplemented_or_not_applicable_to_be_resolved",
-        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
-        "import": "unimplemented_or_not_applicable_to_be_resolved",
-        "export": "unimplemented_or_not_applicable_to_be_resolved"
+        "native_authoring": "ordinary_revision_checked_typed_transactions",
+        "native_evaluation": "named_Rust_profiles_in_docs/m07_m08.md",
+        "final_render": "native_and_browser_Rust_CPU; GPU_only_declared_geometry_and_surface_profiles",
+        "preview": "public_Rust_render_preview_operations; raster_legacy_only",
+        "human_editing": "planned_M09",
+        "import": "native_typed_JSON_only; external_format_adapters_retain_INPUT_track_limits",
+        "export": "canonical_JSON_native_package_and_typed_render_artifacts"
       },
       "platform_profiles": {
-        "native_desktop": "planned",
-        "browser_local": "planned_with_explicit_resource_limits"
+        "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
+        "browser_local": "validated_Chromium_Rust_Wasm_OPFS; WebGPU_named_subset"
       },
-      "evidence": []
+      "evidence": [
+        "evidence/m06-m08/README.md"
+      ]
     },
     {
       "id": "materials",
@@ -178,49 +188,53 @@
         "M07",
         "M10"
       ],
-      "qualification": "Lambertian albedo/emission with nearest repeat textures. Rendering requires metallic=0, roughness=1. Baking and advanced shading remain planned.",
+      "qualification": "Opaque textured PBR on CPU/GPU; CPU ideal dielectric, eta/k conductor approximation, single coat and alpha; geometric displacement, UV bakes and Rust D65 color/bilateral-v0 imaging.",
       "capability_axes": {
-        "native_authoring": "implemented_material_v0",
-        "native_evaluation": "implemented_lambertian",
-        "final_render": "implemented_lambertian",
-        "preview": "implemented_flat_approximation",
+        "native_authoring": "ordinary_revision_checked_typed_transactions",
+        "native_evaluation": "named_Rust_profiles_in_docs/m07_m08.md",
+        "final_render": "native_and_browser_Rust_CPU; GPU_only_declared_geometry_and_surface_profiles",
+        "preview": "public_Rust_render_preview_operations; raster_legacy_only",
         "human_editing": "planned_M09",
-        "import": "ppm_srgb_textures",
-        "export": "canonical_material_json"
+        "import": "scoped_OBJ_glTF_GLB_and_PNG_JPEG_static_profiles",
+        "export": "canonical_JSON_native_package_and_typed_render_artifacts"
       },
       "platform_profiles": {
         "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
-        "browser_local": "validated_chromium_webgpu_wasm_core; negotiated_resource_limits"
+        "browser_local": "validated_Chromium_Rust_Wasm_OPFS; WebGPU_named_subset"
       },
       "evidence": [
         "evidence/m00-m04/renderer_cpu_conformance.json",
-        "evidence/m00-m04/cross_backend_report.json"
+        "evidence/m00-m04/cross_backend_report.json",
+        "evidence/static-pbr/README.md",
+        "evidence/m06-m08/README.md"
       ]
     },
     {
       "id": "animation",
       "family": "Animation and rigging",
-      "status": "planned",
+      "status": "implemented_experimental_profile",
       "first_useful_gate": "M08",
       "broader_gates": [
         "M09",
         "M14"
       ],
-      "qualification": "Named clips, constraint and deformation profiles",
+      "qualification": "Exact rational clips/retiming, Euler/quaternion step/linear/cubic tracks, stable rigs/rest/bind, CopyPosition/TwoBoneIk, triangle LBS/morphs and sampled shutter sequences.",
       "capability_axes": {
-        "native_authoring": "unimplemented_or_not_applicable_to_be_resolved",
-        "native_evaluation": "unimplemented_or_not_applicable_to_be_resolved",
-        "final_render": "unimplemented_or_not_applicable_to_be_resolved",
-        "preview": "unimplemented_or_not_applicable_to_be_resolved",
-        "human_editing": "unimplemented_or_not_applicable_to_be_resolved",
-        "import": "unimplemented_or_not_applicable_to_be_resolved",
-        "export": "unimplemented_or_not_applicable_to_be_resolved"
+        "native_authoring": "ordinary_revision_checked_typed_transactions",
+        "native_evaluation": "named_Rust_profiles_in_docs/m07_m08.md",
+        "final_render": "native_and_browser_Rust_CPU; GPU_only_declared_geometry_and_surface_profiles",
+        "preview": "public_Rust_render_preview_operations; raster_legacy_only",
+        "human_editing": "planned_M09",
+        "import": "native_typed_JSON_only; external_format_adapters_retain_INPUT_track_limits",
+        "export": "canonical_JSON_native_package_and_typed_render_artifacts"
       },
       "platform_profiles": {
-        "native_desktop": "planned",
-        "browser_local": "planned_with_explicit_resource_limits"
+        "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
+        "browser_local": "validated_Chromium_Rust_Wasm_OPFS; WebGPU_named_subset"
       },
-      "evidence": []
+      "evidence": [
+        "evidence/m06-m08/README.md"
+      ]
     },
     {
       "id": "sculpt",
@@ -374,14 +388,14 @@
       "broader_gates": [
         "M13"
       ],
-      "qualification": "Existing OBJ/glTF mesh codecs plus bounded indexed static scene/GLB profile; opt-in Lambertian loss; input cameras/textures/PBR/animation/extensions rejected.",
+      "qualification": "Named static Lambertian and opaque PBR glTF/GLB profiles; caller-supplied resources and imported cameras. No animation, skins, sparse/normalized attributes, extensions or arbitrary glTF claim.",
       "capability_axes": {
         "native_authoring": "not_applicable_adapter",
         "native_evaluation": "validated_static_hierarchy_and_shared_geometry",
-        "final_render": "supported_imported_mesh_profile",
-        "preview": "supported_imported_mesh_profile",
+        "final_render": "implemented_cpu_gpu_diffuse_and_opaque_static_pbr_profiles",
+        "preview": "portable_path_PBR; flat_raster_legacy_only",
         "human_editing": "planned_M09",
-        "import": "OBJ_mesh_and_gltf2_static_lambertian_scene_v0",
+        "import": "scoped_OBJ_glTF_GLB_and_PNG_JPEG_static_profiles",
         "export": "implemented_named_OBJ_glTF_profiles"
       },
       "platform_profiles": {
@@ -391,7 +405,8 @@
       "evidence": [
         "evidence/m00-m04/interchange_profile_report.json",
         "evidence/m05/agent_workflow_report.json",
-        "evidence/m05/browser_workflow_report.json"
+        "evidence/m05/browser_workflow_report.json",
+        "evidence/static-pbr/README.md"
       ]
     },
     {

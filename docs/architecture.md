@@ -3,7 +3,7 @@
 
 **Specification version:** 0.1 — proposed baseline  
 **Prepared:** September 5, 2026  
-**Implementation status:** Experimental M00–M05 foundation and agent-rendering profile delivered; current tested profiles and later gates are recorded in `planning/milestones.json`, `docs/agent_alpha.md` and `evidence/m05/README.md`.
+**Implementation status:** Experimental M00–M08 milestone profiles delivered. M06–M08 implementation, bounded backend semantics and complete workflows are documented in `docs/m07_m08.md` and `evidence/m06-m08/`. Current capabilities and separate external-input gates remain in `planning/milestones.json`, `planning/feature_matrix.json` and `planning/input_support.json`.
 **Product direction:** Agent-native, browser-capable, native desktop, fully Rust application implementation.  
 **Working name:** “Rust-native 3D Platform”; crate names in this document are illustrative.
 

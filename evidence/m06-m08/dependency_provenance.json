@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "lockfile_sha256": "4f6c11c32e966f791611b40cf7773771ecc0bef6491cb1cd484a4369c75bc59d",
+  "changed_since_static_pbr": false,
+  "inventory": "dependency_inventory.json",
+  "synthetic_fixture_generator": "crates/core/src/feature_fixtures.rs",
+  "fixture_authorship": "Original synthetic geometry, materials, rig and animation authored in this repository; no third-party model source.",
+  "external_fixtures": "Existing fixtures/static-pbr/*/provenance.json revalidated by the runner.",
+  "generated_inputs": [
+    "crates/kernel/src/path.rs",
+    "crates/kernel/src/path/",
+    "crates/gpu/src/lib.rs",
+    "crates/web/",
+    "scripts/build-web.sh"
+  ],
+  "runtime_exceptions": [
+    "macOS system services and graphics frameworks",
+    "browser WebGPU, DOM, workers, Web Locks, OPFS, JS engine",
+    "generated wasm-bindgen and minimal bootstrap interop"
+  ]
+}

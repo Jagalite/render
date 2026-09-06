@@ -1,0 +1,29 @@
+{
+  "backends": "Rust CPU on native and browser; raw render profiles remain separately declared",
+  "bakes": [
+    [
+      "orange-albedo",
+      "sha256:7840ee9384b59150b65c31418ec6f69b8705825db3de437425d3cb3fd0f4fa9b"
+    ],
+    [
+      "orange-normal",
+      "sha256:a37a17ebbedeed954012e6bda5e61f92dba4e0489a65e7ff5bbd655d21715218"
+    ]
+  ],
+  "durable_roundtrip": true,
+  "profile": "rust-imaging-v0",
+  "revision": "sha256:b239e36668bf37be40130fb6f48705736e4c7f2758f4edf98aaab8803765cd92",
+  "seconds": 0.392288875,
+  "source_snapshot_bytes": 3326,
+  "status": "passed",
+  "views": [
+    [
+      "beauty",
+      "sha256:16d76af8ef2f9a327d8b33af07e167264e46ea043beb2619b524b77fb0471dc9"
+    ],
+    [
+      "orange-only",
+      "sha256:010d60f858598d09a6d9b1b51e7ac7201db906fa6ffd485c60add5b90ede8d61"
+    ]
+  ]
+}

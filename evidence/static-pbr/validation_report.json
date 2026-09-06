@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "started_utc": "2026-09-05T21:40:19.029921+00:00",
+  "native_directory": "artifacts/static-pbr/native-20260905T214019Z",
+  "checks": [
+    {
+      "name": "regressions",
+      "command": [
+        "python3",
+        "scripts/validate-agent.py"
+      ],
+      "exit_code": 0,
+      "seconds": 222.1960122920027,
+      "log": "logs/regressions.txt"
+    },
+    {
+      "name": "native_pbr",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "pbr-workflow",
+        "artifacts/static-pbr/native-20260905T214019Z"
+      ],
+      "exit_code": 0,
+      "seconds": 60.54862770800173,
+      "log": "logs/native_pbr.txt"
+    },
+    {
+      "name": "browser_pbr",
+      "command": [
+        "node",
+        "scripts/static-pbr-browser-conformance.mjs"
+      ],
+      "exit_code": 0,
+      "seconds": 8.750297667000268,
+      "log": "logs/browser_pbr.txt"
+    }
+  ],
+  "scope": "macOS ARM64 CPU/Metal; Chromium WASM/WebGPU; Linux/Windows compile-only",
+  "native_resource_usage": {
+    "maximum resident set size": 806207488,
+    "peak memory footprint": 992513472
+  },
+  "provenance": [
+    {
+      "manifest": "fixtures/static-pbr/BoxTextured/provenance.json",
+      "sha256": "2c2e3367a90446f4595c2765dd9278184d2c1cbfee4dfc97e2166e4389e7cae5"
+    },
+    {
+      "manifest": "fixtures/static-pbr/NormalTangentMirrorTest/provenance.json",
+      "sha256": "c57efce019317f2ec48dfc66f3af90ac86878aad78ba76e8985fb5ef72903e6f"
+    }
+  ],
+  "completed_utc": "2026-09-05T21:45:12.615390+00:00",
+  "post_review_checks": "review_checks.json",
+  "cross_platform_checks": {
+    "command": [
+      "python3",
+      "scripts/static-pbr-compare.py",
+      "artifacts/static-pbr/native-20260905T214019Z"
+    ],
+    "exit_code": 0,
+    "report": "cross_platform_report.json"
+  }
+}

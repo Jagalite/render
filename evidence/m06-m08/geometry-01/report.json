@@ -1,0 +1,87 @@
+{
+  "cached_geometry_builds": 0,
+  "cancellation": true,
+  "conversions": [
+    {
+      "approximation": "bounded rational control-hull subdivision and radius/tilt variation; polygon tube/sphere sweep with parallel-transport frames; no analytic curve intersection or self-intersection removal",
+      "curve_ranges": {
+        "0000000000000000000000000000000a": [
+          0,
+          365
+        ]
+      },
+      "derived_bytes": 168058,
+      "point_ranges": {},
+      "policy_digest": "sha256:87c71c2aabc793aacf9a38fb56e574e4c6e8394b0ac1ca3d2aa690bbf6d204f1",
+      "samples": 33,
+      "source_digest": "sha256:0f2cc8033dc8e4a14a5b7d1a4fe3d39375aa18824658bb52ed68aa1df57dc441",
+      "triangles": 726,
+      "vertices": 365
+    },
+    {
+      "approximation": "bounded rational control-hull subdivision and radius/tilt variation; polygon tube/sphere sweep with parallel-transport frames; no analytic curve intersection or self-intersection removal",
+      "curve_ranges": {
+        "00000000000000000000000000000014": [
+          0,
+          365
+        ]
+      },
+      "derived_bytes": 167648,
+      "point_ranges": {},
+      "policy_digest": "sha256:87c71c2aabc793aacf9a38fb56e574e4c6e8394b0ac1ca3d2aa690bbf6d204f1",
+      "samples": 33,
+      "source_digest": "sha256:3e0ed0c12f6dbd8ab9a115bbe84b10e71f260bee300f6c4fef6b309f838a54c2",
+      "triangles": 726,
+      "vertices": 365
+    },
+    {
+      "approximation": "bounded rational control-hull subdivision and radius/tilt variation; polygon tube/sphere sweep with parallel-transport frames; no analytic curve intersection or self-intersection removal",
+      "curve_ranges": {},
+      "derived_bytes": 723396,
+      "point_ranges": {
+        "0000000000000000000000000000000b": [
+          0,
+          408
+        ],
+        "0000000000000000000000000000000c": [
+          408,
+          954
+        ],
+        "0000000000000000000000000000000d": [
+          954,
+          1320
+        ]
+      },
+      "policy_digest": "sha256:87c71c2aabc793aacf9a38fb56e574e4c6e8394b0ac1ca3d2aa690bbf6d204f1",
+      "samples": 3,
+      "source_digest": "sha256:a7f12d402876636f42d909c3858e98a85ac812246b47e9c8ec247ba6b56d24f4",
+      "triangles": 2628,
+      "vertices": 1320
+    }
+  ],
+  "durable_roundtrip": true,
+  "evaluation_seconds": 0.104174875,
+  "gpu": {
+    "adapter": "Apple M1",
+    "backend": "Metal",
+    "hardware_ray_required": false,
+    "max_buffer_bytes": 268435456,
+    "max_storage_binding_bytes": 134217728,
+    "max_workgroups": 65535
+  },
+  "linear_rmse": 1.295434709500024e-8,
+  "normal_rmse": 1.0599964012506909e-7,
+  "object_mismatches": 0,
+  "procedures": [],
+  "profile": "typed-curve-point-sweep-v0",
+  "revision": "sha256:89b3fe08c7d7842f4d892b646c3fa63bba5e7382097b6a0920123f7106e2b437",
+  "seconds": 0.6174065,
+  "source_snapshot_bytes": 4803,
+  "stale_revision": true,
+  "status": "passed",
+  "visible_pixels": {
+    "00000000000000000000000000001bbc": 233,
+    "00000000000000000000000000001bbd": 263,
+    "00000000000000000000000000001bbe": 109
+  }
+}

@@ -1,5 +1,6 @@
 //! Portable diffuse transport built from typed Rust IR nodes.
 use super::*;
+mod pbr;
 fn v(n: &str) -> Expr {
     Expr::var(n, Ty::V3)
 }
@@ -33,7 +34,11 @@ fn function(name: &str, args: &[(&str, Ty)], returns: Ty, body: Vec<Stmt>) -> Fu
     }
 }
 fn trace(origin: Expr, direction: Expr, max_distance: Expr) -> Expr {
-    call("trace", Ty::V4, vec![origin, direction, max_distance])
+    call(
+        "trace",
+        Ty::V4,
+        vec![origin, direction, max_distance, f(0.00001)],
+    )
 }
 fn random(dim: u32) -> Expr {
     call(
@@ -174,6 +179,7 @@ pub fn kernel() -> Kernel {
             ("origin", Ty::V3),
             ("direction", Ty::V3),
             ("limit", Ty::F32),
+            ("minimum", Ty::F32),
         ],
         Ty::V4,
         vec![
@@ -183,7 +189,7 @@ pub fn kernel() -> Kernel {
             Stmt::While(
                 i("instance_index").lt(cast(Ty::U32, param(1).field("w"))),
                 vec![
-                    let_("base", i("instance_index") * u(9)),
+                    let_("base", i("instance_index") * u(16)),
                     if_(
                         call(
                             "bounds_hit",
@@ -238,7 +244,7 @@ pub fn kernel() -> Kernel {
                                                         let_(
                                                             "triangle",
                                                             cast(Ty::U32, q("high").field("w"))
-                                                                + i("j") * u(5),
+                                                                + i("j") * u(11),
                                                         ),
                                                         let_(
                                                             "hit",
@@ -254,7 +260,32 @@ pub fn kernel() -> Kernel {
                                                             ),
                                                         ),
                                                         if_(
-                                                            v("hit").field("x").gt(f(0.)),
+                                                            v("hit")
+                                                                .field("x")
+                                                                .ge(s("minimum"))
+                                                                .and(
+                                                                    inst(i("base") + u(8))
+                                                                        .field("w")
+                                                                        .gt(f(0.))
+                                                                        .or(dot(
+                                                                            cross(
+                                                                                xyz(data(
+                                                                                    i("triangle")
+                                                                                        + u(1),
+                                                                                )) - xyz(data(i(
+                                                                                    "triangle",
+                                                                                ))),
+                                                                                xyz(data(
+                                                                                    i("triangle")
+                                                                                        + u(2),
+                                                                                )) - xyz(data(i(
+                                                                                    "triangle",
+                                                                                ))),
+                                                                            ),
+                                                                            v("rd"),
+                                                                        )
+                                                                        .lt(f(0.))),
+                                                                ),
                                                             vec![
                                                                 set(
                                                                     s("closest"),
@@ -344,26 +375,39 @@ pub fn kernel() -> Kernel {
             ),
             let_("py", cast(Ty::F32, i("pixel") / i("width")) + random(1)),
             let_(
-                "sx",
-                (f(2.) * s("px") / cast(Ty::F32, i("width")) - f(1.)) * cast(Ty::F32, i("width"))
-                    / cast(Ty::F32, i("height"))
-                    * param(2).field("w"),
+                "origin",
+                call("camera_origin", Ty::V3, vec![vec2(s("px"), s("py"))]),
             ),
-            let_(
-                "sy",
-                (f(1.) - f(2.) * s("py") / cast(Ty::F32, i("height"))) * param(2).field("w"),
-            ),
-            let_("origin", xyz(param(1))),
             let_(
                 "direction",
-                norm(xyz(param(2)) + xyz(param(3)) * s("sx") + xyz(param(4)) * s("sy")),
+                call("camera_direction", Ty::V3, vec![vec2(s("px"), s("py"))]),
             ),
-            let_("hit", trace(v("origin"), v("direction"), f(1e30))),
+            var("clip_factor", f(1.)),
+            if_(
+                param(8).field("x").eq(f(1.)),
+                vec![set(
+                    s("clip_factor"),
+                    f(1.) / dot(v("direction"), xyz(param(2))),
+                )],
+            ),
+            let_(
+                "hit",
+                call(
+                    "trace",
+                    Ty::V4,
+                    vec![
+                        v("origin"),
+                        v("direction"),
+                        param(9).field("y") * s("clip_factor"),
+                        param(9).field("x") * s("clip_factor"),
+                    ],
+                ),
+            ),
             Stmt::If(
                 q("hit").field("x").lt(f(0.)),
                 vec![set(v("sum"), v("sum") + xyz(param(7)))],
                 vec![
-                    let_("base", cast(Ty::U32, q("hit").field("y")) * u(9)),
+                    let_("base", cast(Ty::U32, q("hit").field("y")) * u(16)),
                     let_("triangle", cast(Ty::U32, q("hit").field("z"))),
                     let_(
                         "position",
@@ -393,116 +437,130 @@ pub fn kernel() -> Kernel {
                             set(s("first_instance"), q("hit").field("y")),
                         ],
                     ),
-                    var("color", xyz(inst(i("base") + u(6)))),
-                    let_("texwidth", cast(Ty::U32, inst(i("base") + u(8)).field("x"))),
-                    let_(
-                        "texheight",
-                        cast(Ty::U32, inst(i("base") + u(8)).field("y")),
-                    ),
-                    if_(
-                        i("texwidth").gt(u(0)),
+                    Stmt::If(
+                        inst(i("base") + u(8)).field("z").gt(f(0.)),
+                        pbr::body(),
                         vec![
+                            var("color", xyz(inst(i("base") + u(6)))),
+                            let_("texwidth", cast(Ty::U32, inst(i("base") + u(8)).field("x"))),
                             let_(
-                                "ro",
-                                call("transform", Ty::V3, vec![i("base"), v("origin"), f(1.)]),
+                                "texheight",
+                                cast(Ty::U32, inst(i("base") + u(8)).field("y")),
+                            ),
+                            if_(
+                                i("texwidth").gt(u(0)),
+                                vec![
+                                    let_(
+                                        "ro",
+                                        call(
+                                            "transform",
+                                            Ty::V3,
+                                            vec![i("base"), v("origin"), f(1.)],
+                                        ),
+                                    ),
+                                    let_(
+                                        "rd",
+                                        call(
+                                            "transform",
+                                            Ty::V3,
+                                            vec![i("base"), v("direction"), f(0.)],
+                                        ),
+                                    ),
+                                    let_(
+                                        "bary",
+                                        call(
+                                            "triangle_hit",
+                                            Ty::V3,
+                                            vec![v("ro"), v("rd"), i("triangle"), f(1e30)],
+                                        ),
+                                    ),
+                                    let_("uvpair", data(i("triangle") + u(3))),
+                                    let_("lastuv", data(i("triangle") + u(4))),
+                                    let_(
+                                        "uv",
+                                        q("uvpair").field("xy")
+                                            * (f(1.) - v("bary").field("y") - v("bary").field("z"))
+                                            + q("uvpair").field("zw") * v("bary").field("y")
+                                            + q("lastuv").field("xy") * v("bary").field("z"),
+                                    ),
+                                    let_(
+                                        "tx",
+                                        min(
+                                            cast(
+                                                Ty::U32,
+                                                call(
+                                                    "fract",
+                                                    Ty::F32,
+                                                    vec![Expr::var("uv", Ty::V2).field("x")],
+                                                ) * cast(Ty::F32, i("texwidth")),
+                                            ),
+                                            i("texwidth") - u(1),
+                                        ),
+                                    ),
+                                    let_(
+                                        "ty",
+                                        min(
+                                            cast(
+                                                Ty::U32,
+                                                call(
+                                                    "fract",
+                                                    Ty::F32,
+                                                    vec![Expr::var("uv", Ty::V2).field("y")],
+                                                ) * cast(Ty::F32, i("texheight")),
+                                            ),
+                                            i("texheight") - u(1),
+                                        ),
+                                    ),
+                                    set(
+                                        v("color"),
+                                        v("color")
+                                            * xyz(data(
+                                                cast(Ty::U32, inst(i("base") + u(7)).field("w"))
+                                                    + i("ty") * i("texwidth")
+                                                    + i("tx"),
+                                            )),
+                                    ),
+                                ],
+                            ),
+                            set(v("sum"), v("sum") + xyz(inst(i("base") + u(7)))),
+                            let_("offset", v("position") + v("normal") * f(0.00001)),
+                            let_("to_light", xyz(param(5)) - v("position")),
+                            let_("distance", sqrt(dot(v("to_light"), v("to_light")))),
+                            let_("light_dir", v("to_light") / s("distance")),
+                            let_("cosine", max(dot(v("normal"), v("light_dir")), f(0.))),
+                            if_(
+                                s("cosine").gt(f(0.)).and(s("distance").gt(f(0.00001))),
+                                vec![if_(
+                                    trace(v("offset"), v("light_dir"), s("distance") - f(0.00002))
+                                        .field("x")
+                                        .lt(f(0.)),
+                                    vec![set(
+                                        v("sum"),
+                                        v("sum")
+                                            + v("color")
+                                                * xyz(param(6))
+                                                * (s("cosine")
+                                                    / (f(std::f32::consts::PI)
+                                                        * s("distance")
+                                                        * s("distance"))),
+                                    )],
+                                )],
                             ),
                             let_(
-                                "rd",
-                                call("transform", Ty::V3, vec![i("base"), v("direction"), f(0.)]),
-                            ),
-                            let_(
-                                "bary",
+                                "secondary",
                                 call(
-                                    "triangle_hit",
+                                    "cosine_direction",
                                     Ty::V3,
-                                    vec![v("ro"), v("rd"), i("triangle"), f(1e30)],
+                                    vec![v("normal"), random(2), random(3)],
                                 ),
                             ),
-                            let_("uvpair", data(i("triangle") + u(3))),
-                            let_("lastuv", data(i("triangle") + u(4))),
-                            let_(
-                                "uv",
-                                q("uvpair").field("xy")
-                                    * (f(1.) - v("bary").field("y") - v("bary").field("z"))
-                                    + q("uvpair").field("zw") * v("bary").field("y")
-                                    + q("lastuv").field("xy") * v("bary").field("z"),
-                            ),
-                            let_(
-                                "tx",
-                                min(
-                                    cast(
-                                        Ty::U32,
-                                        call(
-                                            "fract",
-                                            Ty::F32,
-                                            vec![Expr::var("uv", Ty::V2).field("x")],
-                                        ) * cast(Ty::F32, i("texwidth")),
-                                    ),
-                                    i("texwidth") - u(1),
-                                ),
-                            ),
-                            let_(
-                                "ty",
-                                min(
-                                    cast(
-                                        Ty::U32,
-                                        call(
-                                            "fract",
-                                            Ty::F32,
-                                            vec![Expr::var("uv", Ty::V2).field("y")],
-                                        ) * cast(Ty::F32, i("texheight")),
-                                    ),
-                                    i("texheight") - u(1),
-                                ),
-                            ),
-                            set(
-                                v("color"),
-                                v("color")
-                                    * xyz(data(
-                                        cast(Ty::U32, inst(i("base") + u(7)).field("w"))
-                                            + i("ty") * i("texwidth")
-                                            + i("tx"),
-                                    )),
+                            if_(
+                                trace(v("offset"), v("secondary"), f(1e30))
+                                    .field("x")
+                                    .lt(f(0.)),
+                                vec![set(v("sum"), v("sum") + v("color") * xyz(param(7)))],
                             ),
                         ],
-                    ),
-                    set(v("sum"), v("sum") + xyz(inst(i("base") + u(7)))),
-                    let_("offset", v("position") + v("normal") * f(0.00001)),
-                    let_("to_light", xyz(param(5)) - v("position")),
-                    let_("distance", sqrt(dot(v("to_light"), v("to_light")))),
-                    let_("light_dir", v("to_light") / s("distance")),
-                    let_("cosine", max(dot(v("normal"), v("light_dir")), f(0.))),
-                    if_(
-                        s("cosine").gt(f(0.)).and(s("distance").gt(f(0.00001))),
-                        vec![if_(
-                            trace(v("offset"), v("light_dir"), s("distance") - f(0.00002))
-                                .field("x")
-                                .lt(f(0.)),
-                            vec![set(
-                                v("sum"),
-                                v("sum")
-                                    + v("color")
-                                        * xyz(param(6))
-                                        * (s("cosine")
-                                            / (f(std::f32::consts::PI)
-                                                * s("distance")
-                                                * s("distance"))),
-                            )],
-                        )],
-                    ),
-                    let_(
-                        "secondary",
-                        call(
-                            "cosine_direction",
-                            Ty::V3,
-                            vec![v("normal"), random(2), random(3)],
-                        ),
-                    ),
-                    if_(
-                        trace(v("offset"), v("secondary"), f(1e30))
-                            .field("x")
-                            .lt(f(0.)),
-                        vec![set(v("sum"), v("sum") + v("color") * xyz(param(7)))],
                     ),
                 ],
             ),
@@ -523,15 +581,20 @@ pub fn kernel() -> Kernel {
             ("instances".into(), false),
             ("params".into(), false),
             ("output".into(), true),
+            ("texels".into(), false),
         ],
-        functions: vec![
-            random_fn,
-            transform_fn,
-            bounds_fn,
-            tri_fn,
-            trace_fn,
-            cosine_fn,
-        ],
+        functions: {
+            let mut functions = vec![
+                random_fn,
+                transform_fn,
+                bounds_fn,
+                tri_fn,
+                trace_fn,
+                cosine_fn,
+            ];
+            functions.extend(pbr::functions());
+            functions
+        },
         body,
     }
 }
@@ -541,7 +604,7 @@ mod tests {
     fn generated_traversal_and_shading_validate() {
         let source = super::kernel().generate().unwrap();
         let module = naga::front::wgsl::parse_str(&source).unwrap();
-        assert_eq!(module.global_variables.len(), 4);
+        assert_eq!(module.global_variables.len(), 5);
         assert_eq!(module.entry_points[0].workgroup_size, [64, 1, 1]);
         for name in ["trace", "triangle_hit", "cosine_direction", "random"] {
             assert!(

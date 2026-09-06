@@ -1,0 +1,19 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/crates/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 28.64s
+     Running tests/scattering.rs (target/debug/deps/scattering-793bd29131ac0456)
+
+running 1 test
+
+thread 'dielectric_closed_interface_furnace_and_mixed_media_integration' (2044175) panicked at crates/core/tests/scattering.rs:157:5:
+furnace range (0.96875, 1.0)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test dielectric_closed_interface_furnace_and_mixed_media_integration ... FAILED
+
+failures:
+
+failures:
+    dielectric_closed_interface_furnace_and_mixed_media_integration
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3 filtered out; finished in 0.12s
+
+error: test failed, to rerun pass `-p render-core --test scattering`

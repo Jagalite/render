@@ -87,7 +87,7 @@ enum ApiRequest {
     Inspect,
     Execute { request: Request },
     Registry,
-    Agent { request: agent::Request },
+    Agent { request: Box<agent::Request> },
 }
 extern "C" fn create(high: u64, low: u64) -> u64 {
     boundary(0, || {
@@ -146,7 +146,7 @@ unsafe extern "C" fn request(handle: u64, input: *const u8, length: u64) -> u64 
                         id: "trusted-native-client".into(),
                         can_write: true,
                     },
-                    request,
+                    *request,
                 ),
                 ApiRequest::Registry => Ok(serde_json::to_value(render_core::api::registry())?),
             }

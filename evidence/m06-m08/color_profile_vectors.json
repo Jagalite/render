@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "source": "https://www.w3.org/TR/css-color-4/",
+  "method": "Expected vectors from independently tabulated rational XYZ matrices; production derives matrices from chromaticities. Tests assert actual Rust output on native and Wasm.",
+  "vectors": [
+    {
+      "input": [
+        1,
+        0,
+        0
+      ],
+      "from": "linear_srgb",
+      "to": "linear_display_p3",
+      "expected": [
+        0.8224619687143623,
+        0.03319419885096158,
+        0.017082630721120033
+      ],
+      "absolute_tolerance": 1e-12
+    },
+    {
+      "input": [
+        0.0031308,
+        0.0031308,
+        0.0031308
+      ],
+      "from": "linear_srgb",
+      "to": "srgb",
+      "expected": [
+        0.040449936,
+        0.040449936,
+        0.040449936
+      ],
+      "absolute_tolerance": 1e-09
+    },
+    {
+      "input": [
+        1,
+        1,
+        1
+      ],
+      "from": "linear_srgb",
+      "to": "all_four_profiles",
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "absolute_tolerance": 1e-12
+    }
+  ],
+  "tests": [
+    {
+      "case": "color_profiles_numeric_white_primaries_and_signed_roundtrip",
+      "source": "crates/core/tests/products.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "denoiser_preserves_constant_regions_and_object_edges_reduces_variance",
+      "source": "crates/core/tests/products.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "authored_views_passes_bakes_roundtrip_invalid_atlas_and_stale_requests",
+      "source": "crates/core/tests/products.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "world_normal_bake_tracks_reflected_winding",
+      "source": "crates/core/tests/products.rs",
+      "native": "passed",
+      "wasm": "passed"
+    }
+  ]
+}

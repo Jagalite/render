@@ -26,6 +26,7 @@ pub struct Transform {
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 #[serde(tag = "kind", content = "value")]
 pub enum TransformOp {
+    Quaternion([f64; 4]),
     TranslationMeters([f64; 3]),
     Scale([f64; 3]),
     RotationRadians {
@@ -66,6 +67,16 @@ impl Transform {
         );
         for op in &self.operations {
             let next = match op {
+                TransformOp::Quaternion(q) => {
+                    let q = glam::DQuat::from_array(*q);
+                    if !q.is_finite() || (q.length_squared() - 1.).abs() > 1e-8 {
+                        return Err(Error::new(
+                            "quaternion",
+                            "authored quaternion must be unit length",
+                        ));
+                    }
+                    DAffine3::from_quat(q)
+                }
                 TransformOp::TranslationMeters(v) => {
                     DAffine3::from_translation(DVec3::from_array(*v))
                 }
@@ -145,6 +156,8 @@ pub struct Material {
     pub roughness: f32,
     pub metallic: f32,
     pub texture: Option<Texture>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub pbr: Option<crate::pbr::Surface>,
 }
 impl Material {
     pub fn diffuse(id: Id, color: [f32; 3]) -> Self {
@@ -155,6 +168,7 @@ impl Material {
             roughness: 1.,
             metallic: 0.,
             texture: None,
+            pbr: None,
         }
     }
     pub fn validate(&self) -> Result<()> {
@@ -171,6 +185,26 @@ impl Material {
                 "material",
                 "material parameters violate finite range",
             ));
+        }
+        if let Some(surface) = &self.pbr {
+            surface.validate()?;
+            if surface
+                .advanced
+                .as_ref()
+                .is_some_and(|a| matches!(a.model, crate::scattering::Model::Dielectric { .. }))
+                && (self.roughness != 0. || self.metallic != 0.)
+            {
+                return Err(Error::new(
+                    "material",
+                    "ideal dielectric requires roughness=0 and metallic=0",
+                ));
+            }
+            if self.texture.is_some() {
+                return Err(Error::new(
+                    "material",
+                    "legacy texture cannot be combined with PBR bindings",
+                ));
+            }
         }
         if let Some(t) = &self.texture {
             t.validate()?;
@@ -256,6 +290,30 @@ pub struct Snapshot {
     pub meshes: BTreeMap<String, Arc<Mesh>>,
     pub materials: BTreeMap<Id, Material>,
     pub layers: Vec<Layer>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub images: BTreeMap<String, Arc<crate::textures::ImageAsset>>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub cameras: BTreeMap<Id, crate::cameras::Lens>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub geometry_assets: BTreeMap<String, Arc<crate::curves::Asset>>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub geometry_bindings: BTreeMap<Id, String>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub volume_assets: BTreeMap<String, Arc<crate::volumes::Asset>>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub volume_bindings: BTreeMap<Id, String>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub grooms: BTreeMap<Id, crate::groom::Groom>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub animation: Option<crate::animation::State>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub imaging: Option<crate::products::State>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub procedural_assets: BTreeMap<String, Arc<crate::procedural::Graph>>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub procedural_bindings: BTreeMap<Id, String>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub modeling_receipts: BTreeMap<String, crate::modeling::Receipt>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub render_settings: Option<crate::render::Settings>,
 }
@@ -268,6 +326,18 @@ impl Snapshot {
             meshes: BTreeMap::new(),
             materials: BTreeMap::new(),
             layers: vec![],
+            images: BTreeMap::new(),
+            cameras: BTreeMap::new(),
+            geometry_assets: BTreeMap::new(),
+            geometry_bindings: BTreeMap::new(),
+            volume_assets: BTreeMap::new(),
+            volume_bindings: BTreeMap::new(),
+            grooms: BTreeMap::new(),
+            animation: None,
+            imaging: None,
+            procedural_assets: BTreeMap::new(),
+            procedural_bindings: BTreeMap::new(),
+            modeling_receipts: BTreeMap::new(),
             render_settings: None,
         }
     }
@@ -276,11 +346,174 @@ impl Snapshot {
         Ok(digest(&canonical(self)?))
     }
     pub fn validate(&self) -> Result<()> {
-        if self.version > 1 || (self.version == 0) != self.render_settings.is_none() {
+        if self.version > 10
+            || (self.version < 10
+                && (!self.procedural_assets.is_empty()
+                    || !self.procedural_bindings.is_empty()
+                    || !self.modeling_receipts.is_empty()))
+            || (self.version < 9
+                && self
+                    .materials
+                    .values()
+                    .any(|m| m.pbr.as_ref().is_some_and(|p| p.displacement.is_some())))
+            || (self.version < 8
+                && self
+                    .materials
+                    .values()
+                    .any(|m| m.pbr.as_ref().is_some_and(|p| p.advanced.is_some())))
+            || (self.version < 7 && self.imaging.is_some())
+            || (self.version < 6
+                && (self.animation.is_some()
+                    || self.entities.iter().any(|e| {
+                        e.transform
+                            .operations
+                            .iter()
+                            .any(|op| matches!(op, TransformOp::Quaternion(_)))
+                    })
+                    || self
+                        .layers
+                        .iter()
+                        .flat_map(|l| l.overrides.values())
+                        .any(|o| {
+                            o.transform.as_ref().is_some_and(|t| {
+                                t.operations
+                                    .iter()
+                                    .any(|op| matches!(op, TransformOp::Quaternion(_)))
+                            })
+                        })))
+            || (self.version < 5 && !self.grooms.is_empty())
+            || (self.version < 4
+                && (!self.volume_assets.is_empty() || !self.volume_bindings.is_empty()))
+            || (self.version < 3
+                && (!self.geometry_assets.is_empty() || !self.geometry_bindings.is_empty()))
+            || (self.version < 2 && (self.version == 0) != self.render_settings.is_none())
+            || (self.version < 2
+                && (!self.images.is_empty()
+                    || !self.cameras.is_empty()
+                    || self.materials.values().any(|m| m.pbr.is_some())
+                    || self
+                        .render_settings
+                        .as_ref()
+                        .is_some_and(|s| s.camera.lens.is_some())))
+        {
             return Err(Error::new("schema_version", "unsupported document version"));
         }
         if let Some(settings) = &self.render_settings {
             settings.validate()?;
+        }
+        if self.geometry_assets.len() > 256 {
+            return Err(Error::new("budget", "at most 256 typed geometry assets"));
+        }
+        for (key, asset) in &self.geometry_assets {
+            if asset.content_id()? != *key {
+                return Err(Error::new(
+                    "integrity",
+                    "typed geometry content digest mismatch",
+                ));
+            }
+        }
+        for (entity, key) in &self.geometry_bindings {
+            let e = self
+                .entities
+                .get(*entity)
+                .ok_or_else(|| Error::new("reference", "geometry attachment entity missing"))?;
+            if e.mesh.is_some() || !self.geometry_assets.contains_key(key) {
+                return Err(Error::new(
+                    "reference",
+                    "typed geometry attachment is missing or conflicts with a mesh",
+                ));
+            }
+        }
+        if self.volume_assets.len() > 256 {
+            return Err(Error::new("budget", "at most 256 sparse volume assets"));
+        }
+        for (key, asset) in &self.volume_assets {
+            if asset.content_id()? != *key {
+                return Err(Error::new("integrity", "volume digest mismatch"));
+            }
+        }
+        for (id, key) in &self.volume_bindings {
+            if self.entities.get(*id).is_none() || !self.volume_assets.contains_key(key) {
+                return Err(Error::new(
+                    "reference",
+                    "missing volume attachment entity or asset",
+                ));
+            }
+        }
+        if self.grooms.len() > 64 {
+            return Err(Error::new("budget", "at most 64 groom components"));
+        }
+        for (id, groom) in &self.grooms {
+            let e = self
+                .entities
+                .get(*id)
+                .ok_or_else(|| Error::new("reference", "groom entity missing"))?;
+            if e.mesh.is_some() || self.geometry_bindings.contains_key(id) {
+                return Err(Error::new(
+                    "groom",
+                    "groom geometry component conflicts with other surface geometry",
+                ));
+            }
+            groom.validate(self)?;
+        }
+        if let Some(animation) = &self.animation {
+            animation.validate(self)?;
+        }
+        if let Some(imaging) = &self.imaging {
+            imaging.validate(self)?;
+        }
+        if self.procedural_assets.len() > 128 || self.modeling_receipts.len() > 256 {
+            return Err(Error::new(
+                "budget",
+                "procedural asset/provenance table limit exceeded",
+            ));
+        }
+        for (key, graph) in &self.procedural_assets {
+            graph.validate(&self.meshes)?;
+            if graph.content_id()? != *key {
+                return Err(Error::new("integrity", "procedural graph digest mismatch"));
+            }
+        }
+        for (id, key) in &self.procedural_bindings {
+            let e = self
+                .entities
+                .get(*id)
+                .ok_or_else(|| Error::new("reference", "procedural entity missing"))?;
+            if !self.procedural_assets.contains_key(key)
+                || e.mesh.is_some()
+                || self.geometry_bindings.contains_key(id)
+                || self.grooms.contains_key(id)
+            {
+                return Err(Error::new(
+                    "reference",
+                    "missing or conflicting procedural geometry component",
+                ));
+            }
+        }
+        for (key, receipt) in &self.modeling_receipts {
+            if digest(&canonical(receipt)?) != *key {
+                return Err(Error::new(
+                    "integrity",
+                    "modeling provenance digest mismatch",
+                ));
+            }
+        }
+        let mut pixels = 0u64;
+        for (key, image) in &self.images {
+            if image.content_id()? != *key {
+                return Err(Error::new("integrity", "image content digest mismatch"));
+            }
+            pixels += u64::from(image.width) * u64::from(image.height);
+        }
+        if self.images.len() > 16 || pixels > 12 * 1024 * 1024 {
+            return Err(Error::new(
+                "budget",
+                "image table exceeds 16 assets or 12 million pixels",
+            ));
+        }
+        for (entity, lens) in &self.cameras {
+            lens.validate()?;
+            self.camera(*entity)?;
         }
         for (key, m) in &self.meshes {
             if &m.content_id()? != key {
@@ -289,6 +522,13 @@ impl Snapshot {
         }
         for (id, m) in &self.materials {
             m.validate()?;
+            if let Some(surface) = &m.pbr {
+                for b in surface.bindings().into_iter().flatten() {
+                    if !self.images.contains_key(&b.image) {
+                        return Err(Error::new("reference", "PBR texture image missing"));
+                    }
+                }
+            }
             if id != &m.id {
                 return Err(Error::new("identity", "material table identity mismatch"));
             }
@@ -327,6 +567,51 @@ impl Snapshot {
         }
         Ok(())
     }
+    pub fn camera(&self, entity: Id) -> Result<crate::render::Camera> {
+        let lens = self
+            .cameras
+            .get(&entity)
+            .ok_or_else(|| Error::new("reference", "camera component missing"))?
+            .clone();
+        lens.validate()?;
+        let world = self.world_transform(entity)?;
+        let x = world.matrix3.x_axis;
+        let y = world.matrix3.y_axis;
+        let z = world.matrix3.z_axis;
+        if [
+            x.length_squared() - 1.,
+            y.length_squared() - 1.,
+            z.length_squared() - 1.,
+            x.dot(y),
+            x.dot(z),
+            y.dot(z),
+        ]
+        .iter()
+        .any(|v| v.abs() > 1e-6)
+            || world.matrix3.determinant() < 0.
+        {
+            return Err(Error::new(
+                "unsupported_camera",
+                "camera profile requires a rigid orientation; scaled/sheared/reflected camera transforms are rejected",
+            ));
+        }
+        let position = world.translation;
+        let camera = crate::render::Camera {
+            position: position.to_array(),
+            target: (position - z).to_array(),
+            up: y.to_array(),
+            vertical_fov_radians: match lens {
+                crate::cameras::Lens::Perspective {
+                    vertical_fov_radians,
+                    ..
+                } => vertical_fov_radians,
+                _ => 1.,
+            },
+            lens: Some(lens),
+        };
+        camera.basis()?;
+        Ok(camera)
+    }
     pub fn world_transform(&self, id: Id) -> Result<DAffine3> {
         let mut next = Some(id);
         let mut seen = BTreeSet::new();
@@ -347,7 +632,7 @@ impl Snapshot {
         }
         Ok(out)
     }
-    pub fn composed(&self) -> Result<Self> {
+    pub fn composition(&self) -> Result<(Self, BTreeSet<Id>)> {
         let mut out = self.clone();
         let mut visibility = BTreeMap::new();
         for layer in &self.layers {
@@ -365,15 +650,30 @@ impl Snapshot {
                 visibility.insert(*id, o.hidden);
             }
         }
-        for (id, hidden) in visibility {
-            if hidden {
-                out.entities
-                    .get_mut(id)
-                    .expect("validated layer target")
-                    .mesh = None;
-            }
-        }
         out.layers.clear();
+        out.validate()?;
+        Ok((
+            out,
+            visibility
+                .into_iter()
+                .filter_map(|(id, hidden)| hidden.then_some(id))
+                .collect(),
+        ))
+    }
+    /// Legacy flattened surface view. Dependency-aware consumers use composition
+    /// so hidden anchors remain available to grooms and later deformation.
+    pub fn composed(&self) -> Result<Self> {
+        let (mut out, hidden) = self.composition()?;
+        for id in hidden {
+            out.geometry_bindings.remove(&id);
+            out.volume_bindings.remove(&id);
+            out.grooms.remove(&id);
+            out.procedural_bindings.remove(&id);
+            out.entities
+                .get_mut(id)
+                .expect("validated layer target")
+                .mesh = None;
+        }
         out.validate()?;
         Ok(out)
     }
@@ -382,6 +682,60 @@ impl Snapshot {
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 #[serde(tag = "operation", rename_all = "snake_case", deny_unknown_fields)]
 pub enum Command {
+    CreateBox {
+        entity: Id,
+        min: [f64; 3],
+        max: [f64; 3],
+    },
+    ModelMesh {
+        entity: Id,
+        source_mesh: String,
+        #[serde(rename = "operator")]
+        operation: crate::modeling::Operation,
+        budget: crate::modeling::Budget,
+    },
+    SetProcedural {
+        entity: Id,
+        graph: Option<crate::procedural::Graph>,
+    },
+    BakeProcedural {
+        entity: Id,
+        source_graph: String,
+    },
+    SetImaging {
+        imaging: Option<crate::products::State>,
+    },
+    SetAnimation {
+        animation: Option<crate::animation::State>,
+    },
+    SetGroom {
+        entity: Id,
+        groom: Option<crate::groom::Groom>,
+    },
+    PutVolume {
+        asset: crate::volumes::Asset,
+    },
+    SetVolume {
+        entity: Id,
+        asset: Option<String>,
+    },
+    PutGeometry {
+        asset: crate::curves::Asset,
+    },
+    SetGeometry {
+        entity: Id,
+        asset: Option<String>,
+    },
+    UseCamera {
+        entity: Id,
+    },
+    PutImage {
+        image: crate::textures::ImageAsset,
+    },
+    SetCamera {
+        entity: Id,
+        lens: crate::cameras::Lens,
+    },
     SetRenderSettings {
         settings: crate::render::Settings,
     },
@@ -664,11 +1018,170 @@ fn apply(s: &mut Snapshot, c: &Command) -> Result<()> {
             .get_mut(id)
             .ok_or_else(|| Error::new("not_found", "entity does not exist"))
     }
+    if matches!(c,Command::CreateEntity{entity} if entity.transform.operations.iter().any(|op|matches!(op,TransformOp::Quaternion(_))))
+        || matches!(c,Command::SetTransform{transform,..} if transform.operations.iter().any(|op|matches!(op,TransformOp::Quaternion(_))))
+        || matches!(c,Command::PutLayer{layer} if layer.overrides.values().any(|o|o.transform.as_ref().is_some_and(|t|t.operations.iter().any(|op|matches!(op,TransformOp::Quaternion(_))))))
+    {
+        s.version = s.version.max(6);
+    }
+    if matches!(c,Command::PutMaterial{material} if material.pbr.as_ref().is_some_and(|p|p.advanced.is_some()))
+    {
+        s.version = s.version.max(8);
+    }
+    if matches!(c,Command::PutMaterial{material} if material.pbr.as_ref().is_some_and(|p|p.displacement.is_some()))
+    {
+        s.version = s.version.max(9);
+    }
     match c {
+        Command::CreateBox {
+            entity: id,
+            min,
+            max,
+        } => {
+            let e = entity(s, *id)?;
+            if e.mesh.is_some() {
+                return Err(Error::new(
+                    "geometry",
+                    "primitive target already has a mesh",
+                ));
+            }
+            let mesh = crate::modeling::box_mesh(*min, *max)?;
+            let key = mesh.content_id()?;
+            s.meshes.insert(key.clone(), Arc::new(mesh));
+            entity(s, *id)?.mesh = Some(key);
+            s.version = s.version.max(10);
+        }
+        Command::ModelMesh {
+            entity: id,
+            source_mesh,
+            operation,
+            budget,
+        } => {
+            if entity(s, *id)?.mesh.as_ref() != Some(source_mesh) {
+                return Err(Error::new(
+                    "stale_selection",
+                    "modeling source mesh changed",
+                ));
+            }
+            let (mesh, receipt) = crate::modeling::apply(
+                s.meshes
+                    .get(source_mesh)
+                    .ok_or_else(|| Error::new("reference", "modeling source asset missing"))?,
+                operation,
+                budget,
+                || false,
+            )?;
+            let key = mesh.content_id()?;
+            s.meshes.insert(key.clone(), Arc::new(mesh));
+            entity(s, *id)?.mesh = Some(key);
+            s.modeling_receipts
+                .insert(digest(&canonical(&receipt)?), receipt);
+            s.version = s.version.max(10);
+        }
+        Command::SetProcedural { entity: id, graph } => {
+            entity(s, *id)?;
+            if let Some(graph) = graph {
+                graph.validate(&s.meshes)?;
+                let key = graph.content_id()?;
+                s.procedural_assets
+                    .insert(key.clone(), Arc::new(graph.clone()));
+                s.procedural_bindings.insert(*id, key);
+            } else {
+                s.procedural_bindings.remove(id);
+            }
+            s.version = s.version.max(10);
+        }
+        Command::BakeProcedural {
+            entity: id,
+            source_graph,
+        } => {
+            if s.procedural_bindings.get(id) != Some(source_graph) {
+                return Err(Error::new(
+                    "stale_selection",
+                    "procedural source graph changed",
+                ));
+            }
+            let result = s.procedural_assets[source_graph].evaluate(&s.meshes, || false)?;
+            let key = result.mesh.content_id()?;
+            s.meshes.insert(key.clone(), Arc::new(result.mesh));
+            entity(s, *id)?.mesh = Some(key);
+            s.procedural_bindings.remove(id);
+            s.version = s.version.max(10);
+        }
+        Command::SetImaging { imaging } => {
+            s.imaging = imaging.clone();
+            s.version = s.version.max(7);
+        }
+        Command::SetAnimation { animation } => {
+            s.animation = animation.clone();
+            s.version = s.version.max(6);
+        }
+        Command::SetGroom { entity: id, groom } => {
+            entity(s, *id)?;
+            if let Some(g) = groom {
+                s.grooms.insert(*id, g.clone());
+            } else {
+                s.grooms.remove(id);
+            }
+            s.version = s.version.max(5);
+        }
+        Command::PutVolume { asset } => {
+            s.volume_assets
+                .insert(asset.content_id()?, Arc::new(asset.clone()));
+            s.version = s.version.max(4);
+        }
+        Command::SetVolume { entity: id, asset } => {
+            entity(s, *id)?;
+            if let Some(key) = asset {
+                s.volume_bindings.insert(*id, key.clone());
+            } else {
+                s.volume_bindings.remove(id);
+            }
+            s.version = s.version.max(4);
+        }
+        Command::PutGeometry { asset } => {
+            s.geometry_assets
+                .insert(asset.content_id()?, Arc::new(asset.clone()));
+            s.version = s.version.max(3);
+        }
+        Command::SetGeometry { entity: id, asset } => {
+            entity(s, *id)?;
+            if let Some(key) = asset {
+                s.geometry_bindings.insert(*id, key.clone());
+            } else {
+                s.geometry_bindings.remove(id);
+            }
+            s.version = s.version.max(3);
+        }
+        Command::UseCamera { entity } => {
+            let camera = s.camera(*entity)?;
+            let settings = s.render_settings.as_mut().ok_or_else(|| {
+                Error::new(
+                    "render_settings",
+                    "selecting a camera requires authored render settings",
+                )
+            })?;
+            settings.camera = camera;
+            settings.validate()?;
+            s.version = s.version.max(2);
+        }
+        Command::PutImage { image } => {
+            image.decode()?;
+            s.images
+                .insert(image.content_id()?, Arc::new(image.clone()));
+            s.version = s.version.max(2);
+        }
+        Command::SetCamera { entity, lens } => {
+            lens.validate()?;
+            s.cameras.insert(*entity, lens.clone());
+            s.version = s.version.max(2);
+        }
         Command::SetRenderSettings { settings } => {
             settings.validate()?;
             s.render_settings = Some(settings.clone());
-            s.version = 1;
+            s.version = s
+                .version
+                .max(if settings.camera.lens.is_some() { 2 } else { 1 });
         }
         Command::PutMesh { mesh } => {
             let id = mesh.content_id()?;
@@ -676,6 +1189,9 @@ fn apply(s: &mut Snapshot, c: &Command) -> Result<()> {
         }
         Command::PutMaterial { material } => {
             material.validate()?;
+            if material.pbr.is_some() {
+                s.version = s.version.max(2);
+            }
             s.materials.insert(material.id, material.clone());
         }
         Command::CreateEntity { entity: e } => s.entities.insert(e.clone())?,

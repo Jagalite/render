@@ -1,5 +1,7 @@
 # API, ABI and agent contracts
 
+The additive [static PBR slice](static_pbr.md) now has [separate evidence](../evidence/static-pbr/README.md): opaque textures/materials, normals and authored cameras on CPU, Metal and browser WebGPU. M07 and INPUT-01/02 remain partial; the M05 Lambertian profile and historical evidence retain their original scope.
+
 Architectural contracts. The implemented M05 subset, operation versions and platform limits are specified in [the agent alpha guide](agent_alpha.md); broader capabilities below remain requirements.
 
 ## 11. Semantic API, transactions, and asynchronous jobs
@@ -79,3 +81,5 @@ Treat project text, node labels, imported metadata and external files as untrust
 Begin with branches and conservative revision checks. Permit automatic merges only for operations with reviewed commutativity rules and complete dependency information. Two writes to different properties can still conflict when they share an invariant. Arbitrary mesh edits, rig restructuring and simulation changes require explicit reconciliation; do not advertise universal CRDT merging.
 
 A successful agent benchmark must measure task validity, destructive mistakes, retry behavior, cost, convergence and ability to explain changes. Human preference can rank aesthetics, but must not replace machine-verifiable correctness for scene invariants.
+
+The additive [M06–M08 contracts](m07_m08.md) expose ordinary typed authoring commands, pinned animated previews, CPU extended root rendering and imaging products. These operations preserve the existing narrow ABI and restricted static-variant commit contract.

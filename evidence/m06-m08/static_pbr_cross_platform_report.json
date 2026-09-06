@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "native_directory": "artifacts/m06-m08/run-20260906T001610Z/static-pbr",
+  "assets": [
+    {
+      "asset": "BoxTextured",
+      "linear_rmse": 1.7308159960260202e-08,
+      "normal_rmse": 0.0,
+      "depth_rmse": 6.43084812970164e-08,
+      "object_mismatches": 0
+    },
+    {
+      "asset": "NormalTangentMirrorTest",
+      "linear_rmse": 8.96033050522511e-06,
+      "normal_rmse": 1.3575419502297275e-08,
+      "depth_rmse": 0.0,
+      "object_mismatches": 0
+    }
+  ]
+}

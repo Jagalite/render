@@ -1,0 +1,211 @@
+{
+  "status": "passed",
+  "root": "artifacts/m06-m08/run-20260906T001610Z",
+  "checks": [
+    {
+      "name": "regressions",
+      "command": [
+        "python3",
+        "scripts/validate-agent.py"
+      ],
+      "exit_code": 0,
+      "seconds": 451.3137607919998,
+      "log": "logs/regressions.txt"
+    },
+    {
+      "name": "modeling",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "modeling-workflow",
+        "artifacts/m06-m08/run-20260906T001610Z/modeling-01"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6299121669981105,
+      "log": "logs/modeling.txt"
+    },
+    {
+      "name": "geometry",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "geometry-workflow",
+        "artifacts/m06-m08/run-20260906T001610Z/geometry-01"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6578862089991162,
+      "log": "logs/geometry.txt"
+    },
+    {
+      "name": "groom",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "groom-workflow",
+        "artifacts/m06-m08/run-20260906T001610Z/groom-01"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6085749170015333,
+      "log": "logs/groom.txt"
+    },
+    {
+      "name": "volume",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "volume-workflow",
+        "artifacts/m06-m08/run-20260906T001610Z/volume-01"
+      ],
+      "exit_code": 0,
+      "seconds": 1.5962457919995359,
+      "log": "logs/volume.txt"
+    },
+    {
+      "name": "surfaces",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "surfaces-workflow",
+        "artifacts/m06-m08/run-20260906T001610Z/surfaces-01"
+      ],
+      "exit_code": 0,
+      "seconds": 2.094374375003099,
+      "log": "logs/surfaces.txt"
+    },
+    {
+      "name": "imaging",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "imaging-workflow",
+        "artifacts/m06-m08/run-20260906T001610Z/imaging-01"
+      ],
+      "exit_code": 0,
+      "seconds": 0.40232662500056904,
+      "log": "logs/imaging.txt"
+    },
+    {
+      "name": "animation",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "animation-workflow",
+        "artifacts/m06-m08/run-20260906T001610Z/character-01"
+      ],
+      "exit_code": 0,
+      "seconds": 5.097575166997558,
+      "log": "logs/animation.txt"
+    },
+    {
+      "name": "browser_geometry",
+      "command": [
+        "node",
+        "scripts/m07-browser-conformance.mjs",
+        "artifacts/m06-m08/run-20260906T001610Z",
+        "geometry,volume,groom,modeling"
+      ],
+      "exit_code": 0,
+      "seconds": 1.2372946249997767,
+      "log": "logs/browser_geometry.txt"
+    },
+    {
+      "name": "browser_products",
+      "command": [
+        "node",
+        "scripts/m07-products-browser.mjs",
+        "artifacts/m06-m08/run-20260906T001610Z"
+      ],
+      "exit_code": 0,
+      "seconds": 0.606626500000857,
+      "log": "logs/browser_products.txt"
+    },
+    {
+      "name": "browser_animation",
+      "command": [
+        "node",
+        "scripts/m08-browser-conformance.mjs",
+        "artifacts/m06-m08/run-20260906T001610Z/character-01"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7708366250008112,
+      "log": "logs/browser_animation.txt"
+    },
+    {
+      "name": "static_pbr_native",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "pbr-workflow",
+        "artifacts/m06-m08/run-20260906T001610Z/static-pbr"
+      ],
+      "exit_code": 0,
+      "seconds": 56.949398500000825,
+      "log": "logs/static_pbr_native.txt"
+    },
+    {
+      "name": "static_pbr_browser",
+      "command": [
+        "node",
+        "scripts/static-pbr-browser-conformance.mjs"
+      ],
+      "exit_code": 0,
+      "seconds": 8.523339915998804,
+      "log": "logs/static_pbr_browser.txt"
+    },
+    {
+      "name": "static_pbr_comparison",
+      "command": [
+        "python3",
+        "scripts/static-pbr-compare.py",
+        "artifacts/m06-m08/run-20260906T001610Z/static-pbr"
+      ],
+      "exit_code": 0,
+      "seconds": 0.18718091700065997,
+      "log": "logs/static_pbr_comparison.txt"
+    }
+  ],
+  "resources": {
+    "modeling": {
+      "maximum resident set size": 40779776,
+      "peak memory footprint": 15763008
+    },
+    "geometry": {
+      "maximum resident set size": 47038464,
+      "peak memory footprint": 25429568
+    },
+    "groom": {
+      "maximum resident set size": 40108032,
+      "peak memory footprint": 17139264
+    },
+    "volume": {
+      "maximum resident set size": 27000832,
+      "peak memory footprint": 13862016
+    },
+    "surfaces": {
+      "maximum resident set size": 39829504,
+      "peak memory footprint": 18482816
+    },
+    "imaging": {
+      "maximum resident set size": 18153472,
+      "peak memory footprint": 4605056
+    },
+    "animation": {
+      "maximum resident set size": 37306368,
+      "peak memory footprint": 13780608
+    },
+    "static_pbr_native": {
+      "maximum resident set size": 646135808,
+      "peak memory footprint": 1040551424
+    }
+  },
+  "scope": "macOS ARM64 native CPU/Metal; Chromium Rust Wasm/WebGPU; Linux/Windows compile only",
+  "completed_utc": "2026-09-06T00:25:03.807990+00:00"
+}

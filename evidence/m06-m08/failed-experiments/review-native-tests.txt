@@ -1,0 +1,69 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/crates/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1m 14s
+     Running tests/animation.rs (target/debug/deps/animation-5847b809193bf975)
+
+running 7 tests
+test rational_time_and_interpolation_preserve_authored_modes ... ok
+test clip_random_access_retime_conflicts_and_cancellation ... ok
+test bind_affine_scale_shear_and_two_bone_solver_diagnostics ... ok
+test quaternion_layer_schema_gate_and_transaction_upgrade ... ok
+test weighted_affine_skinning_and_morph_have_independent_numeric_expectations ... ok
+test character_skin_morph_transaction_random_access_and_native_state_recovery ... ok
+test shutter_sequence_pinned_revisions_partial_output_and_agent_preview ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.74s
+
+     Running tests/displacement.rs (target/debug/deps/displacement-9100495d367855c6)
+
+running 3 tests
+test displacement_loose_data_and_root_evaluation_cancellation ... ok
+test displacement_metric_height_subdivision_convergence_and_limits ... ok
+test surface_displacement_cache_transactions_and_recovery ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.14s
+
+     Running tests/modeling.rs (target/debug/deps/modeling-b22577ac64294cc8)
+
+running 6 tests
+test box_operators_reject_inward_shells ... ok
+test bridge_dissolve_attribute_transfer_invalid_selection_budget_and_cancel ... ok
+test primitives_extrude_inset_split_weld_and_correspondence ... ok
+test subdivision_mirror_array_solidify_and_box_csg_numeric ... ok
+test direct_modeling_transactions_and_field_cycle_domain_resource_diagnostics ... ok
+test procedural_groups_fields_direct_parity_bake_recovery_and_stale_edits ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.11s
+
+     Running tests/products.rs (target/debug/deps/products-be48839ca91056b5)
+
+running 4 tests
+test color_profiles_numeric_white_primaries_and_signed_roundtrip ... ok
+test world_normal_bake_tracks_reflected_winding ... ok
+test denoiser_preserves_constant_regions_and_object_edges_reduces_variance ... ok
+test authored_views_passes_bakes_roundtrip_invalid_atlas_and_stale_requests ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.20s
+
+     Running tests/scattering.rs (target/debug/deps/scattering-793bd29131ac0456)
+
+running 4 tests
+test dielectric_snell_fresnel_and_total_internal_reflection ... ok
+test dielectric_closed_interface_furnace_and_mixed_media_integration ... FAILED
+test alpha_coverage_and_ideal_glass_render_analytic_environment ... ok
+test coated_conductor_reciprocity_furnace_and_pdf_sampling ... ok
+
+failures:
+
+---- dielectric_closed_interface_furnace_and_mixed_media_integration stdout ----
+
+thread 'dielectric_closed_interface_furnace_and_mixed_media_integration' (2039943) panicked at crates/core/tests/scattering.rs:157:5:
+assertion failed: image.linear.iter().flatten().all(|x| (*x - 1.).abs() < 1e-5)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    dielectric_closed_interface_furnace_and_mixed_media_integration
+
+test result: FAILED. 3 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.39s
+
+error: test failed, to rerun pass `-p render-core --test scattering`

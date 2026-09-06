@@ -55,6 +55,8 @@ impl Bounds {
 pub struct Triangle {
     pub positions: [DVec3; 3],
     pub uv: [Vec2; 3],
+    pub normals: Option<[DVec3; 3]>,
+    pub tangents: Option<[glam::DVec4; 3]>,
 }
 impl Triangle {
     pub fn bounds(&self) -> Bounds {
@@ -184,35 +186,215 @@ pub struct Scene {
     pub instances: Vec<Instance>,
     pub bvh: Bvh,
     pub geometry_builds: usize,
+    pub conversions: Vec<crate::curves::Conversion>,
+    pub media: crate::volumes::Media,
+    pub displacements: Vec<crate::displacement::Receipt>,
+    pub procedures: Vec<crate::procedural::Receipt>,
+    pub images: BTreeMap<(String, crate::textures::TextureRole), Arc<crate::textures::Pyramid>>,
 }
 #[derive(Default)]
 pub struct Evaluator {
+    procedures: BTreeMap<String, (Arc<crate::geometry::Mesh>, crate::procedural::Receipt)>,
+    displaced: BTreeMap<String, (Arc<crate::geometry::Mesh>, crate::displacement::Receipt)>,
     cache: BTreeMap<String, Arc<Geometry>>,
+    derived: BTreeMap<String, (Arc<crate::geometry::Mesh>, crate::curves::Conversion)>,
 }
 impl Evaluator {
     pub fn evaluate(&mut self, snapshot: &Snapshot) -> Result<Scene> {
+        self.evaluate_with_cancel(snapshot, || false)
+    }
+    pub fn evaluate_with_cancel(
+        &mut self,
+        snapshot: &Snapshot,
+        mut cancelled: impl FnMut() -> bool,
+    ) -> Result<Scene> {
+        if cancelled() {
+            return Err(Error::new("cancelled", "geometry evaluation cancelled"));
+        }
         snapshot.validate()?;
         let revision = snapshot.revision()?;
-        let s = snapshot.composed()?;
+        let (s, hidden) = snapshot.composition()?;
+        let mut images = BTreeMap::new();
+        let mut decoded = BTreeMap::new();
+        for material in s.materials.values() {
+            if let Some(surface) = &material.pbr {
+                for binding in surface.bindings().into_iter().flatten() {
+                    if let std::collections::btree_map::Entry::Vacant(entry) =
+                        images.entry((binding.image.clone(), binding.role))
+                    {
+                        if let std::collections::btree_map::Entry::Vacant(entry) =
+                            decoded.entry(binding.image.clone())
+                        {
+                            entry.insert(s.images[&binding.image].decode()?);
+                        }
+                        entry.insert(Arc::new(crate::textures::Pyramid::new(
+                            &decoded[&binding.image],
+                            binding.role,
+                        )));
+                    }
+                }
+            }
+        }
         let mut instances = vec![];
         let mut geometry_builds = 0;
+        let mut conversions = BTreeMap::new();
+        let mut displacements = BTreeMap::new();
+        let mut procedures = BTreeMap::new();
         for e in s.entities.iter() {
-            let Some(key) = &e.mesh else {
+            if hidden.contains(&e.id) {
+                continue;
+            }
+            if cancelled() {
+                return Err(Error::new("cancelled", "geometry evaluation cancelled"));
+            }
+            let groom = s.grooms.get(&e.id);
+            let procedure = s.procedural_bindings.get(&e.id);
+            let key = if let Some(key) = procedure {
+                key.clone()
+            } else if let Some(groom) = groom {
+                groom.cache_key(&s, e.id)?
+            } else if let Some(key) = e.mesh.as_ref().or_else(|| s.geometry_bindings.get(&e.id)) {
+                key.clone()
+            } else {
                 continue;
             };
-            let mesh = &s.meshes[key];
+            let key = &key;
+            let mesh = if procedure.is_some() {
+                if !self.procedures.contains_key(key) {
+                    let result = s.procedural_assets[key].evaluate(&s.meshes, &mut cancelled)?;
+                    self.procedures
+                        .insert(key.clone(), (Arc::new(result.mesh), result.receipt));
+                }
+                let (mesh, receipt) = &self.procedures[key];
+                procedures.insert(key.clone(), receipt.clone());
+                mesh.clone()
+            } else if let Some(mesh) = s.meshes.get(key) {
+                mesh.clone()
+            } else {
+                if !self.derived.contains_key(key) {
+                    let evaluated = if let Some(groom) = groom {
+                        groom.evaluate(&s, e.id, &mut cancelled)?
+                    } else {
+                        s.geometry_assets[key].evaluate(&mut cancelled)?
+                    };
+                    self.derived
+                        .insert(key.clone(), (Arc::new(evaluated.mesh), evaluated.receipt));
+                }
+                let (mesh, receipt) = &self.derived[key];
+                conversions.insert(key.clone(), receipt.clone());
+                mesh.clone()
+            };
+            let displacement = e
+                .material
+                .and_then(|id| s.materials.get(&id))
+                .and_then(|m| m.pbr.as_ref())
+                .and_then(|p| p.displacement.as_ref());
+            let displaced_key = displacement
+                .map(|d| canonical(&(key, d)).map(|v| digest(&v)))
+                .transpose()?;
+            let (key, mesh) = if let (Some(d), Some(dkey)) = (displacement, displaced_key.as_ref())
+            {
+                if !self.displaced.contains_key(dkey) {
+                    let (mesh, receipt) = d.evaluate(&mesh, &images, &mut cancelled)?;
+                    self.displaced
+                        .insert(dkey.clone(), (Arc::new(mesh), receipt));
+                }
+                let (mesh, receipt) = &self.displaced[dkey];
+                displacements.insert(dkey.clone(), receipt.clone());
+                (dkey, mesh.clone())
+            } else {
+                (key, mesh)
+            };
             let geometry = if let Some(g) = self.cache.get(key) {
                 g.clone()
             } else {
                 let triangles = mesh
                     .triangles()?
                     .iter()
-                    .map(|c| Triangle {
-                        positions: c
-                            .map(|i| mesh.positions.get(mesh.corners[i as usize].vertex as usize)),
-                        uv: c.map(|i| mesh.uv(i as usize)),
+                    .map(|c| {
+                        fn values(
+                            mesh: &crate::geometry::Mesh,
+                            semantic: &str,
+                            c: &[u32; 3],
+                        ) -> Result<Option<[DVec3; 3]>> {
+                            use crate::geometry::*;
+                            let Some(attribute) =
+                                mesh.attributes.values().find(|a| a.semantic == semantic)
+                            else {
+                                return Ok(None);
+                            };
+                            let AttributeValues::Vec3(values) = &attribute.values else {
+                                return Err(Error::new(
+                                    "attribute",
+                                    "shading vector requires vec3",
+                                ));
+                            };
+                            let mut out = [DVec3::ZERO; 3];
+                            for (j, &corner) in c.iter().enumerate() {
+                                let index = match attribute.domain {
+                                    Domain::Point => mesh.corners[corner as usize].vertex as usize,
+                                    Domain::Corner => corner as usize,
+                                    _ => {
+                                        return Err(Error::new(
+                                            "attribute",
+                                            "shading vector requires point/corner domain",
+                                        ));
+                                    }
+                                };
+                                out[j] = Vec3::from_array(values[index]).as_dvec3();
+                                if out[j].length_squared() < 1e-20 {
+                                    return Err(Error::new("attribute", "zero shading vector"));
+                                }
+                            }
+                            Ok(Some(out))
+                        }
+                        let normals = values(&mesh, "normal", c)?;
+                        let tangents = if let Some(t) = values(&mesh, "tangent", c)? {
+                            let sign = mesh
+                                .attributes
+                                .values()
+                                .find(|a| a.semantic == "tangent_sign")
+                                .ok_or_else(|| Error::new("attribute", "tangent sign missing"))?;
+                            let crate::geometry::AttributeValues::Scalar(values) = &sign.values
+                            else {
+                                return Err(Error::new(
+                                    "attribute",
+                                    "tangent sign requires scalar",
+                                ));
+                            };
+                            let mut output = [glam::DVec4::ZERO; 3];
+                            for (j, &corner) in c.iter().enumerate() {
+                                let index = match sign.domain {
+                                    crate::geometry::Domain::Point => {
+                                        mesh.corners[corner as usize].vertex as usize
+                                    }
+                                    crate::geometry::Domain::Corner => corner as usize,
+                                    _ => {
+                                        return Err(Error::new("attribute", "tangent sign domain"));
+                                    }
+                                };
+                                if values[index].abs() != 1. {
+                                    return Err(Error::new(
+                                        "attribute",
+                                        "tangent sign must be -1 or 1",
+                                    ));
+                                }
+                                output[j] = t[j].extend(f64::from(values[index]));
+                            }
+                            Some(output)
+                        } else {
+                            None
+                        };
+                        Ok(Triangle {
+                            positions: c.map(|i| {
+                                mesh.positions.get(mesh.corners[i as usize].vertex as usize)
+                            }),
+                            uv: c.map(|i| mesh.uv(i as usize)),
+                            normals,
+                            tangents,
+                        })
                     })
-                    .collect::<Vec<_>>();
+                    .collect::<Result<Vec<_>>>()?;
                 let bvh = Bvh::build(&triangles.iter().map(Triangle::bounds).collect::<Vec<_>>());
                 let g = Arc::new(Geometry { triangles, bvh });
                 self.cache.insert(key.clone(), g.clone());
@@ -244,7 +426,7 @@ impl Evaluator {
                 .and_then(|id| s.materials.get(&id))
                 .cloned()
                 .unwrap_or_else(|| Material::diffuse(Id(0), [0.8; 3]));
-            if material.metallic != 0. || material.roughness != 1. {
+            if material.pbr.is_none() && (material.metallic != 0. || material.roughness != 1.) {
                 return Err(Error::new(
                     "unsupported_material",
                     "Lambertian profile requires metallic=0 and roughness=1; other values require a later scattering profile",
@@ -261,19 +443,36 @@ impl Evaluator {
             });
         }
         let bvh = Bvh::build(&instances.iter().map(|i| i.bounds).collect::<Vec<_>>());
+        let mut media_assets = Vec::new();
+        for (id, key) in &s.volume_bindings {
+            if hidden.contains(id) {
+                continue;
+            }
+            media_assets.push((*id, s.volume_assets[key].as_ref(), s.world_transform(*id)?));
+        }
+        let media = crate::volumes::Media::build(media_assets, &mut cancelled)?;
         Ok(Scene {
             revision,
             instances,
             bvh,
             geometry_builds,
+            conversions: conversions.into_values().collect(),
+            media,
+            displacements: displacements.into_values().collect(),
+            procedures: procedures.into_values().collect(),
+            images,
         })
     }
 }
 #[derive(Clone, Debug)]
 pub struct Hit {
+    pub front_face: bool,
     pub distance: f64,
     pub position: DVec3,
     pub normal: DVec3,
+    pub geometric_normal: DVec3,
+    pub tangent: DVec3,
+    pub tangent_sign: f64,
     pub uv: Vec2,
     pub instance: usize,
     pub triangle: usize,
@@ -291,18 +490,98 @@ impl Scene {
             for ti in inst.geometry.bvh.candidates(local, tmin, nearest) {
                 let tri = &inst.geometry.triangles[ti];
                 if let Some((t, u, v)) = tri.intersect(local, tmin, nearest) {
-                    nearest = t;
-                    let n = (tri.positions[1] - tri.positions[0])
-                        .cross(tri.positions[2] - tri.positions[0]);
-                    let mut normal = (inst.inverse.matrix3.transpose() * n).normalize()
-                        * inst.transform.matrix3.determinant().signum();
-                    if normal.dot(ray.direction) > 0. {
+                    let local_normal = (tri.positions[1] - tri.positions[0])
+                        .cross(tri.positions[2] - tri.positions[0])
+                        .normalize();
+                    let is_pbr = inst.material.pbr.is_some();
+                    let mut geometric_normal =
+                        (inst.inverse.matrix3.transpose() * local_normal).normalize();
+                    if !is_pbr {
+                        geometric_normal *= inst.transform.matrix3.determinant().signum();
+                    }
+                    let back = geometric_normal.dot(ray.direction) > 0.;
+                    if back
+                        && inst.material.pbr.as_ref().is_some_and(|p| {
+                            !p.double_sided
+                                && !p.advanced.as_ref().is_some_and(|a| {
+                                    matches!(a.model, crate::scattering::Model::Dielectric { .. })
+                                })
+                        })
+                    {
+                        continue;
+                    }
+                    if back {
+                        geometric_normal = -geometric_normal;
+                    }
+                    let local_shading = if is_pbr {
+                        tri.normals
+                            .map(|n| {
+                                let interpolated = n[0] * (1. - u - v) + n[1] * u + n[2] * v;
+                                if interpolated.length_squared() > 1e-20 {
+                                    interpolated.normalize()
+                                } else {
+                                    local_normal
+                                }
+                            })
+                            .unwrap_or(local_normal)
+                    } else {
+                        local_normal
+                    };
+                    let mut normal = if is_pbr {
+                        (inst.inverse.matrix3.transpose() * local_shading).normalize()
+                    } else {
+                        geometric_normal
+                    };
+                    if normal.dot(geometric_normal) < 0. {
                         normal = -normal;
                     }
+                    let (local_tangent, sign) = if let Some(t) = tri.tangents {
+                        let t = t[0] * (1. - u - v) + t[1] * u + t[2] * v;
+                        (t.truncate(), if t.w < 0. { -1. } else { 1. })
+                    } else {
+                        let a = tri.uv[1] - tri.uv[0];
+                        let b = tri.uv[2] - tri.uv[0];
+                        let determinant = f64::from(a.x * b.y - a.y * b.x);
+                        if determinant.abs() > 1e-12 {
+                            let e1 = tri.positions[1] - tri.positions[0];
+                            let e2 = tri.positions[2] - tri.positions[0];
+                            let t = (e1 * f64::from(b.y) - e2 * f64::from(a.y)) / determinant;
+                            let bt = (e2 * f64::from(a.x) - e1 * f64::from(b.x)) / determinant;
+                            (t, local_shading.cross(t).dot(bt).signum())
+                        } else {
+                            let helper = if local_shading.z.abs() < 0.999 {
+                                DVec3::Z
+                            } else {
+                                DVec3::X
+                            };
+                            (helper.cross(local_shading).normalize(), 1.)
+                        }
+                    };
+                    let mut tangent = inst.transform.transform_vector3(local_tangent);
+                    tangent -= normal * normal.dot(tangent);
+                    if tangent.length_squared() < 1e-20 {
+                        tangent = if normal.z.abs() < 0.999 {
+                            DVec3::Z
+                        } else {
+                            DVec3::X
+                        }
+                        .cross(normal);
+                    }
+                    tangent = tangent.normalize();
+                    let mut tangent_sign = sign * inst.transform.matrix3.determinant().signum();
+                    if is_pbr && back {
+                        tangent = -tangent;
+                        tangent_sign = -tangent_sign;
+                    }
+                    nearest = t;
                     hit = Some(Hit {
+                        front_face: !back,
                         distance: t,
                         position: ray.origin + t * ray.direction,
                         normal,
+                        geometric_normal,
+                        tangent,
+                        tangent_sign,
                         uv: tri.uv[0] * (1. - u - v) as f32
                             + tri.uv[1] * u as f32
                             + tri.uv[2] * v as f32,
@@ -322,9 +601,37 @@ pub struct Camera {
     pub target: [f64; 3],
     pub up: [f64; 3],
     pub vertical_fov_radians: f64,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub lens: Option<crate::cameras::Lens>,
 }
 impl Camera {
+    pub fn fov(&self) -> f64 {
+        match self.lens {
+            Some(crate::cameras::Lens::Perspective {
+                vertical_fov_radians,
+                ..
+            }) => vertical_fov_radians,
+            _ => self.vertical_fov_radians,
+        }
+    }
+    pub fn clip(&self, ray: Ray) -> (f64, f64) {
+        let Some(lens) = &self.lens else {
+            return (1e-5, f64::INFINITY);
+        };
+        let cosine = ray
+            .direction
+            .dot((DVec3::from_array(self.target) - DVec3::from_array(self.position)).normalize());
+        match *lens {
+            crate::cameras::Lens::Perspective { near, far, .. } => {
+                (near / cosine, far.unwrap_or(f64::INFINITY) / cosine)
+            }
+            crate::cameras::Lens::Orthographic { near, far, .. } => (near.max(1e-5), far),
+        }
+    }
     pub fn basis(&self) -> Result<(DVec3, DVec3, DVec3)> {
+        if let Some(lens) = &self.lens {
+            lens.validate()?;
+        }
         let p = DVec3::from_array(self.position);
         let d = DVec3::from_array(self.target) - p;
         let up = DVec3::from_array(self.up);
@@ -348,8 +655,23 @@ impl Camera {
     }
     pub fn ray(&self, x: f64, y: f64, width: u32, height: u32) -> Result<Ray> {
         let (f, r, u) = self.basis()?;
-        let half = (self.vertical_fov_radians / 2.).tan();
-        let sx = (2. * x / width as f64 - 1.) * width as f64 / height as f64 * half;
+        if let Some(crate::cameras::Lens::Orthographic { xmag, ymag, .. }) = self.lens {
+            return Ok(Ray {
+                origin: DVec3::from_array(self.position)
+                    + r * ((2. * x / width as f64 - 1.) * xmag)
+                    + u * ((1. - 2. * y / height as f64) * ymag),
+                direction: f,
+            });
+        }
+        let aspect = match self.lens {
+            Some(crate::cameras::Lens::Perspective {
+                aspect_ratio: Some(a),
+                ..
+            }) => a,
+            _ => width as f64 / height as f64,
+        };
+        let half = (self.fov() / 2.).tan();
+        let sx = (2. * x / width as f64 - 1.) * aspect * half;
         let sy = (1. - 2. * y / height as f64) * half;
         Ok(Ray {
             origin: DVec3::from_array(self.position),
@@ -473,8 +795,198 @@ pub fn albedo(material: &Material, uv: Vec2) -> Vec3 {
         base
     }
 }
+pub fn projected_uv(triangle: &Triangle, ray: Ray) -> Option<Vec2> {
+    let e1 = triangle.positions[1] - triangle.positions[0];
+    let e2 = triangle.positions[2] - triangle.positions[0];
+    let p = ray.direction.cross(e2);
+    let det = e1.dot(p);
+    if det.abs() < 1e-16 {
+        return None;
+    }
+    let delta = ray.origin - triangle.positions[0];
+    let u = delta.dot(p) / det;
+    let v = ray.direction.dot(delta.cross(e1)) / det;
+    let uv = triangle.uv[0] * (1. - u - v) as f32
+        + triangle.uv[1] * u as f32
+        + triangle.uv[2] * v as f32;
+    if uv.is_finite() { Some(uv) } else { None }
+}
+#[derive(Debug)]
+pub struct Shading {
+    pub color: Vec3,
+    pub emission: Vec3,
+    pub metallic: f32,
+    pub roughness: f32,
+    pub occlusion: f32,
+    pub normal: DVec3,
+}
+pub fn shading(scene: &Scene, hit: &Hit, differentials: [Ray; 2]) -> Shading {
+    let instance = &scene.instances[hit.instance];
+    let material = &instance.material;
+    let surface = material.pbr.as_ref().expect("PBR material");
+    let tri = &instance.geometry.triangles[hit.triangle];
+    let d = differentials.map(|ray| {
+        projected_uv(
+            tri,
+            Ray {
+                origin: instance.inverse.transform_point3(ray.origin),
+                direction: instance.inverse.transform_vector3(ray.direction),
+            },
+        )
+        .map_or(Vec2::ZERO, |uv| uv - hit.uv)
+    });
+    let texture = |binding: Option<&crate::textures::Binding>| {
+        binding.map_or(glam::Vec4::ONE, |b| {
+            scene.images[&(b.image.clone(), b.role)].sample(&b.sampler, hit.uv, d[0], d[1])
+        })
+    };
+    let color =
+        Vec3::from_array(material.base_color) * texture(surface.base_color.as_ref()).truncate();
+    let orm = texture(surface.metallic_roughness.as_ref());
+    let emission =
+        Vec3::from_array(material.emission) * texture(surface.emission.as_ref()).truncate();
+    let occlusion = 1. + surface.occlusion_strength * (texture(surface.occlusion.as_ref()).x - 1.);
+    let mut normal = hit.normal;
+    if surface.normal.is_some() {
+        let mut local = texture(surface.normal.as_ref()).truncate() * 2. - Vec3::ONE;
+        local.x *= surface.normal_scale;
+        local.y *= surface.normal_scale;
+        let mapped = hit.tangent * f64::from(local.x)
+            + hit.normal.cross(hit.tangent) * (hit.tangent_sign * f64::from(local.y))
+            + hit.normal * f64::from(local.z);
+        if mapped.length_squared() > 1e-20 {
+            normal = mapped.normalize();
+        }
+    }
+    Shading {
+        color,
+        emission,
+        metallic: material.metallic * orm.z,
+        roughness: material.roughness * orm.y,
+        occlusion,
+        normal,
+    }
+}
+fn shade_pbr(
+    scene: &Scene,
+    hit: &Hit,
+    surface: &Shading,
+    settings: &Settings,
+    ray: Ray,
+    indices: [u32; 2],
+    cancelled: &mut impl FnMut() -> bool,
+) -> Result<Vec3> {
+    let n = surface.normal;
+    let view = -ray.direction;
+    let mut radiance = surface.emission;
+    let offset = hit.position + hit.geometric_normal * 1e-5;
+    let delta = DVec3::from_array(settings.light.position) - hit.position;
+    let distance = delta.length();
+    if distance > 1e-5 {
+        let l = delta / distance;
+        if hit.geometric_normal.dot(l) > 0.
+            && n.dot(l) > 0.
+            && scene
+                .intersect(
+                    Ray {
+                        origin: offset,
+                        direction: l,
+                    },
+                    1e-5,
+                    distance - 2e-5,
+                )
+                .is_none()
+        {
+            radiance += (crate::pbr::brdf(
+                surface.color,
+                surface.metallic,
+                surface.roughness,
+                n,
+                view,
+                l,
+            ) * (n.dot(l) / (distance * distance)))
+                .as_vec3()
+                * Vec3::from_array(settings.light.intensity)
+                * scene
+                    .media
+                    .transmittance(
+                        Ray {
+                            origin: offset,
+                            direction: l,
+                        },
+                        1e-5,
+                        distance - 2e-5,
+                        &mut *cancelled,
+                    )?
+                    .as_vec3();
+        }
+    }
+    let [pixel, sample] = indices;
+    let l = crate::pbr::sample(
+        n,
+        view,
+        surface.roughness,
+        random(pixel, sample, 4, settings.seed),
+        random(pixel, sample, 2, settings.seed),
+        random(pixel, sample, 3, settings.seed),
+    );
+    let pdf = crate::pbr::pdf(n, view, l, surface.roughness);
+    if pdf > 0.
+        && hit.geometric_normal.dot(l) > 0.
+        && scene
+            .intersect(
+                Ray {
+                    origin: offset,
+                    direction: l,
+                },
+                1e-5,
+                f64::INFINITY,
+            )
+            .is_none()
+    {
+        radiance += (crate::pbr::brdf(
+            surface.color,
+            surface.metallic,
+            surface.roughness,
+            n,
+            view,
+            l,
+        ) * (n.dot(l) / pdf))
+            .as_vec3()
+            * Vec3::from_array(settings.environment)
+            * surface.occlusion
+            * scene
+                .media
+                .transmittance(
+                    Ray {
+                        origin: offset,
+                        direction: l,
+                    },
+                    1e-5,
+                    f64::INFINITY,
+                    &mut *cancelled,
+                )?
+                .as_vec3();
+    }
+    Ok(radiance)
+}
 pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) -> Result<Image> {
+    if scene.instances.iter().any(|i| {
+        i.material
+            .pbr
+            .as_ref()
+            .is_some_and(|p| p.advanced.is_some())
+    }) {
+        return crate::scattering::render(scene, s, cancelled);
+    }
     s.validate()?;
+    let pbr_profile = scene.instances.iter().any(|i| i.material.pbr.is_some());
+    if pbr_profile && s.max_depth != 1 {
+        return Err(Error::new(
+            "unsupported_profile",
+            "PBR v0 supports one bounce",
+        ));
+    }
     let count = (s.width * s.height) as usize;
     let mut linear = vec![[0.; 3]; count];
     let mut depth = vec![0.; count];
@@ -502,10 +1014,74 @@ pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) 
                 )?;
                 let mut throughput = Vec3::ONE;
                 for bounce in 0..s.max_depth {
-                    let Some(hit) = scene.intersect(ray, 1e-5, f64::INFINITY) else {
+                    let (near, far) = if bounce == 0 {
+                        s.camera.clip(ray)
+                    } else {
+                        (1e-5, f64::INFINITY)
+                    };
+                    let intersection = scene.intersect(ray, near, far);
+                    if !scene.media.is_empty() {
+                        let volume = scene.media.transport(
+                            ray,
+                            near,
+                            intersection.as_ref().map_or(far, |h| h.distance),
+                            |p, cancel| {
+                                let delta = DVec3::from_array(s.light.position) - p;
+                                let distance = delta.length();
+                                if distance < 1e-5 {
+                                    return Ok((DVec3::ZERO, DVec3::Z));
+                                }
+                                let direction = delta / distance;
+                                let shadow = Ray {
+                                    origin: p,
+                                    direction,
+                                };
+                                let light = if scene.intersect(shadow, 1e-5, distance).is_some() {
+                                    DVec3::ZERO
+                                } else {
+                                    DVec3::from_array(s.light.intensity.map(f64::from))
+                                        * scene.media.transmittance(shadow, 0., distance, cancel)?
+                                        / (distance * distance)
+                                };
+                                Ok((light, direction))
+                            },
+                            &mut cancelled,
+                        )?;
+                        sum += throughput * volume.radiance.as_vec3();
+                        throughput *= volume.transmittance.as_vec3();
+                    }
+                    let Some(hit) = intersection else {
                         sum += throughput * Vec3::from_array(s.environment);
                         break;
                     };
+                    if scene.instances[hit.instance].material.pbr.is_some() {
+                        let px = x as f64 + random(pixel, sample, 0, s.seed);
+                        let py = y as f64 + random(pixel, sample, 1, s.seed);
+                        let surface = shading(
+                            scene,
+                            &hit,
+                            [
+                                s.camera.ray(px + 1., py, s.width, s.height)?,
+                                s.camera.ray(px, py + 1., s.width, s.height)?,
+                            ],
+                        );
+                        if sample == 0 {
+                            depth[pixel as usize] = hit.distance as f32;
+                            normals[pixel as usize] = surface.normal.as_vec3().to_array();
+                            objects[pixel as usize] = Some(scene.instances[hit.instance].id);
+                        }
+                        sum += throughput
+                            * shade_pbr(
+                                scene,
+                                &hit,
+                                &surface,
+                                s,
+                                ray,
+                                [pixel, sample],
+                                &mut cancelled,
+                            )?;
+                        break;
+                    }
                     if bounce == 0 && sample == 0 {
                         depth[pixel as usize] = hit.distance as f32;
                         normals[pixel as usize] = hit.normal.as_vec3().to_array();
@@ -534,7 +1110,19 @@ pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) 
                         sum += throughput
                             * color
                             * Vec3::from_array(s.light.intensity)
-                            * (cosine / (std::f64::consts::PI * distance * distance)) as f32;
+                            * (cosine / (std::f64::consts::PI * distance * distance)) as f32
+                            * scene
+                                .media
+                                .transmittance(
+                                    Ray {
+                                        origin: hit.position + hit.normal * 1e-5,
+                                        direction: light_dir,
+                                    },
+                                    1e-5,
+                                    distance - 2e-5,
+                                    &mut cancelled,
+                                )?
+                                .as_vec3();
                     }
                     let direction = cosine_direction(
                         hit.normal,
@@ -549,24 +1137,50 @@ pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) 
                     if bounce + 1 == s.max_depth
                         && scene.intersect(ray, 1e-5, f64::INFINITY).is_none()
                     {
-                        sum += throughput * Vec3::from_array(s.environment);
+                        sum += throughput
+                            * Vec3::from_array(s.environment)
+                            * scene
+                                .media
+                                .transmittance(ray, 1e-5, f64::INFINITY, &mut cancelled)?
+                                .as_vec3();
                     }
                 }
             }
             linear[pixel as usize] = (sum / s.samples as f32).to_array();
         }
     }
-    let receipt = RenderReceipt {
+    if linear
+        .iter()
+        .flatten()
+        .chain(normals.iter().flatten())
+        .chain(depth.iter())
+        .any(|v| !v.is_finite())
+    {
+        return Err(Error::new(
+            "numerics",
+            "CPU render produced nonfinite output",
+        ));
+    }
+    let mut receipt = RenderReceipt {
         revision: scene.revision.clone(),
         settings_digest: digest(&canonical(s)?),
-        backend: "cpu-f64-diffuse-v0".into(),
+        backend: if pbr_profile {
+            "cpu-f64-pbr-v0"
+        } else {
+            "cpu-f64-diffuse-v0"
+        }
+        .into(),
         samples: s.samples,
         seed: s.seed,
         color_space: "linear-sRGB".into(),
-        approximation: format!(
-            "finite depth {}; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light",
-            s.max_depth
-        ),
+        approximation: if pbr_profile {
+            "single-scattering GGX/Schlick/Smith; roughness >=0.05; one bounce; diffuse/GGX mixture PDF; mipmapped textures; geometric visibility with mapped shading normals".into()
+        } else {
+            format!(
+                "finite depth {}; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light",
+                s.max_depth
+            )
+        },
         width: s.width,
         height: s.height,
         output_digest: digest(
@@ -577,6 +1191,20 @@ pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) 
                 .collect::<Vec<_>>(),
         ),
     };
+    if !scene.displacements.is_empty() {
+        receipt.approximation.push_str(
+            "; bounded uniform geometric displacement; see displacement conversion receipts",
+        );
+    }
+    if !scene.media.is_empty() {
+        receipt.backend = "cpu-f64-sparse-media-v0".into();
+        receipt.approximation.push_str("; sparse constant RGB cells: exact Beer extinction/emission, bounded midpoint point-light single scattering; shadow/environment attenuation; no indirect in-scattering");
+    }
+    if !scene.conversions.is_empty() {
+        receipt.approximation.push_str(
+            "; typed curves/points use bounded polygon sweeps; see evaluation conversion receipts",
+        );
+    }
     Ok(Image {
         width: s.width,
         height: s.height,

@@ -1,5 +1,7 @@
 # Agent-rendering alpha (M05)
 
+The additive [static PBR slice](static_pbr.md) now has [separate evidence](../evidence/static-pbr/README.md): opaque textures/materials, normals and authored cameras on CPU, Metal and browser WebGPU. M07 and INPUT-01/02 remain partial; the M05 Lambertian profile and historical evidence retain their original scope.
+
 The local workflow imports a real glTF/GLB scene, creates three restricted
 variants, renders and inspects their passes, and commits one through the same
 transaction engine used by other clients. The reproducible asset is the licensed
@@ -194,3 +196,5 @@ The script records exact commands/logs for native/WASM tests, strict Clippy,
 Linux/Windows compile checks, ABI clients, native stream/retry faults, dependency
 inspection, Metal workflow timing/RSS, browser workflow and foundation regressions.
 It writes to `artifacts/m05` and never updates reference images automatically.
+
+The additive [M06–M08 contracts](m07_m08.md) expose ordinary typed authoring commands, pinned animated previews, CPU extended root rendering and imaging products. These operations preserve the existing narrow ABI and restricted static-variant commit contract.

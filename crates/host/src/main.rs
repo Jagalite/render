@@ -6,6 +6,8 @@ use render_core::{
 };
 mod agent_workflow;
 mod job_host;
+mod milestone_workflow;
+mod static_pbr;
 use std::{
     fs,
     io::{self, BufRead, Read, Write},
@@ -104,6 +106,46 @@ fn run() -> Result<()> {
             }
             Ok(())
         }
+        Some("modeling-workflow") => milestone_workflow::modeling(Path::new(
+            args.get(1)
+                .map(String::as_str)
+                .unwrap_or("artifacts/m06/modeling"),
+        )),
+        Some("surfaces-workflow") => milestone_workflow::surfaces(Path::new(
+            args.get(1)
+                .map(String::as_str)
+                .unwrap_or("artifacts/m07/surfaces"),
+        )),
+        Some("imaging-workflow") => milestone_workflow::imaging(Path::new(
+            args.get(1)
+                .map(String::as_str)
+                .unwrap_or("artifacts/m07/imaging"),
+        )),
+        Some("animation-workflow") => milestone_workflow::animation(Path::new(
+            args.get(1)
+                .map(String::as_str)
+                .unwrap_or("artifacts/m08/character"),
+        )),
+        Some("groom-workflow") => milestone_workflow::groom(Path::new(
+            args.get(1)
+                .map(String::as_str)
+                .unwrap_or("artifacts/m07/groom"),
+        )),
+        Some("volume-workflow") => milestone_workflow::volume(Path::new(
+            args.get(1)
+                .map(String::as_str)
+                .unwrap_or("artifacts/m07/volume"),
+        )),
+        Some("geometry-workflow") => milestone_workflow::geometry(Path::new(
+            args.get(1)
+                .map(String::as_str)
+                .unwrap_or("artifacts/m07/geometry"),
+        )),
+        Some("pbr-workflow") => static_pbr::run(Path::new(
+            args.get(1)
+                .map(String::as_str)
+                .unwrap_or("artifacts/static-pbr/native"),
+        )),
         Some("agent-workflow") => agent_workflow::run(
             Path::new(
                 args.get(1)

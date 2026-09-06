@@ -1,0 +1,435 @@
+{
+  "status": "passed",
+  "tests": [
+    {
+      "case": "rational_time_and_interpolation_preserve_authored_modes",
+      "source": "crates/core/tests/animation.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "clip_random_access_retime_conflicts_and_cancellation",
+      "source": "crates/core/tests/animation.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "bind_affine_scale_shear_and_two_bone_solver_diagnostics",
+      "source": "crates/core/tests/animation.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "character_skin_morph_transaction_random_access_and_native_state_recovery",
+      "source": "crates/core/tests/animation.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "weighted_affine_skinning_and_morph_have_independent_numeric_expectations",
+      "source": "crates/core/tests/animation.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "shutter_sequence_pinned_revisions_partial_output_and_agent_preview",
+      "source": "crates/core/tests/animation.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "quaternion_layer_schema_gate_and_transaction_upgrade",
+      "source": "crates/core/tests/animation.rs",
+      "native": "passed",
+      "wasm": "passed"
+    }
+  ],
+  "native": {
+    "comparisons": [
+      {
+        "evaluation": {
+          "approximation": "affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation",
+          "authored_revision": "sha256:b6139aa08d12a75a795d850288cb714b16bf4191f8d7b1d35879cf4cc9af653b",
+          "clip": "000000000000000000000000000020d0",
+          "deformed_points": 56,
+          "evaluation_digest": "sha256:d7b70631828b098ad4bbd6a1075e74c9b57af1f2d5a762b0cf6d929cc7957257",
+          "time": {
+            "denominator": 1,
+            "numerator": 0
+          }
+        },
+        "gpu_receipt": {
+          "approximation": "finite depth 1; two-sided Lambertian; nearest repeat textures; start sample 0; camera-relative f32",
+          "backend": "gpu-f32-diffuse-v0/Metal",
+          "color_space": "linear-sRGB",
+          "height": 64,
+          "output_digest": "sha256:324cf10d2353cbe75c4bc769ce4365bc510d97c37ed9ff90bef6fbf5311c9750",
+          "revision": "sha256:d7b70631828b098ad4bbd6a1075e74c9b57af1f2d5a762b0cf6d929cc7957257",
+          "samples": 4,
+          "seed": 42,
+          "settings_digest": "sha256:facf1b400c30aa962cf0856cb8773916453f6aea233579d2dde5bac883040a08",
+          "width": 64
+        },
+        "linear_rmse": 9.199158693127072e-09,
+        "object_mismatches": 0,
+        "time": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "evaluation": {
+          "approximation": "affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation",
+          "authored_revision": "sha256:b6139aa08d12a75a795d850288cb714b16bf4191f8d7b1d35879cf4cc9af653b",
+          "clip": "000000000000000000000000000020d0",
+          "deformed_points": 56,
+          "evaluation_digest": "sha256:715d79c04d22d5e7e876c5b35243e389d60caf6330056d64a28eda3355501719",
+          "time": {
+            "denominator": 2,
+            "numerator": 1
+          }
+        },
+        "gpu_receipt": {
+          "approximation": "finite depth 1; two-sided Lambertian; nearest repeat textures; start sample 0; camera-relative f32",
+          "backend": "gpu-f32-diffuse-v0/Metal",
+          "color_space": "linear-sRGB",
+          "height": 64,
+          "output_digest": "sha256:4caebc4a564dcb4905e04d76b55bf69fddd7ae4181cc508ccd16317d0a03b835",
+          "revision": "sha256:715d79c04d22d5e7e876c5b35243e389d60caf6330056d64a28eda3355501719",
+          "samples": 4,
+          "seed": 42,
+          "settings_digest": "sha256:facf1b400c30aa962cf0856cb8773916453f6aea233579d2dde5bac883040a08",
+          "width": 64
+        },
+        "linear_rmse": 9.107732075415969e-09,
+        "object_mismatches": 0,
+        "time": {
+          "denominator": 2,
+          "numerator": 1
+        }
+      },
+      {
+        "evaluation": {
+          "approximation": "affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation",
+          "authored_revision": "sha256:b6139aa08d12a75a795d850288cb714b16bf4191f8d7b1d35879cf4cc9af653b",
+          "clip": "000000000000000000000000000020d0",
+          "deformed_points": 56,
+          "evaluation_digest": "sha256:a489b925737abc25f8038015c1d94a558751694c01ebf0ebee9b134df53c5f47",
+          "time": {
+            "denominator": 1,
+            "numerator": 1
+          }
+        },
+        "gpu_receipt": {
+          "approximation": "finite depth 1; two-sided Lambertian; nearest repeat textures; start sample 0; camera-relative f32",
+          "backend": "gpu-f32-diffuse-v0/Metal",
+          "color_space": "linear-sRGB",
+          "height": 64,
+          "output_digest": "sha256:e8191c3005c95f4384701f5686386b0c08a5dc3f01c4a90204f41e5f064218d5",
+          "revision": "sha256:a489b925737abc25f8038015c1d94a558751694c01ebf0ebee9b134df53c5f47",
+          "samples": 4,
+          "seed": 42,
+          "settings_digest": "sha256:facf1b400c30aa962cf0856cb8773916453f6aea233579d2dde5bac883040a08",
+          "width": 64
+        },
+        "linear_rmse": 9.71819564455806e-09,
+        "object_mismatches": 0,
+        "time": {
+          "denominator": 1,
+          "numerator": 1
+        }
+      }
+    ],
+    "durable_roundtrip": true,
+    "frames": [
+      {
+        "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light; affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation; 4 exact-time midpoint shutter samples; rigid and LBS/morph geometry evaluated independently at each time; depth/normal/object passes at nominal frame time",
+        "backend": "cpu-f64-animation-v0",
+        "color_space": "linear-sRGB",
+        "height": 64,
+        "output_digest": "sha256:86e4895a454e81bc8821c620609fc32baf33249935d430fb5096a52557419bde",
+        "revision": "sha256:b8bf9eb3ab313fbbfe12b316c3996c18d21d0fd7f1bc3bbabcf40adc1ca9ffee",
+        "samples": 4,
+        "seed": 42,
+        "settings_digest": "sha256:facf1b400c30aa962cf0856cb8773916453f6aea233579d2dde5bac883040a08",
+        "width": 64
+      },
+      {
+        "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light; affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation; 4 exact-time midpoint shutter samples; rigid and LBS/morph geometry evaluated independently at each time; depth/normal/object passes at nominal frame time",
+        "backend": "cpu-f64-animation-v0",
+        "color_space": "linear-sRGB",
+        "height": 64,
+        "output_digest": "sha256:d54efe1a4962ad5d4bd97bc619028120260552e2f6431733227d108c7d9dbe22",
+        "revision": "sha256:eed996335aaeaea7171703d711a85bf2f9fc4cc6805cba0f6a68bcbc37b59563",
+        "samples": 4,
+        "seed": 42,
+        "settings_digest": "sha256:facf1b400c30aa962cf0856cb8773916453f6aea233579d2dde5bac883040a08",
+        "width": 64
+      },
+      {
+        "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light; affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation; 4 exact-time midpoint shutter samples; rigid and LBS/morph geometry evaluated independently at each time; depth/normal/object passes at nominal frame time",
+        "backend": "cpu-f64-animation-v0",
+        "color_space": "linear-sRGB",
+        "height": 64,
+        "output_digest": "sha256:48d73b38379c4e6705ebbc43de0bf54db0c90a6c2625e8f582d6211737206e00",
+        "revision": "sha256:88537e27608be6bbc6f685769496f56d7c21351e45f1a56f4d1d010dfb345398",
+        "samples": 4,
+        "seed": 42,
+        "settings_digest": "sha256:facf1b400c30aa962cf0856cb8773916453f6aea233579d2dde5bac883040a08",
+        "width": 64
+      },
+      {
+        "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light; affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation; 4 exact-time midpoint shutter samples; rigid and LBS/morph geometry evaluated independently at each time; depth/normal/object passes at nominal frame time",
+        "backend": "cpu-f64-animation-v0",
+        "color_space": "linear-sRGB",
+        "height": 64,
+        "output_digest": "sha256:bc02ae726f0bc478f98e351d8bc8b2557ad05be154d27ada34da13536806ab38",
+        "revision": "sha256:3c993dfcb995b8438a845e0bf72380fd4c82fc11c3e757aa7faaf6988a727b65",
+        "samples": 4,
+        "seed": 42,
+        "settings_digest": "sha256:facf1b400c30aa962cf0856cb8773916453f6aea233579d2dde5bac883040a08",
+        "width": 64
+      },
+      {
+        "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light; affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation; 4 exact-time midpoint shutter samples; rigid and LBS/morph geometry evaluated independently at each time; depth/normal/object passes at nominal frame time",
+        "backend": "cpu-f64-animation-v0",
+        "color_space": "linear-sRGB",
+        "height": 64,
+        "output_digest": "sha256:97ac3038696b53dfc13a554dddce1dea11b8243bba402df20c6117a555b7dc28",
+        "revision": "sha256:b36e83b2674ed86a6c8a4437621166a358bb0993fa09550e62695057bb37f9d9",
+        "samples": 4,
+        "seed": 42,
+        "settings_digest": "sha256:facf1b400c30aa962cf0856cb8773916453f6aea233579d2dde5bac883040a08",
+        "width": 64
+      },
+      {
+        "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light; affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation; 4 exact-time midpoint shutter samples; rigid and LBS/morph geometry evaluated independently at each time; depth/normal/object passes at nominal frame time",
+        "backend": "cpu-f64-animation-v0",
+        "color_space": "linear-sRGB",
+        "height": 64,
+        "output_digest": "sha256:f9edffbd7f0c0981a5d4240005916075bc2604a1648b5298918ce87d41c83aa7",
+        "revision": "sha256:8a0bb705bf9f9fc6cff0dbe1ee9d44d5747873fbf0c36fd10ebf0b07b4538842",
+        "samples": 4,
+        "seed": 42,
+        "settings_digest": "sha256:facf1b400c30aa962cf0856cb8773916453f6aea233579d2dde5bac883040a08",
+        "width": 64
+      },
+      {
+        "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light; affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation; 4 exact-time midpoint shutter samples; rigid and LBS/morph geometry evaluated independently at each time; depth/normal/object passes at nominal frame time",
+        "backend": "cpu-f64-animation-v0",
+        "color_space": "linear-sRGB",
+        "height": 64,
+        "output_digest": "sha256:f4bdedd74f389bf9c91d883c437b01d8dd3e02d98690ebed331e9ff3bfaaa51b",
+        "revision": "sha256:f2a0ec8b551871b2ca90a685299b56e217732f0ecdd2ed1c07ad46fe9e2e49c2",
+        "samples": 4,
+        "seed": 42,
+        "settings_digest": "sha256:facf1b400c30aa962cf0856cb8773916453f6aea233579d2dde5bac883040a08",
+        "width": 64
+      },
+      {
+        "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light; affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation; 4 exact-time midpoint shutter samples; rigid and LBS/morph geometry evaluated independently at each time; depth/normal/object passes at nominal frame time",
+        "backend": "cpu-f64-animation-v0",
+        "color_space": "linear-sRGB",
+        "height": 64,
+        "output_digest": "sha256:9a9e05d6f4ac57cd65f233fd495af3ec1eab1874ac06b615ffba5e9185da6833",
+        "revision": "sha256:0a1d76a1533158e6d04ca7b00ede3a5a2efc5d4fc97bdc2a2c7b29d1db2ef9dd",
+        "samples": 4,
+        "seed": 42,
+        "settings_digest": "sha256:facf1b400c30aa962cf0856cb8773916453f6aea233579d2dde5bac883040a08",
+        "width": 64
+      },
+      {
+        "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light; affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation; 4 exact-time midpoint shutter samples; rigid and LBS/morph geometry evaluated independently at each time; depth/normal/object passes at nominal frame time",
+        "backend": "cpu-f64-animation-v0",
+        "color_space": "linear-sRGB",
+        "height": 64,
+        "output_digest": "sha256:1e0971233fc13b398171abb0c7508e45c1d362caf7fb36325c425b74c568ab08",
+        "revision": "sha256:3791c2dba6f896859a8cc0fa0382e89965118a6f2346cf023dd34c1f584d409b",
+        "samples": 4,
+        "seed": 42,
+        "settings_digest": "sha256:facf1b400c30aa962cf0856cb8773916453f6aea233579d2dde5bac883040a08",
+        "width": 64
+      }
+    ],
+    "gpu_shutter": "per-time native Metal evaluation validated; sequence temporal integration uses Rust CPU",
+    "profile": "affine-lbs-shutter-v0",
+    "revision": "sha256:b6139aa08d12a75a795d850288cb714b16bf4191f8d7b1d35879cf4cc9af653b",
+    "seconds": 5.082583292,
+    "source_snapshot_bytes": 33600,
+    "status": "passed"
+  },
+  "browser": {
+    "status": "passed",
+    "profile": "affine-lbs-shutter-v0",
+    "seconds": 0.38510000000149014,
+    "opfs_roundtrip": true,
+    "random_access": true,
+    "stale_rejected": true,
+    "frames": [
+      {
+        "index": 0,
+        "receipt": {
+          "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light; affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation; 4 exact-time midpoint shutter samples; rigid and LBS/morph geometry evaluated independently at each time; depth/normal/object passes at nominal frame time",
+          "backend": "cpu-f64-animation-v0",
+          "color_space": "linear-sRGB",
+          "height": 64,
+          "output_digest": "sha256:86e4895a454e81bc8821c620609fc32baf33249935d430fb5096a52557419bde",
+          "revision": "sha256:b8bf9eb3ab313fbbfe12b316c3996c18d21d0fd7f1bc3bbabcf40adc1ca9ffee",
+          "samples": 4,
+          "seed": 42,
+          "settings_digest": "sha256:facf1b400c30aa962cf0856cb8773916453f6aea233579d2dde5bac883040a08",
+          "width": 64
+        },
+        "evaluation": {
+          "approximation": "affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation",
+          "authored_revision": "sha256:b6139aa08d12a75a795d850288cb714b16bf4191f8d7b1d35879cf4cc9af653b",
+          "clip": "000000000000000000000000000020d0",
+          "deformed_points": 56,
+          "evaluation_digest": "sha256:d7b70631828b098ad4bbd6a1075e74c9b57af1f2d5a762b0cf6d929cc7957257",
+          "time": {
+            "denominator": 1,
+            "numerator": 0
+          }
+        }
+      },
+      {
+        "index": 4,
+        "receipt": {
+          "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light; affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation; 4 exact-time midpoint shutter samples; rigid and LBS/morph geometry evaluated independently at each time; depth/normal/object passes at nominal frame time",
+          "backend": "cpu-f64-animation-v0",
+          "color_space": "linear-sRGB",
+          "height": 64,
+          "output_digest": "sha256:97ac3038696b53dfc13a554dddce1dea11b8243bba402df20c6117a555b7dc28",
+          "revision": "sha256:b36e83b2674ed86a6c8a4437621166a358bb0993fa09550e62695057bb37f9d9",
+          "samples": 4,
+          "seed": 42,
+          "settings_digest": "sha256:facf1b400c30aa962cf0856cb8773916453f6aea233579d2dde5bac883040a08",
+          "width": 64
+        },
+        "evaluation": {
+          "approximation": "affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation",
+          "authored_revision": "sha256:b6139aa08d12a75a795d850288cb714b16bf4191f8d7b1d35879cf4cc9af653b",
+          "clip": "000000000000000000000000000020d0",
+          "deformed_points": 56,
+          "evaluation_digest": "sha256:715d79c04d22d5e7e876c5b35243e389d60caf6330056d64a28eda3355501719",
+          "time": {
+            "denominator": 2,
+            "numerator": 1
+          }
+        }
+      },
+      {
+        "index": 8,
+        "receipt": {
+          "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light; affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation; 4 exact-time midpoint shutter samples; rigid and LBS/morph geometry evaluated independently at each time; depth/normal/object passes at nominal frame time",
+          "backend": "cpu-f64-animation-v0",
+          "color_space": "linear-sRGB",
+          "height": 64,
+          "output_digest": "sha256:1e0971233fc13b398171abb0c7508e45c1d362caf7fb36325c425b74c568ab08",
+          "revision": "sha256:3791c2dba6f896859a8cc0fa0382e89965118a6f2346cf023dd34c1f584d409b",
+          "samples": 4,
+          "seed": 42,
+          "settings_digest": "sha256:facf1b400c30aa962cf0856cb8773916453f6aea233579d2dde5bac883040a08",
+          "width": 64
+        },
+        "evaluation": {
+          "approximation": "affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation",
+          "authored_revision": "sha256:b6139aa08d12a75a795d850288cb714b16bf4191f8d7b1d35879cf4cc9af653b",
+          "clip": "000000000000000000000000000020d0",
+          "deformed_points": 56,
+          "evaluation_digest": "sha256:a489b925737abc25f8038015c1d94a558751694c01ebf0ebee9b134df53c5f47",
+          "time": {
+            "denominator": 1,
+            "numerator": 1
+          }
+        }
+      },
+      {
+        "index": 2,
+        "receipt": {
+          "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light; affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation; 4 exact-time midpoint shutter samples; rigid and LBS/morph geometry evaluated independently at each time; depth/normal/object passes at nominal frame time",
+          "backend": "cpu-f64-animation-v0",
+          "color_space": "linear-sRGB",
+          "height": 64,
+          "output_digest": "sha256:48d73b38379c4e6705ebbc43de0bf54db0c90a6c2625e8f582d6211737206e00",
+          "revision": "sha256:88537e27608be6bbc6f685769496f56d7c21351e45f1a56f4d1d010dfb345398",
+          "samples": 4,
+          "seed": 42,
+          "settings_digest": "sha256:facf1b400c30aa962cf0856cb8773916453f6aea233579d2dde5bac883040a08",
+          "width": 64
+        },
+        "evaluation": {
+          "approximation": "affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation",
+          "authored_revision": "sha256:b6139aa08d12a75a795d850288cb714b16bf4191f8d7b1d35879cf4cc9af653b",
+          "clip": "000000000000000000000000000020d0",
+          "deformed_points": 56,
+          "evaluation_digest": "sha256:521b13bf7a25c559f984f68910fa1ea97bc3d95905ff79939384d7303fe2b0f0",
+          "time": {
+            "denominator": 4,
+            "numerator": 1
+          }
+        }
+      },
+      {
+        "index": 6,
+        "receipt": {
+          "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light; affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation; 4 exact-time midpoint shutter samples; rigid and LBS/morph geometry evaluated independently at each time; depth/normal/object passes at nominal frame time",
+          "backend": "cpu-f64-animation-v0",
+          "color_space": "linear-sRGB",
+          "height": 64,
+          "output_digest": "sha256:f4bdedd74f389bf9c91d883c437b01d8dd3e02d98690ebed331e9ff3bfaaa51b",
+          "revision": "sha256:f2a0ec8b551871b2ca90a685299b56e217732f0ecdd2ed1c07ad46fe9e2e49c2",
+          "samples": 4,
+          "seed": 42,
+          "settings_digest": "sha256:facf1b400c30aa962cf0856cb8773916453f6aea233579d2dde5bac883040a08",
+          "width": 64
+        },
+        "evaluation": {
+          "approximation": "affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation",
+          "authored_revision": "sha256:b6139aa08d12a75a795d850288cb714b16bf4191f8d7b1d35879cf4cc9af653b",
+          "clip": "000000000000000000000000000020d0",
+          "deformed_points": 56,
+          "evaluation_digest": "sha256:c31f612d0ecdb7c8d553b5d5520ee5da729c4a3d7efbfa60cfd78519f1e2364c",
+          "time": {
+            "denominator": 4,
+            "numerator": 3
+          }
+        }
+      },
+      {
+        "index": 4,
+        "receipt": {
+          "approximation": "finite depth 1; two-sided Lambertian; point light; nearest repeat textures; no MIS needed for discrete point light; affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation; 4 exact-time midpoint shutter samples; rigid and LBS/morph geometry evaluated independently at each time; depth/normal/object passes at nominal frame time",
+          "backend": "cpu-f64-animation-v0",
+          "color_space": "linear-sRGB",
+          "height": 64,
+          "output_digest": "sha256:97ac3038696b53dfc13a554dddce1dea11b8243bba402df20c6117a555b7dc28",
+          "revision": "sha256:b36e83b2674ed86a6c8a4437621166a358bb0993fa09550e62695057bb37f9d9",
+          "samples": 4,
+          "seed": 42,
+          "settings_digest": "sha256:facf1b400c30aa962cf0856cb8773916453f6aea233579d2dde5bac883040a08",
+          "width": 64
+        },
+        "evaluation": {
+          "approximation": "affine rest followed by T*R*S pose deltas; sparse morphs before affine LBS; explicit normalized weights; flat geometric deformation normals; no topology animation",
+          "authored_revision": "sha256:b6139aa08d12a75a795d850288cb714b16bf4191f8d7b1d35879cf4cc9af653b",
+          "clip": "000000000000000000000000000020d0",
+          "deformed_points": 56,
+          "evaluation_digest": "sha256:715d79c04d22d5e7e876c5b35243e389d60caf6330056d64a28eda3355501719",
+          "time": {
+            "denominator": 2,
+            "numerator": 1
+          }
+        }
+      }
+    ],
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/152.0.7977.76",
+      "revision": "@0d89dfa2dd7c1ec4b8a14b9f303f887bb63b6174",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+      "jsVersion": "15.2.124.19"
+    }
+  },
+  "comparison": "cross_platform_report.json"
+}

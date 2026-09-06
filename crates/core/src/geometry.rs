@@ -329,3 +329,36 @@ impl Mesh {
         Ok(out)
     }
 }
+
+/// Canonical decimal local IDs in JSON maps. Explicit parsing also works through
+/// serde's tagged-enum buffer, which does not coerce string keys into integers.
+pub mod local_map {
+    use serde::{Deserialize, Serialize};
+    use std::collections::BTreeMap;
+    pub fn serialize<T: Serialize, S: serde::Serializer>(
+        map: &BTreeMap<u64, T>,
+        s: S,
+    ) -> std::result::Result<S::Ok, S::Error> {
+        map.iter()
+            .map(|(id, value)| (id.to_string(), value))
+            .collect::<BTreeMap<_, _>>()
+            .serialize(s)
+    }
+    pub fn deserialize<'de, T: Deserialize<'de>, D: serde::Deserializer<'de>>(
+        d: D,
+    ) -> std::result::Result<BTreeMap<u64, T>, D::Error> {
+        let input = BTreeMap::<String, T>::deserialize(d)?;
+        input
+            .into_iter()
+            .map(|(id, value)| {
+                let n = id.parse::<u64>().map_err(serde::de::Error::custom)?;
+                if n.to_string() != id {
+                    return Err(serde::de::Error::custom(
+                        "local ID must be canonical decimal",
+                    ));
+                }
+                Ok((n, value))
+            })
+            .collect()
+    }
+}

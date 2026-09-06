@@ -1,7 +1,7 @@
 {
   "spec_version": "0.1",
   "prepared": "2026-09-05",
-  "implementation_status": "foundation_and_agent_alpha_m00_m05_completed",
+  "implementation_status": "foundation_and_authoring_M00_M08_profiles_validated",
   "milestones": [
     {
       "id": "M00",
@@ -215,7 +215,7 @@
     {
       "id": "M06",
       "title": "Modeling kernel and procedural geometry",
-      "status": "planned",
+      "status": "completed",
       "dependencies": [
         "M02"
       ],
@@ -237,12 +237,18 @@
         "No exact CAD-kernel claim"
       ],
       "calendar_estimate": null,
-      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence.",
+      "implemented_profile": "typed-modeling-graph-v0",
+      "evidence": [
+        "evidence/m06-m08/README.md",
+        "evidence/m06-m08/acceptance_index.json"
+      ],
+      "qualification": "Canonical milestone gates completed for named experimental profiles in docs/m07_m08.md; advanced compatibility extensions remain explicit separate capabilities."
     },
     {
       "id": "M07",
       "title": "Materials, rendering breadth and geometry families",
-      "status": "planned",
+      "status": "completed",
       "dependencies": [
         "M05"
       ],
@@ -263,12 +269,18 @@
         "No motion-blur authoring completion before M08"
       ],
       "calendar_estimate": null,
-      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence.",
+      "implemented_profile": "typed-curve-point-sweep-v0; guide-root-sweep-v0; sparse-media-v0; extended-bsdf-displacement-v0; rust-imaging-v0",
+      "evidence": [
+        "evidence/m06-m08/README.md",
+        "evidence/m06-m08/acceptance_index.json"
+      ],
+      "qualification": "Canonical milestone gates completed for named experimental profiles in docs/m07_m08.md; advanced compatibility extensions remain explicit separate capabilities."
     },
     {
       "id": "M08",
       "title": "Animation, rigs and deformation",
-      "status": "planned",
+      "status": "completed",
       "dependencies": [
         "M06",
         "M07"
@@ -289,7 +301,13 @@
         "No all-constraints or retargeting parity claim"
       ],
       "calendar_estimate": null,
-      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence.",
+      "implemented_profile": "affine-lbs-shutter-v0",
+      "evidence": [
+        "evidence/m06-m08/README.md",
+        "evidence/m06-m08/acceptance_index.json"
+      ],
+      "qualification": "Canonical milestone gates completed for named experimental profiles in docs/m07_m08.md; advanced compatibility extensions remain explicit separate capabilities."
     },
     {
       "id": "M09",

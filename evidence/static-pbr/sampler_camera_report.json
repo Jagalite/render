@@ -1,0 +1,385 @@
+{
+  "cases": [
+    {
+      "lens": 0,
+      "linear_rmse": 0.000013648163809228997,
+      "min_filter": "nearest",
+      "object_mismatches": 0,
+      "wrap": "repeat"
+    },
+    {
+      "lens": 0,
+      "linear_rmse": 0.000013602275145060793,
+      "min_filter": "linear",
+      "object_mismatches": 0,
+      "wrap": "repeat"
+    },
+    {
+      "lens": 0,
+      "linear_rmse": 0.000029214207225859877,
+      "min_filter": "nearest_mip_nearest",
+      "object_mismatches": 0,
+      "wrap": "repeat"
+    },
+    {
+      "lens": 0,
+      "linear_rmse": 0.00002797013124570437,
+      "min_filter": "linear_mip_nearest",
+      "object_mismatches": 0,
+      "wrap": "repeat"
+    },
+    {
+      "lens": 0,
+      "linear_rmse": 0.00002812435493566474,
+      "min_filter": "nearest_mip_linear",
+      "object_mismatches": 0,
+      "wrap": "repeat"
+    },
+    {
+      "lens": 0,
+      "linear_rmse": 0.000027549226741662802,
+      "min_filter": "linear_mip_linear",
+      "object_mismatches": 0,
+      "wrap": "repeat"
+    },
+    {
+      "lens": 0,
+      "linear_rmse": 0.000026215461033826315,
+      "min_filter": "nearest",
+      "object_mismatches": 0,
+      "wrap": "clamp"
+    },
+    {
+      "lens": 0,
+      "linear_rmse": 0.00002621550669230833,
+      "min_filter": "linear",
+      "object_mismatches": 0,
+      "wrap": "clamp"
+    },
+    {
+      "lens": 0,
+      "linear_rmse": 0.00003096064172332114,
+      "min_filter": "nearest_mip_nearest",
+      "object_mismatches": 0,
+      "wrap": "clamp"
+    },
+    {
+      "lens": 0,
+      "linear_rmse": 0.00003071084004375302,
+      "min_filter": "linear_mip_nearest",
+      "object_mismatches": 0,
+      "wrap": "clamp"
+    },
+    {
+      "lens": 0,
+      "linear_rmse": 0.000028441747955350485,
+      "min_filter": "nearest_mip_linear",
+      "object_mismatches": 0,
+      "wrap": "clamp"
+    },
+    {
+      "lens": 0,
+      "linear_rmse": 0.000028207596476292294,
+      "min_filter": "linear_mip_linear",
+      "object_mismatches": 0,
+      "wrap": "clamp"
+    },
+    {
+      "lens": 0,
+      "linear_rmse": 0.000013830729355882853,
+      "min_filter": "nearest",
+      "object_mismatches": 0,
+      "wrap": "mirror"
+    },
+    {
+      "lens": 0,
+      "linear_rmse": 0.0000134750844943299,
+      "min_filter": "linear",
+      "object_mismatches": 0,
+      "wrap": "mirror"
+    },
+    {
+      "lens": 0,
+      "linear_rmse": 0.000029789920208681927,
+      "min_filter": "nearest_mip_nearest",
+      "object_mismatches": 0,
+      "wrap": "mirror"
+    },
+    {
+      "lens": 0,
+      "linear_rmse": 0.00002881768591634903,
+      "min_filter": "linear_mip_nearest",
+      "object_mismatches": 0,
+      "wrap": "mirror"
+    },
+    {
+      "lens": 0,
+      "linear_rmse": 0.000029041872276311242,
+      "min_filter": "nearest_mip_linear",
+      "object_mismatches": 0,
+      "wrap": "mirror"
+    },
+    {
+      "lens": 0,
+      "linear_rmse": 0.00002841529583523007,
+      "min_filter": "linear_mip_linear",
+      "object_mismatches": 0,
+      "wrap": "mirror"
+    },
+    {
+      "lens": 1,
+      "linear_rmse": 0.000011493530579447577,
+      "min_filter": "nearest",
+      "object_mismatches": 0,
+      "wrap": "repeat"
+    },
+    {
+      "lens": 1,
+      "linear_rmse": 0.000011078884412902413,
+      "min_filter": "linear",
+      "object_mismatches": 0,
+      "wrap": "repeat"
+    },
+    {
+      "lens": 1,
+      "linear_rmse": 0.000032953908641918733,
+      "min_filter": "nearest_mip_nearest",
+      "object_mismatches": 0,
+      "wrap": "repeat"
+    },
+    {
+      "lens": 1,
+      "linear_rmse": 0.00003287382106493303,
+      "min_filter": "linear_mip_nearest",
+      "object_mismatches": 0,
+      "wrap": "repeat"
+    },
+    {
+      "lens": 1,
+      "linear_rmse": 0.000029812790832801103,
+      "min_filter": "nearest_mip_linear",
+      "object_mismatches": 0,
+      "wrap": "repeat"
+    },
+    {
+      "lens": 1,
+      "linear_rmse": 0.000029557236487508455,
+      "min_filter": "linear_mip_linear",
+      "object_mismatches": 0,
+      "wrap": "repeat"
+    },
+    {
+      "lens": 1,
+      "linear_rmse": 0.00002387218378690871,
+      "min_filter": "nearest",
+      "object_mismatches": 0,
+      "wrap": "clamp"
+    },
+    {
+      "lens": 1,
+      "linear_rmse": 0.00002387159604779286,
+      "min_filter": "linear",
+      "object_mismatches": 0,
+      "wrap": "clamp"
+    },
+    {
+      "lens": 1,
+      "linear_rmse": 0.000032928279138001044,
+      "min_filter": "nearest_mip_nearest",
+      "object_mismatches": 0,
+      "wrap": "clamp"
+    },
+    {
+      "lens": 1,
+      "linear_rmse": 0.000032928279138001044,
+      "min_filter": "linear_mip_nearest",
+      "object_mismatches": 0,
+      "wrap": "clamp"
+    },
+    {
+      "lens": 1,
+      "linear_rmse": 0.00002972434560872177,
+      "min_filter": "nearest_mip_linear",
+      "object_mismatches": 0,
+      "wrap": "clamp"
+    },
+    {
+      "lens": 1,
+      "linear_rmse": 0.000029637317599655947,
+      "min_filter": "linear_mip_linear",
+      "object_mismatches": 0,
+      "wrap": "clamp"
+    },
+    {
+      "lens": 1,
+      "linear_rmse": 0.000011351106375940554,
+      "min_filter": "nearest",
+      "object_mismatches": 0,
+      "wrap": "mirror"
+    },
+    {
+      "lens": 1,
+      "linear_rmse": 0.000011051946737936793,
+      "min_filter": "linear",
+      "object_mismatches": 0,
+      "wrap": "mirror"
+    },
+    {
+      "lens": 1,
+      "linear_rmse": 0.00003272435251174084,
+      "min_filter": "nearest_mip_nearest",
+      "object_mismatches": 0,
+      "wrap": "mirror"
+    },
+    {
+      "lens": 1,
+      "linear_rmse": 0.000032772759350404866,
+      "min_filter": "linear_mip_nearest",
+      "object_mismatches": 0,
+      "wrap": "mirror"
+    },
+    {
+      "lens": 1,
+      "linear_rmse": 0.000029928621439172994,
+      "min_filter": "nearest_mip_linear",
+      "object_mismatches": 0,
+      "wrap": "mirror"
+    },
+    {
+      "lens": 1,
+      "linear_rmse": 0.00002979194903704915,
+      "min_filter": "linear_mip_linear",
+      "object_mismatches": 0,
+      "wrap": "mirror"
+    },
+    {
+      "lens": 2,
+      "linear_rmse": 0.00001612575959621498,
+      "min_filter": "nearest",
+      "object_mismatches": 0,
+      "wrap": "repeat"
+    },
+    {
+      "lens": 2,
+      "linear_rmse": 0.000015880247490872316,
+      "min_filter": "linear",
+      "object_mismatches": 0,
+      "wrap": "repeat"
+    },
+    {
+      "lens": 2,
+      "linear_rmse": 0.00003252546843958639,
+      "min_filter": "nearest_mip_nearest",
+      "object_mismatches": 0,
+      "wrap": "repeat"
+    },
+    {
+      "lens": 2,
+      "linear_rmse": 0.000030428607854686193,
+      "min_filter": "linear_mip_nearest",
+      "object_mismatches": 0,
+      "wrap": "repeat"
+    },
+    {
+      "lens": 2,
+      "linear_rmse": 0.00003320450662910481,
+      "min_filter": "nearest_mip_linear",
+      "object_mismatches": 0,
+      "wrap": "repeat"
+    },
+    {
+      "lens": 2,
+      "linear_rmse": 0.00003227493723922098,
+      "min_filter": "linear_mip_linear",
+      "object_mismatches": 0,
+      "wrap": "repeat"
+    },
+    {
+      "lens": 2,
+      "linear_rmse": 0.00003079619857891957,
+      "min_filter": "nearest",
+      "object_mismatches": 0,
+      "wrap": "clamp"
+    },
+    {
+      "lens": 2,
+      "linear_rmse": 0.00003079597072669292,
+      "min_filter": "linear",
+      "object_mismatches": 0,
+      "wrap": "clamp"
+    },
+    {
+      "lens": 2,
+      "linear_rmse": 0.000035374074313992043,
+      "min_filter": "nearest_mip_nearest",
+      "object_mismatches": 0,
+      "wrap": "clamp"
+    },
+    {
+      "lens": 2,
+      "linear_rmse": 0.00003489163127035574,
+      "min_filter": "linear_mip_nearest",
+      "object_mismatches": 0,
+      "wrap": "clamp"
+    },
+    {
+      "lens": 2,
+      "linear_rmse": 0.00003311693797501883,
+      "min_filter": "nearest_mip_linear",
+      "object_mismatches": 0,
+      "wrap": "clamp"
+    },
+    {
+      "lens": 2,
+      "linear_rmse": 0.00003289619207080807,
+      "min_filter": "linear_mip_linear",
+      "object_mismatches": 0,
+      "wrap": "clamp"
+    },
+    {
+      "lens": 2,
+      "linear_rmse": 0.000015668804325835925,
+      "min_filter": "nearest",
+      "object_mismatches": 0,
+      "wrap": "mirror"
+    },
+    {
+      "lens": 2,
+      "linear_rmse": 0.000015657823923928954,
+      "min_filter": "linear",
+      "object_mismatches": 0,
+      "wrap": "mirror"
+    },
+    {
+      "lens": 2,
+      "linear_rmse": 0.000033467782508612516,
+      "min_filter": "nearest_mip_nearest",
+      "object_mismatches": 0,
+      "wrap": "mirror"
+    },
+    {
+      "lens": 2,
+      "linear_rmse": 0.000032217011765203456,
+      "min_filter": "linear_mip_nearest",
+      "object_mismatches": 0,
+      "wrap": "mirror"
+    },
+    {
+      "lens": 2,
+      "linear_rmse": 0.0000339072607622111,
+      "min_filter": "nearest_mip_linear",
+      "object_mismatches": 0,
+      "wrap": "mirror"
+    },
+    {
+      "lens": 2,
+      "linear_rmse": 0.00003331012387299532,
+      "min_filter": "linear_mip_linear",
+      "object_mismatches": 0,
+      "wrap": "mirror"
+    }
+  ],
+  "far_plane_clipping": true,
+  "fixture": "BoxTextured evaluated UVs scaled by four and offset by minus one",
+  "status": "passed"
+}

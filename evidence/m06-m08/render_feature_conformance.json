@@ -1,0 +1,140 @@
+{
+  "status": "passed",
+  "tests": [
+    {
+      "case": "dielectric_snell_fresnel_and_total_internal_reflection",
+      "source": "crates/core/tests/scattering.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "coated_conductor_reciprocity_furnace_and_pdf_sampling",
+      "source": "crates/core/tests/scattering.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "alpha_coverage_and_ideal_glass_render_analytic_environment",
+      "source": "crates/core/tests/scattering.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "dielectric_closed_interface_furnace_and_mixed_media_integration",
+      "source": "crates/core/tests/scattering.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "displacement_metric_height_subdivision_convergence_and_limits",
+      "source": "crates/core/tests/displacement.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "surface_displacement_cache_transactions_and_recovery",
+      "source": "crates/core/tests/displacement.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "displacement_loose_data_and_root_evaluation_cancellation",
+      "source": "crates/core/tests/displacement.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "color_profiles_numeric_white_primaries_and_signed_roundtrip",
+      "source": "crates/core/tests/products.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "denoiser_preserves_constant_regions_and_object_edges_reduces_variance",
+      "source": "crates/core/tests/products.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "authored_views_passes_bakes_roundtrip_invalid_atlas_and_stale_requests",
+      "source": "crates/core/tests/products.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "world_normal_bake_tracks_reflected_winding",
+      "source": "crates/core/tests/products.rs",
+      "native": "passed",
+      "wasm": "passed"
+    }
+  ],
+  "workflows": {
+    "surfaces": {
+      "displaced_cpu_metal_rmse": 1.1029118750266084e-08,
+      "displacements": [
+        {
+          "approximation": "uniform 4-way triangle dicing; area-weighted source vertex normal displacement; object-meter height; base-level image sampling; crack detection at shared topology edges; geometric output normals; derived correspondence only",
+          "derived_bytes": 95800,
+          "policy_digest": "sha256:99203c5f7b9553b1dcac7d3b256947c1fb3fc0ebdfd2060d9263472c17c42600",
+          "source_digest": "sha256:d0b36f20173a58efe7fa9b1a8dad179cb1e524e552c0823339c4fec3f166436b",
+          "subdivisions": 4,
+          "triangles": 512,
+          "vertices": 306
+        }
+      ],
+      "durable_roundtrip": true,
+      "gpu_extended_rejection": {
+        "code": "unsupported_profile",
+        "context": {},
+        "message": "extended dielectric/conductor/coat/alpha requires the Rust CPU backend",
+        "retryable": false,
+        "stage": "validation"
+      },
+      "profile": "extended-bsdf-displacement-v0",
+      "revision": "sha256:770adbdcbd70c8ac81d3b3624aa7f0ebbb62dbb8d12ac77d92112a22199b437e",
+      "seconds": 2.082408041,
+      "source_snapshot_bytes": 5333,
+      "status": "passed",
+      "visible_pixels": {
+        "000000000000000000000000000021ac": 231,
+        "000000000000000000000000000021ad": 266,
+        "000000000000000000000000000021ae": 328,
+        "000000000000000000000000000021b7": 1879
+      }
+    },
+    "imaging": {
+      "backends": "Rust CPU on native and browser; raw render profiles remain separately declared",
+      "bakes": [
+        [
+          "orange-albedo",
+          "sha256:7840ee9384b59150b65c31418ec6f69b8705825db3de437425d3cb3fd0f4fa9b"
+        ],
+        [
+          "orange-normal",
+          "sha256:a37a17ebbedeed954012e6bda5e61f92dba4e0489a65e7ff5bbd655d21715218"
+        ]
+      ],
+      "durable_roundtrip": true,
+      "profile": "rust-imaging-v0",
+      "revision": "sha256:b239e36668bf37be40130fb6f48705736e4c7f2758f4edf98aaab8803765cd92",
+      "seconds": 0.392288875,
+      "source_snapshot_bytes": 3326,
+      "status": "passed",
+      "views": [
+        [
+          "beauty",
+          "sha256:16d76af8ef2f9a327d8b33af07e167264e46ea043beb2619b524b77fb0471dc9"
+        ],
+        [
+          "orange-only",
+          "sha256:010d60f858598d09a6d9b1b51e7ac7201db906fa6ffd485c60add5b90ede8d61"
+        ]
+      ]
+    }
+  },
+  "browser": [
+    "surfaces-01/browser_report.json",
+    "imaging-01/browser_report.json"
+  ],
+  "inherited_pbr": "static_pbr_cross_platform_report.json"
+}

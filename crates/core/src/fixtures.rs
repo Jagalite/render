@@ -196,6 +196,7 @@ pub fn settings() -> Settings {
             intensity: [100., 90., 75.],
         },
         camera: Camera {
+            lens: None,
             position: [5., 3., 6.],
             target: [0., 0.4, 0.],
             up: [0., 1., 0.],

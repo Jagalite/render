@@ -1,0 +1,233 @@
+{
+  "started_utc": "2026-09-06T00:16:10.414833+00:00",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 1.774671125000168,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "native_clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 16.36093887500101,
+      "log": "logs/native_clippy.txt"
+    },
+    {
+      "name": "native_tests",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 146.6901602500002,
+      "log": "logs/native_tests.txt"
+    },
+    {
+      "name": "wasm_clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "-p",
+        "render-web",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 17.270430167001905,
+      "log": "logs/wasm_clippy.txt"
+    },
+    {
+      "name": "wasm_tests",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 144.1271606670016,
+      "log": "logs/wasm_tests.txt"
+    },
+    {
+      "name": "linux_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-unknown-linux-gnu",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 12.347475915998075,
+      "log": "logs/linux_check.txt"
+    },
+    {
+      "name": "windows_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-pc-windows-msvc",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 11.592111083002237,
+      "log": "logs/windows_check.txt"
+    },
+    {
+      "name": "native_build",
+      "command": [
+        "cargo",
+        "build",
+        "-p",
+        "render-host",
+        "-p",
+        "render-ffi",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 24.05224945900045,
+      "log": "logs/native_build.txt"
+    },
+    {
+      "name": "abi_header",
+      "command": [
+        "python3",
+        "scripts/generate-abi-header.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.14373800000248593,
+      "log": "logs/abi_header.txt"
+    },
+    {
+      "name": "ffi_v0",
+      "command": [
+        "python3",
+        "scripts/ffi-conformance.py"
+      ],
+      "exit_code": 0,
+      "seconds": 2.0379487089994655,
+      "log": "logs/ffi_v0.txt"
+    },
+    {
+      "name": "ffi_v1",
+      "command": [
+        "python3",
+        "scripts/agent-ffi-conformance.py"
+      ],
+      "exit_code": 0,
+      "seconds": 2.7218205409990333,
+      "log": "logs/ffi_v1.txt"
+    },
+    {
+      "name": "native_client",
+      "command": [
+        "python3",
+        "scripts/agent-native-client.py"
+      ],
+      "exit_code": 0,
+      "seconds": 5.1729000420018565,
+      "log": "logs/native_client.txt"
+    },
+    {
+      "name": "web_build",
+      "command": [
+        "sh",
+        "scripts/build-web.sh"
+      ],
+      "exit_code": 0,
+      "seconds": 54.260709958001826,
+      "log": "logs/web_build.txt"
+    },
+    {
+      "name": "dependency_audit",
+      "command": [
+        "python3",
+        "scripts/dependency-audit.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.3565500829972734,
+      "log": "logs/dependency_audit.txt"
+    },
+    {
+      "name": "native_workflow",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "agent-workflow",
+        "fixtures/khronos-box/Box.glb",
+        "artifacts/m05/native-20260906T001610Z",
+        "--gpu"
+      ],
+      "exit_code": 0,
+      "seconds": 5.166244166997785,
+      "log": "logs/native_workflow.txt"
+    },
+    {
+      "name": "browser_workflow",
+      "command": [
+        "node",
+        "scripts/agent-browser-conformance.mjs"
+      ],
+      "exit_code": 0,
+      "seconds": 3.429968958000245,
+      "log": "logs/browser_workflow.txt"
+    },
+    {
+      "name": "browser_foundation",
+      "command": [
+        "node",
+        "scripts/browser-conformance.mjs"
+      ],
+      "exit_code": 0,
+      "seconds": 2.5642419579999114,
+      "log": "logs/browser_foundation.txt"
+    }
+  ],
+  "native_workflow_directory": "artifacts/m05/native-20260906T001610Z",
+  "scope": "macOS ARM64 and Chromium runtime; Linux/Windows compile-only; no performance portability claim",
+  "status": "passed",
+  "native_resource_usage": {
+    "maximum resident set size": 39108608,
+    "peak memory footprint": 16696960
+  }
+}

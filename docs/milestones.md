@@ -1,5 +1,7 @@
 # Milestones and release gates
 
+M06–M08 now have [named implementation profiles](m07_m08.md) and [complete milestone evidence](../evidence/m06-m08/README.md). Historical M05 Lambertian and [static PBR](static_pbr.md) evidence retain their original scope. External input tracks remain separately qualified in `planning/input_support.json`.
+
 This is a focused extract of the canonical architecture specification. Current implementation status and evidence are in `planning/milestones.json` and `evidence/m00-m04/README.md`; the acceptance criteria below remain the release gates.
 
 ## 24. Milestone map and release definitions

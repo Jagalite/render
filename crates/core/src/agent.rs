@@ -43,6 +43,27 @@ pub enum Operation {
         base_revision: String,
         idempotency_key: String,
     },
+    ImportPbrGlb {
+        bytes: Vec<u8>,
+        policy: gltf_scene::PbrPolicy,
+        settings: Settings,
+        base_revision: String,
+        idempotency_key: String,
+    },
+    ImportPbrScene {
+        json: Value,
+        buffers: Vec<Vec<u8>>,
+        images: Vec<Vec<u8>>,
+        policy: gltf_scene::PbrPolicy,
+        settings: Settings,
+        base_revision: String,
+        idempotency_key: String,
+    },
+    SelectCamera {
+        entity: Id,
+        base_revision: String,
+        idempotency_key: String,
+    },
     Branch {
         branch: String,
         base_revision: String,
@@ -56,6 +77,17 @@ pub enum Operation {
         idempotency_key: String,
         edits: Edits,
         max_added_bytes: u64,
+    },
+    RenderRootCpu {
+        revision: String,
+    },
+    PreviewProducts {
+        branch: String,
+        revision: String,
+    },
+    PreviewAt {
+        branch: String,
+        request: crate::sequence::FrameRequest,
     },
     Preview {
         branch: String,
@@ -242,6 +274,51 @@ impl Session {
         let image = render(&scene, &settings, cancel)?;
         self.record_render(principal, name, &image)
     }
+    pub fn render_root_cpu(
+        &self,
+        revision: &str,
+        mut cancel: impl FnMut() -> bool,
+    ) -> Result<Value> {
+        let snapshot = self.document.snapshot();
+        if snapshot.revision()? != revision {
+            return Err(Error::new("stale_revision", "root render revision changed"));
+        }
+        let settings = snapshot
+            .render_settings
+            .as_ref()
+            .ok_or_else(|| Error::new("render_settings", "authored settings missing"))?;
+        if settings.width > 256
+            || settings.height > 256
+            || settings.samples > 64
+            || snapshot.entities.iter().count() > 192
+            || canonical(snapshot)?.len() > 8 * 1024 * 1024
+        {
+            return Err(Error::new(
+                "budget",
+                "extended root CPU profile: 256 squared, 64 samples, 192 entities, 8 MiB snapshot",
+            ));
+        }
+        let scene = Evaluator::default().evaluate_with_cancel(snapshot, &mut cancel)?;
+        let image = render(&scene, settings, cancel)?;
+        Ok(
+            json!({"receipt":image.receipt,"conversions":scene.conversions,"displacements":scene.displacements,"inspection":{"visible_pixels":image.objects.iter().filter(|id|id.is_some()).count()},"passes":{"linear_rgb":image.linear,"depth_meters":image.depth,"normals_world":image.normals,"object_ids":image.objects}}),
+        )
+    }
+    pub fn preview_at(
+        &self,
+        principal: &Principal,
+        name: &str,
+        request: &crate::sequence::FrameRequest,
+        cancel: impl FnMut() -> bool,
+    ) -> Result<Value> {
+        let (snapshot, _) = self.render_input(principal, name, &request.revision)?;
+        let frame = crate::sequence::render_frame(&snapshot, request, cancel)?;
+        let image = &frame.image;
+        let visible = image.objects.iter().filter(|id| id.is_some()).count();
+        Ok(
+            json!({"receipt":image.receipt,"evaluation":frame.evaluation,"temporal_times":frame.temporal_times,"inspection":{"visible_pixels":visible},"passes":{"linear_rgb":image.linear,"depth_meters":image.depth,"normals_world":image.normals,"object_ids":image.objects}}),
+        )
+    }
     /// A commit request is reusable with durable_execute; lighting and materials
     /// publish together. The root revision is rechecked by the document engine.
     pub fn selection_request(
@@ -371,6 +448,69 @@ impl Session {
                     idempotency_key,
                 )
             }
+            ImportPbrGlb {
+                bytes,
+                policy,
+                settings,
+                base_revision,
+                idempotency_key,
+            } => {
+                write_permission(principal)?;
+                let imported = gltf_scene::import_pbr_glb(
+                    &bytes,
+                    self.document.snapshot().document_id,
+                    &policy,
+                )?;
+                self.import(
+                    principal,
+                    imported,
+                    settings,
+                    base_revision,
+                    idempotency_key,
+                )
+            }
+            ImportPbrScene {
+                json,
+                buffers,
+                images,
+                policy,
+                settings,
+                base_revision,
+                idempotency_key,
+            } => {
+                write_permission(principal)?;
+                let imported = gltf_scene::import_pbr_scene(
+                    &serde_json::to_vec(&json)?,
+                    &buffers,
+                    &images,
+                    self.document.snapshot().document_id,
+                    &policy,
+                )?;
+                self.import(
+                    principal,
+                    imported,
+                    settings,
+                    base_revision,
+                    idempotency_key,
+                )
+            }
+            SelectCamera {
+                entity,
+                base_revision,
+                idempotency_key,
+            } => {
+                write_permission(principal)?;
+                let request = document::Request {
+                    version: 0,
+                    base_revision,
+                    idempotency_key,
+                    commands: vec![Command::UseCamera { entity }],
+                    max_added_bytes: 8 * 1024 * 1024,
+                };
+                Ok(serde_json::to_value(
+                    self.document.execute(principal, &request)?,
+                )?)
+            }
             Branch {
                 branch,
                 base_revision,
@@ -473,6 +613,17 @@ impl Session {
                 b.rendered = None;
                 Ok(serde_json::to_value(receipt)?)
             }
+            RenderRootCpu { revision } => self.render_root_cpu(&revision, || false),
+            PreviewProducts { branch, revision } => {
+                let (snapshot, _) = self.render_input(principal, &branch, &revision)?;
+                let products = crate::products::render_products(&snapshot, &revision, || false)?;
+                Ok(
+                    json!({"revision":revision,"views":products.views.iter().map(|v|json!({"name":v.name,"receipt":v.raw.receipt,"display":v.display,"albedo":v.albedo,"object_ids":v.raw.objects})).collect::<Vec<_>>(),"bakes":products.bakes}),
+                )
+            }
+            PreviewAt { branch, request } => {
+                self.preview_at(principal, &branch, &request, || false)
+            }
             Preview { branch, revision } => self.preview(principal, &branch, &revision, || false),
             PrepareCommit {
                 branch,
@@ -524,7 +675,12 @@ impl Session {
     ) -> Result<Value> {
         let root_mutation = matches!(
             &request.operation,
-            Operation::ImportGlb { .. } | Operation::ImportScene { .. } | Operation::Commit { .. }
+            Operation::ImportGlb { .. }
+                | Operation::ImportScene { .. }
+                | Operation::ImportPbrGlb { .. }
+                | Operation::ImportPbrScene { .. }
+                | Operation::SelectCamera { .. }
+                | Operation::Commit { .. }
         );
         let records = if root_mutation {
             Some(store.load()?)
@@ -571,6 +727,27 @@ impl Session {
 /// Stable names/versions and effects are reviewed independently of Session layout.
 pub fn registry() -> Vec<crate::api::Operation> {
     [
+        ("agent.render_root_cpu",false,"bounded CPU rendering for extended materials at a pinned root revision","evaluation and render boundaries"),
+        ("agent.preview_products",false,"render authored views, color/denoising and typed UV bakes at a pinned revision","evaluation and render boundaries"),
+        ("agent.preview_at",false,"render a pinned clip frame with exact-time shutter samples; keeps rest state immutable","evaluation and render boundaries"),
+        (
+            "agent.import_pbr_glb",
+            true,
+            "opaque static PBR GLB with bounded PNG/JPEG; explicit approximation consent",
+            "atomic synchronous import",
+        ),
+        (
+            "agent.import_pbr_scene",
+            true,
+            "opaque static PBR glTF with caller-supplied buffers and images; no URI resolution",
+            "atomic synchronous import",
+        ),
+        (
+            "agent.select_camera",
+            true,
+            "transactionally select an authored camera entity for root rendering",
+            "before publication",
+        ),
         (
             "agent.inspect",
             false,

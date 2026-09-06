@@ -32,17 +32,17 @@ fn bad(message: &str) -> Error {
 fn unsupported(message: &str) -> Error {
     Error::new("unsupported_gltf", message).at("import")
 }
-fn index(v: &Value) -> Result<usize> {
+pub(super) fn index(v: &Value) -> Result<usize> {
     v.as_u64()
         .and_then(|n| usize::try_from(n).ok())
         .ok_or_else(|| bad("expected unsigned index"))
 }
-fn number(v: &Value) -> Result<f64> {
+pub(super) fn number(v: &Value) -> Result<f64> {
     v.as_f64()
         .filter(|n| n.is_finite())
         .ok_or_else(|| bad("expected finite number"))
 }
-fn vector<const N: usize>(v: Option<&Value>, default: [f64; N]) -> Result<[f64; N]> {
+pub(super) fn vector<const N: usize>(v: Option<&Value>, default: [f64; N]) -> Result<[f64; N]> {
     let Some(v) = v else { return Ok(default) };
     let a = v
         .as_array()
@@ -54,7 +54,7 @@ fn vector<const N: usize>(v: Option<&Value>, default: [f64; N]) -> Result<[f64; 
     }
     Ok(out)
 }
-fn array<'a>(v: &'a Value, key: &str) -> Result<&'a [Value]> {
+pub(super) fn array<'a>(v: &'a Value, key: &str) -> Result<&'a [Value]> {
     match v.get(key) {
         None => Ok(&[]),
         Some(x) => x
@@ -63,12 +63,12 @@ fn array<'a>(v: &'a Value, key: &str) -> Result<&'a [Value]> {
             .ok_or_else(|| bad("expected array")),
     }
 }
-fn at<'a>(v: &'a Value, key: &str, i: usize) -> Result<&'a Value> {
+pub(super) fn at<'a>(v: &'a Value, key: &str, i: usize) -> Result<&'a Value> {
     array(v, key)?
         .get(i)
         .ok_or_else(|| bad("index out of range"))
 }
-fn offset(v: &Value, key: &str) -> Result<usize> {
+pub(super) fn offset(v: &Value, key: &str) -> Result<usize> {
     v.get(key).map(index).unwrap_or(Ok(0))
 }
 fn identity(document: Id, source: &str, kind: &str, index: usize) -> Result<Id> {
@@ -84,7 +84,30 @@ fn u32le(bytes: &[u8], offset: usize) -> Result<u32> {
         .ok_or_else(|| bad("truncated GLB word"))?;
     Ok(u32::from_le_bytes(a.try_into().expect("four bytes")))
 }
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct PbrPolicy {
+    pub allow_approximations: bool,
+}
+pub fn import_pbr_glb(bytes: &[u8], document: Id, policy: &PbrPolicy) -> Result<Imported> {
+    if !policy.allow_approximations {
+        return Err(unsupported(
+            "PBR v0 requires explicit consent to roughness regularization and fallback tangent policy",
+        ));
+    }
+    import_glb_mode(
+        bytes,
+        document,
+        &Policy {
+            allow_lambertian: false,
+        },
+        true,
+    )
+}
 pub fn import_glb(bytes: &[u8], document: Id, policy: &Policy) -> Result<Imported> {
+    import_glb_mode(bytes, document, policy, false)
+}
+fn import_glb_mode(bytes: &[u8], document: Id, policy: &Policy, pbr: bool) -> Result<Imported> {
     if bytes.len() > MAX_INPUT {
         return Err(Error::new("budget", "GLB exceeds 4 MiB profile"));
     }
@@ -127,11 +150,13 @@ pub fn import_glb(bytes: &[u8], document: Id, policy: &Policy) -> Result<Importe
     {
         return Err(bad("invalid BIN length or padding"));
     }
-    import_scene(
+    import_scene_mode(
         chunks[0].1,
         &[chunks[1].1[..length].to_vec()],
+        &[],
         document,
         policy,
+        pbr,
     )
 }
 
@@ -275,8 +300,42 @@ pub fn import_scene(
     document: Id,
     policy: &Policy,
 ) -> Result<Imported> {
+    import_scene_mode(json, buffers, &[], document, policy, false)
+}
+pub fn import_pbr_scene(
+    json: &[u8],
+    buffers: &[Vec<u8>],
+    images: &[Vec<u8>],
+    document: Id,
+    policy: &PbrPolicy,
+) -> Result<Imported> {
+    if !policy.allow_approximations {
+        return Err(unsupported(
+            "PBR v0 requires explicit approximation consent",
+        ));
+    }
+    import_scene_mode(
+        json,
+        buffers,
+        images,
+        document,
+        &Policy {
+            allow_lambertian: false,
+        },
+        true,
+    )
+}
+fn import_scene_mode(
+    json: &[u8],
+    buffers: &[Vec<u8>],
+    external_images: &[Vec<u8>],
+    document: Id,
+    policy: &Policy,
+    pbr_mode: bool,
+) -> Result<Imported> {
     let total = buffers
         .iter()
+        .chain(external_images.iter())
         .try_fold(json.len(), |n, b| n.checked_add(b.len()))
         .ok_or_else(|| Error::new("budget", "input overflow"))?;
     if total > MAX_INPUT {
@@ -297,7 +356,9 @@ pub fn import_scene(
         "extensionsRequired",
         "extensionsUsed",
     ] {
-        if !array(&root, key)?.is_empty() {
+        if !(array(&root, key)?.is_empty()
+            || pbr_mode && ["cameras", "textures", "images"].contains(&key))
+        {
             return Err(unsupported(&format!(
                 "{key} outside static diffuse scene profile"
             )));
@@ -323,9 +384,18 @@ pub fn import_scene(
     {
         return Err(Error::new("budget", "scene table limit is 64"));
     }
-    let source = digest(&canonical(&(&root, buffers))?);
+    let source = if pbr_mode {
+        digest(&canonical(&(&root, buffers, external_images))?)
+    } else {
+        digest(&canonical(&(&root, buffers))?)
+    };
     let mut report = Report {
-        profile: "gltf2-static-lambertian-v0".into(),
+        profile: if pbr_mode {
+            "gltf2-static-pbr-v0"
+        } else {
+            "gltf2-static-lambertian-v0"
+        }
+        .into(),
         source_digest: source.clone(),
         losses: vec![],
         source_nodes: BTreeMap::new(),
@@ -334,25 +404,52 @@ pub fn import_scene(
         unique_meshes: 0,
     };
     let mut commands = vec![];
-    if !policy.allow_lambertian {
+    if !pbr_mode && !policy.allow_lambertian {
         return Err(unsupported(
             "explicit allow_lambertian consent required: glTF dielectric specular is not implemented",
         ));
     }
-    report.losses.push("Opt-in Lambertian conversion omits glTF dielectric specular; renderer is two-sided and uses geometric normals. No PBR fidelity claim.".into());
+    if pbr_mode {
+        report.losses.push("Single-scattering GGX, roughness regularized to >=0.05; missing tangents use a per-triangle UV basis, not MikkTSpace seam smoothing. OPAQUE alpha is ignored as specified by glTF.".into());
+    } else {
+        report.losses.push("Opt-in Lambertian conversion omits glTF dielectric specular; renderer is two-sided and uses geometric normals. No PBR fidelity claim.".into());
+    }
     report.losses.push("Names are retained; extras and generator metadata are not authored components. Only the selected scene is imported.".into());
+    let image_assets = if pbr_mode {
+        crate::gltf_materials::images(&root, buffers, external_images)?
+    } else {
+        vec![]
+    };
+    let image_ids = image_assets
+        .iter()
+        .map(crate::textures::ImageAsset::content_id)
+        .collect::<Result<Vec<_>>>()?;
+    for image in image_assets {
+        commands.push(Command::PutImage { image });
+    }
     let mut materials = vec![];
     for (i, m) in array(&root, "materials")?.iter().enumerate() {
-        if m.get("extensions").is_some()
-            || m.get("normalTexture").is_some()
-            || m.get("occlusionTexture").is_some()
-            || m.get("emissiveTexture").is_some()
-            || m.get("alphaMode").is_some_and(|v| v != "OPAQUE")
+        if pbr_mode
+            && (!m.is_object()
+                || m.get("pbrMetallicRoughness")
+                    .is_some_and(|v| !v.is_object()))
+        {
+            return Err(bad("material and PBR properties must be objects"));
+        }
+        if !pbr_mode
+            && (m.get("extensions").is_some()
+                || m.get("normalTexture").is_some()
+                || m.get("occlusionTexture").is_some()
+                || m.get("emissiveTexture").is_some()
+                || m.get("alphaMode").is_some_and(|v| v != "OPAQUE"))
         {
             return Err(unsupported("material texture, extension or alpha mode"));
         }
         let pbr = &m["pbrMetallicRoughness"];
-        if pbr.get("baseColorTexture").is_some() || pbr.get("metallicRoughnessTexture").is_some() {
+        if !pbr_mode
+            && (pbr.get("baseColorTexture").is_some()
+                || pbr.get("metallicRoughnessTexture").is_some())
+        {
             return Err(unsupported("textured material"));
         }
         let metallic = pbr
@@ -365,24 +462,45 @@ pub fn import_scene(
             .map(number)
             .transpose()?
             .unwrap_or(1.);
-        if metallic != 0. || roughness != 1. {
+        if !pbr_mode && (metallic != 0. || roughness != 1.) {
             return Err(unsupported(
                 "material requires metallic=0 and roughness=1; no silent scalar conversion",
             ));
         }
         let color = vector(pbr.get("baseColorFactor"), [1.; 4])?;
-        if color[3] != 1. {
+        if !pbr_mode && color[3] != 1. {
             return Err(unsupported("base color alpha"));
         }
         let id = identity(document, &source, "material", i)?;
         let mut material =
             Material::diffuse(id, [color[0] as f32, color[1] as f32, color[2] as f32]);
         material.emission = vector(m.get("emissiveFactor"), [0.; 3])?.map(|n| n as f32);
+        if pbr_mode {
+            if material.emission.iter().any(|v| *v > 1.) {
+                return Err(bad("glTF emissive factor exceeds one"));
+            }
+            if color.iter().any(|v| !(0.0..=1.).contains(v)) {
+                return Err(bad("base color factor range"));
+            }
+            material.metallic = metallic as f32;
+            material.roughness = roughness as f32;
+            material.pbr = Some(crate::gltf_materials::surface(&root, &image_ids, m)?);
+        }
         material.validate()?;
         commands.push(Command::PutMaterial { material });
         materials.push(id);
         report.source_materials.insert(i, id);
     }
+    let default_material = if pbr_mode {
+        let id = identity(document, &source, "default-material", 0)?;
+        let mut material = Material::diffuse(id, [1.; 3]);
+        material.metallic = 1.;
+        material.pbr = Some(crate::pbr::Surface::default());
+        commands.push(Command::PutMaterial { material });
+        Some(id)
+    } else {
+        None
+    };
     let mut meshes = vec![];
     let mut elements = 0usize;
     let mut primitive_count = 0usize;
@@ -406,10 +524,10 @@ pub fn import_scene(
             let attributes = p["attributes"]
                 .as_object()
                 .ok_or_else(|| bad("primitive attributes missing"))?;
-            if attributes
-                .keys()
-                .any(|k| !["POSITION", "NORMAL", "TEXCOORD_0"].contains(&k.as_str()))
-            {
+            if attributes.keys().any(|k| {
+                !(["POSITION", "NORMAL", "TEXCOORD_0"].contains(&k.as_str())
+                    || (pbr_mode && k == "TANGENT"))
+            }) {
                 return Err(unsupported(
                     "vertex attribute outside POSITION/NORMAL/TEXCOORD_0",
                 ));
@@ -515,13 +633,81 @@ pub fn import_scene(
                     );
                 }
             }
+            if pbr_mode {
+                if let Some(tangent) = attributes.get("TANGENT") {
+                    if !attributes.contains_key("NORMAL") {
+                        return Err(bad("TANGENT requires NORMAL"));
+                    }
+                    let a = accessor(&root, buffers, index(tangent)?, "VEC4", 4)?;
+                    if a.count != mesh.positions.len() {
+                        return Err(bad("tangent count mismatch"));
+                    }
+                    let values = a.floats::<4>()?;
+                    if values.iter().any(|t| {
+                        t[3].abs() != 1.
+                            || ((t[0] * t[0] + t[1] * t[1] + t[2] * t[2]) - 1.).abs() > 0.01
+                    }) {
+                        return Err(bad("invalid tangent vector/sign"));
+                    }
+                    mesh.attributes.insert(
+                        "tangent".into(),
+                        Attribute {
+                            id: Id(3),
+                            domain: Domain::Point,
+                            semantic: "tangent".into(),
+                            transfer: Transfer::Normalize,
+                            values: AttributeValues::Vec3(
+                                values.iter().map(|t| [t[0], t[1], t[2]]).collect(),
+                            ),
+                        },
+                    );
+                    mesh.attributes.insert(
+                        "tangent_sign".into(),
+                        Attribute {
+                            id: Id(4),
+                            domain: Domain::Point,
+                            semantic: "tangent_sign".into(),
+                            transfer: Transfer::Nearest,
+                            values: AttributeValues::Scalar(values.iter().map(|t| t[3]).collect()),
+                        },
+                    );
+                }
+                if let Some(Attribute {
+                    values: AttributeValues::Vec3(normals),
+                    ..
+                }) = mesh.attributes.get("normal")
+                    && normals
+                        .iter()
+                        .any(|n| (glam::Vec3::from_array(*n).length_squared() - 1.).abs() > 0.01)
+                {
+                    return Err(bad("normals must be unit vectors"));
+                }
+                let material = p
+                    .get("material")
+                    .map(index)
+                    .transpose()?
+                    .and_then(|i| array(&root, "materials").ok()?.get(i));
+                if let Some(m) = material {
+                    let surface = crate::gltf_materials::surface(&root, &image_ids, m)?;
+                    if surface.bindings().iter().any(Option::is_some)
+                        && !attributes.contains_key("TEXCOORD_0")
+                    {
+                        return Err(bad("textured primitive requires TEXCOORD_0"));
+                    }
+                }
+            }
             let hash = mesh.content_id()?;
             if hashes.insert(hash.clone()) {
                 commands.push(Command::PutMesh { mesh });
             }
-            let material = *materials
-                .get(index(&p["material"])?)
-                .ok_or_else(|| unsupported("explicit supported material required"))?;
+            let material = if let Some(i) = p.get("material") {
+                *materials
+                    .get(index(i)?)
+                    .ok_or_else(|| bad("material index"))?
+            } else {
+                default_material
+                    .ok_or_else(|| unsupported("explicit supported material required"))?
+            };
             parts.push((hash, material));
         }
         if parts.is_empty() {
@@ -544,14 +730,23 @@ pub fn import_scene(
             return Err(bad("cycle, duplicate root or multiple parents"));
         }
         let node = nodes.get(i).ok_or_else(|| bad("node index"))?;
+        if !node.is_object() {
+            return Err(bad("node must be an object"));
+        }
         if ["skin", "weights", "camera", "extensions"]
             .iter()
-            .any(|k| node.get(k).is_some())
+            .any(|k| node.get(k).is_some() && !(pbr_mode && *k == "camera"))
         {
             return Err(unsupported("node skin/weights/camera/extensions"));
         }
         let id = identity(document, &source, "node", i)?;
         report.source_nodes.insert(i, id);
+        if pbr_mode && let Some(camera) = node.get("camera") {
+            commands.push(Command::SetCamera {
+                entity: id,
+                lens: crate::gltf_materials::lens(at(&root, "cameras", index(camera)?)?)?,
+            });
+        }
         commands.push(Command::CreateEntity {
             entity: Entity {
                 id,

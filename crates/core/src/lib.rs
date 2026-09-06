@@ -1,18 +1,34 @@
 //! Platform-independent authored state, transactions, geometry and reference rendering.
 pub mod agent;
+pub mod animation;
 pub mod api;
+pub mod cameras;
+pub mod curves;
+pub mod displacement;
 pub mod document;
+pub mod feature_fixtures;
 pub mod fixtures;
 pub mod geometry;
+mod gltf_materials;
 pub mod gltf_scene;
+pub mod groom;
 pub mod imaging;
 pub mod interchange;
 pub mod jobs;
 pub mod mesh_codec;
+pub mod modeling;
+pub mod pbr;
+pub mod procedural;
+pub mod products;
 pub mod render;
+pub mod rigging;
+pub mod scattering;
+pub mod sequence;
 pub mod storage;
+pub mod textures;
 pub mod topology;
 pub mod uploads;
+pub mod volumes;
 
 use serde::{Deserialize, Serialize};
 use sha2::{Digest, Sha256};
@@ -118,10 +134,7 @@ impl Time {
             return Err(Error::new("time", "zero frame-rate denominator"));
         }
         let n = i128::from(frame) * i128::from(fps_denominator);
-        Self::new(
-            i64::try_from(n).map_err(|_| Error::new("overflow", "frame time"))?,
-            fps_numerator,
-        )
+        animation::ratio(n, u128::from(fps_numerator))
     }
     pub fn seconds(self) -> Result<f64> {
         if self.denominator == 0 {

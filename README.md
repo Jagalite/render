@@ -8,6 +8,7 @@ An independent, fully Rust creative platform with agent-native operations, brows
 
 - [Agent workflow, ABI v1 and supported input profile](docs/agent_alpha.md)
 - [M05 validation evidence](evidence/m05/README.md)
+- [Static PBR profile](docs/static_pbr.md) and [validation evidence](evidence/static-pbr/README.md)
 - [Build, run, foundation contracts and supported profiles](docs/implementation.md)
 - [Planned input, material, animation and Blender support](docs/input_support.md)
 - [M00–M04 validation evidence and qualifications](evidence/m00-m04/README.md)
@@ -27,7 +28,7 @@ An independent, fully Rust creative platform with agent-native operations, brows
 - `examples/`: positive/negative example requests with validation caveats.
 - `planning/document_validation_report.json`: document-shape and planning-graph checks performed while preparing this package.
 
-The Rust workspace implements restricted agent variants, bounded static GLB/glTF scene import, document transactions, native durability and jobs, a CPU renderer, generated portable GPU kernels, scoped OBJ/glTF interchange, and browser-local execution. The supported profile is intentionally narrow: polygonal scenes, Lambertian surfaces, point/environment lighting, and an approximate raster preview. See the evidence for runtime hosts, measurements and exclusions. M00–M05 are complete within their published profiles; M06–M14 remain planned. Full static glTF/PBR and the broader input families remain in the input plan.
+The Rust workspace completes the experimental M00–M08 milestone profiles: transactional documents and durable jobs; static scene/PBR import; modeling and typed procedural graphs; curves, points, groomed hair and sparse media; advanced CPU scattering, displacement, bakes and Rust color/denoising; and exact-time rigs, skinning, morphs and shutter sequences. Metal/WebGPU support remains profile-specific. See [M07/M08 semantics](docs/m07_m08.md), [the evidence](evidence/m06-m08/README.md) and [input-format limits](docs/input_support.md). The interactive editor begins at M09.
 
 ```sh
 cargo test --workspace --locked

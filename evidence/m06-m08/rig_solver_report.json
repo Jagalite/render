@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "tests": [
+    {
+      "case": "bind_affine_scale_shear_and_two_bone_solver_diagnostics",
+      "source": "crates/core/tests/animation.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "character_skin_morph_transaction_random_access_and_native_state_recovery",
+      "source": "crates/core/tests/animation.rs",
+      "native": "passed",
+      "wasm": "passed"
+    },
+    {
+      "case": "weighted_affine_skinning_and_morph_have_independent_numeric_expectations",
+      "source": "crates/core/tests/animation.rs",
+      "native": "passed",
+      "wasm": "passed"
+    }
+  ],
+  "profiles": [
+    "copy_position",
+    "two_bone_ik"
+  ],
+  "diagnostics": [
+    "causal dependency cycle",
+    "conflicting constraint writes",
+    "unreachable goal",
+    "excessive residual",
+    "invalid inverse bind",
+    "stale topology"
+  ],
+  "workflow": "character-01/report.json",
+  "authored_fixture": "character-01/document.json"
+}

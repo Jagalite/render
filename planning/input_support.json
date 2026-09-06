@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "status": "partial_static_profile",
+  "status": "static_import_and_native_authored_breadth_profiles",
   "scope": "All feature families requested after the M00-M04 foundation; staged input-to-render delivery.",
   "priority_order": [
     "INPUT-01",
@@ -44,11 +44,13 @@
       ],
       "qualification": "Static scene completeness also depends on INPUT-02 for core PBR material evaluation. Reading or preserving a field is not rendering support.",
       "status": "partially_implemented_profile",
-      "implemented_profile": "gltf2-static-lambertian-v0",
+      "implemented_profile": "gltf2-static-pbr-v0",
       "evidence": [
         "evidence/m05/agent_workflow_report.json",
-        "evidence/m05/browser_workflow_report.json"
-      ]
+        "evidence/m05/browser_workflow_report.json",
+        "evidence/static-pbr/README.md"
+      ],
+      "remaining_scope": "Sparse/normalized attributes, additional UV sets and broader scene inputs remain unsupported."
     },
     {
       "id": "INPUT-02",
@@ -72,7 +74,13 @@
         "Unknown shader nodes are reported individually and retained safely where possible"
       ],
       "qualification": "Core glTF materials and named extensions are separate capabilities. Blender node graphs require explicitly supported node semantics.",
-      "status": "planned"
+      "status": "partially_implemented_profile",
+      "implemented_profile": "static glTF opaque CPU/GPU plus native-authored extended Rust CPU surfaces",
+      "evidence": [
+        "evidence/static-pbr/README.md",
+        "evidence/m06-m08/README.md"
+      ],
+      "remaining_scope": "Imported glTF alpha/extensions, multiple UV sets and extended GPU scattering remain unsupported."
     },
     {
       "id": "INPUT-03",
@@ -97,7 +105,12 @@
         "Exercise cancellation, budgets and native/browser equivalence"
       ],
       "qualification": "Animation/skin file import does not imply control-rig, IK, driver or retargeting support; those retain named M08 subgates.",
-      "status": "planned"
+      "status": "partially_implemented_profile",
+      "evidence": [
+        "evidence/m06-m08/README.md"
+      ],
+      "implemented_profile": "native-authored affine-lbs-shutter-v0; external animated glTF import not implemented",
+      "remaining_scope": "External animated character file adapters and their licensed corpus remain open."
     },
     {
       "id": "INPUT-04",
@@ -122,7 +135,12 @@
         "Prove native/browser local rendering for the published budget profile"
       ],
       "qualification": "Loading points or drawing line widgets does not complete the hair-rendering gate. Hair dynamics remain a separate M11 capability.",
-      "status": "planned"
+      "status": "partially_implemented_profile",
+      "evidence": [
+        "evidence/m06-m08/README.md"
+      ],
+      "implemented_profile": "native typed curves and guide-root-sweep-v0 with deformation-aware anchors",
+      "remaining_scope": "Additional strand input adapters, physical fiber BSDF and animated-groom corpus remain separate extensions."
     },
     {
       "id": "INPUT-05",
@@ -146,7 +164,12 @@
         "Match native/browser images under declared statistical tolerances"
       ],
       "qualification": "Volume rendering is distinct from smoke/liquid simulation. No OpenVDB computational runtime is permitted.",
-      "status": "planned"
+      "status": "partially_implemented_profile",
+      "evidence": [
+        "evidence/m06-m08/README.md"
+      ],
+      "implemented_profile": "native typed sparse-media-v0, native/browser Rust CPU",
+      "remaining_scope": "External sparse-volume formats, paging and GPU transport remain unsupported."
     },
     {
       "id": "INPUT-06",

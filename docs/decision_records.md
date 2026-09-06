@@ -1,5 +1,7 @@
 # Architecture decision register
 
+M06–M08 now have [named implementation profiles](m07_m08.md) and [complete milestone evidence](../evidence/m06-m08/README.md). Historical M05 Lambertian and [static PBR](static_pbr.md) evidence retain their original scope. External input tracks remain separately qualified in `planning/input_support.json`.
+
 The initial proposals are preserved below. M00–M04 decisions, supporting measurements, accepted limitations and revisit triggers are recorded in [accepted foundation ADRs](../evidence/m00-m04/accepted_ADRs.md). M05 integration decisions are in [accepted agent alpha ADRs](../evidence/m05/accepted_ADRs.md). Decisions outside these demonstrated profiles remain proposed. See the full specification for consequences.
 
 ## ADR-001 — Fully Rust production implementation
@@ -97,3 +99,26 @@ The initial proposals are preserved below. M00–M04 decisions, supporting measu
 **Rejected baseline:** Editor-only mutable state paths.
 
 **Revisit trigger:** A measured interaction bottleneck requires a faster transport, not bypassing semantics.
+
+## ADR-013 — Typed breadth and exact-time derived evaluation
+
+**Decision:** M06–M08 add typed snapshot fields and ordinary transactions;
+procedural outputs, sweeps, displaced meshes and animated poses remain derived.
+Groom/skin/morph attachments use topology digests and stable local IDs. Rig binding
+requires explicit triangle realization. Visibility does not remove dependency
+anchors. Time and shutter arithmetic use checked rationals. GPU support is granted
+per named material/geometry profile; CPU-only media, extended scattering and
+imaging return explicit unsupported errors on incompatible backends.
+
+**Integration contract:** [M06 operators](m06_modeling_contract.md),
+[M07/M08 semantics](m07_m08.md) and [execution gates](m07_m08_execution.md).
+Historical Lambertian and static PBR evidence remains pinned separately. Numerical
+references, native workflows, browser parity, resources and source/dependency
+manifests gate the capability status update.
+
+**Rejected baseline:** Baking authored hair/rig/graph state into anonymous triangles,
+using platform-private mutation paths, or silently falling back from requested GPU
+profiles. Bounded named approximations remain visible in receipts.
+
+**Revisit trigger:** New authoring or backend workflows pass their own numerical,
+resource, portability and recovery gates; existing profile names keep their meaning.

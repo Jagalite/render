@@ -1,6 +1,8 @@
 # Rust foundation implementation
 
-The repository contains an experimental M00–M05 implementation. This guide describes the foundation; [the agent alpha guide](agent_alpha.md) specifies the added scene importer, restricted variants, authored render settings, browser recovery and narrow ABI v1. The original architecture remains the requirements source. Evidence is in `evidence/m00-m04/` and `evidence/m05/`; this is not a complete creative suite.
+M06–M08 now have [named implementation profiles](m07_m08.md) and [complete milestone evidence](../evidence/m06-m08/README.md). Historical M05 Lambertian and [static PBR](static_pbr.md) evidence retain their original scope. External input tracks remain separately qualified in `planning/input_support.json`.
+
+The repository contains experimental M00–M08 milestone profiles. This guide describes the original foundation; [the agent alpha guide](agent_alpha.md) specifies the added scene importer, restricted variants, authored render settings, browser recovery and narrow ABI v1. The original architecture remains the requirements source. Evidence is in `evidence/m00-m04/` and `evidence/m05/`; this is not a complete creative suite.
 
 ## Build and run
 
@@ -99,4 +101,4 @@ Browser bindings expose `BrowserDocument` create/import/export/revision/execute/
 
 Project code is independently authored Rust. No Blender/Cycles implementation was ported or linked. Test scripts, comparative hecs usage and generated browser bindings are classified separately from the bundled runtime. Dependency/license expressions and environmental links are recorded by the audit; the project itself has not yet selected a distribution license.
 
-Validated runtime hosts are Apple M1/macOS and Chromium WebGPU. Other native targets need their own runtime evidence. The comparison is an experiment with the named workloads and machines, not a universal speed, memory, topology-robustness or production-readiness claim. M05 now has its own validated agent profile; M06–M14 remain future work.
+Validated runtime hosts are Apple M1/macOS and Chromium WebGPU. Other native targets need their own runtime evidence. The comparison is an experiment with the named workloads and machines, not a universal speed, memory, topology-robustness or production-readiness claim. M05 now has its own validated agent profile; M07 has the separately validated static PBR slice; other later gates remain open.

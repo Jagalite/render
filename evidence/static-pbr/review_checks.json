@@ -1,0 +1,63 @@
+[
+  {
+    "name": "review_native_clippy",
+    "command": [
+      "cargo",
+      "clippy",
+      "--workspace",
+      "--all-targets",
+      "--locked",
+      "--offline",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "exit_code": 0,
+    "seconds": 53.22639587500089
+  },
+  {
+    "name": "review_native_tests",
+    "command": [
+      "cargo",
+      "test",
+      "--workspace",
+      "--locked",
+      "--offline"
+    ],
+    "exit_code": 0,
+    "seconds": 46.950503333002416
+  },
+  {
+    "name": "review_wasm_clippy",
+    "command": [
+      "cargo",
+      "clippy",
+      "-p",
+      "render-web",
+      "--target",
+      "wasm32-unknown-unknown",
+      "--locked",
+      "--offline",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "exit_code": 0,
+    "seconds": 7.281355792001705
+  },
+  {
+    "name": "review_wasm_tests",
+    "command": [
+      "cargo",
+      "test",
+      "-p",
+      "render-core",
+      "--target",
+      "wasm32-unknown-unknown",
+      "--locked",
+      "--offline"
+    ],
+    "exit_code": 0,
+    "seconds": 31.539533749997645
+  }
+]

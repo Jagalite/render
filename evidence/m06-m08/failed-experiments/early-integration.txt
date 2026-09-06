@@ -1,0 +1,107 @@
+format: exit 0
+native_clippy: exit 0
+native_tests: exit 101
+ures_and_invalid_accessors ... ok
+test real_glb_and_gltf_preserve_indexed_geometry_and_hierarchy ... ok
+test importer_unsigned_index_widths_multiple_primitives_and_invalid_transforms ... ok
+test durable_agent_retry_checks_target_and_retained_metadata ... ok
+test agent_admission_and_durable_dispatch_are_atomic_and_versioned ... ok
+test restricted_variants_reject_scope_budget_conflicts_cancellation_and_unrendered_selection ... ok
+test three_restricted_variants_render_and_commit_durably_with_lost_ack_retry ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.61s
+
+     Running tests/animation.rs (target/debug/deps/animation-d67c503095433448)
+
+running 6 tests
+test rational_time_and_interpolation_preserve_authored_modes ... ok
+test clip_random_access_retime_conflicts_and_cancellation ... ok
+test bind_affine_scale_shear_and_two_bone_solver_diagnostics ... ok
+test weighted_affine_skinning_and_morph_have_independent_numeric_expectations ... ok
+test character_skin_morph_transaction_random_access_and_native_state_recovery ... ok
+test shutter_sequence_pinned_revisions_partial_output_and_agent_preview ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.20s
+
+     Running tests/conformance.rs (target/debug/deps/conformance-af9a3b187ba96f11)
+
+running 35 tests
+test cancelled_jobs_release_queue_capacity_and_retries_preserve_events ... ok
+test concave_polygon_area_and_degeneracy ... ok
+test canonical_order_independent_of_table_layout ... ok
+test diffuse_energy_pdf_and_sample_mean ... ok
+test empty_scene_environment_is_analytic ... ok
+test identity_and_rational_time ... ok
+test diffuse_plane_radiance_matches_analytic_solution ... ok
+test jobs_events_cancellation_and_recovery ... ok
+test foreign_edit_handle_and_hostile_accessor_are_rejected ... ok
+test malformed_topology_rejected ... ok
+test mesh_preserves_seams_and_loose_elements ... ok
+test journal_sequence_is_checked ... ok
+test durable_host_metadata_cannot_be_overwritten_by_stale_snapshot ... ok
+test obj_and_gltf_profiles_roundtrip ... ok
+test ordered_transform_channels_and_external_texture ... ok
+test later_layer_restores_hidden_geometry ... ok
+test binary_mesh_chunks_preserve_precision_and_reject_truncation ... ok
+test radial_nonmanifold_and_generation_safety ... ok
+
+running 1 test
+test render_reproducibility_and_color_boundaries ... ok
+test durable_failure_quota_recovery_and_idempotency ... ok
+test durable_retry_publishes_to_the_requested_store ... ok
+test negative_shear_parent_and_layer_semantics ... ok
+test snapshots_copy_only_changed_entity_chunk ... ok
+test staged_upload_permissions_checksums_and_budget ... ok
+test storage_crash_child ... ok
+test renderer_reuses_geometry_after_transform ... ok
+test triangle_bvh_and_parallel_slab_analytic ... ok
+test shared_browser_suite ... ok
+test retries_wire_permissions_and_budgets ... ok
+test transactions_are_atomic_and_revision_checked ... ok
+test unsupported_scattering_is_diagnosed ... ok
+
+running 1 test
+test native_mesh_chunks_deduplicate_and_detect_corruption ... ok
+
+running 1 test
+
+running 1 test
+test native_publication_fault_boundaries ... ok
+test process_termination_recovers_committed_root ... ok
+test prepared_noop_candidates_cannot_overfill_retention ... ok
+
+test result: ok. 35 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 25.18s
+
+     Running tests/curves.rs (target/debug/deps/curves-5aa113aebbec4bc7)
+
+running 4 tests
+test curve_failures_budgets_cancellation_and_schema_versions ... ok
+test spline_basis_and_rational_knot_insertion_match_analytic_geometry ... ok
+test authored_geometry_transactions_recovery_visibility_and_render ... ok
+test generated_tubes_and_point_spheres_are_closed_and_outward ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.43s
+
+     Running tests/displacement.rs (target/debug/deps/displacement-6c3ede1022bebd97)
+
+running 3 tests
+test displacement_loose_data_and_root_evaluation_cancellation ... FAILED
+test displacement_metric_height_subdivision_convergence_and_limits ... ok
+test surface_displacement_cache_transactions_and_recovery ... ok
+
+failures:
+
+---- displacement_loose_data_and_root_evaluation_cancellation stdout ----
+
+thread 'displacement_loose_data_and_root_evaluation_cancellation' (2023696) panicked at crates/core/tests/displacement.rs:137:14:
+called `Result::unwrap_err()` on an `Ok` value: (Mesh { positions: F64([[1.0, 0.0, -1.0], [-1.0, 0.0, 1.0], [-1.0, 0.0, -1.0], [-1.0, 0.0, 1.0], [1.0, 0.0, -1.0], [1.0, 0.0, 1.0], [-1.0, 0.0, -1.0], [0.0, 1.0, 0.0], [1.0, 0.0, -1.0], [1.0, 0.0, -1.0], [0.0, 1.0, 0.0], [1.0, 0.0, 1.0], [1.0, 0.0, 1.0], [0.0, 1.0, 0.0], [-1.0, 0.0, 1.0], [-1.0, 0.0, 1.0], [0.0, 1.0, 0.0], [-1.0, 0.0, -1.0]]), edges: [[0, 2], [2, 1], [1, 0], [3, 5], [5, 4], [4, 3], [6, 8], [8, 7], [7, 6], [9, 11], [11, 10], [10, 9], [12, 14], [14, 13], [13, 12], [15, 17], [17, 16], [16, 15]], face_offsets: [0, 3, 6, 9, 12, 15, 18], corners: [Corner { vertex: 0, edge: 0 }, Corner { vertex: 2, edge: 1 }, Corner { vertex: 1, edge: 2 }, Corner { vertex: 3, edge: 3 }, Corner { vertex: 5, edge: 4 }, Corner { vertex: 4, edge: 5 }, Corner { vertex: 6, edge: 6 }, Corner { vertex: 8, edge: 7 }, Corner { vertex: 7, edge: 8 }, Corner { vertex: 9, edge: 9 }, Corner { vertex: 11, edge: 10 }, Corner { vertex: 10, edge: 11 }, Corner { vertex: 12, edge: 12 }, Corner { vertex: 14, edge: 13 }, Corner { vertex: 13, edge: 14 }, Corner { vertex: 15, edge: 15 }, Corner { vertex: 17, edge: 16 }, Corner { vertex: 16, edge: 17 }], point_ids: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], edge_ids: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], face_ids: [1, 2, 3, 4, 5, 6], corner_ids: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], attributes: {"uv": Attribute { id: Id(1), domain: Corner, semantic: "uv", transfer: Linear, values: Vec2([[0.25, 0.0], [0.0, 0.0], [0.75, 0.5], [0.75, 0.5], [0.5, 1.0], [0.25, 0.0], [0.0, 0.5], [0.25, 1.0], [1.0, 0.0], [0.25, 0.5], [0.5, 1.0], [1.0, 0.0], [0.5, 0.5], [0.75, 1.0], [1.0, 0.0], [0.75, 0.5], [0.0, 1.0], [1.0, 0.0]]) }} }, Receipt { source_digest: "sha256:539a6b19205ec856a017cb886e9181be73a56e11ebdf29ff16236e8b0c482b5f", policy_digest: "sha256:95fbf1672075ff547cc312995995590839ca02be11dd966278a89aa3428f8f06", subdivisions: 0, vertices: 18, triangles: 6, derived_bytes: 1444, approximation: "uniform 4-way triangle dicing; area-weighted source vertex normal displacement; object-meter height; base-level image sampling; crack detection at shared topology edges; geometric output normals; derived correspondence only" })
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    displacement_loose_data_and_root_evaluation_cancellation
+
+test result: FAILED. 2 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.50s
+
+error: test failed, to rerun pass `-p render-core --test displacement`
+

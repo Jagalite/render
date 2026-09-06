@@ -10,5 +10,6 @@ wgpu.workspace = true
 serde.workspace = true
 serde_json.workspace = true
 glam.workspace = true
+half = { version = "=2.7.1", default-features = false }
 [lints]
 workspace = true

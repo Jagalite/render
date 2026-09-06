@@ -1,0 +1,140 @@
+{
+  "status": "passed",
+  "tests": [
+    {
+      "case": "shutter_sequence_pinned_revisions_partial_output_and_agent_preview",
+      "source": "crates/core/tests/animation.rs",
+      "native": "passed",
+      "wasm": "passed"
+    }
+  ],
+  "request": {
+    "clip": "000000000000000000000000000020d0",
+    "revision": "sha256:b6139aa08d12a75a795d850288cb714b16bf4191f8d7b1d35879cf4cc9af653b",
+    "shutter": {
+      "close": {
+        "denominator": 32,
+        "numerator": 1
+      },
+      "open": {
+        "denominator": 32,
+        "numerator": -1
+      },
+      "samples": 4
+    },
+    "times": [
+      {
+        "denominator": 1,
+        "numerator": 0
+      },
+      {
+        "denominator": 8,
+        "numerator": 1
+      },
+      {
+        "denominator": 4,
+        "numerator": 1
+      },
+      {
+        "denominator": 8,
+        "numerator": 3
+      },
+      {
+        "denominator": 2,
+        "numerator": 1
+      },
+      {
+        "denominator": 8,
+        "numerator": 5
+      },
+      {
+        "denominator": 4,
+        "numerator": 3
+      },
+      {
+        "denominator": 8,
+        "numerator": 7
+      },
+      {
+        "denominator": 1,
+        "numerator": 1
+      }
+    ]
+  },
+  "comparisons": {
+    "status": "passed",
+    "comparisons": [
+      {
+        "native": "geometry-01/geometry-cpu",
+        "linear_rmse": 0.0,
+        "normal_rmse": 0.0,
+        "depth_rmse": 0.0,
+        "object_mismatches": 0
+      },
+      {
+        "native": "groom-01/geometry-cpu",
+        "linear_rmse": 0.0,
+        "normal_rmse": 0.0,
+        "depth_rmse": 0.0,
+        "object_mismatches": 0
+      },
+      {
+        "native": "volume-01/volume-cpu",
+        "linear_rmse": 0.0,
+        "normal_rmse": 0.0,
+        "depth_rmse": 0.0,
+        "object_mismatches": 0
+      },
+      {
+        "native": "modeling-01/geometry-cpu",
+        "linear_rmse": 0.0,
+        "normal_rmse": 0.0,
+        "depth_rmse": 0.0,
+        "object_mismatches": 0
+      },
+      {
+        "native": "surfaces-01/surfaces-cpu",
+        "linear_rmse": 0.0,
+        "normal_rmse": 0.0,
+        "depth_rmse": 0.0,
+        "object_mismatches": 0
+      },
+      {
+        "native": "character-01/frame-000",
+        "linear_rmse": 0.0,
+        "normal_rmse": 0.0,
+        "depth_rmse": 0.0,
+        "object_mismatches": 0
+      },
+      {
+        "native": "character-01/frame-002",
+        "linear_rmse": 0.0,
+        "normal_rmse": 0.0,
+        "depth_rmse": 0.0,
+        "object_mismatches": 0
+      },
+      {
+        "native": "character-01/frame-004",
+        "linear_rmse": 0.0,
+        "normal_rmse": 0.0,
+        "depth_rmse": 0.0,
+        "object_mismatches": 0
+      },
+      {
+        "native": "character-01/frame-006",
+        "linear_rmse": 0.0,
+        "normal_rmse": 0.0,
+        "depth_rmse": 0.0,
+        "object_mismatches": 0
+      },
+      {
+        "native": "character-01/frame-008",
+        "linear_rmse": 0.0,
+        "normal_rmse": 0.0,
+        "depth_rmse": 0.0,
+        "object_mismatches": 0
+      }
+    ]
+  },
+  "policy": "independent exact-time rigid/morph/LBS midpoint samples; nominal-time auxiliary passes; streaming completed frames; partial output on cancellation"
+}

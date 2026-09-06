@@ -1,0 +1,33 @@
+{
+  "displaced_cpu_metal_rmse": 1.1029118750266084e-8,
+  "displacements": [
+    {
+      "approximation": "uniform 4-way triangle dicing; area-weighted source vertex normal displacement; object-meter height; base-level image sampling; crack detection at shared topology edges; geometric output normals; derived correspondence only",
+      "derived_bytes": 95800,
+      "policy_digest": "sha256:99203c5f7b9553b1dcac7d3b256947c1fb3fc0ebdfd2060d9263472c17c42600",
+      "source_digest": "sha256:d0b36f20173a58efe7fa9b1a8dad179cb1e524e552c0823339c4fec3f166436b",
+      "subdivisions": 4,
+      "triangles": 512,
+      "vertices": 306
+    }
+  ],
+  "durable_roundtrip": true,
+  "gpu_extended_rejection": {
+    "code": "unsupported_profile",
+    "context": {},
+    "message": "extended dielectric/conductor/coat/alpha requires the Rust CPU backend",
+    "retryable": false,
+    "stage": "validation"
+  },
+  "profile": "extended-bsdf-displacement-v0",
+  "revision": "sha256:770adbdcbd70c8ac81d3b3624aa7f0ebbb62dbb8d12ac77d92112a22199b437e",
+  "seconds": 2.082408041,
+  "source_snapshot_bytes": 5333,
+  "status": "passed",
+  "visible_pixels": {
+    "000000000000000000000000000021ac": 231,
+    "000000000000000000000000000021ad": 266,
+    "000000000000000000000000000021ae": 328,
+    "000000000000000000000000000021b7": 1879
+  }
+}

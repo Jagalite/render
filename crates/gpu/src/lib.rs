@@ -37,6 +37,7 @@ pub struct Renderer {
     queue: wgpu::Queue,
     pipeline: wgpu::ComputePipeline,
     alpha_pipeline: Option<wgpu::ComputePipeline>,
+    surface_pipeline: Option<wgpu::ComputePipeline>,
     pub capabilities: Capabilities,
     lost: Arc<AtomicBool>,
     geometry_cache: Option<(String, wgpu::Buffer)>,
@@ -123,14 +124,14 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
     scene.validate_geometry_bindings()?;
     if scene.instances.iter().any(|i| {
         i.material.pbr.as_ref().is_some_and(|p| {
-            p.advanced
-                .as_ref()
-                .is_some_and(|a| !matches!(a.model, render_core::scattering::Model::Principled))
+            p.advanced.as_ref().is_some_and(|a| {
+                matches!(a.model, render_core::scattering::Model::Dielectric { .. })
+            })
         })
     }) {
         return Err(Error::new(
             "unsupported_profile",
-            "extended dielectric/conductor/coat requires the Rust CPU backend",
+            "ideal dielectric requires the Rust CPU backend",
         ));
     }
     if !scene.media.is_empty() {
@@ -168,6 +169,19 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
             .pbr
             .as_ref()
             .is_some_and(|p| p.advanced.is_some())
+    });
+    let surface_models = scene.instances.iter().any(|i| {
+        i.material
+            .pbr
+            .as_ref()
+            .and_then(|p| p.advanced.as_ref())
+            .is_some_and(|a| {
+                matches!(
+                    a.model,
+                    render_core::scattering::Model::Conductor { .. }
+                        | render_core::scattering::Model::Coated { .. }
+                )
+            })
     });
     let alpha_images: std::collections::BTreeSet<_> = scene
         .instances
@@ -322,7 +336,7 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
         let opacity = surface
             .and_then(|p| p.advanced.as_ref())
             .map(|a| &a.opacity);
-        let coverage = match opacity {
+        let mut coverage = match opacity {
             None | Some(Opacity::Opaque) => [0.; 4],
             Some(Opacity::Blend { factor }) => [2., *factor as f32, 0., 0.],
             Some(Opacity::Mask { factor, cutoff }) => {
@@ -349,6 +363,30 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
                 }
             }
         };
+        use render_core::scattering::Model;
+        match surface.and_then(|p| p.advanced.as_ref()).map(|a| &a.model) {
+            Some(Model::Conductor { eta, k }) => {
+                coverage[3] = (geometry.len() + 1) as f32;
+                geometry.push([1., 0., 0., 0.]);
+                // Compile the same f64 optical-constant F0 as the CPU model;
+                // the GPU performs subsequent Schlick/GGX arithmetic in f32.
+                let f0: [f32; 3] = std::array::from_fn(|j| {
+                    (((eta[j] - 1.).powi(2) + k[j] * k[j]) / ((eta[j] + 1.).powi(2) + k[j] * k[j]))
+                        as f32
+                });
+                geometry.push([f0[0], f0[1], f0[2], 0.]);
+            }
+            Some(Model::Coated {
+                weight,
+                ior,
+                roughness,
+            }) => {
+                coverage[3] = (geometry.len() + 1) as f32;
+                geometry.push([2., *weight as f32, *ior as f32, *roughness as f32]);
+                geometry.push([0.; 4]);
+            }
+            _ => {}
+        }
         instances.push(coverage);
     }
     if geometry.len() > 16777216 || instances.len() > 16777216 {
@@ -431,7 +469,11 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
             } else {
                 2.
             },
-            f32::from(extended),
+            if surface_models {
+                2.
+            } else {
+                f32::from(extended)
+            },
         ],
     ];
     params.push([1., 0., 0., 0.]);
@@ -520,6 +562,7 @@ impl Renderer {
             queue,
             pipeline,
             alpha_pipeline: None,
+            surface_pipeline: None,
             capabilities,
             lost,
             geometry_cache: None,
@@ -557,10 +600,42 @@ impl Renderer {
         self.alpha_pipeline = Some(pipeline);
         Ok(())
     }
+    async fn ensure_surface_pipeline(&mut self) -> Result<()> {
+        if self.surface_pipeline.is_some() {
+            return Ok(());
+        }
+        let source = render_kernel::path::surface_kernel().generate()?;
+        self.device.push_error_scope(wgpu::ErrorFilter::OutOfMemory);
+        self.device.push_error_scope(wgpu::ErrorFilter::Validation);
+        let module = self
+            .device
+            .create_shader_module(wgpu::ShaderModuleDescriptor {
+                label: Some("Rust-generated conductor and coat traversal"),
+                source: wgpu::ShaderSource::Wgsl(source.into()),
+            });
+        let pipeline = self
+            .device
+            .create_compute_pipeline(&wgpu::ComputePipelineDescriptor {
+                label: Some("portable surface path tracing"),
+                layout: None,
+                module: &module,
+                entry_point: Some("main"),
+                compilation_options: Default::default(),
+                cache: None,
+            });
+        let validation = self.device.pop_error_scope().await;
+        let allocation = self.device.pop_error_scope().await;
+        if let Some(error) = validation.or(allocation) {
+            return Err(fail("gpu_validation", error));
+        }
+        self.surface_pipeline = Some(pipeline);
+        Ok(())
+    }
     pub fn destroy(&mut self) {
         self.lost.store(true, Ordering::Release);
         self.geometry_cache = None;
         self.alpha_pipeline = None;
+        self.surface_pipeline = None;
         self.device.destroy();
     }
     pub fn is_lost(&self) -> bool {
@@ -677,7 +752,10 @@ impl Renderer {
             ));
         }
         let extended = p.params[9][3] > 0.;
-        if extended {
+        let surface_models = p.params[9][3] == 2.;
+        if surface_models {
+            self.ensure_surface_pipeline().await?;
+        } else if extended {
             self.ensure_alpha_pipeline().await?;
         }
         self.device.push_error_scope(wgpu::ErrorFilter::OutOfMemory);
@@ -745,7 +823,11 @@ impl Renderer {
                 resource: b.as_entire_binding(),
             })
             .collect::<Vec<_>>();
-        let pipeline = if extended {
+        let pipeline = if surface_models {
+            self.surface_pipeline
+                .as_ref()
+                .expect("created surface pipeline")
+        } else if extended {
             self.alpha_pipeline
                 .as_ref()
                 .expect("created alpha pipeline")
@@ -914,6 +996,22 @@ impl Renderer {
         }) {
             receipt.backend = format!("gpu-f32-principled-alpha-v1/{}", self.capabilities.backend);
             receipt.approximation.push_str("; extended dimension stride16; stochastic BLEND and inclusive MASK; base-level f32 coverage, f32 interpolated alpha products and normalized thresholds; 64-surface continuation/visibility bounds; multiplicative transparent visibility");
+        }
+        if scene.instances.iter().any(|i| {
+            i.material
+                .pbr
+                .as_ref()
+                .and_then(|p| p.advanced.as_ref())
+                .is_some_and(|a| {
+                    matches!(
+                        a.model,
+                        render_core::scattering::Model::Conductor { .. }
+                            | render_core::scattering::Model::Coated { .. }
+                    )
+                })
+        }) {
+            receipt.backend = format!("gpu-f32-conductor-coat-v1/{}", self.capabilities.backend);
+            receipt.approximation.push_str("; conductor Schlick from compiled eta/k F0; single-interface GGX coat with Fresnel base attenuation and matching mixture PDF; no inter-layer multiple scattering");
         }
         if !scene.displacements.is_empty() {
             receipt.approximation.push_str(

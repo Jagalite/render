@@ -73,3 +73,7 @@ same Rust operation on native and browser. [Evidence](../evidence/gltf-export/RE
 records exact file bytes across persistence/platforms, independent format validation
 and render round trips. Authored animation and full scene-render recipes remain
 separate export gates.
+
+Native-authored [conductor and single-interface coat](gpu_surfaces.md) now share
+Metal/WebGPU texture, alpha and shutter transport. This extends authored rendering;
+external glTF material extensions retain a separate input gate.

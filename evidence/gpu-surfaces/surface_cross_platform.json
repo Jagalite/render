@@ -1,0 +1,117 @@
+{
+  "status": "passed",
+  "comparisons": [
+    {
+      "case": "conductor-secondary",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "conductor-secondary",
+      "browser": "gpu",
+      "linear_rmse": 2.62428127296369e-08,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "conductor-named-mask",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "conductor-named-mask",
+      "browser": "gpu",
+      "linear_rmse": 1.609899730341168e-05,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "conductor-named-blend",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "conductor-named-blend",
+      "browser": "gpu",
+      "linear_rmse": 8.873355233488981e-06,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "conductor-morph",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "conductor-morph",
+      "browser": "gpu",
+      "linear_rmse": 0.00034137833780931365,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "coated-secondary",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "coated-secondary",
+      "browser": "gpu",
+      "linear_rmse": 2.3462675633151476e-07,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "coated-named-mask",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "coated-named-mask",
+      "browser": "gpu",
+      "linear_rmse": 1.9977790064661014e-05,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "coated-named-blend",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "coated-named-blend",
+      "browser": "gpu",
+      "linear_rmse": 1.0859558493062878e-05,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "coated-morph",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "coated-morph",
+      "browser": "gpu",
+      "linear_rmse": 0.0001460473141063623,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    }
+  ]
+}

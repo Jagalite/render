@@ -1,0 +1,575 @@
+{
+  "reason": "Documentation, capability status and evidence collection updated after unchanged Rust/Cargo acceptance",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5994,
+      "sha256": "59f3e11efec2444f978a651f2423d5c2b769ba3d2fbdebceb51f71852114c8e4"
+    },
+    {
+      "path": "SHA256SUMS",
+      "bytes": 3440,
+      "sha256": "2b435fdcc311bdd88b28c2a421aafa0860eabb85a8e2dcf429c4dd3e641c1539"
+    },
+    {
+      "path": "docs/agent_alpha.md",
+      "bytes": 12568,
+      "sha256": "79f036009d9d424275f7cac6e3ca318574ada7ce073088421205495f04b5defa"
+    },
+    {
+      "path": "docs/animated_gltf.md",
+      "bytes": 9099,
+      "sha256": "92c4d890f6bf14d309f0d24c9e107ca37dab9486a04555f519dd051c9043ff82"
+    },
+    {
+      "path": "docs/api_and_agent_contracts.md",
+      "bytes": 9640,
+      "sha256": "cd57f0c9d4bd5eec2911916e37821f834d966f19a348bfd7794ac4e9d7b8485c"
+    },
+    {
+      "path": "docs/architecture.md",
+      "bytes": 90323,
+      "sha256": "1001767794c304384cc8cb3b7558a77a81eb108dcb54e4aa20d6adfd18ba36fe"
+    },
+    {
+      "path": "docs/decision_records.md",
+      "bytes": 22282,
+      "sha256": "f55d5f38e360fa1610344ce8373ee9bc64e18e6b61cde40a6665e95ac8632d8b"
+    },
+    {
+      "path": "docs/gltf_accessors.md",
+      "bytes": 4171,
+      "sha256": "30c322a0ed9420f9052b335ae904b5f17b0f3110f0221422197ac2ee155073ac"
+    },
+    {
+      "path": "docs/gltf_alpha.md",
+      "bytes": 3508,
+      "sha256": "593a3f855efea351bc0d7001d50d79730a45737027ca53ba478b939059ed820b"
+    },
+    {
+      "path": "docs/gltf_export.md",
+      "bytes": 5354,
+      "sha256": "20276ccb4c6296c258c3d5bb1665ae1eb8f23aef79ea75b14c1ae65bc7a8047f"
+    },
+    {
+      "path": "docs/gltf_source_conformance.md",
+      "bytes": 2750,
+      "sha256": "466de278a77aa09287b413064421f3dd8c0f30b09bcae297f0b64d83c9825056"
+    },
+    {
+      "path": "docs/gpu_alpha.md",
+      "bytes": 4545,
+      "sha256": "413d8004fa056f7de686cff8a742ee337796666a56cfeeeadc7061d8c75952ef"
+    },
+    {
+      "path": "docs/gpu_shutter.md",
+      "bytes": 6819,
+      "sha256": "f46453f4983688aeb667d35ad747d909cc551db361c03a6e23cc765984cdbf3b"
+    },
+    {
+      "path": "docs/gpu_surfaces.md",
+      "bytes": 3062,
+      "sha256": "26ce4df7aef71a02de6ba3e05dc916d8285da8cb6ecf69dcf269d401c475d43c"
+    },
+    {
+      "path": "docs/implementation.md",
+      "bytes": 14658,
+      "sha256": "a5b94b32d623a3dde290c78ae3bc23e7e2ef67e5496d22df92394636d6069c35"
+    },
+    {
+      "path": "docs/input_support.md",
+      "bytes": 7252,
+      "sha256": "269fe714d02340f827cc1c29b1d54e36d0ae5d596afd89f14c46a05d0067ea87"
+    },
+    {
+      "path": "docs/m06_modeling_contract.md",
+      "bytes": 6653,
+      "sha256": "3ec34f340d1ce6a837af1f7de24a4ef963519efb1b12e04acbefdc3ba04d21c6"
+    },
+    {
+      "path": "docs/m07_m08.md",
+      "bytes": 11311,
+      "sha256": "cf4ac7f1212ded4ca6328b32af49715df4a5b43eb3076f4435c19ea10e26306b"
+    },
+    {
+      "path": "docs/m07_m08_execution.md",
+      "bytes": 4700,
+      "sha256": "a0f3c4608cf59172efc5caa5d5f63974149120f8974c2a2cf1336ca7ad46b21f"
+    },
+    {
+      "path": "docs/milestones.md",
+      "bytes": 14959,
+      "sha256": "d0f3a5d5a7f677074cb9990dbdbf8e82bc5420a8b9c40ff8058fd91768a6c390"
+    },
+    {
+      "path": "docs/morph_frames.md",
+      "bytes": 4219,
+      "sha256": "b06e6bcf995b0ab17f58a4730d0d7fba742fa942349b03ef8e9301d41af1331e"
+    },
+    {
+      "path": "docs/multibounce_pbr.md",
+      "bytes": 5846,
+      "sha256": "ba4b7664abe4f63d4f2758fa99603b782b50a32cf926669aa65cd91542a7e26a"
+    },
+    {
+      "path": "docs/named_uv.md",
+      "bytes": 3807,
+      "sha256": "86db01f9c5571d0faa59794e1cc95de03b586dbe56d6ce9600eceb6be71b14cf"
+    },
+    {
+      "path": "docs/project_cli.md",
+      "bytes": 11241,
+      "sha256": "033ee0b58304b5dbc1d2468768de3e55b3b5270fd2eee1dadf0c6df55a85eb86"
+    },
+    {
+      "path": "docs/representation_decisions.md",
+      "bytes": 18400,
+      "sha256": "d267c17c1dfebd248aba53520027477b60e8ba24194d37fbb3a6000a3fee5428"
+    },
+    {
+      "path": "docs/secondary_textures.md",
+      "bytes": 2002,
+      "sha256": "78ea4533b394dd5e38f3d2e68fcba605700a7f32f3b1bb32da6e5404b27b501f"
+    },
+    {
+      "path": "docs/static_pbr.md",
+      "bytes": 8235,
+      "sha256": "29dd0ef6a92fc8828117579faaa8bafd179eabea1b6483ae6b05ae65df1e35f4"
+    },
+    {
+      "path": "docs/vertex_colors.md",
+      "bytes": 3907,
+      "sha256": "7dd54b046c5754e417df5d6d06b93a9972152b0a9ce54260c9706f1451dca0c3"
+    },
+    {
+      "path": "planning/engine-progress/README.md",
+      "bytes": 6946,
+      "sha256": "7efb105992fd586d7d93cfc169177c40acad84dcbf00eddcdd04962b307f1f1d"
+    },
+    {
+      "path": "planning/engine-progress/alpha-contract.md",
+      "bytes": 3062,
+      "sha256": "2f482fa2e2a7ff53d9a50b7dc32e4f8051bd6a156bba560da4dff383c537c0a5"
+    },
+    {
+      "path": "planning/engine-progress/gltf-export-contract.md",
+      "bytes": 2989,
+      "sha256": "d6e469752643e37f21704fed9a8e379ac0585175c25ff1575d4627f3ccf0138d"
+    },
+    {
+      "path": "planning/engine-progress/gpu-alpha-contract.md",
+      "bytes": 4020,
+      "sha256": "2ccdf8e6f542fa720b41a180799059038783b3ebdecc2797166d52332e8da176"
+    },
+    {
+      "path": "planning/engine-progress/gpu-surfaces-contract.md",
+      "bytes": 1552,
+      "sha256": "c976dca8e00ba68a6c95b0f500d7e8282b319fda70c2c627b340aa48e32232d6"
+    },
+    {
+      "path": "planning/engine-progress/gpu-surfaces-review.md",
+      "bytes": 2253,
+      "sha256": "9b83f1d3eb2b52d2ab4b528cf3fb8af7e5673c55268c54d395af464ce27f7572"
+    },
+    {
+      "path": "planning/engine-progress/morph-frame-contract.md",
+      "bytes": 602,
+      "sha256": "c20eb12433248260800176325da232b9cebb6c374e9231f04aa8aef6a026eeeb"
+    },
+    {
+      "path": "planning/engine-progress/named-uv-contract.md",
+      "bytes": 472,
+      "sha256": "d325dccc8ef41eb00a031f0f31731c1e176eac3288d06eb4c4ddd6fa3cb06410"
+    },
+    {
+      "path": "planning/engine-progress/secondary-texture-contract.md",
+      "bytes": 1660,
+      "sha256": "c091cea211018c268f13ab170b50f4a4ff334e994ba57cd126fcd5139a27b56f"
+    },
+    {
+      "path": "planning/engine-progress/sparse-accessor-contract.md",
+      "bytes": 2453,
+      "sha256": "36c97967bc4e2e9365ebd65d3bce7d844e285804296da0c6c29b962338399300"
+    },
+    {
+      "path": "planning/engine-progress/vertex-color-contract.md",
+      "bytes": 2825,
+      "sha256": "5b18721344f1c114d1c2e489104e38d68c4d4b463210e8ac6a07b6a378da484a"
+    },
+    {
+      "path": "planning/feature_matrix.json",
+      "bytes": 24457,
+      "sha256": "0a2dcad5ac3a5939c98c1c66dab9f482c20219665463ca57e3b26f4d13d4a3f3"
+    },
+    {
+      "path": "planning/input_support.json",
+      "bytes": 12987,
+      "sha256": "1c9d61607827901b484689c95964fbc79eec19210632fb7f7e02591dad7d9d08"
+    },
+    {
+      "path": "scripts/abi-v1-client.c",
+      "bytes": 1865,
+      "sha256": "5b22628e54a3eb1d340fd233b4563a00c7a309d85be817d8ead903b08bd7a5b6"
+    },
+    {
+      "path": "scripts/agent-browser-conformance.mjs",
+      "bytes": 8872,
+      "sha256": "028e1f0d30d468f7515eb88812176a63299e90112f0f6d8d84255d791e912d9f"
+    },
+    {
+      "path": "scripts/agent-ffi-conformance.py",
+      "bytes": 5775,
+      "sha256": "ae583eece7ac8c0723f18bc68b4b7382e0e7c6108142532ad41837cced5bc7fc"
+    },
+    {
+      "path": "scripts/agent-native-client.py",
+      "bytes": 3292,
+      "sha256": "b43814743c18bbed2ccc613a204fddbd89fc0193d22e7068709c53ee71f08a92"
+    },
+    {
+      "path": "scripts/alpha-camera-workflow.py",
+      "bytes": 3782,
+      "sha256": "57e0952cbede81ad3866e61a17d4a3854ff2e97790811813fe07aabc1137f2e0"
+    },
+    {
+      "path": "scripts/alpha-gltf-browser.mjs",
+      "bytes": 6134,
+      "sha256": "74eafb3ce9068a9bd0d06c09cb5234a37ba5a00e61e370492ae92e48f147fd60"
+    },
+    {
+      "path": "scripts/alpha-gltf-workflow.py",
+      "bytes": 6154,
+      "sha256": "5cee975f9e52231dee7f128a02697c570a59f1a6567d68e699850ebaf902cb21"
+    },
+    {
+      "path": "scripts/animated-gltf-browser.mjs",
+      "bytes": 5234,
+      "sha256": "a2098dcce7ecdcbe04ab746d664efa165130f96841f65fd62659b1a2490fef8e"
+    },
+    {
+      "path": "scripts/animated-gltf-workflow.py",
+      "bytes": 8425,
+      "sha256": "a969d3cc8de77748b5441d88cf296c2d41de9810293ab931dc573e8382e5addf"
+    },
+    {
+      "path": "scripts/browser-conformance.mjs",
+      "bytes": 4693,
+      "sha256": "1cee1b5afe37ad241546f822e1c0805a6d7466ef9001567a93164ff917178e7a"
+    },
+    {
+      "path": "scripts/build-web.sh",
+      "bytes": 439,
+      "sha256": "0184487ce90e38c0868bad2b764c33e9537bfaa73baddbce2c41bc5c88d0c149"
+    },
+    {
+      "path": "scripts/collect-alpha-evidence.py",
+      "bytes": 4398,
+      "sha256": "5f473e18e1127a131ab4a2ac97ae90388fa7341fe80fd5f37136722404c0c64e"
+    },
+    {
+      "path": "scripts/collect-gltf-export-evidence.py",
+      "bytes": 5588,
+      "sha256": "424525b90f479338c7635f0305e580d4babfd3358b61278dce9d47c6d89d7801"
+    },
+    {
+      "path": "scripts/collect-gpu-alpha-evidence.py",
+      "bytes": 7631,
+      "sha256": "49f5a36eba0fe07d629b8e1697c4a802062cfbf24da63d7dc7373eae4ae07707"
+    },
+    {
+      "path": "scripts/collect-gpu-surfaces-evidence.py",
+      "bytes": 8882,
+      "sha256": "53baa30dc0d2e28a0bc11ac5873a98931acbb5ebb34a4bfccfbe1a135de78234"
+    },
+    {
+      "path": "scripts/collect-indexed-attribute-evidence.py",
+      "bytes": 6147,
+      "sha256": "63b539c51fc716252c00f7f15da1c2b4173e7d212bd32db2a6b8adfc854983c5"
+    },
+    {
+      "path": "scripts/collect-morph-frame-evidence.py",
+      "bytes": 4960,
+      "sha256": "4f312baf6c8cded401accf6839fa00e3b1adf1ba5575a78cc3392541906f34c1"
+    },
+    {
+      "path": "scripts/collect-named-uv-evidence.py",
+      "bytes": 4791,
+      "sha256": "b9285aed8c32c8f2c09b96bc0b10fdcf3a6b963702ea58461863f5e44e8cbe73"
+    },
+    {
+      "path": "scripts/collect-secondary-textures-evidence.py",
+      "bytes": 7788,
+      "sha256": "d3e9f0e5b2bae4cbd7a5149bdef459c4fcb2c2777aac59588c346f11d8c6c307"
+    },
+    {
+      "path": "scripts/collect-vertex-color-evidence.py",
+      "bytes": 5056,
+      "sha256": "6a642dc382455e1a14b4255889c9aa6c8d522ff3155c69984dc4a6cf090f42e3"
+    },
+    {
+      "path": "scripts/compare-named-uv-browser.py",
+      "bytes": 1330,
+      "sha256": "7e1495b702988812a480d8bf26ce7a586dc34d25eb47458e57eb427f208b4449"
+    },
+    {
+      "path": "scripts/dependency-audit.py",
+      "bytes": 3812,
+      "sha256": "8bec6dba162c4bf60f0a2448fd3b034d4a8758ce40fa23851e6776da9b367329"
+    },
+    {
+      "path": "scripts/ffi-conformance.py",
+      "bytes": 2769,
+      "sha256": "3f74535740e18b4414ae0407a8c07559d13394a7bd34536bf707c22cd5185fc5"
+    },
+    {
+      "path": "scripts/generate-abi-header.py",
+      "bytes": 1317,
+      "sha256": "20178a9b6c431513d0bcd0119c04887e0ff19f89b7a5cc5e7231d853f467292a"
+    },
+    {
+      "path": "scripts/gltf-export-browser.mjs",
+      "bytes": 7189,
+      "sha256": "308aa05d0b2d8242832a31be968100c2671fa2252ed151fc6f0b9951453381fe"
+    },
+    {
+      "path": "scripts/gltf-export-workflow.py",
+      "bytes": 9907,
+      "sha256": "c7b5abb304082704e2b06686cbed972d8ae7e7fbb2e4540b6b85c44c962664dd"
+    },
+    {
+      "path": "scripts/gpu-alpha-shutter-browser.mjs",
+      "bytes": 4438,
+      "sha256": "7a1e9fd3ef9e6e4da6f6fcb00c0cdf806c1b0bf8ec875c0fa6a423717880577e"
+    },
+    {
+      "path": "scripts/gpu-alpha-shutter-workflow.py",
+      "bytes": 6975,
+      "sha256": "7ca20056ed3710a5a71b2426cb346957e2e0ea29b59c87bf243d442a4e21d008"
+    },
+    {
+      "path": "scripts/gpu-shutter-browser.mjs",
+      "bytes": 7214,
+      "sha256": "64766ab8c5d2db848f417a2e3249b9b8623cfc39888d26637ac3cb3f9645b222"
+    },
+    {
+      "path": "scripts/gpu-shutter-workflow.py",
+      "bytes": 7701,
+      "sha256": "53662afa65c6c719e8c0edb1b0c5cc75df00bf9b412128d8c493d1fbb792c2e9"
+    },
+    {
+      "path": "scripts/gpu-surfaces-browser.mjs",
+      "bytes": 4789,
+      "sha256": "cbc7a94686f08464d47c0c82b6ed9a2e9fd49446a98879b3034a31d83de30311"
+    },
+    {
+      "path": "scripts/gpu-surfaces-workflow.py",
+      "bytes": 7405,
+      "sha256": "93ef9daedc991e3f09e057c5e248ce61a9730b32e784c4d886a2011c7e86b8c4"
+    },
+    {
+      "path": "scripts/m07-browser-conformance.mjs",
+      "bytes": 4413,
+      "sha256": "3123988f47fa761e4a240419b2670375c155906181fb5019a00966d979d5de92"
+    },
+    {
+      "path": "scripts/m07-products-browser.mjs",
+      "bytes": 3091,
+      "sha256": "2ca1f98ddbe42615104febedc5e80cfb7925cebd3dbf8c1a72509d2aa6ca9c5d"
+    },
+    {
+      "path": "scripts/m08-browser-conformance.mjs",
+      "bytes": 3665,
+      "sha256": "bd3c59aea2e54999c54ffbba4fcf900adca79099512380ddcbdab4940603988a"
+    },
+    {
+      "path": "scripts/morph-frames-browser.mjs",
+      "bytes": 6365,
+      "sha256": "b2b7a5425452b679e544b61214881b2b31af67b470620a5b237f8b575c7ce092"
+    },
+    {
+      "path": "scripts/morph-frames-workflow.py",
+      "bytes": 7860,
+      "sha256": "eb05b264ffd15ff6a4d1313022bde0ad70b43ac4cc559feb1d2f1b02700961a8"
+    },
+    {
+      "path": "scripts/multibounce-browser.mjs",
+      "bytes": 3792,
+      "sha256": "92d87a73006bdc256fe1ef9af88f94e3b2d7fbf7726b99b1ea38c721b2a0ce8a"
+    },
+    {
+      "path": "scripts/multibounce-workflow.py",
+      "bytes": 5302,
+      "sha256": "2cefd588d5f8494b96170fe7fdba3c18aa92233f03aca4a19b726d5afa55d4e1"
+    },
+    {
+      "path": "scripts/named-uv-browser.mjs",
+      "bytes": 5859,
+      "sha256": "79da3f85b4722b4d065ea10e11b0afb3dd3991ffc10d951c42f746c129c13834"
+    },
+    {
+      "path": "scripts/named-uv-workflow.py",
+      "bytes": 5825,
+      "sha256": "1547791163d6f9c4e855869f83c8dce1afbaae63b4851c9bfbe9fdfc59dcad22"
+    },
+    {
+      "path": "scripts/project-cli-workflow.py",
+      "bytes": 8903,
+      "sha256": "6a7707f3e5e0998143ddbc819de4c01ff28f46f5c4bcaf43ccf2227724f68cc4"
+    },
+    {
+      "path": "scripts/secondary-textures-browser.mjs",
+      "bytes": 4550,
+      "sha256": "ae7e55bf0bf11156cbee4cea96524945eb8e0dceca6e93116d5a9612b01ad6f9"
+    },
+    {
+      "path": "scripts/secondary-textures-workflow.py",
+      "bytes": 6716,
+      "sha256": "6b9e3256e9598e7646f497c976cb7c18c4a6dfa97d7eea0626818c7120b31e3b"
+    },
+    {
+      "path": "scripts/sparse-gltf-browser.mjs",
+      "bytes": 6003,
+      "sha256": "9a859c1d2955588af7ec8d81818ebaad0c4fbfbfd92484000e5d29ca6c92bb6a"
+    },
+    {
+      "path": "scripts/sparse-gltf-workflow.py",
+      "bytes": 7830,
+      "sha256": "0f96ee5b77289cefa039a709bb1610406ca2fd2c2586d99bb382a1d8fe7a03e9"
+    },
+    {
+      "path": "scripts/static-pbr-browser-conformance.mjs",
+      "bytes": 5232,
+      "sha256": "8ae6a4397302ed0faa3983404b2a9c801460f201dd0e81829170d3d0e317f268"
+    },
+    {
+      "path": "scripts/static-pbr-compare.py",
+      "bytes": 1489,
+      "sha256": "e24dc0cd45c4b0cb768b0ef37ac8e61edb28907670affe2923387a0818c2cebf"
+    },
+    {
+      "path": "scripts/summarize-evidence.py",
+      "bytes": 8907,
+      "sha256": "e1fc9194bf6e9d59da42eb9ae443507155daef252bf090ed7cbebedf333f2f3d"
+    },
+    {
+      "path": "scripts/summarize-milestones.py",
+      "bytes": 8914,
+      "sha256": "a011db4c7fa132151792e6ae51d2b6ac55008dc7e9e21c384faa0a530a9beddd"
+    },
+    {
+      "path": "scripts/validate-agent.py",
+      "bytes": 3438,
+      "sha256": "58faafa6e73f3c667ec44627d19e2d9515343d4d151bc7b663128cb92fa5dc6d"
+    },
+    {
+      "path": "scripts/validate-alpha-gltf.py",
+      "bytes": 4617,
+      "sha256": "09b39b4c014e07fd30cd90db2434a1624050311d33f4cfe33d4a4e479fae7bb8"
+    },
+    {
+      "path": "scripts/validate-animated-gltf.py",
+      "bytes": 5995,
+      "sha256": "e9ef261ca1c1253288ce516078b1cea02fcedcf80a92a58dfd7b37c08f7200c1"
+    },
+    {
+      "path": "scripts/validate-exported-glbs.cjs",
+      "bytes": 1524,
+      "sha256": "14ca21a028e04f2482f07380209650b3f9ab7343659c968bbaddd22304b1ed4c"
+    },
+    {
+      "path": "scripts/validate-foundation.py",
+      "bytes": 3373,
+      "sha256": "0ef477d30b7d6b34b88348432683eb73657fb20d04151e107402af0487aec6e0"
+    },
+    {
+      "path": "scripts/validate-gltf-export-schema.py",
+      "bytes": 2081,
+      "sha256": "3bfb6945b3987fd5ff812a51568a2a3f0afd6097ac17a70cc9a259023c34d08a"
+    },
+    {
+      "path": "scripts/validate-gltf-export.py",
+      "bytes": 6927,
+      "sha256": "fe51fe1e80048f6daa9f9983fa286931046ec816c67af30b85b039deb587f5b6"
+    },
+    {
+      "path": "scripts/validate-gltf-fixtures.cjs",
+      "bytes": 2293,
+      "sha256": "dfb8df6578c2fd70df40a52ee0b97d0dd6611959c24eec8ffab017fe86c901dd"
+    },
+    {
+      "path": "scripts/validate-gpu-alpha.py",
+      "bytes": 7360,
+      "sha256": "34c6a8e9e325ecf90f3c2872712e56c00310ea7ddd54d71b859782055c954eba"
+    },
+    {
+      "path": "scripts/validate-gpu-shutter.py",
+      "bytes": 4368,
+      "sha256": "b0be4d80134537199e97a1215a4fb5b97fa1d48dec26f3dcaf7340b1ce6adfa4"
+    },
+    {
+      "path": "scripts/validate-gpu-surfaces.py",
+      "bytes": 10874,
+      "sha256": "5d60b2c5454bd486d7859e000da362360c9c1f97ea99ae8e2147ba161b5811f9"
+    },
+    {
+      "path": "scripts/validate-indexed-attributes.py",
+      "bytes": 5683,
+      "sha256": "47bc73303412b6741c6e1835f2b5063482e5f4ebf74b172d8d996f128619c542"
+    },
+    {
+      "path": "scripts/validate-milestones.py",
+      "bytes": 6469,
+      "sha256": "08d0442a5eaef332d70197463aac79852eb6b3ae0e112842d969d6b2b5381cc3"
+    },
+    {
+      "path": "scripts/validate-morph-frames.py",
+      "bytes": 5177,
+      "sha256": "f928eac6051f12f5e24d23da0b4f1c66df32426ea6557bbfd690ab8e799a0243"
+    },
+    {
+      "path": "scripts/validate-multibounce.py",
+      "bytes": 4312,
+      "sha256": "0e9f465e50959d29de16082446b858c98f8387d905a1998fe09017d695d84eb7"
+    },
+    {
+      "path": "scripts/validate-named-uv.py",
+      "bytes": 5043,
+      "sha256": "c8d098f769414473a824bfdd9a1059cc70cb11473982f3e51e39cf321b61ca41"
+    },
+    {
+      "path": "scripts/validate-project-cli.py",
+      "bytes": 4058,
+      "sha256": "f882c0b505cce2c1064d91c57963e03dfa5f0ad9da92afeb314fde9562bbf8ea"
+    },
+    {
+      "path": "scripts/validate-secondary-textures.py",
+      "bytes": 8927,
+      "sha256": "c72e0f7e567dada49dea2b3a238e3ee749bb94fee9a62206c61c218b9d3d3343"
+    },
+    {
+      "path": "scripts/validate-sparse-gltf.py",
+      "bytes": 4347,
+      "sha256": "02c4c0bdf5ecef315f1898808e84dcc2eace3cd39cb99d252253e89a57649af7"
+    },
+    {
+      "path": "scripts/validate-static-pbr.py",
+      "bytes": 3216,
+      "sha256": "528e5b806bccf1428bbfe4628047840aac29baa45c37fed33220d0100b6078f9"
+    },
+    {
+      "path": "scripts/validate-vertex-colors.py",
+      "bytes": 6350,
+      "sha256": "c113d7019ba0255b0e0a185615c1e3ec2476ab6d2d181eb257da9719752c2078"
+    },
+    {
+      "path": "scripts/vertex-colors-browser.mjs",
+      "bytes": 5938,
+      "sha256": "42a59c55fa6a3b9b86544737cbe970358e92bfee0d5b6b8a26c50439f6776daf"
+    },
+    {
+      "path": "scripts/vertex-colors-workflow.py",
+      "bytes": 5908,
+      "sha256": "44fd689814e07089fc356ec37a611c1ae6e2bbc4b6f5a5e3358fa6f7c5fd4d63"
+    }
+  ]
+}

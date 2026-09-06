@@ -1,0 +1,484 @@
+{
+  "status": "passed",
+  "profile": "gltf2-morph-frames-v1",
+  "calls": [
+    {
+      "name": "dense-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/dense",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/000-dense-init.json"
+      ],
+      "seconds": 0.02735137499985285,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-base",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/dense",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/001-dense-base.json"
+      ],
+      "seconds": 0.008013500002562068,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/dense",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/002-dense-import.json"
+      ],
+      "seconds": 0.050529958010884,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17711104,
+        "peak memory footprint": 3687552
+      }
+    },
+    {
+      "name": "dense-retry",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/dense",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/003-dense-retry.json"
+      ],
+      "seconds": 0.037052874991786666,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/dense",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/004-dense-state.json"
+      ],
+      "seconds": 0.022358332993462682,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/dense",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/005-dense-cpu.json"
+      ],
+      "seconds": 0.22144975000992417,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 19824640,
+        "peak memory footprint": 4310144
+      }
+    },
+    {
+      "name": "dense-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/dense",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/006-dense-gpu.json"
+      ],
+      "seconds": 0.18302216699521523,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36028416,
+        "peak memory footprint": 11781696
+      }
+    },
+    {
+      "name": "dense-archive",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/dense",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/007-dense-archive.json"
+      ],
+      "seconds": 0.04292712500318885,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-restore",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/dense-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/008-dense-restore.json"
+      ],
+      "seconds": 0.03888520800683182,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-restored-frame",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/dense-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/009-dense-restored-frame.json"
+      ],
+      "seconds": 0.18140149999817368,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-stale",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/dense",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/010-dense-stale.json"
+      ],
+      "seconds": 0.039904584002215415,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "dense-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/dense",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/011-dense-unchanged.json"
+      ],
+      "seconds": 0.022093457999289967,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/012-sparse-init.json"
+      ],
+      "seconds": 0.02062399999704212,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/013-sparse-base.json"
+      ],
+      "seconds": 0.007596334005938843,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/014-sparse-import.json"
+      ],
+      "seconds": 0.04787637499975972,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17678336,
+        "peak memory footprint": 3654784
+      }
+    },
+    {
+      "name": "sparse-retry",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/015-sparse-retry.json"
+      ],
+      "seconds": 0.03783787500287872,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/016-sparse-state.json"
+      ],
+      "seconds": 0.02191049999964889,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/017-sparse-cpu.json"
+      ],
+      "seconds": 0.2220005000126548,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 19775488,
+        "peak memory footprint": 4260992
+      }
+    },
+    {
+      "name": "sparse-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/018-sparse-gpu.json"
+      ],
+      "seconds": 0.1846712089900393,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36077568,
+        "peak memory footprint": 11880064
+      }
+    },
+    {
+      "name": "sparse-archive",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/019-sparse-archive.json"
+      ],
+      "seconds": 0.04490325000369921,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-restore",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/sparse-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/020-sparse-restore.json"
+      ],
+      "seconds": 0.03812833300617058,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-restored-frame",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/sparse-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/021-sparse-restored-frame.json"
+      ],
+      "seconds": 0.1799661249970086,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-stale",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/022-sparse-stale.json"
+      ],
+      "seconds": 0.03958395900554024,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "sparse-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/sparse",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/023-sparse-unchanged.json"
+      ],
+      "seconds": 0.022121916990727186,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "negative-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/negative",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/024-negative-init.json"
+      ],
+      "seconds": 0.023188666003989056,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "negative-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/negative",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/025-negative-state.json"
+      ],
+      "seconds": 0.007661208001081832,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "malformed",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/negative",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/026-malformed.json"
+      ],
+      "seconds": 0.00914691599609796,
+      "exit_code": 1,
+      "expected_error": "gltf_scene"
+    },
+    {
+      "name": "cancelled",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/negative",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/027-cancelled.json"
+      ],
+      "seconds": 0.006601832996238954,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "budget",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/negative",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/028-budget.json"
+      ],
+      "seconds": 0.0063464999984717,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "negative-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/negative",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/029-negative-unchanged.json"
+      ],
+      "seconds": 0.0067345830029807985,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "explicit-valid",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/negative",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/morph-regression/requests/030-explicit-valid.json"
+      ],
+      "seconds": 0.04181637498550117,
+      "exit_code": 0,
+      "expected_error": null
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "settings": {
+    "width": 32,
+    "height": 32,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.15,
+      0.15,
+      0.15
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        30,
+        30,
+        30
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        5
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 2,
+        "ymag": 2.5,
+        "near": 0.1,
+        "far": 10
+      }
+    }
+  },
+  "variants": [
+    {
+      "name": "dense",
+      "revision": "sha256:a0280f22328822394df1999e451f15c3b0c7a62250a7a466680c643862532084",
+      "clip": "9828e5547ba6047cba3ee457c60a76c7",
+      "linear_rmse": 0.000118356824385386,
+      "object_mismatches": 0,
+      "document_bytes": 14990
+    },
+    {
+      "name": "sparse",
+      "revision": "sha256:a3658379e0c38b15daf0dd20f3a185ef9207e63c8579f3644043ade59fe7e05a",
+      "clip": "3aaef354ffe20d4fbe06a694319477ee",
+      "linear_rmse": 0.000118356824385386,
+      "object_mismatches": 0,
+      "document_bytes": 14990
+    }
+  ],
+  "dense_sparse_pixels_identical": true
+}

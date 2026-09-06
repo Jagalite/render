@@ -1,0 +1,462 @@
+{
+  "status": "passed",
+  "profile": "gltf2-animated-pbr-v0",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/000-init.json"
+      ],
+      "seconds": 0.023266709002200514,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/001-inspect.json"
+      ],
+      "seconds": 0.007010834000539035,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/002-import.json"
+      ],
+      "seconds": 0.04192595899803564,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17432576,
+        "peak memory footprint": 3671168
+      }
+    },
+    {
+      "name": "retry",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/003-retry.json"
+      ],
+      "seconds": 0.03138170899183024,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/004-inspect.json"
+      ],
+      "seconds": 0.01852912499452941,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "static-defaults",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/005-static-defaults.json"
+      ],
+      "seconds": 0.11008816600951832,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20037632,
+        "peak memory footprint": 5014656
+      }
+    },
+    {
+      "name": "evaluate-2",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/006-evaluate-2.json"
+      ],
+      "seconds": 0.021368875008192845,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-0",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/007-evaluate-0.json"
+      ],
+      "seconds": 0.0187882919999538,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-4",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/008-evaluate-4.json"
+      ],
+      "seconds": 0.018140790998586453,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-1",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/009-evaluate-1.json"
+      ],
+      "seconds": 0.018289457992068492,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-3",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/010-evaluate-3.json"
+      ],
+      "seconds": 0.01841087501088623,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "evaluate-2",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/011-evaluate-2.json"
+      ],
+      "seconds": 0.018529209002736025,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/012-sequence.json"
+      ],
+      "seconds": 1.061361375002889,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20561920,
+        "peak memory footprint": 5424256
+      }
+    },
+    {
+      "name": "frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/013-frame.json"
+      ],
+      "seconds": 0.1939394579967484,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20398080,
+        "peak memory footprint": 5227648
+      }
+    },
+    {
+      "name": "archive",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/014-archive.json"
+      ],
+      "seconds": 0.0381468749983469,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restore",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/015-restore.json"
+      ],
+      "seconds": 0.03712912500486709,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restored",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/016-restored.json"
+      ],
+      "seconds": 0.02097820900962688,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restored-frame",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/017-restored-frame.json"
+      ],
+      "seconds": 0.1887035000108881,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/018-cpu.json"
+      ],
+      "seconds": 0.09443066699896008,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20004864,
+        "peak memory footprint": 4932736
+      }
+    },
+    {
+      "name": "gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/019-gpu.json"
+      ],
+      "seconds": 0.18407391700020526,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 35913728,
+        "peak memory footprint": 12191296
+      }
+    },
+    {
+      "name": "stale",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/020-stale.json"
+      ],
+      "seconds": 0.018006667000008747,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "cancel",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/021-cancel.json"
+      ],
+      "seconds": 0.0064651249995222315,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "limited-output",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/022-limited-output.json"
+      ],
+      "seconds": 0.06045966698729899,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/023-unchanged.json"
+      ],
+      "seconds": 0.02000225000665523,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "external-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/external",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/024-external-init.json"
+      ],
+      "seconds": 0.020082207993254997,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "external-base",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/external",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/025-external-base.json"
+      ],
+      "seconds": 0.007698040994000621,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "external-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/external",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/026-external-import.json"
+      ],
+      "seconds": 0.04213541600620374,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 17727488,
+        "peak memory footprint": 3605632
+      }
+    },
+    {
+      "name": "external-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/external",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/027-external-state.json"
+      ],
+      "seconds": 0.021013834004406817,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "external-frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/external",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/animated-regression/requests/028-external-frame.json"
+      ],
+      "seconds": 0.21899504199973308,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20480000,
+        "peak memory footprint": 5358720
+      }
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "import": {
+    "instances": 1,
+    "losses": [
+      "Single-scattering GGX, roughness regularized to >=0.05; missing tangents use a per-triangle UV basis, not MikkTSpace seam smoothing. OPAQUE alpha is ignored as specified by glTF.",
+      "Node names are retained; extras and generator metadata are not authored components. Only the selected scene is imported.",
+      "Animation and skin names remain in the original source; native IDs and complete converted channels/bindings are retained. Imported node and rig tracks are separate native authoring components.",
+      "Maximum source quaternion squared-norm correction: 3.422854178e-8",
+      "Absolute TRS clips; float32 key times retained exactly within rational limits; unit rotation keys renormalized within 1e-3 squared-norm error. Skin weights normalized within 0.01 of unity, duplicate influences combined. Deformation recomputes flat geometric normals; POSITION-only morphs; no animation/skin glTF export. Single-time clips use a one-second constant interval."
+    ],
+    "profile": "gltf2-animated-pbr-v0",
+    "source_clips": {
+      "0": "15c77c8677038a00d22b7921d37af01e"
+    },
+    "source_digest": "sha256:60dd5e05c5bc4c889646fe69e0630bed0affe9c0702c09130cf06a579e8ff017",
+    "source_materials": {
+      "0": "c3846073cd659005c3f0352a8bf9e160"
+    },
+    "source_nodes": {
+      "0": "0f947722da939cac995c46516731eaaf",
+      "1": "75d6fb7de0af8f1f0a3954a89f84ad05",
+      "2": "a5725e26474543436536bce8e9d02f98"
+    },
+    "source_skins": {
+      "0": "ccaec64f12300e1800dcb5294cc0f24b"
+    },
+    "unique_meshes": 1
+  },
+  "revision": "sha256:4d0069d4ae88dff8a3e16f9bbcd998796f9739101b158d9bab9423d78a472580",
+  "clip": "15c77c8677038a00d22b7921d37af01e",
+  "serialized_document_bytes": 12537,
+  "gpu_comparison": {
+    "linear_rmse": 4.4022530014598934e-09,
+    "object_mismatches": 0
+  },
+  "external_import": {
+    "instances": 1,
+    "losses": [
+      "Single-scattering GGX, roughness regularized to >=0.05; missing tangents use a per-triangle UV basis, not MikkTSpace seam smoothing. OPAQUE alpha is ignored as specified by glTF.",
+      "Node names are retained; extras and generator metadata are not authored components. Only the selected scene is imported.",
+      "Animation and skin names remain in the original source; native IDs and complete converted channels/bindings are retained. Imported node and rig tracks are separate native authoring components.",
+      "Maximum source quaternion squared-norm correction: 4.650354123e-4",
+      "Absolute TRS clips; float32 key times retained exactly within rational limits; unit rotation keys renormalized within 1e-3 squared-norm error. Skin weights normalized within 0.01 of unity, duplicate influences combined. Deformation recomputes flat geometric normals; POSITION-only morphs; no animation/skin glTF export. Single-time clips use a one-second constant interval."
+    ],
+    "profile": "gltf2-animated-pbr-v0",
+    "source_clips": {
+      "0": "eab05af5a11dd3519be2a4821acd588a"
+    },
+    "source_digest": "sha256:10fdd28dc28741300cb106933931a6b046216443962d823d35e24f34a3ce4d23",
+    "source_materials": {},
+    "source_nodes": {
+      "0": "7bf34272c6d60ca5d76fd5c2493e695b",
+      "1": "7968a11b4bd76e12049a8231cc0b37d0",
+      "2": "87b504e8915ad5093b118e57396dd0d4"
+    },
+    "source_skins": {
+      "0": "4bdd57af7fbca1e74f7f61e46ab344dc"
+    },
+    "unique_meshes": 1
+  }
+}

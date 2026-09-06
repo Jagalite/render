@@ -1,0 +1,138 @@
+{
+  "license": "CC0-1.0",
+  "scope": "Original native material recipes over separately retained original CC0 source fixtures; no source extension admission",
+  "cases": [
+    {
+      "name": "conductor-secondary",
+      "source": "fixtures/secondary-textures/data/mask-nearest.glb",
+      "source_sha256": "f66e8c9415a663af7f19c7d1e62eec9b31a5041e7562d8f10fa06b1edb8beb04",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": false,
+      "secondary": true
+    },
+    {
+      "name": "conductor-named-mask",
+      "source": "fixtures/gpu-alpha/data/named-mask.glb",
+      "source_sha256": "1912d4e8c0f4093e1c6fd392be09a92c5ae285c446197f8f9137112e20295bf1",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": false,
+      "secondary": false
+    },
+    {
+      "name": "conductor-named-blend",
+      "source": "fixtures/gpu-alpha/data/named-blend.glb",
+      "source_sha256": "40bfddc669d71fb33828f7dd6f6e0a3e1750e93d106455b0accedc678a148fb6",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": false,
+      "secondary": false
+    },
+    {
+      "name": "conductor-morph",
+      "source": "fixtures/morph-frames/data/dense.glb",
+      "source_sha256": "284917f1bf2bd5f666ba2f5b48590222b6d0bbdeff91be0801492ca20025de49",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": true,
+      "secondary": false
+    },
+    {
+      "name": "coated-secondary",
+      "source": "fixtures/secondary-textures/data/mask-nearest.glb",
+      "source_sha256": "f66e8c9415a663af7f19c7d1e62eec9b31a5041e7562d8f10fa06b1edb8beb04",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": false,
+      "secondary": true
+    },
+    {
+      "name": "coated-named-mask",
+      "source": "fixtures/gpu-alpha/data/named-mask.glb",
+      "source_sha256": "1912d4e8c0f4093e1c6fd392be09a92c5ae285c446197f8f9137112e20295bf1",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": false,
+      "secondary": false
+    },
+    {
+      "name": "coated-named-blend",
+      "source": "fixtures/gpu-alpha/data/named-blend.glb",
+      "source_sha256": "40bfddc669d71fb33828f7dd6f6e0a3e1750e93d106455b0accedc678a148fb6",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": false,
+      "secondary": false
+    },
+    {
+      "name": "coated-morph",
+      "source": "fixtures/morph-frames/data/dense.glb",
+      "source_sha256": "284917f1bf2bd5f666ba2f5b48590222b6d0bbdeff91be0801492ca20025de49",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": true,
+      "secondary": false
+    }
+  ]
+}

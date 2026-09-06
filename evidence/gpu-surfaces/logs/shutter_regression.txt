@@ -1,0 +1,15 @@
+init: passed
+inspect: passed
+import: passed
+inspect: passed
+cpu-frame: passed
+gpu-frame: passed
+gpu-sequence: passed
+archive: passed
+restore: passed
+restored-frame: passed
+stale: expected stale_revision
+invalid: expected budget
+limited: expected budget
+partial: expected cancelled
+unchanged: passed

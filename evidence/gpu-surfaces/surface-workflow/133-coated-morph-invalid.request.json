@@ -1,0 +1,54 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:7636946a60bc825231e49eb73a336429d175554eb0db3cc216bb2270b282b7ff",
+      "idempotency_key": "surfaces:invalid:001",
+      "max_added_bytes": 8388608,
+      "commands": [
+        {
+          "operation": "put_material",
+          "material": {
+            "base_color": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "emission": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "id": "aad1c2e69577333672404ce927267060",
+            "metallic": 1.0,
+            "pbr": {
+              "base_color": null,
+              "double_sided": false,
+              "emission": null,
+              "metallic_roughness": null,
+              "normal": null,
+              "normal_scale": 1.0,
+              "occlusion": null,
+              "occlusion_strength": 1.0,
+              "advanced": {
+                "model": {
+                  "kind": "coated",
+                  "weight": 0.5,
+                  "ior": 4,
+                  "roughness": 0.2
+                },
+                "opacity": {
+                  "kind": "opaque"
+                }
+              }
+            },
+            "roughness": 1.0,
+            "texture": null
+          }
+        }
+      ]
+    }
+  }
+}

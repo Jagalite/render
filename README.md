@@ -78,3 +78,7 @@ Evaluated PBR GLB export: [profile and CLI contract](docs/gltf_export.md),
 
 Principled MASK/BLEND on Metal and browser WebGPU: [profile](docs/gpu_alpha.md),
 [fixtures](fixtures/gpu-alpha/README.md), [evidence](evidence/gpu-alpha/README.md).
+
+[Shared secondary texture footprints](docs/secondary_textures.md) and
+[GPU conductor/coat surfaces](docs/gpu_surfaces.md):
+[material recipes](fixtures/gpu-surfaces/README.md), [acceptance](evidence/gpu-surfaces/README.md).

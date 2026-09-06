@@ -1,0 +1,33 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "sequence",
+    "backend": "gpu",
+    "request": {
+      "revision": "sha256:c0144aaa9368646a06bf2839a80661edab2f1e111e80d455ad06733ea8fee9be",
+      "clip": "467e6e12ffc8158594d66c96bc5c770b",
+      "shutter": {
+        "open": {
+          "numerator": -1,
+          "denominator": 32
+        },
+        "close": {
+          "numerator": 1,
+          "denominator": 32
+        },
+        "samples": 3
+      },
+      "times": [
+        {
+          "numerator": 1,
+          "denominator": 4
+        },
+        {
+          "numerator": 3,
+          "denominator": 4
+        }
+      ]
+    },
+    "output": "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-sequence"
+  }
+}

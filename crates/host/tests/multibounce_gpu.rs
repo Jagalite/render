@@ -35,11 +35,7 @@ fn gpu_depth_admission_and_unsupported_materials_are_explicit() {
     }
     settings.max_depth = 4;
     scene.instances[0].material.pbr.as_mut().unwrap().advanced = Some(scattering::Surface {
-        model: scattering::Model::Coated {
-            weight: 0.5,
-            ior: 1.5,
-            roughness: 0.3,
-        },
+        model: scattering::Model::Dielectric { ior: 1.5 },
         opacity: scattering::Opacity::Opaque,
     });
     assert_eq!(

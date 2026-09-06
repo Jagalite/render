@@ -9,7 +9,8 @@ import time
 
 root=Path(sys.argv[1]).resolve(); root.mkdir(parents=True,exist_ok=False)
 fixture=Path('fixtures/alpha-gltf/data').resolve()
-report={'status':'in_progress','calls':[],'variants':[]}
+model=json.loads(sys.argv[2]) if len(sys.argv)>2 else {'kind':'principled'}
+report={'status':'in_progress','calls':[],'variants':[],'model':model}
 settings=json.loads(Path('fixtures/project-cli/create.json').read_text())[-1]['settings']
 settings.update(width=2,height=2,samples=1,max_depth=1,environment=[0.125,0.25,0.5])
 settings['light']['intensity']=[0,0,0]
@@ -47,7 +48,7 @@ try:
     empty=inspect('empty',project)
     call('import',{'method':'import','base_revision':empty['revision'],'idempotency_key':'alpha:shutter:import','max_added_bytes':8388608,'source':{'format':'glb','path':str(Path('fixtures/named-uv/data/roles.glb').resolve()),'policy':{'allow_approximations':True}},'settings':settings},project)
     state=inspect('imported',project);snapshot=state['snapshot'];original=next(e for e in snapshot['entities'] if e['mesh'] is not None)
-    material=copy.deepcopy(snapshot['materials'][original['material']]);material['pbr']['advanced']={'model':{'kind':'principled'},'opacity':{'kind':'mask','factor':0,'cutoff':0.5}}
+    material=copy.deepcopy(snapshot['materials'][original['material']]);material['pbr']['advanced']={'model':model,'opacity':{'kind':'mask','factor':0,'cutoff':0.5}}
     commands=[{'operation':'put_material','material':material}];leaves=[original]
     for i in range(1,65):
         entity=copy.deepcopy(original);entity.update(id=identifier(20000+i),parent=None)

@@ -2,6 +2,7 @@
 use super::*;
 mod alpha;
 mod pbr;
+mod surfaces;
 fn v(n: &str) -> Expr {
     Expr::var(n, Ty::V3)
 }
@@ -79,12 +80,15 @@ fn when(enabled: bool, statement: Stmt) -> Stmt {
     Stmt::Sequence(if enabled { vec![statement] } else { vec![] })
 }
 pub fn kernel() -> Kernel {
-    build(false)
+    build(false, false)
 }
 pub fn alpha_kernel() -> Kernel {
-    build(true)
+    build(true, false)
 }
-fn build(extended: bool) -> Kernel {
+pub fn surface_kernel() -> Kernel {
+    build(true, true)
+}
+fn build(extended: bool, surfaces: bool) -> Kernel {
     let random_fn = function(
         "random",
         &[
@@ -507,7 +511,7 @@ fn build(extended: bool) -> Kernel {
                             ),
                             Stmt::If(
                                 inst(i("base") + u(8)).field("z").gt(f(0.)),
-                                pbr::body(extended),
+                                pbr::body(extended, surfaces),
                                 vec![
                                     var("color", xyz(inst(i("base") + u(6)))),
                                     let_(
@@ -737,6 +741,9 @@ fn build(extended: bool) -> Kernel {
                 cosine_fn,
             ];
             functions.extend(pbr::functions(extended));
+            if surfaces {
+                functions.extend(self::surfaces::functions());
+            }
             if extended {
                 functions.extend(alpha::functions());
             }
@@ -771,6 +778,10 @@ mod tests {
     #[test]
     fn generated_alpha_profile_validates_and_keeps_coverage_functions_separate() {
         let source = super::alpha_kernel().generate().unwrap();
+        assert_eq!(
+            render_core::digest(source.as_bytes()),
+            "sha256:82177b8262a499bad4e9997fe15d04975b9635e0817ea4caeeb38d713a0648dc"
+        );
         let module = naga::front::wgsl::parse_str(&source).unwrap();
         assert_eq!(module.global_variables.len(), 5);
         for name in ["covered_trace", "alpha_visibility", "opacity"] {
@@ -781,6 +792,25 @@ mod tests {
                     .any(|(_, f)| f.name.as_deref() == Some(name))
             );
             assert!(!super::kernel().functions.iter().any(|f| f.name == name));
+        }
+    }
+    #[test]
+    fn generated_conductor_coat_profile_validates_with_coverage() {
+        let source = super::surface_kernel().generate().unwrap();
+        let module = naga::front::wgsl::parse_str(&source).unwrap();
+        assert_eq!(module.global_variables.len(), 5);
+        for name in [
+            "surface_brdf",
+            "surface_pdf",
+            "surface_sample",
+            "covered_trace",
+        ] {
+            assert!(
+                module
+                    .functions
+                    .iter()
+                    .any(|(_, f)| f.name.as_deref() == Some(name))
+            );
         }
     }
 }

@@ -365,3 +365,20 @@ ABI or dependency changes. Existing rendered artifacts and receipts remain exact
 
 **Revisit trigger:** Propagated ray differentials, cones or other secondary filtering
 require a separate quality contract and numerical/resource evidence across backends.
+
+## ADR-027 — Existing conductor and coat semantics receive a separate GPU variant
+
+**Decision:** Lower the existing typed conductor and single-interface coat models
+into Rust kernel IR with matched BRDF, mixture PDF and counter dimensions. Compile
+conductor optical constants into F0; retain the source constants in native authoring.
+Use a third lazily compiled pipeline to preserve both validated earlier shaders.
+
+**Integration boundary:** The [surface contract](gpu_surfaces.md) connects typed
+material transactions, private packing, shared texture/alpha consumers, finite-depth
+transport and static/shutter/sequence publication. Analytic reflectance and zero-coat
+limits complement CPU comparisons and persisted native/browser workflows. No public
+schema, ABI or dependency changes; dielectric and media remain separate gates.
+
+**Revisit trigger:** Transmission, repeated inter-layer scattering, source material
+extensions, propagated footprints or broader precision profiles require distinct
+numerical, failure, resource and platform acceptance evidence.

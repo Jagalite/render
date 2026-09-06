@@ -5,13 +5,13 @@ working on feasible remaining steps. M09 interactive editor remains deferred.
 Each completed increment requires implementation, native/browser workflow evidence,
 negative/cancellation/stale checks, resource/provenance records and documentation.
 
-Current completed increment: shared secondary texture footprints; evidence/secondary-textures.
+Current completed increment: GPU conductor and single-interface coat; evidence/gpu-surfaces.
 
 | Order | Increment | Status |
 |---|---|---|
 | 1 | GPU shutter frames and streaming sequences | Validated on feat/gpu-shutter-sequences; evidence/gpu-shutter |
 | 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Sparse/UV0, CPU alpha, named UV, morph frames, vertex colors and evaluated PBR GLB export validated |
-| 3 | Richer GPU scattering and transport quality | GPU alpha, CPU occlusion and shared secondary footprints validated; richer GPU BSDFs next |
+| 3 | Richer GPU scattering and transport quality | GPU alpha, conductor, single-interface coat and shared footprints validated; dielectric transmission next |
 | 4 | External hair/volume inputs, fiber shading and sparse GPU media | Pending |
 | 5 | Scoped native .blend/USD/MaterialX interchange | Pending |
 | 6 | M10 engine UV/paint/sculpt/remesh/retopology operations | Pending |
@@ -92,3 +92,11 @@ All 351 previous image/pass files, 117 receipts and 119 fixture files are unchan
 Both generated shaders remain exact. Five CPU surface models satisfy secondary-only
 minification invariance; primary camera filtering and alpha continuation remain active.
 No dependency changes or major blocker. Richer GPU scattering is next.
+
+GPU conductor/coat acceptance:151 native and129 Wasm tests,37 dedicated Metal
+comparisons,138 native material workflow calls and two19-call shutter failure
+workflows, all with actual Chrome WebGPU/OPFS coverage. Eight material cases include
+named UV/normal/alpha consumers and animated morph sequences. All396 previous
+image/pass files,132 receipts and135 fixture files remain unchanged. A third lazy
+kernel preserves both earlier shader hashes. GPU dielectric transmission is next;
+no major blocker is parked. Evidence: `evidence/gpu-surfaces/README.md`.

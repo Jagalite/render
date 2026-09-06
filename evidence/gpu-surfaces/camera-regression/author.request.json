@@ -1,0 +1,223 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:6affb83915dcf890c318a4e1b0fb3be9a8e32e36e291fcf6e3d4cc38c0daadc0",
+      "idempotency_key": "alpha:baseline:01",
+      "max_added_bytes": 8388608,
+      "commands": [
+        {
+          "operation": "put_material",
+          "material": {
+            "id": "00000000000000000000000000000002",
+            "base_color": [
+              0,
+              0,
+              0
+            ],
+            "emission": [
+              0,
+              0,
+              0
+            ],
+            "roughness": 1,
+            "metallic": 0,
+            "texture": null,
+            "pbr": {
+              "advanced": {
+                "model": {
+                  "kind": "principled"
+                },
+                "opacity": {
+                  "kind": "mask",
+                  "factor": 0,
+                  "cutoff": 0.5
+                }
+              },
+              "double_sided": true,
+              "base_color": null,
+              "metallic_roughness": null,
+              "normal": null,
+              "emission": null,
+              "occlusion": null,
+              "normal_scale": 1,
+              "occlusion_strength": 1
+            }
+          }
+        },
+        {
+          "operation": "create_entity",
+          "entity": {
+            "id": "00000000000000000000000000000001",
+            "name": "transparent-front",
+            "parent": null,
+            "mesh": null,
+            "material": "00000000000000000000000000000002",
+            "transform": {
+              "columns": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "operations": []
+            }
+          }
+        },
+        {
+          "operation": "create_box",
+          "entity": "00000000000000000000000000000001",
+          "min": [
+            -10,
+            -10,
+            0.9
+          ],
+          "max": [
+            10,
+            10,
+            1
+          ]
+        },
+        {
+          "operation": "put_material",
+          "material": {
+            "id": "00000000000000000000000000000004",
+            "base_color": [
+              0,
+              0,
+              0
+            ],
+            "emission": [
+              1,
+              0,
+              0
+            ],
+            "roughness": 1,
+            "metallic": 0,
+            "texture": null
+          }
+        },
+        {
+          "operation": "create_entity",
+          "entity": {
+            "id": "00000000000000000000000000000003",
+            "name": "clipped-emitter",
+            "parent": null,
+            "mesh": null,
+            "material": "00000000000000000000000000000004",
+            "transform": {
+              "columns": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "operations": []
+            }
+          }
+        },
+        {
+          "operation": "create_box",
+          "entity": "00000000000000000000000000000003",
+          "min": [
+            -10,
+            -10,
+            -0.1
+          ],
+          "max": [
+            10,
+            10,
+            0
+          ]
+        },
+        {
+          "operation": "set_render_settings",
+          "settings": {
+            "width": 8,
+            "height": 8,
+            "samples": 1,
+            "seed": 73,
+            "max_depth": 1,
+            "max_bytes": 16777216,
+            "environment": [
+              0,
+              0,
+              0
+            ],
+            "light": {
+              "position": [
+                -2,
+                4,
+                3
+              ],
+              "intensity": [
+                0,
+                0,
+                0
+              ]
+            },
+            "camera": {
+              "position": [
+                0,
+                0,
+                3
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "up": [
+                0,
+                1,
+                0
+              ],
+              "vertical_fov_radians": 0.6,
+              "lens": {
+                "kind": "perspective",
+                "vertical_fov_radians": 0.6,
+                "aspect_ratio": 1,
+                "near": 0.1,
+                "far": 2.5
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "scope": "8x8 secondary or16x16 textured/animated;32 or16 samples,depth2 or4; eight conductor/coat cases, three-sample morph shutters and two-frame sequences; individual process observations are not a benchmark or allocator limit",
+  "observations": [
+    {
+      "name": "conductor-secondary-cpu",
+      "seconds": 0.062443916001939215,
+      "maximum resident set size": 17432576,
+      "peak memory footprint": 3081280
+    },
+    {
+      "name": "conductor-secondary-gpu",
+      "seconds": 0.21321237499068957,
+      "maximum resident set size": 35274752,
+      "peak memory footprint": 12502592
+    },
+    {
+      "name": "conductor-named-mask-cpu",
+      "seconds": 0.05600787499861326,
+      "maximum resident set size": 17793024,
+      "peak memory footprint": 3376256
+    },
+    {
+      "name": "conductor-named-mask-gpu",
+      "seconds": 0.22066137500223704,
+      "maximum resident set size": 35422208,
+      "peak memory footprint": 12617344
+    },
+    {
+      "name": "conductor-named-blend-cpu",
+      "seconds": 0.05783512500056531,
+      "maximum resident set size": 17694720,
+      "peak memory footprint": 3277952
+    },
+    {
+      "name": "conductor-named-blend-gpu",
+      "seconds": 0.2179898750036955,
+      "maximum resident set size": 35454976,
+      "peak memory footprint": 12600896
+    },
+    {
+      "name": "conductor-morph-cpu",
+      "seconds": 0.14964095799950883,
+      "maximum resident set size": 19578880,
+      "peak memory footprint": 4113536
+    },
+    {
+      "name": "conductor-morph-gpu",
+      "seconds": 0.27604058299039025,
+      "maximum resident set size": 37175296,
+      "peak memory footprint": 13092480
+    },
+    {
+      "name": "conductor-morph-sequence",
+      "seconds": 0.3494222500012256,
+      "maximum resident set size": 37535744,
+      "peak memory footprint": 13387328
+    },
+    {
+      "name": "coated-secondary-cpu",
+      "seconds": 0.06575979200715665,
+      "maximum resident set size": 17432576,
+      "peak memory footprint": 3081280
+    },
+    {
+      "name": "coated-secondary-gpu",
+      "seconds": 0.21434054199198727,
+      "maximum resident set size": 35520512,
+      "peak memory footprint": 12764800
+    },
+    {
+      "name": "coated-named-mask-cpu",
+      "seconds": 0.058790750001207925,
+      "maximum resident set size": 17694720,
+      "peak memory footprint": 3277952
+    },
+    {
+      "name": "coated-named-mask-gpu",
+      "seconds": 0.21486875000118744,
+      "maximum resident set size": 35487744,
+      "peak memory footprint": 12682880
+    },
+    {
+      "name": "coated-named-blend-cpu",
+      "seconds": 0.0658946249895962,
+      "maximum resident set size": 17776640,
+      "peak memory footprint": 3359872
+    },
+    {
+      "name": "coated-named-blend-gpu",
+      "seconds": 0.22164545799023472,
+      "maximum resident set size": 35422208,
+      "peak memory footprint": 12617344
+    },
+    {
+      "name": "coated-morph-cpu",
+      "seconds": 0.15366954100318253,
+      "maximum resident set size": 19513344,
+      "peak memory footprint": 4048000
+    },
+    {
+      "name": "coated-morph-gpu",
+      "seconds": 0.26629841700196266,
+      "maximum resident set size": 37355520,
+      "peak memory footprint": 13289088
+    },
+    {
+      "name": "coated-morph-sequence",
+      "seconds": 0.3590334159962367,
+      "maximum resident set size": 37421056,
+      "peak memory footprint": 13321856
+    }
+  ]
+}

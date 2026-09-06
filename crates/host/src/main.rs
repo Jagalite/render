@@ -183,7 +183,13 @@ fn run() -> Result<()> {
             let kernel = match args.get(1).map(String::as_str) {
                 None => render_kernel::path::kernel(),
                 Some("--alpha") if args.len() == 2 => render_kernel::path::alpha_kernel(),
-                _ => return Err(Error::new("arguments", "kernel accepts only --alpha")),
+                Some("--surfaces") if args.len() == 2 => render_kernel::path::surface_kernel(),
+                _ => {
+                    return Err(Error::new(
+                        "arguments",
+                        "kernel accepts only --alpha or --surfaces",
+                    ));
+                }
             };
             print!("{}", kernel.generate()?);
             Ok(())

@@ -96,7 +96,7 @@
         "M07",
         "M08"
       ],
-      "qualification": "Opaque PBR/diffuse paths at depth 1\u201316 on CPU/Metal/WebGPU, with primary mipmaps and secondary LOD0; Rust CPU extended scattering/media, imaging products; exact-time CPU/Metal/WebGPU shutter frames and streaming sequences. Explicit unsupported GPU material/media profiles. Stable named UV bindings across CPU/GPU textures, CPU alpha, displacement and baking. GPU Principled alpha uses a separate generated kernel to retain exact opaque results; bounded alpha failures survive shutter accumulation.",
+      "qualification": "Opaque PBR/diffuse paths at depth 1\u201316 on CPU/Metal/WebGPU, with primary mipmaps and secondary LOD0; Rust CPU extended scattering/media, imaging products; exact-time CPU/Metal/WebGPU shutter frames and streaming sequences. Explicit unsupported GPU material/media profiles. Stable named UV bindings across CPU/GPU textures, CPU alpha, displacement and baking. GPU Principled alpha uses a separate generated kernel to retain exact opaque results; bounded alpha failures survive shutter accumulation. Native-authored conductor and single-interface coat now render on Metal/WebGPU with shared alpha, textures and shutter/sequence semantics; gpu-f32-conductor-coat-v1. Dielectric and media remain CPU-only.",
       "capability_axes": {
         "native_authoring": "ordinary_revision_checked_typed_transactions",
         "native_evaluation": "named_Rust_profiles_in_docs/m07_m08.md",
@@ -120,7 +120,8 @@
         "evidence/multibounce-pbr/README.md",
         "evidence/gpu-shutter/README.md",
         "evidence/named-uv/README.md",
-        "evidence/gpu-alpha/README.md"
+        "evidence/gpu-alpha/README.md",
+        "evidence/gpu-surfaces/README.md"
       ]
     },
     {
@@ -214,7 +215,7 @@
         "M07",
         "M10"
       ],
-      "qualification": "Opaque textured PBR at depth 1\u201316 on CPU/Metal/WebGPU, with primary mipmaps and secondary LOD0; CPU ideal dielectric, eta/k conductor approximation, single coat and alpha; geometric displacement, UV bakes and Rust D65 color/bilateral-v0 imaging. Imported glTF MASK/BLEND is validated on Rust CPU/Wasm; GPU Principled MASK/BLEND is validated with selected UV/vertex coverage and explicit f32 precision. Stable named UV bindings across CPU/GPU textures, CPU alpha, displacement and baking.",
+      "qualification": "Opaque textured PBR at depth 1\u201316 on CPU/Metal/WebGPU, with primary mipmaps and secondary LOD0; CPU ideal dielectric, eta/k conductor approximation, single coat and alpha; geometric displacement, UV bakes and Rust D65 color/bilateral-v0 imaging. Imported glTF MASK/BLEND is validated on Rust CPU/Wasm; GPU Principled MASK/BLEND is validated with selected UV/vertex coverage and explicit f32 precision. Stable named UV bindings across CPU/GPU textures, CPU alpha, displacement and baking. Native-authored conductor and single-interface coat now render on Metal/WebGPU with shared alpha, textures and shutter/sequence semantics; gpu-f32-conductor-coat-v1. Dielectric and media remain CPU-only.",
       "capability_axes": {
         "native_authoring": "ordinary_revision_checked_typed_transactions",
         "native_evaluation": "named_Rust_profiles_in_docs/m07_m08.md",
@@ -238,7 +239,8 @@
         "evidence/alpha-gltf/README.md",
         "evidence/named-uv/README.md",
         "evidence/gltf-export/README.md",
-        "evidence/gpu-alpha/README.md"
+        "evidence/gpu-alpha/README.md",
+        "evidence/gpu-surfaces/README.md"
       ]
     },
     {
@@ -250,7 +252,7 @@
         "M09",
         "M14"
       ],
-      "qualification": "Exact rational clips/retiming, Euler/quaternion step/linear/cubic tracks, stable rigs/rest/bind, CopyPosition/TwoBoneIk, triangle LBS/morphs and sampled shutter sequences. Imported absolute TRS clips, per-skin inverse binds and default POSITION morph weights; immutable default/random-time evaluation. GPU f32 shutter frames/streaming sequences for opaque and Principled alpha material profiles with nominal-time passes. Snapshot-v13 authored point/corner frames and imported normal/tangent morph deltas under explicit affine skinning.",
+      "qualification": "Exact rational clips/retiming, Euler/quaternion step/linear/cubic tracks, stable rigs/rest/bind, CopyPosition/TwoBoneIk, triangle LBS/morphs and sampled shutter sequences. Imported absolute TRS clips, per-skin inverse binds and default POSITION morph weights; immutable default/random-time evaluation. GPU f32 shutter frames/streaming sequences for opaque and Principled alpha material profiles with nominal-time passes. Snapshot-v13 authored point/corner frames and imported normal/tangent morph deltas under explicit affine skinning. Native-authored conductor and single-interface coat now render on Metal/WebGPU with shared alpha, textures and shutter/sequence semantics; gpu-f32-conductor-coat-v1. Dielectric and media remain CPU-only.",
       "capability_axes": {
         "native_authoring": "ordinary_revision_checked_typed_transactions",
         "native_evaluation": "named_Rust_profiles_in_docs/m07_m08.md",
@@ -271,7 +273,8 @@
         "evidence/sparse-gltf/README.md",
         "evidence/morph-frames/README.md",
         "evidence/gltf-export/README.md",
-        "evidence/gpu-alpha/README.md"
+        "evidence/gpu-alpha/README.md",
+        "evidence/gpu-surfaces/README.md"
       ]
     },
     {

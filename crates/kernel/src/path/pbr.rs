@@ -572,7 +572,7 @@ pub(super) fn functions(extended: bool) -> Vec<Function> {
     ));
     result
 }
-pub(super) fn body(extended: bool) -> Vec<Stmt> {
+pub(super) fn body(extended: bool, surfaces: bool) -> Vec<Stmt> {
     let bary = |origin, direction| {
         call(
             "project_bary",
@@ -583,17 +583,52 @@ pub(super) fn body(extended: bool) -> Vec<Stmt> {
     let uv = |b| call("bary_uv", Ty::V2, vec![i("triangle"), b]);
     let ray = |name, px, py| call(name, Ty::V3, vec![vec2(px, py)]);
     let brdf = |l| {
+        let mut args = vec![
+            v("color"),
+            s("metal"),
+            s("rough"),
+            v("normal"),
+            v("view"),
+            l,
+        ];
+        if surfaces {
+            args.push(i("base"));
+        }
+        call(if surfaces { "surface_brdf" } else { "brdf" }, Ty::V3, args)
+    };
+    let sample = || {
+        let mut args = vec![
+            v("normal"),
+            v("view"),
+            s("rough"),
+            path_random(4, extended),
+            path_random(2, extended),
+            path_random(3, extended),
+        ];
+        if surfaces {
+            args.push(i("base"));
+            // Coat selection uses CPU dimension2; the other dimensions remain3/4/5.
+            args.push(path_random(2, false));
+        }
         call(
-            "brdf",
+            if surfaces {
+                "surface_sample"
+            } else {
+                "pbr_sample"
+            },
             Ty::V3,
-            vec![
-                v("color"),
-                s("metal"),
-                s("rough"),
-                v("normal"),
-                v("view"),
-                l,
-            ],
+            args,
+        )
+    };
+    let pdf = || {
+        let mut args = vec![v("normal"), v("view"), v("secondary"), s("rough")];
+        if surfaces {
+            args.push(i("base"));
+        }
+        call(
+            if surfaces { "surface_pdf" } else { "pbr_pdf" },
+            Ty::F32,
+            args,
         )
     };
     let mut out = vec![
@@ -843,29 +878,8 @@ pub(super) fn body(extended: bool) -> Vec<Stmt> {
                 ),
             ],
         ),
-        let_(
-            "secondary",
-            call(
-                "pbr_sample",
-                Ty::V3,
-                vec![
-                    v("normal"),
-                    v("view"),
-                    s("rough"),
-                    path_random(4, extended),
-                    path_random(2, extended),
-                    path_random(3, extended),
-                ],
-            ),
-        ),
-        let_(
-            "pdf",
-            call(
-                "pbr_pdf",
-                Ty::F32,
-                vec![v("normal"), v("view"), v("secondary"), s("rough")],
-            ),
-        ),
+        let_("secondary", sample()),
+        let_("pdf", pdf()),
         if_(
             s("pdf")
                 .gt(f(0.))

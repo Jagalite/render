@@ -1,0 +1,2473 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "conductor-secondary-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/000-conductor-secondary-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.037588459003018215
+    },
+    {
+      "name": "conductor-secondary-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/001-conductor-secondary-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.008102957988739945
+    },
+    {
+      "name": "conductor-secondary-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/002-conductor-secondary-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03286504100833554
+    },
+    {
+      "name": "conductor-secondary-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/003-conductor-secondary-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.013637042007758282
+    },
+    {
+      "name": "conductor-secondary-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/004-conductor-secondary-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.037426625000080094
+    },
+    {
+      "name": "conductor-secondary-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/005-conductor-secondary-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.025757625000551343
+    },
+    {
+      "name": "conductor-secondary-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/006-conductor-secondary-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01626629200472962
+    },
+    {
+      "name": "conductor-secondary-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/007-conductor-secondary-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.062443916001939215,
+      "resources": {
+        "maximum resident set size": 17432576,
+        "peak memory footprint": 3081280
+      }
+    },
+    {
+      "name": "conductor-secondary-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/008-conductor-secondary-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21321237499068957,
+      "resources": {
+        "maximum resident set size": 35274752,
+        "peak memory footprint": 12502592
+      }
+    },
+    {
+      "name": "conductor-secondary-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/009-conductor-secondary-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03782616699754726
+    },
+    {
+      "name": "conductor-secondary-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-secondary-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/010-conductor-secondary-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.031675749996793456
+    },
+    {
+      "name": "conductor-secondary-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-secondary-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/011-conductor-secondary-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.35866216699650977
+    },
+    {
+      "name": "conductor-secondary-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/012-conductor-secondary-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.030896541007678024
+    },
+    {
+      "name": "conductor-secondary-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/013-conductor-secondary-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.02763520799635444
+    },
+    {
+      "name": "conductor-secondary-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/014-conductor-secondary-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.007430375000694767
+    },
+    {
+      "name": "conductor-secondary-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/015-conductor-secondary-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.21766491699963808
+    },
+    {
+      "name": "conductor-secondary-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/016-conductor-secondary-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017386833002092317
+    },
+    {
+      "name": "conductor-named-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/017-conductor-named-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020027791993925348
+    },
+    {
+      "name": "conductor-named-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/018-conductor-named-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0073570000095060095
+    },
+    {
+      "name": "conductor-named-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/019-conductor-named-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03792654100107029
+    },
+    {
+      "name": "conductor-named-mask-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/020-conductor-named-mask-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016359957997337915
+    },
+    {
+      "name": "conductor-named-mask-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/021-conductor-named-mask-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04714579199207947
+    },
+    {
+      "name": "conductor-named-mask-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/022-conductor-named-mask-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03401891700923443
+    },
+    {
+      "name": "conductor-named-mask-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/023-conductor-named-mask-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021689957997296005
+    },
+    {
+      "name": "conductor-named-mask-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/024-conductor-named-mask-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05600787499861326,
+      "resources": {
+        "maximum resident set size": 17793024,
+        "peak memory footprint": 3376256
+      }
+    },
+    {
+      "name": "conductor-named-mask-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/025-conductor-named-mask-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22066137500223704,
+      "resources": {
+        "maximum resident set size": 35422208,
+        "peak memory footprint": 12617344
+      }
+    },
+    {
+      "name": "conductor-named-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/026-conductor-named-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.041688500001328066
+    },
+    {
+      "name": "conductor-named-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-mask-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/027-conductor-named-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.032603708998067304
+    },
+    {
+      "name": "conductor-named-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-mask-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/028-conductor-named-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21142216699081473
+    },
+    {
+      "name": "conductor-named-mask-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/029-conductor-named-mask-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.03828237499692477
+    },
+    {
+      "name": "conductor-named-mask-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/030-conductor-named-mask-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.03438962499785703
+    },
+    {
+      "name": "conductor-named-mask-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/031-conductor-named-mask-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.0059741250006482005
+    },
+    {
+      "name": "conductor-named-mask-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/032-conductor-named-mask-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.18576300000131596
+    },
+    {
+      "name": "conductor-named-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/033-conductor-named-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02358054199430626
+    },
+    {
+      "name": "conductor-named-blend-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/034-conductor-named-blend-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.023223583004437387
+    },
+    {
+      "name": "conductor-named-blend-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/035-conductor-named-blend-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006586834002519026
+    },
+    {
+      "name": "conductor-named-blend-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/036-conductor-named-blend-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03529237500333693
+    },
+    {
+      "name": "conductor-named-blend-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/037-conductor-named-blend-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015016124991234392
+    },
+    {
+      "name": "conductor-named-blend-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/038-conductor-named-blend-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.048515415997826494
+    },
+    {
+      "name": "conductor-named-blend-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/039-conductor-named-blend-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.033551375003298745
+    },
+    {
+      "name": "conductor-named-blend-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/040-conductor-named-blend-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02198833299917169
+    },
+    {
+      "name": "conductor-named-blend-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/041-conductor-named-blend-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05783512500056531,
+      "resources": {
+        "maximum resident set size": 17694720,
+        "peak memory footprint": 3277952
+      }
+    },
+    {
+      "name": "conductor-named-blend-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/042-conductor-named-blend-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2179898750036955,
+      "resources": {
+        "maximum resident set size": 35454976,
+        "peak memory footprint": 12600896
+      }
+    },
+    {
+      "name": "conductor-named-blend-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/043-conductor-named-blend-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.039144124995800667
+    },
+    {
+      "name": "conductor-named-blend-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-blend-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/044-conductor-named-blend-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03485125000588596
+    },
+    {
+      "name": "conductor-named-blend-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-blend-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/045-conductor-named-blend-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20930000000225846
+    },
+    {
+      "name": "conductor-named-blend-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/046-conductor-named-blend-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.03950058300688397
+    },
+    {
+      "name": "conductor-named-blend-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/047-conductor-named-blend-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.034229666998726316
+    },
+    {
+      "name": "conductor-named-blend-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/048-conductor-named-blend-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.007401333001325838
+    },
+    {
+      "name": "conductor-named-blend-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/049-conductor-named-blend-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.1860510830010753
+    },
+    {
+      "name": "conductor-named-blend-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/050-conductor-named-blend-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.023418083001160994
+    },
+    {
+      "name": "conductor-morph-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/051-conductor-morph-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017772834005882032
+    },
+    {
+      "name": "conductor-morph-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/052-conductor-morph-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007346041995333508
+    },
+    {
+      "name": "conductor-morph-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/053-conductor-morph-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04465487498964649
+    },
+    {
+      "name": "conductor-morph-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/054-conductor-morph-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024077207999653183
+    },
+    {
+      "name": "conductor-morph-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/055-conductor-morph-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0695067500055302
+    },
+    {
+      "name": "conductor-morph-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/056-conductor-morph-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.055421665994799696
+    },
+    {
+      "name": "conductor-morph-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/057-conductor-morph-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03275841599679552
+    },
+    {
+      "name": "conductor-morph-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/058-conductor-morph-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14964095799950883,
+      "resources": {
+        "maximum resident set size": 19578880,
+        "peak memory footprint": 4113536
+      }
+    },
+    {
+      "name": "conductor-morph-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/059-conductor-morph-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.27604058299039025,
+      "resources": {
+        "maximum resident set size": 37175296,
+        "peak memory footprint": 13092480
+      }
+    },
+    {
+      "name": "conductor-morph-sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/060-conductor-morph-sequence.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3494222500012256,
+      "resources": {
+        "maximum resident set size": 37535744,
+        "peak memory footprint": 13387328
+      }
+    },
+    {
+      "name": "conductor-morph-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/061-conductor-morph-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04757758299820125
+    },
+    {
+      "name": "conductor-morph-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/062-conductor-morph-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03347574999497738
+    },
+    {
+      "name": "conductor-morph-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/063-conductor-morph-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.25926545800757594
+    },
+    {
+      "name": "conductor-morph-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/064-conductor-morph-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.054806375002954155
+    },
+    {
+      "name": "conductor-morph-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/065-conductor-morph-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.0549790000077337
+    },
+    {
+      "name": "conductor-morph-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/066-conductor-morph-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.0061181249911896884
+    },
+    {
+      "name": "conductor-morph-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/067-conductor-morph-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.23750004199973773
+    },
+    {
+      "name": "conductor-morph-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/068-conductor-morph-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0328227089921711
+    },
+    {
+      "name": "coated-secondary-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/069-coated-secondary-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017460167000535876
+    },
+    {
+      "name": "coated-secondary-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/070-coated-secondary-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.00678874998993706
+    },
+    {
+      "name": "coated-secondary-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/071-coated-secondary-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.033105542010162026
+    },
+    {
+      "name": "coated-secondary-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/072-coated-secondary-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011809999996330589
+    },
+    {
+      "name": "coated-secondary-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/073-coated-secondary-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.036791291990084574
+    },
+    {
+      "name": "coated-secondary-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/074-coated-secondary-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.023536874999990687
+    },
+    {
+      "name": "coated-secondary-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/075-coated-secondary-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01626600000599865
+    },
+    {
+      "name": "coated-secondary-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/076-coated-secondary-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06575979200715665,
+      "resources": {
+        "maximum resident set size": 17432576,
+        "peak memory footprint": 3081280
+      }
+    },
+    {
+      "name": "coated-secondary-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/077-coated-secondary-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21434054199198727,
+      "resources": {
+        "maximum resident set size": 35520512,
+        "peak memory footprint": 12764800
+      }
+    },
+    {
+      "name": "coated-secondary-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/078-coated-secondary-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.037850916996831074
+    },
+    {
+      "name": "coated-secondary-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-secondary-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/079-coated-secondary-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.031100249994779006
+    },
+    {
+      "name": "coated-secondary-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-secondary-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/080-coated-secondary-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2050476250005886
+    },
+    {
+      "name": "coated-secondary-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/081-coated-secondary-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.027970790994004346
+    },
+    {
+      "name": "coated-secondary-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/082-coated-secondary-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.024201749998610467
+    },
+    {
+      "name": "coated-secondary-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/083-coated-secondary-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.0059929160051979125
+    },
+    {
+      "name": "coated-secondary-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/084-coated-secondary-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.18140216699976008
+    },
+    {
+      "name": "coated-secondary-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/085-coated-secondary-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01888520800275728
+    },
+    {
+      "name": "coated-named-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/086-coated-named-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020397833999595605
+    },
+    {
+      "name": "coated-named-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/087-coated-named-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007578042001114227
+    },
+    {
+      "name": "coated-named-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/088-coated-named-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03503616600937676
+    },
+    {
+      "name": "coated-named-mask-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/089-coated-named-mask-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017068165994714946
+    },
+    {
+      "name": "coated-named-mask-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/090-coated-named-mask-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04917050000221934
+    },
+    {
+      "name": "coated-named-mask-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/091-coated-named-mask-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03579229199385736
+    },
+    {
+      "name": "coated-named-mask-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/092-coated-named-mask-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021520874986890703
+    },
+    {
+      "name": "coated-named-mask-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/093-coated-named-mask-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.058790750001207925,
+      "resources": {
+        "maximum resident set size": 17694720,
+        "peak memory footprint": 3277952
+      }
+    },
+    {
+      "name": "coated-named-mask-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/094-coated-named-mask-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21486875000118744,
+      "resources": {
+        "maximum resident set size": 35487744,
+        "peak memory footprint": 12682880
+      }
+    },
+    {
+      "name": "coated-named-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/095-coated-named-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04017400000884663
+    },
+    {
+      "name": "coated-named-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-mask-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/096-coated-named-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.031721624996862374
+    },
+    {
+      "name": "coated-named-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-mask-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/097-coated-named-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2142572499869857
+    },
+    {
+      "name": "coated-named-mask-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/098-coated-named-mask-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.03957583299779799
+    },
+    {
+      "name": "coated-named-mask-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/099-coated-named-mask-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.03530529199633747
+    },
+    {
+      "name": "coated-named-mask-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/100-coated-named-mask-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.006194290996063501
+    },
+    {
+      "name": "coated-named-mask-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/101-coated-named-mask-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.18499337499088142
+    },
+    {
+      "name": "coated-named-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/102-coated-named-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.023643082997296005
+    },
+    {
+      "name": "coated-named-blend-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/103-coated-named-blend-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02227862500876654
+    },
+    {
+      "name": "coated-named-blend-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/104-coated-named-blend-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0074870829994324595
+    },
+    {
+      "name": "coated-named-blend-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/105-coated-named-blend-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03656762500759214
+    },
+    {
+      "name": "coated-named-blend-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/106-coated-named-blend-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01700666699616704
+    },
+    {
+      "name": "coated-named-blend-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/107-coated-named-blend-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04766295800800435
+    },
+    {
+      "name": "coated-named-blend-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/108-coated-named-blend-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.035648624994792044
+    },
+    {
+      "name": "coated-named-blend-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/109-coated-named-blend-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021481333998963237
+    },
+    {
+      "name": "coated-named-blend-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/110-coated-named-blend-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0658946249895962,
+      "resources": {
+        "maximum resident set size": 17776640,
+        "peak memory footprint": 3359872
+      }
+    },
+    {
+      "name": "coated-named-blend-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/111-coated-named-blend-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22164545799023472,
+      "resources": {
+        "maximum resident set size": 35422208,
+        "peak memory footprint": 12617344
+      }
+    },
+    {
+      "name": "coated-named-blend-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/112-coated-named-blend-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04423733300063759
+    },
+    {
+      "name": "coated-named-blend-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-blend-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/113-coated-named-blend-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03350712500105146
+    },
+    {
+      "name": "coated-named-blend-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-blend-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/114-coated-named-blend-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20470300001034047
+    },
+    {
+      "name": "coated-named-blend-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/115-coated-named-blend-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.03864183399127796
+    },
+    {
+      "name": "coated-named-blend-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/116-coated-named-blend-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.03441612499591429
+    },
+    {
+      "name": "coated-named-blend-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/117-coated-named-blend-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.00606612500268966
+    },
+    {
+      "name": "coated-named-blend-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/118-coated-named-blend-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.19108283400419168
+    },
+    {
+      "name": "coated-named-blend-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/119-coated-named-blend-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.023952083007316105
+    },
+    {
+      "name": "coated-morph-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/120-coated-morph-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019699582990142517
+    },
+    {
+      "name": "coated-morph-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/121-coated-morph-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0073099580040434375
+    },
+    {
+      "name": "coated-morph-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/122-coated-morph-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04638166699442081
+    },
+    {
+      "name": "coated-morph-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/123-coated-morph-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02250737500435207
+    },
+    {
+      "name": "coated-morph-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/124-coated-morph-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07189016600023024
+    },
+    {
+      "name": "coated-morph-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/125-coated-morph-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.056115250001312234
+    },
+    {
+      "name": "coated-morph-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/126-coated-morph-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03249237498675939
+    },
+    {
+      "name": "coated-morph-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/127-coated-morph-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.15366954100318253,
+      "resources": {
+        "maximum resident set size": 19513344,
+        "peak memory footprint": 4048000
+      }
+    },
+    {
+      "name": "coated-morph-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/128-coated-morph-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.26629841700196266,
+      "resources": {
+        "maximum resident set size": 37355520,
+        "peak memory footprint": 13289088
+      }
+    },
+    {
+      "name": "coated-morph-sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/129-coated-morph-sequence.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3590334159962367,
+      "resources": {
+        "maximum resident set size": 37421056,
+        "peak memory footprint": 13321856
+      }
+    },
+    {
+      "name": "coated-morph-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/130-coated-morph-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05739204199926462
+    },
+    {
+      "name": "coated-morph-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-morph-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/131-coated-morph-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03853779200289864
+    },
+    {
+      "name": "coated-morph-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-morph-restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/132-coated-morph-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.25066170800710097
+    },
+    {
+      "name": "coated-morph-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/133-coated-morph-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.06017587501264643
+    },
+    {
+      "name": "coated-morph-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/134-coated-morph-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.05469870800152421
+    },
+    {
+      "name": "coated-morph-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/135-coated-morph-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.006112791001214646
+    },
+    {
+      "name": "coated-morph-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/136-coated-morph-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.2397082919924287
+    },
+    {
+      "name": "coated-morph-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/137-coated-morph-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.035406583003350534
+    }
+  ],
+  "variants": [
+    {
+      "name": "conductor-secondary",
+      "source": "fixtures/secondary-textures/data/mask-nearest.glb",
+      "source_sha256": "f66e8c9415a663af7f19c7d1e62eec9b31a5041e7562d8f10fa06b1edb8beb04",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": false,
+      "secondary": true,
+      "revision": "sha256:e4aca3359c1dbe7f1cf0bbb24b46ee73207f223eaa1e1ea00082122e861b34c4",
+      "settings": {
+        "width": 8,
+        "height": 8,
+        "samples": 32,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0,
+          0,
+          0
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 0.9,
+            "ymag": 0.9,
+            "near": 0.01,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 2.514570951461792e-08,
+      "folder": "image",
+      "archive": "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-secondary-archive/document/document.json"
+    },
+    {
+      "name": "conductor-named-mask",
+      "source": "fixtures/gpu-alpha/data/named-mask.glb",
+      "source_sha256": "1912d4e8c0f4093e1c6fd392be09a92c5ae285c446197f8f9137112e20295bf1",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": false,
+      "secondary": false,
+      "revision": "sha256:fb75fbbc2bb5154f63876449705b568abacc50d7e762ab5cb218cea439178be8",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 1.609829641723087e-05,
+      "folder": "image",
+      "archive": "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-mask-archive/document/document.json"
+    },
+    {
+      "name": "conductor-named-blend",
+      "source": "fixtures/gpu-alpha/data/named-blend.glb",
+      "source_sha256": "40bfddc669d71fb33828f7dd6f6e0a3e1750e93d106455b0accedc678a148fb6",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": false,
+      "secondary": false,
+      "revision": "sha256:b4a508c9830657af637c9696fceba6e5be13d1a6e119987c90373942b9ca55de",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 8.87319270797084e-06,
+      "folder": "image",
+      "archive": "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-named-blend-archive/document/document.json"
+    },
+    {
+      "name": "conductor-morph",
+      "source": "fixtures/morph-frames/data/dense.glb",
+      "source_sha256": "284917f1bf2bd5f666ba2f5b48590222b6d0bbdeff91be0801492ca20025de49",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": true,
+      "secondary": false,
+      "revision": "sha256:c0144aaa9368646a06bf2839a80661edab2f1e111e80d455ad06733ea8fee9be",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "request": {
+        "revision": "sha256:c0144aaa9368646a06bf2839a80661edab2f1e111e80d455ad06733ea8fee9be",
+        "clip": "467e6e12ffc8158594d66c96bc5c770b",
+        "time": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "shutter": {
+          "open": {
+            "numerator": -1,
+            "denominator": 32
+          },
+          "close": {
+            "numerator": 1,
+            "denominator": 32
+          },
+          "samples": 3
+        }
+      },
+      "gpu_linear_rmse": 0.00034138011582237785,
+      "folder": "frame",
+      "sequence": {
+        "revision": "sha256:c0144aaa9368646a06bf2839a80661edab2f1e111e80d455ad06733ea8fee9be",
+        "clip": "467e6e12ffc8158594d66c96bc5c770b",
+        "shutter": {
+          "open": {
+            "numerator": -1,
+            "denominator": 32
+          },
+          "close": {
+            "numerator": 1,
+            "denominator": 32
+          },
+          "samples": 3
+        },
+        "times": [
+          {
+            "numerator": 1,
+            "denominator": 4
+          },
+          {
+            "numerator": 3,
+            "denominator": 4
+          }
+        ]
+      },
+      "archive": "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/conductor-morph-archive/document/document.json"
+    },
+    {
+      "name": "coated-secondary",
+      "source": "fixtures/secondary-textures/data/mask-nearest.glb",
+      "source_sha256": "f66e8c9415a663af7f19c7d1e62eec9b31a5041e7562d8f10fa06b1edb8beb04",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": false,
+      "secondary": true,
+      "revision": "sha256:51140c5486893a6e4ef48f3fdcd471c69847d98bc5de770ba2fa1a39f0cbb053",
+      "settings": {
+        "width": 8,
+        "height": 8,
+        "samples": 32,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0,
+          0,
+          0
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 0.9,
+            "ymag": 0.9,
+            "near": 0.01,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 1.591362958725866e-07,
+      "folder": "image",
+      "archive": "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-secondary-archive/document/document.json"
+    },
+    {
+      "name": "coated-named-mask",
+      "source": "fixtures/gpu-alpha/data/named-mask.glb",
+      "source_sha256": "1912d4e8c0f4093e1c6fd392be09a92c5ae285c446197f8f9137112e20295bf1",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": false,
+      "secondary": false,
+      "revision": "sha256:09f4ad59991bf0c067223f8c8ff06ad48e245bb1fa2f625c67c7b2c984bb42fa",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 1.996711517170901e-05,
+      "folder": "image",
+      "archive": "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-mask-archive/document/document.json"
+    },
+    {
+      "name": "coated-named-blend",
+      "source": "fixtures/gpu-alpha/data/named-blend.glb",
+      "source_sha256": "40bfddc669d71fb33828f7dd6f6e0a3e1750e93d106455b0accedc678a148fb6",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": false,
+      "secondary": false,
+      "revision": "sha256:45a13fc6ccc0e7ca9b44b55e072b91bcd7da7cdd8d0c68a6f1fa36c940c975cb",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 1.0843975906315296e-05,
+      "folder": "image",
+      "archive": "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-named-blend-archive/document/document.json"
+    },
+    {
+      "name": "coated-morph",
+      "source": "fixtures/morph-frames/data/dense.glb",
+      "source_sha256": "284917f1bf2bd5f666ba2f5b48590222b6d0bbdeff91be0801492ca20025de49",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": true,
+      "secondary": false,
+      "revision": "sha256:7636946a60bc825231e49eb73a336429d175554eb0db3cc216bb2270b282b7ff",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "request": {
+        "revision": "sha256:7636946a60bc825231e49eb73a336429d175554eb0db3cc216bb2270b282b7ff",
+        "clip": "467e6e12ffc8158594d66c96bc5c770b",
+        "time": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "shutter": {
+          "open": {
+            "numerator": -1,
+            "denominator": 32
+          },
+          "close": {
+            "numerator": 1,
+            "denominator": 32
+          },
+          "samples": 3
+        }
+      },
+      "gpu_linear_rmse": 0.00014605246131684524,
+      "folder": "frame",
+      "sequence": {
+        "revision": "sha256:7636946a60bc825231e49eb73a336429d175554eb0db3cc216bb2270b282b7ff",
+        "clip": "467e6e12ffc8158594d66c96bc5c770b",
+        "shutter": {
+          "open": {
+            "numerator": -1,
+            "denominator": 32
+          },
+          "close": {
+            "numerator": 1,
+            "denominator": 32
+          },
+          "samples": 3
+        },
+        "times": [
+          {
+            "numerator": 1,
+            "denominator": 4
+          },
+          {
+            "numerator": 3,
+            "denominator": 4
+          }
+        ]
+      },
+      "archive": "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/surface-workflow/coated-morph-archive/document/document.json"
+    }
+  ],
+  "settings": {
+    "width": 8,
+    "height": 8,
+    "samples": 32,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0,
+      0,
+      0
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        0,
+        0,
+        0
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        1
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 0.9,
+        "ymag": 0.9,
+        "near": 0.01,
+        "far": 10
+      }
+    }
+  }
+}

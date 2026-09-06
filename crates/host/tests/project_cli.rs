@@ -412,7 +412,10 @@ fn gpu_profile_preflight_deadline_and_authored_names_have_safe_output_semantics(
     assert!(!out.status.success());
     assert!(!t.root.join("unknown").exists());
     let mut material = t.inspect()["snapshot"]["materials"][id(2)].clone();
-    material["pbr"] = json!({"advanced":{"model":{"kind":"coated","weight":0.5,"ior":1.5,"roughness":0.3},"opacity":{"kind":"opaque"}},"double_sided":false,"base_color":null,"metallic_roughness":null,"normal":null,"emission":null,"occlusion":null,"normal_scale":1,"occlusion_strength":1});
+    // Keep this preflight test on a valid, still-unsupported GPU material.
+    material["roughness"] = json!(0);
+    material["metallic"] = json!(0);
+    material["pbr"] = json!({"advanced":{"model":{"kind":"dielectric","ior":1.5},"opacity":{"kind":"opaque"}},"double_sided":false,"base_color":null,"metallic_roughness":null,"normal":null,"emission":null,"occlusion":null,"normal_scale":1,"occlusion_strength":1});
     t.apply(
         "cli:surface:0001",
         json!([{"operation":"put_material","material":material}]),

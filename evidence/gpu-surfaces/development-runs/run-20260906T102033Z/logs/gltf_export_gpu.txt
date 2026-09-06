@@ -1,0 +1,14 @@
+   Compiling render-host v0.1.0 (/private/tmp/render-gpu-surfaces-20260906/crates/host)
+    Finished `test` profile [unoptimized] target(s) in 1.53s
+     Running tests/gltf_export_gpu.rs (target/debug/deps/gltf_export_gpu-abe11c5e3de0e87d)
+
+running 1 test
+case=0 reference=GPU source linear_rmse=0
+case=0 reference=CPU roundtrip linear_rmse=0.00003816639226957348
+case=1 reference=GPU source linear_rmse=0
+case=1 reference=CPU roundtrip linear_rmse=0.000012028779305932022
+case=2 reference=GPU source linear_rmse=0
+case=2 reference=CPU roundtrip linear_rmse=0.00023410406168170996
+test exported_pbr_surfaces_match_cpu_and_metal_at_static_and_animated_times ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.31s

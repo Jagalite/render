@@ -1,0 +1,255 @@
+{
+  "status": "passed",
+  "profile": "gpu-f32-animation-v0",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/requests/000-init.json"
+      ],
+      "seconds": 0.018706000002566725,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/requests/001-inspect.json"
+      ],
+      "seconds": 0.00744854100048542,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "import",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/requests/002-import.json"
+      ],
+      "seconds": 0.037839708995306864,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/requests/003-inspect.json"
+      ],
+      "seconds": 0.020775459008291364,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "cpu-frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/requests/004-cpu-frame.json"
+      ],
+      "seconds": 0.18370120899635367,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20414464,
+        "peak memory footprint": 5227648
+      }
+    },
+    {
+      "name": "gpu-frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/requests/005-gpu-frame.json"
+      ],
+      "seconds": 0.1740601249912288,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36356096,
+        "peak memory footprint": 12240512
+      }
+    },
+    {
+      "name": "gpu-sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/requests/006-gpu-sequence.json"
+      ],
+      "seconds": 0.42111887500504963,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 37109760,
+        "peak memory footprint": 13354560
+      }
+    },
+    {
+      "name": "archive",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/requests/007-archive.json"
+      ],
+      "seconds": 0.03866920800646767,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restore",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/requests/008-restore.json"
+      ],
+      "seconds": 0.034961875004228204,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restored-frame",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/restored",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/requests/009-restored-frame.json"
+      ],
+      "seconds": 0.17150562499591615,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "stale",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/requests/010-stale.json"
+      ],
+      "seconds": 0.018743458000244573,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "invalid",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/requests/011-invalid.json"
+      ],
+      "seconds": 0.1060900419979589,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "limited",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/requests/012-limited.json"
+      ],
+      "seconds": 0.13628641600371338,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "partial",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/requests/013-partial.json"
+      ],
+      "seconds": 0.18246004200773314,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/project",
+        "/private/tmp/render-gpu-surfaces-20260906/artifacts/gpu-surfaces/run-20260906T102437Z/shutter-regression/requests/014-unchanged.json"
+      ],
+      "seconds": 0.021830249999766238,
+      "exit_code": 0,
+      "expected_error": null
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "revision": "sha256:1980ec2bf4ec22f8159c11f8f4bc8703f2f608b72b2dbfa2ec52c01948a0cf68",
+  "clip": "15c77c8677038a00d22b7921d37af01e",
+  "settings": {
+    "width": 64,
+    "height": 64,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.15,
+      0.15,
+      0.15
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        30,
+        30,
+        30
+      ]
+    },
+    "camera": {
+      "position": [
+        1,
+        1,
+        5
+      ],
+      "target": [
+        0,
+        1,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65
+    }
+  },
+  "gpu_comparison": {
+    "linear_rmse": 4.59514983409537e-09,
+    "object_mismatches": 0
+  },
+  "partial_frames": 1
+}

@@ -244,3 +244,21 @@ Existing opaque import/render receipts retain their previous path and wording.
 **Revisit trigger:** Derivative-filtered alpha, GPU coverage or rough transmission
 requires separate numerical/image and cancellation evidence. Older engines may
 reject newly admitted cutoffs above one; no silent threshold conversion is allowed.
+
+## ADR-020 — Stable per-binding UV selection across derived geometry
+
+**Decision:** Add an optional stable corner-UV attribute ID to texture bindings,
+gated by snapshot v12. Preserve omitted-field serialization and default first-UV
+semantics. Admit eight glTF coordinate sets and validate required sets on assigned
+meshes. Keep private dense render slots separate from authored identity.
+
+**Integration boundary:** Import, transactions, displacement transfer, evaluation,
+CPU/GPU texture footprints, normal frames, alpha and bake sampling follow the
+[named UV contract](named_uv.md). Displacement uses an explicit new policy that
+preserves all UV IDs; its derived receipts intentionally change. Boxing the private
+Rust command material payload does not change public JSON. No runtime dependency
+changes or editor mutation paths are introduced.
+
+**Revisit trigger:** Larger coordinate tables, texture transforms, selected bake
+destinations or source-format material export require separately validated profiles.
+GPU alpha remains a transport gate independent of coordinate selection.

@@ -39,7 +39,7 @@ fn doc() -> Document {
         vec![
             Command::PutGeometry { asset },
             Command::PutMaterial {
-                material: Material::diffuse(Id(2), [0.4, 0.8, 0.2]),
+                material: Box::new(Material::diffuse(Id(2), [0.4, 0.8, 0.2])),
             },
             Command::CreateEntity {
                 entity: Entity {

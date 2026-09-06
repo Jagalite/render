@@ -152,6 +152,9 @@ pub struct Binding {
     pub image: String,
     pub role: TextureRole,
     pub sampler: Sampler,
+    /// Stable corner-domain UV attribute ID; None retains the legacy default set.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub uv_attribute: Option<crate::Id>,
 }
 #[derive(Debug, Clone)]
 pub struct Level {

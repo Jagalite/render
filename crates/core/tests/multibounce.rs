@@ -41,7 +41,9 @@ fn plates(pbr_bottom: bool, ceiling_color: [f32; 3]) -> (Document, Settings) {
         }
         commands.extend([
             Command::PutMesh { mesh },
-            Command::PutMaterial { material },
+            Command::PutMaterial {
+                material: Box::new(material),
+            },
             Command::CreateEntity {
                 entity: Entity {
                     id: Id(9300 + i as u128),

@@ -383,6 +383,7 @@ fn renderer_reuses_geometry_after_transform() {
 #[cfg_attr(not(target_arch = "wasm32"), test)]
 fn triangle_bvh_and_parallel_slab_analytic() {
     let t = Triangle {
+        uv_sets: vec![],
         normals: None,
         tangents: None,
         positions: [

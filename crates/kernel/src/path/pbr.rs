@@ -24,9 +24,9 @@ fn sample_map(slot: u32) -> Expr {
         Ty::V4,
         vec![
             inst(i("base") + u(10 + slot)).field("x"),
-            vv("uv"),
-            vv("dx"),
-            vv("dy"),
+            vv(&format!("uv_{slot}")),
+            vv(&format!("dx_{slot}")),
+            vv(&format!("dy_{slot}")),
         ],
     )
 }
@@ -331,6 +331,28 @@ pub(super) fn functions() -> Vec<Function> {
         )))],
     ));
     result.push(function(
+        "bary_uv_set",
+        &[
+            ("triangle", Ty::U32),
+            ("bary", Ty::V3),
+            ("uv_slot", Ty::U32),
+        ],
+        Ty::V2,
+        vec![
+            if_(
+                i("uv_slot").eq(u(0)),
+                vec![ret(call("bary_uv", Ty::V2, vec![i("triangle"), v("bary")]))],
+            ),
+            let_(
+                "coord_base",
+                i("triangle") + u(11) + (i("uv_slot") - u(1)) * u(2),
+            ),
+            ret(data(i("coord_base")).field("xy") * v("bary").field("x")
+                + data(i("coord_base")).field("zw") * v("bary").field("y")
+                + data(i("coord_base") + u(1)).field("xy") * v("bary").field("z")),
+        ],
+    ));
+    result.push(function(
         "vector_world",
         &[("base", Ty::U32), ("t", Ty::V3)],
         Ty::V3,
@@ -530,25 +552,70 @@ pub(super) fn body() -> Vec<Stmt> {
         let_("uv", uv(v("bary"))),
         var("dx", vec2(f(0.), f(0.))),
         var("dy", vec2(f(0.), f(0.))),
+        var("bary_dx", v("bary")),
+        var("bary_dy", v("bary")),
         if_(
             i("bounce").eq(u(0)),
             vec![
                 set(
-                    vv("dx"),
-                    uv(bary(
+                    v("bary_dx"),
+                    bary(
                         ray("camera_origin", s("px") + f(1.), s("py")),
                         ray("camera_direction", s("px") + f(1.), s("py")),
-                    )) - vv("uv"),
+                    ),
                 ),
                 set(
-                    vv("dy"),
-                    uv(bary(
+                    v("bary_dy"),
+                    bary(
                         ray("camera_origin", s("px"), s("py") + f(1.)),
                         ray("camera_direction", s("px"), s("py") + f(1.)),
-                    )) - vv("uv"),
+                    ),
                 ),
+                set(vv("dx"), uv(v("bary_dx")) - vv("uv")),
+                set(vv("dy"), uv(v("bary_dy")) - vv("uv")),
             ],
         ),
+    ];
+    for slot in 0..5 {
+        let selected = cast(Ty::U32, inst(i("base") + u(10 + slot)).field("y"));
+        let selected_uv = |b| {
+            call(
+                "bary_uv_set",
+                Ty::V2,
+                vec![i("triangle"), b, selected.clone()],
+            )
+        };
+        out.extend([
+            let_(&format!("uv_{slot}"), selected_uv(v("bary"))),
+            var(&format!("dx_{slot}"), vv("dx")),
+            var(&format!("dy_{slot}"), vv("dy")),
+            if_(
+                selected.clone().gt(u(0)).and(i("bounce").eq(u(0))),
+                vec![
+                    set(
+                        vv(&format!("dx_{slot}")),
+                        selected_uv(v("bary_dx")) - vv(&format!("uv_{slot}")),
+                    ),
+                    set(
+                        vv(&format!("dy_{slot}")),
+                        selected_uv(v("bary_dy")) - vv(&format!("uv_{slot}")),
+                    ),
+                ],
+            ),
+        ]);
+    }
+    let normal_uv = |b| {
+        call(
+            "bary_uv_set",
+            Ty::V2,
+            vec![
+                i("triangle"),
+                b,
+                cast(Ty::U32, inst(i("base") + u(12)).field("y")),
+            ],
+        )
+    };
+    out.extend([
         var("local_shading", norm(v("local_normal"))),
         if_(
             data(i("triangle") + u(4)).field("z").gt(f(0.)),
@@ -593,11 +660,11 @@ pub(super) fn body() -> Vec<Stmt> {
             vec![
                 let_(
                     "ua",
-                    data(i("triangle") + u(3)).field("zw") - data(i("triangle") + u(3)).field("xy"),
+                    normal_uv(vec3(f(0.), f(1.), f(0.))) - normal_uv(vec3(f(1.), f(0.), f(0.))),
                 ),
                 let_(
                     "ub",
-                    data(i("triangle") + u(4)).field("xy") - data(i("triangle") + u(3)).field("xy"),
+                    normal_uv(vec3(f(0.), f(0.), f(1.))) - normal_uv(vec3(f(1.), f(0.), f(0.))),
                 ),
                 let_(
                     "det",
@@ -774,7 +841,7 @@ pub(super) fn body() -> Vec<Stmt> {
                 ),
             ],
         ),
-    ];
+    ]);
     out.shrink_to_fit();
     out
 }

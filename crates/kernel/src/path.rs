@@ -256,7 +256,12 @@ pub fn kernel() -> Kernel {
                                                         let_(
                                                             "triangle",
                                                             cast(Ty::U32, q("high").field("w"))
-                                                                + i("j") * u(11),
+                                                                + i("j")
+                                                                    * cast(
+                                                                        Ty::U32,
+                                                                        data(i("node") + u(2))
+                                                                            .field("y"),
+                                                                    ),
                                                         ),
                                                         let_(
                                                             "hit",

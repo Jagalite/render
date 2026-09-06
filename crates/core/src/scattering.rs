@@ -195,7 +195,12 @@ fn opacity(scene: &Scene, hit: &Hit) -> f64 {
     let alpha = pbr.and_then(|p| p.base_color.as_ref()).map_or(1., |b| {
         f64::from(
             scene.images[&(b.image.clone(), b.role)]
-                .sample(&b.sampler, hit.uv, glam::Vec2::ZERO, glam::Vec2::ZERO)
+                .sample(
+                    &b.sampler,
+                    hit.uv_for(scene, b.uv_attribute),
+                    glam::Vec2::ZERO,
+                    glam::Vec2::ZERO,
+                )
                 .w,
         )
     });
@@ -271,6 +276,7 @@ fn model(material: &Material) -> Model {
 /// Finite-depth reference integrator. Glass direct-light caustics are not sampled;
 /// continuation rays can reach emission/environment. Alpha is stochastic coverage.
 pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) -> Result<Image> {
+    scene.validate_uv_bindings()?;
     s.validate()?;
     let count = (s.width * s.height) as usize;
     let mut linear = vec![[0.; 3]; count];

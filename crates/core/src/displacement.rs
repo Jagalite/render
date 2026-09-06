@@ -126,6 +126,22 @@ impl Displacement {
             return Err(Error::new("cancelled", "displacement cancelled"));
         }
         mesh.validate()?;
+        let uv_attributes = mesh
+            .attributes
+            .iter()
+            .filter(|(_, a)| a.semantic == "uv")
+            .collect::<Vec<_>>();
+        if uv_attributes.len() > 8 {
+            return Err(Error::new(
+                "budget",
+                "displacement supports at most eight UV attributes",
+            ));
+        }
+        let height_uv = self
+            .binding()
+            .and_then(|b| b.uv_attribute)
+            .map(|id| mesh.uv_values(id))
+            .transpose()?;
         let points: std::collections::BTreeSet<_> = mesh.corners.iter().map(|c| c.vertex).collect();
         let edges: std::collections::BTreeSet<_> = mesh.corners.iter().map(|c| c.edge).collect();
         if points.len() != mesh.positions.len() || edges.len() != mesh.edges.len() {
@@ -170,6 +186,7 @@ impl Displacement {
         }
         let mut positions = vec![];
         let mut vertex_uv = vec![];
+        let mut vertex_uv_sets = vec![Vec::<[f32; 2]>::new(); uv_attributes.len()];
         let mut faces = vec![];
         let mut seams: BTreeMap<Vec<(u64, u32)>, DVec3> = BTreeMap::new();
         for tri in triangles {
@@ -179,6 +196,8 @@ impl Displacement {
             let indices = tri.map(|c| mesh.corners[c as usize].vertex as usize);
             let p = indices.map(|i| mesh.positions.get(i));
             let uv = tri.map(|c| mesh.uv(c as usize));
+            let selected_height_uv =
+                height_uv.map(|values| tri.map(|c| Vec2::from_array(values[c as usize])));
             let normal = indices.map(|i| normals[i]);
             let mut grid = BTreeMap::new();
             for i in 0..=n {
@@ -189,6 +208,9 @@ impl Displacement {
                     let weights = [n - i - j, i, j];
                     let w = weights.map(|v| f64::from(v) / f64::from(n));
                     let uv = uv[0] * w[0] as f32 + uv[1] * w[1] as f32 + uv[2] * w[2] as f32;
+                    let height_uv = selected_height_uv.map_or(uv, |coords| {
+                        coords[0] * w[0] as f32 + coords[1] * w[1] as f32 + coords[2] * w[2] as f32
+                    });
                     let normal = normal[0] * w[0] + normal[1] * w[1] + normal[2] * w[2];
                     if normal.length_squared() < 1e-24 {
                         return Err(Error::new(
@@ -199,7 +221,7 @@ impl Displacement {
                     let position = p[0] * w[0]
                         + p[1] * w[1]
                         + p[2] * w[2]
-                        + normal.normalize() * self.height(uv, images)?;
+                        + normal.normalize() * self.height(height_uv, images)?;
                     if weights.contains(&0) {
                         let mut edge: Vec<_> = indices
                             .iter()
@@ -220,6 +242,16 @@ impl Displacement {
                     grid.insert((i, j), positions.len() as u32);
                     positions.push(position.to_array());
                     vertex_uv.push(uv.to_array());
+                    for (slot, (_, attribute)) in uv_attributes.iter().enumerate() {
+                        let values = mesh.uv_values(attribute.id)?;
+                        let coords = tri.map(|c| Vec2::from_array(values[c as usize]));
+                        vertex_uv_sets[slot].push(
+                            (coords[0] * w[0] as f32
+                                + coords[1] * w[1] as f32
+                                + coords[2] * w[2] as f32)
+                                .to_array(),
+                        );
+                    }
                 }
             }
             for i in 0..n {
@@ -241,18 +273,39 @@ impl Displacement {
             .iter()
             .map(|c| vertex_uv[c.vertex as usize])
             .collect();
-        derived.attributes.insert(
-            "uv".into(),
-            Attribute {
-                id: Id(1),
-                domain: Domain::Corner,
-                semantic: "uv".into(),
-                transfer: Transfer::Linear,
-                values: AttributeValues::Vec2(corners),
-            },
-        );
+        if uv_attributes.is_empty() {
+            derived.attributes.insert(
+                "uv".into(),
+                Attribute {
+                    id: Id(1),
+                    domain: Domain::Corner,
+                    semantic: "uv".into(),
+                    transfer: Transfer::Linear,
+                    values: AttributeValues::Vec2(corners),
+                },
+            );
+        } else {
+            for ((name, attribute), values) in uv_attributes.iter().zip(vertex_uv_sets) {
+                derived.attributes.insert(
+                    (*name).clone(),
+                    Attribute {
+                        id: attribute.id,
+                        domain: Domain::Corner,
+                        semantic: "uv".into(),
+                        transfer: Transfer::Linear,
+                        values: AttributeValues::Vec2(
+                            derived
+                                .corners
+                                .iter()
+                                .map(|c| values[c.vertex as usize])
+                                .collect(),
+                        ),
+                    },
+                );
+            }
+        }
         derived.validate()?;
-        let receipt=Receipt{source_digest:mesh.content_id()?,policy_digest:digest(&canonical(self)?),subdivisions:self.subdivisions,vertices:derived.positions.len(),triangles:faces.len(),derived_bytes:canonical(&derived)?.len(),approximation:"uniform 4-way triangle dicing; area-weighted source vertex normal displacement; object-meter height; base-level image sampling; crack detection at shared topology edges; geometric output normals; derived correspondence only".into()};
+        let receipt=Receipt{source_digest:mesh.content_id()?,policy_digest:digest(&canonical(&("uniform-named-uv-v1",self))?),subdivisions:self.subdivisions,vertices:derived.positions.len(),triangles:faces.len(),derived_bytes:canonical(&derived)?.len(),approximation:"uniform-named-uv-v1: 4-way triangle dicing; barycentric corner UV transfer with stable attribute IDs; area-weighted source vertex normal displacement; object-meter height; base-level image sampling; crack detection at shared topology edges; geometric output normals; derived correspondence only".into()};
         Ok((derived, receipt))
     }
 }

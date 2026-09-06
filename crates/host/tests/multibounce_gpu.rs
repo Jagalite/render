@@ -106,6 +106,7 @@ fn gpu_multibounce_parity_progressive_identity_and_cancellation() {
         .find(|i| i.id == Id(2))
         .unwrap();
     ceiling.material.pbr.as_mut().unwrap().emission = Some(textures::Binding {
+        uv_attribute: None,
         image: key,
         role,
         sampler: Default::default(),

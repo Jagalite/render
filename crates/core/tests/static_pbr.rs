@@ -141,6 +141,7 @@ fn encoded_images_roles_wrap_filters_and_mips() {
     );
     let surface = pbr::Surface {
         normal: Some(Binding {
+            uv_attribute: None,
             image: asset.content_id().unwrap(),
             role: TextureRole::SrgbColor,
             sampler,
@@ -528,6 +529,7 @@ fn tangent_handedness_inverse_transpose_culling_and_jpeg_workflow() {
     let mut material = Material::diffuse(Id(20), [0.5; 3]);
     material.pbr = Some(pbr::Surface {
         normal: Some(Binding {
+            uv_attribute: None,
             image: image.content_id().unwrap(),
             role: TextureRole::LinearData,
             sampler: Sampler::default(),
@@ -553,7 +555,9 @@ fn tangent_handedness_inverse_transpose_culling_and_jpeg_workflow() {
         vec![
             Command::PutImage { image },
             Command::PutMesh { mesh },
-            Command::PutMaterial { material },
+            Command::PutMaterial {
+                material: Box::new(material),
+            },
             Command::CreateEntity { entity },
         ],
     )

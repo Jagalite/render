@@ -88,7 +88,9 @@ pub fn geometry_document() -> Result<Document> {
         material.roughness = 0.7;
         commands.extend([
             Command::PutGeometry { asset },
-            Command::PutMaterial { material },
+            Command::PutMaterial {
+                material: Box::new(material),
+            },
             Command::CreateEntity {
                 entity: Entity {
                     id,
@@ -289,10 +291,10 @@ pub fn groom_document() -> Result<Document> {
         vec![
             Command::PutMesh { mesh: mesh.clone() },
             Command::PutMaterial {
-                material: Material::diffuse(Id(7700), [0.2, 0.3, 0.25]),
+                material: Box::new(Material::diffuse(Id(7700), [0.2, 0.3, 0.25])),
             },
             Command::PutMaterial {
-                material: Material::diffuse(Id(7701), [0.55, 0.15, 0.04]),
+                material: Box::new(Material::diffuse(Id(7701), [0.55, 0.15, 0.04])),
             },
             Command::CreateEntity {
                 entity: Entity {
@@ -518,7 +520,7 @@ pub fn character_document() -> Result<Document> {
                 mesh: authored_mesh.clone(),
             },
             Command::PutMaterial {
-                material: Material::diffuse(Id(8202), [0.12, 0.45, 0.7]),
+                material: Box::new(Material::diffuse(Id(8202), [0.12, 0.45, 0.7])),
             },
             Command::CreateEntity {
                 entity: Entity {
@@ -603,7 +605,9 @@ pub fn imaging_document() -> Result<Document> {
         );
         commands.extend([
             Command::PutMesh { mesh: mesh.clone() },
-            Command::PutMaterial { material },
+            Command::PutMaterial {
+                material: Box::new(material),
+            },
             Command::CreateEntity {
                 entity: Entity {
                     id: Id(7850 + i),
@@ -730,7 +734,9 @@ pub fn surface_document() -> Result<Document> {
         });
         commands.extend([
             Command::PutGeometry { asset },
-            Command::PutMaterial { material },
+            Command::PutMaterial {
+                material: Box::new(material),
+            },
             Command::CreateEntity {
                 entity: Entity {
                     id: Id(8620 + i as u128),
@@ -785,7 +791,9 @@ pub fn surface_document() -> Result<Document> {
     });
     commands.extend([
         Command::PutMesh { mesh: mesh.clone() },
-        Command::PutMaterial { material },
+        Command::PutMaterial {
+            material: Box::new(material),
+        },
         Command::CreateEntity {
             entity: Entity {
                 id: Id(8631),
@@ -912,7 +920,9 @@ pub fn modeling_document() -> Result<Document> {
         &document,
         "m06:procedural:author:01",
         vec![
-            Command::PutMaterial { material },
+            Command::PutMaterial {
+                material: Box::new(material),
+            },
             Command::CreateEntity {
                 entity: Entity {
                     id: Id(8720),

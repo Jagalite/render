@@ -261,6 +261,17 @@ impl Mesh {
             })
             .unwrap_or(Vec2::ZERO)
     }
+    pub fn uv_values(&self, id: Id) -> Result<&[[f32; 2]]> {
+        self.attributes
+            .values()
+            .find_map(|a| match (&a.values, a.domain, a.semantic.as_str()) {
+                (AttributeValues::Vec2(values), Domain::Corner, "uv") if a.id == id => {
+                    Some(values.as_slice())
+                }
+                _ => None,
+            })
+            .ok_or_else(|| Error::new("reference", "selected corner UV attribute is missing"))
+    }
     /// Ear clipping of planar simple polygons. Degenerate/nonplanar polygons fail explicitly.
     pub fn triangles(&self) -> Result<Vec<[u32; 3]>> {
         self.validate()?;

@@ -85,10 +85,19 @@ fn pack_geometry(g: &Geometry, data: &mut Vec<[f32; 4]>) -> usize {
             for t in tri.tangents.unwrap_or([glam::DVec4::ZERO; 3]) {
                 data.push(t.as_vec4().to_array());
             }
+            for uv in &tri.uv_sets {
+                data.push([uv[0].x, uv[0].y, uv[1].x, uv[1].y]);
+                data.push([uv[2].x, uv[2].y, 0., 0.]);
+            }
         }
         data[address] = point(n.bounds.min, n.items.len() as f32);
         data[address + 1] = point(n.bounds.max, first as f32);
-        data[address + 2] = [(base + escape * 3) as f32, 0., 0., 0.];
+        data[address + 2] = [
+            (base + escape * 3) as f32,
+            (11 + 2 * g.uv_attributes.len()) as f32,
+            0.,
+            0.,
+        ];
         escape
     }
     node(g, 0, base, data);
@@ -101,6 +110,7 @@ pub struct Packed {
     pub params: Vec<[f32; 4]>,
 }
 pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
+    scene.validate_uv_bindings()?;
     if scene.instances.iter().any(|i| {
         i.material
             .pbr
@@ -257,7 +267,15 @@ pub fn pack(scene: &Scene, s: &Settings, start_sample: u32) -> Result<Packed> {
             } else {
                 -1.
             };
-            instances.push([descriptor, 0., 0., 0.]);
+            let uv_slot = binding.and_then(|b| b.uv_attribute).map_or(0, |id| {
+                inst.geometry
+                    .uv_attributes
+                    .iter()
+                    .position(|v| *v == id)
+                    .expect("validated UV binding")
+                    + 1
+            });
+            instances.push([descriptor, uv_slot as f32, 0., 0.]);
         }
         instances.push([0.; 4]);
     }

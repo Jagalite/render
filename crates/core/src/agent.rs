@@ -344,7 +344,7 @@ impl Session {
         let mut commands = vec![];
         for material in s.materials.values() {
             commands.push(Command::PutMaterial {
-                material: material.clone(),
+                material: Box::new(material.clone()),
             });
         }
         commands.push(Command::SetRenderSettings { settings });
@@ -584,7 +584,9 @@ impl Session {
                         .clone();
                     material.base_color = edit.base_color;
                     material.emission = edit.emission;
-                    commands.push(Command::PutMaterial { material });
+                    commands.push(Command::PutMaterial {
+                        material: Box::new(material),
+                    });
                 }
                 let mut settings = profile(b.document.snapshot())?.clone();
                 settings.light = edits.light;

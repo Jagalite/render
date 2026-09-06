@@ -346,7 +346,16 @@ impl Snapshot {
         Ok(digest(&canonical(self)?))
     }
     pub fn validate(&self) -> Result<()> {
-        if self.version > 11
+        if self.version > 12
+            || (self.version < 12
+                && self.materials.values().any(|m| {
+                    m.pbr.as_ref().is_some_and(|p| {
+                        p.bindings()
+                            .into_iter()
+                            .flatten()
+                            .any(|b| b.uv_attribute.is_some())
+                    })
+                }))
             || (self.version < 11 && self.animation.as_ref().is_some_and(|a| a.needs_v11()))
             || (self.version < 10
                 && (!self.procedural_assets.is_empty()
@@ -549,6 +558,13 @@ impl Snapshot {
                 return Err(Error::new("reference", "missing geometry or material"));
             }
             self.world_transform(e.id)?;
+            if !self.procedural_bindings.contains_key(&e.id)
+                && !self.grooms.contains_key(&e.id)
+                && let (Some(mesh), Some(material)) = (e.mesh.as_ref(), e.material)
+                && let Some(surface) = &self.materials[&material].pbr
+            {
+                surface.validate_uv_bindings(&self.meshes[mesh])?;
+            }
         }
         let mut names = BTreeSet::new();
         for layer in &self.layers {
@@ -563,6 +579,16 @@ impl Snapshot {
                 }
                 if let Some(t) = &o.transform {
                     t.affine()?;
+                }
+                if !self.procedural_bindings.contains_key(id)
+                    && !self.grooms.contains_key(id)
+                    && let (Some(mesh), Some(material)) = (
+                        self.entities.get(*id).and_then(|e| e.mesh.as_ref()),
+                        o.material,
+                    )
+                    && let Some(surface) = &self.materials[&material].pbr
+                {
+                    surface.validate_uv_bindings(&self.meshes[mesh])?;
                 }
             }
         }
@@ -747,7 +773,7 @@ pub enum Command {
         mesh: Mesh,
     },
     PutMaterial {
-        material: Material,
+        material: Box<Material>,
     },
     CreateEntity {
         entity: Entity,
@@ -1036,6 +1062,10 @@ fn apply(s: &mut Snapshot, c: &Command) -> Result<()> {
     {
         s.version = s.version.max(9);
     }
+    if matches!(c,Command::PutMaterial{material} if material.pbr.as_ref().is_some_and(|p|p.bindings().into_iter().flatten().any(|b|b.uv_attribute.is_some())))
+    {
+        s.version = s.version.max(12);
+    }
     match c {
         Command::CreateBox {
             entity: id,
@@ -1208,7 +1238,7 @@ fn apply(s: &mut Snapshot, c: &Command) -> Result<()> {
             if material.pbr.is_some() {
                 s.version = s.version.max(2);
             }
-            s.materials.insert(material.id, material.clone());
+            s.materials.insert(material.id, material.as_ref().clone());
         }
         Command::CreateEntity { entity: e } => s.entities.insert(e.clone())?,
         Command::Rename { entity: id, name } => entity(s, *id)?.name = name.clone(),

@@ -294,7 +294,9 @@ fn alpha_invalid_inputs_and_failed_transactions_leave_document_unchanged() {
     let request = fixtures::request(
         &d,
         "alpha:invalid:0001",
-        vec![Command::PutMaterial { material }],
+        vec![Command::PutMaterial {
+            material: Box::new(material),
+        }],
     )
     .unwrap();
     assert_eq!(

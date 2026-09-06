@@ -81,7 +81,7 @@ pub fn diffuse_plane() -> Result<(Scene, Settings, [f32; 3])> {
         vec![
             Command::PutMesh { mesh },
             Command::PutMaterial {
-                material: Material::diffuse(Id(901), [0.5, 0.25, 0.75]),
+                material: Box::new(Material::diffuse(Id(901), [0.5, 0.25, 0.75])),
             },
             Command::CreateEntity {
                 entity: Entity {
@@ -143,9 +143,11 @@ pub fn demo() -> Result<Document> {
     let commands = vec![
         Command::PutMesh { mesh },
         Command::PutMesh { mesh: ground },
-        Command::PutMaterial { material },
         Command::PutMaterial {
-            material: Material::diffuse(Id(3), [0.5, 0.55, 0.6]),
+            material: Box::new(material),
+        },
+        Command::PutMaterial {
+            material: Box::new(Material::diffuse(Id(3), [0.5, 0.55, 0.6])),
         },
         Command::CreateEntity {
             entity: Entity {

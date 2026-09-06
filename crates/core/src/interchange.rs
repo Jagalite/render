@@ -34,7 +34,27 @@ pub fn export_obj(mesh: &Mesh) -> Result<(String, LossReport)> {
             text += &format!("l {} {}\n", e[0] + 1, e[1] + 1);
         }
     }
-    Ok((text,LossReport{profile:"OBJ geometry+corner UV v0".into(),losses:vec!["persistent element IDs and non-UV attributes are not representable in this profile".into()]}))
+    let mut losses = vec![
+        "persistent element IDs and non-UV attributes are not representable in this profile".into(),
+    ];
+    report_extra_uv(mesh, &mut losses);
+    Ok((
+        text,
+        LossReport {
+            profile: "OBJ geometry+corner UV v0".into(),
+            losses,
+        },
+    ))
+}
+fn report_extra_uv(mesh: &Mesh, losses: &mut Vec<String>) {
+    for (name, attribute) in mesh
+        .attributes
+        .iter()
+        .filter(|(_, a)| a.semantic == "uv")
+        .skip(1)
+    {
+        losses.push(format!("additional UV attribute {name:?} ({:032x}) omitted by the single-UV geometry export profile", attribute.id.0));
+    }
 }
 fn index(text: &str, count: usize) -> Result<u32> {
     let i: i64 = text
@@ -194,7 +214,16 @@ pub fn export_gltf(mesh: &Mesh) -> Result<(Vec<u8>, Vec<u8>, LossReport)> {
         return Err(Error::new("unsupported_gltf", "empty triangle export"));
     }
     let json = serde_json::json!({"asset":{"version":"2.0","generator":"render Rust static profile v0"},"buffers":[{"uri":"mesh.bin","byteLength":bin.len()}],"bufferViews":[{"buffer":0,"byteOffset":0,"byteLength":offset},{"buffer":0,"byteOffset":offset,"byteLength":bin.len()-offset}],"accessors":[{"bufferView":0,"componentType":5126,"count":n,"type":"VEC3","min":min,"max":max},{"bufferView":1,"componentType":5126,"count":n,"type":"VEC2"}],"meshes":[{"primitives":[{"attributes":{"POSITION":0,"TEXCOORD_0":1},"mode":4}]}],"nodes":[{"mesh":0}],"scenes":[{"nodes":[0]}],"scene":0});
-    Ok((crate::canonical(&json)?,bin,LossReport{profile:"glTF 2.0 static triangle positions+UV v0".into(),losses:vec!["polygon rings triangulated; loose geometry omitted; element IDs and non-UV attributes omitted".into()]}))
+    let mut losses = vec!["polygon rings triangulated; loose geometry omitted; element IDs and non-UV attributes omitted".into()];
+    report_extra_uv(mesh, &mut losses);
+    Ok((
+        crate::canonical(&json)?,
+        bin,
+        LossReport {
+            profile: "glTF 2.0 static triangle positions+UV v0".into(),
+            losses,
+        },
+    ))
 }
 pub fn import_gltf(json: &[u8], bin: &[u8]) -> Result<(Mesh, LossReport)> {
     use serde_json::Value;

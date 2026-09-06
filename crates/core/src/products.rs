@@ -323,6 +323,7 @@ pub fn bake(
     revision: &str,
     mut cancelled: impl FnMut() -> bool,
 ) -> Result<Baked> {
+    scene.validate_uv_bindings()?;
     if scene.revision != revision {
         return Err(Error::new("stale_revision", "bake scene revision changed"));
     }
@@ -423,13 +424,35 @@ pub fn bake(
                             }
                         });
                         if let Some(binding) = binding {
-                            value *= scene.images[&(binding.image.clone(), binding.role)]
-                                .sample(
-                                    &binding.sampler,
+                            let (sample_uv, dx, dy) = if let Some(id) = binding.uv_attribute {
+                                let slot = inst
+                                    .geometry
+                                    .uv_attributes
+                                    .iter()
+                                    .position(|v| *v == id)
+                                    .ok_or_else(|| {
+                                        Error::new(
+                                            "reference",
+                                            "bake material UV attribute missing",
+                                        )
+                                    })?;
+                                let coords = tri.uv_sets[slot];
+                                let e = coords[1] - coords[0];
+                                let f = coords[2] - coords[0];
+                                (
+                                    coords[0] * w + coords[1] * u + coords[2] * v,
+                                    (e * other.y - f * edge.y) / (det * request.width as f32),
+                                    (f * edge.x - e * other.x) / (det * request.height as f32),
+                                )
+                            } else {
+                                (
                                     uv,
                                     Vec2::new(1. / request.width as f32, 0.),
                                     Vec2::new(0., 1. / request.height as f32),
                                 )
+                            };
+                            value *= scene.images[&(binding.image.clone(), binding.role)]
+                                .sample(&binding.sampler, sample_uv, dx, dy)
                                 .truncate();
                         }
                         value

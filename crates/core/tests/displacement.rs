@@ -101,7 +101,9 @@ fn surface_displacement_cache_transactions_and_recovery() {
     let req = fixtures::request(
         &d,
         "displace:change:01",
-        vec![Command::PutMaterial { material }],
+        vec![Command::PutMaterial {
+            material: Box::new(material),
+        }],
     )
     .unwrap();
     d.execute(&fixtures::principal(), &req).unwrap();

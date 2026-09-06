@@ -82,6 +82,14 @@ impl Surface {
         }
         Ok(())
     }
+    pub fn validate_uv_bindings(&self, mesh: &crate::geometry::Mesh) -> Result<()> {
+        for binding in self.bindings().into_iter().flatten() {
+            if let Some(id) = binding.uv_attribute {
+                mesh.uv_values(id)?;
+            }
+        }
+        Ok(())
+    }
 }
 pub const MIN_ROUGHNESS: f64 = 0.05;
 pub fn fresnel(f0: DVec3, cosine: f64) -> DVec3 {

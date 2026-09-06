@@ -96,12 +96,12 @@ fn binding(
     role: TextureRole,
 ) -> Result<Option<Binding>> {
     let Some(info) = info else { return Ok(None) };
-    if info.get("extensions").is_some()
-        || info.get("texCoord").map(index).transpose()?.unwrap_or(0) != 0
-    {
-        return Err(unsupported(
-            "texture extension or UV set other than TEXCOORD_0",
-        ));
+    if info.get("extensions").is_some() {
+        return Err(unsupported("texture extension"));
+    }
+    let uv_set = info.get("texCoord").map(index).transpose()?.unwrap_or(0);
+    if uv_set > 7 {
+        return Err(unsupported("texture coordinate profile supports sets 0..7"));
     }
     let texture = at(root, "textures", index(&info["index"])?)?;
     if texture.get("extensions").is_some() {
@@ -144,6 +144,7 @@ fn binding(
         image,
         role,
         sampler,
+        uv_attribute: (uv_set != 0).then_some(Id(100 + uv_set as u128)),
     }))
 }
 pub fn surface(root: &Value, ids: &[String], material: &Value) -> Result<Surface> {

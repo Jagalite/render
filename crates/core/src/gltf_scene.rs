@@ -717,7 +717,9 @@ fn import_scene_mode(
             }
         }
         material.validate()?;
-        commands.push(Command::PutMaterial { material });
+        commands.push(Command::PutMaterial {
+            material: Box::new(material),
+        });
         materials.push(id);
         report.source_materials.insert(i, id);
     }
@@ -726,7 +728,9 @@ fn import_scene_mode(
         let mut material = Material::diffuse(id, [1.; 3]);
         material.metallic = 1.;
         material.pbr = Some(crate::pbr::Surface::default());
-        commands.push(Command::PutMaterial { material });
+        commands.push(Command::PutMaterial {
+            material: Box::new(material),
+        });
         Some(id)
     } else {
         None
@@ -760,7 +764,8 @@ fn import_scene_mode(
                 !(["POSITION", "NORMAL", "TEXCOORD_0"].contains(&k.as_str())
                     || (pbr_mode
                         && ["TANGENT", "JOINTS_0", "WEIGHTS_0", "JOINTS_1", "WEIGHTS_1"]
-                            .contains(&k.as_str())))
+                            .contains(&k.as_str()))
+                    || (pbr_mode && (1..=7).any(|n| k == &format!("TEXCOORD_{n}"))))
             }) {
                 return Err(unsupported(
                     "vertex attribute outside POSITION/NORMAL/TEXCOORD_0",
@@ -870,6 +875,27 @@ fn import_scene_mode(
                 }
             }
             if pbr_mode {
+                for n in 1..=7 {
+                    if let Some(id) = attributes.get(&format!("TEXCOORD_{n}")) {
+                        let a = vertex_accessor(&root, buffers, index(id)?, "VEC2", 2, true)?;
+                        if a.count != mesh.positions.len() {
+                            return Err(bad("UV attribute vertex count mismatch"));
+                        }
+                        let uv = a.floats::<2>()?;
+                        mesh.attributes.insert(
+                            format!("uv_{n}"),
+                            Attribute {
+                                id: Id(100 + n),
+                                semantic: "uv".into(),
+                                domain: Domain::Corner,
+                                transfer: Transfer::Linear,
+                                values: AttributeValues::Vec2(
+                                    indices.iter().map(|i| uv[*i as usize]).collect(),
+                                ),
+                            },
+                        );
+                    }
+                }
                 if let Some(tangent) = attributes.get("TANGENT") {
                     if !attributes.contains_key("NORMAL") {
                         return Err(bad("TANGENT requires NORMAL"));
@@ -925,11 +951,15 @@ fn import_scene_mode(
                     .and_then(|i| array(&root, "materials").ok()?.get(i));
                 if let Some(m) = material {
                     let surface = crate::gltf_materials::surface(&root, &image_ids, m)?;
-                    if surface.bindings().iter().any(Option::is_some)
-                        && !attributes.contains_key("TEXCOORD_0")
-                    {
-                        return Err(bad("textured primitive requires TEXCOORD_0"));
+                    for binding in surface.bindings().into_iter().flatten() {
+                        if binding.uv_attribute.is_none() && !attributes.contains_key("TEXCOORD_0")
+                        {
+                            return Err(bad(
+                                "textured primitive requires its selected TEXCOORD set",
+                            ));
+                        }
                     }
+                    surface.validate_uv_bindings(&mesh)?;
                 }
             }
             let hash = mesh.content_id()?;

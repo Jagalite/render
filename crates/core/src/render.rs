@@ -57,6 +57,8 @@ pub struct Triangle {
     pub uv: [Vec2; 3],
     pub normals: Option<[DVec3; 3]>,
     pub tangents: Option<[glam::DVec4; 3]>,
+    /// Dense evaluated arrays; Geometry maps stable IDs to these disposable slots.
+    pub uv_sets: Vec<[Vec2; 3]>,
 }
 impl Triangle {
     pub fn bounds(&self) -> Bounds {
@@ -169,6 +171,7 @@ impl Bvh {
 pub struct Geometry {
     pub triangles: Vec<Triangle>,
     pub bvh: Bvh,
+    pub uv_attributes: Vec<Id>,
 }
 #[derive(Clone, Debug)]
 pub struct Instance {
@@ -312,9 +315,28 @@ impl Evaluator {
             } else {
                 (key, mesh)
             };
+            if let Some(surface) = e
+                .material
+                .and_then(|id| s.materials.get(&id))
+                .and_then(|m| m.pbr.as_ref())
+            {
+                surface.validate_uv_bindings(&mesh)?;
+            }
             let geometry = if let Some(g) = self.cache.get(key) {
                 g.clone()
             } else {
+                let uv_attributes = mesh
+                    .attributes
+                    .values()
+                    .filter(|a| a.semantic == "uv")
+                    .map(|a| a.id)
+                    .collect::<Vec<_>>();
+                if uv_attributes.len() > 8 {
+                    return Err(Error::new(
+                        "budget",
+                        "render geometry supports at most eight UV attributes",
+                    ));
+                }
                 let triangles = mesh
                     .triangles()?
                     .iter()
@@ -399,11 +421,22 @@ impl Evaluator {
                             uv: c.map(|i| mesh.uv(i as usize)),
                             normals,
                             tangents,
+                            uv_sets: uv_attributes
+                                .iter()
+                                .map(|id| {
+                                    let values = mesh.uv_values(*id)?;
+                                    Ok(c.map(|i| Vec2::from_array(values[i as usize])))
+                                })
+                                .collect::<Result<Vec<_>>>()?,
                         })
                     })
                     .collect::<Result<Vec<_>>>()?;
                 let bvh = Bvh::build(&triangles.iter().map(Triangle::bounds).collect::<Vec<_>>());
-                let g = Arc::new(Geometry { triangles, bvh });
+                let g = Arc::new(Geometry {
+                    triangles,
+                    bvh,
+                    uv_attributes,
+                });
                 self.cache.insert(key.clone(), g.clone());
                 geometry_builds += 1;
                 g
@@ -481,10 +514,51 @@ pub struct Hit {
     pub tangent: DVec3,
     pub tangent_sign: f64,
     pub uv: Vec2,
+    pub barycentric: [f32; 3],
     pub instance: usize,
     pub triangle: usize,
 }
+impl Hit {
+    pub fn uv_for(&self, scene: &Scene, attribute: Option<Id>) -> Vec2 {
+        let Some(id) = attribute else {
+            return self.uv;
+        };
+        let g = &scene.instances[self.instance].geometry;
+        let uv = &g.triangles[self.triangle].uv_sets[g
+            .uv_attributes
+            .iter()
+            .position(|v| *v == id)
+            .expect("validated UV binding")];
+        uv[0] * self.barycentric[0] + uv[1] * self.barycentric[1] + uv[2] * self.barycentric[2]
+    }
+}
 impl Scene {
+    pub fn validate_uv_bindings(&self) -> Result<()> {
+        for inst in &self.instances {
+            if inst.geometry.uv_attributes.len() > 8
+                || inst
+                    .geometry
+                    .triangles
+                    .iter()
+                    .any(|t| t.uv_sets.len() != inst.geometry.uv_attributes.len())
+            {
+                return Err(Error::new("attribute", "invalid evaluated UV slot table"));
+            }
+            if let Some(p) = &inst.material.pbr {
+                for b in p.bindings().into_iter().flatten() {
+                    if b.uv_attribute
+                        .is_some_and(|id| !inst.geometry.uv_attributes.contains(&id))
+                    {
+                        return Err(Error::new(
+                            "reference",
+                            "selected evaluated UV attribute missing",
+                        ));
+                    }
+                }
+            }
+        }
+        Ok(())
+    }
     pub fn intersect(&self, ray: Ray, tmin: f64, tmax: f64) -> Option<Hit> {
         let mut nearest = tmax;
         let mut hit = None;
@@ -546,8 +620,22 @@ impl Scene {
                         let t = t[0] * (1. - u - v) + t[1] * u + t[2] * v;
                         (t.truncate(), if t.w < 0. { -1. } else { 1. })
                     } else {
-                        let a = tri.uv[1] - tri.uv[0];
-                        let b = tri.uv[2] - tri.uv[0];
+                        let uv = inst
+                            .material
+                            .pbr
+                            .as_ref()
+                            .and_then(|p| p.normal.as_ref())
+                            .and_then(|b| b.uv_attribute)
+                            .map_or(&tri.uv, |id| {
+                                &tri.uv_sets[inst
+                                    .geometry
+                                    .uv_attributes
+                                    .iter()
+                                    .position(|v| *v == id)
+                                    .expect("validated UV binding")]
+                            });
+                        let a = uv[1] - uv[0];
+                        let b = uv[2] - uv[0];
                         let determinant = f64::from(a.x * b.y - a.y * b.x);
                         if determinant.abs() > 1e-12 {
                             let e1 = tri.positions[1] - tri.positions[0];
@@ -592,6 +680,7 @@ impl Scene {
                         uv: tri.uv[0] * (1. - u - v) as f32
                             + tri.uv[1] * u as f32
                             + tri.uv[2] * v as f32,
+                        barycentric: [(1. - u - v) as f32, u as f32, v as f32],
                         instance: i,
                         triangle: ti,
                     });
@@ -803,6 +892,9 @@ pub fn albedo(material: &Material, uv: Vec2) -> Vec3 {
     }
 }
 pub fn projected_uv(triangle: &Triangle, ray: Ray) -> Option<Vec2> {
+    projected_uv_values(triangle, ray, &triangle.uv)
+}
+pub fn projected_uv_values(triangle: &Triangle, ray: Ray, values: &[Vec2; 3]) -> Option<Vec2> {
     let e1 = triangle.positions[1] - triangle.positions[0];
     let e2 = triangle.positions[2] - triangle.positions[0];
     let p = ray.direction.cross(e2);
@@ -813,9 +905,7 @@ pub fn projected_uv(triangle: &Triangle, ray: Ray) -> Option<Vec2> {
     let delta = ray.origin - triangle.positions[0];
     let u = delta.dot(p) / det;
     let v = ray.direction.dot(delta.cross(e1)) / det;
-    let uv = triangle.uv[0] * (1. - u - v) as f32
-        + triangle.uv[1] * u as f32
-        + triangle.uv[2] * v as f32;
+    let uv = values[0] * (1. - u - v) as f32 + values[1] * u as f32 + values[2] * v as f32;
     if uv.is_finite() { Some(uv) } else { None }
 }
 #[derive(Debug)]
@@ -840,15 +930,41 @@ pub fn shading(scene: &Scene, hit: &Hit, differentials: [Ray; 2]) -> Shading {
         )
         .map_or(Vec2::ZERO, |uv| uv - hit.uv)
     });
-    shading_uv(scene, hit, d)
+    shading_uv(scene, hit, d, Some(differentials))
 }
 // Secondary rays have no propagated differentials in this named profile.
-fn shading_uv(scene: &Scene, hit: &Hit, d: [Vec2; 2]) -> Shading {
+fn shading_uv(scene: &Scene, hit: &Hit, d: [Vec2; 2], differentials: Option<[Ray; 2]>) -> Shading {
     let material = &scene.instances[hit.instance].material;
     let surface = material.pbr.as_ref().expect("PBR material");
     let texture = |binding: Option<&crate::textures::Binding>| {
         binding.map_or(glam::Vec4::ONE, |b| {
-            scene.images[&(b.image.clone(), b.role)].sample(&b.sampler, hit.uv, d[0], d[1])
+            let uv = hit.uv_for(scene, b.uv_attribute);
+            let d = if let Some(id) = b.uv_attribute {
+                differentials.map_or([Vec2::ZERO; 2], |rays| {
+                    let inst = &scene.instances[hit.instance];
+                    let g = &inst.geometry;
+                    let tri = &g.triangles[hit.triangle];
+                    let values = &tri.uv_sets[g
+                        .uv_attributes
+                        .iter()
+                        .position(|v| *v == id)
+                        .expect("validated UV binding")];
+                    rays.map(|r| {
+                        projected_uv_values(
+                            tri,
+                            Ray {
+                                origin: inst.inverse.transform_point3(r.origin),
+                                direction: inst.inverse.transform_vector3(r.direction),
+                            },
+                            values,
+                        )
+                        .map_or(Vec2::ZERO, |v| v - uv)
+                    })
+                })
+            } else {
+                d
+            };
+            scene.images[&(b.image.clone(), b.role)].sample(&b.sampler, uv, d[0], d[1])
         })
     };
     let color =
@@ -985,6 +1101,7 @@ fn shade_pbr(
     Ok(radiance)
 }
 pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) -> Result<Image> {
+    scene.validate_uv_bindings()?;
     if scene.instances.iter().any(|i| {
         i.material
             .pbr
@@ -1078,7 +1195,7 @@ pub fn render(scene: &Scene, s: &Settings, mut cancelled: impl FnMut() -> bool) 
                                 ],
                             )
                         } else {
-                            shading_uv(scene, &hit, [Vec2::ZERO; 2])
+                            shading_uv(scene, &hit, [Vec2::ZERO; 2], None)
                         };
                         if bounce == 0 && sample == 0 {
                             depth[pixel as usize] = hit.distance as f32;

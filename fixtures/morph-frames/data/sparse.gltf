@@ -1,0 +1,437 @@
+{
+  "asset": {
+    "version": "2.0",
+    "generator": "Original morph direction analytic fixture"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0,
+        1
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "morphed skinned quad",
+      "mesh": 0,
+      "skin": 0,
+      "translation": [
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "skeleton",
+      "children": [
+        2,
+        3
+      ]
+    },
+    {
+      "name": "x-scale",
+      "scale": [
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "y-scale",
+      "scale": [
+        1,
+        3,
+        1
+      ]
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2,
+            "TEXCOORD_1": 3,
+            "TEXCOORD_2": 4,
+            "TEXCOORD_7": 5,
+            "TANGENT": 10,
+            "JOINTS_0": 11,
+            "WEIGHTS_0": 12
+          },
+          "indices": 6,
+          "material": 0,
+          "targets": [
+            {
+              "POSITION": 7
+            },
+            {
+              "NORMAL": 8
+            },
+            {
+              "TANGENT": 9
+            }
+          ]
+        }
+      ],
+      "weights": [
+        0.25,
+        0.5,
+        0.75
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "independent-role-UVs",
+      "doubleSided": true,
+      "emissiveFactor": [
+        0.4,
+        0.4,
+        0.4
+      ],
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.6,
+          0.6,
+          0.6,
+          1
+        ],
+        "metallicFactor": 0.5,
+        "roughnessFactor": 0.8,
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 2,
+          "texCoord": 7
+        }
+      },
+      "emissiveTexture": {
+        "index": 0,
+        "texCoord": 1
+      },
+      "occlusionTexture": {
+        "index": 2,
+        "texCoord": 2
+      },
+      "normalTexture": {
+        "index": 1,
+        "texCoord": 1
+      }
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9728,
+      "minFilter": 9728,
+      "wrapS": 33071,
+      "wrapT": 33071
+    }
+  ],
+  "textures": [
+    {
+      "source": 0,
+      "sampler": 0
+    },
+    {
+      "source": 1,
+      "sampler": 0
+    },
+    {
+      "source": 2,
+      "sampler": 0
+    }
+  ],
+  "images": [
+    {
+      "bufferView": 7,
+      "mimeType": "image/png"
+    },
+    {
+      "bufferView": 8,
+      "mimeType": "image/png"
+    },
+    {
+      "bufferView": 9,
+      "mimeType": "image/png"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 48
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 48,
+      "byteLength": 48
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 96,
+      "byteLength": 32
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 128,
+      "byteLength": 16
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 144,
+      "byteLength": 16,
+      "byteStride": 4
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 160,
+      "byteLength": 32
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 192,
+      "byteLength": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 204,
+      "byteLength": 84
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 288,
+      "byteLength": 74
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 364,
+      "byteLength": 81
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 448,
+      "byteLength": 48
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 496,
+      "byteLength": 48
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 544,
+      "byteLength": 48
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 592,
+      "byteLength": 64
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 656,
+      "byteLength": 16
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 672,
+      "byteLength": 64
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 736,
+      "byteLength": 128
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 864,
+      "byteLength": 8
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 872,
+      "byteLength": 24
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 896,
+      "byteLength": 4
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 900,
+      "byteLength": 48
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "type": "VEC3",
+      "count": 4,
+      "min": [
+        -1,
+        -1,
+        0
+      ],
+      "max": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "type": "VEC3",
+      "count": 4
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "type": "VEC2",
+      "count": 4
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "type": "VEC2",
+      "count": 4,
+      "normalized": true
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5121,
+      "count": 4,
+      "type": "VEC2",
+      "normalized": true
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "type": "VEC2",
+      "count": 4
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5123,
+      "type": "SCALAR",
+      "count": 6
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "type": "VEC3",
+      "count": 4,
+      "min": [
+        0.1,
+        0,
+        0
+      ],
+      "max": [
+        0.1,
+        0,
+        0
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "count": 4,
+      "sparse": {
+        "count": 4,
+        "indices": {
+          "bufferView": 19,
+          "componentType": 5121
+        },
+        "values": {
+          "bufferView": 20
+        }
+      }
+    },
+    {
+      "bufferView": 12,
+      "componentType": 5126,
+      "type": "VEC3",
+      "count": 4
+    },
+    {
+      "bufferView": 13,
+      "componentType": 5126,
+      "type": "VEC4",
+      "count": 4
+    },
+    {
+      "bufferView": 14,
+      "componentType": 5121,
+      "type": "VEC4",
+      "count": 4
+    },
+    {
+      "bufferView": 15,
+      "componentType": 5126,
+      "type": "VEC4",
+      "count": 4
+    },
+    {
+      "bufferView": 16,
+      "componentType": 5126,
+      "type": "MAT4",
+      "count": 2
+    },
+    {
+      "bufferView": 17,
+      "componentType": 5126,
+      "type": "SCALAR",
+      "count": 2
+    },
+    {
+      "bufferView": 18,
+      "componentType": 5126,
+      "type": "SCALAR",
+      "count": 6
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "sparse.bin",
+      "byteLength": 948
+    }
+  ],
+  "skins": [
+    {
+      "joints": [
+        2,
+        3
+      ],
+      "inverseBindMatrices": 13,
+      "skeleton": 1
+    }
+  ],
+  "animations": [
+    {
+      "name": "independent frame deltas",
+      "samplers": [
+        {
+          "input": 14,
+          "output": 15,
+          "interpolation": "LINEAR"
+        }
+      ],
+      "channels": [
+        {
+          "sampler": 0,
+          "target": {
+            "node": 0,
+            "path": "weights"
+          }
+        }
+      ]
+    }
+  ]
+}

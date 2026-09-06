@@ -320,31 +320,84 @@ pub(super) fn append(
                 let map = target
                     .as_object()
                     .ok_or_else(|| bad("morph target must be object"))?;
-                if map.len() != 1 || !map.contains_key("POSITION") {
+                if map.is_empty()
+                    || map
+                        .keys()
+                        .any(|k| !matches!(k.as_str(), "POSITION" | "NORMAL" | "TANGENT"))
+                {
                     return Err(unsupported(
-                        "morph profile requires POSITION only; normal/tangent morphs unsupported",
+                        "morph profile supports POSITION, NORMAL and TANGENT",
                     ));
                 }
-                let a =
-                    vertex_accessor(root, buffers, index(&target["POSITION"])?, "VEC3", 3, false)?;
-                if a.count != geometry.positions.len() {
-                    return Err(bad("morph point count"));
-                }
-                total_offsets += a.count;
-                if total_offsets > 131072 {
-                    return Err(Error::new("budget", "131072 imported morph offsets"));
-                }
-                let mid = id(&format!("node:{ni}:primitive:{pi}:morph"), ti)?;
-                morphs.push(rigging::Morph {
-                    id: mid,
-                    topology: topology.clone(),
-                    default_weight: defaults.map(|v| number(&v[ti])).transpose()?.unwrap_or(0.),
-                    offsets: geometry
+                let mut decode = |semantic: &str| -> Result<BTreeMap<u64, [f64; 3]>> {
+                    let Some(value) = target.get(semantic) else {
+                        return Ok(BTreeMap::new());
+                    };
+                    if p["attributes"].get(semantic).is_none() {
+                        return Err(bad("morph semantic requires its base attribute"));
+                    }
+                    let a = vertex_accessor(root, buffers, index(value)?, "VEC3", 3, false)?;
+                    if a.count != geometry.positions.len() {
+                        return Err(bad("morph point count"));
+                    }
+                    total_offsets += a.count;
+                    if total_offsets > 131072 {
+                        return Err(Error::new(
+                            "budget",
+                            "131072 imported morph offsets across all semantics",
+                        ));
+                    }
+                    Ok(geometry
                         .point_ids
                         .iter()
                         .copied()
                         .zip(a.floats::<3>()?.into_iter().map(|v| v.map(f64::from)))
-                        .collect(),
+                        .collect())
+                };
+                let offsets = decode("POSITION")?;
+                let normal = decode("NORMAL")?;
+                let tangent = decode("TANGENT")?;
+                let mut normal_offsets = None;
+                let mut tangent_offsets = None;
+                if !normal.is_empty() || !tangent.is_empty() {
+                    let normal_id = geometry
+                        .attributes
+                        .get("normal")
+                        .ok_or_else(|| unsupported("authored morph frames require base normals"))?
+                        .id;
+                    let tangent_id = geometry.attributes.get("tangent").map(|a| a.id);
+                    let sign_id = geometry.attributes.get("tangent_sign").map(|a| a.id);
+                    state.shading_frames.insert(
+                        child,
+                        rigging::FrameBinding {
+                            topology: topology.clone(),
+                            normal: normal_id,
+                            tangent: tangent_id,
+                            tangent_sign: sign_id,
+                        },
+                    );
+                    if !normal.is_empty() {
+                        normal_offsets = Some(rigging::DirectionOffsets {
+                            attribute: normal_id,
+                            offsets: normal,
+                        });
+                    }
+                    if !tangent.is_empty() {
+                        tangent_offsets = Some(rigging::DirectionOffsets {
+                            attribute: tangent_id
+                                .ok_or_else(|| bad("morph tangent base missing"))?,
+                            offsets: tangent,
+                        });
+                    }
+                }
+                let mid = id(&format!("node:{ni}:primitive:{pi}:morph"), ti)?;
+                morphs.push(rigging::Morph {
+                    normal_offsets,
+                    tangent_offsets,
+                    id: mid,
+                    topology: topology.clone(),
+                    default_weight: defaults.map(|v| number(&v[ti])).transpose()?.unwrap_or(0.),
+                    offsets,
                 });
                 mids.push(mid);
             }
@@ -712,12 +765,17 @@ pub(super) fn append(
     if commands.len() + 1 > 256 {
         return Err(Error::new("budget", "import exceeds 256 commands"));
     }
+    let authored_frames = !state.shading_frames.is_empty();
     commands.push(Command::MergeAnimation { animation: state });
     report.profile = "gltf2-animated-pbr-v0".into();
     report.losses.push("Animation and skin names remain in the original source; native IDs and complete converted channels/bindings are retained. Imported node and rig tracks are separate native authoring components.".into());
     report.losses.push(format!(
         "Maximum source quaternion squared-norm correction: {quaternion_error:.9e}"
     ));
-    report.losses.push("Absolute TRS clips; float32 key times retained exactly within rational limits; unit rotation keys renormalized within 1e-3 squared-norm error. Skin weights normalized within 0.01 of unity, duplicate influences combined. Deformation recomputes flat geometric normals; POSITION-only morphs; no animation/skin glTF export. Single-time clips use a one-second constant interval.".into());
+    if authored_frames {
+        report.losses.push("gltf2-morph-frames-v1: POSITION/NORMAL/TANGENT deltas before affine skinning; typed authored frames for entities with direction targets, geometric normals for other deformed entities. Blended inverse-transpose normals and linear tangents normalize; determinant adjusts handedness. Absolute TRS clips, exact rational float32 times, bounded quaternion/skin-weight normalization as in animated-pbr-v0. Singular/zero direction frames fail; no animated source export.".into());
+    } else {
+        report.losses.push("Absolute TRS clips; float32 key times retained exactly within rational limits; unit rotation keys renormalized within 1e-3 squared-norm error. Skin weights normalized within 0.01 of unity, duplicate influences combined. Deformation recomputes flat geometric normals; POSITION-only morphs; no animation/skin glTF export. Single-time clips use a one-second constant interval.".into());
+    }
     Ok(())
 }

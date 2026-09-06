@@ -488,6 +488,8 @@ impl Clip {
 #[derive(Clone, Debug, Default, PartialEq, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct State {
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub shading_frames: BTreeMap<Id, crate::rigging::FrameBinding>,
     pub clips: BTreeMap<Id, Clip>,
     pub rigs: BTreeMap<Id, crate::rigging::Rig>,
     pub skins: BTreeMap<Id, crate::rigging::Skin>,
@@ -510,6 +512,14 @@ fn entity_mesh(s: &Snapshot, id: Id) -> Result<&crate::geometry::Mesh> {
         })
 }
 impl State {
+    pub fn needs_v13(&self) -> bool {
+        !self.shading_frames.is_empty()
+            || self
+                .morphs
+                .values()
+                .flatten()
+                .any(|m| m.normal_offsets.is_some() || m.tangent_offsets.is_some())
+    }
     pub fn needs_v11(&self) -> bool {
         self.clips
             .values()
@@ -522,7 +532,11 @@ impl State {
                 .any(|m| m.default_weight != 0.)
     }
     pub fn merge(&mut self, other: &Self) -> Result<()> {
-        if other.clips.keys().any(|k| self.clips.contains_key(k))
+        if other
+            .shading_frames
+            .keys()
+            .any(|k| self.shading_frames.contains_key(k))
+            || other.clips.keys().any(|k| self.clips.contains_key(k))
             || other.rigs.keys().any(|k| self.rigs.contains_key(k))
             || other.skins.keys().any(|k| self.skins.contains_key(k))
             || other.morphs.keys().any(|k| self.morphs.contains_key(k))
@@ -532,6 +546,7 @@ impl State {
                 "animation merge would replace authored components",
             ));
         }
+        self.shading_frames.extend(other.shading_frames.clone());
         self.clips.extend(other.clips.clone());
         self.rigs.extend(other.rigs.clone());
         self.skins.extend(other.skins.clone());
@@ -539,7 +554,8 @@ impl State {
         Ok(())
     }
     pub fn validate(&self, s: &Snapshot) -> Result<()> {
-        if self.clips.len() > 128
+        if self.shading_frames.len() > 256
+            || self.clips.len() > 128
             || self.rigs.len() > 64
             || self.skins.len() > 256
             || self.morphs.len() > 256
@@ -582,6 +598,38 @@ impl State {
                     return Err(Error::new("duplicate_id", "duplicate morph target"));
                 }
                 m.validate(mesh)?;
+            }
+        }
+        for (id, frame) in &self.shading_frames {
+            if !self.skins.contains_key(id) && !self.morphs.contains_key(id) {
+                return Err(Error::new(
+                    "deformation_frame",
+                    "frame binding requires a deformation component",
+                ));
+            }
+            frame.validate(entity_mesh(s, *id)?)?;
+        }
+        for (id, morphs) in &self.morphs {
+            for m in morphs {
+                for (offsets, normal) in [(&m.normal_offsets, true), (&m.tangent_offsets, false)] {
+                    if let Some(offsets) = offsets {
+                        let frame = self.shading_frames.get(id).ok_or_else(|| {
+                            Error::new("reference", "morph directions require a frame binding")
+                        })?;
+                        if Some(offsets.attribute)
+                            != if normal {
+                                Some(frame.normal)
+                            } else {
+                                frame.tangent
+                            }
+                        {
+                            return Err(Error::new(
+                                "reference",
+                                "morph direction attribute differs from frame binding",
+                            ));
+                        }
+                    }
+                }
             }
         }
         for (id, clip) in &self.clips {
@@ -658,11 +706,15 @@ pub fn evaluate(
         &authored_revision,
         clip,
         time,
-        "affine-lbs-v0",
+        if state.shading_frames.is_empty() {
+            "affine-lbs-v0"
+        } else {
+            "affine-lbs-authored-frames-v1"
+        },
     ))?);
     let (out, deformed_points) = evaluate_sample(snapshot, &sampled, &mut cancelled)?;
     Ok(Evaluated { snapshot: out, receipt: Receipt { authored_revision, clip, time, evaluation_digest, deformed_points,
-        approximation: "typed absolute TRS or affine rest plus pose deltas; morphs before LBS; explicit skin binds; flat geometric deformation normals".into() } })
+        approximation: if state.shading_frames.is_empty() { "typed absolute TRS or affine rest plus pose deltas; morphs before LBS; explicit skin binds; flat geometric deformation normals" } else { "affine-lbs-authored-frames-v1: additive directions before skinning; inverse-transpose blended normals; linear blended tangents; determinant handedness; normalized directions; geometric fallback for unbound entities" }.into() } })
 }
 pub(crate) fn evaluate_rest(
     snapshot: &Snapshot,
@@ -720,6 +772,11 @@ fn evaluate_sample(
             return Err(Error::new("cancelled", "deformation cancelled"));
         }
         let mut mesh = entity_mesh(&out, entity)?.clone();
+        let mut frames = state
+            .shading_frames
+            .get(&entity)
+            .map(|f| crate::rigging::PreparedFrames::new(f, &mesh))
+            .transpose()?;
         let mut positions: Vec<_> = (0..mesh.positions.len())
             .map(|i| mesh.positions.get(i))
             .collect();
@@ -731,6 +788,9 @@ fn evaluate_sample(
                     .copied()
                     .unwrap_or(morph.default_weight);
                 if weight != 0. {
+                    if let Some(f) = &mut frames {
+                        f.morph(morph, weight, &mesh, &mut cancelled)?;
+                    }
                     for (i, id) in mesh.point_ids.iter().enumerate() {
                         if let Some(delta) = morph.offsets.get(id) {
                             positions[i] += DVec3::from_array(*delta) * weight;
@@ -770,6 +830,8 @@ fn evaluate_sample(
                     ))
                 })
                 .collect::<Result<_>>()?;
+            let mut direction_matrices =
+                frames.as_ref().map(|_| Vec::with_capacity(positions.len()));
             for (i, id) in mesh.point_ids.iter().enumerate() {
                 if cancelled() {
                     return Err(Error::new("cancelled", "skinning cancelled"));
@@ -780,6 +842,16 @@ fn evaluate_sample(
                         * influence.weight;
                 }
                 positions[i] = point;
+                if let Some(out) = &mut direction_matrices {
+                    let mut linear = glam::DMat3::ZERO;
+                    for influence in &skin.weights[id] {
+                        linear += matrices[&influence.joint].matrix3 * influence.weight;
+                    }
+                    out.push(linear);
+                }
+            }
+            if let (Some(f), Some(matrices)) = (&mut frames, direction_matrices) {
+                f.skin(&matrices, &mesh, &mut cancelled)?;
             }
         }
         deformed_points += positions.len();
@@ -787,8 +859,13 @@ fn evaluate_sample(
             crate::geometry::Positions::F64(positions.into_iter().map(|p| p.to_array()).collect());
         // Flat geometric normals are the explicit deformation profile. Stale
         // imported shading frames must never be reused after morph/LBS changes.
-        mesh.attributes
-            .retain(|_, a| !matches!(a.semantic.as_str(), "normal" | "tangent" | "tangent_sign"));
+        if let Some(f) = frames {
+            f.write(&mut mesh)?;
+        } else {
+            mesh.attributes.retain(|_, a| {
+                !matches!(a.semantic.as_str(), "normal" | "tangent" | "tangent_sign")
+            });
+        }
         mesh.validate()?;
         let key = mesh.content_id()?;
         out.meshes.insert(key.clone(), std::sync::Arc::new(mesh));

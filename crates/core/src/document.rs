@@ -346,7 +346,8 @@ impl Snapshot {
         Ok(digest(&canonical(self)?))
     }
     pub fn validate(&self) -> Result<()> {
-        if self.version > 12
+        if self.version > 13
+            || (self.version < 13 && self.animation.as_ref().is_some_and(|a| a.needs_v13()))
             || (self.version < 12
                 && self.materials.values().any(|m| {
                     m.pbr.as_ref().is_some_and(|p| {
@@ -1150,7 +1151,9 @@ fn apply(s: &mut Snapshot, c: &Command) -> Result<()> {
             s.animation = animation.clone();
             s.version = s
                 .version
-                .max(if animation.as_ref().is_some_and(|a| a.needs_v11()) {
+                .max(if animation.as_ref().is_some_and(|a| a.needs_v13()) {
+                    13
+                } else if animation.as_ref().is_some_and(|a| a.needs_v11()) {
                     11
                 } else {
                     6
@@ -1160,7 +1163,13 @@ fn apply(s: &mut Snapshot, c: &Command) -> Result<()> {
             s.animation
                 .get_or_insert_with(Default::default)
                 .merge(animation)?;
-            s.version = s.version.max(if animation.needs_v11() { 11 } else { 6 });
+            s.version = s.version.max(if animation.needs_v13() {
+                13
+            } else if animation.needs_v11() {
+                11
+            } else {
+                6
+            });
         }
         Command::SetGroom { entity: id, groom } => {
             entity(s, *id)?;

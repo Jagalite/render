@@ -1,0 +1,37 @@
+{
+  "license": "CC0-1.0",
+  "authorship": "Original quad, frame deltas, two-joint diagonal skin and directly encoded PNGs",
+  "oracle": "Blend matrix diag(1.5,2,1). At clip time t: position=(1.5*(x+.1*t),2*y,0), normal=normalize((t/3,0,1)), tangent=normalize((1.5,.5*t,0)), sign +1. Mesh node translation is ignored by glTF skin semantics.",
+  "artifacts": [
+    {
+      "file": "dense.bin",
+      "bytes": 896,
+      "sha256": "7c7916ec90a1e609bb7e2a3a802003887083e6bdeb198bfb982251adbf339d2d"
+    },
+    {
+      "file": "dense.glb",
+      "bytes": 4508,
+      "sha256": "093ceccad8c6ee05036260c46e76a94ab100cc22ef1c9cb3c997c98e9cf851c8"
+    },
+    {
+      "file": "dense.gltf",
+      "bytes": 6729,
+      "sha256": "85d1d2c557be4227a9155842dae9631da57db63cb35dc7946bfade5c63fcc9f7"
+    },
+    {
+      "file": "sparse.bin",
+      "bytes": 948,
+      "sha256": "fd30ce10df0ccca5b18489e962c60b052aa2b4cd2bb8f34f3ae569366bd90973"
+    },
+    {
+      "file": "sparse.glb",
+      "bytes": 4732,
+      "sha256": "e54821d10e440fc1100961717fb0fde84f208cfb30df1b5f919391e639bce931"
+    },
+    {
+      "file": "sparse.gltf",
+      "bytes": 7061,
+      "sha256": "921c9f6a8a49c1623186421cb03aa7c64659fb696a2d420ab394d2e9ad0bd661"
+    }
+  ]
+}

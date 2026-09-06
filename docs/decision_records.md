@@ -262,3 +262,21 @@ changes or editor mutation paths are introduced.
 **Revisit trigger:** Larger coordinate tables, texture transforms, selected bake
 destinations or source-format material export require separately validated profiles.
 GPU alpha remains a transport gate independent of coordinate selection.
+
+## ADR-021 — Opt-in authored directions under morphing and affine skinning
+
+**Decision:** Add typed stable-attribute direction offsets and per-entity authored
+frame bindings, gated by snapshot v13. Apply morph deltas before the weighted
+linear skin transform, inverse-transpose normals, transform tangents linearly,
+adjust handedness by determinant and normalize directions. Reject singular/zero
+frames explicitly. Preserve the geometric-normal default and old canonical bytes.
+
+**Integration boundary:** Source semantic/count validation, point/corner identity,
+ordinary animation transactions, immutable evaluation, frame receipts and shared
+CPU/GPU consumers follow the [morph-frame contract](morph_frames.md). No shader,
+ABI layout or runtime dependency changes are needed. Independent scalar oracles
+separate deformation accuracy from the existing binary16 GPU texture profile.
+
+**Revisit trigger:** Morph UV/colors, other skinning modes, reconstructed smooth
+frames, or larger imported offset profiles require new numerical, resource and
+recovery evidence. General animated source export remains a separate gate.

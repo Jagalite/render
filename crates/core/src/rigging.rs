@@ -6,6 +6,9 @@ use crate::{
     geometry::*,
 };
 use glam::{DAffine3, DQuat, DVec3};
+mod frames;
+pub(crate) use frames::PreparedFrames;
+pub use frames::{DirectionOffsets, FrameBinding};
 use serde::{Deserialize, Serialize};
 use std::collections::{BTreeMap, BTreeSet};
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
@@ -381,6 +384,10 @@ pub struct Skin {
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Morph {
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub normal_offsets: Option<DirectionOffsets>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub tangent_offsets: Option<DirectionOffsets>,
     #[serde(default, skip_serializing_if = "is_zero")]
     pub default_weight: f64,
     pub id: Id,
@@ -468,12 +475,20 @@ impl Morph {
             return Err(Error::new("stale_topology", "morph topology changed"));
         }
         let points: BTreeSet<_> = mesh.point_ids.iter().copied().collect();
-        if self.offsets.is_empty()
+        if (self.offsets.is_empty()
+            && self.normal_offsets.is_none()
+            && self.tangent_offsets.is_none())
             || self.offsets.iter().any(|(id, p)| {
                 !points.contains(id) || p.iter().any(|x| !x.is_finite() || x.abs() > 1e6)
             })
         {
             return Err(Error::new("morph", "invalid sparse point offsets"));
+        }
+        if let Some(v) = &self.normal_offsets {
+            v.validate(mesh, "normal")?;
+        }
+        if let Some(v) = &self.tangent_offsets {
+            v.validate(mesh, "tangent")?;
         }
         Ok(())
     }

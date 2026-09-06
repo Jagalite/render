@@ -430,6 +430,8 @@ pub fn character_document() -> Result<Document> {
             .collect(),
     };
     let morph = Morph {
+        normal_offsets: None,
+        tangent_offsets: None,
         default_weight: 0.,
         id: Id(8300),
         topology,
@@ -494,6 +496,7 @@ pub fn character_document() -> Result<Document> {
         ],
     };
     let animation = State {
+        shading_frames: BTreeMap::new(),
         clips: BTreeMap::from([(clip.id, clip)]),
         rigs: BTreeMap::from([(Id(8200), rig)]),
         skins: BTreeMap::from([(Id(8201), skin)]),

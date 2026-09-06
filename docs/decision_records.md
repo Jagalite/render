@@ -417,3 +417,22 @@ synchronous, while core/native cancellation checks precede atomic publication.
 **Revisit trigger:** Trilinear reconstruction, spectral conversion, source round-trip
 history, external paging, other formats or GPU media require separate numerical,
 resource, failure and native/browser workflow evidence. This is not a simulation gate.
+
+## ADR-030 — External HAIR strands retain native curves under explicit interpretation
+
+**Decision:** Parse bounded HAIR polylines in shared Rust with caller-selected byte
+order, metric scale, thickness meaning and color/coverage interpretation. Retain
+stable strand/control identities and varying radius. Group uniform per-strand
+appearances into existing native curves/materials; reject unsupported variation.
+
+**Integration boundary:** The [HAIR profile](hair_import.md) joins binary source
+admission, native sweep preflight, material coverage and transactional native/browser
+persistence. Derived resource limits are checked before ordinary geometry commands
+publish. No snapshot, FFI shape, shader or computational-runtime dependency changes.
+The profile is a polygon-surface interpretation, not physical fiber scattering.
+Disposable f64 JSON byte length is explicitly a platform-local observation; actual
+evaluator receipts validate it while source identities and counts remain shared.
+
+**Revisit trigger:** Per-control color attributes, analytic curve intersections,
+physical fiber scattering, root-bound animation, source-container history or larger
+paging profiles require their own semantics, resource and platform acceptance gates.

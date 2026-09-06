@@ -1,0 +1,44 @@
+{
+  "license": "CC0-1.0",
+  "author": "Render project original analytic strands",
+  "generator": "fixtures/hair-import/generate.py",
+  "format_reference": "https://www.cemyuksel.com/research/hairmodels/",
+  "files": [
+    {
+      "file": "default-le.hair",
+      "sha256": "90b742445543dc6b3aef63c8bebb04946e0d0404c018fe7b5db0cd87dc04e2f3",
+      "bytes": 200,
+      "byte_order": "little_endian",
+      "strands": 2,
+      "points": 6,
+      "flags": 2
+    },
+    {
+      "file": "default-be.hair",
+      "sha256": "b8dd3765251ee545d0dfbd9067ce035aaeb6741f67a234e6fe6a00c7da6af3e4",
+      "bytes": 200,
+      "byte_order": "big_endian",
+      "strands": 2,
+      "points": 6,
+      "flags": 2
+    },
+    {
+      "file": "arrays-le.hair",
+      "sha256": "5b65b9a8747601bfaaa0d60bf048421a689cfc1cf90163695c0226c6a9761d5f",
+      "bytes": 356,
+      "byte_order": "little_endian",
+      "strands": 2,
+      "points": 7,
+      "flags": 31
+    },
+    {
+      "file": "arrays-be.hair",
+      "sha256": "7a7d7a32ad2240a9b569fa4dcf38bf190e0acc8a8af2cc631354f638454db472",
+      "bytes": 356,
+      "byte_order": "big_endian",
+      "strands": 2,
+      "points": 7,
+      "flags": 31
+    }
+  ]
+}

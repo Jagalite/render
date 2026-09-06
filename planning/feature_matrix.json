@@ -188,14 +188,14 @@
         "M09",
         "M11"
       ],
-      "qualification": "Authored polyline/Bezier/rational B-spline, point radii and anchored guide/child grooms with bounded sweeps; sparse RGB cell media with Rust CPU single scattering. VOL3 input has explicit cell/metric/optical policy and native/browser CPU recovery evidence.",
+      "qualification": "Authored polyline/Bezier/rational B-spline, point radii and anchored guide/child grooms with bounded sweeps; sparse RGB cell media with Rust CPU single scattering. VOL3 input has explicit cell/metric/optical policy and native/browser CPU recovery evidence. HAIR polylines preserve varying radius and uniform-per-strand appearance with explicit source interpretation and bounded sweep preflight.",
       "capability_axes": {
         "native_authoring": "ordinary_revision_checked_typed_transactions",
         "native_evaluation": "named_Rust_profiles_in_docs/m07_m08.md",
         "final_render": "native_and_browser_Rust_CPU; GPU_only_declared_geometry_and_surface_profiles",
         "preview": "public_Rust_render_preview_operations; raster_legacy_only",
         "human_editing": "planned_M09",
-        "import": "native_typed_JSON; vol3_cell_constant_v1_density_and_optional_RGB_emission; other_external_adapters_retain_INPUT_track_limits",
+        "import": "native_typed_JSON; vol3_cell_constant_v1_density_and_optional_RGB_emission; other_external_adapters_retain_INPUT_track_limits; hair_polyline_surface_v1_with_uniform_per_strand_appearance",
         "export": "canonical_JSON_native_package_and_typed_render_artifacts; gltf2_evaluated_pbr_export_v1_with_explicit_losses"
       },
       "platform_profiles": {
@@ -205,7 +205,8 @@
       "evidence": [
         "evidence/m06-m08/README.md",
         "evidence/gltf-export/README.md",
-        "evidence/volume-import/README.md"
+        "evidence/volume-import/README.md",
+        "evidence/hair-import/README.md"
       ]
     },
     {

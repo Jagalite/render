@@ -1,0 +1,10 @@
+   Compiling render-core v0.1.0 (/private/tmp/render-hair-import-20260906/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 2.74s
+     Running tests/hair_import.rs (target/debug/deps/hair_import-e82f214a727f3be3)
+
+running 3 tests
+test endian_defaults_arrays_units_materials_and_native_geometry_oracle ... ok
+test transactions_permissions_stale_cancel_durable_recovery_and_geometry ... ok
+test malformed_unsupported_and_bounded_sweep_failures ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.78s

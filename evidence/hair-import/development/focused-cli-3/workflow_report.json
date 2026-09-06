@@ -1,0 +1,1933 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "default-le-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/000-default-le-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08816333299910184
+    },
+    {
+      "name": "default-le-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/001-default-le-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.010270250000758097
+    },
+    {
+      "name": "default-le-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/002-default-le-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04995462500664871,
+      "resources": {
+        "maximum resident set size": 17088512,
+        "peak memory footprint": 2917440
+      }
+    },
+    {
+      "name": "default-le-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/003-default-le-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014996416997746564
+    },
+    {
+      "name": "default-le-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/004-default-le-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.009502832996076904
+    },
+    {
+      "name": "default-le-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/005-default-le-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.058893333000014536,
+      "resources": {
+        "maximum resident set size": 18268160,
+        "peak memory footprint": 3228736
+      }
+    },
+    {
+      "name": "default-le-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/006-default-le-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.24172199999156874,
+      "resources": {
+        "maximum resident set size": 36012032,
+        "peak memory footprint": 12486208
+      }
+    },
+    {
+      "name": "default-le-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/007-default-le-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03049012500559911
+    },
+    {
+      "name": "default-le-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/008-default-le-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0237635420053266
+    },
+    {
+      "name": "default-le-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/009-default-le-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05024675000458956
+    },
+    {
+      "name": "default-le-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/010-default-le-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19726579199777916
+    },
+    {
+      "name": "default-le-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/011-default-le-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.01659104198915884
+    },
+    {
+      "name": "zero-radius",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/012-zero-radius.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "curve",
+      "seconds": 0.009070250001968816
+    },
+    {
+      "name": "flags",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/013-flags.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_hair",
+      "seconds": 0.008377458012546413
+    },
+    {
+      "name": "trailing",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/014-trailing.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "hair",
+      "seconds": 0.008073709002928808
+    },
+    {
+      "name": "sweep-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/015-sweep-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.008326166003826074
+    },
+    {
+      "name": "cancel-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/016-cancel-import.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.00541450000309851
+    },
+    {
+      "name": "input-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/017-input-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.0050534579931991175
+    },
+    {
+      "name": "cancel-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/018-cancel-render.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.00491695900564082
+    },
+    {
+      "name": "budget-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/budget-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/019-budget-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017895167009555735
+    },
+    {
+      "name": "transaction-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/budget-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/020-transaction-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.009008249995531514
+    },
+    {
+      "name": "budget-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/budget-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/021-budget-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0065065830131061375
+    },
+    {
+      "name": "default-le-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/022-default-le-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.009394790991791524
+    },
+    {
+      "name": "default-be-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/023-default-be-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020654749998357147
+    },
+    {
+      "name": "default-be-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/024-default-be-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0069332919956650585
+    },
+    {
+      "name": "default-be-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/025-default-be-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02785704100097064,
+      "resources": {
+        "maximum resident set size": 17088512,
+        "peak memory footprint": 2917440
+      }
+    },
+    {
+      "name": "default-be-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/026-default-be-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014832749991910532
+    },
+    {
+      "name": "default-be-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/027-default-be-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.009463458001846448
+    },
+    {
+      "name": "default-be-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/028-default-be-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05043062499316875,
+      "resources": {
+        "maximum resident set size": 18268160,
+        "peak memory footprint": 3228736
+      }
+    },
+    {
+      "name": "default-be-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/029-default-be-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2028580409969436,
+      "resources": {
+        "maximum resident set size": 35930112,
+        "peak memory footprint": 12404288
+      }
+    },
+    {
+      "name": "default-be-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/030-default-be-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03053600000566803
+    },
+    {
+      "name": "default-be-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-be-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/031-default-be-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022836250005639158
+    },
+    {
+      "name": "default-be-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-be-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/032-default-be-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05400358300539665
+    },
+    {
+      "name": "default-be-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-be-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/033-default-be-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19733054100652225
+    },
+    {
+      "name": "default-be-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/034-default-be-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.016241541001363657
+    },
+    {
+      "name": "default-be-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/035-default-be-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.010302875001798384
+    },
+    {
+      "name": "arrays-le-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/036-arrays-le-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01977850000548642
+    },
+    {
+      "name": "arrays-le-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/037-arrays-le-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007298458003788255
+    },
+    {
+      "name": "arrays-le-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/038-arrays-le-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02972283400595188,
+      "resources": {
+        "maximum resident set size": 17350656,
+        "peak memory footprint": 3048576
+      }
+    },
+    {
+      "name": "arrays-le-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/039-arrays-le-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018030208011623472
+    },
+    {
+      "name": "arrays-le-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/040-arrays-le-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.010802208998939022
+    },
+    {
+      "name": "arrays-le-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/041-arrays-le-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05253708398959134,
+      "resources": {
+        "maximum resident set size": 18628608,
+        "peak memory footprint": 3490944
+      }
+    },
+    {
+      "name": "arrays-le-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/042-arrays-le-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2061882090056315,
+      "resources": {
+        "maximum resident set size": 36257792,
+        "peak memory footprint": 12617344
+      }
+    },
+    {
+      "name": "arrays-le-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/043-arrays-le-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03162062499905005
+    },
+    {
+      "name": "arrays-le-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-le-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/044-arrays-le-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02499662499758415
+    },
+    {
+      "name": "arrays-le-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-le-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/045-arrays-le-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05574233300285414
+    },
+    {
+      "name": "arrays-le-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-le-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/046-arrays-le-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20150637500046287
+    },
+    {
+      "name": "arrays-le-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/047-arrays-le-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.019696417002705857
+    },
+    {
+      "name": "arrays-le-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/048-arrays-le-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011275625001871958
+    },
+    {
+      "name": "arrays-be-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/049-arrays-be-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017743457996402867
+    },
+    {
+      "name": "arrays-be-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/050-arrays-be-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006971875001909211
+    },
+    {
+      "name": "arrays-be-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/051-arrays-be-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02697575000638608,
+      "resources": {
+        "maximum resident set size": 17481728,
+        "peak memory footprint": 3179648
+      }
+    },
+    {
+      "name": "arrays-be-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/052-arrays-be-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017668625005171634
+    },
+    {
+      "name": "arrays-be-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/053-arrays-be-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.010782416997244582
+    },
+    {
+      "name": "arrays-be-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/054-arrays-be-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05362391700327862,
+      "resources": {
+        "maximum resident set size": 18513920,
+        "peak memory footprint": 3359808
+      }
+    },
+    {
+      "name": "arrays-be-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/055-arrays-be-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20445145799021702,
+      "resources": {
+        "maximum resident set size": 36470784,
+        "peak memory footprint": 12830336
+      }
+    },
+    {
+      "name": "arrays-be-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/056-arrays-be-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030436166998697445
+    },
+    {
+      "name": "arrays-be-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-be-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/057-arrays-be-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022849374989164062
+    },
+    {
+      "name": "arrays-be-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-be-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/058-arrays-be-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05381295899860561
+    },
+    {
+      "name": "arrays-be-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-be-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/059-arrays-be-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2034090829984052
+    },
+    {
+      "name": "arrays-be-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/060-arrays-be-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.020013750006910414
+    },
+    {
+      "name": "arrays-be-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-be-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/061-arrays-be-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011244666995480657
+    },
+    {
+      "name": "srgb-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/srgb-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/062-srgb-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020548250002320856
+    },
+    {
+      "name": "srgb-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/srgb-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/063-srgb-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007114291001926176
+    },
+    {
+      "name": "srgb-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/srgb-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/064-srgb-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024876040988601744,
+      "resources": {
+        "maximum resident set size": 17154048,
+        "peak memory footprint": 2966592
+      }
+    },
+    {
+      "name": "srgb-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/srgb-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/065-srgb-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014792125002713874
+    },
+    {
+      "name": "srgb-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/srgb-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/066-srgb-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.009807416994590312
+    },
+    {
+      "name": "srgb-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/srgb-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/067-srgb-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05044979199010413,
+      "resources": {
+        "maximum resident set size": 18268160,
+        "peak memory footprint": 3228736
+      }
+    },
+    {
+      "name": "srgb-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/srgb-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/068-srgb-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19507050000538584,
+      "resources": {
+        "maximum resident set size": 35913728,
+        "peak memory footprint": 12404352
+      }
+    },
+    {
+      "name": "srgb-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/srgb-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/069-srgb-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.029642540990607813
+    },
+    {
+      "name": "srgb-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/srgb-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/070-srgb-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02361716699670069
+    },
+    {
+      "name": "srgb-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/srgb-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/071-srgb-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05276725000294391
+    },
+    {
+      "name": "srgb-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/srgb-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/072-srgb-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19652958400547504
+    },
+    {
+      "name": "srgb-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/srgb-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/073-srgb-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.016204957995796576
+    },
+    {
+      "name": "srgb-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/srgb-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/074-srgb-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.010118207996129058
+    },
+    {
+      "name": "scaled-radius-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/scaled-radius-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/075-scaled-radius-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018884915989474393
+    },
+    {
+      "name": "scaled-radius-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/scaled-radius-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/076-scaled-radius-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006778666996979155
+    },
+    {
+      "name": "scaled-radius-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/scaled-radius-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/077-scaled-radius-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.028707667006528936,
+      "resources": {
+        "maximum resident set size": 17383424,
+        "peak memory footprint": 3212352
+      }
+    },
+    {
+      "name": "scaled-radius-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/scaled-radius-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/078-scaled-radius-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01588754099793732
+    },
+    {
+      "name": "scaled-radius-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/scaled-radius-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/079-scaled-radius-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.009609957996872254
+    },
+    {
+      "name": "scaled-radius-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/scaled-radius-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/080-scaled-radius-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05787716699705925,
+      "resources": {
+        "maximum resident set size": 18530304,
+        "peak memory footprint": 3490880
+      }
+    },
+    {
+      "name": "scaled-radius-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/scaled-radius-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/081-scaled-radius-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2034112080000341,
+      "resources": {
+        "maximum resident set size": 36241408,
+        "peak memory footprint": 12732032
+      }
+    },
+    {
+      "name": "scaled-radius-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/scaled-radius-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/082-scaled-radius-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.028583499995875172
+    },
+    {
+      "name": "scaled-radius-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/scaled-radius-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/083-scaled-radius-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02382591700006742
+    },
+    {
+      "name": "scaled-radius-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/scaled-radius-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/084-scaled-radius-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05868100000952836
+    },
+    {
+      "name": "scaled-radius-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/scaled-radius-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/085-scaled-radius-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20259316699230112
+    },
+    {
+      "name": "scaled-radius-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/scaled-radius-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/086-scaled-radius-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.01710704200377222
+    },
+    {
+      "name": "scaled-radius-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/scaled-radius-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/087-scaled-radius-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01003462499647867
+    }
+  ],
+  "variants": [
+    {
+      "name": "default-le",
+      "source": {
+        "format": "hair",
+        "path": "/private/tmp/render-hair-import-20260906/fixtures/hair-import/data/default-le.hair",
+        "policy": {
+          "byte_order": "little_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          }
+        }
+      },
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:b7885324513f40d39f0e28bc7972119e43fa54369620f0cd9e9b53ebb13becc5",
+      "report": {
+        "derived_json_bytes": 14303,
+        "derived_samples": 6,
+        "derived_triangles": 72,
+        "derived_vertices": 40,
+        "geometry_asset_json_bytes": 1116,
+        "input_bytes": 200,
+        "material_groups": 1,
+        "policy": {
+          "byte_order": "little_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 1.0,
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-surface-v1",
+        "source_digest": "sha256:90b742445543dc6b3aef63c8bebb04946e0d0404c018fe7b5db0cd87dc04e2f3",
+        "source_flags": 2,
+        "source_points": 6,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "2840e4c83da6e13e457f18ba34172c61",
+            "entity": "00e88b0fef49e0112fed837cc85b516e",
+            "geometry_asset": "sha256:49b6c1173b3e5a5c05a8545e24d2ec6424b96b95636ef82c9058025ec44643ff",
+            "material": "9d4c1738a7d1b87fe5c2ad345ebd8c24",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "16e3108d24f1da2e35ac9c846ae73366",
+            "entity": "00e88b0fef49e0112fed837cc85b516e",
+            "geometry_asset": "sha256:49b6c1173b3e5a5c05a8545e24d2ec6424b96b95636ef82c9058025ec44643ff",
+            "material": "9d4c1738a7d1b87fe5c2ad345ebd8c24",
+            "point_count": 3,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "gpu_linear_rmse": 1.4047877612955271e-08,
+      "archive": "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-le-archive/document/document.json",
+      "empty_revision": "sha256:7a4bd9cbf6adb9dddb30db1abe80c8a6169d6b154722d9b2d05802a720155193"
+    },
+    {
+      "name": "default-be",
+      "source": {
+        "format": "hair",
+        "path": "/private/tmp/render-hair-import-20260906/fixtures/hair-import/data/default-be.hair",
+        "policy": {
+          "byte_order": "big_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          }
+        }
+      },
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:59a5432865c5800aae930af2684d4dd0a93de56ac00e39c41c81b1e0b8f14a55",
+      "report": {
+        "derived_json_bytes": 14303,
+        "derived_samples": 6,
+        "derived_triangles": 72,
+        "derived_vertices": 40,
+        "geometry_asset_json_bytes": 1116,
+        "input_bytes": 200,
+        "material_groups": 1,
+        "policy": {
+          "byte_order": "big_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 1.0,
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-surface-v1",
+        "source_digest": "sha256:b8dd3765251ee545d0dfbd9067ce035aaeb6741f67a234e6fe6a00c7da6af3e4",
+        "source_flags": 2,
+        "source_points": 6,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "3b89fa2db1fef115f358df37f17a30a4",
+            "entity": "cec6560b92029558d067bccd4b6d7e46",
+            "geometry_asset": "sha256:e001817d5a1cee1bc3f2809a2970f9a99395092ff905e96c1597cd554a6c6e5b",
+            "material": "32e1f70ab559bcd478eddf37bdde2f2d",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "9c437f9ba0b87ece1f3e49d797f3c1cf",
+            "entity": "cec6560b92029558d067bccd4b6d7e46",
+            "geometry_asset": "sha256:e001817d5a1cee1bc3f2809a2970f9a99395092ff905e96c1597cd554a6c6e5b",
+            "material": "32e1f70ab559bcd478eddf37bdde2f2d",
+            "point_count": 3,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "gpu_linear_rmse": 1.4047877612955271e-08,
+      "archive": "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/default-be-archive/document/document.json",
+      "empty_revision": "sha256:7a4bd9cbf6adb9dddb30db1abe80c8a6169d6b154722d9b2d05802a720155193"
+    },
+    {
+      "name": "arrays-le",
+      "source": {
+        "format": "hair",
+        "path": "/private/tmp/render-hair-import-20260906/fixtures/hair-import/data/arrays-le.hair",
+        "policy": {
+          "byte_order": "little_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          }
+        }
+      },
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:c8d5956eb0bfd5a7fa37c812869a4f6a7c0870283a5d80197498f446f4283028",
+      "report": {
+        "derived_json_bytes": 29509,
+        "derived_samples": 11,
+        "derived_triangles": 132,
+        "derived_vertices": 70,
+        "geometry_asset_json_bytes": 1422,
+        "input_bytes": 356,
+        "material_groups": 2,
+        "policy": {
+          "byte_order": "little_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 1.0,
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-surface-v1",
+        "source_digest": "sha256:5b65b9a8747601bfaaa0d60bf048421a689cfc1cf90163695c0226c6a9761d5f",
+        "source_flags": 31,
+        "source_points": 7,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "ead631d91f1455b129bc4153e6666959",
+            "entity": "ba9548df1de9f8170776fd960551bd49",
+            "geometry_asset": "sha256:eee79d6d559b5e24f2980bc2c5372586d90df54794e7b082d8132dbaa2a7f573",
+            "material": "bfb2e086928bb548ab22df3e4bdf99f1",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "fba0fc9e60f15f5e044dc35abb00d12b",
+            "entity": "b6b87b138415c09ff7afa9e4be737f90",
+            "geometry_asset": "sha256:392592f33801add75228827b33f2a12dc88f09eda220623a532d4f800b28cc59",
+            "material": "2240c3b4bdc1b358ddaa9b5fdd83b867",
+            "point_count": 4,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "gpu_linear_rmse": 1.420330539793946e-08,
+      "archive": "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-le-archive/document/document.json",
+      "empty_revision": "sha256:7a4bd9cbf6adb9dddb30db1abe80c8a6169d6b154722d9b2d05802a720155193"
+    },
+    {
+      "name": "arrays-be",
+      "source": {
+        "format": "hair",
+        "path": "/private/tmp/render-hair-import-20260906/fixtures/hair-import/data/arrays-be.hair",
+        "policy": {
+          "byte_order": "big_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          }
+        }
+      },
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:a85b76475ac38ee6a8de8d21c03fc0b9cb08e40cb932a06ce4e6d88c9f422299",
+      "report": {
+        "derived_json_bytes": 29509,
+        "derived_samples": 11,
+        "derived_triangles": 132,
+        "derived_vertices": 70,
+        "geometry_asset_json_bytes": 1422,
+        "input_bytes": 356,
+        "material_groups": 2,
+        "policy": {
+          "byte_order": "big_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 1.0,
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-surface-v1",
+        "source_digest": "sha256:7a7d7a32ad2240a9b569fa4dcf38bf190e0acc8a8af2cc631354f638454db472",
+        "source_flags": 31,
+        "source_points": 7,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "cd7a43f90260f34a04045ac5c1f67ab4",
+            "entity": "1311cedc59765824ada6570cc3c9b24d",
+            "geometry_asset": "sha256:23d609a0cdc62b343a64b969005c5cc236df899153c415a8e8ed6dad27f00ae4",
+            "material": "781c7c18f3ab19f291462182f7ada260",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "d8044e4538e7bb964504a90c05dfc151",
+            "entity": "3007b82167ef927a2b36cc999e0143c4",
+            "geometry_asset": "sha256:51566720f7c02943e7d77d2f7d6922bba44de4c1339a2e1ba3af99e2f96b3cd8",
+            "material": "881c74c79572111b7f692ecc76173417",
+            "point_count": 4,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "gpu_linear_rmse": 1.420330539793946e-08,
+      "archive": "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/arrays-be-archive/document/document.json",
+      "empty_revision": "sha256:7a4bd9cbf6adb9dddb30db1abe80c8a6169d6b154722d9b2d05802a720155193"
+    },
+    {
+      "name": "srgb",
+      "source": {
+        "format": "hair",
+        "path": "/private/tmp/render-hair-import-20260906/fixtures/hair-import/data/default-le.hair",
+        "policy": {
+          "byte_order": "little_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          }
+        }
+      },
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:3e486abc8a1d06e58ff3db415710a5a4e9d3c949e4ea6a8d67255c6d75e44e44",
+      "report": {
+        "derived_json_bytes": 14303,
+        "derived_samples": 6,
+        "derived_triangles": 72,
+        "derived_vertices": 40,
+        "geometry_asset_json_bytes": 1116,
+        "input_bytes": 200,
+        "material_groups": 1,
+        "policy": {
+          "byte_order": "little_endian",
+          "color_space": "srgb",
+          "meters_per_unit": 1.0,
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-surface-v1",
+        "source_digest": "sha256:90b742445543dc6b3aef63c8bebb04946e0d0404c018fe7b5db0cd87dc04e2f3",
+        "source_flags": 2,
+        "source_points": 6,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "0ff4deb8adfbc0d4c1a233a267d9f105",
+            "entity": "dbf3901c45697d95e3d117ae121efbca",
+            "geometry_asset": "sha256:f8d3f77cd26cf44258d1c6b76faa9530465900725aacff684a50f408dd044e83",
+            "material": "67c69db36f77957fd01bba01974c8667",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "1151243ee262b595cea40b7fe84c96b2",
+            "entity": "dbf3901c45697d95e3d117ae121efbca",
+            "geometry_asset": "sha256:f8d3f77cd26cf44258d1c6b76faa9530465900725aacff684a50f408dd044e83",
+            "material": "67c69db36f77957fd01bba01974c8667",
+            "point_count": 3,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "gpu_linear_rmse": 1.3883757528782675e-08,
+      "archive": "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/srgb-archive/document/document.json",
+      "empty_revision": "sha256:7a4bd9cbf6adb9dddb30db1abe80c8a6169d6b154722d9b2d05802a720155193"
+    },
+    {
+      "name": "scaled-radius",
+      "source": {
+        "format": "hair",
+        "path": "/private/tmp/render-hair-import-20260906/fixtures/hair-import/data/default-le.hair",
+        "policy": {
+          "byte_order": "little_endian",
+          "meters_per_unit": 2,
+          "thickness": "radius",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          }
+        }
+      },
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            5
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2,
+            "ymag": 2,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:046cd97bc9895bf903b9285de6272eea51199936ab0a02d2bb73efa8add13861",
+      "report": {
+        "derived_json_bytes": 27691,
+        "derived_samples": 6,
+        "derived_triangles": 132,
+        "derived_vertices": 70,
+        "geometry_asset_json_bytes": 1108,
+        "input_bytes": 200,
+        "material_groups": 1,
+        "policy": {
+          "byte_order": "little_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 2.0,
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "radius",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-surface-v1",
+        "source_digest": "sha256:90b742445543dc6b3aef63c8bebb04946e0d0404c018fe7b5db0cd87dc04e2f3",
+        "source_flags": 2,
+        "source_points": 6,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "ef2f010e160ee5a02c1e9fe34f778609",
+            "entity": "9b38bf7e15f96d7c05b7dec17c54fa2d",
+            "geometry_asset": "sha256:8ac3f3519324c3aaf0c47ec7cef3a8e482a7b0440afc196e0d40add067330a3e",
+            "material": "8a699bd68cce81eb85850171be63b6b3",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "ece63bd56861c77b570c4ef2dce4955c",
+            "entity": "9b38bf7e15f96d7c05b7dec17c54fa2d",
+            "geometry_asset": "sha256:8ac3f3519324c3aaf0c47ec7cef3a8e482a7b0440afc196e0d40add067330a3e",
+            "material": "8a699bd68cce81eb85850171be63b6b3",
+            "point_count": 3,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "gpu_linear_rmse": 1.3619265918800826e-08,
+      "archive": "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-3/scaled-radius-archive/document/document.json",
+      "empty_revision": "sha256:7a4bd9cbf6adb9dddb30db1abe80c8a6169d6b154722d9b2d05802a720155193"
+    }
+  ]
+}

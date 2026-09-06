@@ -1,0 +1,68 @@
+{
+  "base_commit": "69a4882",
+  "candidate_branch": "feat/hair-strand-import",
+  "acceptance_run": "artifacts/hair-import/run-20260906T121018Z",
+  "timestamp_utc": "2026-09-06T12:20:04.527131+00:00",
+  "files": [
+    {
+      "path": "crates/core/src/agent.rs",
+      "sha256": "dac6f686fd019f772c624a45ea6f4295ebc6f9921885cbd9d20bf1972bd5e1ce"
+    },
+    {
+      "path": "crates/core/src/hair_import.rs",
+      "sha256": "096803a8839e22d0b1eb6ac5f38929baa74c78e38e047e72b2ee53deed4f9083"
+    },
+    {
+      "path": "crates/core/src/lib.rs",
+      "sha256": "89a3ff0e52fe8cb31ecc69ab923782f9708059966483ed7fc43a1008a6af4988"
+    },
+    {
+      "path": "crates/core/tests/hair_import.rs",
+      "sha256": "42164dea743716e26f01968201d2720c9b27180c3a87b2881358cdf9387fb3ec"
+    },
+    {
+      "path": "crates/host/src/project_cli.rs",
+      "sha256": "cae4538d4028d1d17514a863e90b63eecd4791dd6259669db8e7ed98e3dcb2b6"
+    },
+    {
+      "path": "docs/hair_import.md",
+      "sha256": "9f4ac019b5fe3fa0e5c9a93a2a36723bc23acbe64bdd13f170fe4e9df3657dbb"
+    },
+    {
+      "path": "fixtures/hair-import/generate.py",
+      "sha256": "e3bd008813766cdd17e85b99aae2ac1e0c05775ce7f135493ebcb0a7531cc528"
+    },
+    {
+      "path": "planning/engine-progress/hair-import-contract.md",
+      "sha256": "d6b46388e69d2f35d843ed624e4b75c8b61c70b42f6363a7bd2349c5dcbbc214"
+    },
+    {
+      "path": "planning/engine-progress/hair-import-review.md",
+      "sha256": "da0b536252a4e8b06812a72a6283bb89e42072a7aace003f920e9803dd7b1c36"
+    },
+    {
+      "path": "schemas/agent_request.schema.json",
+      "sha256": "dc19ba184e7bbd3bdcff9ccd9cc31c4db4b89abed8ba04b996a196bf5661c0e7"
+    },
+    {
+      "path": "scripts/collect-hair-import-evidence.py",
+      "sha256": "242f0796111170afbc6e281b0a6147c4a8a2d5c1ae11562d6b766b836a520f3a"
+    },
+    {
+      "path": "scripts/hair-import-browser.mjs",
+      "sha256": "c81fa5b61b278be0f0e2e09cee5e11dc71c97f61c7dc540c4e97327a008549e1"
+    },
+    {
+      "path": "scripts/hair-import-workflow.py",
+      "sha256": "9108d2524f1560f190c5a12f4817f1123f5ab32a90c8026bc06f9ec51cb3bc2a"
+    },
+    {
+      "path": "scripts/validate-hair-import-schema.py",
+      "sha256": "e3eafac2f38906c8a581c2b5a72d678817aa8fd3e1948db95e5ec1fb7051b4e0"
+    },
+    {
+      "path": "scripts/validate-hair-import.py",
+      "sha256": "1ec21ff9438a7d2f1dbdad6fc2de01a2c8588aa5b238e5748b534329e93977cd"
+    }
+  ]
+}

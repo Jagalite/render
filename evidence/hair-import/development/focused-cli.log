@@ -1,0 +1,12 @@
+default-le-init: passed
+default-le-empty: passed
+default-le-import: passed
+default-le-retry: passed
+default-le-inspect: passed
+default-le-cpu: passed
+default-le-gpu: passed
+Traceback (most recent call last):
+  File "/private/tmp/render-hair-import-20260906/scripts/hair-import-workflow.py", line 40, in <module>
+    passes=json.loads((root/(name+'-cpu/image/passes.json')).read_text());gp=json.loads((root/(name+'-gpu/image/passes.json')).read_text());assert passes[4]==gp[4] and any(x is not None for x in passes[4]);assert any(x>.12 for x in cpu)
+                                                                                                                                                                                                                     ~~~^^^^^^^^^^^^^^^^^^^^
+AssertionError

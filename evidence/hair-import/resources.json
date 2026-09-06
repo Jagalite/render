@@ -1,0 +1,113 @@
+{
+  "scope": "16x16,16 samples,depth2; two source strands with6 or7 controls, default/array/byte-order/color/unit variants; individual process observations are not benchmarks or allocator caps",
+  "observations": [
+    {
+      "name": "default-le-import",
+      "seconds": 0.04616629199881572,
+      "maximum resident set size": 17072128,
+      "peak memory footprint": 2933824
+    },
+    {
+      "name": "default-le-cpu",
+      "seconds": 0.045537791986134835,
+      "maximum resident set size": 18186240,
+      "peak memory footprint": 3245120
+    },
+    {
+      "name": "default-le-gpu",
+      "seconds": 0.2494473749975441,
+      "maximum resident set size": 36143104,
+      "peak memory footprint": 12682880
+    },
+    {
+      "name": "default-be-import",
+      "seconds": 0.025608124997233972,
+      "maximum resident set size": 17072128,
+      "peak memory footprint": 2933824
+    },
+    {
+      "name": "default-be-cpu",
+      "seconds": 0.04895566700724885,
+      "maximum resident set size": 18186240,
+      "peak memory footprint": 3245120
+    },
+    {
+      "name": "default-be-gpu",
+      "seconds": 0.20571658300468698,
+      "maximum resident set size": 35815424,
+      "peak memory footprint": 12371584
+    },
+    {
+      "name": "arrays-le-import",
+      "seconds": 0.026262790997861885,
+      "maximum resident set size": 17465344,
+      "peak memory footprint": 3163264
+    },
+    {
+      "name": "arrays-le-cpu",
+      "seconds": 0.052505416999338195,
+      "maximum resident set size": 18382848,
+      "peak memory footprint": 3343488
+    },
+    {
+      "name": "arrays-le-gpu",
+      "seconds": 0.2062556669989135,
+      "maximum resident set size": 36093952,
+      "peak memory footprint": 12486272
+    },
+    {
+      "name": "arrays-be-import",
+      "seconds": 0.027464208003948443,
+      "maximum resident set size": 17432576,
+      "peak memory footprint": 3130496
+    },
+    {
+      "name": "arrays-be-cpu",
+      "seconds": 0.04691554099554196,
+      "maximum resident set size": 18366464,
+      "peak memory footprint": 3310656
+    },
+    {
+      "name": "arrays-be-gpu",
+      "seconds": 0.22005737500148825,
+      "maximum resident set size": 36290560,
+      "peak memory footprint": 12666432
+    },
+    {
+      "name": "srgb-import",
+      "seconds": 0.023359624989097938,
+      "maximum resident set size": 17022976,
+      "peak memory footprint": 2884672
+    },
+    {
+      "name": "srgb-cpu",
+      "seconds": 0.04528912498790305,
+      "maximum resident set size": 18137088,
+      "peak memory footprint": 3195968
+    },
+    {
+      "name": "srgb-gpu",
+      "seconds": 0.1936875830142526,
+      "maximum resident set size": 35831808,
+      "peak memory footprint": 12387968
+    },
+    {
+      "name": "scaled-radius-import",
+      "seconds": 0.022801083003287204,
+      "maximum resident set size": 17334272,
+      "peak memory footprint": 3195968
+    },
+    {
+      "name": "scaled-radius-cpu",
+      "seconds": 0.05277912500605453,
+      "maximum resident set size": 18399232,
+      "peak memory footprint": 3458112
+    },
+    {
+      "name": "scaled-radius-gpu",
+      "seconds": 0.20746883300307672,
+      "maximum resident set size": 36388864,
+      "peak memory footprint": 12945024
+    }
+  ]
+}

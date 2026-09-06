@@ -28,6 +28,13 @@ pub struct Edits {
 #[serde(tag = "method", rename_all = "snake_case", deny_unknown_fields)]
 pub enum Operation {
     Inspect,
+    ImportHair {
+        bytes: Vec<u8>,
+        policy: hair_import::Policy,
+        settings: Settings,
+        base_revision: String,
+        idempotency_key: String,
+    },
     ImportVol {
         bytes: Vec<u8>,
         emission_bytes: Option<Vec<u8>>,
@@ -415,7 +422,7 @@ impl Session {
     pub fn dispatch(&mut self, principal: &Principal, request: Request) -> Result<Value> {
         self.dispatch_cancellable(principal, request, || false)
     }
-    /// Checks cancellation at admission and throughout volume import/evaluation.
+    /// Checks cancellation at admission and throughout volume/HAIR import/evaluation.
     /// Other synchronous operations retain their existing bounded dispatch behavior.
     pub fn dispatch_cancellable(
         &mut self,
@@ -443,6 +450,29 @@ impl Session {
             Inspect => Ok(
                 json!({"revision":self.document.snapshot().revision()?,"document_digest":digest(&canonical(&self.document)?),"snapshot":self.document.snapshot(),"protected_digest":protected_digest(self.document.snapshot())?,"branches":self.branches.iter().filter(|(_,b)| b.owner == principal.id).map(|(n,_)| n).collect::<Vec<_>>(),"profile":"agent-rendering-v0","durability":"memory; explicit host save/export required"}),
             ),
+            ImportHair {
+                bytes,
+                policy,
+                settings,
+                base_revision,
+                idempotency_key,
+            } => {
+                write_permission(principal)?;
+                let imported = hair_import::import(
+                    &bytes,
+                    self.document.snapshot().document_id,
+                    &policy,
+                    &mut cancelled,
+                )?;
+                self.import(
+                    principal,
+                    (imported.commands, imported.report),
+                    settings,
+                    base_revision,
+                    idempotency_key,
+                    &mut cancelled,
+                )
+            }
             ImportVol {
                 bytes,
                 emission_bytes,
@@ -747,7 +777,8 @@ impl Session {
     ) -> Result<Value> {
         let root_mutation = matches!(
             &request.operation,
-            Operation::ImportVol { .. }
+            Operation::ImportHair { .. }
+                | Operation::ImportVol { .. }
                 | Operation::ImportGlb { .. }
                 | Operation::ImportScene { .. }
                 | Operation::ImportPbrGlb { .. }
@@ -800,6 +831,7 @@ impl Session {
 /// Stable names/versions and effects are reviewed independently of Session layout.
 pub fn registry() -> Vec<crate::api::Operation> {
     [
+        ("agent.import_hair",true,"HAIR polylines with explicit byte order, units, thickness, uniform-per-strand color/coverage and bounded native sweep; 4 MiB input","decode, sweep evaluation and before atomic publication; synchronous browser dispatch"),
         ("agent.import_vol",true,"VOL3 density and optional aligned linear RGB emission; explicit cell-constant metric policy; 4 MiB input, 16384 occupied cells","decode, evaluation and before atomic publication; synchronous browser dispatch"),
         ("agent.render_root_cpu",false,"bounded CPU rendering for extended materials at a pinned root revision","evaluation and render boundaries"),
         ("agent.preview_products",false,"render authored views, color/denoising and typed UV bakes at a pinned revision","evaluation and render boundaries"),

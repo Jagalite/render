@@ -13,6 +13,7 @@ pub mod gltf_export;
 mod gltf_materials;
 pub mod gltf_scene;
 pub mod groom;
+pub mod hair_import;
 pub mod imaging;
 pub mod interchange;
 pub mod jobs;

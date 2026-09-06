@@ -5,14 +5,14 @@ working on feasible remaining steps. M09 interactive editor remains deferred.
 Each completed increment requires implementation, native/browser workflow evidence,
 negative/cancellation/stale checks, resource/provenance records and documentation.
 
-Current completed increment: external VOL3 density/emission import; evidence/volume-import.
+Current completed increment: external HAIR strand input; evidence/hair-import.
 
 | Order | Increment | Status |
 |---|---|---|
 | 1 | GPU shutter frames and streaming sequences | Validated on feat/gpu-shutter-sequences; evidence/gpu-shutter |
 | 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Sparse/UV0, CPU alpha, named UV, morph frames, vertex colors and evaluated PBR GLB export validated |
 | 3 | Richer GPU scattering and transport quality | GPU alpha, conductor, coat and ideal dielectric validated; broader lighting/sampling quality remains separate |
-| 4 | External hair/volume inputs, fiber shading and sparse GPU media | VOL3 CPU input validated; strand adapter, fiber and GPU media remain |
+| 4 | External hair/volume inputs, fiber shading and sparse GPU media | VOL3 CPU and HAIR surface inputs validated; per-control color, fiber and GPU media remain |
 | 5 | Scoped native .blend/USD/MaterialX interchange | Pending |
 | 6 | M10 engine UV/paint/sculpt/remesh/retopology operations | Pending |
 | 7 | M11 solver families with checkpoint/seek semantics | Pending |
@@ -116,3 +116,12 @@ and browser reports, revisions, pixels and diagnostic passes match exactly. The
 images/passes, 249 receipts, 151 fixture files and four generated shaders remain
 unchanged. No dependency changes or major blocker. External strand input is next.
 Evidence: `evidence/volume-import/README.md`. GPU media remains a separate gate.
+
+HAIR input acceptance: 159 native and 136 Wasm tests, 94 CLI calls over six
+byte-order/array/color/unit cases and actual Chrome CPU/WebGPU/OPFS workflows.
+Source identities, revisions, geometry counts and CPU pixels match exactly;
+platform-local disposable JSON byte observations match actual evaluator receipts.
+All 795 prior images/passes, 265 receipts, 158 fixtures and four shaders remain
+unchanged. No dependency changes or major blocker. Optional per-control RGBA is
+the next bounded input gap; physical fiber and GPU media remain later gates.
+Evidence: `evidence/hair-import/README.md`.

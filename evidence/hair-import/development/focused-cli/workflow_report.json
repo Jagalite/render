@@ -1,0 +1,109 @@
+{
+  "status": "failed",
+  "calls": [
+    {
+      "name": "default-le-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli/000-default-le-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 3.712896583994734
+    },
+    {
+      "name": "default-le-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli/001-default-le-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.010726332999183796
+    },
+    {
+      "name": "default-le-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli/002-default-le-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03976962500018999,
+      "resources": {
+        "maximum resident set size": 17170432,
+        "peak memory footprint": 2999360
+      }
+    },
+    {
+      "name": "default-le-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli/003-default-le-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018534832997829653
+    },
+    {
+      "name": "default-le-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli/004-default-le-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011684375000186265
+    },
+    {
+      "name": "default-le-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli/005-default-le-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05535900000541005,
+      "resources": {
+        "maximum resident set size": 18219008,
+        "peak memory footprint": 3179584
+      }
+    },
+    {
+      "name": "default-le-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli/006-default-le-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.6195051250106189,
+      "resources": {
+        "maximum resident set size": 36159488,
+        "peak memory footprint": 12650048
+      }
+    }
+  ],
+  "variants": [],
+  "error": ""
+}

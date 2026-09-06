@@ -1,0 +1,29 @@
+init: passed
+inspect: passed
+import: passed
+retry: passed
+inspect: passed
+static-defaults: passed
+evaluate-2: passed
+evaluate-0: passed
+evaluate-4: passed
+evaluate-1: passed
+evaluate-3: passed
+evaluate-2: passed
+sequence: passed
+frame: passed
+archive: passed
+restore: passed
+restored: passed
+restored-frame: passed
+cpu: passed
+gpu: passed
+stale: expected stale_revision
+cancel: expected cancelled
+limited-output: expected budget
+unchanged: passed
+external-init: passed
+external-base: passed
+external-import: passed
+external-state: passed
+external-frame: passed

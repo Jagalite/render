@@ -1,0 +1,169 @@
+{
+  "status": "failed",
+  "calls": [
+    {
+      "name": "default-le-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/000-default-le-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06589875000645407
+    },
+    {
+      "name": "default-le-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/001-default-le-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.009776167004019953
+    },
+    {
+      "name": "default-le-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/002-default-le-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05732074999832548,
+      "resources": {
+        "maximum resident set size": 17121280,
+        "peak memory footprint": 2950208
+      }
+    },
+    {
+      "name": "default-le-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/003-default-le-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015962083998601884
+    },
+    {
+      "name": "default-le-inspect",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/004-default-le-inspect.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.010611416000756435
+    },
+    {
+      "name": "default-le-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/005-default-le-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.061187708997749723,
+      "resources": {
+        "maximum resident set size": 18268160,
+        "peak memory footprint": 3228736
+      }
+    },
+    {
+      "name": "default-le-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/006-default-le-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.24823433400888462,
+      "resources": {
+        "maximum resident set size": 35995648,
+        "peak memory footprint": 12486272
+      }
+    },
+    {
+      "name": "default-le-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/007-default-le-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.027721958002075553
+    },
+    {
+      "name": "default-le-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/default-le-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/008-default-le-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0236466669884976
+    },
+    {
+      "name": "default-le-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/default-le-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/009-default-le-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.047912916998029687
+    },
+    {
+      "name": "default-le-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/default-le-restored",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/010-default-le-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19918491700082086
+    },
+    {
+      "name": "default-le-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/default-le-project",
+        "/private/tmp/render-hair-import-20260906/artifacts/hair-import/focused-cli-2/011-default-le-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.012162208004156128
+    }
+  ],
+  "variants": [],
+  "error": "('default-le-stale', {'code': 'request', 'stage': 'validation', 'message': 'unsupported version or invalid request bounds', 'retryable': False, 'context': {}})"
+}

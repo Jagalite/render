@@ -1,0 +1,18 @@
+   Compiling render-host v0.1.0 (/private/tmp/render-hair-import-20260906/crates/host)
+    Finished `test` profile [unoptimized] target(s) in 0.69s
+     Running tests/vertex_colors_gpu.rs (target/debug/deps/vertex_colors_gpu-c13846802a7f69fe)
+
+running 1 test
+variant=0 displaced=false linear_rmse=0.000019591641237959537
+variant=0 displaced=true linear_rmse=0.000019480046359121518
+variant=1 displaced=false linear_rmse=0.000019591641237959537
+variant=1 displaced=true linear_rmse=0.000019480046359121518
+variant=2 displaced=false linear_rmse=0.000019591641237959537
+variant=2 displaced=true linear_rmse=0.000019480046359121518
+variant=3 displaced=false linear_rmse=0.000019591641237959537
+variant=3 displaced=true linear_rmse=0.000019480046359121518
+variant=4 displaced=false linear_rmse=0.000019591641237959537
+variant=4 displaced=true linear_rmse=0.000019480046359121518
+test vertex_color_cpu_gpu_encodings_displacement_and_admission_match ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.33s

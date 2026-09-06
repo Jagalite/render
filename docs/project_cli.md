@@ -102,6 +102,7 @@ All output paths must be new and have existing parent directories.
 Import `source` variants:
 
 - `{ "format": "obj", "path": "mesh.obj", "entity": "<ID>", "name": "Mesh", "material": "<existing material ID>" }`. Material may be null; rendering still requires a supported material assignment. OBJ reports attribute/material losses.
+- `{ "format": "hair", "path": "strands.hair", "policy": { ... } }`. [HAIR strand input](hair_import.md) requires explicit byte order, units, thickness and color/coverage interpretation. It preserves native polylines and preflights bounded surface sweeps before publication.
 - `{ "format": "vol", "path": "density.vol", "emission": "emission.vol", "policy": { ... } }`. The optional emission path is an aligned RGB grid. [VOL3 input](volume_import.md) requires explicit units, bounds, cell reconstruction and optical settings; binary input is capped at4MiB and retained occupancy at16,384 cells. It renders through the native/browser Rust CPU profile.
 - `{ "format": "glb", "path": "scene.glb", "policy": { "allow_approximations": true } }`. Uses the opaque PBR scene profile, including [supported clips, skins and morphs](animated_gltf.md). The import report maps source clip indices to native clip IDs for subsequent `at` and sequence requests.
 - `{ "format": "gltf", "path": "scene.gltf", "buffers": ["scene.bin"], "images": ["albedo.png"], "policy": { "allow_approximations": true } }`. Caller-provided arrays correspond to source resource indices; no URI resolution occurs.

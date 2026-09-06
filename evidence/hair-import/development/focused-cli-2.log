@@ -1,0 +1,19 @@
+default-le-init: passed
+default-le-empty: passed
+default-le-import: passed
+default-le-retry: passed
+default-le-inspect: passed
+default-le-cpu: passed
+default-le-gpu: passed
+default-le-archive: passed
+default-le-restore: passed
+default-le-recovered-cpu: passed
+default-le-recovered-gpu: passed
+Traceback (most recent call last):
+  File "/private/tmp/render-hair-import-20260906/scripts/hair-import-workflow.py", line 45, in <module>
+    call(name+'-stale',dict(op,idempotency_key='hair:stale:0001'),project,error='stale_revision')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/render-hair-import-20260906/scripts/hair-import-workflow.py", line 18, in call
+    if error:assert r.returncode!=0 and not r.stdout,(name,r);v=json.loads(r.stderr);assert v['code']==error,(name,v)
+                                                                                            ^^^^^^^^^^^^^^^^
+AssertionError: ('default-le-stale', {'code': 'request', 'stage': 'validation', 'message': 'unsupported version or invalid request bounds', 'retryable': False, 'context': {}})

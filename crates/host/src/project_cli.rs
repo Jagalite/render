@@ -70,6 +70,10 @@ enum Backend {
 #[derive(Deserialize)]
 #[serde(tag = "format", rename_all = "snake_case", deny_unknown_fields)]
 enum Source {
+    Hair {
+        path: PathBuf,
+        policy: hair_import::Policy,
+    },
     Vol {
         path: PathBuf,
         emission: Option<PathBuf>,
@@ -543,6 +547,14 @@ fn execute(root: &Path, operation: Operation, control: &mut Control) -> Result<V
             settings,
         } => {
             let (mut commands, report) = match source {
+                Source::Hair { path, policy } => {
+                    let bytes = control.read_limited(&path, hair_import::MAX_INPUT_BYTES as u64)?;
+                    let imported =
+                        hair_import::import(&bytes, doc.snapshot().document_id, &policy, || {
+                            control.cancelled()
+                        })?;
+                    (imported.commands, json!(imported.report))
+                }
                 Source::Vol {
                     path,
                     emission,
@@ -879,7 +891,7 @@ pub fn help() -> &'static str {
 One versioned JSON request per process. Relative paths use the working directory.
 Request: {\"version\":0,\"operation\":{\"method\":\"inspect\"}}
 Methods: init, restore, inspect, apply, import, evaluate, render, frame, sequence, products, export.
-Import formats: OBJ, GLB, glTF and VOL3 density with optional aligned RGB emission.
+Import formats: OBJ, GLB, glTF, VOL3 density/emission and bounded HAIR polylines.
 Mutations use existing revision-checked document transactions. Reads/renders pin revision.
 Optional limits: max_input_bytes, max_output_bytes, max_wall_ms, cancel_file.
 Outputs require a fresh directory; manifest.json records complete/failed/cancelled status.

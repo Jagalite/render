@@ -1,0 +1,17 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "export",
+    "revision": "sha256:deb57c43e5b32c19215b61ce585e889d745fe8409456871c3e668aeb83a67df8",
+    "output": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/curve-color-workflow/groom-export",
+    "content": {
+      "format": "glb",
+      "policy": {
+        "allow_approximations": true,
+        "max_bytes": 4194304,
+        "max_vertices": 10000,
+        "max_position_error_meters": 1e-05
+      }
+    }
+  }
+}

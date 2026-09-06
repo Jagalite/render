@@ -1,0 +1,2473 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "conductor-secondary-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/000-conductor-secondary-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030660916003398597
+    },
+    {
+      "name": "conductor-secondary-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/001-conductor-secondary-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012119250008254312
+    },
+    {
+      "name": "conductor-secondary-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/002-conductor-secondary-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04485008300980553
+    },
+    {
+      "name": "conductor-secondary-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/003-conductor-secondary-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02232200000435114
+    },
+    {
+      "name": "conductor-secondary-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/004-conductor-secondary-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05827266599226277
+    },
+    {
+      "name": "conductor-secondary-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/005-conductor-secondary-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04477466701064259
+    },
+    {
+      "name": "conductor-secondary-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/006-conductor-secondary-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.028639374999329448
+    },
+    {
+      "name": "conductor-secondary-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/007-conductor-secondary-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09168758300074842,
+      "resources": {
+        "maximum resident set size": 17612800,
+        "peak memory footprint": 3048512
+      }
+    },
+    {
+      "name": "conductor-secondary-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/008-conductor-secondary-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.37060570799803827,
+      "resources": {
+        "maximum resident set size": 35520512,
+        "peak memory footprint": 12404352
+      }
+    },
+    {
+      "name": "conductor-secondary-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/009-conductor-secondary-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03799320899997838
+    },
+    {
+      "name": "conductor-secondary-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-secondary-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/010-conductor-secondary-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.031023040995933115
+    },
+    {
+      "name": "conductor-secondary-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-secondary-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/011-conductor-secondary-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.29423633399710525
+    },
+    {
+      "name": "conductor-secondary-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/012-conductor-secondary-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.0385472500056494
+    },
+    {
+      "name": "conductor-secondary-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/013-conductor-secondary-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.028379750001477078
+    },
+    {
+      "name": "conductor-secondary-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/014-conductor-secondary-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.007529208000050858
+    },
+    {
+      "name": "conductor-secondary-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/015-conductor-secondary-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.23466212500352412
+    },
+    {
+      "name": "conductor-secondary-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/016-conductor-secondary-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024293458001920953
+    },
+    {
+      "name": "conductor-named-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/017-conductor-named-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02173337500425987
+    },
+    {
+      "name": "conductor-named-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/018-conductor-named-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.009501874999841675
+    },
+    {
+      "name": "conductor-named-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/019-conductor-named-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04745137499412522
+    },
+    {
+      "name": "conductor-named-mask-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/020-conductor-named-mask-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02710312500130385
+    },
+    {
+      "name": "conductor-named-mask-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/021-conductor-named-mask-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07464374999108259
+    },
+    {
+      "name": "conductor-named-mask-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/022-conductor-named-mask-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.056980833993293345
+    },
+    {
+      "name": "conductor-named-mask-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/023-conductor-named-mask-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04282974998932332
+    },
+    {
+      "name": "conductor-named-mask-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/024-conductor-named-mask-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.11738883399812039,
+      "resources": {
+        "maximum resident set size": 17924096,
+        "peak memory footprint": 3310720
+      }
+    },
+    {
+      "name": "conductor-named-mask-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/025-conductor-named-mask-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.33630733301106375,
+      "resources": {
+        "maximum resident set size": 35799040,
+        "peak memory footprint": 12633728
+      }
+    },
+    {
+      "name": "conductor-named-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/026-conductor-named-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05193933300324716
+    },
+    {
+      "name": "conductor-named-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-mask-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/027-conductor-named-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03477633300644811
+    },
+    {
+      "name": "conductor-named-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-mask-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/028-conductor-named-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2971519580023596
+    },
+    {
+      "name": "conductor-named-mask-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/029-conductor-named-mask-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.05239666601119097
+    },
+    {
+      "name": "conductor-named-mask-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/030-conductor-named-mask-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.05922987501253374
+    },
+    {
+      "name": "conductor-named-mask-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/031-conductor-named-mask-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.009679124996182509
+    },
+    {
+      "name": "conductor-named-mask-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/032-conductor-named-mask-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.27842466700531077
+    },
+    {
+      "name": "conductor-named-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/033-conductor-named-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.028727082986733876
+    },
+    {
+      "name": "conductor-named-blend-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/034-conductor-named-blend-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017557083003339358
+    },
+    {
+      "name": "conductor-named-blend-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/035-conductor-named-blend-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0071848749939817935
+    },
+    {
+      "name": "conductor-named-blend-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/036-conductor-named-blend-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03921841700503137
+    },
+    {
+      "name": "conductor-named-blend-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/037-conductor-named-blend-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022097749999375083
+    },
+    {
+      "name": "conductor-named-blend-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/038-conductor-named-blend-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06650354199518915
+    },
+    {
+      "name": "conductor-named-blend-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/039-conductor-named-blend-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.045742250003968365
+    },
+    {
+      "name": "conductor-named-blend-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/040-conductor-named-blend-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02727370800857898
+    },
+    {
+      "name": "conductor-named-blend-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/041-conductor-named-blend-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07257629200466909,
+      "resources": {
+        "maximum resident set size": 17891328,
+        "peak memory footprint": 3277952
+      }
+    },
+    {
+      "name": "conductor-named-blend-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/042-conductor-named-blend-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.23789975000545382,
+      "resources": {
+        "maximum resident set size": 35880960,
+        "peak memory footprint": 12699200
+      }
+    },
+    {
+      "name": "conductor-named-blend-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/043-conductor-named-blend-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04304937500273809
+    },
+    {
+      "name": "conductor-named-blend-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-blend-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/044-conductor-named-blend-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0347095829929458
+    },
+    {
+      "name": "conductor-named-blend-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-blend-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/045-conductor-named-blend-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2057707079948159
+    },
+    {
+      "name": "conductor-named-blend-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/046-conductor-named-blend-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.03776083300181199
+    },
+    {
+      "name": "conductor-named-blend-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/047-conductor-named-blend-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.034196624998003244
+    },
+    {
+      "name": "conductor-named-blend-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/048-conductor-named-blend-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.005697332991985604
+    },
+    {
+      "name": "conductor-named-blend-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/049-conductor-named-blend-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.18589545799477492
+    },
+    {
+      "name": "conductor-named-blend-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/050-conductor-named-blend-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02285320800729096
+    },
+    {
+      "name": "conductor-morph-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/051-conductor-morph-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021567417003097944
+    },
+    {
+      "name": "conductor-morph-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/052-conductor-morph-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.00807920801162254
+    },
+    {
+      "name": "conductor-morph-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/053-conductor-morph-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0518115410086466
+    },
+    {
+      "name": "conductor-morph-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/054-conductor-morph-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02429445799498353
+    },
+    {
+      "name": "conductor-morph-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/055-conductor-morph-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07239170800312422
+    },
+    {
+      "name": "conductor-morph-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/056-conductor-morph-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05998399999225512
+    },
+    {
+      "name": "conductor-morph-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/057-conductor-morph-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.036936666001565754
+    },
+    {
+      "name": "conductor-morph-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/058-conductor-morph-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1787635000073351,
+      "resources": {
+        "maximum resident set size": 19611648,
+        "peak memory footprint": 3933312
+      }
+    },
+    {
+      "name": "conductor-morph-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/059-conductor-morph-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.27220637499704026,
+      "resources": {
+        "maximum resident set size": 37584896,
+        "peak memory footprint": 13158016
+      }
+    },
+    {
+      "name": "conductor-morph-sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/060-conductor-morph-sequence.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3419198750052601,
+      "resources": {
+        "maximum resident set size": 37814272,
+        "peak memory footprint": 13305472
+      }
+    },
+    {
+      "name": "conductor-morph-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/061-conductor-morph-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05198720899352338
+    },
+    {
+      "name": "conductor-morph-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-morph-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/062-conductor-morph-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03858379099983722
+    },
+    {
+      "name": "conductor-morph-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-morph-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/063-conductor-morph-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2548747920081951
+    },
+    {
+      "name": "conductor-morph-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/064-conductor-morph-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.05914941700757481
+    },
+    {
+      "name": "conductor-morph-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/065-conductor-morph-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.054660541005432606
+    },
+    {
+      "name": "conductor-morph-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/066-conductor-morph-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.005852165995747782
+    },
+    {
+      "name": "conductor-morph-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/067-conductor-morph-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.2376178330014227
+    },
+    {
+      "name": "conductor-morph-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/068-conductor-morph-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03481141699012369
+    },
+    {
+      "name": "coated-secondary-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/069-coated-secondary-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019379917008336633
+    },
+    {
+      "name": "coated-secondary-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/070-coated-secondary-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007113208994269371
+    },
+    {
+      "name": "coated-secondary-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/071-coated-secondary-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03017895900120493
+    },
+    {
+      "name": "coated-secondary-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/072-coated-secondary-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012855708991992287
+    },
+    {
+      "name": "coated-secondary-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/073-coated-secondary-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.038241541988099925
+    },
+    {
+      "name": "coated-secondary-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/074-coated-secondary-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02596633399662096
+    },
+    {
+      "name": "coated-secondary-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/075-coated-secondary-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015989208011887968
+    },
+    {
+      "name": "coated-secondary-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/076-coated-secondary-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07025183399673551,
+      "resources": {
+        "maximum resident set size": 17547264,
+        "peak memory footprint": 2982976
+      }
+    },
+    {
+      "name": "coated-secondary-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/077-coated-secondary-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21933208299742546,
+      "resources": {
+        "maximum resident set size": 35569664,
+        "peak memory footprint": 12437120
+      }
+    },
+    {
+      "name": "coated-secondary-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/078-coated-secondary-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.036304875000496395
+    },
+    {
+      "name": "coated-secondary-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-secondary-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/079-coated-secondary-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03230983299727086
+    },
+    {
+      "name": "coated-secondary-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-secondary-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/080-coated-secondary-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21215462499822024
+    },
+    {
+      "name": "coated-secondary-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/081-coated-secondary-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.027463958991575055
+    },
+    {
+      "name": "coated-secondary-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/082-coated-secondary-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.02414574999420438
+    },
+    {
+      "name": "coated-secondary-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/083-coated-secondary-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.005741124987252988
+    },
+    {
+      "name": "coated-secondary-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/084-coated-secondary-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.1915151660068659
+    },
+    {
+      "name": "coated-secondary-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-secondary-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/085-coated-secondary-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.018540582997957245
+    },
+    {
+      "name": "coated-named-mask-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/086-coated-named-mask-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022277500000200234
+    },
+    {
+      "name": "coated-named-mask-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/087-coated-named-mask-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007186375005403534
+    },
+    {
+      "name": "coated-named-mask-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/088-coated-named-mask-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.035352875012904406
+    },
+    {
+      "name": "coated-named-mask-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/089-coated-named-mask-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01673254200431984
+    },
+    {
+      "name": "coated-named-mask-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/090-coated-named-mask-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04685504200460855
+    },
+    {
+      "name": "coated-named-mask-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/091-coated-named-mask-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03837529099837411
+    },
+    {
+      "name": "coated-named-mask-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/092-coated-named-mask-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.023537416986073367
+    },
+    {
+      "name": "coated-named-mask-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/093-coated-named-mask-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06353970800410025,
+      "resources": {
+        "maximum resident set size": 17940480,
+        "peak memory footprint": 3327104
+      }
+    },
+    {
+      "name": "coated-named-mask-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/094-coated-named-mask-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22132912499364465,
+      "resources": {
+        "maximum resident set size": 35848192,
+        "peak memory footprint": 12682880
+      }
+    },
+    {
+      "name": "coated-named-mask-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/095-coated-named-mask-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04491283300740179
+    },
+    {
+      "name": "coated-named-mask-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-mask-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/096-coated-named-mask-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0303642079961719
+    },
+    {
+      "name": "coated-named-mask-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-mask-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/097-coated-named-mask-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2108121250057593
+    },
+    {
+      "name": "coated-named-mask-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/098-coated-named-mask-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.03630795900244266
+    },
+    {
+      "name": "coated-named-mask-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/099-coated-named-mask-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.03448683400347363
+    },
+    {
+      "name": "coated-named-mask-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/100-coated-named-mask-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.005809875001432374
+    },
+    {
+      "name": "coated-named-mask-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/101-coated-named-mask-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.1894588750001276
+    },
+    {
+      "name": "coated-named-mask-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-mask-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/102-coated-named-mask-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0235650000104215
+    },
+    {
+      "name": "coated-named-blend-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/103-coated-named-blend-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020558375006658025
+    },
+    {
+      "name": "coated-named-blend-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/104-coated-named-blend-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.007550709007773548
+    },
+    {
+      "name": "coated-named-blend-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/105-coated-named-blend-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03386216600483749
+    },
+    {
+      "name": "coated-named-blend-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/106-coated-named-blend-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016408833995228633
+    },
+    {
+      "name": "coated-named-blend-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/107-coated-named-blend-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04686924999987241
+    },
+    {
+      "name": "coated-named-blend-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/108-coated-named-blend-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03510558400012087
+    },
+    {
+      "name": "coated-named-blend-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/109-coated-named-blend-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02155783399939537
+    },
+    {
+      "name": "coated-named-blend-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/110-coated-named-blend-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05706354200083297,
+      "resources": {
+        "maximum resident set size": 17924096,
+        "peak memory footprint": 3310720
+      }
+    },
+    {
+      "name": "coated-named-blend-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/111-coated-named-blend-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2260216249997029,
+      "resources": {
+        "maximum resident set size": 35864576,
+        "peak memory footprint": 12699264
+      }
+    },
+    {
+      "name": "coated-named-blend-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/112-coated-named-blend-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05330649999086745
+    },
+    {
+      "name": "coated-named-blend-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-blend-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/113-coated-named-blend-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030597916003898717
+    },
+    {
+      "name": "coated-named-blend-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-blend-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/114-coated-named-blend-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.21464837501116563
+    },
+    {
+      "name": "coated-named-blend-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/115-coated-named-blend-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.035360791996936314
+    },
+    {
+      "name": "coated-named-blend-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/116-coated-named-blend-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.03580833299201913
+    },
+    {
+      "name": "coated-named-blend-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/117-coated-named-blend-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.005862749996595085
+    },
+    {
+      "name": "coated-named-blend-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/118-coated-named-blend-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.19730691700533498
+    },
+    {
+      "name": "coated-named-blend-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-blend-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/119-coated-named-blend-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0235586670023622
+    },
+    {
+      "name": "coated-morph-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/120-coated-morph-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02165350000723265
+    },
+    {
+      "name": "coated-morph-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/121-coated-morph-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.006767291997675784
+    },
+    {
+      "name": "coated-morph-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/122-coated-morph-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0437240000028396
+    },
+    {
+      "name": "coated-morph-imported",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/123-coated-morph-imported.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02370558299298864
+    },
+    {
+      "name": "coated-morph-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/124-coated-morph-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0732329999882495
+    },
+    {
+      "name": "coated-morph-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/125-coated-morph-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0561547499964945
+    },
+    {
+      "name": "coated-morph-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/126-coated-morph-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.035564709003665484
+    },
+    {
+      "name": "coated-morph-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/127-coated-morph-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.16543454100610688,
+      "resources": {
+        "maximum resident set size": 19578880,
+        "peak memory footprint": 3900544
+      }
+    },
+    {
+      "name": "coated-morph-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/128-coated-morph-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2763427089957986,
+      "resources": {
+        "maximum resident set size": 37650432,
+        "peak memory footprint": 13190784
+      }
+    },
+    {
+      "name": "coated-morph-sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/129-coated-morph-sequence.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3409340840007644,
+      "resources": {
+        "maximum resident set size": 37683200,
+        "peak memory footprint": 13141632
+      }
+    },
+    {
+      "name": "coated-morph-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/130-coated-morph-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.053239625005517155
+    },
+    {
+      "name": "coated-morph-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-morph-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/131-coated-morph-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03688133398827631
+    },
+    {
+      "name": "coated-morph-restored-render",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-morph-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/132-coated-morph-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2522783750027884
+    },
+    {
+      "name": "coated-morph-invalid",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/133-coated-morph-invalid.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "material",
+      "seconds": 0.062252374991658144
+    },
+    {
+      "name": "coated-morph-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/134-coated-morph-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.07420979200105648
+    },
+    {
+      "name": "coated-morph-cancel",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/135-coated-morph-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.03152433301147539
+    },
+    {
+      "name": "coated-morph-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/136-coated-morph-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.3752509580081096
+    },
+    {
+      "name": "coated-morph-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-morph-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/137-coated-morph-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05405220799730159
+    }
+  ],
+  "variants": [
+    {
+      "name": "conductor-secondary",
+      "source": "fixtures/secondary-textures/data/mask-nearest.glb",
+      "source_sha256": "f66e8c9415a663af7f19c7d1e62eec9b31a5041e7562d8f10fa06b1edb8beb04",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": false,
+      "secondary": true,
+      "revision": "sha256:e4aca3359c1dbe7f1cf0bbb24b46ee73207f223eaa1e1ea00082122e861b34c4",
+      "settings": {
+        "width": 8,
+        "height": 8,
+        "samples": 32,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0,
+          0,
+          0
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 0.9,
+            "ymag": 0.9,
+            "near": 0.01,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 2.514570951461792e-08,
+      "folder": "image",
+      "archive": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-secondary-archive/document/document.json"
+    },
+    {
+      "name": "conductor-named-mask",
+      "source": "fixtures/gpu-alpha/data/named-mask.glb",
+      "source_sha256": "1912d4e8c0f4093e1c6fd392be09a92c5ae285c446197f8f9137112e20295bf1",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": false,
+      "secondary": false,
+      "revision": "sha256:fb75fbbc2bb5154f63876449705b568abacc50d7e762ab5cb218cea439178be8",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 1.609829641723087e-05,
+      "folder": "image",
+      "archive": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-mask-archive/document/document.json"
+    },
+    {
+      "name": "conductor-named-blend",
+      "source": "fixtures/gpu-alpha/data/named-blend.glb",
+      "source_sha256": "40bfddc669d71fb33828f7dd6f6e0a3e1750e93d106455b0accedc678a148fb6",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": false,
+      "secondary": false,
+      "revision": "sha256:b4a508c9830657af637c9696fceba6e5be13d1a6e119987c90373942b9ca55de",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 8.87319270797084e-06,
+      "folder": "image",
+      "archive": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-named-blend-archive/document/document.json"
+    },
+    {
+      "name": "conductor-morph",
+      "source": "fixtures/morph-frames/data/dense.glb",
+      "source_sha256": "284917f1bf2bd5f666ba2f5b48590222b6d0bbdeff91be0801492ca20025de49",
+      "model": {
+        "kind": "conductor",
+        "eta": [
+          0.2,
+          0.9,
+          1.1
+        ],
+        "k": [
+          3,
+          2,
+          1.5
+        ]
+      },
+      "animated": true,
+      "secondary": false,
+      "revision": "sha256:c0144aaa9368646a06bf2839a80661edab2f1e111e80d455ad06733ea8fee9be",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "request": {
+        "revision": "sha256:c0144aaa9368646a06bf2839a80661edab2f1e111e80d455ad06733ea8fee9be",
+        "clip": "467e6e12ffc8158594d66c96bc5c770b",
+        "time": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "shutter": {
+          "open": {
+            "numerator": -1,
+            "denominator": 32
+          },
+          "close": {
+            "numerator": 1,
+            "denominator": 32
+          },
+          "samples": 3
+        }
+      },
+      "gpu_linear_rmse": 0.00034138011582237785,
+      "folder": "frame",
+      "sequence": {
+        "revision": "sha256:c0144aaa9368646a06bf2839a80661edab2f1e111e80d455ad06733ea8fee9be",
+        "clip": "467e6e12ffc8158594d66c96bc5c770b",
+        "shutter": {
+          "open": {
+            "numerator": -1,
+            "denominator": 32
+          },
+          "close": {
+            "numerator": 1,
+            "denominator": 32
+          },
+          "samples": 3
+        },
+        "times": [
+          {
+            "numerator": 1,
+            "denominator": 4
+          },
+          {
+            "numerator": 3,
+            "denominator": 4
+          }
+        ]
+      },
+      "archive": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/conductor-morph-archive/document/document.json"
+    },
+    {
+      "name": "coated-secondary",
+      "source": "fixtures/secondary-textures/data/mask-nearest.glb",
+      "source_sha256": "f66e8c9415a663af7f19c7d1e62eec9b31a5041e7562d8f10fa06b1edb8beb04",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": false,
+      "secondary": true,
+      "revision": "sha256:51140c5486893a6e4ef48f3fdcd471c69847d98bc5de770ba2fa1a39f0cbb053",
+      "settings": {
+        "width": 8,
+        "height": 8,
+        "samples": 32,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0,
+          0,
+          0
+        ],
+        "light": {
+          "position": [
+            -2,
+            4,
+            3
+          ],
+          "intensity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 0.9,
+            "ymag": 0.9,
+            "near": 0.01,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 1.591362958725866e-07,
+      "folder": "image",
+      "archive": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-secondary-archive/document/document.json"
+    },
+    {
+      "name": "coated-named-mask",
+      "source": "fixtures/gpu-alpha/data/named-mask.glb",
+      "source_sha256": "1912d4e8c0f4093e1c6fd392be09a92c5ae285c446197f8f9137112e20295bf1",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": false,
+      "secondary": false,
+      "revision": "sha256:09f4ad59991bf0c067223f8c8ff06ad48e245bb1fa2f625c67c7b2c984bb42fa",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 1.996711517170901e-05,
+      "folder": "image",
+      "archive": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-mask-archive/document/document.json"
+    },
+    {
+      "name": "coated-named-blend",
+      "source": "fixtures/gpu-alpha/data/named-blend.glb",
+      "source_sha256": "40bfddc669d71fb33828f7dd6f6e0a3e1750e93d106455b0accedc678a148fb6",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": false,
+      "secondary": false,
+      "revision": "sha256:45a13fc6ccc0e7ca9b44b55e072b91bcd7da7cdd8d0c68a6f1fa36c940c975cb",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "gpu_linear_rmse": 1.0843975906315296e-05,
+      "folder": "image",
+      "archive": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-named-blend-archive/document/document.json"
+    },
+    {
+      "name": "coated-morph",
+      "source": "fixtures/morph-frames/data/dense.glb",
+      "source_sha256": "284917f1bf2bd5f666ba2f5b48590222b6d0bbdeff91be0801492ca20025de49",
+      "model": {
+        "kind": "coated",
+        "weight": 0.7,
+        "ior": 1.5,
+        "roughness": 0.25
+      },
+      "animated": true,
+      "secondary": false,
+      "revision": "sha256:7636946a60bc825231e49eb73a336429d175554eb0db3cc216bb2270b282b7ff",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 4,
+        "max_bytes": 16777216,
+        "environment": [
+          0.125,
+          0.25,
+          0.5
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            1,
+            1,
+            1
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 2.5,
+            "ymag": 2.5,
+            "near": 0.1,
+            "far": 10
+          }
+        }
+      },
+      "request": {
+        "revision": "sha256:7636946a60bc825231e49eb73a336429d175554eb0db3cc216bb2270b282b7ff",
+        "clip": "467e6e12ffc8158594d66c96bc5c770b",
+        "time": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "shutter": {
+          "open": {
+            "numerator": -1,
+            "denominator": 32
+          },
+          "close": {
+            "numerator": 1,
+            "denominator": 32
+          },
+          "samples": 3
+        }
+      },
+      "gpu_linear_rmse": 0.00014605246131684524,
+      "folder": "frame",
+      "sequence": {
+        "revision": "sha256:7636946a60bc825231e49eb73a336429d175554eb0db3cc216bb2270b282b7ff",
+        "clip": "467e6e12ffc8158594d66c96bc5c770b",
+        "shutter": {
+          "open": {
+            "numerator": -1,
+            "denominator": 32
+          },
+          "close": {
+            "numerator": 1,
+            "denominator": 32
+          },
+          "samples": 3
+        },
+        "times": [
+          {
+            "numerator": 1,
+            "denominator": 4
+          },
+          {
+            "numerator": 3,
+            "denominator": 4
+          }
+        ]
+      },
+      "archive": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/surface-workflow/coated-morph-archive/document/document.json"
+    }
+  ],
+  "settings": {
+    "width": 8,
+    "height": 8,
+    "samples": 32,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0,
+      0,
+      0
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        0,
+        0,
+        0
+      ]
+    },
+    "camera": {
+      "position": [
+        0,
+        0,
+        1
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65,
+      "lens": {
+        "kind": "orthographic",
+        "xmag": 0.9,
+        "ymag": 0.9,
+        "near": 0.01,
+        "far": 10
+      }
+    }
+  }
+}

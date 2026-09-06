@@ -14,6 +14,9 @@ pub struct Control {
     pub position: [f64; 3],
     pub radius: f64,
     pub tilt: f64,
+    /// Linear straight RGBA; missing means white. Explicit colors require a polyline.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub color: Option<[f32; 4]>,
 }
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(tag = "kind", rename_all = "snake_case", deny_unknown_fields)]
@@ -95,6 +98,7 @@ pub struct Sample {
     pub position: DVec3,
     pub radius: f64,
     pub tilt: f64,
+    pub color: [f32; 4],
 }
 fn error(message: &str) -> Error {
     Error::new("curve", message)
@@ -114,6 +118,9 @@ impl Tessellation {
     }
 }
 impl Curve {
+    pub fn has_colors(&self) -> bool {
+        self.controls.iter().any(|c| c.color.is_some())
+    }
     pub fn validate(&self) -> Result<()> {
         if !(2..=4096).contains(&self.controls.len()) {
             return Err(error("curve requires 2..4096 controls"));
@@ -127,9 +134,19 @@ impl Curve {
                 || p.radius > 1e6
                 || !p.tilt.is_finite()
                 || p.tilt.abs() > 1e6
+                || p.color.is_some_and(|rgba| {
+                    rgba.iter()
+                        .any(|v| !v.is_finite() || !(0.0..=1.).contains(v))
+                })
             {
-                return Err(error("invalid/duplicate control, radius or tilt"));
+                return Err(error("invalid/duplicate control, radius, tilt or RGBA"));
             }
+        }
+        if self.has_colors() && !matches!(self.basis, Basis::Polyline) {
+            return Err(Error::new(
+                "unsupported_curve_color",
+                "explicit control RGBA requires a polyline color-transfer profile",
+            ));
         }
         match &self.basis {
             Basis::Polyline => {
@@ -307,7 +324,7 @@ impl Curve {
                             .rfind(|&i| u[i] <= value && value < u[i + 1])
                             .ok_or_else(|| error("knot insertion span"))?;
                         let multiplicity = u.iter().filter(|&&x| x == value).count();
-                        let mut next = vec![H([0.; 6]); cp.len() + 1];
+                        let mut next = vec![H([0.; 10]); cp.len() + 1];
                         next[..=k - p].copy_from_slice(&cp[..=k - p]);
                         next[k - multiplicity + 1..].copy_from_slice(&cp[k - multiplicity..]);
                         for i in k - p + 1..=k - multiplicity {
@@ -401,8 +418,9 @@ impl Curve {
     }
 }
 #[derive(Clone, Copy)]
-struct H([f64; 6]);
+struct H([f64; 10]);
 fn hom(c: &Control, w: f64) -> H {
+    let color = c.color.unwrap_or([1.; 4]);
     H([
         c.position[0] * w,
         c.position[1] * w,
@@ -410,6 +428,10 @@ fn hom(c: &Control, w: f64) -> H {
         c.radius * w,
         c.tilt * w,
         w,
+        f64::from(color[0]) * w,
+        f64::from(color[1]) * w,
+        f64::from(color[2]) * w,
+        f64::from(color[3]) * w,
     ])
 }
 impl H {
@@ -424,6 +446,7 @@ impl H {
             position: DVec3::new(self.0[0], self.0[1], self.0[2]) / self.0[5],
             radius: self.0[3] / self.0[5],
             tilt: self.0[4] / self.0[5],
+            color: std::array::from_fn(|i| (self.0[6 + i] / self.0[5]).clamp(0., 1.) as f32),
         })
     }
 }
@@ -451,6 +474,9 @@ fn split(points: &[H]) -> (Vec<H>, Vec<H>) {
     (left, right)
 }
 impl Asset {
+    pub fn has_colors(&self) -> bool {
+        matches!(&self.shape, Shape::Curves { curves } if curves.iter().any(Curve::has_colors))
+    }
     pub fn validate(&self) -> Result<()> {
         self.tessellation.validate()?;
         let mut ids = BTreeSet::new();
@@ -495,7 +521,7 @@ impl Asset {
     }
     pub fn evaluate(&self, mut cancel: impl FnMut() -> bool) -> Result<Evaluated> {
         self.validate()?;
-        let mut builder = Builder::new(self.tessellation.max_vertices as usize);
+        let mut builder = Builder::new(self.tessellation.max_vertices as usize, self.has_colors());
         let mut curve_ranges = BTreeMap::new();
         let mut point_ranges = BTreeMap::new();
         let mut count = 0;
@@ -539,8 +565,23 @@ impl Asset {
                 values: AttributeValues::Vec2(uv),
             },
         );
+        if let Some(colors) = builder.colors {
+            mesh.attributes.insert(
+                "curve_color".into(),
+                Attribute {
+                    id: Id(200),
+                    domain: Domain::Point,
+                    semantic: "color_rgba".into(),
+                    transfer: Transfer::Linear,
+                    values: AttributeValues::Vec4(colors),
+                },
+            );
+        }
         mesh.validate()?;
-        let receipt=Conversion{source_digest:self.content_id()?,policy_digest:digest(&canonical(&self.tessellation)?),curve_ranges,point_ranges,samples:count,vertices:mesh.positions.len(),triangles:mesh.triangles()?.len(),derived_bytes:canonical(&mesh)?.len(),approximation:"bounded rational control-hull subdivision and radius/tilt variation; polygon tube/sphere sweep with parallel-transport frames; no analytic curve intersection or self-intersection removal".into()};
+        let mut receipt=Conversion{source_digest:self.content_id()?,policy_digest:digest(&canonical(&self.tessellation)?),curve_ranges,point_ranges,samples:count,vertices:mesh.positions.len(),triangles:mesh.triangles()?.len(),derived_bytes:canonical(&mesh)?.len(),approximation:"bounded rational control-hull subdivision and radius/tilt variation; polygon tube/sphere sweep with parallel-transport frames; no analytic curve intersection or self-intersection removal".into()};
+        if self.has_colors() {
+            receipt.approximation.push_str("; linear straight polyline control RGBA transferred to tube rings/caps and polygon vertices; missing control colors are white");
+        }
         Ok(Evaluated { mesh, receipt })
     }
 }
@@ -550,15 +591,17 @@ struct Builder {
     uv: Vec<[f32; 2]>,
     corner_uv: Vec<[f32; 2]>,
     max: usize,
+    colors: Option<Vec<[f32; 4]>>,
 }
 impl Builder {
-    fn new(max: usize) -> Self {
+    fn new(max: usize, colored: bool) -> Self {
         Self {
             positions: vec![],
             faces: vec![],
             uv: vec![],
             corner_uv: vec![],
             max,
+            colors: colored.then(Vec::new),
         }
     }
     fn face(&mut self, indices: Vec<u32>, wrap_v: bool) {
@@ -599,6 +642,9 @@ impl Builder {
         let i = self.positions.len() as u32;
         self.positions.push(p.to_array());
         self.uv.push(uv);
+        if let Some(colors) = &mut self.colors {
+            colors.push([1.; 4]);
+        }
         i
     }
     fn sides(radius: f64, error: f64) -> Result<usize> {
@@ -682,13 +728,16 @@ impl Builder {
             let b = tangents[i].cross(a);
             for j in 0..sides {
                 let angle = std::f64::consts::TAU * j as f64 / sides as f64;
-                self.push(
+                let vertex = self.push(
                     p.position + p.radius * (a * angle.cos() + b * angle.sin()),
                     [
                         j as f32 / sides as f32,
                         i as f32 / if closed { n as f32 } else { (n - 1) as f32 },
                     ],
                 );
+                if let Some(colors) = &mut self.colors {
+                    colors[vertex as usize] = p.color;
+                }
             }
         }
         let segments = if closed { n } else { n - 1 };
@@ -705,6 +754,10 @@ impl Builder {
         if !closed {
             let first = self.push(samples[0].position, [0.5, 0.]);
             let last = self.push(samples[n - 1].position, [0.5, 1.]);
+            if let Some(colors) = &mut self.colors {
+                colors[first as usize] = samples[0].color;
+                colors[last as usize] = samples[n - 1].color;
+            }
             for j in 0..sides {
                 self.face(
                     vec![first, base + ((j + 1) % sides) as u32, base + j as u32],

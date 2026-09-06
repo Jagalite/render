@@ -346,7 +346,10 @@ impl Snapshot {
         Ok(digest(&canonical(self)?))
     }
     pub fn validate(&self) -> Result<()> {
-        if self.version > 14
+        if self.version > 15
+            || (self.version < 15
+                && (self.geometry_assets.values().any(|a| a.has_colors())
+                    || self.grooms.values().any(|g| g.has_colors())))
             || (self.version < 14
                 && self.meshes.values().any(|m| {
                     m.attributes
@@ -1184,7 +1187,13 @@ fn apply(s: &mut Snapshot, c: &Command) -> Result<()> {
             } else {
                 s.grooms.remove(id);
             }
-            s.version = s.version.max(5);
+            s.version = s
+                .version
+                .max(if groom.as_ref().is_some_and(|g| g.has_colors()) {
+                    15
+                } else {
+                    5
+                });
         }
         Command::PutVolume { asset } => {
             s.volume_assets
@@ -1203,7 +1212,7 @@ fn apply(s: &mut Snapshot, c: &Command) -> Result<()> {
         Command::PutGeometry { asset } => {
             s.geometry_assets
                 .insert(asset.content_id()?, Arc::new(asset.clone()));
-            s.version = s.version.max(3);
+            s.version = s.version.max(if asset.has_colors() { 15 } else { 3 });
         }
         Command::SetGeometry { entity: id, asset } => {
             entity(s, *id)?;

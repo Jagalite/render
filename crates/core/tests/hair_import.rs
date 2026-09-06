@@ -6,6 +6,7 @@ const ARRAY_BE: &[u8] = include_bytes!("../../../fixtures/hair-import/data/array
 fn policy() -> Policy {
     Policy {
         byte_order: ByteOrder::LittleEndian,
+        point_attributes: None,
         meters_per_unit: 1.,
         thickness: Thickness::Diameter,
         color_space: ColorSpace::LinearSrgb,
@@ -77,6 +78,7 @@ fn endian_defaults_arrays_units_materials_and_native_geometry_oracle() {
                             position: xyz.map(f64::from),
                             radius: f64::from(0.12f32) / 2.,
                             tilt: 0.,
+                            color: None,
                         })
                         .collect(),
                     closed: false,

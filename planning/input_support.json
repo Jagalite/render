@@ -167,10 +167,11 @@
       "status": "partially_implemented_profile",
       "evidence": [
         "evidence/m06-m08/README.md",
-        "evidence/hair-import/README.md"
+        "evidence/hair-import/README.md",
+        "evidence/curve-colors/README.md"
       ],
-      "implemented_profile": "native typed curves and guide-root-sweep-v0 with deformation-aware anchors; hair-polyline-surface-v1 external HAIR polylines, varying positive thickness, explicit byte order/units/color/coverage and native/browser CPU/Metal/WebGPU recovery",
-      "remaining_scope": "Within-strand color/transparency attributes, other source formats, physical fiber BSDF, animated-groom source corpus and paging remain separate extensions."
+      "implemented_profile": "native typed curves and guide-root-sweep-v0 with deformation-aware anchors; hair-polyline-surface-v1 external HAIR polylines, varying positive thickness, explicit byte order/units/color/coverage and native/browser CPU/Metal/WebGPU recovery; snapshot15 typed polyline RGBA and opt-in hair-polyline-rgba-v1 point appearance, groom inheritance and evaluated GLB roundtrip",
+      "remaining_scope": "Colored higher-order splines, other source formats, physical fiber BSDF, animated-groom source corpus and paging remain separate extensions."
     },
     {
       "id": "INPUT-05",

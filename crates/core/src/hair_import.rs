@@ -8,6 +8,7 @@ use serde::{Deserialize, Serialize};
 use std::collections::BTreeMap;
 pub const MAX_INPUT_BYTES: usize = 4 * 1024 * 1024;
 pub const PROFILE: &str = "hair-polyline-surface-v1";
+pub const RGBA_PROFILE: &str = "hair-polyline-rgba-v1";
 #[derive(Clone, Copy, Debug, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "snake_case")]
 pub enum ByteOrder {
@@ -36,6 +37,17 @@ pub enum Transparency {
 pub enum Representation {
     SweptPolylineSurface,
 }
+#[derive(Clone, Copy, Debug, PartialEq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum PointAttributes {
+    LinearRgbaF32,
+}
+#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct PointAttributeConversion {
+    pub control_count: u32,
+    pub max_alpha_absolute_error: f64,
+}
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Policy {
@@ -47,6 +59,8 @@ pub struct Policy {
     pub representation: Representation,
     pub roughness: f32,
     pub tessellation: curves::Tessellation,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub point_attributes: Option<PointAttributes>,
 }
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -77,6 +91,8 @@ pub struct Report {
     /// Platform-local serialized length of disposable f64 geometry; not source identity.
     pub observed_derived_json_bytes: u64,
     pub strands: Vec<Strand>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub point_attribute_conversion: Option<PointAttributeConversion>,
 }
 pub struct Imported {
     pub commands: Vec<Command>,
@@ -136,7 +152,7 @@ struct InputStrand {
 }
 struct Group {
     color: [f32; 3],
-    transparency: f32,
+    opacity: scattering::Opacity,
     strands: Vec<InputStrand>,
 }
 pub fn import(
@@ -219,8 +235,15 @@ pub fn import(
             "strand segment totals disagree with point count",
         ));
     }
+    let point_attributes = policy.point_attributes.is_some();
+    let profile = if point_attributes {
+        RGBA_PROFILE
+    } else {
+        PROFILE
+    };
+    let mut max_alpha_absolute_error = 0_f64;
     let source_digest = digest(bytes);
-    let identity = digest(&canonical(&(document_id, PROFILE, &source_digest, policy))?);
+    let identity = digest(&canonical(&(document_id, profile, &source_digest, policy))?);
     let id = |kind: &str, index: u32| -> Result<Id> {
         let d = digest(&canonical(&(&identity, kind, index))?);
         Ok(Id(u128::from_str_radix(&d[7..39], 16).expect("SHA256 hex")))
@@ -265,7 +288,7 @@ pub fn import(
                 })?;
             }
             let current = (color, transparency);
-            if appearance.is_some_and(|a| a != current) {
+            if !point_attributes && appearance.is_some_and(|a| a != current) {
                 return Err(error(
                     "unsupported_hair",
                     "within-strand varying color/transparency requires a curve-attribute profile",
@@ -273,11 +296,25 @@ pub fn import(
                 .with_context("strand", strand.to_string()));
             }
             appearance = Some(current);
+            let rgba = if point_attributes {
+                let rgb = match policy.color_space {
+                    ColorSpace::LinearSrgb => color,
+                    ColorSpace::Srgb => color.map(crate::imaging::srgb_to_linear),
+                };
+                let exact_alpha = 1. - f64::from(transparency);
+                let alpha = exact_alpha as f32;
+                max_alpha_absolute_error =
+                    max_alpha_absolute_error.max((exact_alpha - f64::from(alpha)).abs());
+                Some([rgb[0], rgb[1], rgb[2], alpha])
+            } else {
+                None
+            };
             controls.push(curves::Control {
                 id: id("point", i as u32)?,
                 position,
                 radius,
                 tilt: 0.,
+                color: rgba,
             });
         }
         let curve = curves::Curve {
@@ -290,7 +327,33 @@ pub fn import(
             .validate()
             .map_err(|e| e.at("import").with_context("strand", strand.to_string()))?;
         let (color, transparency) = appearance.expect("nonempty strand");
-        let key = (color.map(f32::to_bits), transparency.to_bits());
+        let (color, opacity, key) = if point_attributes {
+            let blend = curve
+                .controls
+                .iter()
+                .any(|c| c.color.is_some_and(|v| v[3] < 1.));
+            (
+                [1.; 3],
+                if blend {
+                    scattering::Opacity::Blend { factor: 1. }
+                } else {
+                    scattering::Opacity::Opaque
+                },
+                ([1_f32.to_bits(); 3], u32::from(blend)),
+            )
+        } else {
+            (
+                color,
+                if transparency == 0. {
+                    scattering::Opacity::Opaque
+                } else {
+                    scattering::Opacity::Blend {
+                        factor: 1. - f64::from(transparency),
+                    }
+                },
+                (color.map(f32::to_bits), transparency.to_bits()),
+            )
+        };
         if !groups.contains_key(&key) && groups.len() == 128 {
             return Err(error("budget", "HAIR exceeds 128 material groups"));
         }
@@ -298,7 +361,7 @@ pub fn import(
             .entry(key)
             .or_insert_with(|| Group {
                 color,
-                transparency,
+                opacity,
                 strands: vec![],
             })
             .strands
@@ -310,7 +373,7 @@ pub fn import(
         offset += *count as usize;
     }
     let mut report = Report {
-        profile: PROFILE.into(),
+        profile: profile.into(),
         source_digest,
         policy: policy.clone(),
         input_bytes: bytes.len() as u64,
@@ -324,6 +387,10 @@ pub fn import(
         derived_triangles: 0,
         observed_derived_json_bytes: 0,
         strands: vec![],
+        point_attribute_conversion: point_attributes.then_some(PointAttributeConversion {
+            control_count: points,
+            max_alpha_absolute_error,
+        }),
     };
     let mut commands = vec![];
     for (index, group) in groups.into_values().enumerate() {
@@ -357,13 +424,7 @@ pub fn import(
             ColorSpace::LinearSrgb => group.color,
             ColorSpace::Srgb => group.color.map(crate::imaging::srgb_to_linear),
         };
-        let opacity = if group.transparency == 0. {
-            scattering::Opacity::Opaque
-        } else {
-            scattering::Opacity::Blend {
-                factor: 1. - f64::from(group.transparency),
-            }
-        };
+        let opacity = group.opacity;
         let material = Material {
             id: material_id,
             base_color: color,
@@ -373,10 +434,17 @@ pub fn import(
             texture: None,
             pbr: Some(pbr::Surface {
                 double_sided: true,
-                advanced: Some(scattering::Surface {
-                    model: scattering::Model::Principled,
-                    opacity,
-                }),
+                // Use canonical opaque PBR for the new profile so evaluated
+                // GLB roundtrips retain the same sampling profile. Preserve
+                // the original importer profile byte-for-byte.
+                advanced: if point_attributes && matches!(opacity, scattering::Opacity::Opaque) {
+                    None
+                } else {
+                    Some(scattering::Surface {
+                        model: scattering::Model::Principled,
+                        opacity,
+                    })
+                },
                 ..Default::default()
             }),
         };

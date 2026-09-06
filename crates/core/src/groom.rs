@@ -105,6 +105,9 @@ impl Root {
     }
 }
 impl Groom {
+    pub fn has_colors(&self) -> bool {
+        self.guides.iter().any(|g| g.curve.has_colors())
+    }
     pub fn validate(&self, s: &Snapshot) -> Result<()> {
         self.tessellation.validate()?;
         if self.guides.is_empty()
@@ -217,6 +220,7 @@ impl Groom {
         let mut positions = vec![];
         let mut faces = vec![];
         let mut uv = vec![];
+        let mut colors = self.has_colors().then(Vec::new);
         let mut ranges = BTreeMap::new();
         let mut samples = 0usize;
         for (curve, root) in strands {
@@ -245,6 +249,16 @@ impl Groom {
             }
             let transform = inv * s.world_transform(root.entity)? * root.frame(s)?;
             let start = positions.len() as u32;
+            if let Some(colors) = &mut colors {
+                if let Some(attr) = derived.mesh.color_attribute() {
+                    let AttributeValues::Vec4(values) = &attr.values else {
+                        unreachable!("curve point colors")
+                    };
+                    colors.extend(values);
+                } else {
+                    colors.resize(colors.len() + derived.mesh.positions.len(), [1.; 4]);
+                }
+            }
             for i in 0..derived.mesh.positions.len() {
                 positions.push(
                     transform
@@ -276,8 +290,23 @@ impl Groom {
                 values: AttributeValues::Vec2(uv),
             },
         );
+        if let Some(colors) = colors {
+            mesh.attributes.insert(
+                "curve_color".into(),
+                Attribute {
+                    id: Id(200),
+                    domain: Domain::Point,
+                    semantic: "color_rgba".into(),
+                    transfer: Transfer::Linear,
+                    values: AttributeValues::Vec4(colors),
+                },
+            );
+        }
         mesh.validate()?;
-        let receipt=Conversion{source_digest:self.cache_key(s,entity)?,policy_digest:digest(&canonical(&self.tessellation)?),curve_ranges:ranges,point_ranges:BTreeMap::new(),samples,vertices:mesh.positions.len(),triangles:faces.len(),derived_bytes:canonical(&mesh)?.len(),approximation:"guide copies generated at stable barycentric roots; local tangent frames follow anchor deformation; bounded polygon sweeps; no physical fiber BSDF".into()};
+        let mut receipt=Conversion{source_digest:self.cache_key(s,entity)?,policy_digest:digest(&canonical(&self.tessellation)?),curve_ranges:ranges,point_ranges:BTreeMap::new(),samples,vertices:mesh.positions.len(),triangles:faces.len(),derived_bytes:canonical(&mesh)?.len(),approximation:"guide copies generated at stable barycentric roots; local tangent frames follow anchor deformation; bounded polygon sweeps; no physical fiber BSDF".into()};
+        if self.has_colors() {
+            receipt.approximation.push_str("; polyline guide RGBA preserved through child copies and point-domain sweep transfer");
+        }
         Ok(Evaluated { mesh, receipt })
     }
 }

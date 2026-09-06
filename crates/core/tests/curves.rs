@@ -6,6 +6,7 @@ fn control(i: u128, p: [f64; 3]) -> Control {
         position: p,
         radius: 0.03,
         tilt: 0.,
+        color: None,
     }
 }
 fn bezier() -> Curve {

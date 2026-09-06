@@ -831,7 +831,7 @@ impl Session {
 /// Stable names/versions and effects are reviewed independently of Session layout.
 pub fn registry() -> Vec<crate::api::Operation> {
     [
-        ("agent.import_hair",true,"HAIR polylines with explicit byte order, units, thickness, uniform-per-strand color/coverage and bounded native sweep; 4 MiB input","decode, sweep evaluation and before atomic publication; synchronous browser dispatch"),
+        ("agent.import_hair",true,"HAIR polylines with explicit byte order, units, thickness, uniform-per-strand appearance or explicit linear_rgba_f32 controls, and bounded native sweep; 4 MiB input","decode, sweep evaluation and before atomic publication; synchronous browser dispatch"),
         ("agent.import_vol",true,"VOL3 density and optional aligned linear RGB emission; explicit cell-constant metric policy; 4 MiB input, 16384 occupied cells","decode, evaluation and before atomic publication; synchronous browser dispatch"),
         ("agent.render_root_cpu",false,"bounded CPU rendering for extended materials at a pinned root revision","evaluation and render boundaries"),
         ("agent.preview_products",false,"render authored views, color/denoising and typed UV bakes at a pinned revision","evaluation and render boundaries"),

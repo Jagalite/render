@@ -436,3 +436,22 @@ evaluator receipts validate it while source identities and counts remain shared.
 **Revisit trigger:** Per-control color attributes, analytic curve intersections,
 physical fiber scattering, root-bound animation, source-container history or larger
 paging profiles require their own semantics, resource and platform acceptance gates.
+
+## ADR-031 — Polyline RGBA remains typed authoring through surface conversion
+
+**Decision:** Add optional linear straight RGBA f32 to stable native polyline
+controls, with white defaults and snapshot15 admission. Preserve colors through
+radius subdivision, polygon rings/caps and guide-child copying using the existing
+point-domain color semantic. Reject colored higher-order bases until a color error
+contract exists. Old uncolored authoring and evaluated outputs remain unchanged.
+
+**Integration boundary:** The [control color profile](curve_colors.md) spans curve,
+groom, snapshot and HAIR source admission. Explicit HAIR linear_rgba_f32 policy opts
+into point variation with reported alpha rounding and ordinary opaque or BLEND white
+materials. Absent policy retains the original profile. Existing surface shaders and
+GLB COLOR_0 export consume the derived attribute; no foreign runtime is introduced.
+
+**Revisit trigger:** Higher-order color approximation, point colors, animated source
+grooms, physical fibers or analytic intersections require separate numerical and
+native/browser acceptance gates. Native authoring remains distinct from evaluated
+GLB losses and platform-local disposable geometry serialization.

@@ -1,0 +1,18 @@
+   Compiling render-core v0.1.0 (/private/tmp/render-curve-colors-20260906/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 2.81s
+     Running tests/curve_colors.rs (target/debug/deps/curve_colors-a0120421678a2daa)
+
+running 3 tests
+test color_validation_schema_transactions_and_recovery ... ok
+test polyline_midpoint_radius_subdivision_rings_caps_and_missing_white ... ok
+test groom_children_preserve_guide_colors_and_version_boundary ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running tests/hair_colors.rs (target/debug/deps/hair_colors-ca110b7979d6eed0)
+
+running 2 tests
+test explicit_mode_preserves_controls_alpha_precision_and_opaque_branch ... ok
+test colored_import_agent_failures_and_source_unit_validation ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s

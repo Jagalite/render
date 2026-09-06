@@ -1,0 +1,2985 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "gradient-le-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/000-gradient-le-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 3.088823375001084
+    },
+    {
+      "name": "gradient-le-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/001-gradient-le-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017538166997837834
+    },
+    {
+      "name": "gradient-le-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/002-gradient-le-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.047254624994820915,
+      "resources": {
+        "maximum resident set size": 17530880,
+        "peak memory footprint": 3327040
+      }
+    },
+    {
+      "name": "gradient-le-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/003-gradient-le-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024239875012426637
+    },
+    {
+      "name": "gradient-le-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/004-gradient-le-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019755791989155114
+    },
+    {
+      "name": "gradient-le-evaluate",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/005-gradient-le-evaluate.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.027655042009428144
+    },
+    {
+      "name": "gradient-le-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/006-gradient-le-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.028432834005798213
+    },
+    {
+      "name": "strict-profile",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/007-strict-profile.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "unsupported_hair",
+      "seconds": 0.025250999999116175
+    },
+    {
+      "name": "zero-radius",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/008-zero-radius.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "curve",
+      "seconds": 0.019965875006164424
+    },
+    {
+      "name": "sweep-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/009-sweep-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.01638916700903792
+    },
+    {
+      "name": "cancel-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/010-cancel-import.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "cancelled",
+      "seconds": 0.012536832990008406
+    },
+    {
+      "name": "input-budget",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/011-input-budget.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "budget",
+      "seconds": 0.01595137499680277
+    },
+    {
+      "name": "gradient-le-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/012-gradient-le-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.09459375000733417,
+      "resources": {
+        "maximum resident set size": 18825216,
+        "peak memory footprint": 3671104
+      }
+    },
+    {
+      "name": "gradient-le-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/013-gradient-le-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5521370409987867,
+      "resources": {
+        "maximum resident set size": 36749312,
+        "peak memory footprint": 13190784
+      }
+    },
+    {
+      "name": "gradient-le-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/014-gradient-le-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03341204200114589
+    },
+    {
+      "name": "gradient-le-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/015-gradient-le-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03458166700147558
+    },
+    {
+      "name": "gradient-le-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/016-gradient-le-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.08306095800071489
+    },
+    {
+      "name": "gradient-le-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/017-gradient-le-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3263130830018781
+    },
+    {
+      "name": "gradient-le-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/018-gradient-le-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07875654099916574
+    },
+    {
+      "name": "gradient-le-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/019-gradient-le-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05842991599638481
+    },
+    {
+      "name": "gradient-le-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/020-gradient-le-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02873354199982714
+    },
+    {
+      "name": "gradient-le-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/021-gradient-le-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019162333002896048
+    },
+    {
+      "name": "gradient-le-round-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/022-gradient-le-round-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.219706749994657
+    },
+    {
+      "name": "gradient-le-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/023-gradient-le-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.15485624999564607
+    },
+    {
+      "name": "gradient-le-round-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/024-gradient-le-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.22611587500432506
+    },
+    {
+      "name": "gradient-le-round-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/025-gradient-le-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5367419170070207
+    },
+    {
+      "name": "gradient-le-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/026-gradient-le-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02152395900338888
+    },
+    {
+      "name": "gradient-be-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/027-gradient-be-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024331625012564473
+    },
+    {
+      "name": "gradient-be-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/028-gradient-be-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015178834000835195
+    },
+    {
+      "name": "gradient-be-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/029-gradient-be-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04277141699276399,
+      "resources": {
+        "maximum resident set size": 17465344,
+        "peak memory footprint": 3261504
+      }
+    },
+    {
+      "name": "gradient-be-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/030-gradient-be-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03982729199924506
+    },
+    {
+      "name": "gradient-be-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/031-gradient-be-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020280042008380406
+    },
+    {
+      "name": "gradient-be-evaluate",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/032-gradient-be-evaluate.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.023975750009412877
+    },
+    {
+      "name": "gradient-be-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/033-gradient-be-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.029130625000107102
+    },
+    {
+      "name": "gradient-be-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/034-gradient-be-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06803312498959713,
+      "resources": {
+        "maximum resident set size": 18644992,
+        "peak memory footprint": 3507328
+      }
+    },
+    {
+      "name": "gradient-be-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/035-gradient-be-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.34175074999802746,
+      "resources": {
+        "maximum resident set size": 36503552,
+        "peak memory footprint": 12912256
+      }
+    },
+    {
+      "name": "gradient-be-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/036-gradient-be-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03282654100621585
+    },
+    {
+      "name": "gradient-be-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/037-gradient-be-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.026984374999301508
+    },
+    {
+      "name": "gradient-be-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/038-gradient-be-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06861862499499694
+    },
+    {
+      "name": "gradient-be-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/039-gradient-be-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.345753749992582
+    },
+    {
+      "name": "gradient-be-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/040-gradient-be-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.048674665988073684
+    },
+    {
+      "name": "gradient-be-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/041-gradient-be-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04567133300588466
+    },
+    {
+      "name": "gradient-be-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/042-gradient-be-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02299266699992586
+    },
+    {
+      "name": "gradient-be-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/043-gradient-be-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011747875003493391
+    },
+    {
+      "name": "gradient-be-round-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/044-gradient-be-round-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.18425862499861978
+    },
+    {
+      "name": "gradient-be-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/045-gradient-be-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.13515412500419188
+    },
+    {
+      "name": "gradient-be-round-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/046-gradient-be-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.18619391600077506
+    },
+    {
+      "name": "gradient-be-round-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/047-gradient-be-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.4904517910035793
+    },
+    {
+      "name": "gradient-be-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/048-gradient-be-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022408040997106582
+    },
+    {
+      "name": "rgb-only-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/049-rgb-only-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021152040993911214
+    },
+    {
+      "name": "rgb-only-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/050-rgb-only-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015419291012221947
+    },
+    {
+      "name": "rgb-only-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/051-rgb-only-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04097800000454299,
+      "resources": {
+        "maximum resident set size": 17416192,
+        "peak memory footprint": 3277888
+      }
+    },
+    {
+      "name": "rgb-only-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/052-rgb-only-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.028455084000597708
+    },
+    {
+      "name": "rgb-only-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/053-rgb-only-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.017709792009554803
+    },
+    {
+      "name": "rgb-only-evaluate",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/054-rgb-only-evaluate.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02039574999071192
+    },
+    {
+      "name": "rgb-only-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/055-rgb-only-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.027726917003747076
+    },
+    {
+      "name": "rgb-only-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/056-rgb-only-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0819112080062041,
+      "resources": {
+        "maximum resident set size": 18644992,
+        "peak memory footprint": 3556480
+      }
+    },
+    {
+      "name": "rgb-only-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/057-rgb-only-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20327504099986982,
+      "resources": {
+        "maximum resident set size": 35405824,
+        "peak memory footprint": 11765376
+      }
+    },
+    {
+      "name": "rgb-only-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/058-rgb-only-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.033186458007548936
+    },
+    {
+      "name": "rgb-only-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/059-rgb-only-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02679941699898336
+    },
+    {
+      "name": "rgb-only-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/060-rgb-only-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06856912499642931
+    },
+    {
+      "name": "rgb-only-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/061-rgb-only-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.23130945800221525
+    },
+    {
+      "name": "rgb-only-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/062-rgb-only-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06985233300656546
+    },
+    {
+      "name": "rgb-only-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/063-rgb-only-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.05352225000387989
+    },
+    {
+      "name": "rgb-only-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/064-rgb-only-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02480637500411831
+    },
+    {
+      "name": "rgb-only-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/065-rgb-only-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.012765124993165955
+    },
+    {
+      "name": "rgb-only-round-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/066-rgb-only-round-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.17411424999590963
+    },
+    {
+      "name": "rgb-only-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/067-rgb-only-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14363033400150016
+    },
+    {
+      "name": "rgb-only-round-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/068-rgb-only-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.23934300000837538
+    },
+    {
+      "name": "rgb-only-round-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/069-rgb-only-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.34506099999998696
+    },
+    {
+      "name": "rgb-only-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/070-rgb-only-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.016417125007137656
+    },
+    {
+      "name": "alpha-only-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/071-alpha-only-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0232682920031948
+    },
+    {
+      "name": "alpha-only-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/072-alpha-only-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011172583006555215
+    },
+    {
+      "name": "alpha-only-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/073-alpha-only-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03798379200452473,
+      "resources": {
+        "maximum resident set size": 17432576,
+        "peak memory footprint": 3228736
+      }
+    },
+    {
+      "name": "alpha-only-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/074-alpha-only-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030237540995585732
+    },
+    {
+      "name": "alpha-only-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/075-alpha-only-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.020302374992752448
+    },
+    {
+      "name": "alpha-only-evaluate",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/076-alpha-only-evaluate.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02691545798734296
+    },
+    {
+      "name": "alpha-only-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/077-alpha-only-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.025133749993983656
+    },
+    {
+      "name": "alpha-only-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/078-alpha-only-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07345212499785703,
+      "resources": {
+        "maximum resident set size": 18759680,
+        "peak memory footprint": 3605568
+      }
+    },
+    {
+      "name": "alpha-only-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/079-alpha-only-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.31465116700564977,
+      "resources": {
+        "maximum resident set size": 36552704,
+        "peak memory footprint": 12945024
+      }
+    },
+    {
+      "name": "alpha-only-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/080-alpha-only-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.033955040998989716
+    },
+    {
+      "name": "alpha-only-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/081-alpha-only-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.027340374988853
+    },
+    {
+      "name": "alpha-only-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/082-alpha-only-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06612954199954402
+    },
+    {
+      "name": "alpha-only-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/083-alpha-only-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3452150840021204
+    },
+    {
+      "name": "alpha-only-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/084-alpha-only-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.061629667005036026
+    },
+    {
+      "name": "alpha-only-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/085-alpha-only-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07901400000264402
+    },
+    {
+      "name": "alpha-only-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/086-alpha-only-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.023085041000740603
+    },
+    {
+      "name": "alpha-only-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/087-alpha-only-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015784749994054437
+    },
+    {
+      "name": "alpha-only-round-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/088-alpha-only-round-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1880415420018835
+    },
+    {
+      "name": "alpha-only-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/089-alpha-only-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14301754099142272
+    },
+    {
+      "name": "alpha-only-round-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/090-alpha-only-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.20554249999986496
+    },
+    {
+      "name": "alpha-only-round-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/091-alpha-only-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.45506745799502824
+    },
+    {
+      "name": "alpha-only-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/092-alpha-only-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.01683249999769032
+    },
+    {
+      "name": "mixed-opacity-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/093-mixed-opacity-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.022122957991086878
+    },
+    {
+      "name": "mixed-opacity-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/094-mixed-opacity-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011830791991087608
+    },
+    {
+      "name": "mixed-opacity-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/095-mixed-opacity-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03923620900604874,
+      "resources": {
+        "maximum resident set size": 17432576,
+        "peak memory footprint": 3163264
+      }
+    },
+    {
+      "name": "mixed-opacity-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/096-mixed-opacity-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030799000000115484
+    },
+    {
+      "name": "mixed-opacity-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/097-mixed-opacity-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019434875008300878
+    },
+    {
+      "name": "mixed-opacity-evaluate",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/098-mixed-opacity-evaluate.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024697125001694076
+    },
+    {
+      "name": "mixed-opacity-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/099-mixed-opacity-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.033235125010833144
+    },
+    {
+      "name": "mixed-opacity-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/100-mixed-opacity-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0692299579968676,
+      "resources": {
+        "maximum resident set size": 18710528,
+        "peak memory footprint": 3490944
+      }
+    },
+    {
+      "name": "mixed-opacity-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/101-mixed-opacity-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.35104912499082275,
+      "resources": {
+        "maximum resident set size": 36634624,
+        "peak memory footprint": 12945024
+      }
+    },
+    {
+      "name": "mixed-opacity-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/102-mixed-opacity-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.036442416996578686
+    },
+    {
+      "name": "mixed-opacity-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/103-mixed-opacity-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.028598749995580874
+    },
+    {
+      "name": "mixed-opacity-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/104-mixed-opacity-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0718427500105463
+    },
+    {
+      "name": "mixed-opacity-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/105-mixed-opacity-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.33214425000187475
+    },
+    {
+      "name": "mixed-opacity-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/106-mixed-opacity-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.043859792000148445
+    },
+    {
+      "name": "mixed-opacity-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/107-mixed-opacity-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.0487784579891013
+    },
+    {
+      "name": "mixed-opacity-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/108-mixed-opacity-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021762624994153157
+    },
+    {
+      "name": "mixed-opacity-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/109-mixed-opacity-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.009913749992847443
+    },
+    {
+      "name": "mixed-opacity-round-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/110-mixed-opacity-round-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.19803845799469855
+    },
+    {
+      "name": "mixed-opacity-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/111-mixed-opacity-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.17614054099249188
+    },
+    {
+      "name": "mixed-opacity-round-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/112-mixed-opacity-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2767660829995293
+    },
+    {
+      "name": "mixed-opacity-round-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/113-mixed-opacity-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5369060420052847
+    },
+    {
+      "name": "mixed-opacity-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/114-mixed-opacity-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024954208987765014
+    },
+    {
+      "name": "srgb-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/115-srgb-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.030925041995942593
+    },
+    {
+      "name": "srgb-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/116-srgb-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.014474792013061233
+    },
+    {
+      "name": "srgb-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/117-srgb-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04927566699916497,
+      "resources": {
+        "maximum resident set size": 17498112,
+        "peak memory footprint": 3261504
+      }
+    },
+    {
+      "name": "srgb-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/118-srgb-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03445504100818653
+    },
+    {
+      "name": "srgb-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/119-srgb-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.019333374992129393
+    },
+    {
+      "name": "srgb-evaluate",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/120-srgb-evaluate.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.026298334007151425
+    },
+    {
+      "name": "srgb-stale",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/121-srgb-stale.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "stale_revision",
+      "seconds": 0.029422499996144325
+    },
+    {
+      "name": "srgb-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/122-srgb-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07226200000150129,
+      "resources": {
+        "maximum resident set size": 18710528,
+        "peak memory footprint": 3572864
+      }
+    },
+    {
+      "name": "srgb-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/123-srgb-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.38788358301098924,
+      "resources": {
+        "maximum resident set size": 36667392,
+        "peak memory footprint": 13076096
+      }
+    },
+    {
+      "name": "srgb-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/124-srgb-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.038139666998176835
+    },
+    {
+      "name": "srgb-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/125-srgb-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.028696499997749925
+    },
+    {
+      "name": "srgb-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/126-srgb-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07136220799293369
+    },
+    {
+      "name": "srgb-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/127-srgb-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3918940419971477
+    },
+    {
+      "name": "srgb-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/128-srgb-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06467012500797864
+    },
+    {
+      "name": "srgb-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/129-srgb-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06149279199598823
+    },
+    {
+      "name": "srgb-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/130-srgb-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.024711833000765182
+    },
+    {
+      "name": "srgb-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/131-srgb-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.011230791991692968
+    },
+    {
+      "name": "srgb-round-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/132-srgb-round-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.16248274999088608
+    },
+    {
+      "name": "srgb-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/133-srgb-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1267036250064848
+    },
+    {
+      "name": "srgb-round-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/134-srgb-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.18245983400265686
+    },
+    {
+      "name": "srgb-round-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/135-srgb-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.41025887499563396
+    },
+    {
+      "name": "srgb-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/136-srgb-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.015337791992351413
+    },
+    {
+      "name": "groom-restore-source",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/137-groom-restore-source.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.04051029199035838
+    },
+    {
+      "name": "groom-source-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/138-groom-source-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.029800917007378303
+    },
+    {
+      "name": "groom-author",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/139-groom-author.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07625370800087694
+    },
+    {
+      "name": "groom-retry",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/140-groom-retry.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.061752916997647844
+    },
+    {
+      "name": "groom-authored",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/141-groom-authored.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03600587499386165
+    },
+    {
+      "name": "groom-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/142-groom-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.14958354199188761,
+      "resources": {
+        "maximum resident set size": 20299776,
+        "peak memory footprint": 4654208
+      }
+    },
+    {
+      "name": "groom-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/143-groom-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.3355555000016466,
+      "resources": {
+        "maximum resident set size": 37371904,
+        "peak memory footprint": 13256320
+      }
+    },
+    {
+      "name": "groom-archive",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/144-groom-archive.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.052920125002856366
+    },
+    {
+      "name": "groom-restore",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/145-groom-restore.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.033735874996636994
+    },
+    {
+      "name": "groom-recovered-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/146-groom-recovered-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.1428695409995271
+    },
+    {
+      "name": "groom-recovered-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/147-groom-recovered-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.31621441700553987
+    },
+    {
+      "name": "groom-export",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/148-groom-export.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.07347833398671355
+    },
+    {
+      "name": "groom-repeat",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/149-groom-repeat.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.06925154199416284
+    },
+    {
+      "name": "groom-round-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/150-groom-round-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.021555832994636148
+    },
+    {
+      "name": "groom-round-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/151-groom-round-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.010068040995975025
+    },
+    {
+      "name": "groom-round-import",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/152-groom-round-import.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2624632090009982
+    },
+    {
+      "name": "groom-round-state",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/153-groom-round-state.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.2086255419999361
+    },
+    {
+      "name": "groom-round-cpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/154-groom-round-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.32886712499021087
+    },
+    {
+      "name": "groom-round-gpu",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-round-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/155-groom-round-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.5321395829960238
+    },
+    {
+      "name": "groom-unchanged",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/156-groom-unchanged.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.03623070800676942
+    }
+  ],
+  "variants": [
+    {
+      "kind": "hair",
+      "source": {
+        "format": "hair",
+        "path": "/private/tmp/render-curve-colors-20260906/fixtures/curve-colors/data/gradient-le.hair",
+        "policy": {
+          "byte_order": "little_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          },
+          "point_attributes": "linear_rgba_f32"
+        }
+      },
+      "report": {
+        "derived_samples": 11,
+        "derived_triangles": 132,
+        "derived_vertices": 70,
+        "geometry_asset_json_bytes": 1623,
+        "input_bytes": 356,
+        "material_groups": 1,
+        "observed_derived_json_bytes": 33425,
+        "point_attribute_conversion": {
+          "control_count": 7,
+          "max_alpha_absolute_error": 2.2351741790771484e-08
+        },
+        "policy": {
+          "byte_order": "little_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 1.0,
+          "point_attributes": "linear_rgba_f32",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-rgba-v1",
+        "source_digest": "sha256:57a5672b94a3ac00798cac80fa3e638e73bd5c9b472f9c7f1d1b2eef4011dcaa",
+        "source_flags": 31,
+        "source_points": 7,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "60282e9d11b2afa17569a0c4e835bc23",
+            "entity": "05a46d4c794b53c9bfc58ee0002290e7",
+            "geometry_asset": "sha256:20690fac121b5bb24c4e77146a6870ee3e19281807c268599fced547321962d6",
+            "material": "a4bb0a2174e94c0b145ff9ac06855038",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "92d54ce14909fc5652f969f083755d34",
+            "entity": "05a46d4c794b53c9bfc58ee0002290e7",
+            "geometry_asset": "sha256:20690fac121b5bb24c4e77146a6870ee3e19281807c268599fced547321962d6",
+            "material": "a4bb0a2174e94c0b145ff9ac06855038",
+            "point_count": 4,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "empty_revision": "sha256:a1b11e5e29770f7eef49b5ea4355215d3608d0cf2e3de715059d7d8dbf88400e",
+      "name": "gradient-le",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:34f096c75d7142ff4accf4382e1c42fa645d526217c88415b2a6cd6ae5e4c4ca",
+      "archive": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-archive/document/document.json",
+      "glb": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-le-export/scene/scene.glb",
+      "export_policy": {
+        "allow_approximations": true,
+        "max_bytes": 4194304,
+        "max_vertices": 10000,
+        "max_position_error_meters": 1e-05
+      },
+      "gpu_linear_rmse": 1.4295403351649842e-08,
+      "roundtrip": [
+        {
+          "backend": "cpu",
+          "linear_rmse": 8.633591336076687e-10
+        },
+        {
+          "backend": "gpu",
+          "linear_rmse": 1.4295403351649842e-08
+        }
+      ]
+    },
+    {
+      "kind": "hair",
+      "source": {
+        "format": "hair",
+        "path": "/private/tmp/render-curve-colors-20260906/fixtures/curve-colors/data/gradient-be.hair",
+        "policy": {
+          "byte_order": "big_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          },
+          "point_attributes": "linear_rgba_f32"
+        }
+      },
+      "report": {
+        "derived_samples": 11,
+        "derived_triangles": 132,
+        "derived_vertices": 70,
+        "geometry_asset_json_bytes": 1623,
+        "input_bytes": 356,
+        "material_groups": 1,
+        "observed_derived_json_bytes": 33425,
+        "point_attribute_conversion": {
+          "control_count": 7,
+          "max_alpha_absolute_error": 2.2351741790771484e-08
+        },
+        "policy": {
+          "byte_order": "big_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 1.0,
+          "point_attributes": "linear_rgba_f32",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-rgba-v1",
+        "source_digest": "sha256:e04df8647dd882657569e228bcefbd865c14c2766f7c5ca2649bb5ee7c407b31",
+        "source_flags": 31,
+        "source_points": 7,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "77a836848a74c06078542f73b88a086b",
+            "entity": "722f9a75e3218f33863147aabc278d10",
+            "geometry_asset": "sha256:bb7af33b04383c48477592845ede0643f38a64a98f2dbabe9271b662ea28a058",
+            "material": "1ab8a904204b39dcc9fe85cf2b0ce805",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "fde21215d36893b9193ad730fbef8371",
+            "entity": "722f9a75e3218f33863147aabc278d10",
+            "geometry_asset": "sha256:bb7af33b04383c48477592845ede0643f38a64a98f2dbabe9271b662ea28a058",
+            "material": "1ab8a904204b39dcc9fe85cf2b0ce805",
+            "point_count": 4,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "empty_revision": "sha256:a1b11e5e29770f7eef49b5ea4355215d3608d0cf2e3de715059d7d8dbf88400e",
+      "name": "gradient-be",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:761604caeead8dc8fbc50f175a6ce94aef3d0c7fe688d2702a111a8e2fed5516",
+      "archive": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-archive/document/document.json",
+      "glb": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/gradient-be-export/scene/scene.glb",
+      "export_policy": {
+        "allow_approximations": true,
+        "max_bytes": 4194304,
+        "max_vertices": 10000,
+        "max_position_error_meters": 1e-05
+      },
+      "gpu_linear_rmse": 1.4295403351649842e-08,
+      "roundtrip": [
+        {
+          "backend": "cpu",
+          "linear_rmse": 8.633591336076687e-10
+        },
+        {
+          "backend": "gpu",
+          "linear_rmse": 1.4295403351649842e-08
+        }
+      ]
+    },
+    {
+      "kind": "hair",
+      "source": {
+        "format": "hair",
+        "path": "/private/tmp/render-curve-colors-20260906/fixtures/curve-colors/data/rgb-only.hair",
+        "policy": {
+          "byte_order": "little_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          },
+          "point_attributes": "linear_rgba_f32"
+        }
+      },
+      "report": {
+        "derived_samples": 11,
+        "derived_triangles": 132,
+        "derived_vertices": 70,
+        "geometry_asset_json_bytes": 1590,
+        "input_bytes": 356,
+        "material_groups": 1,
+        "observed_derived_json_bytes": 32855,
+        "point_attribute_conversion": {
+          "control_count": 7,
+          "max_alpha_absolute_error": 0.0
+        },
+        "policy": {
+          "byte_order": "little_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 1.0,
+          "point_attributes": "linear_rgba_f32",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-rgba-v1",
+        "source_digest": "sha256:340cb60092428bc3d12f25a6e196261d25dfd17ef7d2620397a59d35b20dcd6f",
+        "source_flags": 31,
+        "source_points": 7,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "582b66f893a7eec5e60fe72d2e0d1317",
+            "entity": "a646b1eb430a3464c4cc023fe42e7afa",
+            "geometry_asset": "sha256:8d33fc1b86767974bf07de168a7ff47678efab4b298c3de7149a1f9d04106b01",
+            "material": "863b8c5379f40085fd1e23073c6295da",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "dc9348d9e51ef9a7d5a753922ceabece",
+            "entity": "a646b1eb430a3464c4cc023fe42e7afa",
+            "geometry_asset": "sha256:8d33fc1b86767974bf07de168a7ff47678efab4b298c3de7149a1f9d04106b01",
+            "material": "863b8c5379f40085fd1e23073c6295da",
+            "point_count": 4,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "empty_revision": "sha256:a1b11e5e29770f7eef49b5ea4355215d3608d0cf2e3de715059d7d8dbf88400e",
+      "name": "rgb-only",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:b8b305247a6491714111365b0326f8adf6074896ace63def067258fca3743198",
+      "archive": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-archive/document/document.json",
+      "glb": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/rgb-only-export/scene/scene.glb",
+      "export_policy": {
+        "allow_approximations": true,
+        "max_bytes": 4194304,
+        "max_vertices": 10000,
+        "max_position_error_meters": 1e-05
+      },
+      "gpu_linear_rmse": 2.386750702231157e-09,
+      "roundtrip": [
+        {
+          "backend": "cpu",
+          "linear_rmse": 1.528251347094403e-09
+        },
+        {
+          "backend": "gpu",
+          "linear_rmse": 2.386750702231157e-09
+        }
+      ]
+    },
+    {
+      "kind": "hair",
+      "source": {
+        "format": "hair",
+        "path": "/private/tmp/render-curve-colors-20260906/fixtures/curve-colors/data/alpha-only.hair",
+        "policy": {
+          "byte_order": "little_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          },
+          "point_attributes": "linear_rgba_f32"
+        }
+      },
+      "report": {
+        "derived_samples": 11,
+        "derived_triangles": 132,
+        "derived_vertices": 70,
+        "geometry_asset_json_bytes": 1802,
+        "input_bytes": 356,
+        "material_groups": 1,
+        "observed_derived_json_bytes": 34892,
+        "point_attribute_conversion": {
+          "control_count": 7,
+          "max_alpha_absolute_error": 2.2351741790771484e-08
+        },
+        "policy": {
+          "byte_order": "little_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 1.0,
+          "point_attributes": "linear_rgba_f32",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-rgba-v1",
+        "source_digest": "sha256:b3b2560e403939463af8747e0db54b93b712873bcd5e42bd14ba51cf673433a8",
+        "source_flags": 31,
+        "source_points": 7,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "a0d65c24a21ab6e064d9795051923638",
+            "entity": "b4193b552d0fa8a3d176f9214e486585",
+            "geometry_asset": "sha256:7995225f2c9a7257447fc152f0c827d6a22ded13a75496ec811d21f7255b8b73",
+            "material": "f7ac69cff7237368ca34449bbb6a3e12",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "f278477599d3df5b64962d44b20a2e1e",
+            "entity": "b4193b552d0fa8a3d176f9214e486585",
+            "geometry_asset": "sha256:7995225f2c9a7257447fc152f0c827d6a22ded13a75496ec811d21f7255b8b73",
+            "material": "f7ac69cff7237368ca34449bbb6a3e12",
+            "point_count": 4,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "empty_revision": "sha256:a1b11e5e29770f7eef49b5ea4355215d3608d0cf2e3de715059d7d8dbf88400e",
+      "name": "alpha-only",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:b4f44d9c06babddbd4eb127d272e4478798d97577fdce152cdc8933928968171",
+      "archive": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-archive/document/document.json",
+      "glb": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/alpha-only-export/scene/scene.glb",
+      "export_policy": {
+        "allow_approximations": true,
+        "max_bytes": 4194304,
+        "max_vertices": 10000,
+        "max_position_error_meters": 1e-05
+      },
+      "gpu_linear_rmse": 1.4678182507009437e-08,
+      "roundtrip": [
+        {
+          "backend": "cpu",
+          "linear_rmse": 9.313225746154785e-10
+        },
+        {
+          "backend": "gpu",
+          "linear_rmse": 1.4678182507009437e-08
+        }
+      ]
+    },
+    {
+      "kind": "hair",
+      "source": {
+        "format": "hair",
+        "path": "/private/tmp/render-curve-colors-20260906/fixtures/curve-colors/data/mixed-opacity.hair",
+        "policy": {
+          "byte_order": "little_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "linear_srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          },
+          "point_attributes": "linear_rgba_f32"
+        }
+      },
+      "report": {
+        "derived_samples": 11,
+        "derived_triangles": 132,
+        "derived_vertices": 70,
+        "geometry_asset_json_bytes": 1757,
+        "input_bytes": 356,
+        "material_groups": 2,
+        "observed_derived_json_bytes": 33147,
+        "point_attribute_conversion": {
+          "control_count": 7,
+          "max_alpha_absolute_error": 0.0
+        },
+        "policy": {
+          "byte_order": "little_endian",
+          "color_space": "linear_srgb",
+          "meters_per_unit": 1.0,
+          "point_attributes": "linear_rgba_f32",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-rgba-v1",
+        "source_digest": "sha256:5d001a02a7ee356f1caca835556598778996c28042cce710afe99cd67bff7f1f",
+        "source_flags": 31,
+        "source_points": 7,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "89ed0ed0cbf6cc659290ead2603c8902",
+            "entity": "f5f8788613bd49ec2c2532647a9af093",
+            "geometry_asset": "sha256:5ecad66f30d176403f1e19bada5bbc29f5fc5511fd2f1f866d7427efd55814b2",
+            "material": "8486b599f7bfa40d2814348cb2fab964",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "62819e3335551e7626ce9b712fa773f9",
+            "entity": "d8a634eff60ce14433cd27ff05b67f33",
+            "geometry_asset": "sha256:2cecabee5ffd5630a21ebc3b3a20cba5516bda68b80e2166ed3d39091cd3a48c",
+            "material": "96ffc27b7c18669a72db491897defda4",
+            "point_count": 4,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "empty_revision": "sha256:a1b11e5e29770f7eef49b5ea4355215d3608d0cf2e3de715059d7d8dbf88400e",
+      "name": "mixed-opacity",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:74b8fd57fd6d63aaaf2f3cc1a76a14d4628f5c203df714fb95562b3f1b4e04c4",
+      "archive": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-archive/document/document.json",
+      "glb": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/mixed-opacity-export/scene/scene.glb",
+      "export_policy": {
+        "allow_approximations": true,
+        "max_bytes": 4194304,
+        "max_vertices": 10000,
+        "max_position_error_meters": 1e-05
+      },
+      "gpu_linear_rmse": 1.426867541002211e-08,
+      "roundtrip": [
+        {
+          "backend": "cpu",
+          "linear_rmse": 9.017492053581907e-10
+        },
+        {
+          "backend": "gpu",
+          "linear_rmse": 1.426867541002211e-08
+        }
+      ]
+    },
+    {
+      "kind": "hair",
+      "source": {
+        "format": "hair",
+        "path": "/private/tmp/render-curve-colors-20260906/fixtures/curve-colors/data/gradient-le.hair",
+        "policy": {
+          "byte_order": "little_endian",
+          "meters_per_unit": 1,
+          "thickness": "diameter",
+          "color_space": "srgb",
+          "transparency": "coverage_one_minus_transparency",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6,
+          "tessellation": {
+            "chord_error": 0.001,
+            "radial_error": 0.01,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "max_depth": 18
+          },
+          "point_attributes": "linear_rgba_f32"
+        }
+      },
+      "report": {
+        "derived_samples": 11,
+        "derived_triangles": 132,
+        "derived_vertices": 70,
+        "geometry_asset_json_bytes": 1645,
+        "input_bytes": 356,
+        "material_groups": 1,
+        "observed_derived_json_bytes": 33605,
+        "point_attribute_conversion": {
+          "control_count": 7,
+          "max_alpha_absolute_error": 2.2351741790771484e-08
+        },
+        "policy": {
+          "byte_order": "little_endian",
+          "color_space": "srgb",
+          "meters_per_unit": 1.0,
+          "point_attributes": "linear_rgba_f32",
+          "representation": "swept_polyline_surface",
+          "roughness": 0.6000000238418579,
+          "tessellation": {
+            "chord_error": 0.001,
+            "max_depth": 18,
+            "max_samples": 8192,
+            "max_vertices": 65536,
+            "radial_error": 0.01
+          },
+          "thickness": "diameter",
+          "transparency": "coverage_one_minus_transparency"
+        },
+        "profile": "hair-polyline-rgba-v1",
+        "source_digest": "sha256:57a5672b94a3ac00798cac80fa3e638e73bd5c9b472f9c7f1d1b2eef4011dcaa",
+        "source_flags": 31,
+        "source_points": 7,
+        "source_strands": 2,
+        "strands": [
+          {
+            "curve": "b9b2b349735d5e86e110a070ce40d1c8",
+            "entity": "592d587c8b981f9557f940df5201d6fd",
+            "geometry_asset": "sha256:39cb0607bd7e54f65ced010824fd22c86f6e215558f3999c76449803ae64a396",
+            "material": "34b7fe57a80b8885357e0755d9888786",
+            "point_count": 3,
+            "source_index": 0,
+            "source_point_offset": 0
+          },
+          {
+            "curve": "4971f4dfbf5662ae64f57ec8e66e9a78",
+            "entity": "592d587c8b981f9557f940df5201d6fd",
+            "geometry_asset": "sha256:39cb0607bd7e54f65ced010824fd22c86f6e215558f3999c76449803ae64a396",
+            "material": "34b7fe57a80b8885357e0755d9888786",
+            "point_count": 4,
+            "source_index": 1,
+            "source_point_offset": 3
+          }
+        ]
+      },
+      "empty_revision": "sha256:a1b11e5e29770f7eef49b5ea4355215d3608d0cf2e3de715059d7d8dbf88400e",
+      "name": "srgb",
+      "settings": {
+        "width": 16,
+        "height": 16,
+        "samples": 16,
+        "seed": 73,
+        "max_depth": 2,
+        "max_bytes": 16777216,
+        "environment": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "light": {
+          "position": [
+            1,
+            2,
+            3
+          ],
+          "intensity": [
+            4,
+            4,
+            4
+          ]
+        },
+        "camera": {
+          "position": [
+            0,
+            0,
+            3
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "vertical_fov_radians": 0.65,
+          "lens": {
+            "kind": "orthographic",
+            "xmag": 1,
+            "ymag": 1,
+            "near": 0.01,
+            "far": 20
+          }
+        }
+      },
+      "revision": "sha256:dd222235784a001fcb8d91d29e8fee73e939e8dc9a75f863e9f12e91a10b024a",
+      "archive": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-archive/document/document.json",
+      "glb": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/srgb-export/scene/scene.glb",
+      "export_policy": {
+        "allow_approximations": true,
+        "max_bytes": 4194304,
+        "max_vertices": 10000,
+        "max_position_error_meters": 1e-05
+      },
+      "gpu_linear_rmse": 1.4219993765033746e-08,
+      "roundtrip": [
+        {
+          "backend": "cpu",
+          "linear_rmse": 7.484458046183732e-10
+        },
+        {
+          "backend": "gpu",
+          "linear_rmse": 1.4219993765033746e-08
+        }
+      ]
+    },
+    {
+      "kind": "groom",
+      "source_document": "/private/tmp/render-curve-colors-20260906/evidence/m06-m08/groom-01/document.json",
+      "name": "groom",
+      "settings": {
+        "camera": {
+          "position": [
+            1.5,
+            1.3,
+            2.5
+          ],
+          "target": [
+            0.0,
+            0.25,
+            0.0
+          ],
+          "up": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "vertical_fov_radians": 0.6
+        },
+        "environment": [
+          0.30000001192092896,
+          0.30000001192092896,
+          0.30000001192092896
+        ],
+        "height": 32,
+        "light": {
+          "intensity": [
+            100.0,
+            90.0,
+            75.0
+          ],
+          "position": [
+            -2.0,
+            5.0,
+            3.0
+          ]
+        },
+        "max_bytes": 67108864,
+        "max_depth": 2,
+        "samples": 16,
+        "seed": 42,
+        "width": 32
+      },
+      "revision": "sha256:deb57c43e5b32c19215b61ce585e889d745fe8409456871c3e668aeb83a67df8",
+      "archive": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-archive/document/document.json",
+      "glb": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev3/groom-export/scene/scene.glb",
+      "export_policy": {
+        "allow_approximations": true,
+        "max_bytes": 4194304,
+        "max_vertices": 10000,
+        "max_position_error_meters": 1e-05
+      },
+      "gpu_linear_rmse": 2.2352651266970292e-08,
+      "roundtrip": [
+        {
+          "backend": "cpu",
+          "linear_rmse": 5.693649528844973e-09
+        },
+        {
+          "backend": "gpu",
+          "linear_rmse": 2.2352651266970292e-08
+        }
+      ]
+    }
+  ]
+}

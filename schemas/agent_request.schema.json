@@ -922,6 +922,12 @@
             "max_vertices",
             "max_depth"
           ]
+        },
+        "point_attributes": {
+          "enum": [
+            "linear_rgba_f32",
+            null
+          ]
         }
       },
       "required": [

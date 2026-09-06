@@ -5,14 +5,14 @@ working on feasible remaining steps. M09 interactive editor remains deferred.
 Each completed increment requires implementation, native/browser workflow evidence,
 negative/cancellation/stale checks, resource/provenance records and documentation.
 
-Current completed increment: external HAIR strand input; evidence/hair-import.
+Current completed increment: typed polyline RGBA and opt-in HAIR point appearance; evidence/curve-colors.
 
 | Order | Increment | Status |
 |---|---|---|
 | 1 | GPU shutter frames and streaming sequences | Validated on feat/gpu-shutter-sequences; evidence/gpu-shutter |
 | 2 | Broader glTF attributes, UV/alpha/morph semantics and export | Sparse/UV0, CPU alpha, named UV, morph frames, vertex colors and evaluated PBR GLB export validated |
 | 3 | Richer GPU scattering and transport quality | GPU alpha, conductor, coat and ideal dielectric validated; broader lighting/sampling quality remains separate |
-| 4 | External hair/volume inputs, fiber shading and sparse GPU media | VOL3 CPU and HAIR surface inputs validated; per-control color, fiber and GPU media remain |
+| 4 | External hair/volume inputs, fiber shading and sparse GPU media | VOL3 CPU, HAIR surface inputs and polyline control RGBA validated; fiber and GPU media remain |
 | 5 | Scoped native .blend/USD/MaterialX interchange | Pending |
 | 6 | M10 engine UV/paint/sculpt/remesh/retopology operations | Pending |
 | 7 | M11 solver families with checkpoint/seek semantics | Pending |
@@ -125,3 +125,12 @@ All 795 prior images/passes, 265 receipts, 158 fixtures and four shaders remain
 unchanged. No dependency changes or major blocker. Optional per-control RGBA is
 the next bounded input gap; physical fiber and GPU media remain later gates.
 Evidence: `evidence/hair-import/README.md`.
+
+Polyline RGBA acceptance: 164 native and 141 Wasm tests, 157 CLI calls and seven
+actual Chrome CPU/WebGPU/OPFS workflows. Native/browser CPU pixels and exported GLB
+bytes match exactly; all seven GLBs pass independent validation. All 867 prior
+images/passes, 289 receipts, 164 fixtures and four shaders remain unchanged.
+Snapshot15 gates typed colored controls; old curve/groom documents and renders also
+match the previous binary. No dependency change or major blocker. Sparse GPU media
+is next; physical fibers and higher-order color approximation remain separate gates.
+Evidence: `evidence/curve-colors/README.md`.

@@ -91,5 +91,8 @@ formats and GPU media transport retain separate INPUT-05 gates.
 [HAIR strand input](hair_import.md) now preserves external polylines, varying
 thickness and uniform-per-strand color/coverage under explicit interpretation.
 Native curves render on CPU/Metal/WebGPU and recover through archives/OPFS in
-[acceptance evidence](../evidence/hair-import/README.md). Per-control color, physical
-fiber scattering and animated source grooms retain separate INPUT-04 gates.
+[acceptance evidence](../evidence/hair-import/README.md). Opt-in
+[polyline control RGBA](curve_colors.md) now preserves within-strand appearance and
+groom child colors through native/browser renders and evaluated GLB roundtrips.
+Physical fiber scattering, colored higher-order splines and animated source grooms
+retain separate INPUT-04 gates.

@@ -1,0 +1,269 @@
+{
+  "license": "CC0-1.0",
+  "author": "Render project original varying controls",
+  "generator": "fixtures/curve-colors/generate.py",
+  "base_source": "fixtures/hair-import/data/arrays-le.hair",
+  "base_source_sha256": "5b65b9a8747601bfaaa0d60bf048421a689cfc1cf90163695c0226c6a9761d5f",
+  "files": [
+    {
+      "file": "gradient-le.hair",
+      "sha256": "57a5672b94a3ac00798cac80fa3e638e73bd5c9b472f9c7f1d1b2eef4011dcaa",
+      "bytes": 356,
+      "byte_order": "little_endian",
+      "rgb": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0.2,
+          0.4,
+          0.8
+        ],
+        [
+          0.8,
+          0.2,
+          0.4
+        ],
+        [
+          0.1,
+          0.8,
+          0.2
+        ],
+        [
+          1,
+          0.5,
+          0
+        ]
+      ],
+      "transparency": [
+        0,
+        0.1,
+        0.75,
+        0.25,
+        0.5,
+        0,
+        0.9
+      ]
+    },
+    {
+      "file": "gradient-be.hair",
+      "sha256": "e04df8647dd882657569e228bcefbd865c14c2766f7c5ca2649bb5ee7c407b31",
+      "bytes": 356,
+      "byte_order": "big_endian",
+      "rgb": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0.2,
+          0.4,
+          0.8
+        ],
+        [
+          0.8,
+          0.2,
+          0.4
+        ],
+        [
+          0.1,
+          0.8,
+          0.2
+        ],
+        [
+          1,
+          0.5,
+          0
+        ]
+      ],
+      "transparency": [
+        0,
+        0.1,
+        0.75,
+        0.25,
+        0.5,
+        0,
+        0.9
+      ]
+    },
+    {
+      "file": "rgb-only.hair",
+      "sha256": "340cb60092428bc3d12f25a6e196261d25dfd17ef7d2620397a59d35b20dcd6f",
+      "bytes": 356,
+      "byte_order": "little_endian",
+      "rgb": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0.2,
+          0.4,
+          0.8
+        ],
+        [
+          0.8,
+          0.2,
+          0.4
+        ],
+        [
+          0.1,
+          0.8,
+          0.2
+        ],
+        [
+          1,
+          0.5,
+          0
+        ]
+      ],
+      "transparency": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "file": "alpha-only.hair",
+      "sha256": "b3b2560e403939463af8747e0db54b93b712873bcd5e42bd14ba51cf673433a8",
+      "bytes": 356,
+      "byte_order": "little_endian",
+      "rgb": [
+        [
+          0.8,
+          0.6,
+          0.2
+        ],
+        [
+          0.8,
+          0.6,
+          0.2
+        ],
+        [
+          0.8,
+          0.6,
+          0.2
+        ],
+        [
+          0.8,
+          0.6,
+          0.2
+        ],
+        [
+          0.8,
+          0.6,
+          0.2
+        ],
+        [
+          0.8,
+          0.6,
+          0.2
+        ],
+        [
+          0.8,
+          0.6,
+          0.2
+        ]
+      ],
+      "transparency": [
+        0,
+        0.1,
+        0.75,
+        0.25,
+        0.5,
+        0,
+        0.9
+      ]
+    },
+    {
+      "file": "mixed-opacity.hair",
+      "sha256": "5d001a02a7ee356f1caca835556598778996c28042cce710afe99cd67bff7f1f",
+      "bytes": 356,
+      "byte_order": "little_endian",
+      "rgb": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0.2,
+          0.4,
+          0.8
+        ],
+        [
+          0.8,
+          0.2,
+          0.4
+        ],
+        [
+          0.1,
+          0.8,
+          0.2
+        ],
+        [
+          1,
+          0.5,
+          0
+        ]
+      ],
+      "transparency": [
+        0,
+        0,
+        0,
+        0.25,
+        0.5,
+        0,
+        0.9
+      ]
+    }
+  ]
+}

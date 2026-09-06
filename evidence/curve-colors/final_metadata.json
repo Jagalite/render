@@ -1,0 +1,148 @@
+{
+  "base_commit": "0a3ffd1",
+  "candidate_branch": "feat/polyline-control-colors",
+  "acceptance_run": "artifacts/curve-colors/run-20260906T130429Z",
+  "timestamp_utc": "2026-09-06T13:18:58.994142+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "b649d086aa047863f905458d65531c85179d87f6f717500386efae0bae05a0a6"
+    },
+    {
+      "path": "SHA256SUMS",
+      "sha256": "72cc016d1d1998ed6b74dde0ccdbfd3b9605c6f53dabe81550173605158868b7"
+    },
+    {
+      "path": "crates/core/src/agent.rs",
+      "sha256": "f473ed4145a7d38c94544b7e952afe3a8a09b07bd1041c59b6cf8011e4a0354e"
+    },
+    {
+      "path": "crates/core/src/curves.rs",
+      "sha256": "95c7810033423d78dc7af65c5b1c7a674f85e7910c2829f3e0fcde8d9a99b378"
+    },
+    {
+      "path": "crates/core/src/document.rs",
+      "sha256": "6c5d5efba7863717449979225c83b24bb5e11394678b0ef0c29d88f7b8aec324"
+    },
+    {
+      "path": "crates/core/src/feature_fixtures.rs",
+      "sha256": "2cf565449803f17e8b554f641bc263e2d0649418c72dfb5ecf7c53c901f70cd8"
+    },
+    {
+      "path": "crates/core/src/groom.rs",
+      "sha256": "7198a66449f403538c90818c4bbccbe672a4a5a4c9617123560bd9d80a941b5e"
+    },
+    {
+      "path": "crates/core/src/hair_import.rs",
+      "sha256": "d1d56d45d30808b7c12f3abd103e57e9d24a9da37f1fff32a21db265718b33b9"
+    },
+    {
+      "path": "crates/core/tests/curve_colors.rs",
+      "sha256": "8b4999866d849fe113d8a80438517733c4e1e607a7c4b3883158b37f4dc403ca"
+    },
+    {
+      "path": "crates/core/tests/curves.rs",
+      "sha256": "902e67364663927c8aca6a973f00f649a55d31dc9ace9ea5d9d6948e29b60c4f"
+    },
+    {
+      "path": "crates/core/tests/hair_colors.rs",
+      "sha256": "2ba3913ced3a3773d16c3599cdcd546c56cd61ab3acb38338e40405abbaa50e3"
+    },
+    {
+      "path": "crates/core/tests/hair_import.rs",
+      "sha256": "a633057fc7181c49d7fd342f4db0e3b0fb704a5c325993c9ef9050cab4c7c831"
+    },
+    {
+      "path": "docs/curve_colors.md",
+      "sha256": "f1e48bd5738793ad140f5c1e7a20f103492a82af95f16bc70dce9d8fc01d08ea"
+    },
+    {
+      "path": "docs/decision_records.md",
+      "sha256": "30fa11ad0d732a612acc6fc2720889ab8169b4442b67005ac04a7d983aa70621"
+    },
+    {
+      "path": "docs/hair_import.md",
+      "sha256": "4091d3b35b41874ad67d7274a8d68510613d4a89aa6b691a6641316fc11be625"
+    },
+    {
+      "path": "docs/input_support.md",
+      "sha256": "f8bc3168ba62e1b8539722b61f799a610cecaf8b6c14bc091553f4ad5f9fa7ae"
+    },
+    {
+      "path": "docs/m07_m08.md",
+      "sha256": "3e2f8963a2ca91387418aa8fabcd996af6ac8e29430d76ca8c61a7730b4c7ac4"
+    },
+    {
+      "path": "fixtures/curve-colors/data/alpha-only.hair",
+      "sha256": "b3b2560e403939463af8747e0db54b93b712873bcd5e42bd14ba51cf673433a8"
+    },
+    {
+      "path": "fixtures/curve-colors/data/gradient-be.hair",
+      "sha256": "e04df8647dd882657569e228bcefbd865c14c2766f7c5ca2649bb5ee7c407b31"
+    },
+    {
+      "path": "fixtures/curve-colors/data/gradient-le.hair",
+      "sha256": "57a5672b94a3ac00798cac80fa3e638e73bd5c9b472f9c7f1d1b2eef4011dcaa"
+    },
+    {
+      "path": "fixtures/curve-colors/data/mixed-opacity.hair",
+      "sha256": "5d001a02a7ee356f1caca835556598778996c28042cce710afe99cd67bff7f1f"
+    },
+    {
+      "path": "fixtures/curve-colors/data/provenance.json",
+      "sha256": "7ce0f8ac1eaf04e348ad921e31e8e906e1623f888bfc0043421723387ea4c74b"
+    },
+    {
+      "path": "fixtures/curve-colors/data/rgb-only.hair",
+      "sha256": "340cb60092428bc3d12f25a6e196261d25dfd17ef7d2620397a59d35b20dcd6f"
+    },
+    {
+      "path": "fixtures/curve-colors/generate.py",
+      "sha256": "d8e16267fa41387c9d4e3f60e7edf373768d5805a8b67bee1d25dfe49d79a499"
+    },
+    {
+      "path": "planning/engine-progress/README.md",
+      "sha256": "2b52f6fc8dd91f082e53ec4263bdfaa9efe38bcc965ff5b99be1628b12704303"
+    },
+    {
+      "path": "planning/engine-progress/curve-color-contract.md",
+      "sha256": "4c70a5ceb10d9513bc8a810de3cf99e5628b867f0aabf19930dd9fbd87533e27"
+    },
+    {
+      "path": "planning/engine-progress/curve-color-review.md",
+      "sha256": "3840d03db8d8c80ddac4c95ccde03779d8948c03b844880c3d9dab3894cbdd7f"
+    },
+    {
+      "path": "planning/feature_matrix.json",
+      "sha256": "959c34faa0e0307b1aec3e571ec7164239ba45f1b88fa04ad6543c31a6a80c43"
+    },
+    {
+      "path": "planning/input_support.json",
+      "sha256": "eb3e5c2f1e38c18c36e0e2732c5bc4c157e7e8d947d68be2fb80219213b30d35"
+    },
+    {
+      "path": "schemas/agent_request.schema.json",
+      "sha256": "567240638b9181c8e381f5c826bdaa50908533405a3ada41978140273b250b30"
+    },
+    {
+      "path": "scripts/collect-curve-colors-evidence.py",
+      "sha256": "6515fb4bfa9d73e88a62df21aefb347c96c1d3f20a809ed0a1153357420b00c2"
+    },
+    {
+      "path": "scripts/curve-colors-browser.mjs",
+      "sha256": "00c7fe54d6edc2190dded8c34f7b84e9bf5444583a6464b3c3cb63709294134d"
+    },
+    {
+      "path": "scripts/curve-colors-workflow.py",
+      "sha256": "61ab872fec1dbdaf1a415c35a9fb397234744be661f7a69bf2b62c8a66105403"
+    },
+    {
+      "path": "scripts/validate-curve-colors-schema.py",
+      "sha256": "57538890d7658f805d4dd19ac3f86a6ba3867f075a8f6d7c13979abbeadb8117"
+    },
+    {
+      "path": "scripts/validate-curve-colors.py",
+      "sha256": "af56f6fb5059d7d292ccd42d86422b6e3ffbd204ff4098b5e8c4445baf09ca25"
+    }
+  ]
+}

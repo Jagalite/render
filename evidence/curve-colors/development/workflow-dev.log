@@ -1,0 +1,10 @@
+gradient-le-init: passed
+gradient-le-empty: passed
+Traceback (most recent call last):
+  File "/private/tmp/render-curve-colors-20260906/scripts/curve-colors-workflow.py", line 57, in <module>
+    op={'method':'import','base_revision':empty['revision'],'idempotency_key':'curve:rgba:import:001','max_added_bytes':8388608,'source':source,'settings':settings};imported=call(name+'-import',op,project,resource=True);assert call(name+'-retry',op,project)==imported
+                                                                                                                                                                              ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/render-curve-colors-20260906/scripts/curve-colors-workflow.py", line 19, in call
+    else:assert r.returncode==0,(name,r.stderr);v=json.loads(r.stdout)
+                ^^^^^^^^^^^^^^^
+AssertionError: ('gradient-le-import', '        0.04 real         0.02 user         0.01 sys\ntime: sysctl kern.clockrate: Operation not permitted\n')

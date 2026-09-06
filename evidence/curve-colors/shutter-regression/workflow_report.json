@@ -1,0 +1,255 @@
+{
+  "status": "passed",
+  "profile": "gpu-f32-animation-v0",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/requests/000-init.json"
+      ],
+      "seconds": 0.029848457998014055,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/requests/001-inspect.json"
+      ],
+      "seconds": 0.019121083998470567,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "import",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/requests/002-import.json"
+      ],
+      "seconds": 0.09486250000190921,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "inspect",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/requests/003-inspect.json"
+      ],
+      "seconds": 0.06718691698915791,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "cpu-frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/requests/004-cpu-frame.json"
+      ],
+      "seconds": 0.6207833749940619,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 20447232,
+        "peak memory footprint": 5407872
+      }
+    },
+    {
+      "name": "gpu-frame",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/requests/005-gpu-frame.json"
+      ],
+      "seconds": 1.0013999590009917,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 35700736,
+        "peak memory footprint": 12338816
+      }
+    },
+    {
+      "name": "gpu-sequence",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/requests/006-gpu-sequence.json"
+      ],
+      "seconds": 2.087253708014032,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36274176,
+        "peak memory footprint": 13272704
+      }
+    },
+    {
+      "name": "archive",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/requests/007-archive.json"
+      ],
+      "seconds": 0.13012137499754317,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restore",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/requests/008-restore.json"
+      ],
+      "seconds": 0.09045770901138894,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "restored-frame",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/requests/009-restored-frame.json"
+      ],
+      "seconds": 0.531540625001071,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "stale",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/requests/010-stale.json"
+      ],
+      "seconds": 0.05838937500084285,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "invalid",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/requests/011-invalid.json"
+      ],
+      "seconds": 0.44184112500806805,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "limited",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/requests/012-limited.json"
+      ],
+      "seconds": 0.6001557090057759,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "partial",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/requests/013-partial.json"
+      ],
+      "seconds": 0.5329882079968229,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/shutter-regression/requests/014-unchanged.json"
+      ],
+      "seconds": 0.07118387499940582,
+      "exit_code": 0,
+      "expected_error": null
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "revision": "sha256:1980ec2bf4ec22f8159c11f8f4bc8703f2f608b72b2dbfa2ec52c01948a0cf68",
+  "clip": "15c77c8677038a00d22b7921d37af01e",
+  "settings": {
+    "width": 64,
+    "height": 64,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.15,
+      0.15,
+      0.15
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        30,
+        30,
+        30
+      ]
+    },
+    "camera": {
+      "position": [
+        1,
+        1,
+        5
+      ],
+      "target": [
+        0,
+        1,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65
+    }
+  },
+  "gpu_comparison": {
+    "linear_rmse": 4.59514983409537e-09,
+    "object_mismatches": 0
+  },
+  "partial_frames": 1
+}

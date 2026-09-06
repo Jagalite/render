@@ -1,0 +1,17 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "export",
+    "revision": "sha256:b4f44d9c06babddbd4eb127d272e4478798d97577fdce152cdc8933928968171",
+    "output": "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/curve-color-workflow/alpha-only-export",
+    "content": {
+      "format": "glb",
+      "policy": {
+        "allow_approximations": true,
+        "max_bytes": 4194304,
+        "max_vertices": 10000,
+        "max_position_error_meters": 1e-05
+      }
+    }
+  }
+}

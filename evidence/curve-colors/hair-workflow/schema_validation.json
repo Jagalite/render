@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "accepted": [
+    "default-le",
+    "default-be",
+    "arrays-le",
+    "arrays-be",
+    "srgb",
+    "scaled-radius"
+  ],
+  "rejected": [
+    "byte_order",
+    "meters_per_unit",
+    "thickness",
+    "color_space",
+    "transparency",
+    "representation",
+    "roughness",
+    "unknown",
+    "missing byte_order",
+    "missing meters_per_unit",
+    "missing thickness",
+    "missing color_space",
+    "missing transparency",
+    "missing representation",
+    "missing roughness",
+    "missing tessellation",
+    "tessellation max_vertices",
+    "tessellation max_samples",
+    "tessellation max_depth",
+    "tessellation chord_error",
+    "tessellation radial_error",
+    "invalid byte"
+  ],
+  "schema_sha256": "567240638b9181c8e381f5c826bdaa50908533405a3ada41978140273b250b30",
+  "scope": "Structural DTO subset; binary counts, finite data, references, revisions and derived geometry costs require shared Rust checks."
+}

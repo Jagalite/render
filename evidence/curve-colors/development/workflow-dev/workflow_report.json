@@ -1,0 +1,45 @@
+{
+  "status": "failed",
+  "calls": [
+    {
+      "name": "gradient-le-init",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev/000-gradient-le-init.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 1.9696922080038348
+    },
+    {
+      "name": "gradient-le-empty",
+      "command": [
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev/001-gradient-le-empty.request.json"
+      ],
+      "exit_code": 0,
+      "expected_error": null,
+      "seconds": 0.02146816700405907
+    },
+    {
+      "name": "gradient-le-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev/gradient-le-project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/workflow-dev/002-gradient-le-import.request.json"
+      ],
+      "exit_code": 1,
+      "expected_error": null,
+      "seconds": 0.055695167000521906
+    }
+  ],
+  "variants": [],
+  "error": "('gradient-le-import', '        0.04 real         0.02 user         0.01 sys\\ntime: sysctl kern.clockrate: Operation not permitted\\n')"
+}

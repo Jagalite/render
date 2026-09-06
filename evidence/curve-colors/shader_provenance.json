@@ -1,0 +1,85 @@
+{
+  "artifacts": [
+    {
+      "artifact": "path.generated.wgsl",
+      "sha256": "e0bae9a561867ddc4622b68e9d52635ce3d380bbf6f4aeb109e63b46c8d89247",
+      "baseline": "0a3ffd1",
+      "unchanged": true,
+      "generator": [
+        "target/debug/render-host",
+        "kernel"
+      ]
+    },
+    {
+      "artifact": "path.alpha.generated.wgsl",
+      "sha256": "82177b8262a499bad4e9997fe15d04975b9635e0817ea4caeeb38d713a0648dc",
+      "baseline": "0a3ffd1",
+      "unchanged": true,
+      "generator": [
+        "target/debug/render-host",
+        "kernel",
+        "--alpha"
+      ]
+    },
+    {
+      "artifact": "path.surfaces.generated.wgsl",
+      "sha256": "cf5b558cef24671d760df416ccd1b82b7b8166bc26dbf2dfd4e2d3d616808f07",
+      "baseline": "0a3ffd1",
+      "unchanged": true,
+      "generator": [
+        "target/debug/render-host",
+        "kernel",
+        "--surfaces"
+      ]
+    },
+    {
+      "artifact": "path.dielectric.generated.wgsl",
+      "sha256": "afa6f881610497e4c8cdf63f6a28c10ff2a243a23c4f23dcac7aae5179130eea",
+      "baseline": "0a3ffd1",
+      "unchanged": true,
+      "generator": [
+        "target/debug/render-host",
+        "kernel",
+        "--dielectric"
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "path": "crates/kernel/src/lib.rs",
+      "bytes": 10874,
+      "sha256": "a7cd4024d3ef294c6a3baa597c5a0f86f4410565e3536ad28e596f3bb513e791",
+      "unchanged_during_validation": true
+    },
+    {
+      "path": "crates/kernel/src/path.rs",
+      "bytes": 37824,
+      "sha256": "c40df1ba474bdc06041991c9868b2a496f3fd462c08a3c93e6b16983da163b81",
+      "unchanged_during_validation": true
+    },
+    {
+      "path": "crates/kernel/src/path/alpha.rs",
+      "bytes": 8994,
+      "sha256": "745815ef10ab5f912aa3851a658af814962aba4f3bf715511fa6a734705965d8",
+      "unchanged_during_validation": true
+    },
+    {
+      "path": "crates/kernel/src/path/dielectric.rs",
+      "bytes": 3363,
+      "sha256": "e5973e6e17e25515bb1ad07bf0f3fda8ced864e55fd2a69ceb109d3bdf998f9a",
+      "unchanged_during_validation": true
+    },
+    {
+      "path": "crates/kernel/src/path/pbr.rs",
+      "bytes": 31919,
+      "sha256": "91cd170ad77a93cf42697eab83baa2285ee100859870c8b48a2b0bcf7b659043",
+      "unchanged_during_validation": true
+    },
+    {
+      "path": "crates/kernel/src/path/surfaces.rs",
+      "bytes": 9181,
+      "sha256": "fac0b478302a122b8b82e8e6fe99ea1edab7c7859db904a7dccfd41daa6c21f5",
+      "unchanged_during_validation": true
+    }
+  ]
+}

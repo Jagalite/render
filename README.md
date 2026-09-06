@@ -85,3 +85,6 @@ Principled MASK/BLEND on Metal and browser WebGPU: [profile](docs/gpu_alpha.md),
 
 [GPU ideal dielectric interfaces](docs/gpu_dielectric.md):
 [analytic recipes](fixtures/gpu-dielectric/README.md), [acceptance](evidence/gpu-dielectric/README.md).
+
+Polyline control RGBA and HAIR point appearance: [profile](docs/curve_colors.md),
+[acceptance evidence](evidence/curve-colors/README.md).

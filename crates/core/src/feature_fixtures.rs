@@ -7,6 +7,7 @@ pub fn geometry_document() -> Result<Document> {
         position,
         radius: 0.045,
         tilt: 0.,
+        color: None,
     };
     let shapes = vec![
         Shape::Curves {
@@ -224,24 +225,28 @@ pub fn groom_document() -> Result<Document> {
                 position: [0.; 3],
                 radius: 0.016,
                 tilt: 0.,
+                color: None,
             },
             Control {
                 id: Id(2),
                 position: [0.05, 0., 0.25],
                 radius: 0.014,
                 tilt: 0.,
+                color: None,
             },
             Control {
                 id: Id(3),
                 position: [0.12, 0., 0.5],
                 radius: 0.01,
                 tilt: 0.,
+                color: None,
             },
             Control {
                 id: Id(4),
                 position: [0.2, 0., 0.65],
                 radius: 0.006,
                 tilt: 0.,
+                color: None,
             },
         ],
     };

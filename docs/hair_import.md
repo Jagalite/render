@@ -40,10 +40,11 @@ scales with the same unit factor, then halves when interpreted as diameter. Ther
 is no inferred axis convention, color encoding or thickness meaning. sRGB input
 converts through the existing Rust color function into native linear base color.
 
-RGB and transparency must each be uniform within a strand; optional arrays may vary
-between strands. Identical appearances share material/geometry groups. Within-strand
-variation is explicitly unsupported until a typed curve-attribute transfer profile
-exists. Values are not averaged or quantized into generated textures. Color and
+By default RGB and transparency must each be uniform within a strand; optional
+arrays may vary between strands. Identical appearances share material/geometry groups.
+The optional `point_attributes: "linear_rgba_f32"` policy selects the
+[typed polyline RGBA profile](curve_colors.md), preserving within-strand variation
+as native controls with an explicit f32 alpha rounding report. Values are not averaged or quantized into generated textures. Color and
 transparency lie in [0,1], while positive thickness and finite positions must satisfy
 native curve bounds. Zero-radius tips and adjacent coincident points are rejected.
 
@@ -71,7 +72,8 @@ The agent/browser method is `import_hair`, with `bytes`, `policy`, `settings`,
 `base_revision` and `idempotency_key`; it returns `receipt` and `report`. It retains
 the empty-project import gate and 16 MiB JSON control limit. Existing `PutMaterial`,
 `PutGeometry`, `CreateEntity` and `SetGeometry` transactions own all publication.
-Snapshot schemas and the FFI dispatch shape remain unchanged. Browser dispatch is
+The default profile preserves its snapshot version; colored controls require v15.
+The FFI dispatch shape remains unchanged. Browser dispatch is
 synchronous; core/native cancellation checks parsing, sweep evaluation and admission
 before atomic publication. Failed durable publication preserves the original root.
 

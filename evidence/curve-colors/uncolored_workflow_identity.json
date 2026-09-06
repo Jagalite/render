@@ -1,0 +1,128 @@
+{
+  "baseline_binary": {
+    "commit": "0a3ffd1",
+    "sha256": "682c430c54032ac68729a58f8eaaa3c6cad2af8585f653a11d27914862fdd923"
+  },
+  "artifacts": [
+    {
+      "workflow": "geometry",
+      "path": "geometry-cpu.pfm",
+      "sha256": "f8763317d329e150671208c0eff6368a6a610af0f51b735cd8a138330e4205b7",
+      "identical_to_previous_binary": true
+    },
+    {
+      "workflow": "geometry",
+      "path": "geometry-gpu.pfm",
+      "sha256": "455aee2fe7821b70ef52070fc61e3170cf59d00b802e388d57ffd7c50a9b70cb",
+      "identical_to_previous_binary": true
+    },
+    {
+      "workflow": "geometry",
+      "path": "geometry-gpu.receipt.json",
+      "sha256": "08e557581ac483194244f9818ef14b2f1bd65733ddbdf7f868cf099dc3fe1f8f",
+      "identical_to_previous_binary": true
+    },
+    {
+      "workflow": "geometry",
+      "path": "geometry-gpu.passes.json",
+      "sha256": "ec55987574dd3d0747641bf7d932b2e92b80b46a0fd6ee47ec9681f05aefb7a9",
+      "identical_to_previous_binary": true
+    },
+    {
+      "workflow": "geometry",
+      "path": "geometry-cpu.passes.json",
+      "sha256": "b9c30b453f0f28a3c9255a76961706274f28f591929bafaf39b33533eb851547",
+      "identical_to_previous_binary": true
+    },
+    {
+      "workflow": "geometry",
+      "path": "geometry-cpu.ppm",
+      "sha256": "36639c540e6350869fdc805e220bf195e4a2d620f26e2747f37f81b9d91aaa46",
+      "identical_to_previous_binary": true
+    },
+    {
+      "workflow": "geometry",
+      "path": "geometry-gpu.ppm",
+      "sha256": "36639c540e6350869fdc805e220bf195e4a2d620f26e2747f37f81b9d91aaa46",
+      "identical_to_previous_binary": true
+    },
+    {
+      "workflow": "geometry",
+      "path": "geometry-cpu.receipt.json",
+      "sha256": "5a664ef0a33b7a431d0e830894b2f58775af575535c3399e3510e51cc124025f",
+      "identical_to_previous_binary": true
+    },
+    {
+      "workflow": "geometry",
+      "path": "document.json",
+      "sha256": "93512c6f07e94f98a37646dbe5cea3aafa907ffea1748c80b07032a0861d4e5e",
+      "identical_to_previous_binary": true
+    },
+    {
+      "workflow": "geometry",
+      "path": "project/00000000000000000000.json",
+      "sha256": "da7e66ae05cc890da669f9ee1b60f467fc72d5397daedbb8036b709551d2ed88",
+      "identical_to_previous_binary": true
+    },
+    {
+      "workflow": "groom",
+      "path": "geometry-cpu.pfm",
+      "sha256": "2e76e5bd7ca710c6045b54ae38bcec945a53eb7e4b85013ca4fbd6bc4720eb78",
+      "identical_to_previous_binary": true
+    },
+    {
+      "workflow": "groom",
+      "path": "geometry-gpu.pfm",
+      "sha256": "786060382a1e17e3715b75c61093931a05230b39d7537e677336132ea39074c2",
+      "identical_to_previous_binary": true
+    },
+    {
+      "workflow": "groom",
+      "path": "geometry-gpu.receipt.json",
+      "sha256": "9bec5c996aef77368a080a7463dcb1e9c830b32efa7ae61791177b9fc1bdcaa4",
+      "identical_to_previous_binary": true
+    },
+    {
+      "workflow": "groom",
+      "path": "geometry-gpu.passes.json",
+      "sha256": "4f77e278bb8a1c4cda8ac1ad96e99a020b5a89157f25c249418e5d6f790cf3f6",
+      "identical_to_previous_binary": true
+    },
+    {
+      "workflow": "groom",
+      "path": "geometry-cpu.passes.json",
+      "sha256": "efa5b8d6ed8fbe055945263352d2c14b9c8c3e6e8dc8b9035a77a1574e793170",
+      "identical_to_previous_binary": true
+    },
+    {
+      "workflow": "groom",
+      "path": "geometry-cpu.ppm",
+      "sha256": "566d4b4bb552a3c3bffe1e3b7c6d38f21c9ab6666ae3292083b09f47e16776fd",
+      "identical_to_previous_binary": true
+    },
+    {
+      "workflow": "groom",
+      "path": "geometry-gpu.ppm",
+      "sha256": "566d4b4bb552a3c3bffe1e3b7c6d38f21c9ab6666ae3292083b09f47e16776fd",
+      "identical_to_previous_binary": true
+    },
+    {
+      "workflow": "groom",
+      "path": "geometry-cpu.receipt.json",
+      "sha256": "cc8b776b97380271a11a9823312f9588a9a69424ca97739316e019409e003c11",
+      "identical_to_previous_binary": true
+    },
+    {
+      "workflow": "groom",
+      "path": "document.json",
+      "sha256": "b039aba0d719c3943e57d9c6046eab4c54ae275e7865c90b0e4b91e3aab4712d",
+      "identical_to_previous_binary": true
+    },
+    {
+      "workflow": "groom",
+      "path": "project/00000000000000000000.json",
+      "sha256": "0fad0b75db57d1ea3bef5682c1fea984b8f90bab1ae68ad769eb8542ee6c5aca",
+      "identical_to_previous_binary": true
+    }
+  ]
+}

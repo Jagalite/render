@@ -1,0 +1,647 @@
+{
+  "status": "passed",
+  "profile": "gltf2-sparse-uv0-v1",
+  "calls": [
+    {
+      "name": "dense-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/dense",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/000-dense-init.json"
+      ],
+      "seconds": 0.0417977500037523,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-base",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/dense",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/001-dense-base.json"
+      ],
+      "seconds": 0.02687570899433922,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/dense",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/002-dense-import.json"
+      ],
+      "seconds": 0.15859837501193397,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 18186240,
+        "peak memory footprint": 3769472
+      }
+    },
+    {
+      "name": "dense-retry",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/dense",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/003-dense-retry.json"
+      ],
+      "seconds": 0.13790483299817424,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/dense",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/004-dense-state.json"
+      ],
+      "seconds": 0.10138954200374428,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/dense",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/005-dense-cpu.json"
+      ],
+      "seconds": 0.8725771669996902,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 19677184,
+        "peak memory footprint": 5424256
+      }
+    },
+    {
+      "name": "dense-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/dense",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/006-dense-gpu.json"
+      ],
+      "seconds": 0.5571192920033354,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 37289984,
+        "peak memory footprint": 12207680
+      }
+    },
+    {
+      "name": "dense-archive",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/dense",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/007-dense-archive.json"
+      ],
+      "seconds": 0.09424154099542648,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-restore",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/dense-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/008-dense-restore.json"
+      ],
+      "seconds": 0.074568875003024,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-restored-frame",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/dense-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/009-dense-restored-frame.json"
+      ],
+      "seconds": 0.5182505830016453,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "dense-stale",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/dense",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/010-dense-stale.json"
+      ],
+      "seconds": 0.10487658300553448,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "dense-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/dense",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/011-dense-unchanged.json"
+      ],
+      "seconds": 0.07786695800314192,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/012-sparse-zero-u16-init.json"
+      ],
+      "seconds": 0.030444208008702844,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-base",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/013-sparse-zero-u16-base.json"
+      ],
+      "seconds": 0.021211209008470178,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/014-sparse-zero-u16-import.json"
+      ],
+      "seconds": 0.11803508301090915,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 18169856,
+        "peak memory footprint": 3753088
+      }
+    },
+    {
+      "name": "sparse-zero-u16-retry",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/015-sparse-zero-u16-retry.json"
+      ],
+      "seconds": 0.14824516599765047,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/016-sparse-zero-u16-state.json"
+      ],
+      "seconds": 0.06755066600453574,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/017-sparse-zero-u16-cpu.json"
+      ],
+      "seconds": 0.8698699999949895,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 19660800,
+        "peak memory footprint": 5440640
+      }
+    },
+    {
+      "name": "sparse-zero-u16-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/018-sparse-zero-u16-gpu.json"
+      ],
+      "seconds": 0.8249837500043213,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36356096,
+        "peak memory footprint": 12109440
+      }
+    },
+    {
+      "name": "sparse-zero-u16-archive",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/019-sparse-zero-u16-archive.json"
+      ],
+      "seconds": 0.09238141700916458,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-restore",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-zero-u16-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/020-sparse-zero-u16-restore.json"
+      ],
+      "seconds": 0.07003058400005102,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-restored-frame",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-zero-u16-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/021-sparse-zero-u16-restored-frame.json"
+      ],
+      "seconds": 0.7628150829987135,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-zero-u16-stale",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/022-sparse-zero-u16-stale.json"
+      ],
+      "seconds": 0.14869195899518672,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "sparse-zero-u16-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-zero-u16",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/023-sparse-zero-u16-unchanged.json"
+      ],
+      "seconds": 0.07522300000709947,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/024-sparse-base-u8-init.json"
+      ],
+      "seconds": 0.03105808400141541,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-base",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/025-sparse-base-u8-base.json"
+      ],
+      "seconds": 0.01814349999767728,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-import",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/026-sparse-base-u8-import.json"
+      ],
+      "seconds": 0.1560947919933824,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 18153472,
+        "peak memory footprint": 3736704
+      }
+    },
+    {
+      "name": "sparse-base-u8-retry",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/027-sparse-base-u8-retry.json"
+      ],
+      "seconds": 0.22214958300173748,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/028-sparse-base-u8-state.json"
+      ],
+      "seconds": 0.11586941700079478,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-cpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/029-sparse-base-u8-cpu.json"
+      ],
+      "seconds": 0.8217641670053126,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 19726336,
+        "peak memory footprint": 5506176
+      }
+    },
+    {
+      "name": "sparse-base-u8-gpu",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/030-sparse-base-u8-gpu.json"
+      ],
+      "seconds": 0.557126416999381,
+      "exit_code": 0,
+      "expected_error": null,
+      "resources": {
+        "maximum resident set size": 36143104,
+        "peak memory footprint": 12469824
+      }
+    },
+    {
+      "name": "sparse-base-u8-archive",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/031-sparse-base-u8-archive.json"
+      ],
+      "seconds": 0.09096512499672826,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-restore",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-base-u8-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/032-sparse-base-u8-restore.json"
+      ],
+      "seconds": 0.07390687499719206,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-restored-frame",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-base-u8-restored",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/033-sparse-base-u8-restored-frame.json"
+      ],
+      "seconds": 0.49866158299846575,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "sparse-base-u8-stale",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/034-sparse-base-u8-stale.json"
+      ],
+      "seconds": 0.11638070800108835,
+      "exit_code": 1,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "sparse-base-u8-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/sparse-base-u8",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/035-sparse-base-u8-unchanged.json"
+      ],
+      "seconds": 0.07771041699743364,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "negative-init",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/negative",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/036-negative-init.json"
+      ],
+      "seconds": 0.03648570799850859,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "negative-state",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/negative",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/037-negative-state.json"
+      ],
+      "seconds": 0.023916666992590763,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "malformed",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/negative",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/038-malformed.json"
+      ],
+      "seconds": 0.024898292002035305,
+      "exit_code": 1,
+      "expected_error": "gltf_scene"
+    },
+    {
+      "name": "cancelled",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/negative",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/039-cancelled.json"
+      ],
+      "seconds": 0.020199208011035807,
+      "exit_code": 1,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "budget",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/negative",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/040-budget.json"
+      ],
+      "seconds": 0.021114917006343603,
+      "exit_code": 1,
+      "expected_error": "budget"
+    },
+    {
+      "name": "negative-unchanged",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/negative",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/041-negative-unchanged.json"
+      ],
+      "seconds": 0.023304208007175475,
+      "exit_code": 0,
+      "expected_error": null
+    },
+    {
+      "name": "explicit-valid",
+      "command": [
+        "/private/tmp/render-uv-compact-20260906/debug/render-host",
+        "project",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/negative",
+        "/private/tmp/render-curve-colors-20260906/artifacts/curve-colors/run-20260906T130429Z/sparse-regression/requests/042-explicit-valid.json"
+      ],
+      "seconds": 0.09700279199751094,
+      "exit_code": 0,
+      "expected_error": null
+    }
+  ],
+  "scope": "Original authored project through independent one-shot native CLI requests; optional native GPU.",
+  "settings": {
+    "width": 64,
+    "height": 64,
+    "samples": 8,
+    "seed": 73,
+    "max_depth": 2,
+    "max_bytes": 16777216,
+    "environment": [
+      0.15,
+      0.15,
+      0.15
+    ],
+    "light": {
+      "position": [
+        -2,
+        4,
+        3
+      ],
+      "intensity": [
+        30,
+        30,
+        30
+      ]
+    },
+    "camera": {
+      "position": [
+        1,
+        1,
+        5
+      ],
+      "target": [
+        0,
+        1,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "vertical_fov_radians": 0.65
+    }
+  },
+  "variants": [
+    {
+      "name": "dense",
+      "revision": "sha256:a51a5e7111defc04c23efc61b487ddecb4b5a11fab43a11f8126c1c82dc1a505",
+      "clip": "018903b040fab8788cf9c997635d0066",
+      "linear_rmse": 2.3070609148956016e-05,
+      "object_mismatches": 0,
+      "document_bytes": 13624
+    },
+    {
+      "name": "sparse-zero-u16",
+      "revision": "sha256:ddea16da144796356b6539cc7b21870563bbdb67151ff8680c194d7b5a3f9083",
+      "clip": "162f1a3cac4149b4c924a5b82c734322",
+      "linear_rmse": 2.3070609148956016e-05,
+      "object_mismatches": 0,
+      "document_bytes": 13624
+    },
+    {
+      "name": "sparse-base-u8",
+      "revision": "sha256:19ced2b513de24719976221392021e17ebb608f43208f4224d29cf46b3233284",
+      "clip": "9d21f2477178975d566e53a59f34d62e",
+      "linear_rmse": 2.3070609148956016e-05,
+      "object_mismatches": 0,
+      "document_bytes": 13624
+    }
+  ],
+  "dense_sparse_pixels_identical": true
+}

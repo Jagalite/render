@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "validator": "2.0.0-dev.3.10",
+  "development_only": true,
+  "results": [
+    {
+      "name": "gradient-le",
+      "sha256": "cf3c39e4f23275add90eda83c3dad23a6ff333291edeecee78e10e8bb0554215",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 2
+    },
+    {
+      "name": "gradient-be",
+      "sha256": "c7d7f965483d53600cec2aa48586a689ec46015d523fe54f8e87a2baa4e7a908",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 2
+    },
+    {
+      "name": "rgb-only",
+      "sha256": "2cacc1c7280d0b6380b8a58a4994a6c9b049a2f705004668ae8288bbed205c77",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 2
+    },
+    {
+      "name": "alpha-only",
+      "sha256": "fb3ad8d6a93149ff11587dfdc3d955b15abad5c60adf8c512845942e417fbb3b",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 2
+    },
+    {
+      "name": "mixed-opacity",
+      "sha256": "ca66ef69ef8119797014629325045530680a6942b5bf252c55650dbc4ac88f8a",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 4
+    },
+    {
+      "name": "srgb",
+      "sha256": "85336a8a4397f7fcbdc722caed9d76a8a0ad4cb079435556fb1bd50c5da32f19",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 2
+    },
+    {
+      "name": "groom",
+      "sha256": "0c93f266d76179022896b46b83cd87a546226347c5e765cdf1fdc566f5323140",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 4
+    }
+  ]
+}

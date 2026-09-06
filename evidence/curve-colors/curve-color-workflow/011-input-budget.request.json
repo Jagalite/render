@@ -1,0 +1,83 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "import",
+    "base_revision": "sha256:34f096c75d7142ff4accf4382e1c42fa645d526217c88415b2a6cd6ae5e4c4ca",
+    "idempotency_key": "curve:rgba:import:001",
+    "max_added_bytes": 8388608,
+    "source": {
+      "format": "hair",
+      "path": "/private/tmp/render-curve-colors-20260906/fixtures/curve-colors/data/gradient-le.hair",
+      "policy": {
+        "byte_order": "little_endian",
+        "meters_per_unit": 1,
+        "thickness": "diameter",
+        "color_space": "linear_srgb",
+        "transparency": "coverage_one_minus_transparency",
+        "representation": "swept_polyline_surface",
+        "roughness": 0.6,
+        "tessellation": {
+          "chord_error": 0.001,
+          "radial_error": 0.01,
+          "max_samples": 8192,
+          "max_vertices": 65536,
+          "max_depth": 18
+        },
+        "point_attributes": "linear_rgba_f32"
+      }
+    },
+    "settings": {
+      "width": 16,
+      "height": 16,
+      "samples": 16,
+      "seed": 73,
+      "max_depth": 2,
+      "max_bytes": 16777216,
+      "environment": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "light": {
+        "position": [
+          1,
+          2,
+          3
+        ],
+        "intensity": [
+          4,
+          4,
+          4
+        ]
+      },
+      "camera": {
+        "position": [
+          0,
+          0,
+          3
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "vertical_fov_radians": 0.65,
+        "lens": {
+          "kind": "orthographic",
+          "xmag": 1,
+          "ymag": 1,
+          "near": 0.01,
+          "far": 20
+        }
+      }
+    }
+  },
+  "limits": {
+    "max_input_bytes": 1
+  }
+}

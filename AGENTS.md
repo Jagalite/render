@@ -24,4 +24,4 @@ All persistent mutation uses transactions. Never mutate published snapshots, byp
 
 ## Parallel work
 
-One task owns one bounded interface change and its evidence. Coordinate schema/ABI changes before coding against them. Use branches for candidate work, small reviewable patches, and explicit dependencies. Publish failed experiments and costs; do not make an unmeasured speed or compatibility claim.
+One task owns one bounded interface change and its evidence. Coordinate schema/ABI changes before coding against them. The user currently wants a single `main` branch. Work directly on `main` unless the user requests a different branch workflow; keep candidate qualification status explicit, patches small and reviewable, and dependencies recorded. Publish failed experiments and costs; do not make an unmeasured speed or compatibility claim.

@@ -2,17 +2,17 @@
 
 ## Checkpoint and scope
 
-This commit checkpoints the sparse sculpt displacement candidate on
-`feat/sculpt-displacements`, based on `7bd2e25`. The user paused implementation and
-then requested this hand-off, commit and push. Qualification and integration remain
-unfinished. Do not mark full M10 complete or resume implementation solely because
-this checkpoint was published.
+The sparse sculpt candidate was checkpointed at `6502349`, based on `7bd2e25`.
+The user subsequently requested one branch. All development branches were contained
+in that checkpoint; the consolidated working branch is now **`main`**.
+Qualification remains unfinished, and the implementation pause remains in effect.
+Publishing and consolidating this checkpoint does not complete M10.
 
-Local candidate checkout:
+Use the primary checkout `/Volumes/seed2/Projects/render` on `main` for future work.
+Remote: `git@github.com:Jagalite/render.git`, default branch `main`.
+Older worktree directories are retained as detached checkouts for local evidence;
+they are not active development branches. The original candidate artifacts remain at
 `/Volumes/seed2/Projects/render/artifacts/worktrees/sculpt-displacements`.
-The integration checkout is `/Volumes/seed2/Projects/render`, on
-`feat/engine-input-progress`; the last integration point is `7bd2e25`.
-Remote: `git@github.com:Jagalite/render.git`.
 
 Read [architecture](../../docs/architecture.md),
 [the candidate contract](sculpt-displacements-contract.md),
@@ -86,9 +86,9 @@ source-admission and root-render cancellation fixes.
 3. Finish the evidence README/manifests, preserve qualified package copies, and
    reconcile final source/package identities. Update ADR-041, the integration review,
    profile documentation, feature matrix and M10 subgate only after evidence passes.
-4. Review the final diff, commit qualification and integrate the candidate by
-   fast-forward if the integration branch still permits it. The current push is a
-   candidate checkpoint, not an integration or release.
+4. Review the final diff and commit qualification updates directly on `main`.
+   Keep one development branch unless the user requests a different workflow.
+   The consolidated checkpoint remains an experimental candidate, not a release.
 
 The predecessor's repeated PBR process-footprint increase remains unexplained.
 Keep that observation visible. Global admission, canonical hashing, complete root
@@ -104,7 +104,9 @@ continue through bounded headless interfaces; this candidate does not complete M
 
 ## Reproduction and local resources
 
-Run `python3 scripts/validate-sculpt-displacements.py` from the candidate checkout.
+Run `python3 scripts/validate-sculpt-displacements.py` from the checkout being
+qualified. Existing absolute artifact paths below refer to the original candidate
+checkout; preserve or explicitly configure those baseline resources when using main.
 It configures offline builds, two Cargo jobs, no incremental compilation and no
 native dev/test debug data. It requires the following baseline inputs and local
 Chrome/server setup. The local helper

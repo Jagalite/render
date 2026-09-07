@@ -379,6 +379,12 @@
           "status": "validated_experimental_profile",
           "scope": "renderer_prerequisite_for_local_sculpting",
           "evidence": "evidence/gpu-geometry-updates/README.md"
+        },
+        {
+          "id": "spatial-queries",
+          "status": "validated_experimental_profile",
+          "scope": "read_only_mesh_query_prerequisite_for_sculpting_and_retopology",
+          "evidence": "evidence/spatial-queries/README.md"
         }
       ],
       "remaining": "Projected painting and broader baking, sculpting, masks/face sets/symmetry, multiresolution, remesh, retopology and the deferred M09 interactive demonstration."

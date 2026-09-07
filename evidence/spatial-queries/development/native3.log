@@ -1,0 +1,14 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 17.76s
+     Running tests/spatial_queries.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/spatial_queries-2a0524b74fbab6f3)
+
+running 6 tests
+test analytic_surface_features_winding_and_inclusive_distance ... ok
+test sphere_boundary_loose_points_high_ids_and_empty_surfaces ... ok
+test read_only_agent_query_preserves_document_and_reuses_index ... ok
+test disconnected_nonmanifold_ties_and_invalid_sources ... ok
+test admission_cancellation_and_cache_are_atomic ... ok
+test grid_queries_match_independent_plane_and_point_enumeration ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.09s
+

@@ -1,0 +1,308 @@
+{
+  "status": "failed",
+  "scope": "macOS ARM64 CPU/Metal, Rust Wasm in Node, Chrome WebGPU/OPFS; Linux and Windows compile only",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7733112499990966,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 30.507011167006567,
+      "log": "logs/clippy.txt"
+    },
+    {
+      "name": "browser_clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "-p",
+        "render-web",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 15.008487540995702,
+      "log": "logs/browser_clippy.txt"
+    },
+    {
+      "name": "native_build",
+      "command": [
+        "cargo",
+        "build",
+        "-p",
+        "render-host",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 34.8073320830008,
+      "log": "logs/native_build.txt"
+    },
+    {
+      "name": "spatial_native",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "spatial_queries",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 3.7895861669967417,
+      "log": "logs/spatial_native.txt"
+    },
+    {
+      "name": "spatial_workflow",
+      "command": [
+        "python3",
+        "scripts/spatial-queries-workflow.py",
+        "artifacts/spatial-queries/run-20260906T234457Z/spatial-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 14.340149625000777,
+      "log": "logs/spatial_workflow.txt"
+    },
+    {
+      "name": "spatial_schema",
+      "command": [
+        "python3",
+        "scripts/validate-spatial-query-schema.py",
+        "artifacts/spatial-queries/run-20260906T234457Z/spatial-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.13917700000456534,
+      "log": "logs/spatial_schema.txt"
+    },
+    {
+      "name": "browser_build",
+      "command": [
+        "sh",
+        "scripts/build-web.sh"
+      ],
+      "exit_code": 0,
+      "seconds": 92.95400850000442,
+      "log": "logs/browser_build.txt"
+    },
+    {
+      "name": "spatial_browser",
+      "command": [
+        "node",
+        "scripts/spatial-queries-browser.mjs",
+        "artifacts/spatial-queries/run-20260906T234457Z/spatial-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7085660000011558,
+      "log": "logs/spatial_browser.txt"
+    },
+    {
+      "name": "spatial_cross",
+      "command": [
+        "python3",
+        "scripts/compare-spatial-queries.py",
+        "artifacts/spatial-queries/run-20260906T234457Z/spatial-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.4015562919958029,
+      "log": "logs/spatial_cross.txt"
+    },
+    {
+      "name": "gpu_update_native",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_geometry_updates",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 20.61266837498988,
+      "log": "logs/gpu_update_native.txt"
+    },
+    {
+      "name": "gpu_update_resource",
+      "command": [
+        "python3",
+        "scripts/measure-gpu-geometry-updates.py",
+        "artifacts/spatial-queries/run-20260906T234457Z"
+      ],
+      "exit_code": 0,
+      "seconds": 3.8382107079960406,
+      "log": "logs/gpu_update_resource.txt"
+    },
+    {
+      "name": "gpu_update_browser",
+      "command": [
+        "node",
+        "scripts/gpu-geometry-updates-browser.mjs",
+        "artifacts/spatial-queries/run-20260906T234457Z/gpu-update-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.3157950839959085,
+      "log": "logs/gpu_update_browser.txt"
+    },
+    {
+      "name": "gpu_update_cross",
+      "command": [
+        "python3",
+        "scripts/compare-gpu-geometry-updates.py",
+        "artifacts/spatial-queries/run-20260906T234457Z/gpu-update-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.16145287500694394,
+      "log": "logs/gpu_update_cross.txt"
+    },
+    {
+      "name": "srgb8_numeric_source",
+      "command": [
+        "python3",
+        "scripts/validate-srgb8-compat.py",
+        "artifacts/spatial-queries/run-20260906T234457Z/srgb8_numeric_source.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6274720410001464,
+      "log": "logs/srgb8_numeric_source.txt"
+    },
+    {
+      "name": "mip_lod_numeric_source",
+      "command": [
+        "python3",
+        "scripts/validate-paint-mip-lod.py",
+        "artifacts/spatial-queries/run-20260906T234457Z/mip_lod_numeric_source.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.19650612499390263,
+      "log": "logs/mip_lod_numeric_source.txt"
+    },
+    {
+      "name": "paint_native",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "tiled_painting",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 22.688163457991323,
+      "log": "logs/paint_native.txt"
+    },
+    {
+      "name": "independent_source_validation",
+      "command": [
+        "node",
+        "scripts/validate-gltf-fixtures.cjs",
+        "artifacts/spatial-queries/run-20260906T234457Z/source-validation"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7047486669907812,
+      "log": "logs/independent_source_validation.txt"
+    },
+    {
+      "name": "paint_workflow",
+      "command": [
+        "python3",
+        "scripts/tiled-painting-workflow.py",
+        "artifacts/spatial-queries/run-20260906T234457Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 82.79910974999075,
+      "log": "logs/paint_workflow.txt"
+    },
+    {
+      "name": "paint_schema",
+      "command": [
+        "python3",
+        "scripts/validate-tiled-painting-schema.py",
+        "artifacts/spatial-queries/run-20260906T234457Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.22586449999653269,
+      "log": "logs/paint_schema.txt"
+    },
+    {
+      "name": "paint_browser",
+      "command": [
+        "node",
+        "scripts/tiled-painting-browser.mjs",
+        "artifacts/spatial-queries/run-20260906T234457Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.118719707999844,
+      "log": "logs/paint_browser.txt"
+    },
+    {
+      "name": "paint_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-tiled-painting-browser.py",
+        "artifacts/spatial-queries/run-20260906T234457Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.05318854100187309,
+      "log": "logs/paint_cross_platform.txt"
+    },
+    {
+      "name": "wasm_tests",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": -2,
+      "seconds": 130.32624566600134,
+      "log": "logs/wasm_tests.txt"
+    }
+  ],
+  "build_environment": {
+    "CARGO_NET_OFFLINE": "true",
+    "CARGO_BUILD_JOBS": "2",
+    "CARGO_INCREMENTAL": "0",
+    "CARGO_PROFILE_DEV_DEBUG": "0",
+    "CARGO_PROFILE_TEST_DEBUG": "0",
+    "CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUNNER": "wasm-bindgen-test-runner",
+    "RENDER_TEST_ORIGIN": "http://127.0.0.1:8783"
+  }
+}

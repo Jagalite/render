@@ -126,6 +126,9 @@ enum Operation {
         source: PathBuf,
     },
     Inspect {},
+    QueryGeometry {
+        request: geometry_query::Request,
+    },
     Apply {
         request: document::Request,
     },
@@ -542,6 +545,10 @@ fn execute(root: &Path, operation: Operation, control: &mut Control) -> Result<V
         Operation::Inspect {} => Ok(
             json!({"revision":doc.snapshot().revision()?,"document_digest":digest(&canonical(&doc)?),"snapshot":doc.snapshot(),"operations":api::registry(),"durability":"native journal"}),
         ),
+        Operation::QueryGeometry { request } => Ok(serde_json::to_value(
+            geometry_query::Cache::default()
+                .query(doc.snapshot(), &request, || control.cancelled())?,
+        )?),
         Operation::Apply { request } => {
             control.check()?;
             let receipt = durable_execute(

@@ -1,0 +1,37 @@
+{
+  "binary": {
+    "path": "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+    "bytes": 63541392,
+    "sha256": "9d5a7c6d8fc4be65576dadcc3145b4b02807ee99d3c8b739d116292eb32b4256"
+  },
+  "source": [
+    {
+      "path": "crates/core/src/geometry_query/mod.rs",
+      "bytes": 16204,
+      "sha256": "9bce15824942546295b829909c48145bf7ecb9fdc19347a1e510c0e854ba5bf0"
+    },
+    {
+      "path": "crates/core/src/geometry_query/types.rs",
+      "bytes": 5235,
+      "sha256": "5c25a0e5c4e471f4974f660f83b37e1433f968e0763055fdf35bfa1301c1d9c6"
+    }
+  ],
+  "expected": {
+    "position_meters": [
+      3.5e-82,
+      3.5e-82,
+      0
+    ],
+    "barycentric": [
+      0.5,
+      0.25,
+      0.25
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ],
+    "distance_meters": 1e-81
+  }
+}

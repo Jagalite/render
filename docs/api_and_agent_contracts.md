@@ -101,3 +101,16 @@ without changing persisted receipts. The bounded Wasm
 `gpu_geometry_update_conformance` diagnostic consumes canonical documents and pinned
 revisions to check renderer/cache behavior. See [GPU geometry updates](gpu_geometry_updates.md)
 for the input limits and resource accounting; ordinary mutation/job APIs are unchanged.
+
+## Read-only spatial queries
+
+The `query_geometry` agent operation uses the same core mesh-local query and budgets
+as the native CLI. `Session` retains at most one successful derived index. Queries
+follow Inspect read access and do not add journal records, accepted transaction
+keys or jobs. Failure/cancellation preserves the prior index and document.
+
+Every request validates its whole pinned snapshot before traversal; a warm index
+is not a local-cost document validation path. Build and traversal reports separate
+these costs. Input and result schemas are maintained independently of the private
+index layout. See [spatial_queries.md](spatial_queries.md) for numerical, identity,
+resource, coordinate-space and browser cancellation boundaries.

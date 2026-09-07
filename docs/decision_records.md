@@ -600,3 +600,24 @@ costs and unchanged prior artifacts/dependencies/shaders. This prerequisite does
 qualify localized sculpting; spatial queries, sparse displacement/mask chunks and
 affected-region evaluation remain separate. See the candidate contract under
 `planning/engine-progress/gpu-geometry-updates-contract.md`.
+
+## ADR-039 — Read-only mesh spatial queries bind revisions and stable domains
+
+**Decision:** A typed asset-local sphere/nearest-surface query names an
+immutable mesh hash and document revision. Reuse the existing BVH structure in a
+separate geometry-owned index; preserve established ray construction/traversal.
+Public results use decimal-string point/face/corner IDs and winding normals, with
+numeric ID ordering for exact computed-distance ties. Asset-local placement uses
+ordinary transactions; this operation never grants another mutation path.
+
+**Integration review:** Each agent session holds at most one complete disposable
+index. Admission validates global document identity and validates source content
+unless an identical immutable Arc was already admitted. Failed queries retain the
+previous cache. Build byte charges use fixed platform-independent constants; actual
+retained layout bytes are separate observations. Construction and source hashing
+remain global work. Snapshot18, shaders and runtime dependencies are unchanged.
+
+**Acceptance boundary:** The candidate requires analytic/native/Wasm geometry tests,
+strict schema checks, high-ID CLI/browser placement, archive/OPFS recovery, resource
+observations and prior output preservation. This read-only seam does not qualify
+sculpting, incremental evaluation, multiresolution or interactive retopology.

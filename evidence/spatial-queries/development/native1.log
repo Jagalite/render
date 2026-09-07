@@ -1,0 +1,15 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/crates/core)
+error[E0282]: type annotations needed
+  --> crates/core/tests/spatial_queries.rs:78:35
+   |
+78 |             triangle().corner_ids.try_into().unwrap().map(ElementId)
+   |                                   ^^^^^^^^
+   |
+help: try using a fully qualified path to specify the expected types
+   |
+78 -             triangle().corner_ids.try_into().unwrap().map(ElementId)
+78 +             <Vec<u64> as TryInto<T>>::try_into(triangle().corner_ids).unwrap().map(ElementId)
+   |
+
+For more information about this error, try `rustc --explain E0282`.
+error: could not compile `render-core` (test "spatial_queries") due to 1 previous error

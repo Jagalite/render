@@ -553,6 +553,32 @@
         "evidence/m05/browser_workflow_report.json",
         "evidence/m05/native_client_report.json"
       ]
+    },
+    {
+      "id": "spatial_queries",
+      "family": "Mesh-local spatial queries",
+      "status": "implemented_experimental_profile",
+      "first_useful_gate": "M10",
+      "broader_gates": [
+        "M14"
+      ],
+      "qualification": "mesh-local-spatial-v1: revision-pinned sphere and nearest-surface queries, stable decimal element IDs, bounded index construction and traversal, one-index cache and underflow-aware numerical metrics. Whole snapshot admission remains global; sculpting and retopology editing are separate.",
+      "capability_axes": {
+        "native_authoring": "read_only_queries_consumed_by_ordinary_placement_transactions",
+        "native_evaluation": "validated_mesh_asset_local_point_and_triangle_queries",
+        "final_render": "validated_ordinary_placement_CPU_Metal_WebGPU_workflow",
+        "preview": "shared_Rust_rendering; no_query_editor",
+        "human_editing": "planned_M09",
+        "import": "existing_retained_native_mesh_assets; no_implicit_scene_conversion",
+        "export": "typed_JSON_results_with_decimal_element_IDs; no_new_geometry_format"
+      },
+      "platform_profiles": {
+        "native_desktop": "validated_macos_arm64; linux_windows_compile_only",
+        "browser_local": "validated_Chromium_Rust_Wasm_OPFS_WebGPU; synchronous_bounded_queries"
+      },
+      "evidence": [
+        "evidence/spatial-queries/README.md"
+      ]
     }
   ],
   "profile_document": "docs/implementation.md",

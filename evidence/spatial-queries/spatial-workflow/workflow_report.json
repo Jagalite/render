@@ -1,0 +1,1224 @@
+{
+  "status": "passed",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/000-init.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0688843749958323,
+      "expected_error": null
+    },
+    {
+      "name": "empty",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/001-empty.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.016432584001449868,
+      "expected_error": null
+    },
+    {
+      "name": "source",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/002-source.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5668835840042448,
+      "expected_error": null
+    },
+    {
+      "name": "source",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/003-source.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1457771249988582,
+      "expected_error": null
+    },
+    {
+      "name": "scene",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/004-scene.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8567489169945475,
+      "expected_error": null
+    },
+    {
+      "name": "scene",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/005-scene.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1982939589943271,
+      "expected_error": null
+    },
+    {
+      "name": "initial-export",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/006-initial-export.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3921281660004752,
+      "expected_error": null
+    },
+    {
+      "name": "query-0",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/007-query-0.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.21013724998920225,
+      "expected_error": null,
+      "maximum_resident_bytes": 24952832
+    },
+    {
+      "name": "query-1",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/008-query-1.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.22535712498938665,
+      "expected_error": null,
+      "maximum_resident_bytes": 24723456
+    },
+    {
+      "name": "query-2",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/009-query-2.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.2002830840065144,
+      "expected_error": null,
+      "maximum_resident_bytes": 24838144
+    },
+    {
+      "name": "query-3",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/010-query-3.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.24299225000140723,
+      "expected_error": null,
+      "maximum_resident_bytes": 24969216
+    },
+    {
+      "name": "query-4",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/011-query-4.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.20729966700309888,
+      "expected_error": null,
+      "maximum_resident_bytes": 24920064
+    },
+    {
+      "name": "query-5",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/012-query-5.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.18669225000485312,
+      "expected_error": null,
+      "maximum_resident_bytes": 24510464
+    },
+    {
+      "name": "query-6",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/013-query-6.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1834803749952698,
+      "expected_error": null,
+      "maximum_resident_bytes": 24330240
+    },
+    {
+      "name": "query-7",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/014-query-7.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.20490670800791122,
+      "expected_error": null,
+      "maximum_resident_bytes": 24985600
+    },
+    {
+      "name": "stale",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/015-stale.request.json"
+      ],
+      "exit_code": 1,
+      "seconds": 0.19011066600796767,
+      "expected_error": "stale_revision"
+    },
+    {
+      "name": "future",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/016-future.request.json"
+      ],
+      "exit_code": 1,
+      "seconds": 0.17210004199296236,
+      "expected_error": "version"
+    },
+    {
+      "name": "conditioned-frame",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/017-conditioned-frame.request.json"
+      ],
+      "exit_code": 1,
+      "seconds": 0.18964954200782813,
+      "expected_error": "degenerate"
+    },
+    {
+      "name": "budget",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/018-budget.request.json"
+      ],
+      "exit_code": 1,
+      "seconds": 0.2031499580043601,
+      "expected_error": "budget"
+    },
+    {
+      "name": "triangulation-budget",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/019-triangulation-budget.request.json"
+      ],
+      "exit_code": 1,
+      "seconds": 0.1943844170018565,
+      "expected_error": "budget"
+    },
+    {
+      "name": "metric",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/020-metric.request.json"
+      ],
+      "exit_code": 1,
+      "seconds": 0.17953912499069702,
+      "expected_error": "query_metric"
+    },
+    {
+      "name": "cancel",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/021-cancel.request.json"
+      ],
+      "exit_code": 1,
+      "seconds": 0.01063220801006537,
+      "expected_error": "cancelled"
+    },
+    {
+      "name": "queries-atomic",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/022-queries-atomic.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.20825120800873265,
+      "expected_error": null
+    },
+    {
+      "name": "old-client-atomic",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/023-old-client-atomic.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.20933487499132752,
+      "expected_error": null
+    },
+    {
+      "name": "place-marker",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/024-place-marker.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7357702080043964,
+      "expected_error": null
+    },
+    {
+      "name": "placed",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/025-placed.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.2755652909982018,
+      "expected_error": null
+    },
+    {
+      "name": "final-export",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/026-final-export.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3909949160006363,
+      "expected_error": null
+    },
+    {
+      "name": "render-cpu",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/027-render-cpu.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.482556916991598,
+      "expected_error": null
+    },
+    {
+      "name": "render-gpu",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/028-render-gpu.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6944341670023277,
+      "expected_error": null
+    },
+    {
+      "name": "restore",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/029-restore.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.25130195800738875,
+      "expected_error": null
+    },
+    {
+      "name": "restored",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/030-restored.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.12131362500076648,
+      "expected_error": null
+    },
+    {
+      "name": "restored-query-0",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/031-restored-query-0.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.11667208300787024,
+      "expected_error": null
+    },
+    {
+      "name": "restored-query-1",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/032-restored-query-1.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.11570475000189617,
+      "expected_error": null
+    },
+    {
+      "name": "restored-query-2",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/033-restored-query-2.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1222189590043854,
+      "expected_error": null
+    },
+    {
+      "name": "restored-query-3",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/034-restored-query-3.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.11456037500465754,
+      "expected_error": null
+    },
+    {
+      "name": "restored-query-4",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/035-restored-query-4.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.11380262499733362,
+      "expected_error": null
+    },
+    {
+      "name": "restored-query-5",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/036-restored-query-5.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.10337887499190401,
+      "expected_error": null
+    },
+    {
+      "name": "restored-query-6",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/037-restored-query-6.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.10672833300486673,
+      "expected_error": null
+    },
+    {
+      "name": "restored-query-7",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/038-restored-query-7.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.11256266699638218,
+      "expected_error": null
+    },
+    {
+      "name": "restored-render",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/restored",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/039-restored-render.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.4162556249939371,
+      "expected_error": null
+    }
+  ],
+  "queries": [
+    {
+      "request": {
+        "version": 0,
+        "base_revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e",
+        "mesh": "sha256:7d9665a33f4e407677f4269627115d9f0899d3dc63af1301ec7fce416390df2d",
+        "query": {
+          "kind": "nearest_surface",
+          "max_distance_meters": 1.0,
+          "point": [
+            0.625,
+            0.375,
+            1.0
+          ]
+        },
+        "budget": {
+          "max_source_bytes": 8388608,
+          "max_build_bytes": 33554432,
+          "max_triangulation_work": 16777216,
+          "max_visited_nodes": 262144,
+          "max_item_tests": 131072,
+          "max_hits": 4096,
+          "max_result_bytes": 1048576
+        }
+      },
+      "result": {
+        "cost": {
+          "additional_source_identity_validation": true,
+          "build_byte_charge": 691080,
+          "built_points": 291,
+          "built_triangles": 512,
+          "cache_reused": false,
+          "item_tests": 4,
+          "retained_index_layout_bytes": 62303,
+          "source_bytes": 97591,
+          "triangulation_work_charge": 13824,
+          "visited_nodes": 15,
+          "whole_snapshot_validated": true
+        },
+        "hits": {
+          "exact_tied_triangles": 2,
+          "kind": "nearest_surface",
+          "surface": {
+            "barycentric": [
+              0.5,
+              0.5,
+              0.0
+            ],
+            "corners": [
+              "9007199254750066",
+              "9007199254750065",
+              "9007199254750064"
+            ],
+            "distance_meters": 1.0,
+            "face": "9007199254741684",
+            "geometric_normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "position_meters": [
+              0.625,
+              0.375,
+              0.0
+            ]
+          }
+        },
+        "mesh": "sha256:7d9665a33f4e407677f4269627115d9f0899d3dc63af1301ec7fce416390df2d",
+        "profile": "mesh-local-spatial-v1",
+        "revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e"
+      }
+    },
+    {
+      "request": {
+        "version": 0,
+        "base_revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e",
+        "mesh": "sha256:7d9665a33f4e407677f4269627115d9f0899d3dc63af1301ec7fce416390df2d",
+        "query": {
+          "center": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "kind": "points_in_sphere",
+          "radius_meters": 0.0
+        },
+        "budget": {
+          "max_source_bytes": 8388608,
+          "max_build_bytes": 33554432,
+          "max_triangulation_work": 16777216,
+          "max_visited_nodes": 262144,
+          "max_item_tests": 131072,
+          "max_hits": 4096,
+          "max_result_bytes": 1048576
+        }
+      },
+      "result": {
+        "cost": {
+          "additional_source_identity_validation": true,
+          "build_byte_charge": 691080,
+          "built_points": 291,
+          "built_triangles": 512,
+          "cache_reused": false,
+          "item_tests": 6,
+          "retained_index_layout_bytes": 62303,
+          "source_bytes": 97591,
+          "triangulation_work_charge": 13824,
+          "visited_nodes": 27,
+          "whole_snapshot_validated": true
+        },
+        "hits": {
+          "kind": "points_in_sphere",
+          "points": [
+            {
+              "distance_meters": 0.0,
+              "point": "18446744073709551325",
+              "position_meters": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "distance_meters": 0.0,
+              "point": "18446744073709551326",
+              "position_meters": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "distance_meters": 0.0,
+              "point": "18446744073709551471",
+              "position_meters": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          ]
+        },
+        "mesh": "sha256:7d9665a33f4e407677f4269627115d9f0899d3dc63af1301ec7fce416390df2d",
+        "profile": "mesh-local-spatial-v1",
+        "revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e"
+      }
+    },
+    {
+      "request": {
+        "version": 0,
+        "base_revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e",
+        "mesh": "sha256:7d9665a33f4e407677f4269627115d9f0899d3dc63af1301ec7fce416390df2d",
+        "query": {
+          "center": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "kind": "points_in_sphere",
+          "radius_meters": 0.5
+        },
+        "budget": {
+          "max_source_bytes": 8388608,
+          "max_build_bytes": 33554432,
+          "max_triangulation_work": 16777216,
+          "max_visited_nodes": 262144,
+          "max_item_tests": 131072,
+          "max_hits": 4096,
+          "max_result_bytes": 1048576
+        }
+      },
+      "result": {
+        "cost": {
+          "additional_source_identity_validation": true,
+          "build_byte_charge": 691080,
+          "built_points": 291,
+          "built_triangles": 512,
+          "cache_reused": false,
+          "item_tests": 28,
+          "retained_index_layout_bytes": 62303,
+          "source_bytes": 97591,
+          "triangulation_work_charge": 13824,
+          "visited_nodes": 53,
+          "whole_snapshot_validated": true
+        },
+        "hits": {
+          "kind": "points_in_sphere",
+          "points": [
+            {
+              "distance_meters": 0.5,
+              "point": "18446744073709551325",
+              "position_meters": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "distance_meters": 0.5,
+              "point": "18446744073709551326",
+              "position_meters": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "distance_meters": 0.5,
+              "point": "18446744073709551435",
+              "position_meters": [
+                0.5,
+                0.5,
+                0.0
+              ]
+            },
+            {
+              "distance_meters": 0.3535533905932738,
+              "point": "18446744073709551451",
+              "position_meters": [
+                0.75,
+                0.25,
+                0.0
+              ]
+            },
+            {
+              "distance_meters": 0.25,
+              "point": "18446744073709551452",
+              "position_meters": [
+                0.5,
+                0.25,
+                0.0
+              ]
+            },
+            {
+              "distance_meters": 0.3535533905932738,
+              "point": "18446744073709551453",
+              "position_meters": [
+                0.25,
+                0.25,
+                0.0
+              ]
+            },
+            {
+              "distance_meters": 0.5,
+              "point": "18446744073709551467",
+              "position_meters": [
+                1.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "distance_meters": 0.25,
+              "point": "18446744073709551468",
+              "position_meters": [
+                0.75,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "distance_meters": 0.0,
+              "point": "18446744073709551469",
+              "position_meters": [
+                0.5,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "distance_meters": 0.25,
+              "point": "18446744073709551470",
+              "position_meters": [
+                0.25,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "distance_meters": 0.5,
+              "point": "18446744073709551471",
+              "position_meters": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "distance_meters": 0.3535533905932738,
+              "point": "18446744073709551485",
+              "position_meters": [
+                0.75,
+                -0.25,
+                0.0
+              ]
+            },
+            {
+              "distance_meters": 0.25,
+              "point": "18446744073709551486",
+              "position_meters": [
+                0.5,
+                -0.25,
+                0.0
+              ]
+            },
+            {
+              "distance_meters": 0.3535533905932738,
+              "point": "18446744073709551487",
+              "position_meters": [
+                0.25,
+                -0.25,
+                0.0
+              ]
+            },
+            {
+              "distance_meters": 0.5,
+              "point": "18446744073709551503",
+              "position_meters": [
+                0.5,
+                -0.5,
+                0.0
+              ]
+            }
+          ]
+        },
+        "mesh": "sha256:7d9665a33f4e407677f4269627115d9f0899d3dc63af1301ec7fce416390df2d",
+        "profile": "mesh-local-spatial-v1",
+        "revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e"
+      }
+    },
+    {
+      "request": {
+        "version": 0,
+        "base_revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e",
+        "mesh": "sha256:7d9665a33f4e407677f4269627115d9f0899d3dc63af1301ec7fce416390df2d",
+        "query": {
+          "kind": "nearest_surface",
+          "max_distance_meters": 2.0,
+          "point": [
+            3.0,
+            3.0,
+            1.0
+          ]
+        },
+        "budget": {
+          "max_source_bytes": 8388608,
+          "max_build_bytes": 33554432,
+          "max_triangulation_work": 16777216,
+          "max_visited_nodes": 262144,
+          "max_item_tests": 131072,
+          "max_hits": 4096,
+          "max_result_bytes": 1048576
+        }
+      },
+      "result": {
+        "cost": {
+          "additional_source_identity_validation": true,
+          "build_byte_charge": 691080,
+          "built_points": 291,
+          "built_triangles": 512,
+          "cache_reused": false,
+          "item_tests": 4,
+          "retained_index_layout_bytes": 62303,
+          "source_bytes": 97591,
+          "triangulation_work_charge": 13824,
+          "visited_nodes": 15,
+          "whole_snapshot_validated": true
+        },
+        "hits": {
+          "exact_tied_triangles": 2,
+          "kind": "nearest_surface",
+          "surface": {
+            "barycentric": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "corners": [
+              "9007199254749460",
+              "9007199254749459",
+              "9007199254749458"
+            ],
+            "distance_meters": 1.7320508075688772,
+            "face": "9007199254741482",
+            "geometric_normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "position_meters": [
+              2.0,
+              2.0,
+              0.0
+            ]
+          }
+        },
+        "mesh": "sha256:7d9665a33f4e407677f4269627115d9f0899d3dc63af1301ec7fce416390df2d",
+        "profile": "mesh-local-spatial-v1",
+        "revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e"
+      }
+    },
+    {
+      "request": {
+        "version": 0,
+        "base_revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e",
+        "mesh": "sha256:7d9665a33f4e407677f4269627115d9f0899d3dc63af1301ec7fce416390df2d",
+        "query": {
+          "kind": "nearest_surface",
+          "max_distance_meters": 0.5,
+          "point": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "budget": {
+          "max_source_bytes": 8388608,
+          "max_build_bytes": 33554432,
+          "max_triangulation_work": 16777216,
+          "max_visited_nodes": 262144,
+          "max_item_tests": 131072,
+          "max_hits": 4096,
+          "max_result_bytes": 1048576
+        }
+      },
+      "result": {
+        "cost": {
+          "additional_source_identity_validation": true,
+          "build_byte_charge": 691080,
+          "built_points": 291,
+          "built_triangles": 512,
+          "cache_reused": false,
+          "item_tests": 0,
+          "retained_index_layout_bytes": 62303,
+          "source_bytes": 97591,
+          "triangulation_work_charge": 13824,
+          "visited_nodes": 1,
+          "whole_snapshot_validated": true
+        },
+        "hits": {
+          "exact_tied_triangles": 0,
+          "kind": "nearest_surface",
+          "surface": null
+        },
+        "mesh": "sha256:7d9665a33f4e407677f4269627115d9f0899d3dc63af1301ec7fce416390df2d",
+        "profile": "mesh-local-spatial-v1",
+        "revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e"
+      }
+    },
+    {
+      "request": {
+        "version": 0,
+        "base_revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e",
+        "mesh": "sha256:1155782018125ce293567c17df59dd3e3b7edab1c4bc34e41860ea2f0a0f3bec",
+        "query": {
+          "kind": "nearest_surface",
+          "max_distance_meters": 1e-80,
+          "point": [
+            3.5e-82,
+            3.5e-82,
+            1e-81
+          ]
+        },
+        "budget": {
+          "max_source_bytes": 8388608,
+          "max_build_bytes": 33554432,
+          "max_triangulation_work": 16777216,
+          "max_visited_nodes": 262144,
+          "max_item_tests": 131072,
+          "max_hits": 4096,
+          "max_result_bytes": 1048576
+        }
+      },
+      "result": {
+        "cost": {
+          "additional_source_identity_validation": true,
+          "build_byte_charge": 6968,
+          "built_points": 3,
+          "built_triangles": 1,
+          "cache_reused": false,
+          "item_tests": 1,
+          "retained_index_layout_bytes": 447,
+          "source_bytes": 312,
+          "triangulation_work_charge": 27,
+          "visited_nodes": 1,
+          "whole_snapshot_validated": true
+        },
+        "hits": {
+          "exact_tied_triangles": 1,
+          "kind": "nearest_surface",
+          "surface": {
+            "barycentric": [
+              0.5,
+              0.25,
+              0.25
+            ],
+            "corners": [
+              "1",
+              "2",
+              "3"
+            ],
+            "distance_meters": 1e-81,
+            "face": "1",
+            "geometric_normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "position_meters": [
+              3.5e-82,
+              3.5e-82,
+              0.0
+            ]
+          }
+        },
+        "mesh": "sha256:1155782018125ce293567c17df59dd3e3b7edab1c4bc34e41860ea2f0a0f3bec",
+        "profile": "mesh-local-spatial-v1",
+        "revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e"
+      }
+    },
+    {
+      "request": {
+        "version": 0,
+        "base_revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e",
+        "mesh": "sha256:1155782018125ce293567c17df59dd3e3b7edab1c4bc34e41860ea2f0a0f3bec",
+        "query": {
+          "center": [
+            0,
+            0,
+            1e-200
+          ],
+          "kind": "points_in_sphere",
+          "radius_meters": 0
+        },
+        "budget": {
+          "max_source_bytes": 8388608,
+          "max_build_bytes": 33554432,
+          "max_triangulation_work": 16777216,
+          "max_visited_nodes": 262144,
+          "max_item_tests": 131072,
+          "max_hits": 4096,
+          "max_result_bytes": 1048576
+        }
+      },
+      "result": {
+        "cost": {
+          "additional_source_identity_validation": true,
+          "build_byte_charge": 6968,
+          "built_points": 3,
+          "built_triangles": 1,
+          "cache_reused": false,
+          "item_tests": 0,
+          "retained_index_layout_bytes": 447,
+          "source_bytes": 312,
+          "triangulation_work_charge": 27,
+          "visited_nodes": 1,
+          "whole_snapshot_validated": true
+        },
+        "hits": {
+          "kind": "points_in_sphere",
+          "points": []
+        },
+        "mesh": "sha256:1155782018125ce293567c17df59dd3e3b7edab1c4bc34e41860ea2f0a0f3bec",
+        "profile": "mesh-local-spatial-v1",
+        "revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e"
+      }
+    },
+    {
+      "request": {
+        "version": 0,
+        "base_revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e",
+        "mesh": "sha256:7d9665a33f4e407677f4269627115d9f0899d3dc63af1301ec7fce416390df2d",
+        "query": {
+          "kind": "nearest_surface",
+          "max_distance_meters": 1.0,
+          "point": [
+            0.625,
+            0.375,
+            1.0
+          ]
+        },
+        "budget": {
+          "max_source_bytes": 8388608,
+          "max_build_bytes": 33554432,
+          "max_triangulation_work": 16777216,
+          "max_visited_nodes": 262144,
+          "max_item_tests": 131072,
+          "max_hits": 4096,
+          "max_result_bytes": 1048576
+        }
+      },
+      "result": {
+        "cost": {
+          "additional_source_identity_validation": true,
+          "build_byte_charge": 691080,
+          "built_points": 291,
+          "built_triangles": 512,
+          "cache_reused": false,
+          "item_tests": 4,
+          "retained_index_layout_bytes": 62303,
+          "source_bytes": 97591,
+          "triangulation_work_charge": 13824,
+          "visited_nodes": 15,
+          "whole_snapshot_validated": true
+        },
+        "hits": {
+          "exact_tied_triangles": 2,
+          "kind": "nearest_surface",
+          "surface": {
+            "barycentric": [
+              0.5,
+              0.5,
+              0.0
+            ],
+            "corners": [
+              "9007199254750066",
+              "9007199254750065",
+              "9007199254750064"
+            ],
+            "distance_meters": 1.0,
+            "face": "9007199254741684",
+            "geometric_normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "position_meters": [
+              0.625,
+              0.375,
+              0.0
+            ]
+          }
+        },
+        "mesh": "sha256:7d9665a33f4e407677f4269627115d9f0899d3dc63af1301ec7fce416390df2d",
+        "profile": "mesh-local-spatial-v1",
+        "revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e"
+      }
+    }
+  ],
+  "tested_native": {
+    "path": "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+    "sha256": "1ffbfd681b61133ca47c3c901ae56436920078504ed2df3f463af13ccc6650a8",
+    "bytes": 63542864
+  },
+  "old_client": {
+    "sha256": "9fa4c4fe23e45c1b910231ab41fc6416b9105ac93593ae292b63042430fedc01",
+    "error": "encoding",
+    "unchanged": true
+  },
+  "placement": {
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e",
+      "idempotency_key": "spatial-workflow-place-marker",
+      "max_added_bytes": 4194304,
+      "commands": [
+        {
+          "operation": "set_transform",
+          "entity": "00000000000000000000000000000004",
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  0.625,
+                  0.375,
+                  0.0
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "result": {
+      "receipt": {
+        "base_revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e",
+        "command_count": 1,
+        "delta_digest": "sha256:a72da0b710393d5e5ef5dd8e3c0de137bb86fc30a046d28124c21711f63cdfec",
+        "document_id": "000000000000000000000000000003d4",
+        "durable": true,
+        "revision": "sha256:d72fa829f1b9b976c0ddcfe6e6cbd39daac605e688aebbcd14506a0dd58132c7"
+      }
+    }
+  },
+  "document_id": "000000000000000000000000000003d4",
+  "initial_revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e",
+  "revision": "sha256:d72fa829f1b9b976c0ddcfe6e6cbd39daac605e688aebbcd14506a0dd58132c7",
+  "source": "sha256:7d9665a33f4e407677f4269627115d9f0899d3dc63af1301ec7fce416390df2d",
+  "conditioned_mesh": "sha256:fc1b2981697132b8323966daa9337a88b96af3de685e9295074186f1615dfdd8",
+  "queries_read_only": true,
+  "archive_recovery": true,
+  "restored_render_identical": true
+}

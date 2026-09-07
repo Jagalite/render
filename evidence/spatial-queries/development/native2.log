@@ -1,0 +1,27 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 18.71s
+     Running tests/spatial_queries.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/spatial_queries-2a0524b74fbab6f3)
+
+running 6 tests
+test sphere_boundary_loose_points_high_ids_and_empty_surfaces ... ok
+test analytic_surface_features_winding_and_inclusive_distance ... ok
+test read_only_agent_query_preserves_document_and_reuses_index ... ok
+test disconnected_nonmanifold_ties_and_invalid_sources ... ok
+test admission_cancellation_and_cache_are_atomic ... FAILED
+test grid_queries_match_independent_plane_and_point_enumeration ... ok
+
+failures:
+
+---- admission_cancellation_and_cache_are_atomic stdout ----
+
+thread 'admission_cancellation_and_cache_are_atomic' (7363292) panicked at crates/core/tests/spatial_queries.rs:227:50:
+called `Result::unwrap()` on an `Err` value: Error { code: "integrity", stage: "validation", message: "mesh digest mismatch", retryable: false, context: {} }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    admission_cancellation_and_cache_are_atomic
+
+test result: FAILED. 5 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.10s
+
+error: test failed, to rerun pass `-p render-core --test spatial_queries`

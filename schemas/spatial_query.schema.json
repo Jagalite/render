@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Mesh-local spatial query v0",
+  "description": "Read-only asset-local meters. Rust additionally validates content identity, topology, revisions, aggregate budgets and cancellation. New element IDs in responses are positive canonical decimal u64 strings.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": 0
+    },
+    "base_revision": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "mesh": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "query": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "points_in_sphere"
+            },
+            "center": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "number",
+                "minimum": -1000000000.0,
+                "maximum": 1000000000.0
+              }
+            },
+            "radius_meters": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000000000.0
+            }
+          },
+          "required": [
+            "kind",
+            "center",
+            "radius_meters"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "nearest_surface"
+            },
+            "point": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "number",
+                "minimum": -1000000000.0,
+                "maximum": 1000000000.0
+              }
+            },
+            "max_distance_meters": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000000000.0
+            }
+          },
+          "required": [
+            "kind",
+            "point",
+            "max_distance_meters"
+          ]
+        }
+      ]
+    },
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "max_source_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8388608
+        },
+        "max_build_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 33554432
+        },
+        "max_visited_nodes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 262144
+        },
+        "max_item_tests": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 131072
+        },
+        "max_hits": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4096
+        },
+        "max_result_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1048576
+        },
+        "max_triangulation_work": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 16777216
+        }
+      },
+      "required": [
+        "max_source_bytes",
+        "max_build_bytes",
+        "max_visited_nodes",
+        "max_item_tests",
+        "max_hits",
+        "max_result_bytes",
+        "max_triangulation_work"
+      ]
+    }
+  },
+  "required": [
+    "version",
+    "base_revision",
+    "mesh",
+    "query",
+    "budget"
+  ]
+}

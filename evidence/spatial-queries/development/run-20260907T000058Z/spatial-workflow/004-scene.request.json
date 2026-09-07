@@ -1,0 +1,182 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:ae09e2e01824254aeab311dd53b9371f9d5b29b9fb49fffc647e273f8a09e1b6",
+      "idempotency_key": "spatial-workflow-scene",
+      "max_added_bytes": 4194304,
+      "commands": [
+        {
+          "operation": "put_material",
+          "material": {
+            "id": "00000000000000000000000000000002",
+            "base_color": [
+              0.6,
+              0.7,
+              0.8
+            ],
+            "emission": [
+              0,
+              0,
+              0
+            ],
+            "roughness": 1,
+            "metallic": 0,
+            "texture": null
+          }
+        },
+        {
+          "operation": "put_material",
+          "material": {
+            "id": "00000000000000000000000000000003",
+            "base_color": [
+              0.9,
+              0.2,
+              0.1
+            ],
+            "emission": [
+              0,
+              0,
+              0
+            ],
+            "roughness": 1,
+            "metallic": 0,
+            "texture": null
+          }
+        },
+        {
+          "operation": "create_entity",
+          "entity": {
+            "id": "00000000000000000000000000000001",
+            "name": "Spatial fixture 1",
+            "parent": null,
+            "mesh": "sha256:7d9665a33f4e407677f4269627115d9f0899d3dc63af1301ec7fce416390df2d",
+            "material": "00000000000000000000000000000002",
+            "transform": {
+              "columns": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "operations": []
+            }
+          }
+        },
+        {
+          "operation": "create_entity",
+          "entity": {
+            "id": "00000000000000000000000000000004",
+            "name": "Spatial fixture 4",
+            "parent": null,
+            "mesh": null,
+            "material": "00000000000000000000000000000003",
+            "transform": {
+              "columns": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "operations": []
+            }
+          }
+        },
+        {
+          "operation": "create_box",
+          "entity": "00000000000000000000000000000004",
+          "min": [
+            -0.1,
+            -0.1,
+            0
+          ],
+          "max": [
+            0.1,
+            0.1,
+            0.2
+          ]
+        },
+        {
+          "operation": "set_render_settings",
+          "settings": {
+            "width": 16,
+            "height": 16,
+            "samples": 4,
+            "seed": 73,
+            "max_depth": 1,
+            "max_bytes": 16777216,
+            "environment": [
+              0.1,
+              0.1,
+              0.1
+            ],
+            "light": {
+              "position": [
+                2,
+                4,
+                3
+              ],
+              "intensity": [
+                32,
+                32,
+                32
+              ]
+            },
+            "camera": {
+              "position": [
+                0,
+                0,
+                7
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "up": [
+                0,
+                1,
+                0
+              ],
+              "vertical_fov_radians": 0.65
+            }
+          }
+        }
+      ]
+    }
+  }
+}

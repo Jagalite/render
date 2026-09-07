@@ -11,6 +11,13 @@ pub struct Operation {
 pub fn registry() -> Vec<Operation> {
     let mut operations = vec![
         Operation {
+            name: "query_geometry",
+            version: 0,
+            mutation: false,
+            effects: "query a revision-pinned mesh in asset-local meters with stable element IDs",
+            cancellation: "admission, bounded build phases, each visited node/item and before delivery",
+        },
+        Operation {
             name: "author_paint",
             version: 0,
             mutation: true,

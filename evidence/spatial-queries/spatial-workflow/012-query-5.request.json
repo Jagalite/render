@@ -1,0 +1,29 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "query_geometry",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e",
+      "mesh": "sha256:1155782018125ce293567c17df59dd3e3b7edab1c4bc34e41860ea2f0a0f3bec",
+      "query": {
+        "kind": "nearest_surface",
+        "max_distance_meters": 1e-80,
+        "point": [
+          3.5e-82,
+          3.5e-82,
+          1e-81
+        ]
+      },
+      "budget": {
+        "max_source_bytes": 8388608,
+        "max_build_bytes": 33554432,
+        "max_triangulation_work": 16777216,
+        "max_visited_nodes": 262144,
+        "max_item_tests": 131072,
+        "max_hits": 4096,
+        "max_result_bytes": 1048576
+      }
+    }
+  }
+}

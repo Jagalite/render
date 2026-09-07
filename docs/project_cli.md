@@ -183,3 +183,14 @@ version 17 compatibility, cancellation limits and the validated workflow.
 ordinary durable transactions and return source/output identities and resource
 reports. Layer/canvas setup and explicit image-to-material binding use `apply`. See
 [tiled painting](tiled_painting.md) for checkpointing, masks, color math and limits.
+
+## Revision-pinned spatial queries
+
+`query_geometry` is read-only and follows the same version-zero operation envelope.
+Its request pins `base_revision` and a retained `mesh` hash, with a `query` and an
+explicit `budget`. See [the spatial profile](spatial_queries.md) and
+`schemas/spatial_query.schema.json`. The sphere query returns stable point IDs;
+nearest surface returns face/corner IDs, barycentrics and local position/normal.
+Returned element IDs are decimal strings. Native CLI calls build a fresh derived
+index; the long-lived agent can reuse one. A caller places an object with an ordinary
+revision-checked `set_transform` transaction after interpreting the local hit.

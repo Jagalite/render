@@ -1,0 +1,48 @@
+{
+  "status": "failed",
+  "calls": [
+    {
+      "name": "init",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260906T233117Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260906T233117Z/spatial-workflow/000-init.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.9730295420013135,
+      "expected_error": null
+    },
+    {
+      "name": "empty",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260906T233117Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260906T233117Z/spatial-workflow/001-empty.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.008648625007481314,
+      "expected_error": null
+    },
+    {
+      "name": "source",
+      "command": [
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260906T233117Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260906T233117Z/spatial-workflow/002-source.request.json"
+      ],
+      "exit_code": 1,
+      "seconds": 0.013091957996948622,
+      "expected_error": null
+    }
+  ],
+  "queries": [],
+  "tested_native": {
+    "path": "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+    "sha256": "08a88f189d279e0c4f85eab832a384ee6529fbe038866e4f8ac7d4ec601072aa",
+    "bytes": 63524144
+  },
+  "error": "('source', '{\"code\":\"request\",\"stage\":\"validation\",\"message\":\"unsupported version or invalid request bounds\",\"retryable\":false,\"context\":{}}\\n')"
+}

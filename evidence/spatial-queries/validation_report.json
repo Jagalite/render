@@ -1,0 +1,1192 @@
+{
+  "status": "passed",
+  "scope": "macOS ARM64 CPU/Metal, Rust Wasm in Node, Chrome WebGPU/OPFS; Linux and Windows compile only",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7997150000010151,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 15.435244665990467,
+      "log": "logs/clippy.txt"
+    },
+    {
+      "name": "browser_clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "-p",
+        "render-web",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 11.612670709000668,
+      "log": "logs/browser_clippy.txt"
+    },
+    {
+      "name": "native_build",
+      "command": [
+        "cargo",
+        "build",
+        "-p",
+        "render-host",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 41.88084579199494,
+      "log": "logs/native_build.txt"
+    },
+    {
+      "name": "spatial_native",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "spatial_queries",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 6.172319458011771,
+      "log": "logs/spatial_native.txt"
+    },
+    {
+      "name": "spatial_workflow",
+      "command": [
+        "python3",
+        "scripts/spatial-queries-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 11.969670582999242,
+      "log": "logs/spatial_workflow.txt"
+    },
+    {
+      "name": "spatial_schema",
+      "command": [
+        "python3",
+        "scripts/validate-spatial-query-schema.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.15823116700630635,
+      "log": "logs/spatial_schema.txt"
+    },
+    {
+      "name": "browser_build",
+      "command": [
+        "sh",
+        "scripts/build-web.sh"
+      ],
+      "exit_code": 0,
+      "seconds": 142.76773733300797,
+      "log": "logs/browser_build.txt"
+    },
+    {
+      "name": "spatial_browser",
+      "command": [
+        "node",
+        "scripts/spatial-queries-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.3386062500067055,
+      "log": "logs/spatial_browser.txt"
+    },
+    {
+      "name": "spatial_cross",
+      "command": [
+        "python3",
+        "scripts/compare-spatial-queries.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3520415000093635,
+      "log": "logs/spatial_cross.txt"
+    },
+    {
+      "name": "gpu_update_native",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_geometry_updates",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 48.91090095799882,
+      "log": "logs/gpu_update_native.txt"
+    },
+    {
+      "name": "gpu_update_resource",
+      "command": [
+        "python3",
+        "scripts/measure-gpu-geometry-updates.py",
+        "artifacts/spatial-queries/run-20260907T001728Z"
+      ],
+      "exit_code": 0,
+      "seconds": 4.241612333993544,
+      "log": "logs/gpu_update_resource.txt"
+    },
+    {
+      "name": "gpu_update_browser",
+      "command": [
+        "node",
+        "scripts/gpu-geometry-updates-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/gpu-update-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.2448634159954963,
+      "log": "logs/gpu_update_browser.txt"
+    },
+    {
+      "name": "gpu_update_cross",
+      "command": [
+        "python3",
+        "scripts/compare-gpu-geometry-updates.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/gpu-update-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.12594108399935067,
+      "log": "logs/gpu_update_cross.txt"
+    },
+    {
+      "name": "srgb8_numeric_source",
+      "command": [
+        "python3",
+        "scripts/validate-srgb8-compat.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/srgb8_numeric_source.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6372579580056481,
+      "log": "logs/srgb8_numeric_source.txt"
+    },
+    {
+      "name": "mip_lod_numeric_source",
+      "command": [
+        "python3",
+        "scripts/validate-paint-mip-lod.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/mip_lod_numeric_source.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.10705908299132716,
+      "log": "logs/mip_lod_numeric_source.txt"
+    },
+    {
+      "name": "paint_native",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "tiled_painting",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 17.685857874996145,
+      "log": "logs/paint_native.txt"
+    },
+    {
+      "name": "independent_source_validation",
+      "command": [
+        "node",
+        "scripts/validate-gltf-fixtures.cjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/source-validation"
+      ],
+      "exit_code": 0,
+      "seconds": 0.4860735419933917,
+      "log": "logs/independent_source_validation.txt"
+    },
+    {
+      "name": "paint_workflow",
+      "command": [
+        "python3",
+        "scripts/tiled-painting-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 75.34411708299012,
+      "log": "logs/paint_workflow.txt"
+    },
+    {
+      "name": "paint_schema",
+      "command": [
+        "python3",
+        "scripts/validate-tiled-painting-schema.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3504222920018947,
+      "log": "logs/paint_schema.txt"
+    },
+    {
+      "name": "paint_browser",
+      "command": [
+        "node",
+        "scripts/tiled-painting-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.5894960419973359,
+      "log": "logs/paint_browser.txt"
+    },
+    {
+      "name": "paint_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-tiled-painting-browser.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.14898004100541584,
+      "log": "logs/paint_cross_platform.txt"
+    },
+    {
+      "name": "wasm_tests",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 328.89936558299814,
+      "log": "logs/wasm_tests.txt"
+    },
+    {
+      "name": "native_tests",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 322.05232004199934,
+      "log": "logs/native_tests.txt"
+    },
+    {
+      "name": "uv_workflow",
+      "command": [
+        "python3",
+        "scripts/uv-authoring-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 5.632691958991927,
+      "log": "logs/uv_workflow.txt"
+    },
+    {
+      "name": "uv_schema",
+      "command": [
+        "python3",
+        "scripts/validate-uv-authoring-schema.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.2748805830051424,
+      "log": "logs/uv_schema.txt"
+    },
+    {
+      "name": "uv_browser",
+      "command": [
+        "node",
+        "scripts/uv-authoring-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6257669580081711,
+      "log": "logs/uv_browser.txt"
+    },
+    {
+      "name": "uv_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-uv-authoring-browser.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07274695900559891,
+      "log": "logs/uv_cross_platform.txt"
+    },
+    {
+      "name": "blend_workflow",
+      "command": [
+        "python3",
+        "scripts/blend-static-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 66.65108716700342,
+      "log": "logs/blend_workflow.txt"
+    },
+    {
+      "name": "blend_reference",
+      "command": [
+        "python3",
+        "scripts/compare-blend-reference.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.10783895799249876,
+      "log": "logs/blend_reference.txt"
+    },
+    {
+      "name": "blend_schema",
+      "command": [
+        "python3",
+        "scripts/validate-blend-schema.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 172.5612875000079,
+      "log": "logs/blend_schema.txt"
+    },
+    {
+      "name": "blend_browser",
+      "command": [
+        "node",
+        "scripts/blend-static-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 7.917710666995845,
+      "log": "logs/blend_browser.txt"
+    },
+    {
+      "name": "blend_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-blend-browser.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0609042909927666,
+      "log": "logs/blend_cross_platform.txt"
+    },
+    {
+      "name": "gpu_dielectric",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_dielectric",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 11.790949249989353,
+      "log": "logs/gpu_dielectric.txt"
+    },
+    {
+      "name": "gpu_surfaces",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_surfaces",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 9.295839333994081,
+      "log": "logs/gpu_surfaces.txt"
+    },
+    {
+      "name": "secondary_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "secondary_textures_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 6.315982500003884,
+      "log": "logs/secondary_gpu.txt"
+    },
+    {
+      "name": "gpu_alpha",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_alpha",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 25.394536416992196,
+      "log": "logs/gpu_alpha.txt"
+    },
+    {
+      "name": "gltf_export_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gltf_export_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 5.958210291995783,
+      "log": "logs/gltf_export_gpu.txt"
+    },
+    {
+      "name": "vertex_colors_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "vertex_colors_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 5.8089414999994915,
+      "log": "logs/vertex_colors_gpu.txt"
+    },
+    {
+      "name": "named_uv_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "named_uv_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 1.8073478750011418,
+      "log": "logs/named_uv_gpu.txt"
+    },
+    {
+      "name": "morph_frame_regressions",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "morph_frames",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 11.43350475000625,
+      "log": "logs/morph_frame_regressions.txt"
+    },
+    {
+      "name": "morph_frame_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "morph_frames_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 3.6401487499970244,
+      "log": "logs/morph_frame_gpu.txt"
+    },
+    {
+      "name": "linux_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-unknown-linux-gnu",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 14.690983792010229,
+      "log": "logs/linux_check.txt"
+    },
+    {
+      "name": "windows_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-pc-windows-msvc",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 14.4587899580074,
+      "log": "logs/windows_check.txt"
+    },
+    {
+      "name": "camera_regression",
+      "command": [
+        "python3",
+        "scripts/alpha-camera-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/camera-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 24.970119583013002,
+      "log": "logs/camera_regression.txt"
+    },
+    {
+      "name": "dependency_audit",
+      "command": [
+        "python3",
+        "scripts/dependency-audit.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.451167708990397,
+      "log": "logs/dependency_audit.txt"
+    },
+    {
+      "name": "animated_regression",
+      "command": [
+        "python3",
+        "scripts/animated-gltf-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/animated-regression",
+        "--gpu"
+      ],
+      "exit_code": 0,
+      "seconds": 10.672385249999934,
+      "log": "logs/animated_regression.txt"
+    },
+    {
+      "name": "shutter_regression",
+      "command": [
+        "python3",
+        "scripts/gpu-shutter-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/shutter-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 11.536702249999507,
+      "log": "logs/shutter_regression.txt"
+    },
+    {
+      "name": "sparse_regression",
+      "command": [
+        "python3",
+        "scripts/sparse-gltf-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/sparse-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 19.5075272499962,
+      "log": "logs/sparse_regression.txt"
+    },
+    {
+      "name": "alpha_workflow",
+      "command": [
+        "python3",
+        "scripts/alpha-gltf-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/alpha-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 18.372538750001695,
+      "log": "logs/alpha_workflow.txt"
+    },
+    {
+      "name": "alpha_browser",
+      "command": [
+        "node",
+        "scripts/alpha-gltf-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/alpha-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 2.3544112500094343,
+      "log": "logs/alpha_browser.txt"
+    },
+    {
+      "name": "alpha_shutter_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/alpha-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 19.490157457999885,
+      "log": "logs/alpha_shutter_workflow.txt"
+    },
+    {
+      "name": "alpha_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/alpha-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 2.1324100000056205,
+      "log": "logs/alpha_shutter_browser.txt"
+    },
+    {
+      "name": "named_uv_regression",
+      "command": [
+        "python3",
+        "scripts/named-uv-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/named-uv-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 7.037199041995336,
+      "log": "logs/named_uv_regression.txt"
+    },
+    {
+      "name": "named_uv_browser",
+      "command": [
+        "node",
+        "scripts/named-uv-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/named-uv-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 1.9511484999966342,
+      "log": "logs/named_uv_browser.txt"
+    },
+    {
+      "name": "named_uv_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-named-uv-browser.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/named-uv-regression",
+        "artifacts/spatial-queries/run-20260907T001728Z/named_uv_cross_platform.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.22661075000360142,
+      "log": "logs/named_uv_cross_platform.txt"
+    },
+    {
+      "name": "morph_workflow",
+      "command": [
+        "python3",
+        "scripts/morph-frames-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/morph-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 12.914864374994067,
+      "log": "logs/morph_workflow.txt"
+    },
+    {
+      "name": "morph_browser",
+      "command": [
+        "node",
+        "scripts/morph-frames-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/morph-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 2.0491942499938887,
+      "log": "logs/morph_browser.txt"
+    },
+    {
+      "name": "vertex_color_workflow",
+      "command": [
+        "python3",
+        "scripts/vertex-colors-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/vertex-color-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 25.14771966599801,
+      "log": "logs/vertex_color_workflow.txt"
+    },
+    {
+      "name": "vertex_color_browser",
+      "command": [
+        "node",
+        "scripts/vertex-colors-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/vertex-color-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 2.4748006669979077,
+      "log": "logs/vertex_color_browser.txt"
+    },
+    {
+      "name": "export_workflow",
+      "command": [
+        "python3",
+        "scripts/gltf-export-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 81.95531325000047,
+      "log": "logs/export_workflow.txt"
+    },
+    {
+      "name": "export_schema",
+      "command": [
+        "python3",
+        "scripts/validate-gltf-export-schema.py",
+        "artifacts/spatial-queries/run-20260907T001728Z"
+      ],
+      "exit_code": 0,
+      "seconds": 5.95661341700179,
+      "log": "logs/export_schema.txt"
+    },
+    {
+      "name": "export_source_validation",
+      "command": [
+        "node",
+        "scripts/validate-exported-glbs.cjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.8430957080126973,
+      "log": "logs/export_source_validation.txt"
+    },
+    {
+      "name": "export_browser",
+      "command": [
+        "node",
+        "scripts/gltf-export-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 6.392796667001676,
+      "log": "logs/export_browser.txt"
+    },
+    {
+      "name": "secondary_workflow",
+      "command": [
+        "python3",
+        "scripts/secondary-textures-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/secondary-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 32.86268325000128,
+      "log": "logs/secondary_workflow.txt"
+    },
+    {
+      "name": "secondary_browser",
+      "command": [
+        "node",
+        "scripts/secondary-textures-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/secondary-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7099706249864539,
+      "log": "logs/secondary_browser.txt"
+    },
+    {
+      "name": "surface_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-surfaces-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/surface-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 24.568039833000512,
+      "log": "logs/surface_workflow.txt"
+    },
+    {
+      "name": "surface_browser",
+      "command": [
+        "node",
+        "scripts/gpu-surfaces-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/surface-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.959078749991022,
+      "log": "logs/surface_browser.txt"
+    },
+    {
+      "name": "conductor_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/conductor-shutter",
+        "{\"kind\": \"conductor\", \"eta\": [0.2, 0.9, 1.1], \"k\": [3, 2, 1.5]}"
+      ],
+      "exit_code": 0,
+      "seconds": 4.395693416998256,
+      "log": "logs/conductor_shutter.txt"
+    },
+    {
+      "name": "conductor_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/conductor-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5006279170047492,
+      "log": "logs/conductor_shutter_browser.txt"
+    },
+    {
+      "name": "coated_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/coated-shutter",
+        "{\"kind\": \"coated\", \"weight\": 0.7, \"ior\": 1.5, \"roughness\": 0.25}"
+      ],
+      "exit_code": 0,
+      "seconds": 4.0064013749943115,
+      "log": "logs/coated_shutter.txt"
+    },
+    {
+      "name": "coated_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/coated-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5203488749975804,
+      "log": "logs/coated_shutter_browser.txt"
+    },
+    {
+      "name": "dielectric_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-dielectric-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/dielectric-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 102.56753704100265,
+      "log": "logs/dielectric_workflow.txt"
+    },
+    {
+      "name": "dielectric_browser",
+      "command": [
+        "node",
+        "scripts/gpu-dielectric-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/dielectric-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.3376463750028051,
+      "log": "logs/dielectric_browser.txt"
+    },
+    {
+      "name": "dielectric_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/dielectric-shutter",
+        "{\"kind\": \"dielectric\", \"ior\": 1.5}"
+      ],
+      "exit_code": 0,
+      "seconds": 4.116379625003901,
+      "log": "logs/dielectric_shutter.txt"
+    },
+    {
+      "name": "dielectric_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/dielectric-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5162687920092139,
+      "log": "logs/dielectric_shutter_browser.txt"
+    },
+    {
+      "name": "volume_workflow",
+      "command": [
+        "python3",
+        "scripts/volume-import-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/volume-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 13.79539970800397,
+      "log": "logs/volume_workflow.txt"
+    },
+    {
+      "name": "volume_schema",
+      "command": [
+        "python3",
+        "scripts/validate-volume-import-schema.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/volume-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 7.859904209006345,
+      "log": "logs/volume_schema.txt"
+    },
+    {
+      "name": "volume_browser",
+      "command": [
+        "node",
+        "scripts/volume-import-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/volume-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8420006249943981,
+      "log": "logs/volume_browser.txt"
+    },
+    {
+      "name": "hair_workflow",
+      "command": [
+        "python3",
+        "scripts/hair-import-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/hair-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 10.891549834006582,
+      "log": "logs/hair_workflow.txt"
+    },
+    {
+      "name": "hair_schema",
+      "command": [
+        "python3",
+        "scripts/validate-hair-import-schema.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/hair-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.2905505410017213,
+      "log": "logs/hair_schema.txt"
+    },
+    {
+      "name": "hair_browser",
+      "command": [
+        "node",
+        "scripts/hair-import-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/hair-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5541054170025745,
+      "log": "logs/hair_browser.txt"
+    },
+    {
+      "name": "geometry_regression",
+      "command": [
+        "target/debug/render-host",
+        "geometry-workflow",
+        "artifacts/spatial-queries/run-20260907T001728Z/geometry-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6100789579941193,
+      "log": "logs/geometry_regression.txt"
+    },
+    {
+      "name": "groom_regression",
+      "command": [
+        "target/debug/render-host",
+        "groom-workflow",
+        "artifacts/spatial-queries/run-20260907T001728Z/groom-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.4955263330048183,
+      "log": "logs/groom_regression.txt"
+    },
+    {
+      "name": "curve_color_workflow",
+      "command": [
+        "python3",
+        "scripts/curve-colors-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 24.514358375003212,
+      "log": "logs/curve_color_workflow.txt"
+    },
+    {
+      "name": "curve_color_schema",
+      "command": [
+        "python3",
+        "scripts/validate-curve-colors-schema.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3628443749912549,
+      "log": "logs/curve_color_schema.txt"
+    },
+    {
+      "name": "curve_color_glb_validation",
+      "command": [
+        "node",
+        "scripts/validate-exported-glbs.cjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.11120675000711344,
+      "log": "logs/curve_color_glb_validation.txt"
+    },
+    {
+      "name": "curve_color_browser",
+      "command": [
+        "node",
+        "scripts/curve-colors-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.1187384590011789,
+      "log": "logs/curve_color_browser.txt"
+    },
+    {
+      "name": "media_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_media",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 7.473182875008206,
+      "log": "logs/media_gpu.txt"
+    },
+    {
+      "name": "media_exact_rays",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-gpu",
+        "--locked",
+        "--offline",
+        "half_open_unit_cells",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 1.3806455830053892,
+      "log": "logs/media_exact_rays.txt"
+    },
+    {
+      "name": "media_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-media-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/media-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 61.999725375004346,
+      "log": "logs/media_workflow.txt"
+    },
+    {
+      "name": "media_browser",
+      "command": [
+        "node",
+        "scripts/gpu-media-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/media-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 2.1077254170086235,
+      "log": "logs/media_browser.txt"
+    },
+    {
+      "name": "media_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-media-shutter-workflow.py",
+        "artifacts/spatial-queries/run-20260907T001728Z/media-shutter",
+        "artifacts/spatial-queries/run-20260907T001728Z/media-workflow/homogeneous-archive/document/document.json"
+      ],
+      "exit_code": 0,
+      "seconds": 5.566725166994729,
+      "log": "logs/media_shutter.txt"
+    },
+    {
+      "name": "media_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-media-shutter-browser.mjs",
+        "artifacts/spatial-queries/run-20260907T001728Z/media-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.39241458399919793,
+      "log": "logs/media_shutter_browser.txt"
+    }
+  ],
+  "build_environment": {
+    "CARGO_NET_OFFLINE": "true",
+    "CARGO_BUILD_JOBS": "2",
+    "CARGO_INCREMENTAL": "0",
+    "CARGO_PROFILE_DEV_DEBUG": "0",
+    "CARGO_PROFILE_TEST_DEBUG": "0",
+    "CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUNNER": "wasm-bindgen-test-runner",
+    "RENDER_TEST_ORIGIN": "http://127.0.0.1:8783"
+  },
+  "native_test_count": 227,
+  "wasm_test_count": 198
+}

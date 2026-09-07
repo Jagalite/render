@@ -1,0 +1,33 @@
+    Finished `test` profile [unoptimized] target(s) in 5.78s
+     Running tests/gpu_media.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/gpu_media-034ee0953378191f)
+
+running 4 tests
+homogeneous expected=[0.33934695, 0.43678793, 0.3541341] cpu=[0.33934695, 0.43678796, 0.3541341] gpu=[0.33934695, 0.43678796, 0.35413414]
+vacuum expected=[0.5, 0.9, 1.3] cpu=[0.5, 0.9, 1.3] gpu=[0.5, 0.9, 1.3]
+tiny expected=[0.5, 0.8999999, 1.29999] cpu=[0.5, 0.8999999, 1.2999899] gpu=[0.5, 0.89999986, 1.2999899]
+small-optical-depth expected=[0.4960579, 0.89303154, 1.2899457] cpu=[0.49605793, 0.8930316, 1.2899457] gpu=[0.49605793, 0.89303154, 1.2899457]
+series-boundary expected=[0.46181288, 0.833069, 1.2042702] cpu=[0.4618129, 0.8330691, 1.2042702] gpu=[0.46181288, 0.8330692, 1.2042706]
+opaque expected=[0.002, 0.0004, 6e-7] cpu=[0.002, 0.0004, 6e-7] gpu=[0.002, 0.00040000002, 6e-7]
+overlap expected=[0.36321205, 0.41353354, 0.30732626] cpu=[0.36321208, 0.4135335, 0.30732626] gpu=[0.36321208, 0.41353354, 0.3073263]
+8388608 cell-visit dispatch seconds 0.02401725
+ordered-overlap expected=[0.48667687, 0.4464399, 0.38225102] cpu=[0.48667687, 0.44643986, 0.38225102] gpu=[0.4866769, 0.4464399, 0.38225105]
+test media_maximum_cells_and_dispatch_work_execute ... ok
+sparse-hole expected=[0.36321205, 0.41353354, 0.30732626] cpu=[0.36321208, 0.4135335, 0.30732626] gpu=[0.3632121, 0.41353354, 0.3073263]
+metric-scale expected=[0.36321205, 0.41353354, 0.30732626] cpu=[0.36321208, 0.4135335, 0.30732626] gpu=[0.36321208, 0.41353354, 0.3073263]
+negative-scale expected=[0.33934695, 0.43678793, 0.3541341] cpu=[0.33934695, 0.43678796, 0.3541341] gpu=[0.33934695, 0.43678796, 0.35413414]
+sheared expected=[0.33934695, 0.43678793, 0.3541341] cpu=[0.33934695, 0.43678796, 0.3541341] gpu=[0.33934695, 0.43678796, 0.35413414]
+near-clip expected=[0.32211992, 0.46065307, 0.44715178] cpu=[0.32211992, 0.46065307, 0.44715178] gpu=[0.32211992, 0.46065307, 0.44715178]
+far-clip expected=[0.32211992, 0.46065307, 0.44715178] cpu=[0.32211992, 0.46065307, 0.44715178] gpu=[0.32211992, 0.46065307, 0.44715178]
+inside expected=[0.32211953, 0.46065366, 0.44715473] cpu=[0.32211953, 0.46065366, 0.44715473] gpu=[0.32211956, 0.46065366, 0.44715473]
+miss expected=[0.3, 0.5, 0.7] cpu=[0.3, 0.5, 0.7] gpu=[0.3, 0.5, 0.7]
+zero-density-emission expected=[0.5, 0.9, 1.3] cpu=[0.5, 0.9, 1.3] gpu=[0.5, 0.9, 1.3]
+surface depth1 RMSE 0.000000006454842057464112
+test analytic_sparse_media_matches_metal_and_preserves_cancellation ... ok
+surface depth2 RMSE 0.00000002221774547776048
+test media_progressive_cancellation_and_device_recovery ... ok
+surface depth4 RMSE 0.00000002436021323949634
+surface depth8 RMSE 0.00000002434862009318454
+test opaque_surfaces_light_shadows_and_finite_depth_media_match_reference ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.76s
+

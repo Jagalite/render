@@ -1,0 +1,367 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 1m 17s
+     Running unittests src/lib.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/render_core-781ee9d4d6aec6a9.wasm)
+Executing bindgen...                                                                                running 6 tests
+test blend::reader::tests::work_limits_cancellation_and_declarators_are_explicit ... ok
+test blend::reader::tests::pointer_width_endianness_layout_and_numeric_values_agree ... ok
+test blend::reader::tests::malformed_truncated_ambiguous_and_nonfinite_inputs_fail ... ok
+test uv::solver::rank_and_cancellation ... ok
+test uv::solver::pivot_order_does_not_change_solution ... ok
+test uv::solver::analytic_rectangular_least_squares ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.03s
+
+                                                       Running tests/agent_workflow.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/agent_workflow-92f76685651d5bff.wasm)
+Executing bindgen...                                                                                running 7 tests
+test three_restricted_variants_render_and_commit_durably_with_lost_ack_retry ... ok
+test restricted_variants_reject_scope_budget_conflicts_cancellation_and_unrendered_selection ... ok
+test real_glb_and_gltf_preserve_indexed_geometry_and_hierarchy ... ok
+test importer_unsigned_index_widths_multiple_primitives_and_invalid_transforms ... ok
+test importer_rejects_truncation_unsupported_features_and_invalid_accessors ... ok
+test durable_agent_retry_checks_target_and_retained_metadata ... ok
+test agent_admission_and_durable_dispatch_are_atomic_and_versioned ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.35s
+
+                                                       Running tests/alpha_gltf.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/alpha_gltf-aae37113ad17407e.wasm)
+Executing bindgen...                                                                                running 7 tests
+test initial_perspective_near_clip_is_not_replaced_by_continuation_epsilon ... ok
+test imported_linear_alpha_mask_blend_and_opaque_have_analytic_coverage ... ok
+test exhausted_alpha_camera_interval_with_media_returns_environment ... ok
+test alpha_layers_and_single_double_sided_backfaces_preserve_coverage ... ok
+test alpha_invalid_inputs_and_failed_transactions_leave_document_unchanged ... ok
+test alpha_factor_cutoff_boundaries_and_defaults_are_preserved ... ok
+test alpha_continuation_preserves_camera_clip_and_orthographic_primary_depth ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 filtered out; finished in 3.28s
+
+                                                       Running tests/alpha_occlusion.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/alpha_occlusion-9d7b146903974e64.wasm)
+Executing bindgen...                                                                                running 2 tests
+test principled_mask_and_blend_keep_occlusion_after_coverage_admission ... ok
+test extended_surface_occlusion_scales_only_indirect_transport ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 filtered out; finished in 1.94s
+
+                                                       Running tests/animated_gltf.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/animated_gltf-6ff8f523a71a47bf.wasm)
+Executing bindgen...                                                                                running 5 tests
+test skin_specific_inverse_binds_defaults_and_multiple_imports_are_preserved ... ok
+test malformed_and_unsupported_animation_inputs_fail_without_publication ... ok
+test imported_character_matches_analytic_skin_morph_and_absolute_channels ... ok
+test external_khronos_character_imports_and_renders_at_random_times ... ok
+test absolute_nonuniform_scale_cubic_quaternions_and_vector_morph_channels ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.44s
+
+                                                       Running tests/animation.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/animation-0ad131a65bae9cfe.wasm)
+Executing bindgen...                                                                                running 8 tests
+test weighted_affine_skinning_and_morph_have_independent_numeric_expectations ... ok
+test shutter_sequence_pinned_revisions_partial_output_and_agent_preview ... ok
+test sequence_preflights_all_exact_times_and_rejects_invalid_dimensions_without_overflow ... ok
+test rational_time_and_interpolation_preserve_authored_modes ... ok
+test quaternion_layer_schema_gate_and_transaction_upgrade ... ok
+test clip_random_access_retime_conflicts_and_cancellation ... ok
+test character_skin_morph_transaction_random_access_and_native_state_recovery ... ok
+test bind_affine_scale_shear_and_two_bone_solver_diagnostics ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 filtered out; finished in 1.70s
+
+                                                       Running tests/blend_static.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/blend_static-d842b712ed5f24b6.wasm)
+Executing bindgen...                                                                                running 9 tests
+test typed_source_transactions_permissions_versions_and_durability ... ok
+test source_asset_count_and_byte_limits_are_transactional ... ok
+test shared_mesh_instances_do_not_expand_asset_commands_or_geometry_builds ... ok
+test public_agent_import_export_cancellation_and_invalid_wire_are_atomic ... ok
+test metric_units_authored_rotations_reflections_and_orthographic_lens ... ok
+test invalid_source_parameters_do_not_hide_behind_positive_ratios_or_zero_power ... ok
+test hostile_links_dependencies_numeric_and_cancellation_fail_before_commands ... ok
+test distinct_material_blocks_cannot_alias_one_native_identity ... ok
+test analytic_scene_hierarchy_uv_camera_light_and_source_roundtrip ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 filtered out; finished in 1.78s
+
+                                                       Running tests/conformance.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/conformance-15c8b429a4cc337b.wasm)
+Executing bindgen...                                                                                running 31 tests
+test unsupported_scattering_is_diagnosed ... ok
+test triangle_bvh_and_parallel_slab_analytic ... ok
+test transactions_are_atomic_and_revision_checked ... ok
+test staged_upload_permissions_checksums_and_budget ... ok
+test snapshots_copy_only_changed_entity_chunk ... ok
+test shared_browser_suite ... ok
+test retries_wire_permissions_and_budgets ... ok
+test renderer_reuses_geometry_after_transform ... ok
+test render_reproducibility_and_color_boundaries ... ok
+test radial_nonmanifold_and_generation_safety ... ok
+test prepared_noop_candidates_cannot_overfill_retention ... ok
+test ordered_transform_channels_and_external_texture ... ok
+test obj_and_gltf_profiles_roundtrip ... ok
+test negative_shear_parent_and_layer_semantics ... ok
+test mesh_preserves_seams_and_loose_elements ... ok
+test malformed_topology_rejected ... ok
+test later_layer_restores_hidden_geometry ... ok
+test journal_sequence_is_checked ... ok
+test jobs_events_cancellation_and_recovery ... ok
+test identity_and_rational_time ... ok
+test foreign_edit_handle_and_hostile_accessor_are_rejected ... ok
+test empty_scene_environment_is_analytic ... ok
+test durable_retry_publishes_to_the_requested_store ... ok
+test durable_host_metadata_cannot_be_overwritten_by_stale_snapshot ... ok
+test durable_failure_quota_recovery_and_idempotency ... ok
+test diffuse_plane_radiance_matches_analytic_solution ... ok
+test diffuse_energy_pdf_and_sample_mean ... ok
+test concave_polygon_area_and_degeneracy ... ok
+test canonical_order_independent_of_table_layout ... ok
+test cancelled_jobs_release_queue_capacity_and_retries_preserve_events ... ok
+test binary_mesh_chunks_preserve_precision_and_reject_truncation ... ok
+
+test result: ok. 31 passed; 0 failed; 0 ignored; 0 filtered out; finished in 7.22s
+
+                                                       Running tests/curve_colors.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/curve_colors-e635087f04c8f00b.wasm)
+Executing bindgen...                                                                                running 3 tests
+test polyline_midpoint_radius_subdivision_rings_caps_and_missing_white ... ok
+test groom_children_preserve_guide_colors_and_version_boundary ... ok
+test color_validation_schema_transactions_and_recovery ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.14s
+
+                                                       Running tests/curves.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/curves-096a71b6857bebde.wasm)
+Executing bindgen...                                                                                running 4 tests
+test spline_basis_and_rational_knot_insertion_match_analytic_geometry ... ok
+test generated_tubes_and_point_spheres_are_closed_and_outward ... ok
+test curve_failures_budgets_cancellation_and_schema_versions ... ok
+test authored_geometry_transactions_recovery_visibility_and_render ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.27s
+
+                                                       Running tests/dielectric_interfaces.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/dielectric_interfaces-e4b222bd4f3c94d6.wasm)
+Executing bindgen...                                                                                running 1 test
+test analytic_ideal_interfaces_snell_tir_frames_and_mirrors_survive_recovery ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.37s
+
+                                                       Running tests/displacement.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/displacement-8d6409819f1451fa.wasm)
+Executing bindgen...                                                                                running 3 tests
+test surface_displacement_cache_transactions_and_recovery ... ok
+test displacement_metric_height_subdivision_convergence_and_limits ... ok
+test displacement_loose_data_and_root_evaluation_cancellation ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.32s
+
+                                                       Running tests/gltf_export.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/gltf_export-62af0fedd16a597d.wasm)
+Executing bindgen...                                                                                running 7 tests
+test precision_policy_measures_world_error_and_rejects_shear_or_collapsed_output ... ok
+test persistence_layout_cannot_change_export_order_or_bytes ... ok
+test named_uv_color_alpha_and_sampler_semantics_roundtrip_through_glb ... ok
+test local_frames_and_mesh_sharing_survive_nonuniform_and_reflected_transforms ... ok
+test export_public_operation_rejects_stale_cancel_budgets_and_unsupported_shading ... ok
+test evaluated_morph_frames_and_displacement_export_the_selected_surface ... ok
+test agent_export_is_the_same_pinned_read_only_rust_operation ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 filtered out; finished in 1.03s
+
+                                                       Running tests/gpu_media_reference.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/gpu_media_reference-c8f0052a2dd938a4.wasm)
+Executing bindgen...                                                                                running 1 test
+test analytic_sparse_emission_extinction_camera_and_affine_corpus ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.10s
+
+                                                       Running tests/groom.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/groom-0c5330eb881b0801.wasm)
+Executing bindgen...                                                                                running 2 tests
+test groom_root_topology_failures_permissions_cancellation_and_budgets ... ok
+test groom_authored_children_deformation_cache_visibility_and_roundtrip ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.40s
+
+                                                       Running tests/hair_colors.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/hair_colors-b542334f0a5eb14e.wasm)
+Executing bindgen...                                                                                running 2 tests
+test explicit_mode_preserves_controls_alpha_precision_and_opaque_branch ... ok
+test colored_import_agent_failures_and_source_unit_validation ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.15s
+
+                                                       Running tests/hair_import.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/hair_import-83320d2fdb9213d6.wasm)
+Executing bindgen...                                                                                running 3 tests
+test transactions_permissions_stale_cancel_durable_recovery_and_geometry ... ok
+test malformed_unsupported_and_bounded_sweep_failures ... ok
+test endian_defaults_arrays_units_materials_and_native_geometry_oracle ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 filtered out; finished in 2.01s
+
+                                                       Running tests/modeling.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/modeling-c1c9b63f1d78df87.wasm)
+Executing bindgen...                                                                                running 6 tests
+test subdivision_mirror_array_solidify_and_box_csg_numeric ... ok
+test procedural_groups_fields_direct_parity_bake_recovery_and_stale_edits ... ok
+test primitives_extrude_inset_split_weld_and_correspondence ... ok
+test direct_modeling_transactions_and_field_cycle_domain_resource_diagnostics ... ok
+test bridge_dissolve_attribute_transfer_invalid_selection_budget_and_cancel ... ok
+test box_operators_reject_inward_shells ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.22s
+
+                                                       Running tests/morph_frames.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/morph_frames-27c68da6169eaf20.wasm)
+Executing bindgen...                                                                                running 6 tests
+test native_corner_direction_offsets_preserve_seam_domain_and_stable_ids ... ok
+test morph_reflection_and_singular_blends_are_explicit ... ok
+test morph_frame_versions_invalid_edits_zero_directions_and_cancellation_are_atomic ... ok
+test morph_frame_import_rejects_missing_base_unknown_semantics_and_bad_counts ... ok
+test morph_directions_and_affine_skin_match_analytic_frames_and_recovery ... ok
+test animation_input_bounds_are_required_and_match_decoded_endpoints ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.42s
+
+                                                       Running tests/multibounce.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/multibounce-d88acc9763125aea.wasm)
+Executing bindgen...                                                                                running 3 tests
+test rough_metal_indirect_emitter_matches_closed_form ... ok
+test escape_is_counted_once_and_multibounce_operations_reject_invalid_cancelled_stale ... ok
+test diffuse_cavity_matches_finite_geometric_series_and_mixed_paths_continue ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.95s
+
+                                                       Running tests/named_uv.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/named_uv-acc8957420850f44.wasm)
+Executing bindgen...                                                                                running 7 tests
+test source_indexed_sets_reject_gaps_missing_zero_and_noncanonical_suffixes ... ok
+test named_uv_primary_footprint_selects_its_own_mip ... ok
+test named_uv_material_roles_and_normal_frame_match_independent_samples ... ok
+test named_uv_displacement_preserves_coordinates_and_ids ... ok
+test named_uv_alpha_and_bake_follow_the_material_selector ... ok
+test missing_uv_sets_bad_selectors_and_old_versions_fail_atomically ... ok
+test geometry_export_reports_each_omitted_uv_set ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.22s
+
+                                                       Running tests/products.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/products-40c20357f0a226e2.wasm)
+Executing bindgen...                                                                                running 4 tests
+test world_normal_bake_tracks_reflected_winding ... ok
+test denoiser_preserves_constant_regions_and_object_edges_reduces_variance ... ok
+test color_profiles_numeric_white_primaries_and_signed_roundtrip ... ok
+test authored_views_passes_bakes_roundtrip_invalid_atlas_and_stale_requests ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.27s
+
+                                                       Running tests/scattering.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/scattering-d1ef83bac98d2915.wasm)
+Executing bindgen...                                                                                running 4 tests
+test dielectric_snell_fresnel_and_total_internal_reflection ... ok
+test dielectric_closed_interface_furnace_and_mixed_media_integration ... ok
+test coated_conductor_reciprocity_furnace_and_pdf_sampling ... ok
+test alpha_coverage_and_ideal_glass_render_analytic_environment ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.92s
+
+                                                       Running tests/secondary_textures.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/secondary_textures-a4941e8195a55e76.wasm)
+Executing bindgen...                                                                                running 3 tests
+test secondary_only_emitter_is_invariant_to_minification_filter_in_all_surface_models ... ok
+test discarded_primary_alpha_does_not_turn_camera_footprints_into_secondary_footprints ... ok
+test directly_visible_emitter_retains_primary_minification_and_cancel_budget_checks ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.57s
+
+                                                       Running tests/sparse_gltf.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/sparse_gltf-60974066215aca83.wasm)
+Executing bindgen...                                                                                running 3 tests
+test sparse_offsets_indices_counts_extensions_and_normalized_roles_reject_atomically ... ok
+test sparse_dense_and_normalized_uv_inputs_preserve_analytic_animation_and_rendering ... ok
+test missing_base_can_represent_zero_morph_and_vertex_offsets_require_four_byte_alignment ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.45s
+
+                                                       Running tests/spatial_queries.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/spatial_queries-868caf952c864ede.wasm)
+Executing bindgen...                                                                                running 6 tests
+test sphere_boundary_loose_points_high_ids_and_empty_surfaces ... ok
+test read_only_agent_query_preserves_document_and_reuses_index ... ok
+test grid_queries_match_independent_plane_and_point_enumeration ... ok
+test disconnected_nonmanifold_ties_and_invalid_sources ... ok
+test analytic_surface_features_winding_and_inclusive_distance ... ok
+test admission_cancellation_and_cache_are_atomic ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 filtered out; finished in 1.15s
+
+                                                       Running tests/static_pbr.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/static_pbr-268e2f383871f983.wasm)
+Executing bindgen...                                                                                running 5 tests
+test tangent_handedness_inverse_transpose_culling_and_jpeg_workflow ... ok
+test static_pbr_transaction_roundtrip_render_and_failures ... ok
+test ggx_analytic_reciprocity_energy_and_sampling ... ok
+test encoded_images_roles_wrap_filters_and_mips ... ok
+test authored_camera_selection_clipping_and_protection ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.70s
+
+                                                       Running tests/surface_limits.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/surface_limits-fead2ca611ae50f6.wasm)
+Executing bindgen...                                                                                running 2 tests
+test zero_weight_coat_preserves_the_complete_base_sampling_distribution ... ok
+test optical_boundaries_have_independent_normal_incidence_values ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.01s
+
+                                                       Running tests/tiled_painting.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/tiled_painting-9c1fd6f154189a64.wasm)
+Executing bindgen...                                                                                running 16 tests
+test tile_encoding_is_explicit_and_rejects_invalid_payloads ... ok
+test stroke_checkpoint_replay_matches_one_shot_and_preserves_distant_tiles ... ok
+test srgb8_image_transfer_preserves_native_oracle_and_bounds_analytic_error ... ok
+test source_over_erase_and_mask_match_independent_alpha_equations ... ok
+test paint_publication_denials_stale_inputs_and_all_preparation_cancellation_are_atomic ... ok
+test ordinary_transactions_retry_bake_recover_and_undo_retained_canvases ... ok
+test mip_selection_matches_native_footprints_and_analytic_constant_levels ... ok
+test layer_order_visibility_and_opacity_affect_real_composite ... ok
+test hostile_parameters_strict_fields_and_retained_resource_caps_reject ... ok
+test edge_padding_references_layer_ids_and_caps_are_validated ... ok
+test decimal_segment_endpoints_do_not_receive_a_duplicate_opacity_dab ... ok
+test cancellation_at_every_observed_checkpoint_keeps_sources_immutable ... ok
+test brush_coverage_clipping_pressure_and_work_are_bounded ... ok
+test bake_uses_explicit_color_role_and_reports_premultiplied_error ... ok
+test bake_retry_identity_includes_canvas_and_source_even_for_identical_pixels ... ok
+test agent_paint_and_bake_use_durable_publication_and_late_cancellation ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 filtered out; finished in 1.51s
+
+                                                       Running tests/uv_authoring.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/uv_authoring-c2dff90accfd8af3.wasm)
+Executing bindgen...                                                                                running 15 tests
+test transactions_preserve_instances_multiple_sets_and_retry_identity ... ok
+test stale_topology_and_retained_asset_budget_reject_atomically ... ok
+test scale_normalization_and_named_set_limit_are_explicit ... ok
+test public_agent_uv_workflow_checks_permission_cancellation_and_durability ... ok
+test planar_and_developable_charts_match_independent_coordinates ... ok
+test nondevelopable_disk_has_the_analytic_symmetric_interior_solution ... ok
+test named_sets_keep_legacy_default_and_version_the_explicit_metadata ... ok
+test invalid_constraints_budgets_and_cancellation_are_bounded ... ok
+test fully_pinned_flips_and_global_overlaps_reject ... ok
+test failed_publication_permissions_stale_selection_and_cancellation_are_atomic ... ok
+test evaluation_and_interchange_keep_the_explicit_default_before_other_names ... ok
+test evaluated_animation_keeps_authored_uv_constraints_on_the_source_only ... ok
+test closed_surfaces_need_seams_and_keep_other_attributes ... ok
+test boundary_touch_and_authored_packing_frames_reject ... ok
+test atlas_packing_is_bounded_deterministic_and_pin_explicit ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.97s
+
+                                                       Running tests/vertex_colors.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/vertex_colors-c65d64643ea6bcea.wasm)
+Executing bindgen...                                                                                running 6 tests
+test vertex_alpha_multiplies_factor_and_texture_for_mask_blend_only ... ok
+test source_colors_clamp_before_interpolation_and_reject_malformed_accessors ... ok
+test native_color_validation_versions_transactions_and_profile_boundaries ... ok
+test linear_rgba_interpolation_shared_material_and_archive_are_exact ... ok
+test float_normalized_sparse_colors_agree_and_rgb_defaults_alpha_to_one ... ok
+test colors_survive_displacement_modeling_and_bake_without_tinting_emission ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.67s
+
+                                                       Running tests/volume_import.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/volume_import-bf17dcde40e56543.wasm)
+Executing bindgen...                                                                                running 3 tests
+test transactional_import_permissions_retry_stale_cancel_and_durable_recovery ... ok
+test malformed_unsupported_policy_budget_and_cancellation ... ok
+test exact_axes_sparse_empty_units_and_analytic_transport ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.41s
+
+                                                       Running tests/volumes.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/wasm32-unknown-unknown/debug/deps/volumes-18270b38b862cced.wasm)
+Executing bindgen...                                                                                running 4 tests
+test volume_document_roundtrip_transactions_visibility_and_render ... ok
+test phase_normalization_and_single_scatter_quadrature_convergence ... ok
+test media_invalid_input_budget_and_cancellation ... ok
+test beer_emission_overlap_scale_and_sparse_boundaries ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.58s
+
+                                                     Doc-tests render_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+

@@ -28,6 +28,9 @@ pub struct Edits {
 #[serde(tag = "method", rename_all = "snake_case", deny_unknown_fields)]
 pub enum Operation {
     Inspect,
+    QueryGeometry {
+        request: geometry_query::Request,
+    },
     AuthorPaint {
         request: painting::Request,
     },
@@ -165,6 +168,7 @@ struct Branch {
 pub struct Session {
     document: Document,
     branches: BTreeMap<String, Branch>,
+    spatial_queries: geometry_query::Cache,
 }
 /// Includes geometry, hierarchy, instances, material assignments, layers, camera,
 /// textures and BRDF profile. Only color/emission and lighting are removed.
@@ -216,6 +220,7 @@ impl Session {
         Self {
             document,
             branches: BTreeMap::new(),
+            spatial_queries: geometry_query::Cache::default(),
         }
     }
     pub fn document(&self) -> &Document {
@@ -483,6 +488,11 @@ impl Session {
         }
         use Operation::*;
         match request.operation {
+            QueryGeometry { request } => Ok(serde_json::to_value(self.spatial_queries.query(
+                self.document.snapshot(),
+                &request,
+                &mut cancelled,
+            )?)?),
             AuthorPaint { request } => {
                 let prepared =
                     painting::prepare(&self.document, principal, &request, &mut cancelled)?;
@@ -961,6 +971,7 @@ impl Session {
 /// Stable names/versions and effects are reviewed independently of Session layout.
 pub fn registry() -> Vec<crate::api::Operation> {
     [
+        ("agent.query_geometry",false,"read-only stable-ID sphere or nearest-surface queries on a pinned local mesh asset","admission, bounded build phases, every visited node/item and before cache publication"),
         ("agent.import_blend",true,"bounded uncompressed Blender293 static scene with exact inert source preservation and explicit material/point-light approximations","decode, evaluation and before atomic publication; synchronous browser dispatch"),
         ("agent.export_source",false,"export exact original source bytes at a pinned revision; does not apply native edits to source","before source access and delivery"),
         ("agent.import_hair",true,"HAIR polylines with explicit byte order, units, thickness, uniform-per-strand appearance or explicit linear_rgba_f32 controls, and bounded native sweep; 4 MiB input","decode, sweep evaluation and before atomic publication; synchronous browser dispatch"),

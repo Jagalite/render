@@ -1,0 +1,425 @@
+{
+  "scope": "Portable build charges and query traversal are separate from global document validation/hash costs. Actual retained index layout excludes source, Arc allocation headers and allocator overhead. CLI process peaks include project loading and global validation.",
+  "observations": [
+    {
+      "query": {
+        "kind": "nearest_surface",
+        "max_distance_meters": 1.0,
+        "point": [
+          0.625,
+          0.375,
+          1.0
+        ]
+      },
+      "native": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 691080,
+        "built_points": 291,
+        "built_triangles": 512,
+        "cache_reused": false,
+        "item_tests": 4,
+        "retained_index_layout_bytes": 62303,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 15,
+        "whole_snapshot_validated": true
+      },
+      "browser": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 691080,
+        "built_points": 291,
+        "built_triangles": 512,
+        "cache_reused": false,
+        "item_tests": 4,
+        "retained_index_layout_bytes": 44099,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 15,
+        "whole_snapshot_validated": true
+      }
+    },
+    {
+      "query": {
+        "center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "kind": "points_in_sphere",
+        "radius_meters": 0.0
+      },
+      "native": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 691080,
+        "built_points": 291,
+        "built_triangles": 512,
+        "cache_reused": false,
+        "item_tests": 6,
+        "retained_index_layout_bytes": 62303,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 27,
+        "whole_snapshot_validated": true
+      },
+      "browser": {
+        "additional_source_identity_validation": false,
+        "build_byte_charge": 691080,
+        "built_points": 0,
+        "built_triangles": 0,
+        "cache_reused": true,
+        "item_tests": 6,
+        "retained_index_layout_bytes": 44099,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 27,
+        "whole_snapshot_validated": true
+      }
+    },
+    {
+      "query": {
+        "center": [
+          0.5,
+          0.0,
+          0.0
+        ],
+        "kind": "points_in_sphere",
+        "radius_meters": 0.5
+      },
+      "native": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 691080,
+        "built_points": 291,
+        "built_triangles": 512,
+        "cache_reused": false,
+        "item_tests": 28,
+        "retained_index_layout_bytes": 62303,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 53,
+        "whole_snapshot_validated": true
+      },
+      "browser": {
+        "additional_source_identity_validation": false,
+        "build_byte_charge": 691080,
+        "built_points": 0,
+        "built_triangles": 0,
+        "cache_reused": true,
+        "item_tests": 28,
+        "retained_index_layout_bytes": 44099,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 53,
+        "whole_snapshot_validated": true
+      }
+    },
+    {
+      "query": {
+        "kind": "nearest_surface",
+        "max_distance_meters": 2.0,
+        "point": [
+          3.0,
+          3.0,
+          1.0
+        ]
+      },
+      "native": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 691080,
+        "built_points": 291,
+        "built_triangles": 512,
+        "cache_reused": false,
+        "item_tests": 4,
+        "retained_index_layout_bytes": 62303,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 15,
+        "whole_snapshot_validated": true
+      },
+      "browser": {
+        "additional_source_identity_validation": false,
+        "build_byte_charge": 691080,
+        "built_points": 0,
+        "built_triangles": 0,
+        "cache_reused": true,
+        "item_tests": 4,
+        "retained_index_layout_bytes": 44099,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 15,
+        "whole_snapshot_validated": true
+      }
+    },
+    {
+      "query": {
+        "kind": "nearest_surface",
+        "max_distance_meters": 0.5,
+        "point": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "native": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 691080,
+        "built_points": 291,
+        "built_triangles": 512,
+        "cache_reused": false,
+        "item_tests": 0,
+        "retained_index_layout_bytes": 62303,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 1,
+        "whole_snapshot_validated": true
+      },
+      "browser": {
+        "additional_source_identity_validation": false,
+        "build_byte_charge": 691080,
+        "built_points": 0,
+        "built_triangles": 0,
+        "cache_reused": true,
+        "item_tests": 0,
+        "retained_index_layout_bytes": 44099,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 1,
+        "whole_snapshot_validated": true
+      }
+    },
+    {
+      "query": {
+        "kind": "nearest_surface",
+        "max_distance_meters": 1e-80,
+        "point": [
+          3.5e-82,
+          3.5e-82,
+          1e-81
+        ]
+      },
+      "native": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 6968,
+        "built_points": 3,
+        "built_triangles": 1,
+        "cache_reused": false,
+        "item_tests": 1,
+        "retained_index_layout_bytes": 447,
+        "source_bytes": 312,
+        "triangulation_work_charge": 27,
+        "visited_nodes": 1,
+        "whole_snapshot_validated": true
+      },
+      "browser": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 6968,
+        "built_points": 3,
+        "built_triangles": 1,
+        "cache_reused": false,
+        "item_tests": 1,
+        "retained_index_layout_bytes": 327,
+        "source_bytes": 312,
+        "triangulation_work_charge": 27,
+        "visited_nodes": 1,
+        "whole_snapshot_validated": true
+      }
+    },
+    {
+      "query": {
+        "center": [
+          0,
+          0,
+          1e-200
+        ],
+        "kind": "points_in_sphere",
+        "radius_meters": 0
+      },
+      "native": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 6968,
+        "built_points": 3,
+        "built_triangles": 1,
+        "cache_reused": false,
+        "item_tests": 0,
+        "retained_index_layout_bytes": 447,
+        "source_bytes": 312,
+        "triangulation_work_charge": 27,
+        "visited_nodes": 1,
+        "whole_snapshot_validated": true
+      },
+      "browser": {
+        "additional_source_identity_validation": false,
+        "build_byte_charge": 6968,
+        "built_points": 0,
+        "built_triangles": 0,
+        "cache_reused": true,
+        "item_tests": 0,
+        "retained_index_layout_bytes": 327,
+        "source_bytes": 312,
+        "triangulation_work_charge": 27,
+        "visited_nodes": 1,
+        "whole_snapshot_validated": true
+      }
+    },
+    {
+      "query": {
+        "kind": "nearest_surface",
+        "max_distance_meters": 1.0,
+        "point": [
+          0.625,
+          0.375,
+          1.0
+        ]
+      },
+      "native": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 691080,
+        "built_points": 291,
+        "built_triangles": 512,
+        "cache_reused": false,
+        "item_tests": 4,
+        "retained_index_layout_bytes": 62303,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 15,
+        "whole_snapshot_validated": true
+      },
+      "browser": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 691080,
+        "built_points": 291,
+        "built_triangles": 512,
+        "cache_reused": false,
+        "item_tests": 4,
+        "retained_index_layout_bytes": 44099,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 15,
+        "whole_snapshot_validated": true
+      }
+    }
+  ],
+  "processes": [
+    {
+      "name": "query-0",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/007-query-0.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.21013724998920225,
+      "expected_error": null,
+      "maximum_resident_bytes": 24952832
+    },
+    {
+      "name": "query-1",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/008-query-1.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.22535712498938665,
+      "expected_error": null,
+      "maximum_resident_bytes": 24723456
+    },
+    {
+      "name": "query-2",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/009-query-2.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.2002830840065144,
+      "expected_error": null,
+      "maximum_resident_bytes": 24838144
+    },
+    {
+      "name": "query-3",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/010-query-3.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.24299225000140723,
+      "expected_error": null,
+      "maximum_resident_bytes": 24969216
+    },
+    {
+      "name": "query-4",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/011-query-4.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.20729966700309888,
+      "expected_error": null,
+      "maximum_resident_bytes": 24920064
+    },
+    {
+      "name": "query-5",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/012-query-5.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.18669225000485312,
+      "expected_error": null,
+      "maximum_resident_bytes": 24510464
+    },
+    {
+      "name": "query-6",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/013-query-6.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1834803749952698,
+      "expected_error": null,
+      "maximum_resident_bytes": 24330240
+    },
+    {
+      "name": "query-7",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/run-20260907T001728Z/spatial-workflow/014-query-7.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.20490670800791122,
+      "expected_error": null,
+      "maximum_resident_bytes": 24985600
+    }
+  ],
+  "initial_document_bytes": 203149,
+  "final_document_bytes": 204343
+}

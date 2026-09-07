@@ -1,0 +1,24 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 13.62s
+     Running tests/tiled_painting.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/tiled_painting-3c515ee7a9110d79)
+
+running 16 tests
+test edge_padding_references_layer_ids_and_caps_are_validated ... ok
+test bake_uses_explicit_color_role_and_reports_premultiplied_error ... ok
+test brush_coverage_clipping_pressure_and_work_are_bounded ... ok
+test mip_selection_matches_native_footprints_and_analytic_constant_levels ... ok
+test decimal_segment_endpoints_do_not_receive_a_duplicate_opacity_dab ... ok
+test hostile_parameters_strict_fields_and_retained_resource_caps_reject ... ok
+test srgb8_image_transfer_preserves_native_oracle_and_bounds_analytic_error ... ok
+test layer_order_visibility_and_opacity_affect_real_composite ... ok
+test tile_encoding_is_explicit_and_rejects_invalid_payloads ... ok
+test bake_retry_identity_includes_canvas_and_source_even_for_identical_pixels ... ok
+test stroke_checkpoint_replay_matches_one_shot_and_preserves_distant_tiles ... ok
+test source_over_erase_and_mask_match_independent_alpha_equations ... ok
+test cancellation_at_every_observed_checkpoint_keeps_sources_immutable ... ok
+test paint_publication_denials_stale_inputs_and_all_preparation_cancellation_are_atomic ... ok
+test ordinary_transactions_retry_bake_recover_and_undo_retained_canvases ... ok
+test agent_paint_and_bake_use_durable_publication_and_late_cancellation ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.95s
+

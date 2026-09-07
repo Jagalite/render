@@ -5,8 +5,8 @@ working on feasible remaining steps. M09 interactive editor remains deferred.
 Each completed increment requires implementation, native/browser workflow evidence,
 negative/cancellation/stale checks, resource/provenance records and documentation.
 
-Current completed increment: bounded GPU geometry-buffer updates and resource observations; evidence/gpu-geometry-updates.
-Next engine subgate: revision-pinned spatial queries and sparse sculpt displacement/mask chunks.
+Current completed increment: revision-pinned mesh spatial queries and ordinary placement; evidence/spatial-queries.
+Next engine subgate: sparse sculpt displacement/mask chunks and affected-region geometry evaluation.
 
 | Order | Increment | Status |
 |---|---|---|
@@ -15,7 +15,7 @@ Next engine subgate: revision-pinned spatial queries and sparse sculpt displacem
 | 3 | Richer GPU scattering and transport quality | GPU alpha, conductor, coat and ideal dielectric validated; broader lighting/sampling quality remains separate |
 | 4 | External hair/volume inputs, fiber shading and sparse GPU media | VOL3, HAIR surface inputs, polyline control RGBA and bounded GPU media validated; physical fiber remains a separate gate |
 | 5 | Scoped native .blend/USD/MaterialX interchange | Blender 2.93 static profile validated; additional USD/MaterialX profiles remain future format work |
-| 6 | M10 engine UV/paint/sculpt/remesh/retopology operations | UV and bounded tiled painting validated; sculpting, remesh and retopology pending |
+| 6 | M10 engine UV/paint/sculpt/remesh/retopology operations | UV, bounded tiled painting and read-only spatial queries validated; sculpting, remesh and retopology editing pending |
 | 7 | M11 solver families with checkpoint/seek semantics | Pending |
 | 8 | M12 compositor/drawing/media/tracking engines | Pending |
 | 9 | M13 collaboration/extensions/client compatibility hardening | Pending; expand the documented JSON Schema subset to all existing profile operations |
@@ -168,3 +168,11 @@ All 1896 prior render/pass/receipt files and
 feature or shader is introduced; the web adapter adds a direct Wasm serde edge.
 M10 sculpting still requires localized spatial queries, sparse chunks and affected
 region evaluation; current host packing remains global.
+
+Spatial query prerequisite: 94 acceptance checks, 227 native
+and 198 Wasm tests; 40 CLI calls and 8 query cases.
+Native/Wasm results, portable work counts, placement revisions and CPU passes agree
+exactly. High-ID archive/OPFS recovery, one-index eviction, aggregate polygon-work
+admission and numerical underflow regressions pass. All 1992
+prior render/pass/receipt artifacts and 213 fixtures are unchanged,
+with no Cargo/dependency/shader changes. Whole snapshot validation remains global.

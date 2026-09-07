@@ -1,0 +1,48 @@
+{
+  "baseline": "4e8441c",
+  "new_packages": [],
+  "resolved_packages_features_and_native_links_unchanged": true,
+  "computational_ffi_added": false,
+  "cargo_files": [
+    {
+      "path": "Cargo.lock",
+      "sha256": "2fa9f24b940a9d05f2e091040428a6e47f98f55d5897a2b20c6e585c7bfb08ee",
+      "unchanged": true
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "30f2bf6f877b47d7cf3ff8c091be20db9ed0002087c0cb61fbc1756e12bccf21",
+      "unchanged": true
+    },
+    {
+      "path": "crates/core/Cargo.toml",
+      "sha256": "5ef58a0f71a7e0925e4a8f6a6fdac0f6b046fbf2ffa9d03f82e06c2f9a993dbe",
+      "unchanged": true
+    },
+    {
+      "path": "crates/ffi/Cargo.toml",
+      "sha256": "a73a443608037a9c7c9b2991e5e0aeca27385cf38605cf21f41a2ddd2946a9d3",
+      "unchanged": true
+    },
+    {
+      "path": "crates/gpu/Cargo.toml",
+      "sha256": "6275711a12367eb3085eceafa29d7d6456beb0d711d1c655f14298324f078c16",
+      "unchanged": true
+    },
+    {
+      "path": "crates/host/Cargo.toml",
+      "sha256": "74296656ace7267550cbe7cec5f6064c3a5ca9b4f15219f85d79306d7981cacf",
+      "unchanged": true
+    },
+    {
+      "path": "crates/kernel/Cargo.toml",
+      "sha256": "7cd2433582517c87a99ac064763b6c98134e0d54bff643712bdcd81189eeeba8",
+      "unchanged": true
+    },
+    {
+      "path": "crates/web/Cargo.toml",
+      "sha256": "8666ff3f55d68580a1b1c53823b245b49a6dbb28b330429fc3d3acaa73e7f27a",
+      "unchanged": true
+    }
+  ]
+}

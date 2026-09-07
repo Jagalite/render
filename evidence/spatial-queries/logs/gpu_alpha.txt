@@ -1,0 +1,49 @@
+    Finished `test` profile [unoptimized] target(s) in 4.00s
+     Running tests/gpu_alpha.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/gpu_alpha-6f7bfe4e4cda8e41)
+
+running 5 tests
+rmse=0.0000000276861226823128 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.00000001843924622351614 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.00000002178146758020211 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000000056975835796513464 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.00003023901075887126 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000000013750813026198559 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000000009943804007052734 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000015668438272260192 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000000056975835796513464 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000000005607304432798315 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000000724954226857598 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000008805140775697394 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000000056975835796513464 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000008812226601284489 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000008812226601284489 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000008169850507782992 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000008175184116694022 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000008175184116694022 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.00000336052178103384 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000003362881984346133 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000003362881984346133 backend=gpu-f32-principled-alpha-v1/Metal
+test coverage_textures_vertex_alpha_and_extended_schedule_match_cpu ... ok
+test shutter_failure_survives_later_valid_dispatches_and_sequence_is_partial ... ok
+test transparent_shadows_are_products_and_visibility_budget_errors ... ok
+rmse=0 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000000030871212798511274 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000000041759199875305144 backend=gpu-f32-principled-alpha-v1/Metal
+test normalized_texture_cutoffs_and_mixed_material_bounces ... ok
+rmse=0 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0 backend=gpu-f32-principled-alpha-v1/Metal
+rmse=0.000000056975835796513464 backend=gpu-f32-principled-alpha-v1/Metal
+test mask_boundaries_camera_and_transparent_crossing_budgets ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out; finished in 20.76s
+

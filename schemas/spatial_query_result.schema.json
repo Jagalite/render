@@ -1,0 +1,229 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Mesh-local spatial result v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "profile": {
+      "const": "mesh-local-spatial-v1"
+    },
+    "revision": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "mesh": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "hits": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "points_in_sphere"
+            },
+            "points": {
+              "type": "array",
+              "maxItems": 4096,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "point": {
+                    "type": "string",
+                    "pattern": "^[1-9][0-9]{0,19}$",
+                    "description": "Rust additionally enforces u64 maximum 18446744073709551615."
+                  },
+                  "position_meters": {
+                    "type": "array",
+                    "minItems": 3,
+                    "maxItems": 3,
+                    "items": {
+                      "type": "number",
+                      "minimum": -1000000000.0,
+                      "maximum": 1000000000.0
+                    }
+                  },
+                  "distance_meters": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1000000000.0
+                  }
+                },
+                "required": [
+                  "point",
+                  "position_meters",
+                  "distance_meters"
+                ]
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "points"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "nearest_surface"
+            },
+            "surface": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "face": {
+                      "type": "string",
+                      "pattern": "^[1-9][0-9]{0,19}$",
+                      "description": "Rust additionally enforces u64 maximum 18446744073709551615."
+                    },
+                    "corners": {
+                      "type": "array",
+                      "minItems": 3,
+                      "maxItems": 3,
+                      "items": {
+                        "type": "string",
+                        "pattern": "^[1-9][0-9]{0,19}$",
+                        "description": "Rust additionally enforces u64 maximum 18446744073709551615."
+                      }
+                    },
+                    "barycentric": {
+                      "type": "array",
+                      "minItems": 3,
+                      "maxItems": 3,
+                      "items": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      }
+                    },
+                    "position_meters": {
+                      "type": "array",
+                      "minItems": 3,
+                      "maxItems": 3,
+                      "items": {
+                        "type": "number",
+                        "minimum": -1000000000.0,
+                        "maximum": 1000000000.0
+                      }
+                    },
+                    "geometric_normal": {
+                      "type": "array",
+                      "minItems": 3,
+                      "maxItems": 3,
+                      "items": {
+                        "type": "number",
+                        "minimum": -1.000000000001,
+                        "maximum": 1.000000000001
+                      }
+                    },
+                    "distance_meters": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1000000000.0
+                    }
+                  },
+                  "required": [
+                    "face",
+                    "corners",
+                    "barycentric",
+                    "position_meters",
+                    "geometric_normal",
+                    "distance_meters"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "exact_tied_triangles": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 131072
+            }
+          },
+          "required": [
+            "kind",
+            "surface",
+            "exact_tied_triangles"
+          ]
+        }
+      ]
+    },
+    "cost": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "cache_reused": {
+          "type": "boolean"
+        },
+        "whole_snapshot_validated": {
+          "type": "boolean"
+        },
+        "additional_source_identity_validation": {
+          "type": "boolean"
+        },
+        "source_bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "build_byte_charge": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "built_points": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "built_triangles": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "retained_index_layout_bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "visited_nodes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "item_tests": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "triangulation_work_charge": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 16777216
+        }
+      },
+      "required": [
+        "cache_reused",
+        "whole_snapshot_validated",
+        "additional_source_identity_validation",
+        "source_bytes",
+        "build_byte_charge",
+        "built_points",
+        "built_triangles",
+        "retained_index_layout_bytes",
+        "visited_nodes",
+        "item_tests",
+        "triangulation_work_charge"
+      ]
+    }
+  },
+  "required": [
+    "profile",
+    "revision",
+    "mesh",
+    "hits",
+    "cost"
+  ]
+}

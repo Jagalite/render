@@ -10,6 +10,7 @@ pub mod document;
 pub mod feature_fixtures;
 pub mod fixtures;
 pub mod geometry;
+pub mod geometry_query;
 pub mod gltf_export;
 mod gltf_materials;
 pub mod gltf_scene;

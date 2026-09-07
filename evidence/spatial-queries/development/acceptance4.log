@@ -1,0 +1,114 @@
+artifacts/spatial-queries/run-20260907T000058Z
+format: 0
+clippy: 0
+browser_clippy: 0
+native_build: 0
+spatial_native: 0
+spatial_workflow: 0
+spatial_schema: 0
+browser_build: 0
+spatial_browser: 0
+spatial_cross: 0
+gpu_update_native: 0
+gpu_update_resource: 0
+gpu_update_browser: 0
+gpu_update_cross: 0
+srgb8_numeric_source: 0
+mip_lod_numeric_source: 0
+paint_native: 0
+independent_source_validation: 0
+paint_workflow: 0
+paint_schema: 0
+paint_browser: 0
+paint_cross_platform: 0
+wasm_tests: 0
+native_tests: -2
+s ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/render_gpu-c36156f3f97f42c2)
+
+running 5 tests
+test media::tests::half_open_unit_cells_and_sparse_holes_execute_on_device ... ignored, requires real GPU; exact half-open media-ray contract
+test upload::tests::float_bits_are_compared_without_numeric_equality_or_nan_rules ... ok
+test upload::tests::local_writes_reconstruct_exact_bytes_and_preserve_distant_rows ... ok
+test upload::tests::first_resize_dense_and_fragmented_inputs_have_explicit_costs ... ok
+test upload::tests::every_small_dirty_pattern_reconstructs_the_target ... ok
+
+test result: ok. 4 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src/main.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/render_host-8a85a21325573086)
+
+running 5 tests
+test project_cli::tests::cancellation_is_checked_after_preparation_but_not_inside_admitted_commit ... ok
+test job_host::tests::second_host_cannot_recover_an_active_worker ... ok
+test job_host::tests::jobs_pin_the_document_written_through_the_project_api ... ok
+test job_host::tests::pinned_variant_jobs_reject_changed_retries_and_recover_terminal_events ... ok
+test job_host::tests::durable_jobs_survive_reopen_and_cancel ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.46s
+
+     Running tests/gltf_export_gpu.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/gltf_export_gpu-47596f119932f12c)
+
+running 1 test
+test exported_pbr_surfaces_match_cpu_and_metal_at_static_and_animated_times ... ignored, requires a real GPU; mandatory in evaluated GLB export acceptance
+
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/gpu_alpha.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/gpu_alpha-6f7bfe4e4cda8e41)
+
+running 6 tests
+test coverage_textures_vertex_alpha_and_extended_schedule_match_cpu ... ignored, requires actual GPU; mandatory in alpha acceptance
+test mask_boundaries_camera_and_transparent_crossing_budgets ... ignored, requires actual GPU; mandatory in alpha acceptance
+test normalized_texture_cutoffs_and_mixed_material_bounces ... ignored, requires actual GPU; mandatory in alpha acceptance
+test shutter_failure_survives_later_valid_dispatches_and_sequence_is_partial ... ignored, requires actual GPU; mandatory in alpha acceptance
+test transparent_shadows_are_products_and_visibility_budget_errors ... ignored, requires actual GPU; mandatory in alpha acceptance
+test mask_thresholds_preserve_cpu_multiplication_at_decoded_alpha_boundaries ... ok
+
+test result: ok. 1 passed; 0 failed; 5 ignored; 0 measured; 0 filtered out; finished in 0.49s
+
+     Running tests/gpu_dielectric.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/gpu_dielectric-b2916fb1c9baf6f5)
+
+running 2 tests
+test analytic_ideal_interfaces_match_metal_and_keep_prior_shaders_exact ... ignored, requires actual GPU; mandatory ideal dielectric acceptance
+test dielectric_variant_keeps_other_bsdfs_and_pipeline_cache_working ... ignored, requires actual GPU; mandatory mixed-surface dielectric acceptance
+
+test result: ok. 0 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/gpu_geometry_updates.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/gpu_geometry_updates-8dccc20e95514037)
+
+running 1 test
+test persistent_cache_matches_fresh_renderers_and_reports_local_transfers ... ignored, requires real GPU; mandatory for packed geometry updates qualification
+
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/gpu_media.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/gpu_media-034ee0953378191f)
+
+running 5 tests
+test analytic_sparse_media_matches_metal_and_preserves_cancellation ... ignored, requires actual GPU; mandatory sparse media acceptance
+test media_maximum_cells_and_dispatch_work_execute ... ignored, requires actual GPU; execute occupied-cell and dispatch-work boundaries
+test media_progressive_cancellation_and_device_recovery ... ignored, requires actual GPU; mandatory media lifecycle and progressive identity
+test opaque_surfaces_light_shadows_and_finite_depth_media_match_reference ... ignored, requires actual GPU; mandatory surface/media integration
+test sparse_media_admission_bounds_precision_and_surface_profiles ... ok
+
+test result: ok. 1 passed; 0 failed; 4 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/gpu_sequence.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/gpu_sequence-6dbbf3027dab2318)
+
+running 1 test
+test gpu_shutter_analytic_average_random_access_sequences_and_faults ... ignored, requires a real GPU; mandatory in GPU shutter acceptance
+
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/gpu_surfaces.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/gpu_surfaces-4a72a79bb9286c38)
+
+running 3 tests
+test conductor_coat_secondary_transport_and_three_pipeline_cache_switching ... ignored, requires actual GPU; mandatory conductor/coat acceptance
+test normal_incidence_analytic_energy_and_coat_limits ... ignored, requires actual GPU; mandatory analytic conductor/coat acceptance
+test surface_models_keep_named_uv_vertex_color_normal_and_alpha_consumers ... ignored, requires actual GPU; mandatory texture and alpha integration acceptance
+
+test result: ok. 0 passed; 0 failed; 3 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/morph_frames_gpu.rs (/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/deps/morph_frames_gpu-ae5af1f10a6f4260)
+

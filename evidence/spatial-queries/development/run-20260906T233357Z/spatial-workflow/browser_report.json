@@ -1,0 +1,356 @@
+{
+  "status": "passed",
+  "package_sha256": "f6ee6d77198d4de4d92844aefe46d3696bfee6e983c8e50f0e8c8fadcf774de9",
+  "queries": [
+    {
+      "cost": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 691080,
+        "built_points": 291,
+        "built_triangles": 512,
+        "cache_reused": false,
+        "item_tests": 4,
+        "retained_index_layout_bytes": 44091,
+        "source_bytes": 97591,
+        "visited_nodes": 15,
+        "whole_snapshot_validated": true
+      },
+      "hits": {
+        "exact_tied_triangles": 2,
+        "kind": "nearest_surface",
+        "surface": {
+          "barycentric": [
+            0.5,
+            0.5,
+            0
+          ],
+          "corners": [
+            "9007199254750066",
+            "9007199254750065",
+            "9007199254750064"
+          ],
+          "distance_meters": 1,
+          "face": "9007199254741684",
+          "geometric_normal": [
+            0,
+            0,
+            1
+          ],
+          "position_meters": [
+            0.625,
+            0.375,
+            0
+          ]
+        }
+      },
+      "mesh": "sha256:7d9665a33f4e407677f4269627115d9f0899d3dc63af1301ec7fce416390df2d",
+      "profile": "mesh-local-spatial-v1",
+      "revision": "sha256:0af25d35428ea030586081fbb5d8976f7e7bbffd698ceec8959cd3e1a1375132"
+    },
+    {
+      "cost": {
+        "additional_source_identity_validation": false,
+        "build_byte_charge": 691080,
+        "built_points": 0,
+        "built_triangles": 0,
+        "cache_reused": true,
+        "item_tests": 6,
+        "retained_index_layout_bytes": 44091,
+        "source_bytes": 97591,
+        "visited_nodes": 27,
+        "whole_snapshot_validated": true
+      },
+      "hits": {
+        "kind": "points_in_sphere",
+        "points": [
+          {
+            "distance_meters": 0,
+            "point": "18446744073709551325",
+            "position_meters": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "distance_meters": 0,
+            "point": "18446744073709551326",
+            "position_meters": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "distance_meters": 0,
+            "point": "18446744073709551471",
+            "position_meters": [
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "mesh": "sha256:7d9665a33f4e407677f4269627115d9f0899d3dc63af1301ec7fce416390df2d",
+      "profile": "mesh-local-spatial-v1",
+      "revision": "sha256:0af25d35428ea030586081fbb5d8976f7e7bbffd698ceec8959cd3e1a1375132"
+    },
+    {
+      "cost": {
+        "additional_source_identity_validation": false,
+        "build_byte_charge": 691080,
+        "built_points": 0,
+        "built_triangles": 0,
+        "cache_reused": true,
+        "item_tests": 28,
+        "retained_index_layout_bytes": 44091,
+        "source_bytes": 97591,
+        "visited_nodes": 53,
+        "whole_snapshot_validated": true
+      },
+      "hits": {
+        "kind": "points_in_sphere",
+        "points": [
+          {
+            "distance_meters": 0.5,
+            "point": "18446744073709551325",
+            "position_meters": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "distance_meters": 0.5,
+            "point": "18446744073709551326",
+            "position_meters": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "distance_meters": 0.5,
+            "point": "18446744073709551435",
+            "position_meters": [
+              0.5,
+              0.5,
+              0
+            ]
+          },
+          {
+            "distance_meters": 0.3535533905932738,
+            "point": "18446744073709551451",
+            "position_meters": [
+              0.75,
+              0.25,
+              0
+            ]
+          },
+          {
+            "distance_meters": 0.25,
+            "point": "18446744073709551452",
+            "position_meters": [
+              0.5,
+              0.25,
+              0
+            ]
+          },
+          {
+            "distance_meters": 0.3535533905932738,
+            "point": "18446744073709551453",
+            "position_meters": [
+              0.25,
+              0.25,
+              0
+            ]
+          },
+          {
+            "distance_meters": 0.5,
+            "point": "18446744073709551467",
+            "position_meters": [
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "distance_meters": 0.25,
+            "point": "18446744073709551468",
+            "position_meters": [
+              0.75,
+              0,
+              0
+            ]
+          },
+          {
+            "distance_meters": 0,
+            "point": "18446744073709551469",
+            "position_meters": [
+              0.5,
+              0,
+              0
+            ]
+          },
+          {
+            "distance_meters": 0.25,
+            "point": "18446744073709551470",
+            "position_meters": [
+              0.25,
+              0,
+              0
+            ]
+          },
+          {
+            "distance_meters": 0.5,
+            "point": "18446744073709551471",
+            "position_meters": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "distance_meters": 0.3535533905932738,
+            "point": "18446744073709551485",
+            "position_meters": [
+              0.75,
+              -0.25,
+              0
+            ]
+          },
+          {
+            "distance_meters": 0.25,
+            "point": "18446744073709551486",
+            "position_meters": [
+              0.5,
+              -0.25,
+              0
+            ]
+          },
+          {
+            "distance_meters": 0.3535533905932738,
+            "point": "18446744073709551487",
+            "position_meters": [
+              0.25,
+              -0.25,
+              0
+            ]
+          },
+          {
+            "distance_meters": 0.5,
+            "point": "18446744073709551503",
+            "position_meters": [
+              0.5,
+              -0.5,
+              0
+            ]
+          }
+        ]
+      },
+      "mesh": "sha256:7d9665a33f4e407677f4269627115d9f0899d3dc63af1301ec7fce416390df2d",
+      "profile": "mesh-local-spatial-v1",
+      "revision": "sha256:0af25d35428ea030586081fbb5d8976f7e7bbffd698ceec8959cd3e1a1375132"
+    },
+    {
+      "cost": {
+        "additional_source_identity_validation": false,
+        "build_byte_charge": 691080,
+        "built_points": 0,
+        "built_triangles": 0,
+        "cache_reused": true,
+        "item_tests": 4,
+        "retained_index_layout_bytes": 44091,
+        "source_bytes": 97591,
+        "visited_nodes": 15,
+        "whole_snapshot_validated": true
+      },
+      "hits": {
+        "exact_tied_triangles": 2,
+        "kind": "nearest_surface",
+        "surface": {
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "corners": [
+            "9007199254749460",
+            "9007199254749459",
+            "9007199254749458"
+          ],
+          "distance_meters": 1.7320508075688772,
+          "face": "9007199254741482",
+          "geometric_normal": [
+            0,
+            0,
+            1
+          ],
+          "position_meters": [
+            2,
+            2,
+            0
+          ]
+        }
+      },
+      "mesh": "sha256:7d9665a33f4e407677f4269627115d9f0899d3dc63af1301ec7fce416390df2d",
+      "profile": "mesh-local-spatial-v1",
+      "revision": "sha256:0af25d35428ea030586081fbb5d8976f7e7bbffd698ceec8959cd3e1a1375132"
+    },
+    {
+      "cost": {
+        "additional_source_identity_validation": false,
+        "build_byte_charge": 691080,
+        "built_points": 0,
+        "built_triangles": 0,
+        "cache_reused": true,
+        "item_tests": 0,
+        "retained_index_layout_bytes": 44091,
+        "source_bytes": 97591,
+        "visited_nodes": 1,
+        "whole_snapshot_validated": true
+      },
+      "hits": {
+        "exact_tied_triangles": 0,
+        "kind": "nearest_surface",
+        "surface": null
+      },
+      "mesh": "sha256:7d9665a33f4e407677f4269627115d9f0899d3dc63af1301ec7fce416390df2d",
+      "profile": "mesh-local-spatial-v1",
+      "revision": "sha256:0af25d35428ea030586081fbb5d8976f7e7bbffd698ceec8959cd3e1a1375132"
+    }
+  ],
+  "invalid": [
+    {
+      "name": "stale",
+      "error": "stale_revision: spatial query revision is stale"
+    },
+    {
+      "name": "budget",
+      "error": "budget: exact item test cap"
+    },
+    {
+      "name": "result-budget",
+      "error": "budget: spatial result byte cap"
+    },
+    {
+      "name": "unknown",
+      "error": "encoding: unknown field `private_index`, expected one of `version`, `base_revision`, `mesh`, `query`, `budget` at line 1 column 508"
+    },
+    {
+      "name": "metric",
+      "error": "query_metric: finite local meter coordinates within +/-1e9 and distance in 0..=1e9 required"
+    }
+  ],
+  "opfs_restored": true,
+  "high_ids_preserved": true,
+  "revision": "sha256:e098d00a1106d06ba5389b7d331b944ede0e70ce7fb28008534d5bbacc2dcfee",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/152.0.7977.76",
+    "revision": "@0d89dfa2dd7c1ec4b8a14b9f303f887bb63b6174",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+    "jsVersion": "15.2.124.19"
+  }
+}

@@ -1,0 +1,20 @@
+artifacts/spatial-queries/run-20260906T233117Z
+format: 0
+clippy: 0
+browser_clippy: 0
+native_build: 0
+spatial_native: 0
+spatial_workflow: 1
+init: passed
+empty: passed
+Traceback (most recent call last):
+  File "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/scripts/spatial-queries-workflow.py", line 36, in <module>
+    apply('source',state,[dict(operation='put_mesh',mesh=fixture['mesh'])]);state=inspect('source');source=next(iter(state['snapshot']['meshes']))
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/scripts/spatial-queries-workflow.py", line 29, in apply
+    result=call(name,dict(method='apply',request=request));return request,result
+  File "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/scripts/spatial-queries-workflow.py", line 23, in call
+    assert result.returncode==0,(name,result.stderr);value=json.loads(result.stdout)
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('source', '{"code":"request","stage":"validation","message":"unsupported version or invalid request bounds","retryable":false,"context":{}}\n')
+

@@ -183,7 +183,7 @@ fn typed_source_transactions_permissions_versions_and_durability() {
     old.version = 15;
     assert_eq!(old.validate().unwrap_err().code, "schema_version");
     let mut future = d.snapshot().clone();
-    future.version = 19;
+    future.version = 20;
     assert_eq!(future.validate().unwrap_err().code, "schema_version");
     let mut corrupt = d.snapshot().clone();
     let asset = corrupt.source_assets.remove(&report.source_asset).unwrap();

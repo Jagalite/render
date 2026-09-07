@@ -1,0 +1,308 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sparse sculpt displacement v0",
+  "description": "Wire shape only. Rust validates u64 and block ranges, finite f32 values, unique stable IDs, canonical content hashes, nonzero sparse entries, geometric validity, references, budgets, permissions and revision-pinned publication.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/sculptRequest"
+    },
+    {
+      "$ref": "#/$defs/sculptCommand"
+    }
+  ],
+  "$defs": {
+    "sculptEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "slot": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 63
+        },
+        "delta_meters": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "number",
+            "minimum": -1000000,
+            "maximum": 1000000
+          }
+        }
+      },
+      "required": [
+        "slot",
+        "delta_meters"
+      ]
+    },
+    "sculptChunk": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "const": 0
+        },
+        "base_mesh": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "block": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]{0,17})$",
+          "maxLength": 18
+        },
+        "points": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 64,
+          "items": {
+            "$ref": "#/$defs/sculptEntry"
+          }
+        }
+      },
+      "required": [
+        "version",
+        "base_mesh",
+        "block",
+        "points"
+      ]
+    },
+    "sculptAsset": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "const": 0
+        },
+        "base_mesh": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "blocks": {
+          "type": "object",
+          "maxProperties": 1024,
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]{0,17})$",
+            "maxLength": 18
+          },
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          }
+        }
+      },
+      "required": [
+        "version",
+        "base_mesh",
+        "blocks"
+      ]
+    },
+    "sculptBudget": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "max_point_updates": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4096
+        },
+        "max_changed_chunks": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64
+        },
+        "max_chunk_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1048576
+        },
+        "max_basis_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 67108864
+        },
+        "max_triangle_updates": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 131072
+        },
+        "max_refit_nodes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 262144
+        },
+        "max_copy_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 67108864
+        }
+      },
+      "required": [
+        "max_point_updates",
+        "max_changed_chunks",
+        "max_chunk_bytes",
+        "max_basis_bytes",
+        "max_triangle_updates",
+        "max_refit_nodes",
+        "max_copy_bytes"
+      ]
+    },
+    "sculptRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "const": 0
+        },
+        "base_revision": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "idempotency_key": {
+          "type": "string",
+          "minLength": 16,
+          "maxLength": 128
+        },
+        "entity": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{32}$"
+        },
+        "source_asset": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "points": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4096,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "point": {
+                "type": "string",
+                "pattern": "^[1-9][0-9]{0,19}$",
+                "maxLength": 20
+              },
+              "delta_meters": {
+                "type": "array",
+                "minItems": 3,
+                "maxItems": 3,
+                "items": {
+                  "type": "number",
+                  "minimum": -1000000,
+                  "maximum": 1000000
+                }
+              }
+            },
+            "required": [
+              "point",
+              "delta_meters"
+            ]
+          }
+        },
+        "budget": {
+          "$ref": "#/$defs/sculptBudget"
+        },
+        "max_added_bytes": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "version",
+        "base_revision",
+        "idempotency_key",
+        "entity",
+        "source_asset",
+        "points",
+        "budget",
+        "max_added_bytes"
+      ]
+    },
+    "sculptCommand": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "operation": {
+              "const": "put_sculpt_chunk"
+            },
+            "chunk": {
+              "$ref": "#/$defs/sculptChunk"
+            }
+          },
+          "required": [
+            "operation",
+            "chunk"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "operation": {
+              "const": "put_sculpt_asset"
+            },
+            "asset": {
+              "$ref": "#/$defs/sculptAsset"
+            }
+          },
+          "required": [
+            "operation",
+            "asset"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "operation": {
+              "const": "set_sculpt"
+            },
+            "entity": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{32}$"
+            },
+            "source_mesh": {
+              "type": "string",
+              "pattern": "^sha256:[0-9a-f]{64}$"
+            },
+            "source_asset": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^sha256:[0-9a-f]{64}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "asset": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^sha256:[0-9a-f]{64}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "operation",
+            "entity",
+            "source_mesh",
+            "source_asset",
+            "asset"
+          ]
+        }
+      ]
+    }
+  }
+}

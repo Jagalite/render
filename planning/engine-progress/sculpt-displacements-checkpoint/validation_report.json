@@ -1,0 +1,1368 @@
+{
+  "status": "passed",
+  "scope": "macOS ARM64 CPU/Metal, Rust Wasm in Node, Chrome WebGPU/OPFS; Linux and Windows compile only",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8190824169996631,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 15.422196583999721,
+      "log": "logs/clippy.txt"
+    },
+    {
+      "name": "browser_clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "-p",
+        "render-web",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 10.269655707999846,
+      "log": "logs/browser_clippy.txt"
+    },
+    {
+      "name": "sculpt_native",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "sculpt_displacements",
+        "--locked",
+        "--offline",
+        "--",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 3.062467249999827,
+      "log": "logs/sculpt_native.txt"
+    },
+    {
+      "name": "sculpt_wasm",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "sculpt_displacements",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline",
+        "--",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 31.595953500000178,
+      "log": "logs/sculpt_wasm.txt"
+    },
+    {
+      "name": "sculpt_resources",
+      "command": [
+        "python3",
+        "scripts/compare-sculpt-resources.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/logs/sculpt_native.txt",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/logs/sculpt_wasm.txt",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/sculpt_resources.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.05601158300032694,
+      "log": "logs/sculpt_resources.txt"
+    },
+    {
+      "name": "native_build",
+      "command": [
+        "cargo",
+        "build",
+        "-p",
+        "render-host",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 31.590397750000193,
+      "log": "logs/native_build.txt"
+    },
+    {
+      "name": "sculpt_workflow",
+      "command": [
+        "python3",
+        "scripts/sculpt-displacements-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/sculpt-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 7.3358233330000076,
+      "log": "logs/sculpt_workflow.txt"
+    },
+    {
+      "name": "sculpt_schema",
+      "command": [
+        "python3",
+        "scripts/validate-sculpt-displacements-schema.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/sculpt-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.28090700000029756,
+      "log": "logs/sculpt_schema.txt"
+    },
+    {
+      "name": "browser_build",
+      "command": [
+        "sh",
+        "scripts/build-web.sh"
+      ],
+      "exit_code": 0,
+      "seconds": 111.63907745799952,
+      "log": "logs/browser_build.txt"
+    },
+    {
+      "name": "sculpt_browser",
+      "command": [
+        "node",
+        "scripts/sculpt-displacements-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/sculpt-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.16381095899942,
+      "log": "logs/sculpt_browser.txt"
+    },
+    {
+      "name": "sculpt_cross",
+      "command": [
+        "python3",
+        "scripts/compare-sculpt-displacements.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/sculpt-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.11163100000067061,
+      "log": "logs/sculpt_cross.txt"
+    },
+    {
+      "name": "chunks_native",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "runtime_geometry_chunks",
+        "--locked",
+        "--offline",
+        "--",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 5.416269915999692,
+      "log": "logs/chunks_native.txt"
+    },
+    {
+      "name": "chunks_wasm",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "runtime_geometry_chunks",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline",
+        "--",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 4.858588582999801,
+      "log": "logs/chunks_wasm.txt"
+    },
+    {
+      "name": "chunks_resources",
+      "command": [
+        "python3",
+        "scripts/compare-runtime-chunks.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07150825000007899,
+      "log": "logs/chunks_resources.txt"
+    },
+    {
+      "name": "spatial_native",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "spatial_queries",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 4.644618375000391,
+      "log": "logs/spatial_native.txt"
+    },
+    {
+      "name": "spatial_workflow",
+      "command": [
+        "python3",
+        "scripts/spatial-queries-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/spatial-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 10.81244529200012,
+      "log": "logs/spatial_workflow.txt"
+    },
+    {
+      "name": "spatial_schema",
+      "command": [
+        "python3",
+        "scripts/validate-spatial-query-schema.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/spatial-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.14430562500001543,
+      "log": "logs/spatial_schema.txt"
+    },
+    {
+      "name": "spatial_browser",
+      "command": [
+        "node",
+        "scripts/spatial-queries-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/spatial-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5623151250001683,
+      "log": "logs/spatial_browser.txt"
+    },
+    {
+      "name": "spatial_cross",
+      "command": [
+        "python3",
+        "scripts/compare-spatial-queries.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/spatial-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03834562499923777,
+      "log": "logs/spatial_cross.txt"
+    },
+    {
+      "name": "gpu_update_native",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_geometry_updates",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 16.33701979200032,
+      "log": "logs/gpu_update_native.txt"
+    },
+    {
+      "name": "gpu_update_resource",
+      "command": [
+        "python3",
+        "scripts/measure-gpu-geometry-updates.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z"
+      ],
+      "exit_code": 0,
+      "seconds": 4.382619500000146,
+      "log": "logs/gpu_update_resource.txt"
+    },
+    {
+      "name": "gpu_update_browser",
+      "command": [
+        "node",
+        "scripts/gpu-geometry-updates-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/gpu-update-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.2256711249992804,
+      "log": "logs/gpu_update_browser.txt"
+    },
+    {
+      "name": "gpu_update_cross",
+      "command": [
+        "python3",
+        "scripts/compare-gpu-geometry-updates.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/gpu-update-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.0907529579999391,
+      "log": "logs/gpu_update_cross.txt"
+    },
+    {
+      "name": "srgb8_numeric_source",
+      "command": [
+        "python3",
+        "scripts/validate-srgb8-compat.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/srgb8_numeric_source.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5478159169997525,
+      "log": "logs/srgb8_numeric_source.txt"
+    },
+    {
+      "name": "mip_lod_numeric_source",
+      "command": [
+        "python3",
+        "scripts/validate-paint-mip-lod.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/mip_lod_numeric_source.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.09881454199967266,
+      "log": "logs/mip_lod_numeric_source.txt"
+    },
+    {
+      "name": "paint_native",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "tiled_painting",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 14.449910624999575,
+      "log": "logs/paint_native.txt"
+    },
+    {
+      "name": "independent_source_validation",
+      "command": [
+        "node",
+        "scripts/validate-gltf-fixtures.cjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/source-validation"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3650255840002501,
+      "log": "logs/independent_source_validation.txt"
+    },
+    {
+      "name": "paint_workflow",
+      "command": [
+        "python3",
+        "scripts/tiled-painting-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 62.08975204099988,
+      "log": "logs/paint_workflow.txt"
+    },
+    {
+      "name": "paint_schema",
+      "command": [
+        "python3",
+        "scripts/validate-tiled-painting-schema.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.21382475000064005,
+      "log": "logs/paint_schema.txt"
+    },
+    {
+      "name": "paint_browser",
+      "command": [
+        "node",
+        "scripts/tiled-painting-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.9146485410001333,
+      "log": "logs/paint_browser.txt"
+    },
+    {
+      "name": "paint_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-tiled-painting-browser.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/paint-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.0933169159998215,
+      "log": "logs/paint_cross_platform.txt"
+    },
+    {
+      "name": "wasm_tests",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 131.96502787499958,
+      "log": "logs/wasm_tests.txt"
+    },
+    {
+      "name": "native_tests",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 246.0364117499994,
+      "log": "logs/native_tests.txt"
+    },
+    {
+      "name": "uv_workflow",
+      "command": [
+        "python3",
+        "scripts/uv-authoring-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 4.47531304199947,
+      "log": "logs/uv_workflow.txt"
+    },
+    {
+      "name": "uv_schema",
+      "command": [
+        "python3",
+        "scripts/validate-uv-authoring-schema.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1276815829996849,
+      "log": "logs/uv_schema.txt"
+    },
+    {
+      "name": "uv_browser",
+      "command": [
+        "node",
+        "scripts/uv-authoring-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.47850787500010483,
+      "log": "logs/uv_browser.txt"
+    },
+    {
+      "name": "uv_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-uv-authoring-browser.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/uv-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.053989582999747654,
+      "log": "logs/uv_cross_platform.txt"
+    },
+    {
+      "name": "blend_workflow",
+      "command": [
+        "python3",
+        "scripts/blend-static-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 66.2249732500004,
+      "log": "logs/blend_workflow.txt"
+    },
+    {
+      "name": "blend_reference",
+      "command": [
+        "python3",
+        "scripts/compare-blend-reference.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.09459883300041838,
+      "log": "logs/blend_reference.txt"
+    },
+    {
+      "name": "blend_schema",
+      "command": [
+        "python3",
+        "scripts/validate-blend-schema.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 62.39946745799989,
+      "log": "logs/blend_schema.txt"
+    },
+    {
+      "name": "blend_browser",
+      "command": [
+        "node",
+        "scripts/blend-static-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 3.58934733300066,
+      "log": "logs/blend_browser.txt"
+    },
+    {
+      "name": "blend_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-blend-browser.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/blend-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3156415419998666,
+      "log": "logs/blend_cross_platform.txt"
+    },
+    {
+      "name": "gpu_dielectric",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_dielectric",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 7.01096299999972,
+      "log": "logs/gpu_dielectric.txt"
+    },
+    {
+      "name": "gpu_surfaces",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_surfaces",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 1.8901858749995881,
+      "log": "logs/gpu_surfaces.txt"
+    },
+    {
+      "name": "secondary_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "secondary_textures_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 1.3358382910000728,
+      "log": "logs/secondary_gpu.txt"
+    },
+    {
+      "name": "gpu_alpha",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_alpha",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 7.365427916000044,
+      "log": "logs/gpu_alpha.txt"
+    },
+    {
+      "name": "gltf_export_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gltf_export_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 2.610523999999714,
+      "log": "logs/gltf_export_gpu.txt"
+    },
+    {
+      "name": "vertex_colors_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "vertex_colors_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 2.1279088330002196,
+      "log": "logs/vertex_colors_gpu.txt"
+    },
+    {
+      "name": "named_uv_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "named_uv_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 1.7426471669996317,
+      "log": "logs/named_uv_gpu.txt"
+    },
+    {
+      "name": "morph_frame_regressions",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "morph_frames",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 8.286153000000013,
+      "log": "logs/morph_frame_regressions.txt"
+    },
+    {
+      "name": "morph_frame_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "morph_frames_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 2.4167867080004726,
+      "log": "logs/morph_frame_gpu.txt"
+    },
+    {
+      "name": "linux_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-unknown-linux-gnu",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 19.05885408300037,
+      "log": "logs/linux_check.txt"
+    },
+    {
+      "name": "windows_check",
+      "command": [
+        "cargo",
+        "check",
+        "-p",
+        "render-host",
+        "--target",
+        "x86_64-pc-windows-msvc",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 12.169081334000111,
+      "log": "logs/windows_check.txt"
+    },
+    {
+      "name": "camera_regression",
+      "command": [
+        "python3",
+        "scripts/alpha-camera-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/camera-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 7.540977582999403,
+      "log": "logs/camera_regression.txt"
+    },
+    {
+      "name": "dependency_audit",
+      "command": [
+        "python3",
+        "scripts/dependency-audit.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.4531342919999588,
+      "log": "logs/dependency_audit.txt"
+    },
+    {
+      "name": "animated_regression",
+      "command": [
+        "python3",
+        "scripts/animated-gltf-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/animated-regression",
+        "--gpu"
+      ],
+      "exit_code": 0,
+      "seconds": 6.307440707999376,
+      "log": "logs/animated_regression.txt"
+    },
+    {
+      "name": "shutter_regression",
+      "command": [
+        "python3",
+        "scripts/gpu-shutter-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/shutter-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 3.8364766660006353,
+      "log": "logs/shutter_regression.txt"
+    },
+    {
+      "name": "sparse_regression",
+      "command": [
+        "python3",
+        "scripts/sparse-gltf-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/sparse-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 5.480178541999521,
+      "log": "logs/sparse_regression.txt"
+    },
+    {
+      "name": "alpha_workflow",
+      "command": [
+        "python3",
+        "scripts/alpha-gltf-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/alpha-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 5.7261103339997135,
+      "log": "logs/alpha_workflow.txt"
+    },
+    {
+      "name": "alpha_browser",
+      "command": [
+        "node",
+        "scripts/alpha-gltf-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/alpha-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6376797910006644,
+      "log": "logs/alpha_browser.txt"
+    },
+    {
+      "name": "alpha_shutter_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/alpha-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 3.8965734590001375,
+      "log": "logs/alpha_shutter_workflow.txt"
+    },
+    {
+      "name": "alpha_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/alpha-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5091912919997412,
+      "log": "logs/alpha_shutter_browser.txt"
+    },
+    {
+      "name": "named_uv_regression",
+      "command": [
+        "python3",
+        "scripts/named-uv-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/named-uv-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 1.6004065839997565,
+      "log": "logs/named_uv_regression.txt"
+    },
+    {
+      "name": "named_uv_browser",
+      "command": [
+        "node",
+        "scripts/named-uv-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/named-uv-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.46841958300046826,
+      "log": "logs/named_uv_browser.txt"
+    },
+    {
+      "name": "named_uv_cross_platform",
+      "command": [
+        "python3",
+        "scripts/compare-named-uv-browser.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/named-uv-regression",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/named_uv_cross_platform.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.062110500000017055,
+      "log": "logs/named_uv_cross_platform.txt"
+    },
+    {
+      "name": "morph_workflow",
+      "command": [
+        "python3",
+        "scripts/morph-frames-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/morph-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 3.668129958999998,
+      "log": "logs/morph_workflow.txt"
+    },
+    {
+      "name": "morph_browser",
+      "command": [
+        "node",
+        "scripts/morph-frames-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/morph-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5195605419994536,
+      "log": "logs/morph_browser.txt"
+    },
+    {
+      "name": "vertex_color_workflow",
+      "command": [
+        "python3",
+        "scripts/vertex-colors-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/vertex-color-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 7.091206625000268,
+      "log": "logs/vertex_color_workflow.txt"
+    },
+    {
+      "name": "vertex_color_browser",
+      "command": [
+        "node",
+        "scripts/vertex-colors-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/vertex-color-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.48841695800001617,
+      "log": "logs/vertex_color_browser.txt"
+    },
+    {
+      "name": "export_workflow",
+      "command": [
+        "python3",
+        "scripts/gltf-export-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 57.146392249999735,
+      "log": "logs/export_workflow.txt"
+    },
+    {
+      "name": "export_schema",
+      "command": [
+        "python3",
+        "scripts/validate-gltf-export-schema.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z"
+      ],
+      "exit_code": 0,
+      "seconds": 7.335779125000045,
+      "log": "logs/export_schema.txt"
+    },
+    {
+      "name": "export_source_validation",
+      "command": [
+        "node",
+        "scripts/validate-exported-glbs.cjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6780986249996204,
+      "log": "logs/export_source_validation.txt"
+    },
+    {
+      "name": "export_browser",
+      "command": [
+        "node",
+        "scripts/gltf-export-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 2.3540945830000055,
+      "log": "logs/export_browser.txt"
+    },
+    {
+      "name": "secondary_workflow",
+      "command": [
+        "python3",
+        "scripts/secondary-textures-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/secondary-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 25.28015787500044,
+      "log": "logs/secondary_workflow.txt"
+    },
+    {
+      "name": "secondary_browser",
+      "command": [
+        "node",
+        "scripts/secondary-textures-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/secondary-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7294617919997108,
+      "log": "logs/secondary_browser.txt"
+    },
+    {
+      "name": "surface_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-surfaces-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/surface-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 21.190707499999917,
+      "log": "logs/surface_workflow.txt"
+    },
+    {
+      "name": "surface_browser",
+      "command": [
+        "node",
+        "scripts/gpu-surfaces-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/surface-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7853703329992641,
+      "log": "logs/surface_browser.txt"
+    },
+    {
+      "name": "conductor_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/conductor-shutter",
+        "{\"kind\": \"conductor\", \"eta\": [0.2, 0.9, 1.1], \"k\": [3, 2, 1.5]}"
+      ],
+      "exit_code": 0,
+      "seconds": 4.262533208000605,
+      "log": "logs/conductor_shutter.txt"
+    },
+    {
+      "name": "conductor_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/conductor-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5908962920002523,
+      "log": "logs/conductor_shutter_browser.txt"
+    },
+    {
+      "name": "coated_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/coated-shutter",
+        "{\"kind\": \"coated\", \"weight\": 0.7, \"ior\": 1.5, \"roughness\": 0.25}"
+      ],
+      "exit_code": 0,
+      "seconds": 4.056212624999716,
+      "log": "logs/coated_shutter.txt"
+    },
+    {
+      "name": "coated_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/coated-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.4847690839997085,
+      "log": "logs/coated_shutter_browser.txt"
+    },
+    {
+      "name": "dielectric_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-dielectric-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/dielectric-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 54.735847250000006,
+      "log": "logs/dielectric_workflow.txt"
+    },
+    {
+      "name": "dielectric_browser",
+      "command": [
+        "node",
+        "scripts/gpu-dielectric-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/dielectric-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.2004818750001505,
+      "log": "logs/dielectric_browser.txt"
+    },
+    {
+      "name": "dielectric_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-alpha-shutter-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/dielectric-shutter",
+        "{\"kind\": \"dielectric\", \"ior\": 1.5}"
+      ],
+      "exit_code": 0,
+      "seconds": 4.510108540999681,
+      "log": "logs/dielectric_shutter.txt"
+    },
+    {
+      "name": "dielectric_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-alpha-shutter-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/dielectric-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.49568854100016324,
+      "log": "logs/dielectric_shutter_browser.txt"
+    },
+    {
+      "name": "volume_workflow",
+      "command": [
+        "python3",
+        "scripts/volume-import-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/volume-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 15.998640832999627,
+      "log": "logs/volume_workflow.txt"
+    },
+    {
+      "name": "volume_schema",
+      "command": [
+        "python3",
+        "scripts/validate-volume-import-schema.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/volume-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 8.298278042000675,
+      "log": "logs/volume_schema.txt"
+    },
+    {
+      "name": "volume_browser",
+      "command": [
+        "node",
+        "scripts/volume-import-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/volume-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8674269999992248,
+      "log": "logs/volume_browser.txt"
+    },
+    {
+      "name": "hair_workflow",
+      "command": [
+        "python3",
+        "scripts/hair-import-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/hair-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 12.675455583001167,
+      "log": "logs/hair_workflow.txt"
+    },
+    {
+      "name": "hair_schema",
+      "command": [
+        "python3",
+        "scripts/validate-hair-import-schema.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/hair-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.289649249998547,
+      "log": "logs/hair_schema.txt"
+    },
+    {
+      "name": "hair_browser",
+      "command": [
+        "node",
+        "scripts/hair-import-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/hair-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5305941249989701,
+      "log": "logs/hair_browser.txt"
+    },
+    {
+      "name": "geometry_regression",
+      "command": [
+        "target/debug/render-host",
+        "geometry-workflow",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/geometry-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5530383330005861,
+      "log": "logs/geometry_regression.txt"
+    },
+    {
+      "name": "groom_regression",
+      "command": [
+        "target/debug/render-host",
+        "groom-workflow",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/groom-regression"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5608740000006947,
+      "log": "logs/groom_regression.txt"
+    },
+    {
+      "name": "curve_color_workflow",
+      "command": [
+        "python3",
+        "scripts/curve-colors-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 26.353938790998654,
+      "log": "logs/curve_color_workflow.txt"
+    },
+    {
+      "name": "curve_color_schema",
+      "command": [
+        "python3",
+        "scripts/validate-curve-colors-schema.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.455308167000112,
+      "log": "logs/curve_color_schema.txt"
+    },
+    {
+      "name": "curve_color_glb_validation",
+      "command": [
+        "node",
+        "scripts/validate-exported-glbs.cjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 0.16488937500071188,
+      "log": "logs/curve_color_glb_validation.txt"
+    },
+    {
+      "name": "curve_color_browser",
+      "command": [
+        "node",
+        "scripts/curve-colors-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/curve-color-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 1.3684639999992214,
+      "log": "logs/curve_color_browser.txt"
+    },
+    {
+      "name": "media_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "gpu_media",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 8.576287624999168,
+      "log": "logs/media_gpu.txt"
+    },
+    {
+      "name": "media_exact_rays",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-gpu",
+        "--locked",
+        "--offline",
+        "half_open_unit_cells",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6345473329984088,
+      "log": "logs/media_exact_rays.txt"
+    },
+    {
+      "name": "media_workflow",
+      "command": [
+        "python3",
+        "scripts/gpu-media-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/media-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 47.266651249999995,
+      "log": "logs/media_workflow.txt"
+    },
+    {
+      "name": "media_browser",
+      "command": [
+        "node",
+        "scripts/gpu-media-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/media-workflow"
+      ],
+      "exit_code": 0,
+      "seconds": 3.955356791999293,
+      "log": "logs/media_browser.txt"
+    },
+    {
+      "name": "media_shutter",
+      "command": [
+        "python3",
+        "scripts/gpu-media-shutter-workflow.py",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/media-shutter",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/media-workflow/homogeneous-archive/document/document.json"
+      ],
+      "exit_code": 0,
+      "seconds": 2.4950872079989495,
+      "log": "logs/media_shutter.txt"
+    },
+    {
+      "name": "media_shutter_browser",
+      "command": [
+        "node",
+        "scripts/gpu-media-shutter-browser.mjs",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/media-shutter"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7940344999988156,
+      "log": "logs/media_shutter_browser.txt"
+    },
+    {
+      "name": "multibounce_gpu",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-host",
+        "--test",
+        "multibounce_gpu",
+        "--locked",
+        "--offline",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 8.810737375000826,
+      "log": "logs/multibounce_gpu.txt"
+    },
+    {
+      "name": "static_pbr_probe",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "target/debug/render-host",
+        "pbr-workflow",
+        "artifacts/sculpt-displacements/run-20260907T041410Z/static-pbr-probe"
+      ],
+      "exit_code": 0,
+      "seconds": 48.61849208399872,
+      "log": "logs/static_pbr_probe.txt"
+    }
+  ],
+  "build_environment": {
+    "CARGO_NET_OFFLINE": "true",
+    "CARGO_BUILD_JOBS": "2",
+    "CARGO_INCREMENTAL": "0",
+    "CARGO_PROFILE_DEV_DEBUG": "0",
+    "CARGO_PROFILE_TEST_DEBUG": "0",
+    "CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUNNER": "wasm-bindgen-test-runner",
+    "RENDER_TEST_ORIGIN": "http://127.0.0.1:8785"
+  },
+  "native_test_count": 243,
+  "wasm_test_count": 214
+}

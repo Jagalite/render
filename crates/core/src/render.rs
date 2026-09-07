@@ -195,6 +195,128 @@ pub struct Geometry {
     pub uv_attributes: Vec<Id>,
     pub color_attribute: Option<Id>,
 }
+impl Geometry {
+    pub(crate) fn from_mesh(mesh: &crate::geometry::Mesh) -> Result<Self> {
+        Self::from_mesh_positions(mesh, |index| mesh.positions.get(index))
+    }
+    pub(crate) fn from_mesh_positions(
+        mesh: &crate::geometry::Mesh,
+        position: impl Fn(usize) -> DVec3,
+    ) -> Result<Self> {
+        let mut uv_attributes = mesh
+            .attributes
+            .values()
+            .filter(|a| a.semantic == "uv")
+            .map(|a| a.id)
+            .collect::<Vec<_>>();
+        // Keep the explicit default in slot zero for unnamed bindings
+        // and interchange. Legacy meshes retain their original name order.
+        uv_attributes.sort_by_key(|id| Some(*id) != mesh.default_uv_attribute);
+        if uv_attributes.len() > 8 {
+            return Err(Error::new(
+                "budget",
+                "render geometry supports at most eight UV attributes",
+            ));
+        }
+        let triangles = mesh
+            .triangles()?
+            .iter()
+            .map(|c| {
+                fn values(
+                    mesh: &crate::geometry::Mesh,
+                    semantic: &str,
+                    c: &[u32; 3],
+                ) -> Result<Option<[DVec3; 3]>> {
+                    use crate::geometry::*;
+                    let Some(attribute) = mesh.attributes.values().find(|a| a.semantic == semantic)
+                    else {
+                        return Ok(None);
+                    };
+                    let AttributeValues::Vec3(values) = &attribute.values else {
+                        return Err(Error::new("attribute", "shading vector requires vec3"));
+                    };
+                    let mut out = [DVec3::ZERO; 3];
+                    for (j, &corner) in c.iter().enumerate() {
+                        let index = match attribute.domain {
+                            Domain::Point => mesh.corners[corner as usize].vertex as usize,
+                            Domain::Corner => corner as usize,
+                            _ => {
+                                return Err(Error::new(
+                                    "attribute",
+                                    "shading vector requires point/corner domain",
+                                ));
+                            }
+                        };
+                        out[j] = Vec3::from_array(values[index]).as_dvec3();
+                        if out[j].length_squared() < 1e-20 {
+                            return Err(Error::new("attribute", "zero shading vector"));
+                        }
+                    }
+                    Ok(Some(out))
+                }
+                let normals = values(mesh, "normal", c)?;
+                let tangents = if let Some(t) = values(mesh, "tangent", c)? {
+                    let sign = mesh
+                        .attributes
+                        .values()
+                        .find(|a| a.semantic == "tangent_sign")
+                        .ok_or_else(|| Error::new("attribute", "tangent sign missing"))?;
+                    let crate::geometry::AttributeValues::Scalar(values) = &sign.values else {
+                        return Err(Error::new("attribute", "tangent sign requires scalar"));
+                    };
+                    let mut output = [glam::DVec4::ZERO; 3];
+                    for (j, &corner) in c.iter().enumerate() {
+                        let index = match sign.domain {
+                            crate::geometry::Domain::Point => {
+                                mesh.corners[corner as usize].vertex as usize
+                            }
+                            crate::geometry::Domain::Corner => corner as usize,
+                            _ => {
+                                return Err(Error::new("attribute", "tangent sign domain"));
+                            }
+                        };
+                        if values[index].abs() != 1. {
+                            return Err(Error::new("attribute", "tangent sign must be -1 or 1"));
+                        }
+                        output[j] = t[j].extend(f64::from(values[index]));
+                    }
+                    Some(output)
+                } else {
+                    None
+                };
+                Ok(Triangle {
+                    positions: c.map(|i| position(mesh.corners[i as usize].vertex as usize)),
+                    uv: c.map(|i| mesh.uv(i as usize)),
+                    colors: if mesh.color_attribute().is_some() {
+                        Some([
+                            mesh.color_rgba(c[0] as usize)?,
+                            mesh.color_rgba(c[1] as usize)?,
+                            mesh.color_rgba(c[2] as usize)?,
+                        ])
+                    } else {
+                        None
+                    },
+                    normals,
+                    tangents,
+                    uv_sets: uv_attributes
+                        .iter()
+                        .map(|id| {
+                            let values = mesh.uv_values(*id)?;
+                            Ok(c.map(|i| Vec2::from_array(values[i as usize])))
+                        })
+                        .collect::<Result<Vec<_>>>()?,
+                })
+            })
+            .collect::<Result<Vec<_>>>()?;
+        let bvh = Bvh::build(&triangles.iter().map(Triangle::bounds).collect::<Vec<_>>());
+        Ok(Geometry {
+            triangles: triangles.into(),
+            bvh,
+            uv_attributes,
+            color_attribute: mesh.color_attribute().map(|a| a.id),
+        })
+    }
+}
 #[derive(Clone, Debug)]
 pub struct Instance {
     pub id: Id,
@@ -211,6 +333,7 @@ pub struct Scene {
     pub instances: Vec<Instance>,
     pub bvh: Bvh,
     pub geometry_builds: usize,
+    pub sculpt_evaluations: Vec<(Id, crate::sculpt::EvaluationReport)>,
     pub conversions: Vec<crate::curves::Conversion>,
     pub media: crate::volumes::Media,
     pub displacements: Vec<crate::displacement::Receipt>,
@@ -219,12 +342,22 @@ pub struct Scene {
 }
 #[derive(Default)]
 pub struct Evaluator {
+    sculpt: crate::sculpt::Cache,
     procedures: BTreeMap<String, (Arc<crate::geometry::Mesh>, crate::procedural::Receipt)>,
     displaced: BTreeMap<String, (Arc<crate::geometry::Mesh>, crate::displacement::Receipt)>,
     cache: BTreeMap<String, Arc<Geometry>>,
     derived: BTreeMap<String, (Arc<crate::geometry::Mesh>, crate::curves::Conversion)>,
 }
 impl Evaluator {
+    pub(crate) fn with_sculpt_cache(sculpt: crate::sculpt::Cache) -> Self {
+        Self {
+            sculpt,
+            ..Self::default()
+        }
+    }
+    pub(crate) fn into_sculpt_cache(self) -> crate::sculpt::Cache {
+        self.sculpt
+    }
     pub fn evaluate(&mut self, snapshot: &Snapshot) -> Result<Scene> {
         self.evaluate_with_cancel(snapshot, || false)
     }
@@ -269,6 +402,8 @@ impl Evaluator {
         }
         let mut instances = vec![];
         let mut geometry_builds = 0;
+        let mut sculpt_evaluations = Vec::new();
+        let mut sculpt_cache = self.sculpt.clone();
         let mut conversions = BTreeMap::new();
         let mut displacements = BTreeMap::new();
         let mut procedures = BTreeMap::new();
@@ -344,134 +479,23 @@ impl Evaluator {
             {
                 surface.validate_uv_bindings(&mesh)?;
             }
-            let geometry = if let Some(g) = self.cache.get(key) {
+            let sculpt_key = s.sculpt_bindings.get(&e.id);
+            let geometry = if let Some(sculpt_key) = sculpt_key {
+                let (geometry, report) = sculpt_cache.evaluate(
+                    sculpt_key,
+                    s.sculpt_assets[sculpt_key].clone(),
+                    mesh.clone(),
+                    &s.sculpt_chunks,
+                    &crate::sculpt::Budget::default(),
+                    &mut cancelled,
+                )?;
+                geometry_builds += usize::from(!report.basis_reused);
+                sculpt_evaluations.push((e.id, report));
+                geometry
+            } else if let Some(g) = self.cache.get(key) {
                 g.clone()
             } else {
-                let mut uv_attributes = mesh
-                    .attributes
-                    .values()
-                    .filter(|a| a.semantic == "uv")
-                    .map(|a| a.id)
-                    .collect::<Vec<_>>();
-                // Keep the explicit default in slot zero for unnamed bindings
-                // and interchange. Legacy meshes retain their original name order.
-                uv_attributes.sort_by_key(|id| Some(*id) != mesh.default_uv_attribute);
-                if uv_attributes.len() > 8 {
-                    return Err(Error::new(
-                        "budget",
-                        "render geometry supports at most eight UV attributes",
-                    ));
-                }
-                let triangles = mesh
-                    .triangles()?
-                    .iter()
-                    .map(|c| {
-                        fn values(
-                            mesh: &crate::geometry::Mesh,
-                            semantic: &str,
-                            c: &[u32; 3],
-                        ) -> Result<Option<[DVec3; 3]>> {
-                            use crate::geometry::*;
-                            let Some(attribute) =
-                                mesh.attributes.values().find(|a| a.semantic == semantic)
-                            else {
-                                return Ok(None);
-                            };
-                            let AttributeValues::Vec3(values) = &attribute.values else {
-                                return Err(Error::new(
-                                    "attribute",
-                                    "shading vector requires vec3",
-                                ));
-                            };
-                            let mut out = [DVec3::ZERO; 3];
-                            for (j, &corner) in c.iter().enumerate() {
-                                let index = match attribute.domain {
-                                    Domain::Point => mesh.corners[corner as usize].vertex as usize,
-                                    Domain::Corner => corner as usize,
-                                    _ => {
-                                        return Err(Error::new(
-                                            "attribute",
-                                            "shading vector requires point/corner domain",
-                                        ));
-                                    }
-                                };
-                                out[j] = Vec3::from_array(values[index]).as_dvec3();
-                                if out[j].length_squared() < 1e-20 {
-                                    return Err(Error::new("attribute", "zero shading vector"));
-                                }
-                            }
-                            Ok(Some(out))
-                        }
-                        let normals = values(&mesh, "normal", c)?;
-                        let tangents = if let Some(t) = values(&mesh, "tangent", c)? {
-                            let sign = mesh
-                                .attributes
-                                .values()
-                                .find(|a| a.semantic == "tangent_sign")
-                                .ok_or_else(|| Error::new("attribute", "tangent sign missing"))?;
-                            let crate::geometry::AttributeValues::Scalar(values) = &sign.values
-                            else {
-                                return Err(Error::new(
-                                    "attribute",
-                                    "tangent sign requires scalar",
-                                ));
-                            };
-                            let mut output = [glam::DVec4::ZERO; 3];
-                            for (j, &corner) in c.iter().enumerate() {
-                                let index = match sign.domain {
-                                    crate::geometry::Domain::Point => {
-                                        mesh.corners[corner as usize].vertex as usize
-                                    }
-                                    crate::geometry::Domain::Corner => corner as usize,
-                                    _ => {
-                                        return Err(Error::new("attribute", "tangent sign domain"));
-                                    }
-                                };
-                                if values[index].abs() != 1. {
-                                    return Err(Error::new(
-                                        "attribute",
-                                        "tangent sign must be -1 or 1",
-                                    ));
-                                }
-                                output[j] = t[j].extend(f64::from(values[index]));
-                            }
-                            Some(output)
-                        } else {
-                            None
-                        };
-                        Ok(Triangle {
-                            positions: c.map(|i| {
-                                mesh.positions.get(mesh.corners[i as usize].vertex as usize)
-                            }),
-                            uv: c.map(|i| mesh.uv(i as usize)),
-                            colors: if mesh.color_attribute().is_some() {
-                                Some([
-                                    mesh.color_rgba(c[0] as usize)?,
-                                    mesh.color_rgba(c[1] as usize)?,
-                                    mesh.color_rgba(c[2] as usize)?,
-                                ])
-                            } else {
-                                None
-                            },
-                            normals,
-                            tangents,
-                            uv_sets: uv_attributes
-                                .iter()
-                                .map(|id| {
-                                    let values = mesh.uv_values(*id)?;
-                                    Ok(c.map(|i| Vec2::from_array(values[i as usize])))
-                                })
-                                .collect::<Result<Vec<_>>>()?,
-                        })
-                    })
-                    .collect::<Result<Vec<_>>>()?;
-                let bvh = Bvh::build(&triangles.iter().map(Triangle::bounds).collect::<Vec<_>>());
-                let g = Arc::new(Geometry {
-                    triangles: triangles.into(),
-                    bvh,
-                    uv_attributes,
-                    color_attribute: mesh.color_attribute().map(|a| a.id),
-                });
+                let g = Arc::new(Geometry::from_mesh(&mesh)?);
                 self.cache.insert(key.clone(), g.clone());
                 geometry_builds += 1;
                 g
@@ -510,7 +534,7 @@ impl Evaluator {
             instances.push(Instance {
                 id: e.id,
                 geometry,
-                geometry_id: key.clone(),
+                geometry_id: sculpt_key.unwrap_or(key).clone(),
                 transform,
                 inverse,
                 material,
@@ -526,11 +550,19 @@ impl Evaluator {
             media_assets.push((*id, s.volume_assets[key].as_ref(), s.world_transform(*id)?));
         }
         let media = crate::volumes::Media::build(media_assets, &mut cancelled)?;
+        if !sculpt_evaluations.is_empty() && cancelled() {
+            return Err(Error::new(
+                "cancelled",
+                "sculpt scene evaluation cancelled before cache publication",
+            ));
+        }
+        self.sculpt = sculpt_cache;
         Ok(Scene {
             revision,
             instances,
             bvh,
             geometry_builds,
+            sculpt_evaluations,
             conversions: conversions.into_values().collect(),
             media,
             displacements: displacements.into_values().collect(),

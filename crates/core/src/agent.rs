@@ -31,6 +31,9 @@ pub enum Operation {
     QueryGeometry {
         request: geometry_query::Request,
     },
+    AuthorSculpt {
+        request: sculpt::Request,
+    },
     AuthorPaint {
         request: painting::Request,
     },
@@ -169,6 +172,7 @@ pub struct Session {
     document: Document,
     branches: BTreeMap<String, Branch>,
     spatial_queries: geometry_query::Cache,
+    sculpt_cache: sculpt::Cache,
 }
 /// Includes geometry, hierarchy, instances, material assignments, layers, camera,
 /// textures and BRDF profile. Only color/emission and lighting are removed.
@@ -221,6 +225,7 @@ impl Session {
             document,
             branches: BTreeMap::new(),
             spatial_queries: geometry_query::Cache::default(),
+            sculpt_cache: sculpt::Cache::default(),
         }
     }
     pub fn document(&self) -> &Document {
@@ -316,7 +321,7 @@ impl Session {
         self.record_render(principal, name, &image)
     }
     pub fn render_root_cpu(
-        &self,
+        &mut self,
         revision: &str,
         mut cancel: impl FnMut() -> bool,
     ) -> Result<Value> {
@@ -339,11 +344,18 @@ impl Session {
                 "extended root CPU profile: 256 squared, 64 samples, 192 entities, 8 MiB snapshot",
             ));
         }
-        let scene = Evaluator::default().evaluate_with_cancel(snapshot, &mut cancel)?;
-        let image = render(&scene, settings, cancel)?;
-        Ok(
-            json!({"receipt":image.receipt,"conversions":scene.conversions,"displacements":scene.displacements,"inspection":{"visible_pixels":image.objects.iter().filter(|id|id.is_some()).count()},"passes":{"linear_rgb":image.linear,"depth_meters":image.depth,"normals_world":image.normals,"object_ids":image.objects}}),
-        )
+        let mut evaluator = Evaluator::with_sculpt_cache(self.sculpt_cache.clone());
+        let scene = evaluator.evaluate_with_cancel(snapshot, &mut cancel)?;
+        let image = render(&scene, settings, &mut cancel)?;
+        if cancel() {
+            return Err(Error::new("cancelled", "root render cancelled"));
+        }
+        let mut result = json!({"receipt":image.receipt,"conversions":scene.conversions,"displacements":scene.displacements,"inspection":{"visible_pixels":image.objects.iter().filter(|id|id.is_some()).count()},"passes":{"linear_rgb":image.linear,"depth_meters":image.depth,"normals_world":image.normals,"object_ids":image.objects}});
+        if !scene.sculpt_evaluations.is_empty() {
+            result["sculpt_evaluations"] = serde_json::to_value(&scene.sculpt_evaluations)?;
+        }
+        self.sculpt_cache = evaluator.into_sculpt_cache();
+        Ok(result)
     }
     pub fn preview_at(
         &self,
@@ -493,6 +505,27 @@ impl Session {
                 &request,
                 &mut cancelled,
             )?)?),
+            AuthorSculpt { request } => {
+                let prepared =
+                    sculpt::prepare(&self.document, principal, &request, &mut cancelled)?;
+                let receipt =
+                    if let Some(receipt) = self.document.retry(principal, &prepared.transaction)? {
+                        receipt
+                    } else {
+                        let candidate = self.document.prepare(principal, &prepared.transaction)?;
+                        profile(candidate.snapshot())?;
+                        Evaluator::default()
+                            .evaluate_with_cancel(candidate.snapshot(), &mut cancelled)?;
+                        if cancelled() {
+                            return Err(Error::new(
+                                "cancelled",
+                                "sculpt cancelled before publication",
+                            ));
+                        }
+                        self.document.commit(candidate)?
+                    };
+                Ok(json!({"receipt":receipt,"report":prepared.report}))
+            }
             AuthorPaint { request } => {
                 let prepared =
                     painting::prepare(&self.document, principal, &request, &mut cancelled)?;
@@ -846,7 +879,7 @@ impl Session {
                 b.rendered = None;
                 Ok(serde_json::to_value(receipt)?)
             }
-            RenderRootCpu { revision } => self.render_root_cpu(&revision, || false),
+            RenderRootCpu { revision } => self.render_root_cpu(&revision, &mut cancelled),
             PreviewProducts { branch, revision } => {
                 let (snapshot, _) = self.render_input(principal, &branch, &revision)?;
                 let products = crate::products::render_products(&snapshot, &revision, || false)?;
@@ -913,7 +946,8 @@ impl Session {
     ) -> Result<Value> {
         let root_mutation = matches!(
             &request.operation,
-            Operation::AuthorPaint { .. }
+            Operation::AuthorSculpt { .. }
+                | Operation::AuthorPaint { .. }
                 | Operation::BakePaint { .. }
                 | Operation::AuthorUv { .. }
                 | Operation::ImportBlend { .. }
@@ -971,6 +1005,7 @@ impl Session {
 /// Stable names/versions and effects are reviewed independently of Session layout.
 pub fn registry() -> Vec<crate::api::Operation> {
     [
+        ("agent.author_sculpt",true,"replace sparse stable-point displacements and compare-replace an entity sculpt asset","bounded preparation and before atomic publication; synchronous browser admission"),
         ("agent.query_geometry",false,"read-only stable-ID sphere or nearest-surface queries on a pinned local mesh asset","admission, bounded build phases, every visited node/item and before cache publication"),
         ("agent.import_blend",true,"bounded uncompressed Blender293 static scene with exact inert source preservation and explicit material/point-light approximations","decode, evaluation and before atomic publication; synchronous browser dispatch"),
         ("agent.export_source",false,"export exact original source bytes at a pinned revision; does not apply native edits to source","before source access and delivery"),

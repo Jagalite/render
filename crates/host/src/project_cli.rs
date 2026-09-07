@@ -132,6 +132,9 @@ enum Operation {
     Apply {
         request: document::Request,
     },
+    AuthorSculpt {
+        request: Box<sculpt::Request>,
+    },
     AuthorPaint {
         request: Box<painting::Request>,
     },
@@ -561,6 +564,20 @@ fn execute(root: &Path, operation: Operation, control: &mut Control) -> Result<V
                 &request,
             )?;
             Ok(json!({"receipt":receipt}))
+        }
+        Operation::AuthorSculpt { request } => {
+            let prepared = sculpt::prepare(&doc, &principal(), &request, || control.cancelled())?;
+            control.check()?;
+            let receipt = durable_execute(
+                &mut CancellableStore {
+                    store: &mut store,
+                    control,
+                },
+                &mut doc,
+                &principal(),
+                &prepared.transaction,
+            )?;
+            Ok(json!({"receipt":receipt,"report":prepared.report}))
         }
         Operation::AuthorPaint { request } => {
             let prepared = painting::prepare(&doc, &principal(), &request, || control.cancelled())?;

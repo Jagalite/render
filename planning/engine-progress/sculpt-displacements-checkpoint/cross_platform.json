@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "native_wasm_cpu_pixels_passes_identical": true,
+  "browser_cpu_gpu_rmse": 1.0942266186310717e-08,
+  "metal_webgpu_max_channel_error": 8.940696716308594e-08,
+  "gpu_pass_comparisons": [
+    {
+      "backend": "metal",
+      "depth_max_error": 7.152557373046875e-07,
+      "normal_max_error": 5.960464477539063e-08,
+      "object_ids_identical": true
+    },
+    {
+      "backend": "webgpu",
+      "depth_max_error": 7.152557373046875e-07,
+      "normal_max_error": 5.960464477539063e-08,
+      "object_ids_identical": true
+    }
+  ]
+}

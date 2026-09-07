@@ -142,7 +142,7 @@ fn displacement_loose_data_and_root_evaluation_cancellation() {
     );
     let document = feature_fixtures::surface_document().unwrap();
     let revision = document.snapshot().revision().unwrap();
-    let session = agent::Session::new(document);
+    let mut session = agent::Session::new(document);
     assert_eq!(
         session
             .render_root_cpu(&revision, || true)

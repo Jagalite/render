@@ -1,0 +1,114 @@
+{
+  "status": "passed",
+  "observations": [
+    {
+      "phase": "cold",
+      "portable": {
+        "base_mesh": "sha256:b0d2535265101adcedaf177a93450183527024d25584ce59245b317c6301cfe6",
+        "basis_byte_charge": 3555520,
+        "basis_point_map_entries": 1089,
+        "basis_reused": false,
+        "built_points": 1089,
+        "built_triangles": 2048,
+        "changed_points": 0,
+        "changed_triangles": 0,
+        "compared_block_references": 0,
+        "compared_sparse_entries": 0,
+        "copy_byte_charge": 1536,
+        "exact_geometry_reused": false,
+        "global_snapshot_admission": true,
+        "instance_bound_vertices_scanned": 6144,
+        "leaf_triangle_bounds": 0,
+        "node_chunks_copied": 0,
+        "node_elements_cloned": 0,
+        "node_root_references_copied": 0,
+        "refit_leaves": 0,
+        "refit_nodes": 0,
+        "retained_chunk_references": 0,
+        "retained_chunk_references_copied": 0,
+        "source_asset": "sha256:a68a8e7f14695428d4874c397b568f2306b8ba4aeef4595fb7ddffe6912dd4ec",
+        "triangle_chunks_copied": 0,
+        "triangle_elements_cloned": 0,
+        "triangle_root_references_copied": 0
+      },
+      "layouts": {
+        "basis_geometry_layout_bytes": {
+          "native": 852784,
+          "wasm": 827792
+        },
+        "basis_nested_layout_bytes": {
+          "native": 16384,
+          "wasm": 8192
+        },
+        "basis_mapping_layout_bytes": {
+          "native": 173640,
+          "wasm": 86820
+        },
+        "current_geometry_layout_bytes": {
+          "native": 852784,
+          "wasm": 827792
+        },
+        "current_nested_layout_bytes": {
+          "native": 16384,
+          "wasm": 8192
+        }
+      }
+    },
+    {
+      "phase": "warm",
+      "portable": {
+        "base_mesh": "sha256:b0d2535265101adcedaf177a93450183527024d25584ce59245b317c6301cfe6",
+        "basis_byte_charge": 3555520,
+        "basis_point_map_entries": 1089,
+        "basis_reused": true,
+        "built_points": 0,
+        "built_triangles": 0,
+        "changed_points": 1,
+        "changed_triangles": 6,
+        "compared_block_references": 1,
+        "compared_sparse_entries": 1,
+        "copy_byte_charge": 273152,
+        "exact_geometry_reused": false,
+        "global_snapshot_admission": true,
+        "instance_bound_vertices_scanned": 6144,
+        "leaf_triangle_bounds": 16,
+        "node_chunks_copied": 8,
+        "node_elements_cloned": 512,
+        "node_root_references_copied": 16,
+        "refit_leaves": 4,
+        "refit_nodes": 35,
+        "retained_chunk_references": 1,
+        "retained_chunk_references_copied": 1,
+        "source_asset": "sha256:8264c841bde2c3e78b0b60e0906548ece35e929f71c7ffb4ff7bbd53903ca995",
+        "triangle_chunks_copied": 2,
+        "triangle_elements_cloned": 128,
+        "triangle_root_references_copied": 32
+      },
+      "layouts": {
+        "basis_geometry_layout_bytes": {
+          "native": 852784,
+          "wasm": 827792
+        },
+        "basis_nested_layout_bytes": {
+          "native": 16384,
+          "wasm": 8192
+        },
+        "basis_mapping_layout_bytes": {
+          "native": 173640,
+          "wasm": 86820
+        },
+        "current_geometry_layout_bytes": {
+          "native": 852784,
+          "wasm": 827792
+        },
+        "current_nested_layout_bytes": {
+          "native": 16384,
+          "wasm": 8192
+        }
+      }
+    }
+  ],
+  "shared_triangle_chunks": 30,
+  "shared_node_chunks": 8,
+  "scope": "separate basis/current layouts can share chunks; excludes allocator and Arc headers, private map allocations, source and global admission temporaries"
+}

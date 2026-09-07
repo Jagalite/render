@@ -11,6 +11,34 @@ pub struct Operation {
 pub fn registry() -> Vec<Operation> {
     let mut operations = vec![
         Operation {
+            name: "author_sculpt",
+            version: 0,
+            mutation: true,
+            effects: "replace bounded stable-point displacements through ordinary transactions",
+            cancellation: "bounded preparation and before publication; synchronous browser admission",
+        },
+        Operation {
+            name: "put_sculpt_chunk",
+            version: 0,
+            mutation: true,
+            effects: "retain a typed immutable sparse displacement block in snapshot19",
+            cancellation: "bounded preparation and before publication; synchronous browser admission",
+        },
+        Operation {
+            name: "put_sculpt_asset",
+            version: 0,
+            mutation: true,
+            effects: "retain typed displacement block references over an immutable triangle mesh",
+            cancellation: "bounded preparation and before publication; synchronous browser admission",
+        },
+        Operation {
+            name: "set_sculpt",
+            version: 0,
+            mutation: true,
+            effects: "compare-replace or remove an entity sculpt binding",
+            cancellation: "bounded preparation and before publication; synchronous browser admission",
+        },
+        Operation {
             name: "query_geometry",
             version: 0,
             mutation: false,

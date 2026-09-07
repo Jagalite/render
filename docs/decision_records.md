@@ -640,3 +640,35 @@ snapshot admission and GPU host packing still have global work. See
 No dependency or maintained shader change is intended. Qualification requires
 native and Wasm copy/cancellation tests, complete CLI/browser/GPU/OPFS workflows,
 byte-identical previous render outputs and explicit retained/temporary cost evidence.
+
+## ADR-041 — Sparse sculpt displacements retain an immutable base partition (candidate)
+
+**Decision:** Snapshot19 stores typed content-addressed f32 displacement blocks,
+assets and entity bindings. A block spans 64 stable point IDs encoded by a decimal
+block coordinate and bounded slot. Editing replaces absolute local-meter deltas
+through ordinary transactions; clearing a delta removes its sparse entry. The base
+mesh must be triangular and retains corner UV/color seams. This initial profile
+rejects authored shading frames and conflicting deformation/groom/displacement
+consumers, including material layer overrides and groom roots on sculpted anchors.
+
+**Evaluation ownership:** The existing Evaluator owns one disposable immutable base
+correspondence and current state. Changed triangles and affected BVH ancestors use
+runtime chunk replacement. Cold reconstruction uses the same base partition and
+bottom-up bound reduction as refits. Session root CPU rendering retains only this
+bounded sculpt cache, publishing it after successful rendering. The browser's
+ordinary agent dispatch uses the same core path. One-shot rendering and GPU preview
+still perform cold reconstruction. Source validation, canonical hashing, instance
+bounds and GPU host packing remain global work; no whole-pipeline locality claim.
+
+**Recovery and budgets:** The high-level operation checks cold reconstruction against
+its budget before returning a transaction, so successful edits do not require a
+previous process cache to reopen. Canonical snapshot admission is global, including
+retained older assets. Budget charges are portable upper allowances for named work;
+actual layout observations exclude allocator overhead and Arc allocation headers.
+Snapshots and older displacement chunks remain immutable. Version0..18 encodings
+must remain exact; older clients must reject version19 explicitly.
+
+**Status:** Unqualified candidate. Positive/negative native tests and public schema
+are in progress; full native/browser/GPU/recovery/resource and prior-artifact
+qualification are required. This does not complete brushes, masks, symmetry,
+multiresolution, remeshing, retopology or M10.

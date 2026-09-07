@@ -28,6 +28,7 @@ pub mod products;
 pub mod render;
 pub mod rigging;
 pub mod scattering;
+pub mod sculpt;
 pub mod sequence;
 pub mod source;
 pub mod storage;

@@ -313,6 +313,12 @@ pub struct Snapshot {
     #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
     pub paint_canvases: BTreeMap<Id, String>,
     #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub sculpt_chunks: crate::sculpt::ChunkMap,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub sculpt_assets: BTreeMap<String, Arc<crate::sculpt::Asset>>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub sculpt_bindings: BTreeMap<Id, String>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
     pub volume_bindings: BTreeMap<Id, String>,
     #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
     pub grooms: BTreeMap<Id, crate::groom::Groom>,
@@ -349,6 +355,9 @@ impl Snapshot {
             paint_tiles: BTreeMap::new(),
             paint_assets: BTreeMap::new(),
             paint_canvases: BTreeMap::new(),
+            sculpt_chunks: BTreeMap::new(),
+            sculpt_assets: BTreeMap::new(),
+            sculpt_bindings: BTreeMap::new(),
             volume_bindings: BTreeMap::new(),
             grooms: BTreeMap::new(),
             animation: None,
@@ -364,7 +373,11 @@ impl Snapshot {
         Ok(digest(&canonical(self)?))
     }
     pub fn validate(&self) -> Result<()> {
-        if self.version > 18
+        if self.version > 19
+            || (self.version < 19
+                && (!self.sculpt_chunks.is_empty()
+                    || !self.sculpt_assets.is_empty()
+                    || !self.sculpt_bindings.is_empty()))
             || (self.version < 18
                 && (!self.paint_tiles.is_empty()
                     || !self.paint_assets.is_empty()
@@ -704,6 +717,7 @@ impl Snapshot {
                 }
             }
         }
+        crate::sculpt::validate_snapshot(self)?;
         Ok(())
     }
     pub fn camera(&self, entity: Id) -> Result<crate::render::Camera> {
@@ -854,6 +868,18 @@ pub enum Command {
     SetGroom {
         entity: Id,
         groom: Option<crate::groom::Groom>,
+    },
+    PutSculptChunk {
+        chunk: crate::sculpt::Chunk,
+    },
+    PutSculptAsset {
+        asset: crate::sculpt::Asset,
+    },
+    SetSculpt {
+        entity: Id,
+        source_mesh: String,
+        source_asset: Option<String>,
+        asset: Option<String>,
     },
     PutPaintTile {
         tile: crate::painting::Tile,
@@ -1320,6 +1346,37 @@ fn apply(s: &mut Snapshot, c: &Command) -> Result<()> {
                 } else {
                     5
                 });
+        }
+        Command::PutSculptChunk { chunk } => {
+            s.sculpt_chunks
+                .insert(chunk.content_id()?, Arc::new(chunk.clone()));
+            s.version = s.version.max(19);
+        }
+        Command::PutSculptAsset { asset } => {
+            s.sculpt_assets
+                .insert(asset.content_id()?, Arc::new(asset.clone()));
+            s.version = s.version.max(19);
+        }
+        Command::SetSculpt {
+            entity: id,
+            source_mesh,
+            source_asset,
+            asset,
+        } => {
+            if entity(s, *id)?.mesh.as_ref() != Some(source_mesh)
+                || s.sculpt_bindings.get(id) != source_asset.as_ref()
+            {
+                return Err(Error::new(
+                    "stale_selection",
+                    "sculpt base mesh or asset changed",
+                ));
+            }
+            if let Some(key) = asset {
+                s.sculpt_bindings.insert(*id, key.clone());
+            } else {
+                s.sculpt_bindings.remove(id);
+            }
+            s.version = s.version.max(19);
         }
         Command::PutPaintTile { tile } => {
             s.paint_tiles

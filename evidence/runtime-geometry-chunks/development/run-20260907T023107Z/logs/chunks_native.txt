@@ -1,0 +1,14 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 17.89s
+     Running tests/runtime_geometry_chunks.rs (target/debug/deps/runtime_geometry_chunks-16a64e326a25d907)
+
+running 5 tests
+test only_touched_payloads_clone_and_old_versions_survive ... ok
+test invalid_and_every_cancel_checkpoint_leave_sources_unchanged ... ok
+test boundaries_and_bidirectional_iteration ... ok
+test evaluated_geometry_clones_share_payloads_and_preserve_render ... ok
+CHUNK_RESOURCE {"chunk_len":64,"node_chunks_copied":1,"node_elements_cloned":63,"node_nested_bytes_cloned":1024,"node_retained_layout_bytes":197048,"node_root_references_copied":32,"nodes":2047,"scope":"layout excludes Self, Arc headers, allocator overhead and nested allocations; nested copied payloads reported separately; node replacement is not refit","triangle_chunks_copied":1,"triangle_elements_cloned":64,"triangle_nested_bytes_cloned":3072,"triangle_retained_layout_bytes":1508376,"triangle_root_references_copied":64,"triangles":4096}
+test geometry_payload_copy_costs_include_nested_allocations ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+

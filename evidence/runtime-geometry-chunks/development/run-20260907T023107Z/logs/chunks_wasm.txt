@@ -1,0 +1,53 @@
+   Compiling cfg-if v1.0.4
+   Compiling simd-adler32 v0.3.10
+   Compiling typenum v1.20.1
+   Compiling adler2 v2.0.1
+   Compiling wasm-bindgen v0.2.104
+   Compiling unicode-ident v1.0.24
+   Compiling generic-array v0.14.7
+   Compiling wasm-bindgen-shared v0.2.104
+   Compiling num-traits v0.2.19
+   Compiling crc32fast v1.5.1
+   Compiling serde_core v1.0.228
+   Compiling miniz_oxide v0.9.1
+   Compiling once_cell v1.21.4
+   Compiling flate2 v1.1.10
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.7
+   Compiling miniz_oxide v0.8.9
+   Compiling fdeflate v0.3.7
+   Compiling zune-core v0.5.3
+   Compiling pxfm v0.1.30
+   Compiling bitflags v2.13.1
+   Compiling png v0.18.1
+   Compiling zune-jpeg v0.5.15
+   Compiling moxcms v0.8.1
+   Compiling libm v0.2.16
+   Compiling digest v0.10.7
+   Compiling js-sys v0.3.81
+   Compiling ryu v1.0.23
+   Compiling bytemuck v1.25.2
+   Compiling memchr v2.8.3
+   Compiling byteorder-lite v0.1.0
+   Compiling itoa v1.0.18
+   Compiling serde_json v1.0.145
+   Compiling wasm-bindgen-futures v0.4.54
+   Compiling image v0.25.10
+   Compiling serde v1.0.228
+   Compiling sha2 v0.10.9
+   Compiling glam v0.30.10
+   Compiling wasm-bindgen-test-macro v0.3.54
+   Compiling wasm-bindgen-test v0.3.54
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 27.99s
+     Running tests/runtime_geometry_chunks.rs (target/wasm32-unknown-unknown/debug/deps/runtime_geometry_chunks-5690cc16a776eeef.wasm)
+Executing bindgen...                                                                                running 5 tests
+test only_touched_payloads_clone_and_old_versions_survive ... ok
+test invalid_and_every_cancel_checkpoint_leave_sources_unchanged ... ok
+test geometry_payload_copy_costs_include_nested_allocations ... ok
+test evaluated_geometry_clones_share_payloads_and_preserve_render ... ok
+test boundaries_and_bidirectional_iteration ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.07s
+
+                                                  

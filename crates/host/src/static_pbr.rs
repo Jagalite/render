@@ -197,12 +197,19 @@ fn sampler_camera_matrix(
     let mut scene = scene.clone();
     for instance in &mut scene.instances {
         let geometry = std::sync::Arc::make_mut(&mut instance.geometry);
-        for triangle in &mut geometry.triangles {
-            for uv in &mut triangle.uv {
-                uv.x = uv.x * 4. - 1.;
-                uv.y = uv.y * 4. - 1.;
-            }
-        }
+        geometry.triangles = geometry
+            .triangles
+            .iter()
+            .cloned()
+            .map(|mut triangle| {
+                for uv in &mut triangle.uv {
+                    uv.x = uv.x * 4. - 1.;
+                    uv.y = uv.y * 4. - 1.;
+                }
+                triangle
+            })
+            .collect::<Vec<_>>()
+            .into();
     }
     let mut cases = vec![];
     for (lens_index, lens) in [

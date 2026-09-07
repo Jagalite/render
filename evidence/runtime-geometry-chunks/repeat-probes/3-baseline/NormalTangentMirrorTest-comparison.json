@@ -1,0 +1,65 @@
+{
+  "asset": "NormalTangentMirrorTest",
+  "cpu_receipt": {
+    "approximation": "single-scattering GGX/Schlick/Smith; roughness >=0.05; one bounce; diffuse/GGX mixture PDF; mipmapped textures; geometric visibility with mapped shading normals",
+    "backend": "cpu-f64-pbr-v0",
+    "color_space": "linear-sRGB",
+    "height": 64,
+    "output_digest": "sha256:b41d0fe053608d0e6df6e9eb2bf4669f11a067a9a85901454a4cde4e5b6e5c49",
+    "revision": "sha256:5f6d6250fb507a9389dbea45ae1f98a09c873e06eab8d2d6ff760296ac835376",
+    "samples": 32,
+    "seed": 42,
+    "settings_digest": "sha256:1a86712cf67cddabf5a3a0bf7388c03c62a779946e19e7db133b6e4416748bb4",
+    "width": 64
+  },
+  "cpu_seconds": 0.976329875,
+  "encoded_snapshot_bytes": 6772087,
+  "gpu_packed_bytes": 135505344,
+  "gpu_receipt": {
+    "approximation": "single-scattering GGX; roughness >=0.05; one bounce; primary UV-differential mipmaps; RGBA16 texture precision; start sample 0; camera-relative f32",
+    "backend": "gpu-f32-pbr-v0/Metal",
+    "color_space": "linear-sRGB",
+    "height": 64,
+    "output_digest": "sha256:7aa7ad7da4dc1bbbcad485140c38b3bf3bd38092ab1c07ae3b2735fe4474708e",
+    "revision": "sha256:5f6d6250fb507a9389dbea45ae1f98a09c873e06eab8d2d6ff760296ac835376",
+    "samples": 32,
+    "seed": 42,
+    "settings_digest": "sha256:1a86712cf67cddabf5a3a0bf7388c03c62a779946e19e7db133b6e4416748bb4",
+    "width": 64
+  },
+  "gpu_seconds": 2.8993712499999997,
+  "image_count": 3,
+  "import": {
+    "receipt": {
+      "base_revision": "sha256:d0c8a084ec8cc0b2c25098a4187f2942763b67c21193c0e38944e1ef19f50179",
+      "command_count": 9,
+      "delta_digest": "sha256:adb7b8e10c9e2f1b062be5358861e6a7205cb3c3f0de6bddd5db169a709f7251",
+      "document_id": "00000000000000000000000000000321",
+      "durable": true,
+      "revision": "sha256:5f6d6250fb507a9389dbea45ae1f98a09c873e06eab8d2d6ff760296ac835376"
+    },
+    "report": {
+      "instances": 1,
+      "losses": [
+        "Single-scattering GGX, roughness regularized to >=0.05; missing tangents use a per-triangle UV basis, not MikkTSpace seam smoothing. OPAQUE alpha is ignored as specified by glTF.",
+        "Node names are retained; extras and generator metadata are not authored components. Only the selected scene is imported."
+      ],
+      "profile": "gltf2-static-pbr-v0",
+      "source_digest": "sha256:cfc29684390a04448b93dd7728be0bd7f55b2e4dfb4005460628534e18477141",
+      "source_materials": {
+        "0": "c7d7439f4f5e7e9e2d3b79ff65f3e679"
+      },
+      "source_nodes": {
+        "0": "20c4c73ab225a0a03b0c89dcc7111f7e"
+      },
+      "unique_meshes": 1
+    }
+  },
+  "linear_rmse": 0.010337527515960456,
+  "normal_rmse": 0.00004193456454493642,
+  "object_mismatches": 0,
+  "revision": "sha256:5f6d6250fb507a9389dbea45ae1f98a09c873e06eab8d2d6ff760296ac835376",
+  "source_sha256": "sha256:31ce5f3c873fc55531a17ccacf001e3d1d482a508695aa826fa79cc196e0ce78",
+  "triangles": 5240,
+  "visible_pixels": 1663
+}

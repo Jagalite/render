@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "scope": "Four additional alternating whole-process probes after an initial candidate/baseline pair. GPU/OS allocation and timing are uncontrolled; all reference outputs must remain exact.",
+  "samples": [
+    {
+      "package": "baseline",
+      "sha256": "1ffbfd681b61133ca47c3c901ae56436920078504ed2df3f463af13ccc6650a8",
+      "resident_bytes": 1030733824,
+      "footprint_bytes": 1264357696,
+      "seconds": 45.708057958,
+      "reference_files_exact": 26
+    },
+    {
+      "package": "candidate",
+      "sha256": "a419368056efe7694dccca8f13e92e9f796eaadc1fba2c4ec875a497bf9ece49",
+      "resident_bytes": 1007091712,
+      "footprint_bytes": 1687868480,
+      "seconds": 49.863017875,
+      "reference_files_exact": 26
+    },
+    {
+      "package": "candidate",
+      "sha256": "a419368056efe7694dccca8f13e92e9f796eaadc1fba2c4ec875a497bf9ece49",
+      "resident_bytes": 1133789184,
+      "footprint_bytes": 1683559424,
+      "seconds": 48.643998375,
+      "reference_files_exact": 26
+    },
+    {
+      "package": "baseline",
+      "sha256": "1ffbfd681b61133ca47c3c901ae56436920078504ed2df3f463af13ccc6650a8",
+      "resident_bytes": 915079168,
+      "footprint_bytes": 1680184256,
+      "seconds": 52.886408166,
+      "reference_files_exact": 26
+    }
+  ]
+}

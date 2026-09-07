@@ -5,8 +5,8 @@ working on feasible remaining steps. M09 interactive editor remains deferred.
 Each completed increment requires implementation, native/browser workflow evidence,
 negative/cancellation/stale checks, resource/provenance records and documentation.
 
-Current completed increment: revision-pinned mesh spatial queries and ordinary placement; evidence/spatial-queries.
-Next engine subgate: sparse sculpt displacement/mask chunks and affected-region geometry evaluation.
+Current completed increment: immutable evaluated geometry chunks; evidence/runtime-geometry-chunks.
+Next engine subgate: bounded BVH refit correspondence, then sparse sculpt displacement/mask authoring and affected-region evaluation.
 
 | Order | Increment | Status |
 |---|---|---|
@@ -176,3 +176,12 @@ exactly. High-ID archive/OPFS recovery, one-index eviction, aggregate polygon-wo
 admission and numerical underflow regressions pass. All 1992
 prior render/pass/receipt artifacts and 213 fixtures are unchanged,
 with no Cargo/dependency/shader changes. Whole snapshot validation remains global.
+
+Runtime geometry storage prerequisite: 99 checks, 232 native
+and 203 Wasm tests. A one-triangle replacement in 4,096 triangles
+copies 64 payloads and 64 root references, with 3,072 bytes of nested UV data.
+Native/Wasm portable counts agree. All 2004 earlier rendered
+artifacts and 216 fixtures remain exact; an additional 26
+sampler probe artifacts match the qualified old binary. Query answers and portable
+budgets are unchanged; retained layout observations reflect chunks. No dependency
+or shader change. Refitting, sculpting, global admission and host packing remain open.

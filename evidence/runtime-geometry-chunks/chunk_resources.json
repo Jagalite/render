@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "scope": "4096 generated triangles, 2047 BVH nodes; copy/storage prerequisite only, no refit or sculpt operation; full admission and host GPU packing remain global",
+  "portable_counts_equal": true,
+  "observations": {
+    "native": {
+      "chunk_len": 64,
+      "node_chunks_copied": 1,
+      "node_elements_cloned": 63,
+      "node_nested_bytes_cloned": 1024,
+      "node_retained_layout_bytes": 197048,
+      "node_root_references_copied": 32,
+      "nodes": 2047,
+      "scope": "layout excludes Self, Arc headers, allocator overhead and nested allocations; nested copied payloads reported separately; node replacement is not refit",
+      "triangle_chunks_copied": 1,
+      "triangle_elements_cloned": 64,
+      "triangle_nested_bytes_cloned": 3072,
+      "triangle_retained_layout_bytes": 1508376,
+      "triangle_root_references_copied": 64,
+      "triangles": 4096
+    },
+    "wasm": {
+      "chunk_len": 64,
+      "node_chunks_copied": 1,
+      "node_elements_cloned": 63,
+      "node_nested_bytes_cloned": 512,
+      "node_retained_layout_bytes": 147652,
+      "node_root_references_copied": 32,
+      "nodes": 2047,
+      "scope": "layout excludes Self, Arc headers, allocator overhead and nested allocations; nested copied payloads reported separately; node replacement is not refit",
+      "triangle_chunks_copied": 1,
+      "triangle_elements_cloned": 64,
+      "triangle_nested_bytes_cloned": 3072,
+      "triangle_retained_layout_bytes": 1507852,
+      "triangle_root_references_copied": 64,
+      "triangles": 4096
+    }
+  }
+}

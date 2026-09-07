@@ -1,7 +1,9 @@
+pub mod chunks;
 use crate::{
     Error, Id, Result, canonical, digest,
     document::{Material, Snapshot},
 };
+use chunks::Chunks;
 use glam::{DAffine3, DVec3, Vec2, Vec3};
 use serde::{Deserialize, Serialize};
 use std::{collections::BTreeMap, sync::Arc};
@@ -104,16 +106,54 @@ pub struct Node {
 }
 #[derive(Clone, Debug, Default)]
 pub struct Bvh {
-    pub nodes: Vec<Node>,
+    pub nodes: Chunks<Node>,
 }
 impl Bvh {
     pub fn build(bounds: &[Bounds]) -> Self {
-        let mut b = Self::default();
-        if !bounds.is_empty() {
-            b.build_node((0..bounds.len()).collect(), bounds);
-        }
-        b
+        Self::build_with_compaction(bounds, false)
     }
+    pub(crate) fn build_compact(bounds: &[Bounds]) -> Self {
+        Self::build_with_compaction(bounds, true)
+    }
+    fn build_with_compaction(bounds: &[Bounds], compact: bool) -> Self {
+        let mut builder = BvhBuilder { nodes: Vec::new() };
+        if !bounds.is_empty() {
+            builder.build_node((0..bounds.len()).collect(), bounds);
+        }
+        if compact {
+            for node in &mut builder.nodes {
+                node.items.shrink_to_fit();
+            }
+        }
+        Self {
+            nodes: builder.nodes.into(),
+        }
+    }
+    pub fn candidates(&self, ray: Ray, tmin: f64, tmax: f64) -> Vec<usize> {
+        if self.nodes.is_empty() {
+            return vec![];
+        }
+        let mut stack = vec![0];
+        let mut out = vec![];
+        while let Some(i) = stack.pop() {
+            let n = &self.nodes[i];
+            if !n.bounds.hit(ray, tmin, tmax) {
+                continue;
+            }
+            if let Some([a, b]) = n.children {
+                stack.push(b);
+                stack.push(a);
+            } else {
+                out.extend(&n.items);
+            }
+        }
+        out
+    }
+}
+struct BvhBuilder {
+    nodes: Vec<Node>,
+}
+impl BvhBuilder {
     fn build_node(&mut self, mut ids: Vec<usize>, bounds: &[Bounds]) -> usize {
         let mut box_ = Bounds::empty();
         for &i in &ids {
@@ -147,30 +187,10 @@ impl Bvh {
         }
         index
     }
-    pub fn candidates(&self, ray: Ray, tmin: f64, tmax: f64) -> Vec<usize> {
-        if self.nodes.is_empty() {
-            return vec![];
-        }
-        let mut stack = vec![0];
-        let mut out = vec![];
-        while let Some(i) = stack.pop() {
-            let n = &self.nodes[i];
-            if !n.bounds.hit(ray, tmin, tmax) {
-                continue;
-            }
-            if let Some([a, b]) = n.children {
-                stack.push(b);
-                stack.push(a);
-            } else {
-                out.extend(&n.items);
-            }
-        }
-        out
-    }
 }
 #[derive(Clone, Debug)]
 pub struct Geometry {
-    pub triangles: Vec<Triangle>,
+    pub triangles: Chunks<Triangle>,
     pub bvh: Bvh,
     pub uv_attributes: Vec<Id>,
     pub color_attribute: Option<Id>,
@@ -447,7 +467,7 @@ impl Evaluator {
                     .collect::<Result<Vec<_>>>()?;
                 let bvh = Bvh::build(&triangles.iter().map(Triangle::bounds).collect::<Vec<_>>());
                 let g = Arc::new(Geometry {
-                    triangles,
+                    triangles: triangles.into(),
                     bvh,
                     uv_attributes,
                     color_attribute: mesh.color_attribute().map(|a| a.id),

@@ -1,0 +1,38 @@
+{
+  "status": "observed",
+  "scope": "Three whole-process samples per binary with GPU/OS allocation variability. Resident and timing ranges overlap; candidate footprint remained higher in these samples, with cause unisolated. No equivalence, memory or speed improvement claim.",
+  "ranges": [
+    {
+      "package": "baseline",
+      "samples": 3,
+      "resident_range": [
+        915079168,
+        1227456512
+      ],
+      "footprint_range": [
+        1264357696,
+        1681904576
+      ],
+      "seconds_range": [
+        44.309823084,
+        52.886408166
+      ]
+    },
+    {
+      "package": "candidate",
+      "samples": 3,
+      "resident_range": [
+        1007091712,
+        1482899456
+      ],
+      "footprint_range": [
+        1683559424,
+        1799148800
+      ],
+      "seconds_range": [
+        44.582046584,
+        49.863017875
+      ]
+    }
+  ]
+}

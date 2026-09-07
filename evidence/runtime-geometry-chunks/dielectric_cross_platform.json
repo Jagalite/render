@@ -1,0 +1,313 @@
+{
+  "status": "passed",
+  "comparisons": [
+    {
+      "case": "dielectric-single",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "dielectric-single",
+      "browser": "gpu",
+      "linear_rmse": 6.158711618693709e-08,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "dielectric-slab",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "dielectric-slab",
+      "browser": "gpu",
+      "linear_rmse": 1.4759626489622542e-07,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "dielectric-tilted",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "dielectric-tilted",
+      "browser": "gpu",
+      "linear_rmse": 6.158711618693709e-08,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "dielectric-named-mask",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "dielectric-named-mask",
+      "browser": "gpu",
+      "linear_rmse": 1.8505410589875376e-05,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "dielectric-named-blend",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "dielectric-named-blend",
+      "browser": "gpu",
+      "linear_rmse": 1.0211492078033053e-05,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "dielectric-morph",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "dielectric-morph",
+      "browser": "gpu",
+      "linear_rmse": 3.262625689217006e-05,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-single-ior1",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-single-ior1",
+      "browser": "gpu",
+      "linear_rmse": 3.4412757706023796e-08,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-single-ior1_5",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-single-ior1_5",
+      "browser": "gpu",
+      "linear_rmse": 2.8855974571462102e-08,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-single-ior3",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-single-ior3",
+      "browser": "gpu",
+      "linear_rmse": 4.433982340335132e-09,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-slab-ior1",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-slab-ior1",
+      "browser": "gpu",
+      "linear_rmse": 3.4412757706023796e-08,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-slab-ior1_5",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-slab-ior1_5",
+      "browser": "gpu",
+      "linear_rmse": 4.2146848510894035e-08,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-slab-ior3",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-slab-ior3",
+      "browser": "gpu",
+      "linear_rmse": 1.9237316380974734e-08,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-tilted-frame",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-tilted-frame",
+      "browser": "gpu",
+      "linear_rmse": 2.8855974571462102e-08,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-mirror-x",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-mirror-x",
+      "browser": "gpu",
+      "linear_rmse": 2.8855974571462102e-08,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-mirror-z",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-mirror-z",
+      "browser": "gpu",
+      "linear_rmse": 1.3765103082409519e-07,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-snell",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-snell",
+      "browser": "gpu",
+      "linear_rmse": 2.8855974571462102e-08,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-tir",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-tir",
+      "browser": "gpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-grazing",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-grazing",
+      "browser": "gpu",
+      "linear_rmse": 6.083373583314762e-09,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-near-clipped",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-near-clipped",
+      "browser": "gpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-far-clipped",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-far-clipped",
+      "browser": "gpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-mask-clear",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-mask-clear",
+      "browser": "gpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-blend-half",
+      "browser": "cpu",
+      "linear_rmse": 0.0,
+      "exact_cpu_pixels": true,
+      "object_mismatches": 0
+    },
+    {
+      "case": "analytic-blend-half",
+      "browser": "gpu",
+      "linear_rmse": 3.4412757706023796e-08,
+      "exact_cpu_pixels": false,
+      "object_mismatches": 0
+    }
+  ]
+}

@@ -385,6 +385,12 @@
           "status": "validated_experimental_profile",
           "scope": "read_only_mesh_query_prerequisite_for_sculpting_and_retopology",
           "evidence": "evidence/spatial-queries/README.md"
+        },
+        {
+          "id": "runtime-geometry-chunks",
+          "status": "validated_experimental_profile",
+          "scope": "immutable_evaluated_storage_prerequisite; no_refit_or_sculpt_claim",
+          "evidence": "evidence/runtime-geometry-chunks/README.md"
         }
       ],
       "remaining": "Projected painting and broader baking, sculpting, masks/face sets/symmetry, multiresolution, remesh, retopology and the deferred M09 interactive demonstration."

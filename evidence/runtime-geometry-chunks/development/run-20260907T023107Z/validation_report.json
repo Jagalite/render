@@ -1,0 +1,112 @@
+{
+  "status": "failed",
+  "scope": "macOS ARM64 CPU/Metal, Rust Wasm in Node, Chrome WebGPU/OPFS; Linux and Windows compile only",
+  "checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5739162090000036,
+      "log": "logs/format.txt"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 4.579870625000012,
+      "log": "logs/clippy.txt"
+    },
+    {
+      "name": "browser_clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "-p",
+        "render-web",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 37.85590108400004,
+      "log": "logs/browser_clippy.txt"
+    },
+    {
+      "name": "chunks_native",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "runtime_geometry_chunks",
+        "--locked",
+        "--offline",
+        "--",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 18.524743208000018,
+      "log": "logs/chunks_native.txt"
+    },
+    {
+      "name": "chunks_wasm",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "render-core",
+        "--test",
+        "runtime_geometry_chunks",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--locked",
+        "--offline",
+        "--",
+        "--nocapture"
+      ],
+      "exit_code": 0,
+      "seconds": 28.764732041000002,
+      "log": "logs/chunks_wasm.txt"
+    },
+    {
+      "name": "chunks_resources",
+      "command": [
+        "python3",
+        "scripts/compare-runtime-chunks.py",
+        "artifacts/runtime-geometry-chunks/run-20260907T023107Z"
+      ],
+      "exit_code": 1,
+      "seconds": 0.06391745899998114,
+      "log": "logs/chunks_resources.txt"
+    }
+  ],
+  "build_environment": {
+    "CARGO_NET_OFFLINE": "true",
+    "CARGO_BUILD_JOBS": "2",
+    "CARGO_INCREMENTAL": "0",
+    "CARGO_PROFILE_DEV_DEBUG": "0",
+    "CARGO_PROFILE_TEST_DEBUG": "0",
+    "CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUNNER": "wasm-bindgen-test-runner",
+    "RENDER_TEST_ORIGIN": "http://127.0.0.1:8784"
+  }
+}

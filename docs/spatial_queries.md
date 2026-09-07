@@ -70,3 +70,7 @@ journal, accepted-request state or jobs. Read access follows `inspect` semantics
 The bounded profile passed [native/browser qualification](../evidence/spatial-queries/README.md).
 Sculpt displacement/mask chunks, affected-region
 refitting/evaluation, multiresolution and dynamic topology are separate work.
+
+The renderer's later immutable runtime chunk representation preserves this query
+profile's answers and portable costs. Updated retained-layout observations and
+byte-identical baseline comparisons are in `evidence/runtime-geometry-chunks`.

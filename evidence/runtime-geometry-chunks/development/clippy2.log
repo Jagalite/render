@@ -1,0 +1,15 @@
+    Checking render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/crates/core)
+    Checking render-kernel v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/crates/kernel)
+    Checking render-ffi v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/crates/ffi)
+    Checking render-gpu v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/crates/gpu)
+    Checking render-host v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/crates/host)
+    Checking render-web v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/crates/web)
+error[E0599]: no method named `push` found for struct `render_core::render::chunks::Chunks<T>` in the current scope
+   --> crates/core/tests/products.rs:155:19
+    |
+155 |     geo.triangles.push(geo.triangles[0].clone());
+    |                   ^^^^ method not found in `render_core::render::chunks::Chunks<render_core::render::Triangle>`
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `render-core` (test "products") due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

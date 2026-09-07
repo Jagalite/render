@@ -1,0 +1,60 @@
+   Compiling version_check v0.9.5
+   Compiling simd-adler32 v0.3.10
+   Compiling proc-macro2 v1.0.107
+   Compiling generic-array v0.14.7
+   Compiling adler2 v2.0.1
+   Compiling cfg-if v1.0.4
+   Compiling crc32fast v1.5.1
+   Compiling quote v1.0.47
+   Compiling autocfg v1.5.1
+   Compiling typenum v1.20.1
+   Compiling serde_core v1.0.228
+   Compiling unicode-ident v1.0.24
+   Compiling num-traits v0.2.19
+   Compiling libc v0.2.189
+   Compiling miniz_oxide v0.9.1
+   Compiling flate2 v1.1.10
+   Compiling syn v2.0.119
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling miniz_oxide v0.8.9
+   Compiling fdeflate v0.3.7
+   Compiling libm v0.2.16
+   Compiling pxfm v0.1.30
+   Compiling bitflags v2.13.1
+   Compiling serde v1.0.228
+   Compiling zune-core v0.5.3
+   Compiling serde_json v1.0.145
+   Compiling zune-jpeg v0.5.15
+   Compiling moxcms v0.8.1
+   Compiling png v0.18.1
+   Compiling serde_derive v1.0.228
+   Compiling digest v0.10.7
+   Compiling cpufeatures v0.2.17
+   Compiling ryu v1.0.23
+   Compiling memchr v2.8.3
+   Compiling byteorder-lite v0.1.0
+   Compiling bytemuck v1.25.2
+   Compiling itoa v1.0.18
+   Compiling image v0.25.10
+   Compiling sha2 v0.10.9
+   Compiling glam v0.30.10
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/crates/core)
+error[E0599]: no method named `first` found for struct `chunks::Chunks<T>` in the current scope
+   --> crates/core/src/gltf_export.rs:248:14
+    |
+246 |           let first = g
+    |  _____________________-
+247 | |             .triangles
+248 | |             .first()
+    | |             -^^^^^ method not found in `chunks::Chunks<render::Triangle>`
+    | |_____________|
+    |
+    |
+   ::: crates/core/src/render/chunks.rs:8:1
+    |
+  8 |   pub struct Chunks<T> {
+    |   -------------------- method `first` not found for this struct
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `render-core` (lib) due to 1 previous error

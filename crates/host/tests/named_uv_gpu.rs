@@ -71,11 +71,19 @@ fn named_uv_cpu_gpu_roles_mips_and_displacement_match() {
                 .iter()
                 .position(|id| *id == Id(101))
                 .unwrap();
-            for t in &mut std::sync::Arc::make_mut(&mut inst.geometry).triangles {
-                for uv in &mut t.uv_sets[slot] {
-                    *uv *= 32.;
-                }
-            }
+            let geometry = std::sync::Arc::make_mut(&mut inst.geometry);
+            geometry.triangles = geometry
+                .triangles
+                .iter()
+                .cloned()
+                .map(|mut tri| {
+                    for uv in &mut tri.uv_sets[slot] {
+                        *uv *= 32.;
+                    }
+                    tri
+                })
+                .collect::<Vec<_>>()
+                .into();
             inst.geometry_id = digest(
                 &canonical(&(inst.geometry_id.clone(), "32x selected UV footprint")).unwrap(),
             );

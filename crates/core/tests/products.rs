@@ -152,7 +152,13 @@ fn authored_views_passes_bakes_roundtrip_invalid_atlas_and_stale_requests() {
         .find(|i| i.id == Id(7850))
         .unwrap();
     let geo = std::sync::Arc::make_mut(&mut inst.geometry);
-    geo.triangles.push(geo.triangles[0].clone());
+    geo.triangles = geo
+        .triangles
+        .iter()
+        .chain(std::iter::once(&geo.triangles[0]))
+        .cloned()
+        .collect::<Vec<_>>()
+        .into();
     let request = &d.snapshot().imaging.as_ref().unwrap().bakes[0];
     assert_eq!(
         bake(&scene, request, &revision, || false).unwrap_err().code,

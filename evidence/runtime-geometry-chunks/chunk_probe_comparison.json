@@ -1,0 +1,196 @@
+{
+  "status": "passed",
+  "baseline": {
+    "revision": "c5e7233",
+    "sha256": "1ffbfd681b61133ca47c3c901ae56436920078504ed2df3f463af13ccc6650a8",
+    "source": "/Volumes/seed2/Projects/render/artifacts/worktrees/spatial-queries/artifacts/spatial-queries/qualified/render-host",
+    "qualification": "evidence/spatial-queries/README.md"
+  },
+  "files": [
+    {
+      "path": "BoxTextured-cpu.passes.json",
+      "sha256": "dee072cd3b4296a8af1dcc17239e6e877d600292e988138138d2dd3704d59c5a",
+      "byte_identical": true
+    },
+    {
+      "path": "BoxTextured-cpu.pfm",
+      "sha256": "674b91ad59430821d62597302b97d33d552a5f1342d4518f3d3ec79392d4fb05",
+      "byte_identical": true
+    },
+    {
+      "path": "BoxTextured-cpu.ppm",
+      "sha256": "7600e9d24edd46df7f2bc8234210164132085bdf82259463871eb927e9eb2a2e",
+      "byte_identical": true
+    },
+    {
+      "path": "BoxTextured-cpu.receipt.json",
+      "sha256": "b25de0428326c96a9fc5156a9a444c2319adc184e10f27dff62da7fabd4d868c",
+      "byte_identical": true
+    },
+    {
+      "path": "BoxTextured-gpu.passes.json",
+      "sha256": "64683c6e0a325d65531fa78bcf04f27745d2c6db7d9dcd184a983eeeb9582cd0",
+      "byte_identical": true
+    },
+    {
+      "path": "BoxTextured-gpu.pfm",
+      "sha256": "e5aff0a832610a3fe753eafeafd0f39ddd1079f2c8b0ada45a674e58055c8c09",
+      "byte_identical": true
+    },
+    {
+      "path": "BoxTextured-gpu.ppm",
+      "sha256": "fce6277d78a26c4324cfc6f975c8ba952aa9837f11631736b12f29549cab785f",
+      "byte_identical": true
+    },
+    {
+      "path": "BoxTextured-gpu.receipt.json",
+      "sha256": "3cb82955437bb8419ad890bb37da527d039804273b61414920ba22254825af49",
+      "byte_identical": true
+    },
+    {
+      "path": "NormalTangentMirrorTest-cpu.passes.json",
+      "sha256": "a72fd2c6e6cc494bf1068b3ca0861693a8fa21ac95cb22b8d9181691466a8576",
+      "byte_identical": true
+    },
+    {
+      "path": "NormalTangentMirrorTest-cpu.pfm",
+      "sha256": "5a7a2c61b02ffb08efc0f203c8c9daa1aab4f420e31b68aa09e5972a49526510",
+      "byte_identical": true
+    },
+    {
+      "path": "NormalTangentMirrorTest-cpu.ppm",
+      "sha256": "f47bd5d770378d88a419aa5e999f069f5cd7870b120e59c1838ef62c801636d7",
+      "byte_identical": true
+    },
+    {
+      "path": "NormalTangentMirrorTest-cpu.receipt.json",
+      "sha256": "2c468e6356602f5d56b4f6b5034c51233c671a11c8941e6c1d19c54f23e4b4d9",
+      "byte_identical": true
+    },
+    {
+      "path": "NormalTangentMirrorTest-gpu.passes.json",
+      "sha256": "ccc974e5deaf638935238beaadfc0bf0271ae904dc142b37f156acfbdce57690",
+      "byte_identical": true
+    },
+    {
+      "path": "NormalTangentMirrorTest-gpu.pfm",
+      "sha256": "61c2809e0a97288d8643f8bd84e53c50521baae687df6cb8a2cf7b5a6a3e0a8e",
+      "byte_identical": true
+    },
+    {
+      "path": "NormalTangentMirrorTest-gpu.ppm",
+      "sha256": "3cc081a5739c14dfdadad5a01f944023c9c2092749823ecbd7a68c32cf63960b",
+      "byte_identical": true
+    },
+    {
+      "path": "NormalTangentMirrorTest-gpu.receipt.json",
+      "sha256": "a4d0182d3b11ca48cf015a665bf39e36a37051664fe9328b54e2ba31a6ab23d7",
+      "byte_identical": true
+    },
+    {
+      "path": "back_face_report.json",
+      "sha256": "b7176350a43cfba63a8a8186d4dc830f8cb075f996f7b4e94d8beb4bcc187cf8",
+      "byte_identical": true
+    },
+    {
+      "path": "mirror-back-cpu.passes.json",
+      "sha256": "cde5519acfa5275f5f4be85b967bf196354068b60ba8f34087bf00dc7091bc10",
+      "byte_identical": true
+    },
+    {
+      "path": "mirror-back-cpu.pfm",
+      "sha256": "e4abffa0cfac40ee1eab245c2123338691edcbf3666a7dbbe47ee6ba9d225c02",
+      "byte_identical": true
+    },
+    {
+      "path": "mirror-back-cpu.ppm",
+      "sha256": "7f2167259ca51a9a48d350ac267aadf71e397982fe798abc12511374c63dc6c1",
+      "byte_identical": true
+    },
+    {
+      "path": "mirror-back-cpu.receipt.json",
+      "sha256": "74d245fe4d0e2cc2736e33d72886c77963c14a5745c21ef76210f51ffad2c678",
+      "byte_identical": true
+    },
+    {
+      "path": "mirror-back-gpu.passes.json",
+      "sha256": "5022a1778fa27ab4eb35322f882cd2458a256d4397cb4915d5e6270cbe3ce935",
+      "byte_identical": true
+    },
+    {
+      "path": "mirror-back-gpu.pfm",
+      "sha256": "ada17da7203be2cb9e438eb9ae5ae9ddafb32fbf929e5b40879ec57d8225deda",
+      "byte_identical": true
+    },
+    {
+      "path": "mirror-back-gpu.ppm",
+      "sha256": "14a827766a5dea252f4a471451ea2c188b5b23bc76e86535b6679bac30bd0fcd",
+      "byte_identical": true
+    },
+    {
+      "path": "mirror-back-gpu.receipt.json",
+      "sha256": "d3556b34ca00d8a70f615a7fdadb9893641fab85b3cb0e5247707febb5e5489c",
+      "byte_identical": true
+    },
+    {
+      "path": "sampler_camera_report.json",
+      "sha256": "205cae74beb360d5a774bbd115658e50b2a43c22debf7fd49beb590395770679",
+      "byte_identical": true
+    }
+  ],
+  "resource_observations": [
+    {
+      "package": "baseline",
+      "process": {
+        "maximum resident set size": 1227456512,
+        "peak memory footprint": 1681904576
+      },
+      "workflow_seconds": 44.309823084,
+      "assets": [
+        {
+          "asset": "BoxTextured",
+          "cpu_seconds": 0.246362208,
+          "gpu_seconds": 0.037014,
+          "triangles": 12,
+          "encoded_snapshot_bytes": 18316,
+          "gpu_packed_bytes": 702496
+        },
+        {
+          "asset": "NormalTangentMirrorTest",
+          "cpu_seconds": 0.9092675,
+          "gpu_seconds": 2.677519167,
+          "triangles": 5240,
+          "encoded_snapshot_bytes": 6772087,
+          "gpu_packed_bytes": 135505344
+        }
+      ]
+    },
+    {
+      "package": "candidate",
+      "process": {
+        "maximum resident set size": 1482899456,
+        "peak memory footprint": 1799148800
+      },
+      "workflow_seconds": 44.582046584,
+      "assets": [
+        {
+          "asset": "BoxTextured",
+          "cpu_seconds": 0.24995,
+          "gpu_seconds": 0.022779625,
+          "triangles": 12,
+          "encoded_snapshot_bytes": 18316,
+          "gpu_packed_bytes": 702496
+        },
+        {
+          "asset": "NormalTangentMirrorTest",
+          "cpu_seconds": 0.946821042,
+          "gpu_seconds": 2.7390245,
+          "triangles": 5240,
+          "encoded_snapshot_bytes": 6772087,
+          "gpu_packed_bytes": 135505344
+        }
+      ]
+    }
+  ],
+  "scope": "Sequential whole PBR workflows including GPU initialization and global evaluation. Timing is uncontrolled observational evidence, not a speed comparison or benchmark claim."
+}

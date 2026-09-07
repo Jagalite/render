@@ -1,0 +1,148 @@
+{
+  "assets": [
+    {
+      "asset": "BoxTextured",
+      "cpu_receipt": {
+        "approximation": "single-scattering GGX/Schlick/Smith; roughness >=0.05; one bounce; diffuse/GGX mixture PDF; mipmapped textures; geometric visibility with mapped shading normals",
+        "backend": "cpu-f64-pbr-v0",
+        "color_space": "linear-sRGB",
+        "height": 64,
+        "output_digest": "sha256:ec762aa90183305721aacc536fc4a4f823b2491a7d15c15c25e9505667c51cb3",
+        "revision": "sha256:917e096dc79f34ae2302ce5f287958bd49fd3b0adaa00674347729b467197e92",
+        "samples": 32,
+        "seed": 42,
+        "settings_digest": "sha256:a9e0c84172d60bb5c8e6a13af0224dd9d933e4f67f9b550ea7435fa4059fef66",
+        "width": 64
+      },
+      "cpu_seconds": 0.266748625,
+      "encoded_snapshot_bytes": 18316,
+      "gpu_packed_bytes": 702496,
+      "gpu_receipt": {
+        "approximation": "single-scattering GGX; roughness >=0.05; one bounce; primary UV-differential mipmaps; RGBA16 texture precision; start sample 0; camera-relative f32",
+        "backend": "gpu-f32-pbr-v0/Metal",
+        "color_space": "linear-sRGB",
+        "height": 64,
+        "output_digest": "sha256:4c4fdfb95b3a80b419ff041aae336bc66e56e2eebbd2a0ef019c64067b054d5a",
+        "revision": "sha256:917e096dc79f34ae2302ce5f287958bd49fd3b0adaa00674347729b467197e92",
+        "samples": 32,
+        "seed": 42,
+        "settings_digest": "sha256:a9e0c84172d60bb5c8e6a13af0224dd9d933e4f67f9b550ea7435fa4059fef66",
+        "width": 64
+      },
+      "gpu_seconds": 0.025893375,
+      "image_count": 1,
+      "import": {
+        "receipt": {
+          "base_revision": "sha256:8c659e4f8ef2f1fa73cd94e063688596b12668f58d7891be2ad6e3020ea65639",
+          "command_count": 8,
+          "delta_digest": "sha256:0e4ec982ae0d83071f7ab08bff6ed23cb541f4498674f996547c861570244a05",
+          "document_id": "00000000000000000000000000000320",
+          "durable": true,
+          "revision": "sha256:917e096dc79f34ae2302ce5f287958bd49fd3b0adaa00674347729b467197e92"
+        },
+        "report": {
+          "instances": 1,
+          "losses": [
+            "Single-scattering GGX, roughness regularized to >=0.05; missing tangents use a per-triangle UV basis, not MikkTSpace seam smoothing. OPAQUE alpha is ignored as specified by glTF.",
+            "Node names are retained; extras and generator metadata are not authored components. Only the selected scene is imported."
+          ],
+          "profile": "gltf2-static-pbr-v0",
+          "source_digest": "sha256:7ec1b4d8bf89ab1d6bfed96d7febd469ef194f69a0964fed9b6590b5878d7fec",
+          "source_materials": {
+            "0": "44ab8e79bfbf672e5061e86e3ca3a87d"
+          },
+          "source_nodes": {
+            "0": "d79880071d71e05f5c1f66438c7bc226",
+            "1": "eb91a390820b3cead7af954b128b0f30"
+          },
+          "unique_meshes": 1
+        }
+      },
+      "linear_rmse": 0.000015623213423200116,
+      "normal_rmse": 0.0,
+      "object_mismatches": 0,
+      "revision": "sha256:917e096dc79f34ae2302ce5f287958bd49fd3b0adaa00674347729b467197e92",
+      "source_sha256": "sha256:b510eca2e2ef33f62f9ed57d6e7ce2d10ebb2bdebc4a8e59d347719ba81abdf4",
+      "triangles": 12,
+      "visible_pixels": 1181
+    },
+    {
+      "asset": "NormalTangentMirrorTest",
+      "cpu_receipt": {
+        "approximation": "single-scattering GGX/Schlick/Smith; roughness >=0.05; one bounce; diffuse/GGX mixture PDF; mipmapped textures; geometric visibility with mapped shading normals",
+        "backend": "cpu-f64-pbr-v0",
+        "color_space": "linear-sRGB",
+        "height": 64,
+        "output_digest": "sha256:b41d0fe053608d0e6df6e9eb2bf4669f11a067a9a85901454a4cde4e5b6e5c49",
+        "revision": "sha256:5f6d6250fb507a9389dbea45ae1f98a09c873e06eab8d2d6ff760296ac835376",
+        "samples": 32,
+        "seed": 42,
+        "settings_digest": "sha256:1a86712cf67cddabf5a3a0bf7388c03c62a779946e19e7db133b6e4416748bb4",
+        "width": 64
+      },
+      "cpu_seconds": 1.00448525,
+      "encoded_snapshot_bytes": 6772087,
+      "gpu_packed_bytes": 135505344,
+      "gpu_receipt": {
+        "approximation": "single-scattering GGX; roughness >=0.05; one bounce; primary UV-differential mipmaps; RGBA16 texture precision; start sample 0; camera-relative f32",
+        "backend": "gpu-f32-pbr-v0/Metal",
+        "color_space": "linear-sRGB",
+        "height": 64,
+        "output_digest": "sha256:7aa7ad7da4dc1bbbcad485140c38b3bf3bd38092ab1c07ae3b2735fe4474708e",
+        "revision": "sha256:5f6d6250fb507a9389dbea45ae1f98a09c873e06eab8d2d6ff760296ac835376",
+        "samples": 32,
+        "seed": 42,
+        "settings_digest": "sha256:1a86712cf67cddabf5a3a0bf7388c03c62a779946e19e7db133b6e4416748bb4",
+        "width": 64
+      },
+      "gpu_seconds": 2.866325917,
+      "image_count": 3,
+      "import": {
+        "receipt": {
+          "base_revision": "sha256:d0c8a084ec8cc0b2c25098a4187f2942763b67c21193c0e38944e1ef19f50179",
+          "command_count": 9,
+          "delta_digest": "sha256:adb7b8e10c9e2f1b062be5358861e6a7205cb3c3f0de6bddd5db169a709f7251",
+          "document_id": "00000000000000000000000000000321",
+          "durable": true,
+          "revision": "sha256:5f6d6250fb507a9389dbea45ae1f98a09c873e06eab8d2d6ff760296ac835376"
+        },
+        "report": {
+          "instances": 1,
+          "losses": [
+            "Single-scattering GGX, roughness regularized to >=0.05; missing tangents use a per-triangle UV basis, not MikkTSpace seam smoothing. OPAQUE alpha is ignored as specified by glTF.",
+            "Node names are retained; extras and generator metadata are not authored components. Only the selected scene is imported."
+          ],
+          "profile": "gltf2-static-pbr-v0",
+          "source_digest": "sha256:cfc29684390a04448b93dd7728be0bd7f55b2e4dfb4005460628534e18477141",
+          "source_materials": {
+            "0": "c7d7439f4f5e7e9e2d3b79ff65f3e679"
+          },
+          "source_nodes": {
+            "0": "20c4c73ab225a0a03b0c89dcc7111f7e"
+          },
+          "unique_meshes": 1
+        }
+      },
+      "linear_rmse": 0.010337527515960456,
+      "normal_rmse": 0.00004193456454493642,
+      "object_mismatches": 0,
+      "revision": "sha256:5f6d6250fb507a9389dbea45ae1f98a09c873e06eab8d2d6ff760296ac835376",
+      "source_sha256": "sha256:31ce5f3c873fc55531a17ccacf001e3d1d482a508695aa826fa79cc196e0ce78",
+      "triangles": 5240,
+      "visible_pixels": 1663
+    }
+  ],
+  "cancellation": true,
+  "durable_recovery": true,
+  "gpu": {
+    "adapter": "Apple M1",
+    "backend": "Metal",
+    "hardware_ray_required": false,
+    "max_buffer_bytes": 268435456,
+    "max_storage_binding_bytes": 134217728,
+    "max_workgroups": 65535
+  },
+  "profile": "gltf2-static-pbr-v0",
+  "seconds": 48.643998375,
+  "status": "passed"
+}

@@ -1,0 +1,13 @@
+artifacts/runtime-geometry-chunks/run-20260907T023107Z
+format: 0
+clippy: 0
+browser_clippy: 0
+chunks_native: 0
+chunks_wasm: 0
+chunks_resources: 1
+Traceback (most recent call last):
+  File "/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/scripts/compare-runtime-chunks.py", line 8, in <module>
+    assert len(found)==1,(platform,found)
+           ^^^^^^^^^^^^^
+AssertionError: ('wasm', [])
+

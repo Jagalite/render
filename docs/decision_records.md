@@ -621,3 +621,22 @@ remain global work. Snapshot18, shaders and runtime dependencies are unchanged.
 strict schema checks, high-ID CLI/browser placement, archive/OPFS recovery, resource
 observations and prior output preservation. This read-only seam does not qualify
 sculpting, incremental evaluation, multiresolution or interactive retopology.
+
+## ADR-040 — Evaluated geometry shares immutable runtime chunks
+
+**Decision:** Keep evaluated triangle and BVH node order in 64-item
+immutable chunks behind a shared root table. Runtime clones share payloads; an
+explicit candidate replacement copies only touched payload chunks plus the complete
+root reference table. Existing BVH partition and traversal arithmetic are preserved.
+
+This storage seam supports future sculpt refits without creating a new authored
+representation or changing public schemas. The geometry query domain adapts compact
+construction and layout accounting; ordinary transactions retain all authority.
+Nested UV arrays and leaf item vectors copy with their containing chunk and are
+included separately in resource observations. Construction, root-table copying,
+snapshot admission and GPU host packing still have global work. See
+`docs/runtime_geometry_chunks.md` and the M10 candidate contract and review.
+
+No dependency or maintained shader change is intended. Qualification requires
+native and Wasm copy/cancellation tests, complete CLI/browser/GPU/OPFS workflows,
+byte-identical previous render outputs and explicit retained/temporary cost evidence.

@@ -1,0 +1,52 @@
+{
+  "version": 0,
+  "operation": {
+    "method": "apply",
+    "request": {
+      "version": 0,
+      "base_revision": "sha256:b0322adc46cc42225fa7050d58e3f7fc3f0090ff0280d107b579b2878b07567e",
+      "idempotency_key": "spatial-workflow-place-marker",
+      "max_added_bytes": 4194304,
+      "commands": [
+        {
+          "operation": "set_transform",
+          "entity": "00000000000000000000000000000004",
+          "transform": {
+            "columns": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "operations": [
+              {
+                "kind": "TranslationMeters",
+                "value": [
+                  0.625,
+                  0.375,
+                  0.0
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

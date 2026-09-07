@@ -107,9 +107,17 @@ fn gpu_multibounce_parity_progressive_identity_and_cancellation() {
         role,
         sampler: Default::default(),
     });
-    for t in &mut std::sync::Arc::make_mut(&mut ceiling.geometry).triangles {
-        t.uv = [[0., 0.].into(), [1., 0.].into(), [0., 1.].into()];
-    }
+    let geometry = std::sync::Arc::make_mut(&mut ceiling.geometry);
+    geometry.triangles = geometry
+        .triangles
+        .iter()
+        .cloned()
+        .map(|mut t| {
+            t.uv = [[0., 0.].into(), [1., 0.].into(), [0., 1.].into()];
+            t
+        })
+        .collect::<Vec<_>>()
+        .into();
     // Disposable geometry has a new identity so the GPU cache must upload it.
     textured.revision = "textured-secondary-fixture".into();
     settings.max_depth = 4;

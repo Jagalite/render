@@ -1,0 +1,425 @@
+{
+  "scope": "Portable build charges and query traversal are separate from global document validation/hash costs. Actual retained index layout excludes source, Arc allocation headers and allocator overhead. CLI process peaks include project loading and global validation.",
+  "observations": [
+    {
+      "query": {
+        "kind": "nearest_surface",
+        "max_distance_meters": 1.0,
+        "point": [
+          0.625,
+          0.375,
+          1.0
+        ]
+      },
+      "native": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 691080,
+        "built_points": 291,
+        "built_triangles": 512,
+        "cache_reused": false,
+        "item_tests": 4,
+        "retained_index_layout_bytes": 62463,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 15,
+        "whole_snapshot_validated": true
+      },
+      "browser": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 691080,
+        "built_points": 291,
+        "built_triangles": 512,
+        "cache_reused": false,
+        "item_tests": 4,
+        "retained_index_layout_bytes": 44179,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 15,
+        "whole_snapshot_validated": true
+      }
+    },
+    {
+      "query": {
+        "center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "kind": "points_in_sphere",
+        "radius_meters": 0.0
+      },
+      "native": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 691080,
+        "built_points": 291,
+        "built_triangles": 512,
+        "cache_reused": false,
+        "item_tests": 6,
+        "retained_index_layout_bytes": 62463,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 27,
+        "whole_snapshot_validated": true
+      },
+      "browser": {
+        "additional_source_identity_validation": false,
+        "build_byte_charge": 691080,
+        "built_points": 0,
+        "built_triangles": 0,
+        "cache_reused": true,
+        "item_tests": 6,
+        "retained_index_layout_bytes": 44179,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 27,
+        "whole_snapshot_validated": true
+      }
+    },
+    {
+      "query": {
+        "center": [
+          0.5,
+          0.0,
+          0.0
+        ],
+        "kind": "points_in_sphere",
+        "radius_meters": 0.5
+      },
+      "native": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 691080,
+        "built_points": 291,
+        "built_triangles": 512,
+        "cache_reused": false,
+        "item_tests": 28,
+        "retained_index_layout_bytes": 62463,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 53,
+        "whole_snapshot_validated": true
+      },
+      "browser": {
+        "additional_source_identity_validation": false,
+        "build_byte_charge": 691080,
+        "built_points": 0,
+        "built_triangles": 0,
+        "cache_reused": true,
+        "item_tests": 28,
+        "retained_index_layout_bytes": 44179,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 53,
+        "whole_snapshot_validated": true
+      }
+    },
+    {
+      "query": {
+        "kind": "nearest_surface",
+        "max_distance_meters": 2.0,
+        "point": [
+          3.0,
+          3.0,
+          1.0
+        ]
+      },
+      "native": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 691080,
+        "built_points": 291,
+        "built_triangles": 512,
+        "cache_reused": false,
+        "item_tests": 4,
+        "retained_index_layout_bytes": 62463,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 15,
+        "whole_snapshot_validated": true
+      },
+      "browser": {
+        "additional_source_identity_validation": false,
+        "build_byte_charge": 691080,
+        "built_points": 0,
+        "built_triangles": 0,
+        "cache_reused": true,
+        "item_tests": 4,
+        "retained_index_layout_bytes": 44179,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 15,
+        "whole_snapshot_validated": true
+      }
+    },
+    {
+      "query": {
+        "kind": "nearest_surface",
+        "max_distance_meters": 0.5,
+        "point": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "native": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 691080,
+        "built_points": 291,
+        "built_triangles": 512,
+        "cache_reused": false,
+        "item_tests": 0,
+        "retained_index_layout_bytes": 62463,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 1,
+        "whole_snapshot_validated": true
+      },
+      "browser": {
+        "additional_source_identity_validation": false,
+        "build_byte_charge": 691080,
+        "built_points": 0,
+        "built_triangles": 0,
+        "cache_reused": true,
+        "item_tests": 0,
+        "retained_index_layout_bytes": 44179,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 1,
+        "whole_snapshot_validated": true
+      }
+    },
+    {
+      "query": {
+        "kind": "nearest_surface",
+        "max_distance_meters": 1e-80,
+        "point": [
+          3.5e-82,
+          3.5e-82,
+          1e-81
+        ]
+      },
+      "native": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 6968,
+        "built_points": 3,
+        "built_triangles": 1,
+        "cache_reused": false,
+        "item_tests": 1,
+        "retained_index_layout_bytes": 511,
+        "source_bytes": 312,
+        "triangulation_work_charge": 27,
+        "visited_nodes": 1,
+        "whole_snapshot_validated": true
+      },
+      "browser": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 6968,
+        "built_points": 3,
+        "built_triangles": 1,
+        "cache_reused": false,
+        "item_tests": 1,
+        "retained_index_layout_bytes": 359,
+        "source_bytes": 312,
+        "triangulation_work_charge": 27,
+        "visited_nodes": 1,
+        "whole_snapshot_validated": true
+      }
+    },
+    {
+      "query": {
+        "center": [
+          0,
+          0,
+          1e-200
+        ],
+        "kind": "points_in_sphere",
+        "radius_meters": 0
+      },
+      "native": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 6968,
+        "built_points": 3,
+        "built_triangles": 1,
+        "cache_reused": false,
+        "item_tests": 0,
+        "retained_index_layout_bytes": 511,
+        "source_bytes": 312,
+        "triangulation_work_charge": 27,
+        "visited_nodes": 1,
+        "whole_snapshot_validated": true
+      },
+      "browser": {
+        "additional_source_identity_validation": false,
+        "build_byte_charge": 6968,
+        "built_points": 0,
+        "built_triangles": 0,
+        "cache_reused": true,
+        "item_tests": 0,
+        "retained_index_layout_bytes": 359,
+        "source_bytes": 312,
+        "triangulation_work_charge": 27,
+        "visited_nodes": 1,
+        "whole_snapshot_validated": true
+      }
+    },
+    {
+      "query": {
+        "kind": "nearest_surface",
+        "max_distance_meters": 1.0,
+        "point": [
+          0.625,
+          0.375,
+          1.0
+        ]
+      },
+      "native": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 691080,
+        "built_points": 291,
+        "built_triangles": 512,
+        "cache_reused": false,
+        "item_tests": 4,
+        "retained_index_layout_bytes": 62463,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 15,
+        "whole_snapshot_validated": true
+      },
+      "browser": {
+        "additional_source_identity_validation": true,
+        "build_byte_charge": 691080,
+        "built_points": 291,
+        "built_triangles": 512,
+        "cache_reused": false,
+        "item_tests": 4,
+        "retained_index_layout_bytes": 44179,
+        "source_bytes": 97591,
+        "triangulation_work_charge": 13824,
+        "visited_nodes": 15,
+        "whole_snapshot_validated": true
+      }
+    }
+  ],
+  "processes": [
+    {
+      "name": "query-0",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/artifacts/runtime-geometry-chunks/run-20260907T023350Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/artifacts/runtime-geometry-chunks/run-20260907T023350Z/spatial-workflow/007-query-0.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1948967089999769,
+      "expected_error": null,
+      "maximum_resident_bytes": 24788992
+    },
+    {
+      "name": "query-1",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/artifacts/runtime-geometry-chunks/run-20260907T023350Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/artifacts/runtime-geometry-chunks/run-20260907T023350Z/spatial-workflow/008-query-1.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.17601895799998601,
+      "expected_error": null,
+      "maximum_resident_bytes": 24739840
+    },
+    {
+      "name": "query-2",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/artifacts/runtime-geometry-chunks/run-20260907T023350Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/artifacts/runtime-geometry-chunks/run-20260907T023350Z/spatial-workflow/009-query-2.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.17605574999993223,
+      "expected_error": null,
+      "maximum_resident_bytes": 24657920
+    },
+    {
+      "name": "query-3",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/artifacts/runtime-geometry-chunks/run-20260907T023350Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/artifacts/runtime-geometry-chunks/run-20260907T023350Z/spatial-workflow/010-query-3.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.175920749999932,
+      "expected_error": null,
+      "maximum_resident_bytes": 24838144
+    },
+    {
+      "name": "query-4",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/artifacts/runtime-geometry-chunks/run-20260907T023350Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/artifacts/runtime-geometry-chunks/run-20260907T023350Z/spatial-workflow/011-query-4.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.17679649999990943,
+      "expected_error": null,
+      "maximum_resident_bytes": 24674304
+    },
+    {
+      "name": "query-5",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/artifacts/runtime-geometry-chunks/run-20260907T023350Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/artifacts/runtime-geometry-chunks/run-20260907T023350Z/spatial-workflow/012-query-5.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.17865420800012544,
+      "expected_error": null,
+      "maximum_resident_bytes": 24215552
+    },
+    {
+      "name": "query-6",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/artifacts/runtime-geometry-chunks/run-20260907T023350Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/artifacts/runtime-geometry-chunks/run-20260907T023350Z/spatial-workflow/013-query-6.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1665170000001126,
+      "expected_error": null,
+      "maximum_resident_bytes": 24117248
+    },
+    {
+      "name": "query-7",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "/Volumes/seed2/Projects/render/artifacts/build-cache-20260906/debug/render-host",
+        "project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/artifacts/runtime-geometry-chunks/run-20260907T023350Z/spatial-workflow/project",
+        "/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/artifacts/runtime-geometry-chunks/run-20260907T023350Z/spatial-workflow/014-query-7.request.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.17644066700017902,
+      "expected_error": null,
+      "maximum_resident_bytes": 24707072
+    }
+  ],
+  "initial_document_bytes": 203149,
+  "final_document_bytes": 204343
+}

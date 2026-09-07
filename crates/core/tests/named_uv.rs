@@ -322,11 +322,19 @@ fn named_uv_primary_footprint_selects_its_own_mip() {
         .iter()
         .position(|id| *id == Id(101))
         .unwrap();
-    for tri in &mut std::sync::Arc::make_mut(&mut inst.geometry).triangles {
-        for uv in &mut tri.uv_sets[slot] {
-            *uv *= 16.;
-        }
-    }
+    let geometry = std::sync::Arc::make_mut(&mut inst.geometry);
+    geometry.triangles = geometry
+        .triangles
+        .iter()
+        .cloned()
+        .map(|mut tri| {
+            for uv in &mut tri.uv_sets[slot] {
+                *uv *= 16.;
+            }
+            tri
+        })
+        .collect::<Vec<_>>()
+        .into();
     let s = settings();
     let ray = |x, y| s.camera.ray(x, y, s.width, s.height).unwrap();
     let hit = scene.intersect(ray(2.25, 3.25), 0.1, 5.).unwrap();

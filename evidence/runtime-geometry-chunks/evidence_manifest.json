@@ -1,0 +1,2120 @@
+{
+  "files": [
+    {
+      "path": "evidence/runtime-geometry-chunks/README.md",
+      "bytes": 4475,
+      "sha256": "6d75b299693b11daeeda46a14911547afc274221cb1216c0ad9c30464917bb4e"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/BoxTextured/project/00000000000000000000.json",
+      "bytes": 32024,
+      "sha256": "6e031f774b46a2414ed3c7a39edc0560d9a7746d1d6ecd156c855729df6f4815"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/BoxTextured/project/chunks/f7587625057791533dd1f31dbd3d53daea7e6463f4a556fdb459b6e6e426be06.bin",
+      "bytes": 2869,
+      "sha256": "f7587625057791533dd1f31dbd3d53daea7e6463f4a556fdb459b6e6e426be06"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/BoxTextured/project/writer.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/BoxTextured-comparison.json",
+      "bytes": 2947,
+      "sha256": "3a5f46ddf049da7e7393a490f7a08e8c28dc4619f6c80ce15b80b068649e7c52"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/BoxTextured-cpu.passes.json",
+      "bytes": 146752,
+      "sha256": "dee072cd3b4296a8af1dcc17239e6e877d600292e988138138d2dd3704d59c5a"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/BoxTextured-cpu.pfm",
+      "bytes": 49166,
+      "sha256": "674b91ad59430821d62597302b97d33d552a5f1342d4518f3d3ec79392d4fb05"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/BoxTextured-cpu.ppm",
+      "bytes": 12301,
+      "sha256": "7600e9d24edd46df7f2bc8234210164132085bdf82259463871eb927e9eb2a2e"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/BoxTextured-cpu.receipt.json",
+      "bytes": 548,
+      "sha256": "b25de0428326c96a9fc5156a9a444c2319adc184e10f27dff62da7fabd4d868c"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/BoxTextured-gpu.passes.json",
+      "bytes": 146810,
+      "sha256": "64683c6e0a325d65531fa78bcf04f27745d2c6db7d9dcd184a983eeeb9582cd0"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/BoxTextured-gpu.pfm",
+      "bytes": 49166,
+      "sha256": "e5aff0a832610a3fe753eafeafd0f39ddd1079f2c8b0ada45a674e58055c8c09"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/BoxTextured-gpu.ppm",
+      "bytes": 12301,
+      "sha256": "fce6277d78a26c4324cfc6f975c8ba952aa9837f11631736b12f29549cab785f"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/BoxTextured-gpu.receipt.json",
+      "bytes": 541,
+      "sha256": "3cb82955437bb8419ad890bb37da527d039804273b61414920ba22254825af49"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/NormalTangentMirrorTest/project/00000000000000000000.json",
+      "bytes": 9851647,
+      "sha256": "1fecd48aca034d6d7d74d1fe22cb65df08e695bd8f16bb33d236170aa8219b4f"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/NormalTangentMirrorTest/project/chunks/5c2216e894511082433ef32362098e613e67d8fa1aa8c99748be85cdadde8776.bin",
+      "bytes": 1464208,
+      "sha256": "5c2216e894511082433ef32362098e613e67d8fa1aa8c99748be85cdadde8776"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/NormalTangentMirrorTest/project/writer.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/NormalTangentMirrorTest-comparison.json",
+      "bytes": 2934,
+      "sha256": "323d502d8fa06b0db0a30621b0b0c82d47f1619af89bd49059374c3c41fe95dc"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/NormalTangentMirrorTest-cpu.passes.json",
+      "bytes": 248418,
+      "sha256": "a72fd2c6e6cc494bf1068b3ca0861693a8fa21ac95cb22b8d9181691466a8576"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/NormalTangentMirrorTest-cpu.pfm",
+      "bytes": 49166,
+      "sha256": "5a7a2c61b02ffb08efc0f203c8c9daa1aab4f420e31b68aa09e5972a49526510"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/NormalTangentMirrorTest-cpu.ppm",
+      "bytes": 12301,
+      "sha256": "f47bd5d770378d88a419aa5e999f069f5cd7870b120e59c1838ef62c801636d7"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/NormalTangentMirrorTest-cpu.receipt.json",
+      "bytes": 548,
+      "sha256": "2c468e6356602f5d56b4f6b5034c51233c671a11c8941e6c1d19c54f23e4b4d9"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/NormalTangentMirrorTest-gpu.passes.json",
+      "bytes": 248883,
+      "sha256": "ccc974e5deaf638935238beaadfc0bf0271ae904dc142b37f156acfbdce57690"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/NormalTangentMirrorTest-gpu.pfm",
+      "bytes": 49166,
+      "sha256": "61c2809e0a97288d8643f8bd84e53c50521baae687df6cb8a2cf7b5a6a3e0a8e"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/NormalTangentMirrorTest-gpu.ppm",
+      "bytes": 12301,
+      "sha256": "3cc081a5739c14dfdadad5a01f944023c9c2092749823ecbd7a68c32cf63960b"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/NormalTangentMirrorTest-gpu.receipt.json",
+      "bytes": 541,
+      "sha256": "a4d0182d3b11ca48cf015a665bf39e36a37051664fe9328b54e2ba31a6ab23d7"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/back_face_report.json",
+      "bytes": 107,
+      "sha256": "b7176350a43cfba63a8a8186d4dc830f8cb075f996f7b4e94d8beb4bcc187cf8"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/mirror-back-cpu.passes.json",
+      "bytes": 249410,
+      "sha256": "cde5519acfa5275f5f4be85b967bf196354068b60ba8f34087bf00dc7091bc10"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/mirror-back-cpu.pfm",
+      "bytes": 49166,
+      "sha256": "e4abffa0cfac40ee1eab245c2123338691edcbf3666a7dbbe47ee6ba9d225c02"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/mirror-back-cpu.ppm",
+      "bytes": 12301,
+      "sha256": "7f2167259ca51a9a48d350ac267aadf71e397982fe798abc12511374c63dc6c1"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/mirror-back-cpu.receipt.json",
+      "bytes": 548,
+      "sha256": "74d245fe4d0e2cc2736e33d72886c77963c14a5745c21ef76210f51ffad2c678"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/mirror-back-gpu.passes.json",
+      "bytes": 249904,
+      "sha256": "5022a1778fa27ab4eb35322f882cd2458a256d4397cb4915d5e6270cbe3ce935"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/mirror-back-gpu.pfm",
+      "bytes": 49166,
+      "sha256": "ada17da7203be2cb9e438eb9ae5ae9ddafb32fbf929e5b40879ec57d8225deda"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/mirror-back-gpu.ppm",
+      "bytes": 12301,
+      "sha256": "14a827766a5dea252f4a471451ea2c188b5b23bc76e86535b6679bac30bd0fcd"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/mirror-back-gpu.receipt.json",
+      "bytes": 541,
+      "sha256": "d3556b34ca00d8a70f615a7fdadb9893641fab85b3cb0e5247707febb5e5489c"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/sampler_camera_report.json",
+      "bytes": 9129,
+      "sha256": "205cae74beb360d5a774bbd115658e50b2a43c22debf7fd49beb590395770679"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk-probe-baseline/workflow_report.json",
+      "bytes": 6776,
+      "sha256": "7579bc0117d3f4420f2883c5b1437a8dbde658269eb12d0bf81fb408d353e3d9"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk_probe_comparison.json",
+      "bytes": 6463,
+      "sha256": "14dacdecf41ea3dd6649dbf3524c7d0e662d757ead85c81a6ddc78988b5c0db0"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/chunk_resources.json",
+      "bytes": 1571,
+      "sha256": "4776358bd335dcd34d7a0417443f5a2d34c131b310884bb5b4de3464d9cee9dc"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/collection.json",
+      "bytes": 169,
+      "sha256": "3e3e4f5fd497109f34505bf68fe97a10d218b47afc63677ecdc064914e0a81b9"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/cross_platform.json",
+      "bytes": 2645,
+      "sha256": "28855eaf1650b0243f444eb7cfaa6a0a08ae8cfede70fcb1000c62db26a52896"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/curve_color_cross_platform.json",
+      "bytes": 2355,
+      "sha256": "a8b5db0e23fc2aa262a4a65dd6bf6c2b5e5078d84ef9b4c509c3a1ff1d8e8ed0"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/dependency_delta.json",
+      "bytes": 1437,
+      "sha256": "2ba552063c0406b961d79edc93a43a490ea33b3c7460d895be6b1f8c36da4b75"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/dependency_inventory.json",
+      "bytes": 68192,
+      "sha256": "5854a2d92f59ef82863cfabd07414d118007171bdd5077a1764d4c4e7c923e9c"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/acceptance1.log",
+      "bytes": 416,
+      "sha256": "43decea24850e70a4b58b337cca3b75b35fab63debe5bb59b89562934feed32e"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/acceptance2.log",
+      "bytes": 2073,
+      "sha256": "dabf460381c340eb7524c11b0647ebed80ea97e454211a84e07183b437ec99fe"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/clippy1.log",
+      "bytes": 4786,
+      "sha256": "0349f5040b97c47821429dcf5fa60b8b992c3de4218e35071ef6d8cfc34c5a28"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/clippy2.log",
+      "bytes": 1273,
+      "sha256": "f5be3ab36981a37ec9306de38eb80e7c1708a377835cfb634b54ee07cb517f4b"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/collection1.log",
+      "bytes": 162,
+      "sha256": "7c085d8ba680305428ba360113ac48ec4440cc529bb79115711cfa8cd5bd6195"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/failures.md",
+      "bytes": 1513,
+      "sha256": "6b5834b10d6b32280c18749ea243564815adbf5a66616a56eb9f0a0ee8cf3d8d"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/finalize-manifests.py",
+      "bytes": 1324,
+      "sha256": "d8a8cc7cb70413679d33f0d44d86ce4622739c848dbb3c5c67c275cf105921bd"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/native1.log",
+      "bytes": 162,
+      "sha256": "b0cd1a2641db5c5b94f0c5d7861279cc51e201dc458a6f6d3aa29bfa62c48077"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/native2.log",
+      "bytes": 2016,
+      "sha256": "4c04aa03c464a9f5d8ae8eaedf86cea38b655e36a186f4627c924508b4422dc2"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/native3.log",
+      "bytes": 1574,
+      "sha256": "bde666a076ca135d551f93bcf70f44ad3ba87707eb1cdf60c0d7e855e7f57e76"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/native4.log",
+      "bytes": 1275,
+      "sha256": "ad26f3c852c8e3ed4b512bdb9274e183160e95f10c339f9f95381260354d48f3"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/qualify-docs.py",
+      "bytes": 7499,
+      "sha256": "f4b4a1dc1647131fd99f193257b45e84ec58e6ae5a696fcee4847e47232bba6f"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/refit-design-notes.md",
+      "bytes": 2353,
+      "sha256": "4b2d6aeb99fc4ab7c2775c72e2f85e9bd431934463a886c92a34e80a1f7a2ff5"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/repeat-probe.log",
+      "bytes": 869,
+      "sha256": "5ee0ac36d73112bc280cccf02cfb2649956c3c2d85d993ee952cf420a3fde614"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/repeat-probe.py",
+      "bytes": 1877,
+      "sha256": "d33f97300859f524ea2095138935a3523d4fee1f698a82c9cc7ae7fe696fb7c2"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/run-20260907T023107Z/logs/browser_clippy.txt",
+      "bytes": 2796,
+      "sha256": "bed3bcd088061177859b3fc86d89531dfc98a3a272609262e889b8b08bc5b2d2"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/run-20260907T023107Z/logs/chunks_native.txt",
+      "bytes": 1276,
+      "sha256": "c00d126483f278d1ea3d315a442b9d2f4236c75dfd55b9f75ab351d00192c322"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/run-20260907T023107Z/logs/chunks_resources.txt",
+      "bytes": 270,
+      "sha256": "1a54db6a3676ad061074fbd6497c70845dddfb9de965d5cee1511dd5b94910e9"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/run-20260907T023107Z/logs/chunks_wasm.txt",
+      "bytes": 2140,
+      "sha256": "e66c7facf855988e73a0a6d40ccd759901f218f66645cac24b3441c6880d3b52"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/run-20260907T023107Z/logs/clippy.txt",
+      "bytes": 306,
+      "sha256": "9025a512d349ebe448a9a3e9e946068f7b6856dee6dedee1e6a24edd1a0b7d31"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/run-20260907T023107Z/logs/format.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/run-20260907T023107Z/source_manifest.json",
+      "bytes": 92589,
+      "sha256": "d8c15cfe672afd64195705d47e876b2b67f6794949404418bbf96b860876c4f7"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/development/run-20260907T023107Z/validation_report.json",
+      "bytes": 2496,
+      "sha256": "026d39c8a245bddb2c76bbd532279684e9a4475d05eb29e58180718bddd050ea"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/dielectric_cross_platform.json",
+      "bytes": 7459,
+      "sha256": "2347bc7ea3945fde14e55e4c49e30e1242070fd14f11f70624fddfc9178dad70"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/fixture_reproduction.json",
+      "bytes": 192,
+      "sha256": "fd91c91e2581a5e55779cef83676f670330dfde297aa2672d5175ba1c815a568"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/gpu_update_resources.json",
+      "bytes": 541,
+      "sha256": "efddc29063bc8fd1994dc57f750afe81bddc324cb68929428c2aac7341924d31"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/hair_cross_platform.json",
+      "bytes": 2029,
+      "sha256": "5a6156ff5bae49526dc622f759f5bc315f743be4c9facd5602883323ac886368"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/implementation_manifest.json",
+      "bytes": 99042,
+      "sha256": "732e4b3365b650a3667d551ec34bc3497bd4cefa249e33f5825130ad9d4d6a24"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/alpha_browser.txt",
+      "bytes": 1245,
+      "sha256": "1ca7473d28eb30b90d112c63a775b6d2d762409c456dd5c89bf852e1052b238b"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/alpha_shutter_browser.txt",
+      "bytes": 540,
+      "sha256": "bff0d734ca7f7b3157ae86f9e86ae18002bda1b4238d0864b4d67b9d2dc03243"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/alpha_shutter_workflow.txt",
+      "bytes": 374,
+      "sha256": "faaae06b4fcc52bdfec0960d620099683a979a66219debd23fa9710df0f252b8"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/alpha_workflow.txt",
+      "bytes": 911,
+      "sha256": "f9ebc0c135c1f0015ab4a15b7a18814e68ec9d488d2ead82e075d630d5cce436"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/animated_regression.txt",
+      "bytes": 561,
+      "sha256": "70473303244419a8b544008ce23c6483a9e4d137068031ed0b9e9ff87dece1ac"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/blend_browser.txt",
+      "bytes": 149,
+      "sha256": "93ec50e5c565d14b88dd8f42945d07c57af428688e467dd7e554869999d784ea"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/blend_cross_platform.txt",
+      "bytes": 1473,
+      "sha256": "bff84ebe826fc7cfc362a02fb1bb8aeac71c3a9fbf38bc2df9ad974da583d57c"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/blend_reference.txt",
+      "bytes": 612,
+      "sha256": "564962bd8e612f4b791d54c2edac828bbaf1ae4c34ec98d774b1fce0a1fe59bb"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/blend_schema.txt",
+      "bytes": 49,
+      "sha256": "c8dea7f77f5068ec11bb3a062f29e73d3095f8a59bc8d383fe9c155552ec664a"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/blend_workflow.txt",
+      "bytes": 3979,
+      "sha256": "98688351d9cf277d99308fa1049bbb75a86967059ed9b2c6ccdedc82dbf333ea"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/browser_build.txt",
+      "bytes": 3018,
+      "sha256": "aff1a4d5de31fb5c561ddcfc31cf39f264fd3f53fd4f61139c4f05ebd4b0f0c0"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/browser_clippy.txt",
+      "bytes": 60,
+      "sha256": "9c7b0e12d043814ece991763c2da1e01fbd0fc565d1da434f644e355898cc2b4"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/camera_regression.txt",
+      "bytes": 3821,
+      "sha256": "02ac34a322edc197b56326077b87b162d1fca551db336cdedd8dab5990c43ec0"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/chunk_probe_baseline.txt",
+      "bytes": 874,
+      "sha256": "0c5311404e532f249eed2d89dd50ee8247961f312f797c091e2c8851994e1e86"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/chunks_native.txt",
+      "bytes": 1275,
+      "sha256": "e72b3dd0903bb57ee405e7e410ce694538ae2053f78c700d5f4c699e272657c7"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/chunks_resources.txt",
+      "bytes": 1369,
+      "sha256": "c844383791f7d76744df2b865077a832983368510717d75a154fa99de6ad1c9f"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/chunks_wasm.txt",
+      "bytes": 1442,
+      "sha256": "ddbc763c43cbbd8d0153b7585739bbc004126180239019e671905854ea0a2504"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/clippy.txt",
+      "bytes": 181,
+      "sha256": "26a587aa8c4cc1ddb2b215d4c5d71b9e8d3cc708863ccce089ca7ee6b3283a6e"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/coated_shutter.txt",
+      "bytes": 374,
+      "sha256": "faaae06b4fcc52bdfec0960d620099683a979a66219debd23fa9710df0f252b8"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/coated_shutter_browser.txt",
+      "bytes": 540,
+      "sha256": "bff0d734ca7f7b3157ae86f9e86ae18002bda1b4238d0864b4d67b9d2dc03243"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/conductor_shutter.txt",
+      "bytes": 374,
+      "sha256": "faaae06b4fcc52bdfec0960d620099683a979a66219debd23fa9710df0f252b8"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/conductor_shutter_browser.txt",
+      "bytes": 540,
+      "sha256": "bff0d734ca7f7b3157ae86f9e86ae18002bda1b4238d0864b4d67b9d2dc03243"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/curve_color_browser.txt",
+      "bytes": 10234,
+      "sha256": "1b6251a27e51c8872a9a559810d2ebf9ba2c1c37303e74282b68dd9d2d52df9c"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/curve_color_glb_validation.txt",
+      "bytes": 1001,
+      "sha256": "ff64d8ac32ab148d367ef4047ae62d17381e963b6696b9394b551f7bc1c6a7da"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/curve_color_schema.txt",
+      "bytes": 32,
+      "sha256": "88309c2259d3be51e3287ea74ea3469a5eaabeff08c6cf1e86f05df82128fc09"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/curve_color_workflow.txt",
+      "bytes": 4157,
+      "sha256": "ccaa988800ebe5e20cc485628d6149b49c86cfd978794863d9586343127e7326"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/dependency_audit.txt",
+      "bytes": 144,
+      "sha256": "a3c1e12000c74ae9b80b0103028fc84712a042d1c840670d7b52eb14f5d0d15c"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/dielectric_browser.txt",
+      "bytes": 2087,
+      "sha256": "57c197ee5d677189a523597eb4d8e326ac9f6aa8247b9501894c14b12a008053"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/dielectric_shutter.txt",
+      "bytes": 374,
+      "sha256": "faaae06b4fcc52bdfec0960d620099683a979a66219debd23fa9710df0f252b8"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/dielectric_shutter_browser.txt",
+      "bytes": 540,
+      "sha256": "bff0d734ca7f7b3157ae86f9e86ae18002bda1b4238d0864b4d67b9d2dc03243"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/dielectric_workflow.txt",
+      "bytes": 13028,
+      "sha256": "c09a6d732f70390f24937f785eea9ab0fe21df0cfbe19c5b79710c71510729cf"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/export_browser.txt",
+      "bytes": 2721,
+      "sha256": "7f31a7a6b5e45fc3c17fcaa79f13beb480fe9c623d8e63f3bef04c62b0771a56"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/export_schema.txt",
+      "bytes": 52,
+      "sha256": "43c672ff7a066efe55047e2786c06f6b0dcd4c92dc8afdd9c8282b3561613bad"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/export_source_validation.txt",
+      "bytes": 1381,
+      "sha256": "27af8fc5caf2010197bd95696811681d457cfa8e3d19078ffca033e07017f510"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/export_workflow.txt",
+      "bytes": 5091,
+      "sha256": "0ef2a640a4c47059f2505b1cbbf33606ba019a659c752ffba175d04c2574711d"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/format.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/geometry_regression.txt",
+      "bytes": 105,
+      "sha256": "7c0ba42cec8a5378f67d47fdd1f3ff1e13034e6c0ef6e170b6fb8a4061b8a7ba"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/gltf_export_gpu.txt",
+      "bytes": 672,
+      "sha256": "617a2047c66c4f4a0ec854c6b4531a421ba95c08c649baa4d0f55754309dae8a"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/gpu_alpha.txt",
+      "bytes": 2991,
+      "sha256": "20ee73fb6738aad8527b878510faab2fdb8011e1e1f3e452ac71a19b28b30311"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/gpu_dielectric.txt",
+      "bytes": 2263,
+      "sha256": "8ca0e6b04a90c494d58132eb3ca0483c2ae384aa085520dd5875adf1a2ce2842"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/gpu_resource_process.txt",
+      "bytes": 6865,
+      "sha256": "e904fa4e0ff934857024ee892f7de13deea746a9bb188f8ed09226ba6be1e930"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/gpu_resource_time.txt",
+      "bytes": 777,
+      "sha256": "37afb4e69a7da63019f0f4e88ce0892906132fd75a4df7d3daa0bae7ed41d60a"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/gpu_surfaces.txt",
+      "bytes": 3595,
+      "sha256": "820fdeaa235deea24eb47b61681b7f962811195cd21c76c6299c9da8cd20a758"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/gpu_update_browser.txt",
+      "bytes": 7053,
+      "sha256": "4e6c2c8c42243a60deec7d853b4247959e0bb9b685e755d6f411f598458403f8"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/gpu_update_cross.txt",
+      "bytes": 4659,
+      "sha256": "0493c8bd694ccb40145db57e964be397252cb35a4a35552434faa27c720fe23b"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/gpu_update_native.txt",
+      "bytes": 7258,
+      "sha256": "e035c2317d45d64e9a97f00cf0e6eea69f7fc8d02b5164e3aa96f8c72a6f208f"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/gpu_update_resource.txt",
+      "bytes": 513,
+      "sha256": "beca0cd5024f348a347de380e0873650b50da2715f8ba43fc805f7bf281a3689"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/groom_regression.txt",
+      "bytes": 102,
+      "sha256": "288445de2d0ad74c89b7f479826a49395227e29764da74d87685790250e8a636"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/hair_browser.txt",
+      "bytes": 8310,
+      "sha256": "00ad92c2ddae33268ac9501cc63e44430f1b7ce69362f47b109abd1fa92caebc"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/hair_schema.txt",
+      "bytes": 32,
+      "sha256": "0ab86858e1a9a8c34dbd156c0c2b59674a6f96bbdba2d832f9e91016a00975fa"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/hair_workflow.txt",
+      "bytes": 2389,
+      "sha256": "75c7f88b1e13e920ed26cb1465c7efc0980e016b9b32ddb87f9c8aa1fae5b59e"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/independent_source_validation.txt",
+      "bytes": 57,
+      "sha256": "69ecec41f35bd6e14c1fcd0e85b31608f7106d1ddccfc59b27acda19ac77a212"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/linux_check.txt",
+      "bytes": 2916,
+      "sha256": "3d87fb7e89084b699c9b3fe3d09f82793bf0fbf11e1407a32a6046a1ca4c2090"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/media_browser.txt",
+      "bytes": 3653,
+      "sha256": "5446861e06d7b0433135fed1d963deaec77dacadd500a9fb98db766380eaac88"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/media_exact_rays.txt",
+      "bytes": 337,
+      "sha256": "601ac6a6db69e7428adecd6cb8faac365e29577b3cc363f19f28d53cb5cdcc86"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/media_gpu.txt",
+      "bytes": 2847,
+      "sha256": "d839d13738d64545fdbd99d2cbdf2ded3ba895f18ef6da6be43f961d0403b034"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/media_shutter.txt",
+      "bytes": 260,
+      "sha256": "1f2dea9ef109d23b5dde106954b1c872151cc9f96e7d5ee47700b124db82465c"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/media_shutter_browser.txt",
+      "bytes": 544,
+      "sha256": "bd18f68c3d007111cc5c71b419a7118ba151abd96c1348e829b9f4bb6fce5b24"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/media_workflow.txt",
+      "bytes": 11196,
+      "sha256": "05a107da7f55c787e7e1f7f53e457606a37524ad167216fb9e447af14a506306"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/mip_lod_numeric_source.txt",
+      "bytes": 323,
+      "sha256": "b51f54d9b0f8e414c3992bc9c3f0bd9dd4bf98202914695cf853c848104fa58d"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/morph_browser.txt",
+      "bytes": 900,
+      "sha256": "60504c2f0ecf030b6486ac86e27e0b24bbf7b2e40618e329497fc24482f86339"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/morph_frame_gpu.txt",
+      "bytes": 2339,
+      "sha256": "1780cf8e574866c113802bbba3e17eb24d6b0d80e7c2644e9d4d39f15dc9632d"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/morph_frame_regressions.txt",
+      "bytes": 855,
+      "sha256": "b532f45810c2a0e493c76e9dd749e243900a905b55998eb33fc0edb8f6274fd3"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/morph_workflow.txt",
+      "bytes": 730,
+      "sha256": "f46a8096b9c855589c3b8d3a6551f12f61ce057de16e5f78e429e615756fd8d7"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/multibounce_gpu.txt",
+      "bytes": 337,
+      "sha256": "d3130ad1e7ab8d99d476b7c0a4f88a5497c24da3a42525bd04e1334743b5be74"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/named_uv_browser.txt",
+      "bytes": 662,
+      "sha256": "48b900416d13bea976fd9d10a57b0f9e6d63d198aa3007690795999458a9cf9b"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/named_uv_cross_platform.txt",
+      "bytes": 391,
+      "sha256": "e6ed56486c7ebb7ecf686b2c80adc3933bfa1b0ab9daf946a8e89cd66b07cbe1"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/named_uv_gpu.txt",
+      "bytes": 321,
+      "sha256": "1398690ce6286c97bcea1685a69eba392d4b1b28b79d81247d97a7af580d2ac1"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/named_uv_regression.txt",
+      "bytes": 399,
+      "sha256": "39611bf80563e02b72e641874fde17327d4678df96cee107045b54a627945f83"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/native_build.txt",
+      "bytes": 2135,
+      "sha256": "fa35307683a356cd68eda307d06999a37d011f46534304aadd692b8923490e67"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/native_tests.txt",
+      "bytes": 31952,
+      "sha256": "fe4346bc90a88cce5abbf915440359c684836b156495a38a480a3d89e69926f3"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/paint_browser.txt",
+      "bytes": 12621,
+      "sha256": "c3856e8db934c83bb321e91158be37727e8f11680fc8d1935f9fd2592657f694"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/paint_cross_platform.txt",
+      "bytes": 497,
+      "sha256": "5ed17981380923a2d2230b9b9881e4b1d6967530631c58147020c82fa504106f"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/paint_native.txt",
+      "bytes": 1624,
+      "sha256": "6f52b6b295c592f2a50c3fef21f2430f3545aa7004695e7b0ee648e5cd4fdd47"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/paint_schema.txt",
+      "bytes": 460,
+      "sha256": "c228459cf082e1b231cb94c36442896010d8e3670a8f46baa14fd43f1701adcc"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/paint_workflow.txt",
+      "bytes": 878,
+      "sha256": "a950212a0df16e9f93613b91179182d9f1d184f242e619c74afc1c87171cc6cc"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/secondary_browser.txt",
+      "bytes": 925,
+      "sha256": "87a6dd5423c2e0ffcf0ceaa2e7db0ca6e00078f08f15288f1a18610caee7f12e"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/secondary_gpu.txt",
+      "bytes": 790,
+      "sha256": "ae275fea5497a3eef4742c714b25555f7066eafe2e80e009be49cdae28d349be"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/secondary_workflow.txt",
+      "bytes": 1837,
+      "sha256": "2e7fa4c778c2c443432292c01a7713e0bcbb3a02bf0bc1f002f6feee226aa93e"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/shutter_regression.txt",
+      "bytes": 299,
+      "sha256": "2d9245f16a7dc84af96418c07079800c5c46689a72ee44558ffa86a190b6a6c4"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/sparse_regression.txt",
+      "bytes": 1215,
+      "sha256": "18296276fb276eabab26cf5f90ea109838085fda7f88d9a70d916e5d958b2866"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/spatial_browser.txt",
+      "bytes": 8031,
+      "sha256": "482e9fc302be22d5f4cdc3b37383e23f61ab1e3efb78a0790a227aae23c78bbd"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/spatial_cross.txt",
+      "bytes": 532,
+      "sha256": "0053336b1766f592133058276c1600ba680c67c50f3288184ae0c581c178baa9"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/spatial_native.txt",
+      "bytes": 1092,
+      "sha256": "276d212e51d1a9f9c3fa85c3a8fa1c9ec51e7e529f677b3f7e2bff977af72ac5"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/spatial_schema.txt",
+      "bytes": 196,
+      "sha256": "614a277bd1e743fe0364d2887059ee08249c5c384dbd64309928b0ffb2745afc"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/spatial_workflow.txt",
+      "bytes": 766,
+      "sha256": "fc42e1521851848255ec49072dabf5c25281cb97cbebb02005d3e4ca35195664"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/srgb8_numeric_source.txt",
+      "bytes": 624,
+      "sha256": "04703cdad474f80fed74aec95397ccdc7ed9db5e7b94a68c4c099990616cd55c"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/static_pbr_probe.txt",
+      "bytes": 870,
+      "sha256": "6435de2edbf26c60af5c4f132faa1661bceb76947eec496019f2aa5d065ec113"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/surface_browser.txt",
+      "bytes": 969,
+      "sha256": "88646def3f088b7a7663b682b4b243757908f32d6390787caf019987aaacd49e"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/surface_workflow.txt",
+      "bytes": 4649,
+      "sha256": "78886b0234c4ea8f2f280ba86f2f15fc35d5626418e452a5e8ec72ddd49dc0a3"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/uv_browser.txt",
+      "bytes": 8714,
+      "sha256": "2a58e17af168e30cdc872cb7cd54a7b72361600e99f579ed8f89097e645aa72b"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/uv_cross_platform.txt",
+      "bytes": 248,
+      "sha256": "083785349b98daae78d6146b1a4f3868adf01a34baab77e9e304d537de286e9e"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/uv_schema.txt",
+      "bytes": 401,
+      "sha256": "e61f0fe0f37c6c68a6e5df908b7636844cae5873c11ee47373c1c7cdaae1b65c"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/uv_workflow.txt",
+      "bytes": 550,
+      "sha256": "2a11cb4f557aeda2e8a89fc25cb33b21f325a46a7b44c93883fa9b0ff8cd71e8"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/vertex_color_browser.txt",
+      "bytes": 1785,
+      "sha256": "01c81ebaabb3b2f51fb741f6a3c25e21d90f8c09b120304174ac0f77e56683e3"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/vertex_color_workflow.txt",
+      "bytes": 1339,
+      "sha256": "0dba317827c8e26856731b6f91837421c068655c8fc9c2a7cdc38223d52aa106"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/vertex_colors_gpu.txt",
+      "bytes": 959,
+      "sha256": "e92c7aba6d5088a84c76f8869a45eb7cc1a9a755aee5f69595fc19585f690155"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/volume_browser.txt",
+      "bytes": 7114,
+      "sha256": "a17272d2b8e59d6a6e20d4f689e7f2881df16b06bce25191a46da7f4ccb929ca"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/volume_schema.txt",
+      "bytes": 39,
+      "sha256": "c3d4ac026f61145165003a74118b7d361dfbb5e2b8664fd24e865bc7c429eb7a"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/volume_workflow.txt",
+      "bytes": 2803,
+      "sha256": "627b0f49f01e2e7c6af533e4fc1b1b586faffdf7ae4937b24eaa5818e8fb3c61"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/wasm_tests.txt",
+      "bytes": 27336,
+      "sha256": "79a840f6c0408daace2dda8e6e854b5696c472ceb557ab3228df8fa8ef836fd3"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/logs/windows_check.txt",
+      "bytes": 3374,
+      "sha256": "e9cb4c8f01ea9d5dc766764ade78c2447d5bee297d915153233f28ffdf982965"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/media_cross_platform.json",
+      "bytes": 14442,
+      "sha256": "e67d9822cdabcd9876fd84003837244359b734cad813c0d8166f1e5fd8413c00"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/mip_lod_numeric_source.json",
+      "bytes": 341,
+      "sha256": "170c1c1e38468e56baa70ad71ea382314974cbb56e4f5cdca8f4b5306b3a386a"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/named_uv_cross_platform.json",
+      "bytes": 390,
+      "sha256": "692d502f89131226a21fa11f98396ee6fcf8fda4f3f71f0724bd15280a0da208"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/original_fixture_integrity.json",
+      "bytes": 36781,
+      "sha256": "269121cc7557938d25c6794f18e0ded347e62ef9718e2f9c8e15e9a884007f6a"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/path.alpha.generated.wgsl",
+      "bytes": 28669,
+      "sha256": "82177b8262a499bad4e9997fe15d04975b9635e0817ea4caeeb38d713a0648dc"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/path.dielectric.generated.wgsl",
+      "bytes": 34354,
+      "sha256": "afa6f881610497e4c8cdf63f6a28c10ff2a243a23c4f23dcac7aae5179130eea"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/path.generated.wgsl",
+      "bytes": 24720,
+      "sha256": "e0bae9a561867ddc4622b68e9d52635ce3d380bbf6f4aeb109e63b46c8d89247"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/path.media.generated.wgsl",
+      "bytes": 28975,
+      "sha256": "e373ef0db23254a1266473bb64b3a351c6b0c1261e435a8ca0867d08b4b3881b"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/path.surfaces.generated.wgsl",
+      "bytes": 32168,
+      "sha256": "cf5b558cef24671d760df416ccd1b82b7b8166bc26dbf2dfd4e2d3d616808f07"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/process_resource_ranges.json",
+      "bytes": 872,
+      "sha256": "1e29b8e1153002d276bb56ba9ec2ba0bbcd152879cd01cd70b1e9893a2037f92"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/render_regressions.json",
+      "bytes": 383048,
+      "sha256": "2fb0a73d098c82308bcf24f194ccde6784c6e05311b41c66d0ba18efca7e475d"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/0-baseline/BoxTextured-comparison.json",
+      "bytes": 2950,
+      "sha256": "32aafefb76bd1749643414af02f6878db1e318a0aa54d54d78dbf9d408e6f92d"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/0-baseline/NormalTangentMirrorTest-comparison.json",
+      "bytes": 2936,
+      "sha256": "142ff652d4f26898d5dd03e75619f63608e74332c9724b36da010d41d9f73cf3"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/0-baseline/artifact_manifest.json",
+      "bytes": 6117,
+      "sha256": "109a12041e666e5300ef4c1fa0cafe3a2840fac93240578e1fae11da4360bef9"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/0-baseline/back_face_report.json",
+      "bytes": 107,
+      "sha256": "b7176350a43cfba63a8a8186d4dc830f8cb075f996f7b4e94d8beb4bcc187cf8"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/0-baseline/sampler_camera_report.json",
+      "bytes": 9129,
+      "sha256": "205cae74beb360d5a774bbd115658e50b2a43c22debf7fd49beb590395770679"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/0-baseline/workflow_report.json",
+      "bytes": 6781,
+      "sha256": "0307aef51cdc081b867d25f882dc66fe9e2dffb49bd623f83177a6c999406183"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/0-baseline.log",
+      "bytes": 878,
+      "sha256": "a92228d319923b1382da5a57ab33d49f8534796b707a70340e12563e157b6a46"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/1-candidate/BoxTextured-comparison.json",
+      "bytes": 2950,
+      "sha256": "458571ee0e094b1c00a52bf2347c3196b1f237507578f35e71540014d8c5dea4"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/1-candidate/NormalTangentMirrorTest-comparison.json",
+      "bytes": 2936,
+      "sha256": "88b9e8c534b46e6fb38cbd539dfeebf3db4e4f34018f24c41ed87a23d6e4ac61"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/1-candidate/artifact_manifest.json",
+      "bytes": 6117,
+      "sha256": "b705b0379a21b9da77f900885de4e58f6ee476c6708e9b8569b193d33bfe2082"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/1-candidate/back_face_report.json",
+      "bytes": 107,
+      "sha256": "b7176350a43cfba63a8a8186d4dc830f8cb075f996f7b4e94d8beb4bcc187cf8"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/1-candidate/sampler_camera_report.json",
+      "bytes": 9129,
+      "sha256": "205cae74beb360d5a774bbd115658e50b2a43c22debf7fd49beb590395770679"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/1-candidate/workflow_report.json",
+      "bytes": 6781,
+      "sha256": "c7514cdf49c9a32a0ba9ad9119ba37153aff5851ed13250fdab9f0c3968098d3"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/1-candidate.log",
+      "bytes": 879,
+      "sha256": "1bc83023f1aba2398edfb89c94229a06674f9a7954527610f21de9487ba48f9d"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/2-candidate/BoxTextured-comparison.json",
+      "bytes": 2950,
+      "sha256": "1a17372bbbd312d959a420f5b4bbaaa9adbdb3be025ee189139d02ff20c88b01"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/2-candidate/NormalTangentMirrorTest-comparison.json",
+      "bytes": 2935,
+      "sha256": "7091bee0e557ce818cf3869f85a76f50a29d289fca983f74442be68d96c6d0b5"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/2-candidate/artifact_manifest.json",
+      "bytes": 6117,
+      "sha256": "e7c238b6d01dc9aa45c4cd90794723e7a504d664e203561b051bc61abc592561"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/2-candidate/back_face_report.json",
+      "bytes": 107,
+      "sha256": "b7176350a43cfba63a8a8186d4dc830f8cb075f996f7b4e94d8beb4bcc187cf8"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/2-candidate/sampler_camera_report.json",
+      "bytes": 9129,
+      "sha256": "205cae74beb360d5a774bbd115658e50b2a43c22debf7fd49beb590395770679"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/2-candidate/workflow_report.json",
+      "bytes": 6780,
+      "sha256": "16dee030a0f502327916b2890f8c2ea15d23f9ef46e22c2a4ee3db7d42c67e26"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/2-candidate.log",
+      "bytes": 879,
+      "sha256": "7c44220b0980e88aca80ff575a16f9933299eea8b3424726d7755c90b5e96c0e"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/3-baseline/BoxTextured-comparison.json",
+      "bytes": 2950,
+      "sha256": "6d2b88e9e87756e18a9ed836d952b2a3334adec9fb671495fd87ad97f4aae6ad"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/3-baseline/NormalTangentMirrorTest-comparison.json",
+      "bytes": 2943,
+      "sha256": "5475f2ed22c47e9117781fc63fdb97fe3fac8d7f32730d1e83d36eed492245e2"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/3-baseline/artifact_manifest.json",
+      "bytes": 6117,
+      "sha256": "1b10fdd50480065c86390c0808e33e342119eeab486aaa87c49ee9c2822fada8"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/3-baseline/back_face_report.json",
+      "bytes": 107,
+      "sha256": "b7176350a43cfba63a8a8186d4dc830f8cb075f996f7b4e94d8beb4bcc187cf8"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/3-baseline/sampler_camera_report.json",
+      "bytes": 9129,
+      "sha256": "205cae74beb360d5a774bbd115658e50b2a43c22debf7fd49beb590395770679"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/3-baseline/workflow_report.json",
+      "bytes": 6788,
+      "sha256": "ce26be9b74c834542a29606770546ab383b55f14f071cbb78c65751dba39c1e9"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/3-baseline.log",
+      "bytes": 878,
+      "sha256": "07cb71fe3409a045cc2977945deabeab1892e3c62fc5801a4dd984460c569f71"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/repeat-probes/report.json",
+      "bytes": 1294,
+      "sha256": "5276ce95d2e9e4a3f5c4ffc5869b802778b2a43a37614c1da65ca9c38ea44204"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/representation_costs.json",
+      "bytes": 14167,
+      "sha256": "786143650b167816ed7b989ffd8fab6d8a25c22dc9c3ac5b1197303c9817e511"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/schema_validation.json",
+      "bytes": 1931,
+      "sha256": "5bbbd763363b0044e773870c92e7322758fb672414895ea4d375e0f8ed0640b8"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/secondary_cross_platform.json",
+      "bytes": 3330,
+      "sha256": "3c6865c052106e8972bc316ffe48e48d9a16c41a37962448222c5b1c1411d2e2"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/shader_provenance.json",
+      "bytes": 1560,
+      "sha256": "b00137f757b9604c30c2f50138cb4017f40b18ced040d50ac2a97bb4d54e7522"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/source_integrity.json",
+      "bytes": 20675,
+      "sha256": "d081828090372a06d46b854418a716c5b0ae9a49706b09289e22ec5fc80ab232"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/source_manifest.json",
+      "bytes": 92928,
+      "sha256": "9108dd613e419c96029a6b7d024097f5a707bbd4de9088e7beea9a00ada5f0be"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/000-init.request.json",
+      "bytes": 117,
+      "sha256": "25a4e2189d9223ca772316c02110f358e9b444e33a86d46ae02969a8c295e418"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/000-init.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/000-init.request.stdout.json",
+      "bytes": 151,
+      "sha256": "68a29d3cc17551143c8b12e437522e7aa5546153578c5b4d91c5a4b90cf99476"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/001-empty.request.json",
+      "bytes": 65,
+      "sha256": "c51ad70dd7e703d4ce85f93acdce962dd3739cf85d67f10d1cf5197ca63ec3dd"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/001-empty.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/001-empty.request.stdout.json",
+      "bytes": 10919,
+      "sha256": "4a2bc4f3b8a1e5549d750eaa5223c88a7504e6b40c4f582731008a948b4010cf"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/002-source.request.json",
+      "bytes": 335537,
+      "sha256": "902296bbec5f61c10bb23e1180248bc9cabe709c1305f584fadacbf489e95aa8"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/002-source.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/002-source.request.stdout.json",
+      "bytes": 360,
+      "sha256": "2fcba94c3bd94f60f38c596a1cd57630f20bb4a2102e2650ab2a712ba439e85a"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/003-source.request.json",
+      "bytes": 65,
+      "sha256": "c51ad70dd7e703d4ce85f93acdce962dd3739cf85d67f10d1cf5197ca63ec3dd"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/003-source.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/003-source.request.stdout.json",
+      "bytes": 109484,
+      "sha256": "4af5153ce90b43d2ac69ae96eb8bc556e344718bcb4bb7bf7e5fba10f33c5b5d"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/004-scene.request.json",
+      "bytes": 4125,
+      "sha256": "a54a521b45312d69c4310a96b493462a12f98490f2fc5204a3a326b44d8b4765"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/004-scene.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/004-scene.request.stdout.json",
+      "bytes": 360,
+      "sha256": "e82f7d82c59a1b647a7b64eac0ee04d1d5677c6c44ea9e967bf760624049a02f"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/005-scene.request.json",
+      "bytes": 65,
+      "sha256": "c51ad70dd7e703d4ce85f93acdce962dd3739cf85d67f10d1cf5197ca63ec3dd"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/005-scene.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/005-scene.request.stdout.json",
+      "bytes": 111974,
+      "sha256": "06baaca076d15314618cb12382ab0adccace296b65d6555ffe536888d4f1553e"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/006-initial-export.request.json",
+      "bytes": 386,
+      "sha256": "cdf8a0746a8ff04da5d4e29fac5cb0d0e4464f27870a89bd0594d5284e581698"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/006-initial-export.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/006-initial-export.request.stdout.json",
+      "bytes": 321,
+      "sha256": "73a02268e6c89f6c721ec1e6f788c8b12d7ff1cdccf33437a22c61d88cc66d0f"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/007-query-0.request.json",
+      "bytes": 754,
+      "sha256": "7535a90feda4d84e30345b163fa98cf425d6822b99ed5f0b4cb0953cbf9dbffc"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/007-query-0.request.stderr.txt",
+      "bytes": 777,
+      "sha256": "4517d54f5a16d66b28f1427260828a20e5f229377ceb66ff696bb43266c8ce19"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/007-query-0.request.stdout.json",
+      "bytes": 787,
+      "sha256": "ca66a9099bd136cff2267814577a5fc11b6d417cdc5d5bff376d82a16bf72800"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/008-query-1.request.json",
+      "bytes": 746,
+      "sha256": "b4a12a81498b26c5da1ddbcdd4af043e04cc66c2e3ce35a28fcd89719f5b5314"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/008-query-1.request.stderr.txt",
+      "bytes": 777,
+      "sha256": "6a66e5d47cf5c8662304a197c9be70a1904a78456bc24a38c11eee22b7659cd0"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/008-query-1.request.stdout.json",
+      "bytes": 809,
+      "sha256": "4723f642f169dd1d5b794d052e3cdb89217df8f1afed5fee31e410b6d9080af1"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/009-query-2.request.json",
+      "bytes": 746,
+      "sha256": "3d11d7b4c442f3d0c1cd84641d7bf5f21cc1a6273218cafd615bebb5915aa5e1"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/009-query-2.request.stderr.txt",
+      "bytes": 777,
+      "sha256": "e6892daf4985702b88697492994b7550a2a29dda2cb643a3e3341a8bd2d90b50"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/009-query-2.request.stdout.json",
+      "bytes": 1934,
+      "sha256": "3f642718be49a91443ab1586c20513be47650aef978e68d91d1470c6746e8d01"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/010-query-3.request.json",
+      "bytes": 750,
+      "sha256": "cf3c7fec997621f036599a840f968f42529ec403154f09c4de5b24ab14111379"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/010-query-3.request.stderr.txt",
+      "bytes": 777,
+      "sha256": "fd7d6f35732bd1318962f96e4f74f25d7f05ff7e14df1447317a1cf37026fa4b"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/010-query-3.request.stdout.json",
+      "bytes": 798,
+      "sha256": "837a48a3f1e4dfd080ec819a8358b6a9dccdb71249e13bc695a9c8ce5a1d9805"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/011-query-4.request.json",
+      "bytes": 750,
+      "sha256": "00d5cb2849ae132c2c1b8cd899345278edc7bc7f0d115af566defebbd4b63247"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/011-query-4.request.stderr.txt",
+      "bytes": 777,
+      "sha256": "ae43c26be07b4b3509e7dcebe48fbbda9909f0faf4ddd3f838abd1b1309158b9"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/011-query-4.request.stdout.json",
+      "bytes": 575,
+      "sha256": "4b4b609338ee176ad8ea822486d0161a94b71e058dcdebb37d8ba009a777ae65"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/012-query-5.request.json",
+      "bytes": 762,
+      "sha256": "3d2b62e10c374b4155e061c34cf7bde6be9f12314fc602a76d6fcafc8cb31c68"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/012-query-5.request.stderr.txt",
+      "bytes": 777,
+      "sha256": "6f5110a722fbdb242e4e58397119a758f0adb8b2f2a7977d50b69b66d58c927d"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/012-query-5.request.stdout.json",
+      "bytes": 721,
+      "sha256": "40de16e536d32c8871492ebdf62c3134543c49748e8a53c8242df9397999907b"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/013-query-6.request.json",
+      "bytes": 743,
+      "sha256": "9633999b2661d74fba9fda9d62fc6de2b12662907c8abd0a68e51cacdbc21442"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/013-query-6.request.stderr.txt",
+      "bytes": 777,
+      "sha256": "f0b3e10bb4980b146783ceab5698031cdc31b96289c490b5affdd27d40f0580e"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/013-query-6.request.stdout.json",
+      "bytes": 535,
+      "sha256": "47a8d77fafe055d57b7504cd62bec92808702b36b7dc9c1a47b3ad1ef668f8d9"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/014-query-7.request.json",
+      "bytes": 754,
+      "sha256": "7535a90feda4d84e30345b163fa98cf425d6822b99ed5f0b4cb0953cbf9dbffc"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/014-query-7.request.stderr.txt",
+      "bytes": 777,
+      "sha256": "faa9f37db89d7342d1f0b5df1188d0c3fdc1487e920bd0d21f63729370a312c8"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/014-query-7.request.stdout.json",
+      "bytes": 787,
+      "sha256": "ca66a9099bd136cff2267814577a5fc11b6d417cdc5d5bff376d82a16bf72800"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/015-stale.request.json",
+      "bytes": 754,
+      "sha256": "cd795bd69b785040f6fd8be60beff4630d10cd93b24eb79cae81d12ca2e34070"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/015-stale.request.stderr.txt",
+      "bytes": 122,
+      "sha256": "7ff61abedcd5f60d6a682f9c7798603742380bcd0ff192989984a6f825d60344"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/015-stale.request.stdout.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/016-future.request.json",
+      "bytes": 754,
+      "sha256": "e8b4f174272294b8a42f9e7cc9ffaf4f6d1510c8fd2a11972663a26433591f49"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/016-future.request.stderr.txt",
+      "bytes": 118,
+      "sha256": "2fa1e32cb56635560362325a868ff2cb6d0d7adc436e066d3d955379a0c53f34"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/016-future.request.stdout.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/017-conditioned-frame.request.json",
+      "bytes": 754,
+      "sha256": "453f2ad6b48c150e3dd03bf35f8533f7fa9f3b9e5db38304984d1b86927243b1"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/017-conditioned-frame.request.stderr.txt",
+      "bytes": 140,
+      "sha256": "1e160303f83e193a51e1b0388c46837525fb9364ccc6ba1734d459839f88b5c3"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/017-conditioned-frame.request.stdout.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/018-budget.request.json",
+      "bytes": 749,
+      "sha256": "50bf01727ab06e1507c9ab525df56a4a49e78e5ea4541f2601ddd987f754fea5"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/018-budget.request.stderr.txt",
+      "bytes": 102,
+      "sha256": "0c6a37f52e87fe24fa2725ba822d7b26ebf957e058069a7db77dff4c735a1a08"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/018-budget.request.stdout.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/019-triangulation-budget.request.json",
+      "bytes": 747,
+      "sha256": "042387542492aa577f3e3f9944e6baea2fc8e97be44448aef561756f0a96a902"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/019-triangulation-budget.request.stderr.txt",
+      "bytes": 133,
+      "sha256": "0687295140db7e1a1330e3985cc6695d610b900eabda1950e4d79743a81031c7"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/019-triangulation-budget.request.stdout.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/020-metric.request.json",
+      "bytes": 743,
+      "sha256": "8cca58ba10cbba981914a411bec8464dba0f37bd1acbea94e7c264f9c8d7d567"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/020-metric.request.stderr.txt",
+      "bytes": 166,
+      "sha256": "bd14ea766fecc05750f23ea0dd9626aa32963799e3776a3136e74c5f91f1cff8"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/020-metric.request.stdout.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/021-cancel.request.json",
+      "bytes": 948,
+      "sha256": "5aa132e39cbe9119680c27d2ae7c50639f2d55c529eaf2171c2a08f4912f40b3"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/021-cancel.request.stderr.txt",
+      "bytes": 137,
+      "sha256": "be71ef3593b9fe52a474727ea6053de07f469b4a05a7fd6662ff792103047661"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/021-cancel.request.stdout.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/022-queries-atomic.request.json",
+      "bytes": 65,
+      "sha256": "c51ad70dd7e703d4ce85f93acdce962dd3739cf85d67f10d1cf5197ca63ec3dd"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/022-queries-atomic.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/022-queries-atomic.request.stdout.json",
+      "bytes": 111974,
+      "sha256": "06baaca076d15314618cb12382ab0adccace296b65d6555ffe536888d4f1553e"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/023-old-client-atomic.request.json",
+      "bytes": 65,
+      "sha256": "c51ad70dd7e703d4ce85f93acdce962dd3739cf85d67f10d1cf5197ca63ec3dd"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/023-old-client-atomic.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/023-old-client-atomic.request.stdout.json",
+      "bytes": 111974,
+      "sha256": "06baaca076d15314618cb12382ab0adccace296b65d6555ffe536888d4f1553e"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/024-place-marker.request.json",
+      "bytes": 1109,
+      "sha256": "478dcf8348de65d08c884d887d18f0894f6b7f112f03c2b6e4d0b369e8425057"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/024-place-marker.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/024-place-marker.request.stdout.json",
+      "bytes": 360,
+      "sha256": "cdd1a29b0551902bb064c8becc68e62e68eb9c22737d747a2751408447228633"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/025-placed.request.json",
+      "bytes": 65,
+      "sha256": "c51ad70dd7e703d4ce85f93acdce962dd3739cf85d67f10d1cf5197ca63ec3dd"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/025-placed.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/025-placed.request.stdout.json",
+      "bytes": 112028,
+      "sha256": "bdc406c5343e36877ff90b5d84244107a625de7bbfc8957c540ecad7a6d7e38c"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/026-final-export.request.json",
+      "bytes": 378,
+      "sha256": "5a6b8392c675905b68b6b98a83c69c14563387593990a8281799941589f85607"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/026-final-export.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/026-final-export.request.stdout.json",
+      "bytes": 313,
+      "sha256": "521fe4d128af9d930fb376e2bc834310c4250d67f29051c457f3f3e20009ab2c"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/027-render-cpu.request.json",
+      "bytes": 352,
+      "sha256": "a8d29fdda9c111b8c7ede7347b28c40533c1f051004dd48d7c5be5b9902b2dfb"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/027-render-cpu.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/027-render-cpu.request.stdout.json",
+      "bytes": 315,
+      "sha256": "42b1205169155e1f1f4cb3788a268cef52f6b430052ee3eaa413df45b8c5188f"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/028-render-gpu.request.json",
+      "bytes": 352,
+      "sha256": "91c23c4785c02ed9a2fae1feeaf5fea1c36b40e69bdb6e3ee516d3a405be9e43"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/028-render-gpu.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/028-render-gpu.request.stdout.json",
+      "bytes": 315,
+      "sha256": "6092d8d423f1d94329ac9e10c79457d0267c519c769f4b6970428e164cdc0dbc"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/029-restore.request.json",
+      "bytes": 260,
+      "sha256": "1f6315bc64d3f89b8581d6d03f5f4610530a7bc817f1fd3bd5f3bf2aeabac6a7"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/029-restore.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/029-restore.request.stdout.json",
+      "bytes": 151,
+      "sha256": "87948d98e02a72238f1989442b88cb17d3757f672da8180ddedd16a27f7357b2"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/030-restored.request.json",
+      "bytes": 65,
+      "sha256": "c51ad70dd7e703d4ce85f93acdce962dd3739cf85d67f10d1cf5197ca63ec3dd"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/030-restored.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/030-restored.request.stdout.json",
+      "bytes": 112028,
+      "sha256": "bdc406c5343e36877ff90b5d84244107a625de7bbfc8957c540ecad7a6d7e38c"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/031-restored-query-0.request.json",
+      "bytes": 754,
+      "sha256": "bb10ad99bd62e03dd836369bc5fa2d2fda3c789c1cfd68dc1140810ef6329deb"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/031-restored-query-0.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/031-restored-query-0.request.stdout.json",
+      "bytes": 787,
+      "sha256": "47f04fbe3bfbfd5207ef2539116e61261ebe6afb72ec9a5ae43278028bb30e79"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/032-restored-query-1.request.json",
+      "bytes": 746,
+      "sha256": "0d9bb35a795091a9d92fe53b5d80f19df48da439f46ca4d081b5fbffe72b1fcb"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/032-restored-query-1.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/032-restored-query-1.request.stdout.json",
+      "bytes": 809,
+      "sha256": "7971759b7c410545bfe8e242bcb801bffb4a7cae6531f22f181daadc1e14f719"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/033-restored-query-2.request.json",
+      "bytes": 746,
+      "sha256": "30dcc4a79900a6c99f616baa38c2c589eb11c9f23daba81a468da78d0d65314f"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/033-restored-query-2.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/033-restored-query-2.request.stdout.json",
+      "bytes": 1934,
+      "sha256": "27ea289ed4410360df2863b2a05dc8d1a849f3d2e4600002138ac955a411f25a"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/034-restored-query-3.request.json",
+      "bytes": 750,
+      "sha256": "37a3f0c2d7081008f769b9d900a8d5800b859d50eaefb95f200fd7516fddb666"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/034-restored-query-3.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/034-restored-query-3.request.stdout.json",
+      "bytes": 798,
+      "sha256": "3480a7b2f93f59d8aa60009a6ae5baae6d95a0bf075a2bc4cea14ad23645e926"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/035-restored-query-4.request.json",
+      "bytes": 750,
+      "sha256": "bee911595b9a8963e52643dce6fda5006ab2d00dc29817e4c4557ca0581981c3"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/035-restored-query-4.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/035-restored-query-4.request.stdout.json",
+      "bytes": 575,
+      "sha256": "fc998f3f7a015ed5a49264590ead63c6fae7a9360e94dcb61e60a920cc7d476d"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/036-restored-query-5.request.json",
+      "bytes": 762,
+      "sha256": "4b0cbafd610bdec903268f111125cd41332ecf0d633b7f6e23e097867d126ca4"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/036-restored-query-5.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/036-restored-query-5.request.stdout.json",
+      "bytes": 721,
+      "sha256": "c8eff58f36cc251f2ef7a7ae17a550f96add09cfd0272b0e0dbaf896fd4b1217"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/037-restored-query-6.request.json",
+      "bytes": 743,
+      "sha256": "bbd50fa659dd70d20526c5f51e1eec5ddf545add5eee23b02826f7693168545e"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/037-restored-query-6.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/037-restored-query-6.request.stdout.json",
+      "bytes": 535,
+      "sha256": "b033f8909cf36e41a268f167cec375634925b67ff619e3dec949440143f860f7"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/038-restored-query-7.request.json",
+      "bytes": 754,
+      "sha256": "bb10ad99bd62e03dd836369bc5fa2d2fda3c789c1cfd68dc1140810ef6329deb"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/038-restored-query-7.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/038-restored-query-7.request.stdout.json",
+      "bytes": 787,
+      "sha256": "47f04fbe3bfbfd5207ef2539116e61261ebe6afb72ec9a5ae43278028bb30e79"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/039-restored-render.request.json",
+      "bytes": 357,
+      "sha256": "a217a7d38b9f27907f342cc57cc194fbc3e93a38eaafb5a0e58e74c78319e1a9"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/039-restored-render.request.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/039-restored-render.request.stdout.json",
+      "bytes": 320,
+      "sha256": "9ebf54e73d5f74d5340c4bcf0b0c6a93a5447374aa2548ce7fbcfd67b260820b"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/archive/document/document.json",
+      "bytes": 204343,
+      "sha256": "0b0e355ec20caf89536da0580889a1bbdfb076a376d9224f3585f889cb78296c"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/archive/manifest.json",
+      "bytes": 398,
+      "sha256": "dbc1a531b6e47ae511da272f0a883ec66caf975c3c7650e28907cff4097babd9"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/browser-cpu.json",
+      "bytes": 28154,
+      "sha256": "947f8a06411f8af2b4c28139668cf5c2e244c59795597ae2a937ca13ee3bf57b"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/browser-gpu.json",
+      "bytes": 28153,
+      "sha256": "eece50fdf9c5157c3dec2b74a1b8ab383656a4e3da0a92da6759a9b3cb5540be"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/browser_report.json",
+      "bytes": 13225,
+      "sha256": "d2d1c1b09b3f92950db63942663d32f256c655bc61f9991754eda6885765af2d"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/cancel",
+      "bytes": 6,
+      "sha256": "2374d91794b79f4fb4ec9587d2cf00aecc4f9953fab3ed1dd12ab147a0b721f9"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/cross_platform.json",
+      "bytes": 620,
+      "sha256": "79dfd02a5457c498c73203416b257e34cc6e80f59e8e1ef2785b07a82d280eac"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/initial-archive/document/document.json",
+      "bytes": 203149,
+      "sha256": "ac81e1ace4feaedecff6d0a690e6f636a3569e2f13fc266a65460c3b7e03eb8c"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/initial-archive/manifest.json",
+      "bytes": 398,
+      "sha256": "ab8f876fee5ba0394405f39cd107e9a84f7b305cfebd03a1a2fdd1cd42e6d5e4"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/old-query.json",
+      "bytes": 563,
+      "sha256": "01eeb6f8dc87169efb92d597753bf76b773fa315c92985c96fa190da0ad70fd1"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/old-query.stderr.json",
+      "bytes": 310,
+      "sha256": "757888e78388b2bd44b00f06fbf1687feb039b5a9e173c0481c283b350754360"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/placed-cpu/image/image.pfm",
+      "bytes": 3086,
+      "sha256": "a58a8bf93863bd57de44b32f231ac6249cb6cd712b0086d8e67588997c80f315"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/placed-cpu/image/image.ppm",
+      "bytes": 781,
+      "sha256": "0ea629c0b388e0dbc7da5b3e0dcf5e6dcf162e4d32cc1eb72329be7144570538"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/placed-cpu/image/passes.json",
+      "bytes": 14122,
+      "sha256": "760ebfd177a239a09b77bde963062b829549c8cd867cafce04999df15e471e7c"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/placed-cpu/image/receipt.json",
+      "bytes": 505,
+      "sha256": "6d0d954e9c1c3f9aa4e7a655429cfa40e9ea7f15f993cb2ffceb6660fa33c8d3"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/placed-cpu/manifest.json",
+      "bytes": 732,
+      "sha256": "f0352fbe27b73cda3a9bc86711d8409d4c51332ad8f3c565cbe77e9879b5b711"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/placed-gpu/image/image.pfm",
+      "bytes": 3086,
+      "sha256": "014a61935e9f16477e9768f1081025f9ada97b5432be53d26e445cbb49da6d56"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/placed-gpu/image/image.ppm",
+      "bytes": 781,
+      "sha256": "0ea629c0b388e0dbc7da5b3e0dcf5e6dcf162e4d32cc1eb72329be7144570538"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/placed-gpu/image/passes.json",
+      "bytes": 14123,
+      "sha256": "5464635295e6937ee53ee3722e14a88a08e0976bc14ba5b1b672dc92b0ac8593"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/placed-gpu/image/receipt.json",
+      "bytes": 495,
+      "sha256": "7c20e368e4c8800398ba53b278ba259b4b49d2bcf7f5e471357ad5f5e0d25d18"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/placed-gpu/manifest.json",
+      "bytes": 732,
+      "sha256": "8508e39844781294423a8ed114f4e72700a384b8c999245f673be8d5a345d3da"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/placed-restored/image/image.pfm",
+      "bytes": 3086,
+      "sha256": "a58a8bf93863bd57de44b32f231ac6249cb6cd712b0086d8e67588997c80f315"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/placed-restored/image/image.ppm",
+      "bytes": 781,
+      "sha256": "0ea629c0b388e0dbc7da5b3e0dcf5e6dcf162e4d32cc1eb72329be7144570538"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/placed-restored/image/passes.json",
+      "bytes": 14122,
+      "sha256": "760ebfd177a239a09b77bde963062b829549c8cd867cafce04999df15e471e7c"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/placed-restored/image/receipt.json",
+      "bytes": 505,
+      "sha256": "6d0d954e9c1c3f9aa4e7a655429cfa40e9ea7f15f993cb2ffceb6660fa33c8d3"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/placed-restored/manifest.json",
+      "bytes": 732,
+      "sha256": "f0352fbe27b73cda3a9bc86711d8409d4c51332ad8f3c565cbe77e9879b5b711"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/project/00000000000000000000.json",
+      "bytes": 414,
+      "sha256": "b09526ec7b465938372e1f4d288990c873b73745b584c2014481946315496823"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/project/00000000000000000001.json",
+      "bytes": 2210,
+      "sha256": "145a9a925591a5f9693d5c8e2567a099542576053a09c2eb75eaf625dfc956b3"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/project/00000000000000000002.json",
+      "bytes": 6239,
+      "sha256": "c8f1fb8434e3a5e183bb5e27c0dda10469660b9974ca523d730967d0a5a83932"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/project/00000000000000000003.json",
+      "bytes": 7433,
+      "sha256": "9e47ea9050d20e61df7cb244dd5284e326d06041e283880994c43ef4da09e960"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/project/chunks/077dbcd0d3286bfb65abd176163885067114dc2c9b6624a298bb887355c8b6e9.bin",
+      "bytes": 307,
+      "sha256": "077dbcd0d3286bfb65abd176163885067114dc2c9b6624a298bb887355c8b6e9"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/project/chunks/0c232d3671f03bbbb5cb35ef30602dc9d2c21b95964c0d511ce85e8b18763a43.bin",
+      "bytes": 52946,
+      "sha256": "0c232d3671f03bbbb5cb35ef30602dc9d2c21b95964c0d511ce85e8b18763a43"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/project/chunks/58b40a3c5569a0ebb77180e9e753b7f3b3ab5ca33b13d659b2821f7922b242e3.bin",
+      "bytes": 1009,
+      "sha256": "58b40a3c5569a0ebb77180e9e753b7f3b3ab5ca33b13d659b2821f7922b242e3"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/project/chunks/616ebf43ffe16a260f62a9347a296cf36fd43eea51319bd79c6a142a62a59ebf.bin",
+      "bytes": 371,
+      "sha256": "616ebf43ffe16a260f62a9347a296cf36fd43eea51319bd79c6a142a62a59ebf"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/project/writer.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/restored/00000000000000000000.json",
+      "bytes": 7364,
+      "sha256": "5cb8ca834b6a3f3e25ae5fdfe783f7440d809be72e4c4dcbc89e3c61a983d798"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/restored/chunks/077dbcd0d3286bfb65abd176163885067114dc2c9b6624a298bb887355c8b6e9.bin",
+      "bytes": 307,
+      "sha256": "077dbcd0d3286bfb65abd176163885067114dc2c9b6624a298bb887355c8b6e9"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/restored/chunks/0c232d3671f03bbbb5cb35ef30602dc9d2c21b95964c0d511ce85e8b18763a43.bin",
+      "bytes": 52946,
+      "sha256": "0c232d3671f03bbbb5cb35ef30602dc9d2c21b95964c0d511ce85e8b18763a43"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/restored/chunks/58b40a3c5569a0ebb77180e9e753b7f3b3ab5ca33b13d659b2821f7922b242e3.bin",
+      "bytes": 1009,
+      "sha256": "58b40a3c5569a0ebb77180e9e753b7f3b3ab5ca33b13d659b2821f7922b242e3"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/restored/chunks/616ebf43ffe16a260f62a9347a296cf36fd43eea51319bd79c6a142a62a59ebf.bin",
+      "bytes": 371,
+      "sha256": "616ebf43ffe16a260f62a9347a296cf36fd43eea51319bd79c6a142a62a59ebf"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/restored/writer.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/schema_validation.json",
+      "bytes": 252,
+      "sha256": "0fa6cebcd818d20866a8f0b3bdabcde2595c08d53aaefeee19fbefaafc44ae66"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial-workflow/workflow_report.json",
+      "bytes": 46674,
+      "sha256": "ef1f91e929fea6e1c634c545bc93a8752127c7505fbb7356c81f1c673c2eea55"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/spatial_layout_delta.json",
+      "bytes": 7138,
+      "sha256": "be0e7f7fca177755ffc9c0e485b01261c43da432da2356c9d78a164ae204050b"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/srgb8_numeric_source.json",
+      "bytes": 742,
+      "sha256": "8a8af2fb190a9ee3d45714dceef7bd78a3c0a58d456d4930360faea1b9694623"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/BoxTextured/project/00000000000000000000.json",
+      "bytes": 32024,
+      "sha256": "6e031f774b46a2414ed3c7a39edc0560d9a7746d1d6ecd156c855729df6f4815"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/BoxTextured/project/chunks/f7587625057791533dd1f31dbd3d53daea7e6463f4a556fdb459b6e6e426be06.bin",
+      "bytes": 2869,
+      "sha256": "f7587625057791533dd1f31dbd3d53daea7e6463f4a556fdb459b6e6e426be06"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/BoxTextured/project/writer.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/BoxTextured-comparison.json",
+      "bytes": 2946,
+      "sha256": "829db3739c697508c30242d5f39476b7ef2aa0568c366fa035733bd0830e5107"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/BoxTextured-cpu.passes.json",
+      "bytes": 146752,
+      "sha256": "dee072cd3b4296a8af1dcc17239e6e877d600292e988138138d2dd3704d59c5a"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/BoxTextured-cpu.pfm",
+      "bytes": 49166,
+      "sha256": "674b91ad59430821d62597302b97d33d552a5f1342d4518f3d3ec79392d4fb05"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/BoxTextured-cpu.ppm",
+      "bytes": 12301,
+      "sha256": "7600e9d24edd46df7f2bc8234210164132085bdf82259463871eb927e9eb2a2e"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/BoxTextured-cpu.receipt.json",
+      "bytes": 548,
+      "sha256": "b25de0428326c96a9fc5156a9a444c2319adc184e10f27dff62da7fabd4d868c"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/BoxTextured-gpu.passes.json",
+      "bytes": 146810,
+      "sha256": "64683c6e0a325d65531fa78bcf04f27745d2c6db7d9dcd184a983eeeb9582cd0"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/BoxTextured-gpu.pfm",
+      "bytes": 49166,
+      "sha256": "e5aff0a832610a3fe753eafeafd0f39ddd1079f2c8b0ada45a674e58055c8c09"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/BoxTextured-gpu.ppm",
+      "bytes": 12301,
+      "sha256": "fce6277d78a26c4324cfc6f975c8ba952aa9837f11631736b12f29549cab785f"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/BoxTextured-gpu.receipt.json",
+      "bytes": 541,
+      "sha256": "3cb82955437bb8419ad890bb37da527d039804273b61414920ba22254825af49"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/NormalTangentMirrorTest/project/00000000000000000000.json",
+      "bytes": 9851647,
+      "sha256": "1fecd48aca034d6d7d74d1fe22cb65df08e695bd8f16bb33d236170aa8219b4f"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/NormalTangentMirrorTest/project/chunks/5c2216e894511082433ef32362098e613e67d8fa1aa8c99748be85cdadde8776.bin",
+      "bytes": 1464208,
+      "sha256": "5c2216e894511082433ef32362098e613e67d8fa1aa8c99748be85cdadde8776"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/NormalTangentMirrorTest/project/writer.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/NormalTangentMirrorTest-comparison.json",
+      "bytes": 2934,
+      "sha256": "03daf0f1a4bbb7b8db44a235fce9e0f978e2f7b740f4ea11034d4d0a65a09169"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/NormalTangentMirrorTest-cpu.passes.json",
+      "bytes": 248418,
+      "sha256": "a72fd2c6e6cc494bf1068b3ca0861693a8fa21ac95cb22b8d9181691466a8576"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/NormalTangentMirrorTest-cpu.pfm",
+      "bytes": 49166,
+      "sha256": "5a7a2c61b02ffb08efc0f203c8c9daa1aab4f420e31b68aa09e5972a49526510"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/NormalTangentMirrorTest-cpu.ppm",
+      "bytes": 12301,
+      "sha256": "f47bd5d770378d88a419aa5e999f069f5cd7870b120e59c1838ef62c801636d7"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/NormalTangentMirrorTest-cpu.receipt.json",
+      "bytes": 548,
+      "sha256": "2c468e6356602f5d56b4f6b5034c51233c671a11c8941e6c1d19c54f23e4b4d9"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/NormalTangentMirrorTest-gpu.passes.json",
+      "bytes": 248883,
+      "sha256": "ccc974e5deaf638935238beaadfc0bf0271ae904dc142b37f156acfbdce57690"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/NormalTangentMirrorTest-gpu.pfm",
+      "bytes": 49166,
+      "sha256": "61c2809e0a97288d8643f8bd84e53c50521baae687df6cb8a2cf7b5a6a3e0a8e"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/NormalTangentMirrorTest-gpu.ppm",
+      "bytes": 12301,
+      "sha256": "3cc081a5739c14dfdadad5a01f944023c9c2092749823ecbd7a68c32cf63960b"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/NormalTangentMirrorTest-gpu.receipt.json",
+      "bytes": 541,
+      "sha256": "a4d0182d3b11ca48cf015a665bf39e36a37051664fe9328b54e2ba31a6ab23d7"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/back_face_report.json",
+      "bytes": 107,
+      "sha256": "b7176350a43cfba63a8a8186d4dc830f8cb075f996f7b4e94d8beb4bcc187cf8"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/mirror-back-cpu.passes.json",
+      "bytes": 249410,
+      "sha256": "cde5519acfa5275f5f4be85b967bf196354068b60ba8f34087bf00dc7091bc10"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/mirror-back-cpu.pfm",
+      "bytes": 49166,
+      "sha256": "e4abffa0cfac40ee1eab245c2123338691edcbf3666a7dbbe47ee6ba9d225c02"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/mirror-back-cpu.ppm",
+      "bytes": 12301,
+      "sha256": "7f2167259ca51a9a48d350ac267aadf71e397982fe798abc12511374c63dc6c1"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/mirror-back-cpu.receipt.json",
+      "bytes": 548,
+      "sha256": "74d245fe4d0e2cc2736e33d72886c77963c14a5745c21ef76210f51ffad2c678"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/mirror-back-gpu.passes.json",
+      "bytes": 249904,
+      "sha256": "5022a1778fa27ab4eb35322f882cd2458a256d4397cb4915d5e6270cbe3ce935"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/mirror-back-gpu.pfm",
+      "bytes": 49166,
+      "sha256": "ada17da7203be2cb9e438eb9ae5ae9ddafb32fbf929e5b40879ec57d8225deda"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/mirror-back-gpu.ppm",
+      "bytes": 12301,
+      "sha256": "14a827766a5dea252f4a471451ea2c188b5b23bc76e86535b6679bac30bd0fcd"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/mirror-back-gpu.receipt.json",
+      "bytes": 541,
+      "sha256": "d3556b34ca00d8a70f615a7fdadb9893641fab85b3cb0e5247707febb5e5489c"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/sampler_camera_report.json",
+      "bytes": 9129,
+      "sha256": "205cae74beb360d5a774bbd115658e50b2a43c22debf7fd49beb590395770679"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/static-pbr-probe/workflow_report.json",
+      "bytes": 6775,
+      "sha256": "00a89892f84595e27dba6824b7a7f4ca1a578783c7d9888295c39db6c7ee10cc"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/surface_cross_platform.json",
+      "bytes": 2751,
+      "sha256": "d53bc7639c1f06ec604078a4c1db2af9ebad92ad4ef3706832467e6a5aeafa44"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/tested_package.json",
+      "bytes": 786,
+      "sha256": "63c1e1339f2b08eac5fcf4addc9409c887e612193751409dc1838f0c797e1aef"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/validation_report.json",
+      "bytes": 33447,
+      "sha256": "8edd5686e07af27c5b4872876815149275b190fa4eeb99401a51b44fdd0cfd41"
+    },
+    {
+      "path": "evidence/runtime-geometry-chunks/volume_cross_platform.json",
+      "bytes": 1171,
+      "sha256": "51f6a5f07deb2b375dc6760c575ca6b20996d1da8e913190c19d9f05704905de"
+    }
+  ],
+  "bytes": 29330651
+}

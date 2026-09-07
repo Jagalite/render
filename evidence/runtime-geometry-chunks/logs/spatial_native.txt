@@ -1,0 +1,18 @@
+   Compiling render-core v0.1.0 (/Volumes/seed2/Projects/render/artifacts/worktrees/runtime-geometry-chunks/crates/core)
+    Finished `test` profile [unoptimized] target(s) in 4.80s
+     Running tests/spatial_queries.rs (target/debug/deps/spatial_queries-2a0524b74fbab6f3)
+
+running 10 tests
+test sphere_boundary_loose_points_high_ids_and_empty_surfaces ... ok
+test analytic_surface_features_winding_and_inclusive_distance ... ok
+test read_only_agent_query_preserves_document_and_reuses_index ... ok
+test disconnected_nonmanifold_ties_and_invalid_sources ... ok
+test unresolved_conditioned_frame_rejects_without_replacing_cached_index ... ok
+test subnormal_squared_distances_do_not_collapse_zero_radius_boundaries ... ok
+test scaled_triangle_frame_preserves_tiny_and_large_analytic_features ... ok
+test admission_cancellation_and_cache_are_atomic ... ok
+test aggregate_polygon_work_is_bounded_on_cold_and_warm_queries ... ok
+test grid_queries_match_independent_plane_and_point_enumeration ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.08s
+

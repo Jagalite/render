@@ -1,0 +1,180 @@
+{
+  "scope": "All observed repeat artifacts; identical reference images are retained once under chunk-probe-baseline and static-pbr-probe. Full raw repeats remain in ignored run artifacts.",
+  "files": [
+    {
+      "path": "BoxTextured/project/00000000000000000000.json",
+      "bytes": 32024,
+      "sha256": "6e031f774b46a2414ed3c7a39edc0560d9a7746d1d6ecd156c855729df6f4815"
+    },
+    {
+      "path": "BoxTextured/project/chunks/f7587625057791533dd1f31dbd3d53daea7e6463f4a556fdb459b6e6e426be06.bin",
+      "bytes": 2869,
+      "sha256": "f7587625057791533dd1f31dbd3d53daea7e6463f4a556fdb459b6e6e426be06"
+    },
+    {
+      "path": "BoxTextured/project/writer.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "BoxTextured-comparison.json",
+      "bytes": 2950,
+      "sha256": "458571ee0e094b1c00a52bf2347c3196b1f237507578f35e71540014d8c5dea4"
+    },
+    {
+      "path": "BoxTextured-cpu.passes.json",
+      "bytes": 146752,
+      "sha256": "dee072cd3b4296a8af1dcc17239e6e877d600292e988138138d2dd3704d59c5a"
+    },
+    {
+      "path": "BoxTextured-cpu.pfm",
+      "bytes": 49166,
+      "sha256": "674b91ad59430821d62597302b97d33d552a5f1342d4518f3d3ec79392d4fb05"
+    },
+    {
+      "path": "BoxTextured-cpu.ppm",
+      "bytes": 12301,
+      "sha256": "7600e9d24edd46df7f2bc8234210164132085bdf82259463871eb927e9eb2a2e"
+    },
+    {
+      "path": "BoxTextured-cpu.receipt.json",
+      "bytes": 548,
+      "sha256": "b25de0428326c96a9fc5156a9a444c2319adc184e10f27dff62da7fabd4d868c"
+    },
+    {
+      "path": "BoxTextured-gpu.passes.json",
+      "bytes": 146810,
+      "sha256": "64683c6e0a325d65531fa78bcf04f27745d2c6db7d9dcd184a983eeeb9582cd0"
+    },
+    {
+      "path": "BoxTextured-gpu.pfm",
+      "bytes": 49166,
+      "sha256": "e5aff0a832610a3fe753eafeafd0f39ddd1079f2c8b0ada45a674e58055c8c09"
+    },
+    {
+      "path": "BoxTextured-gpu.ppm",
+      "bytes": 12301,
+      "sha256": "fce6277d78a26c4324cfc6f975c8ba952aa9837f11631736b12f29549cab785f"
+    },
+    {
+      "path": "BoxTextured-gpu.receipt.json",
+      "bytes": 541,
+      "sha256": "3cb82955437bb8419ad890bb37da527d039804273b61414920ba22254825af49"
+    },
+    {
+      "path": "NormalTangentMirrorTest/project/00000000000000000000.json",
+      "bytes": 9851647,
+      "sha256": "1fecd48aca034d6d7d74d1fe22cb65df08e695bd8f16bb33d236170aa8219b4f"
+    },
+    {
+      "path": "NormalTangentMirrorTest/project/chunks/5c2216e894511082433ef32362098e613e67d8fa1aa8c99748be85cdadde8776.bin",
+      "bytes": 1464208,
+      "sha256": "5c2216e894511082433ef32362098e613e67d8fa1aa8c99748be85cdadde8776"
+    },
+    {
+      "path": "NormalTangentMirrorTest/project/writer.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "NormalTangentMirrorTest-comparison.json",
+      "bytes": 2936,
+      "sha256": "88b9e8c534b46e6fb38cbd539dfeebf3db4e4f34018f24c41ed87a23d6e4ac61"
+    },
+    {
+      "path": "NormalTangentMirrorTest-cpu.passes.json",
+      "bytes": 248418,
+      "sha256": "a72fd2c6e6cc494bf1068b3ca0861693a8fa21ac95cb22b8d9181691466a8576"
+    },
+    {
+      "path": "NormalTangentMirrorTest-cpu.pfm",
+      "bytes": 49166,
+      "sha256": "5a7a2c61b02ffb08efc0f203c8c9daa1aab4f420e31b68aa09e5972a49526510"
+    },
+    {
+      "path": "NormalTangentMirrorTest-cpu.ppm",
+      "bytes": 12301,
+      "sha256": "f47bd5d770378d88a419aa5e999f069f5cd7870b120e59c1838ef62c801636d7"
+    },
+    {
+      "path": "NormalTangentMirrorTest-cpu.receipt.json",
+      "bytes": 548,
+      "sha256": "2c468e6356602f5d56b4f6b5034c51233c671a11c8941e6c1d19c54f23e4b4d9"
+    },
+    {
+      "path": "NormalTangentMirrorTest-gpu.passes.json",
+      "bytes": 248883,
+      "sha256": "ccc974e5deaf638935238beaadfc0bf0271ae904dc142b37f156acfbdce57690"
+    },
+    {
+      "path": "NormalTangentMirrorTest-gpu.pfm",
+      "bytes": 49166,
+      "sha256": "61c2809e0a97288d8643f8bd84e53c50521baae687df6cb8a2cf7b5a6a3e0a8e"
+    },
+    {
+      "path": "NormalTangentMirrorTest-gpu.ppm",
+      "bytes": 12301,
+      "sha256": "3cc081a5739c14dfdadad5a01f944023c9c2092749823ecbd7a68c32cf63960b"
+    },
+    {
+      "path": "NormalTangentMirrorTest-gpu.receipt.json",
+      "bytes": 541,
+      "sha256": "a4d0182d3b11ca48cf015a665bf39e36a37051664fe9328b54e2ba31a6ab23d7"
+    },
+    {
+      "path": "back_face_report.json",
+      "bytes": 107,
+      "sha256": "b7176350a43cfba63a8a8186d4dc830f8cb075f996f7b4e94d8beb4bcc187cf8"
+    },
+    {
+      "path": "mirror-back-cpu.passes.json",
+      "bytes": 249410,
+      "sha256": "cde5519acfa5275f5f4be85b967bf196354068b60ba8f34087bf00dc7091bc10"
+    },
+    {
+      "path": "mirror-back-cpu.pfm",
+      "bytes": 49166,
+      "sha256": "e4abffa0cfac40ee1eab245c2123338691edcbf3666a7dbbe47ee6ba9d225c02"
+    },
+    {
+      "path": "mirror-back-cpu.ppm",
+      "bytes": 12301,
+      "sha256": "7f2167259ca51a9a48d350ac267aadf71e397982fe798abc12511374c63dc6c1"
+    },
+    {
+      "path": "mirror-back-cpu.receipt.json",
+      "bytes": 548,
+      "sha256": "74d245fe4d0e2cc2736e33d72886c77963c14a5745c21ef76210f51ffad2c678"
+    },
+    {
+      "path": "mirror-back-gpu.passes.json",
+      "bytes": 249904,
+      "sha256": "5022a1778fa27ab4eb35322f882cd2458a256d4397cb4915d5e6270cbe3ce935"
+    },
+    {
+      "path": "mirror-back-gpu.pfm",
+      "bytes": 49166,
+      "sha256": "ada17da7203be2cb9e438eb9ae5ae9ddafb32fbf929e5b40879ec57d8225deda"
+    },
+    {
+      "path": "mirror-back-gpu.ppm",
+      "bytes": 12301,
+      "sha256": "14a827766a5dea252f4a471451ea2c188b5b23bc76e86535b6679bac30bd0fcd"
+    },
+    {
+      "path": "mirror-back-gpu.receipt.json",
+      "bytes": 541,
+      "sha256": "d3556b34ca00d8a70f615a7fdadb9893641fab85b3cb0e5247707febb5e5489c"
+    },
+    {
+      "path": "sampler_camera_report.json",
+      "bytes": 9129,
+      "sha256": "205cae74beb360d5a774bbd115658e50b2a43c22debf7fd49beb590395770679"
+    },
+    {
+      "path": "workflow_report.json",
+      "bytes": 6781,
+      "sha256": "c7514cdf49c9a32a0ba9ad9119ba37153aff5851ed13250fdab9f0c3968098d3"
+    }
+  ]
+}

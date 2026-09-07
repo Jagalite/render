@@ -106,8 +106,10 @@ fn admit_source(mesh: &Mesh, hash: &str, limits: &Budget) -> Result<(u64, u64, u
     Ok((bytes.len() as u64, charge, triangulation_work))
 }
 fn tree_charge(n: u64) -> u64 {
-    // <=2n nodes, node Vec capacity <4n, each charged 128 bytes. Item
-    // split capacities and sort scratch charged at 8 bytes per slot per level.
+    // Leaves contain 2..=4 items except the one-item root, so nodes <= n.
+    // The 512n node allowance covers the builder Vec, immutable chunk payloads
+    // and root/Arc overhead coexisting during conversion (including tiny trees).
+    // Item split capacities and sort scratch cost 8 bytes per slot per level.
     // Another 128n covers bounds, triangle payloads and builder temporaries.
     let levels = if n == 0 {
         0
@@ -131,12 +133,6 @@ struct Index {
     source_bytes: u64,
     charge: u64,
     triangulation_work: u64,
-}
-fn compact(tree: &mut Bvh) {
-    for node in &mut tree.nodes {
-        node.items.shrink_to_fit();
-    }
-    tree.nodes.shrink_to_fit();
 }
 impl Index {
     fn build(
@@ -167,8 +163,7 @@ impl Index {
             let p = source.positions.get(i);
             bounds.push(Bounds { min: p, max: p });
         }
-        let mut points = Bvh::build(&bounds);
-        compact(&mut points);
+        let points = Bvh::build_compact(&bounds);
         drop(bounds);
         check(cancelled)?;
         let bounds: Vec<_> = triangles
@@ -203,8 +198,7 @@ impl Index {
                 })
             })
             .collect::<Result<Vec<_>>>()?;
-        let mut surfaces = Bvh::build(&bounds);
-        compact(&mut surfaces);
+        let surfaces = Bvh::build_compact(&bounds);
         check(cancelled)?;
         Ok(Self {
             source,
@@ -219,7 +213,7 @@ impl Index {
     }
     fn retained_bytes(&self) -> u64 {
         let tree_bytes = |tree: &Bvh| {
-            tree.nodes.capacity() * size_of::<crate::render::Node>()
+            tree.nodes.retained_layout_bytes()
                 + tree
                     .nodes
                     .iter()

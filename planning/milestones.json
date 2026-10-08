@@ -1,7 +1,7 @@
 {
-  "spec_version": "0.1",
+  "spec_version": "0.2",
   "prepared": "2026-09-05",
-  "implementation_status": "foundation_and_authoring_M00_M08_profiles_validated",
+  "implementation_status": "historical_bounded_profiles_and_open_qualification_with_M15_M46_planned_expansion",
   "milestones": [
     {
       "id": "M00",
@@ -313,7 +313,7 @@
     {
       "id": "M09",
       "title": "Shared interactive editor",
-      "status": "planned",
+      "status": "in_progress",
       "dependencies": [
         "M05",
         "M06",
@@ -336,7 +336,10 @@
         "No UI-first substitute for missing algorithms"
       ],
       "calendar_estimate": null,
-      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence.",
+      "candidate_evidence_root": "evidence/m09-m14",
+      "qualification": "Candidate implementation and scoped native evidence added; canonical acceptance criteria and dependencies remain authoritative. Full integrated and supported-platform qualification is required; see docs/release_qualification.md.",
+      "remaining": "Permitted live-browser/Worker/storage interaction and actual complex IME, assistive-technology and physical tablet evidence remain unrun. Real native sampled surface/node/scene/media UI observations and final exact-source command evidence are indexed separately; neither substitutes for these gates."
     },
     {
       "id": "M10",
@@ -393,12 +396,14 @@
           "evidence": "evidence/runtime-geometry-chunks/README.md"
         }
       ],
-      "remaining": "Projected painting and broader baking, sculpting, masks/face sets/symmetry, multiresolution, remesh, retopology and the deferred M09 interactive demonstration."
+      "remaining": "Sampled native asset-to-sculpt/paint/bake/output and recovery/undo have real-window observations; final exact-source qualification is indexed in the criterion map. Required shared-browser interaction and M09 input/accessibility qualification remain open. Named geometry/paint model limits are explicit.",
+      "candidate_evidence_root": "evidence/m09-m14",
+      "qualification": "Candidate implementation and scoped native evidence added; canonical acceptance criteria and dependencies remain authoritative. Full integrated and supported-platform qualification is required; see docs/release_qualification.md."
     },
     {
       "id": "M11",
       "title": "Simulation families",
-      "status": "planned",
+      "status": "completed",
       "dependencies": [
         "M06",
         "M07",
@@ -421,12 +426,22 @@
         "No universal bitwise simulation reproducibility"
       ],
       "calendar_estimate": null,
-      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence.",
+      "candidate_evidence_root": "evidence/m09-m14",
+      "qualification": "Five canonical family subgates qualified by seven bounded Rust SI models, native rendered jobs and shared Node/Wasm tests. Excluded physics is explicit in docs/simulation.md; live browser interaction and production release are separate gates.",
+      "implemented_profile": "rust-si-simulation-1",
+      "evidence": [
+        "evidence/m11/README.md",
+        "evidence/m11/simulation_family_conformance.json",
+        "evidence/m11/checkpoint_report.json",
+        "evidence/m11/solver_numerics.json",
+        "evidence/workspace-operations/acceptance.json"
+      ]
     },
     {
       "id": "M12",
       "title": "Compositing, drawing, media and tracking",
-      "status": "planned",
+      "status": "in_progress",
       "dependencies": [
         "M07",
         "M08",
@@ -451,12 +466,15 @@
         "No schema-only subgate completion"
       ],
       "calendar_estimate": null,
-      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence.",
+      "candidate_evidence_root": "evidence/m09-m14",
+      "qualification": "Candidate implementation and scoped native evidence added; canonical acceptance criteria and dependencies remain authoritative. Full integrated and supported-platform qualification is required; see docs/release_qualification.md.",
+      "remaining": "Native engine, shared controller and real-window edit/preview/save/reopen workflows have evidence. Shared-browser runtime/storage/navigation qualification and dependent M09 platform input gates remain unrun; supported codec/tracking profiles remain explicit."
     },
     {
       "id": "M13",
       "title": "Interoperability, collaboration and extension hardening",
-      "status": "planned",
+      "status": "completed",
       "dependencies": [
         "M05",
         "M06"
@@ -481,12 +499,23 @@
         "No arbitrary topology CRDT guarantee"
       ],
       "calendar_estimate": null,
-      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence.",
+      "candidate_evidence_root": "evidence/m09-m14",
+      "qualification": "Bounded native/Node-Wasm collaboration, expression extensions, explicit source history and supported old clients are qualified; no arbitrary plugin sandbox, remote authentication service, universal format fidelity or production-security claim.",
+      "implemented_profile": "tenant-reviewed-merge-v0; supported wire0 and narrow ABI1; retained native interchange profiles",
+      "evidence": [
+        "evidence/m13/README.md",
+        "evidence/m13/interchange_matrix.json",
+        "evidence/m13/collaboration_conflicts.json",
+        "evidence/m13/plugin_security_report.json",
+        "evidence/m13/client_compatibility.json",
+        "evidence/workspace-operations/acceptance.json"
+      ]
     },
     {
       "id": "M14",
       "title": "Major-suite conformance and production readiness",
-      "status": "planned",
+      "status": "in_progress",
       "dependencies": [
         "M10",
         "M11",
@@ -513,10 +542,1860 @@
         "No unmeasured universal superiority claim"
       ],
       "calendar_estimate": null,
-      "estimate_policy": "Estimate only after relevant prototype and staffing evidence."
+      "estimate_policy": "Estimate only after relevant prototype and staffing evidence.",
+      "qualification": "Not a production release. Required live-browser/platform workflows and accepted maintainer ownership remain outstanding; see docs/release_qualification.md."
+    },
+    {
+      "id": "M15",
+      "title": "General polygon selection and region authoring",
+      "status": "in_progress",
+      "dependencies": [
+        "M02",
+        "M06"
+      ],
+      "owner_role": "Geometry + topology + verification",
+      "acceptance_criteria": [
+        "Provide stable-ID point, edge, face, connected-region, boundary and loop selection queries with deterministic ordering and explicit non-manifold ambiguity diagnostics.",
+        "Extrude connected non-coplanar and concave face regions, regions with holes and disjoint components without duplicate internal walls; preserve existing single-face operation semantics.",
+        "Implement region inset with explicit offset, concavity, collision and collapse policies; reject invalid results transactionally rather than silently replacing the operation.",
+        "Carry point, edge, face and corner attributes through the supported operations with explicit created-element defaults, seam/material rules and complete correspondence receipts.",
+        "Verify rotated and nonconvex fixtures, boundary orientation, area/volume oracles, selection-order invariance, seeded property cases and malformed/stale selections on native and WASM.",
+        "Public commands and modifier nodes produce equivalent results; a multi-region modeled asset saves/reopens, renders and supports cancellation, retry and undo without changing unselected state."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Box-first authoring, single-face extrusion and strictly convex planar inset; topology selections are mostly caller-supplied IDs.",
+      "end_to_end_workflow": "Model a stepped hard-surface asset from connected and holed polygon patches through public transactions and procedural modifiers.",
+      "completion_scope": "Stable topology queries, connected/open/closed region extrusion and planar pre-event metric inset have scoped native/WASM and public workflow evidence. Explicit source-edge realization preserves parallel surface/wire identities and payloads; closed/wire/MAX-ID cases pass. Broader inset depth and combined final-source/human/runtime qualification remain open.",
+      "evidence_root": "evidence/m15",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.modeling.selection_region"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M16",
+      "title": "Mesh construction, cutting and topology repair",
+      "status": "in_progress",
+      "dependencies": [
+        "M15"
+      ],
+      "owner_role": "Geometry + numerics",
+      "acceptance_criteria": [
+        "Add plane/grid, circle/disk, cylinder/cone, sphere and torus primitives with parameter, winding, seam, material and budget contracts.",
+        "Implement knife/bisect with edge/face intersections, loop/ring cuts and fill/bridge operations for unequal boundary sampling, holes and mixed polygon meshes.",
+        "Provide weld-by-distance, duplicate/degenerate cleanup, normal/winding repair and boundary inspection with previewed losses and stable selection transfer.",
+        "Exercise touching cuts, cuts through vertices, tiny and large coordinate scales, repeated edits, open/non-manifold inputs and attribute conflicts against independent topology/geometry oracles.",
+        "Produce and repair a multi-primitive asset with holes through API and editor-ready operations, retaining a reproducible edit history and explicit global/local resource costs."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Few primitives, equal-length boundary bridge, coplanar dissolve, and no general cut/fill/repair workflow.",
+      "end_to_end_workflow": "Construct, cut, bridge and repair a non-box asset without external modeling software.",
+      "completion_scope": "Eight primitive families, uncapped plane bisect, previewed distance welding, coherent winding and structural boundary inspection have scoped evidence. Explicit triangulation and triangle corner-normal reconstruction also have recorded native/WASM/public/editor workflows. Certified outward orientation of closed embedded authored-triangle shells now passes 25 scoped native and 25 Node-WASM cases, strict scoped lint, genus-one analytic persistence/render/GLB workflow and bounded public work-exhaustion checks; 68 predecessor geometry cases pass both targets. Outward Studio controls pass seven focused tests including IME-safe loss consent; actual Linux native-window inspect/prepare/commit/undo/redo/save/reopen/reinspect workflow passes. Exact-planar authored-polygon outward orientation now has 54 scoped native and 54 Node-WASM checks, independent rational geometry oracles, bounded resource fixtures, Snapshot 26/schema compatibility, and explicit consent for changed canonical-cover interpolation plus separate frame-layer loss. Polygon Studio controls and narrow report layouts pass scoped tests; the actual Linux native-window payload fixture passes inspect/prepare/cancel/commit/undo/redo/save/reopen/reinspect. Stored UV/color retention is distinct from interpolated appearance preservation. Five held review cases remain unpassed. General cleanup, knife/loop/ring cuts, fill, unequal bridging, full release qualification and M15 dependencies remain open. The polygon c389b9e candidate subsequently passed 53 aggregate stages with source-verified executor recovery, including 873 native and 660 Node-WASM tests; five held cases and three browser gates leave that aggregate incomplete. A separate read-only cleanup inspection increment passes 34 scoped native and 34 Node-WASM checks, bounded resources, 178 Studio package tests with one exact held exclusion, strict lint and Windows compile checks. Its actual Linux native workflow diagnoses seven source faces and 24 edges even when viewport triangulation rejects, exercises exact scopes and explicit canonical NotChecked status, preserves saved document bytes, and clears stale selections/reports on reopen. That C0 increment remains diagnostic-only and does not complete C0 or full C1\u2013C4. Bounded C1a qualification now covers explicit rank-deficient face deletion, same-explicit-boundary duplicate consolidation and exact-zero original source-wire deletion through public source-bound action/loss review and ordinary transactions. Core passes 56 native and 56 Node-WASM cases, strict scoped lint and eight resource tiers; a later test-reporting-only parity supplement compares 23 complete previews and 15 receipts totaling 208,747 exact bytes per target without changing production or adding distinct tests. Studio passes 196 package tests with one exact held exclusion, strict all-target lint and fresh Windows compile-only. The actual Linux native workflow passes default blocking, independent face/edge scopes, separate payload/frame consent, Prepare/Cancel/reinspect/Commit, actual four-face/14-point to one-face/14-point selection transfer and Undo/Redo, save/reopen with reset consent/history and a fresh admitted no-op. An independent saved comparison passes 72 checks, preserving the first operation's unchanged second binding; a separate explicitly chosen second-entity repair then restores viewport scene drawing and saves/reopens independently, with 68 further positive saved-document checks that preserve the first verification artifacts. At that C1a checkpoint, C1b parallel-wire/orphan/diagnosed-face-discard work, C2\u2013C4, durable baked-loss provenance, the five held cases, browser/Windows-runtime gates and the original remaining M16/M15 requirements remain open. Bounded C1b qualification now covers explicit disjoint groups of unused immediate-source wires with identical stable endpoint pairs. Each group retains its own smallest ID and exact survivor payload; unlisted parallel edges, zero-length survivors, isolated points and all face/point/corner records remain. Fresh final-source qualification passes 77 native and 77 Node-WASM tests, 104 complete C1b records totaling 225,177 identical bytes, unchanged C1a/C0 parity, strict core lint and 139 fixed resource runs (110 admitted, 22 budget rejections and seven cancellations). Studio passes 221 package tests with one exact held exclusion, strict lint and Windows compile-only. The actual Linux native workflow exercises separate payload/frame consent, prepared Cancel, Commit, genuine 11-point/one-face selection transfer, Undo/Redo and save/reopen/reset. Independent first and second saved-document comparisons pass 128 and 225 positive checks; the explicitly repaired second binding restores observed viewport drawing. Its prepared selection transfer reported unavailable/stale, consistent with the intentional empty-selection path, and is not counted as a nonempty transfer pass. Orphan pruning, diagnosed-face discard, broader C1/C2\u2013C4, durable baked-loss provenance, the five held cases, browser/Windows runtime and all other original M16/M15 requirements remain open. Bounded C1c qualification now covers three explicit immediate-source deletion roles: unused Edges, source-isolated Points, and Points made isolated by exactly the requested Edge deletions. Unlisted records remain, including newly isolated endpoints. Core passes 102 native and 102 Node-WASM tests (25 new C1c and 77 predecessor cases), 137 complete C1c records totaling 318,468 identical bytes, unchanged C1b/C1a/C0 parity and strict scoped lint. The 214 fixed resource processes match 154 admitted, 54 budget-rejected and six cancelled outcomes. Studio passes 248 package tests with one exact held exclusion, strict lint and Windows compile-only. The actual Linux native workflow reviews three separate roles and all ordinary/global frame losses, exercises prepared Cancel, Commit, six-to-four Point selection transfer with Face500 retained, Undo/Redo and save/reopen/reset. An independent comparison passes 151 positive saved-document checks and preserves the unmodified second binding. Only this bounded C1c operation is complete. At that C1c checkpoint, strict newly-orphaned-edge pruning after the same face action remained open; the separately reviewed C1d qualification below now covers only its bounded exact-rank-face action. Diagnosed-face discard, general cleanup, C2\u2013C4, durable baked-loss provenance, all five held cases and standalone/equivalent probes, browser/Windows runtime and all remaining original M15/M16/release requirements remain open. Bounded C1d qualification now covers selected exact-rank-zero/one whole-face deletion and three explicit same-action dependency policies: preserve all Edges/Points, delete only newly unused Edges, or additionally delete Points newly isolated by those actual Edge removals. Original source wires and isolated Points remain; retained payload bits, full causal witnesses and original layer identities are preserved. Final-source core qualification passes 130 native and 130 Node-WASM tests (28 new C1d and 102 predecessors), 270 complete C1d records totaling 1,752,717 identical bytes per target, unchanged predecessor byte anchors and strict scoped lint. All 329 fixed resource processes match 206 admissions, 115 budget rejections and eight cancellations, with independent source/output hash, cost, phase and callback checks. Studio passes 279 tests with one exact held exclusion, strict lint and Windows compile-only. The actual Linux native workflow reviews all three policies, separate frame consent and exact losses, transfers 11 selected Points and three Faces to seven Points and one Face, preserves original Wire30/31 and isolated Point8, and exercises Prepare/Cancel, fresh Commit, Undo/Redo, separate Save and same-revision Reopen/reset/no-op. The positive saved-document comparison passes 169 frozen checks and preserves the independent valid asset and original source. Only this bounded C1d operation is complete. Diagnosed-face discard, general cleanup, C2\u2013C4, durable baked-loss provenance, all five held cases and standalone/equivalent probes, browser/Windows runtime and the remaining original M15/M16/release requirements remain open. Bounded C1e qualification now covers source-pinned explicit whole-Face deletion for exact nonplanarity, named positive planar defects, and direct Point-cycle/different-Edge or coordinate-cycle/different-Point pairs with an explicit retained witness. Every Point and Edge remains; no implicit keeper, payload transfer or orphan pruning occurs. Core passes 155 native and 155 Node-Wasm tests (25 new C1e and 130 predecessors), with 189 complete C1e records totaling 806,906 identical bytes per target, unchanged predecessor anchors and strict lint. The 252 ordinary resource cases match 198 admissions and 54 budget rejections; five separate cancellation cases pass, comprising four exact callback cancellations and one late-threshold completion. Studio passes 310 tests with one exact held exclusion, strict lint and Windows compile-only. The actual Linux native workflow authors four explicit reasons from current exact facts, reviews Reject blockers and separate whole-frame Drop consent, prepares/cancels/reprepares/commits, transfers selected Faces20/30/90 to90 while retaining Points10/40/160, and completes Undo/Redo and separate Save/Reopen. The frozen saved-document comparison passes245 checks, preserving original source and the independent valid asset. Reopen clears transient selection, requests, facts, history and consent. Only this bounded C1e operation is complete; broader general cleanup, C2\u2013C4, durable baked-loss provenance, all five held cases and standalone/equivalent probes, browser/Windows runtime and remaining original M15/M16/release requirements remain open.",
+      "evidence_root": "evidence/m16",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.modeling.cut_fill_repair",
+          "BP522.modeling.cleanup_completion"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M17",
+      "title": "General bevel and mesh Boolean operations",
+      "status": "planned",
+      "dependencies": [
+        "M16"
+      ],
+      "owner_role": "Robust geometry + topology review",
+      "acceptance_criteria": [
+        "Bevel selected edges and vertices on rotated, nonconvex mixed-polygon meshes, with segment/profile controls, boundary rules and overlapping-bevel handling.",
+        "Perform union, intersection and difference on independently authored closed meshes beyond boxes, including curved tessellations and nonconvex operands.",
+        "Publish robust orientation/intersection predicates and policies for coplanar, touching, coincident, thin and near-degenerate geometry; unsupported topology must fail before publication.",
+        "Preserve or explicitly resolve UVs, materials, colors, normals and source correspondence on cut/beveled faces; do not invent durable identity through ambiguous topology.",
+        "Pass set/volume and manifold invariants, operand-order relations, scale/rotation metamorphic tests, adversarial cancellation and resource limits, plus a multi-operation hard-surface workflow."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Bevel and Boolean accept only un-attributed axis-aligned boxes.",
+      "end_to_end_workflow": "Build a rounded mechanical asset with non-axis-aligned Boolean cuts and retained material/UV boundaries.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m17",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.modeling.bevel_general",
+          "BP522.modeling.boolean_general"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M18",
+      "title": "Iterative subdivision and deformation modifiers",
+      "status": "planned",
+      "dependencies": [
+        "M15",
+        "M16"
+      ],
+      "owner_role": "Geometry + animation + numerics",
+      "acceptance_criteria": [
+        "Retain reusable subdivision control cages and support repeated refinement of mixed polygons with boundary/crease rules and limit-surface error evidence.",
+        "Expand mirror/array/solidify to documented welding, material, thickness, transform and instancing policies with collision/degeneracy diagnostics.",
+        "Implement shrinkwrap, lattice and curve deformation plus a reviewed inventory of common deformation modifier families, with explicit order and coordinate-space semantics.",
+        "Preserve attributes and stable references or report correspondence loss; compare modifier-stack execution with equivalent direct operations at animated times.",
+        "Author an organic deformed asset, change its cage non-destructively, save/reload and render at multiple refinement levels with measured memory/work scaling."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "One manifold quad-cage refinement is triangulated; mirror/array/solidify and deformation policies remain narrow.",
+      "end_to_end_workflow": "Create an organic asset using a reusable cage and several composable deformation modifiers.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m18",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.modeling.subdivision",
+          "BP522.modeling.deform_modifier_stack"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M19",
+      "title": "Scene assembly, linked assets and variants",
+      "status": "planned",
+      "dependencies": [
+        "M02",
+        "M13"
+      ],
+      "owner_role": "Document + assets + editor",
+      "acceptance_criteria": [
+        "Implement collections, view layers, hierarchical visibility, material slots and variants with explicit composition order and stable references.",
+        "Support linked/instanced asset editing, reviewed local overrides, library relinking and missing-dependency recovery without accidental realization.",
+        "Persist selections, asset metadata and reusable presets; enumerate dependency and ownership changes before cross-document updates.",
+        "Verify nested/negative transforms, visibility overrides, cycles, conflicting revisions and stale links through API, storage and render/export paths.",
+        "Assemble a reusable multi-asset scene, branch variants, update one shared source and prove intended propagation plus unrelated-instance preservation at increasing instance counts."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Shared typed assets and layers exist; richer collection/view-layer/library authoring and asset management remain incomplete.",
+      "end_to_end_workflow": "Assemble and revise a product scene from linked assets and independently selectable view layers.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m19",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.scene_assets.collections_views",
+          "BP522.scene_assets.linked_assets",
+          "BP522.scene_assets.overrides_variants"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M20",
+      "title": "Curves, surfaces, text and implicit geometry authoring",
+      "status": "planned",
+      "dependencies": [
+        "M16",
+        "M18",
+        "M19"
+      ],
+      "owner_role": "Geometry families + text + graphics",
+      "acceptance_criteria": [
+        "Author and edit Bezier/NURBS curves and parametric surfaces with handles, knots, weights, trims and tolerance-controlled tessellation.",
+        "Implement editable text, native font shaping and curve conversion with declared font/script coverage and glyph/layout conformance fixtures.",
+        "Provide point, implicit/metaball-style, sparse paged field and groom representations with explicit conversions and no hidden dense fallback.",
+        "Preserve representation, attributes and identity across save/reload; every conversion reports approximation and correspondence losses.",
+        "Demonstrate animated deformation, preview and final rendering for each representation and measure tessellation/conversion costs at increasing declared sizes."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Curve/point/hair types mostly realize sweep meshes; general parametric surfaces, editable shaped text and implicit authoring are absent.",
+      "end_to_end_workflow": "Build a mixed curve/surface/text/implicit scene, edit its native representations and export declared evaluated forms.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m20",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.geometry.curves",
+          "BP522.geometry.surfaces_lattice",
+          "BP522.geometry.text",
+          "BP522.geometry.implicit"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M21",
+      "title": "Domain-aware procedural geometry and field breadth",
+      "status": "planned",
+      "dependencies": [
+        "M15",
+        "M19",
+        "M20"
+      ],
+      "owner_role": "Procedural geometry + API",
+      "acceptance_criteria": [
+        "Publish a finite node-family catalog covering typed domain adaptation, named attributes, selections, joins/separation, instances/realization, distribution/scatter and geometry conversion.",
+        "Implement mesh, curve, point and volume sampling/spatial-query nodes and deterministic seeded distributions with explicit interpolation and coordinate semantics.",
+        "Support reusable nested groups, typed interfaces and inspectable intermediate geometry without flattening authored group identity.",
+        "Compare node and independently assembled direct operations, reject cycles/type/domain errors and bound retained geometry plus expanded execution work.",
+        "Create a nested procedural mixed-geometry environment, change upstream parameters, save/reload and render while retaining instance sharing and deterministic results."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Fields expose a small point scalar/vector vocabulary and the editor exposes a root graph subset.",
+      "end_to_end_workflow": "Author a reusable nested procedural asset with scatter, selection and mixed geometry outputs.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m21",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.nodes.fields_domains",
+          "BP522.nodes.instances",
+          "BP522.nodes.ports_groups",
+          "BP522.nodes.bundles_lists"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M22",
+      "title": "Stateful geometry nodes and interactive node tools",
+      "status": "planned",
+      "dependencies": [
+        "M21",
+        "M11"
+      ],
+      "owner_role": "Procedural evaluation + editor + simulation",
+      "acceptance_criteria": [
+        "Add repeat and stateful simulation zones with explicit state schemas, frame boundaries, random seeds, invalidation and checkpoint lineage.",
+        "Expose node tools, typed parameters, spatial gizmos and nested graph editing through public operations and versioned interfaces.",
+        "Inspect intermediate values/geometry and causal errors without mutating authored state or evaluating unsafe arbitrary code.",
+        "Test random-time seek, branch/parameter changes, pause/resume, cancellation, lost checkpoints and bounded growth against independent stepwise execution.",
+        "Build, interactively edit and recover a stateful procedural animation through API and actual editor hosts; report each platform runtime separately."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "No general repeat/simulation zones or nested node-tool/gizmo workflow.",
+      "end_to_end_workflow": "Create an editable stateful procedural shot and recover it after interruption with identical declared state.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m22",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.nodes.grid_sdf",
+          "BP522.nodes.zones_time",
+          "BP522.nodes.cache_bake",
+          "BP522.nodes.node_tools",
+          "BP522.nodes.sound_geometry",
+          "BP522.nodes.xpbd_solver"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M23",
+      "title": "Typed shader graphs and texture authoring",
+      "status": "planned",
+      "dependencies": [
+        "M07",
+        "M19",
+        "M21"
+      ],
+      "owner_role": "Shading + GPU + editor",
+      "acceptance_criteria": [
+        "Implement a typed shader graph with reusable groups, sockets and a reviewed texture/procedural/math/vector/coordinate node catalog.",
+        "Support image channels, mapping, derivatives/filter footprints and attribute-driven inputs with explicit color-role and normal/tangent semantics.",
+        "Compile/evaluate supported graphs across declared CPU/GPU profiles, preserve source identity and give precise unsupported-node/backend diagnostics.",
+        "Verify graph/direct equivalence, derivative/filtering oracle cases, seams, aliasing, invalid cycles/types and resource/cancellation behavior.",
+        "Author and edit layered textured materials in a node UI, save/reload, render multiple lights/views and export or report exact per-format losses."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Materials are bounded scalar/PBR profiles without a general shader-node canvas or broad texture/coordinate vocabulary.",
+      "end_to_end_workflow": "Build a textured material library and reuse editable grouped materials in a multi-object scene.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m23",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.materials.shader_graphs",
+          "BP522.npr.toon_materials"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M24",
+      "title": "Advanced surface, fiber and layered scattering",
+      "status": "planned",
+      "dependencies": [
+        "M23"
+      ],
+      "owner_role": "Scattering + transport + numerical review",
+      "acceptance_criteria": [
+        "Implement reviewed rough transmission, nested dielectric/media boundaries, richer principled/layered interactions, subsurface and fiber scattering models.",
+        "Version every physical/numerical model and its sampling/PDF, units, approximations and allowed combinations; do not alias unsupported combinations to a simpler BSDF.",
+        "Pass independent energy/reciprocity/limiting/PDF tests and statistical mean/variance/convergence image cases including difficult glass, coated conductors, skin-like and hair scenes.",
+        "Verify textured and animated use, CPU/GPU model intersections, material changes and mixed-model cache transitions without altering original frozen profiles.",
+        "Publish quality/time/memory measurements on pinned scenes/settings/hardware; no Cycles/Eevee equivalence or speed claim without matched evidence."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Ideal glass, approximate conductor/single coat and bounded principled profiles do not cover rough/nested/subsurface/fiber transport.",
+      "end_to_end_workflow": "Render a material stress scene containing rough glass, layered surfaces, subsurface material and groom fibers.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m24",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.materials.rough_transmission",
+          "BP522.materials.subsurface",
+          "BP522.materials.physical_hair",
+          "BP522.materials.layered_principled"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M25",
+      "title": "Camera, lighting, volume and motion transport depth",
+      "status": "planned",
+      "dependencies": [
+        "M20",
+        "M24",
+        "M08"
+      ],
+      "owner_role": "Rendering + geometry + animation",
+      "acceptance_criteria": [
+        "Add declared lens/projection/depth-of-field camera models and area/environment/light-sampling families with validated PDFs and coordinate/unit rules.",
+        "Support indirect heterogeneous volume scattering, emission and boundary transitions plus native groom/curve transport in documented surface-volume combinations.",
+        "Integrate rigid, deforming, groom and volume motion with explicit shutter intervals, interpolation and temporal sampling/reproducibility policies.",
+        "Pass analytic light/camera/media limits, independent multiple-scattering images, temporal oracles, random-frame sequence consistency and failure/cancellation tests.",
+        "Render a lit animated groom/volume shot with depth of field and motion blur and report actual backend capability intersections and resource scaling."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Camera/light coverage, indirect volume transport and complex hair/volume/deforming shutter combinations are limited.",
+      "end_to_end_workflow": "Produce an animated groom-and-volume shot with physically reviewed camera and light sampling.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m25",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.materials.volume_transport",
+          "BP522.rendering.lens_camera",
+          "BP522.rendering.lights_world",
+          "BP522.rendering.shadow_visibility",
+          "BP522.rendering.motion_combinations"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M26",
+      "title": "Render quality controls and measured backend scaling",
+      "status": "planned",
+      "dependencies": [
+        "M24",
+        "M25"
+      ],
+      "owner_role": "Graphics + performance + verification",
+      "acceptance_criteria": [
+        "Implement adaptive displacement/tessellation, adaptive sampling and reviewed spatial/temporal denoising with explicit bias and temporal stability limits.",
+        "Provide render layers, AOVs and object/material matte channels with stable identity and correct alpha/time/color metadata.",
+        "Measure CPU, actual native hardware GPU and actual browser WebGPU separately across small/medium/large scenes, including acceleration, upload/cache costs and memory/VRAM.",
+        "Test device loss, allocation pressure, cancellation/resume, shader/model combinations and repeated renders without authored-state corruption.",
+        "Publish matched quality-versus-time curves and residual/error images against independent or high-sample references; comparison versions/settings/hardware and uncertainty are mandatory."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Uniform dicing, fixed sampling, simple bilateral filtering and software-adapter evidence do not establish production render quality or speed.",
+      "end_to_end_workflow": "Deliver reproducible preview/final renders with quality controls and measured cross-backend tradeoffs.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m26",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.rendering.passes_aovs",
+          "BP522.rendering.adaptive_sampling",
+          "BP522.rendering.denoising",
+          "BP522.rendering.displacement_dicing",
+          "BP522.rendering.interactive_preview",
+          "BP522.rendering.backend_scaling",
+          "BP522.npr.freestyle_lines"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M27",
+      "title": "HDR color management and image interchange",
+      "status": "planned",
+      "dependencies": [
+        "M23"
+      ],
+      "owner_role": "Color science + imaging + IO",
+      "acceptance_criteria": [
+        "Implement tagged HDR/wide-gamut scene/display transforms and reviewed LUT/ICC/config subsets in Rust with named format/version coverage.",
+        "Support image channel/metadata preservation and approved native HDR/image codecs, keeping decode, working space, display view and output transform distinct.",
+        "Pass independent transform vectors, negative/HDR/out-of-gamut values, premultiplication edges, round-trip and invalid-profile cases.",
+        "Ensure render, compositor, paint, image UI and exports use equivalent declared color/alpha semantics with explicit unsupported transforms.",
+        "Produce a multi-display/HDR image workflow with measured accuracy, image-size scaling, cache invalidation and recovery."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Linear-sRGB/D65 matrices, Reinhard and basic image formats lack broad HDR/config/LUT/ICC support.",
+      "end_to_end_workflow": "Import tagged HDR imagery, grade/display it consistently and export channels with verified metadata.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m27",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.color.working_view",
+          "BP522.color.hdr_display",
+          "BP522.color.lut_icc",
+          "BP522.color.image_formats"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M28",
+      "title": "Rig construction, constraints and deformation depth",
+      "status": "planned",
+      "dependencies": [
+        "M18",
+        "M08"
+      ],
+      "owner_role": "Animation + numerics + editor",
+      "acceptance_criteria": [
+        "Provide editable hierarchical rigs, rest/bind transforms, weight tools and automatic binding with explicit skeleton/mesh/topology compatibility policies.",
+        "Implement reviewed constraint and multi-joint IK families, limits, poles and typed drivers with causal cycle/unreachable/singular diagnostics.",
+        "Add dual-quaternion or equivalent reviewed deformation variants, corrective morphs and facial-control workflows while retaining LBS behavior.",
+        "Validate numerical deformation under negative/nonuniform scale, shear, bind transforms, animated weights, unreachable constraints and topology changes using independent fixtures.",
+        "Construct a character rig through public operations, edit weights/poses, save/reload, animate and render/export with an explicit fidelity report."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "CopyPosition, TwoBoneIk, LBS and basic morphs omit broad rigs, bind/weight tools and deformation variants.",
+      "end_to_end_workflow": "Rig an independently modeled character with editable weights, constraints and corrective deformation.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m28",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.animation.rig_authoring",
+          "BP522.animation.constraints",
+          "BP522.animation.dual_quaternion"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M29",
+      "title": "Animation editing, blending and retargeting",
+      "status": "planned",
+      "dependencies": [
+        "M28",
+        "M19"
+      ],
+      "owner_role": "Animation + editor + interchange",
+      "acceptance_criteria": [
+        "Implement dope-sheet, curve/handle/tangent/extrapolation, pose and nonlinear action editing with exact rational timing and public operations.",
+        "Support layered/additive clip blending, reusable actions, time remapping and reviewed skeleton retargeting semantics.",
+        "Verify interpolation/blend oracles, tangent discontinuities, random/out-of-order evaluation, constraint ordering and shutter behavior.",
+        "An original character sequence is authored, blended, retargeted, scrubbed, saved/reloaded, rendered and exported through independent API and actual UI workflows.",
+        "Measure animation evaluation and interaction latency at declared rig/track/frame tiers; test cancellation, conflicting edits and undo/recovery."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Rational clips exist, but dope-sheet/graph/pose/NLA authoring, action reuse and retargeting are incomplete.",
+      "end_to_end_workflow": "Animate and retarget a character performance using editable graph and nonlinear action workflows.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m29",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.animation.curve_editors",
+          "BP522.animation.actions_nla",
+          "BP522.animation.drivers",
+          "BP522.animation.retargeting"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M30",
+      "title": "General UVs, painting and material-aware baking",
+      "status": "planned",
+      "dependencies": [
+        "M15",
+        "M18",
+        "M23",
+        "M27",
+        "M28"
+      ],
+      "owner_role": "UV + paint + imaging + devices",
+      "acceptance_criteria": [
+        "Implement general chart topology, distortion/texel-density-aware unwrap/packing, seam/pin/island editing, named sets and multiple UDIM tiles.",
+        "Paint full projected footprints across seams and materials with occlusion, brush masks/stencils/textures, layers/blending and image/vertex/color/weight targets.",
+        "Replace accidental retained-recipe/sample cliffs with an explicit scalable chunk/checkpoint/storage policy; long seam-crossing strokes must recover and undo as one gesture within negotiated resources.",
+        "Bake normal/AO/light/material channels using reviewed cage/ray, sampling, coordinate and color-role policies rather than center-sample surrogates.",
+        "Pass independent coverage/distortion/color/bake oracles, overlap/degeneracy diagnostics and pressure/tilt input tests on actual supported devices separately from normalized unit tests.",
+        "Complete a multi-material UDIM asset through edit, bake, save/reopen, render and export with measured brush/packing costs at increasing resolutions."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Constrained disk charts, rectangular atlases, center dabs and a 16-recipe discontinuity cap limit complete painting workflows.",
+      "end_to_end_workflow": "Texture and bake a seam-crossing multi-material asset using full-footprint layered paint and multiple tiles.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m30",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.uv_paint.uv_topology",
+          "BP522.uv_paint.pack_multitile",
+          "BP522.uv_paint.paint_brushes",
+          "BP522.uv_paint.vertex_weights",
+          "BP522.uv_paint.material_bake"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M31",
+      "title": "Production sculpt, remeshing and retopology",
+      "status": "planned",
+      "dependencies": [
+        "M16",
+        "M17",
+        "M18",
+        "M30"
+      ],
+      "owner_role": "Sculpt + topology + spatial queries",
+      "acceptance_criteria": [
+        "Add reviewed sculpt brush families, masks/face sets, symmetry and local updates with explicit surface/volume and pressure semantics.",
+        "Implement reusable multiresolution displacement and level transitions with measured silhouette/detail reconstruction error.",
+        "Provide adaptive dynamic topology and voxel/isotropic remeshing with reviewed numerical, attribute and correspondence-loss contracts.",
+        "Support continuous surface picking, retopology edge/face creation, snapping and shrinkwrap with editable topology and projected attributes.",
+        "Complete an organic asset sculpt-to-remesh-to-retopology-to-UV-to-bake workflow with independent geometry/detail tests and stable unrelated state.",
+        "Measure local work, memory and p95 gesture latency at increasing declared sizes; long high-resolution gestures must cancel, recover and undo without replaying invalid input."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Triangle-centroid refinement, selected split/lossy clustering and static nearest-point snapping remain small bounded profiles.",
+      "end_to_end_workflow": "Create a detailed organic asset and a textured retopologized production mesh through one recoverable workflow.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m31",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.sculpt.brush_strokes",
+          "BP522.sculpt.voxel_remesh",
+          "BP522.sculpt.dyntopo",
+          "BP522.sculpt.multires",
+          "BP522.sculpt.retopo_latency"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M32",
+      "title": "Rotational rigid bodies, collision and joints",
+      "status": "planned",
+      "dependencies": [
+        "M16",
+        "M11"
+      ],
+      "owner_role": "Physics + collision + numerical review",
+      "acceptance_criteria": [
+        "Publish and implement a versioned rotational rigid-body model with inertia, convex/mesh colliders, broad/narrow phase and continuous-collision policy.",
+        "Add friction/restitution contact stacks and reviewed joint/motor families with units, stabilization and solver-order contracts.",
+        "Pass analytic free motion/impact, momentum and declared dissipation, stack/contact penetration and timestep/refinement tests on independently authored scenes.",
+        "Handle animated colliders, thin/fast bodies, degenerate shapes, quota failures and cancellation without corrupting caches or authored revisions.",
+        "Author, simulate, branch, seek/resume/reload and render a mechanically constrained scene with distinct preview/final profiles and measured scale tiers."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Existing rigid bodies are frictionless spheres/floor and do not establish general contact dynamics.",
+      "end_to_end_workflow": "Simulate and render a jointed mechanical scene with frictional contact and animated colliders.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m32",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.simulation.rotational_contacts",
+          "BP522.simulation.joint_families"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M33",
+      "title": "Cloth and soft-body collision robustness",
+      "status": "planned",
+      "dependencies": [
+        "M16",
+        "M11",
+        "M32"
+      ],
+      "owner_role": "Deformable physics + collision + animation",
+      "acceptance_criteria": [
+        "Publish reviewed stretch, bend, volume and damping/material models with units and timestep/iteration semantics before implementation.",
+        "Implement deforming-mesh collision and cloth self-collision, including vertex-face/edge-edge contacts, thickness and friction policies.",
+        "Pass independent hanging/folding/impact fixtures, resolution/time refinement and declared energy/dissipation bounds; self-contact regressions bound residual penetration relative to configured thickness.",
+        "Test fast motion, folded initial states, pinned/animated boundaries, tangled contacts, invalid topology and solver failure with explicit diagnostics and no silent explosion acceptance.",
+        "Create a clothed/deformable animated shot through authoring, simulation, interruption/recovery, random seek, save/reopen and rendering at increasing mesh sizes."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Small XPBD membranes/tetrahedra lack cloth self-collision and robust general deforming collider handling.",
+      "end_to_end_workflow": "Drape and animate a self-colliding garment against a moving character with recoverable simulation state.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m33",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.simulation.cloth_soft_collision"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M34",
+      "title": "Particle, groom and surface-effect dynamics",
+      "status": "planned",
+      "dependencies": [
+        "M20",
+        "M22",
+        "M32"
+      ],
+      "owner_role": "Particles + groom + simulation nodes",
+      "acceptance_criteria": [
+        "Implement timed emitters, birth/death/lifecycle, force fields and collision with deterministic seeding and instance/source semantics.",
+        "Provide editable groom dynamics and strand/mesh/self-collision profiles with constraint, friction and parameter-invalidating cache rules.",
+        "Add a typed surface-effect/Dynamic Paint workflow connecting moving emitters/colliders to persistent paint or geometry fields.",
+        "Declare each supported coupling and its synchronization/energy-exchange policy; unsupported multiphysics combinations must diagnose rather than silently decouple.",
+        "Pass limiting/conservation/dissipation and seeded-repeatability tests, animated-collider and hostile budget/recovery tests, plus authored/rendered particle, groom and surface-effect scenes."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Fixed inertial particles and simple strands lack general emitters, lifecycle, groom collision and Dynamic Paint workflows.",
+      "end_to_end_workflow": "Animate a groom and emitted particles, drive a retained surface effect, then scrub/recover/render the shot.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m34",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.simulation.particle_lifecycle",
+          "BP522.simulation.groom_dynamics",
+          "BP522.simulation.dynamic_paint"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M35",
+      "title": "Pressure-projected smoke and free-surface liquids",
+      "status": "planned",
+      "dependencies": [
+        "M20",
+        "M32"
+      ],
+      "owner_role": "Fluid numerics + sparse storage + meshing",
+      "acceptance_criteria": [
+        "Publish separate native-Rust numerical contracts for incompressible pressure-projected smoke/fire and free-surface liquid transport with obstacle boundaries.",
+        "Implement advection, pressure, buoyancy/combustion and sparse boundary handling for smoke/fire, plus liquid free surfaces, moving obstacles and verified render meshing.",
+        "Track turbulence, surface tension and multiphase/coupled extensions as named subprofiles with separate equations, units and evidence; do not imply universal multiphysics.",
+        "Pass divergence/volume/mass and declared energy/dissipation bounds, analytic limiting cases, spatial/time convergence and independent obstacle/free-surface scenes.",
+        "Verify sparse-resource behavior, boundary conditions, hostile parameters, branch/cache invalidation, cancellation/resume and random seeking across authored-to-rendered workflows."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Prescribed-flow sparse smoke and weakly compressible SPH/floor meshing do not establish general fluid behavior.",
+      "end_to_end_workflow": "Produce obstacle-driven smoke/fire and liquid shots from native simulation through checkpointed renderable fields/meshes.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m35",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.simulation.pressure_smoke",
+          "BP522.simulation.free_surface",
+          "BP522.simulation.cache_coupling"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M36",
+      "title": "Compositing graphs and temporal shot finishing",
+      "status": "planned",
+      "dependencies": [
+        "M23",
+        "M26",
+        "M27"
+      ],
+      "owner_role": "Compositing + imaging + scheduling",
+      "acceptance_criteria": [
+        "Expand typed masks/rotoscoping/keying, affine transforms/filtering, lens/distortion/effects and color-math/grade node families with reusable groups.",
+        "Consume render layers/AOVs/mattes and preserve HDR/color/alpha/channel metadata through exported results.",
+        "Add named temporal dependency and optical-flow-style processing profiles with cache invalidation, frame-neighbor and failure semantics.",
+        "Verify independent filter/edge/key/alpha oracles, ROI-versus-full-frame agreement, temporal changes, invalid graphs and cancellation/recovery.",
+        "Complete render-passes-plus-footage to keyed/layered/graded shot through an editable graph UI/API workflow and measure tile/global/GPU scheduling separately."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Current source/mask/grade/key/over/add/translation/box-blur/global-normalize graph is too small for broad shot finishing.",
+      "end_to_end_workflow": "Finish a keyed composited shot from footage and native render passes using reusable editable groups.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m36",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.compositing.node_breadth",
+          "BP522.compositing.temporal_passes",
+          "BP522.compositing.gpu_editor"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M37",
+      "title": "Editable mixed 2D and 3D drawing animation",
+      "status": "planned",
+      "dependencies": [
+        "M20",
+        "M27",
+        "M29"
+      ],
+      "owner_role": "Drawing + animation + editor",
+      "acceptance_criteria": [
+        "Provide stroke/point selection and editing, brush/material/fill rules, layer masks and surface attachment with stable stroke identity.",
+        "Implement keyframed/multiframe drawing animation, interpolation, onion skins and reviewed drawing modifier/effect stacks.",
+        "Preserve camera/depth/occlusion and screen/world/surface coordinate semantics in mixed 2D/3D scenes.",
+        "Pass independent curve/fill/alpha/occlusion/timing tests, identity/correspondence tests and interrupted gesture/undo/save-reopen scenarios.",
+        "Author, edit, animate, render and export an original mixed 2D/3D scene through a full drawing timeline and public operations with measured resource tiers."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Retained timed strokes/fills and four onion times lack full point/brush/timeline/modifier authoring.",
+      "end_to_end_workflow": "Create an editable animated drawing integrated with an animated 3D scene.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m37",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.npr.drawing_render_integration",
+          "BP522.compositing.drawing_authoring"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M38",
+      "title": "Compressed audiovisual media and editorial workflows",
+      "status": "planned",
+      "dependencies": [
+        "M27",
+        "M29",
+        "M36",
+        "M37"
+      ],
+      "owner_role": "Media codecs + audio + timeline",
+      "acceptance_criteria": [
+        "Publish a reviewed native-Rust codec/container feasibility, licensing and version matrix; implement selected compressed video and audio decode/encode profiles without FFmpeg or OS codec fallback.",
+        "Support accurate seek, variable-frame-rate/timebase mapping, proxy/relink and streaming playback/scrubbing with explicit decode/reorder/error policies.",
+        "Provide editable tracks, transitions/keyframes, waveform/scopes, channel mixing/fades/effects and editable scene/compositor/drawing sources.",
+        "Import an independently authored compressed clip and audio, cut/retime/mix, save/reopen and export a compressed result that an independent decoder validates.",
+        "Measure frame/sample mapping, synchronization drift, playback latency and memory/storage on declared durations/resolutions; test corrupt/truncated media and interrupted decode/export recovery."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "PPM/PFM and PCM16 WAV sequences are not compressed video/container, streaming playback or long-form editing support.",
+      "end_to_end_workflow": "Edit and deliver a synchronized compressed film from footage, audio and native scene sources.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m38",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.compositing.sequencer_groups",
+          "BP522.media_tracking.codecs",
+          "BP522.media_tracking.timestamps_audio",
+          "BP522.media_tracking.proxies_streaming",
+          "BP522.media_tracking.multitrack_edit"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M39",
+      "title": "Robust tracking, calibration and reconstruction",
+      "status": "planned",
+      "dependencies": [
+        "M20",
+        "M29",
+        "M36",
+        "M38"
+      ],
+      "owner_role": "Computer vision + numerics + compositing",
+      "acceptance_criteria": [
+        "Implement robust multiscale/subpixel tracking with scale/rotation support, manual corrections, occlusion handling and reacquisition diagnostics.",
+        "Add lens calibration/distortion and named camera/object/planar/tripod solve profiles, unknown-point reconstruction and joint bundle adjustment with outlier policies.",
+        "Provide scene scale/origin alignment and compositor integration; rolling-shutter behavior stays explicitly unsupported until its separately tested profile exists.",
+        "Validate feature, reprojection, pose and reconstruction errors against synthetic ground truth and independently authored real clips, including poor parallax, repeated patterns and textureless failure cases.",
+        "Complete footage-to-tracks-to-solve-to-inserted-3D-to-composite workflow, preserving editable observations and cache/recovery semantics with measured optimization costs."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Integer 5x5 SSD and nearby calibrated known-3D-control poses are not general tracking, SfM or bundle adjustment.",
+      "end_to_end_workflow": "Track a moving shot, reconstruct unknown points and integrate a 3D insertion into the finished footage.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m39",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.media_tracking.lens_calibration",
+          "BP522.media_tracking.robust_tracks",
+          "BP522.media_tracking.sfm_bundle",
+          "BP522.media_tracking.tracked_shot"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M40",
+      "title": "Complete shared editor workflows and device qualification",
+      "status": "planned",
+      "dependencies": [
+        "M09",
+        "M15",
+        "M19",
+        "M21",
+        "M23",
+        "M29",
+        "M30",
+        "M31",
+        "M36",
+        "M37",
+        "M38",
+        "M39",
+        "M22",
+        "M32",
+        "M33",
+        "M34",
+        "M35"
+      ],
+      "owner_role": "Editor + accessibility + platforms",
+      "acceptance_criteria": [
+        "Deliver coherent object/outliner/asset, transform/mesh/UV/paint/sculpt/rig/animation and shader/geometry/compositor/drawing/media/tracking workspaces including nested graphs and curve handles.",
+        "Support contextual selection, gizmos/snapping, searchable commands, asset browser/presets, full undo/redo and clear unsupported/conflict feedback through public operations only.",
+        "Provide simulation authoring, forces/emitters/colliders, solver settings, cache/bake/seek/recovery controls and stateful-node tools/gizmos in the shared editor; complete artist workflows must not depend on hidden API-only physics controls.",
+        "Independent task scripts complete representative scenes without hidden API intervention, and equivalent gestures/API requests yield equivalent accepted changes.",
+        "Exercise modal/IME/focus/keyboard/pointer/tablet/screen-reader/HiDPI behavior on actual declared native platforms and real browser DOM/Worker/WebGPU/storage/navigation.",
+        "Measure p95/p99 interaction, brush, graph and scrub latency at fixed workload tiers, including cold paths, long gestures, cancellation and recovery; retained-state cost must be visible.",
+        "Record physical/browser/OS cases as passed, failed, blocked or not-run independently; synthetic accessibility trees and software GPUs do not satisfy actual device/runtime gates."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Native/window and shared browser implementations exist, but many editing workflows and actual device/browser qualification remain incomplete.",
+      "end_to_end_workflow": "Complete unfamiliar-user hard-surface, character and audiovisual tasks entirely in the shared editor.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m40",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.editor_reliability.editor_workflows",
+          "BP522.editor_reliability.accessibility_input",
+          "BP522.editor_reliability.browser_native"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M41",
+      "title": "Authored interchange and native format breadth",
+      "status": "planned",
+      "dependencies": [
+        "M19",
+        "M20",
+        "M23",
+        "M29",
+        "M27",
+        "M38"
+      ],
+      "owner_role": "Interchange + security + provenance",
+      "acceptance_criteria": [
+        "Implement authored glTF animation/skin/morph and reviewed extension import/export in addition to evaluated mesh export, with per-feature round-trip evidence.",
+        "Stage native-Rust mesh/curve/point/volume/image/audio/video adapters, including individual PLY/STL/SVG, OpenVDB-style sparse-volume, USD, Alembic, MaterialX and FBX version/semantic profiles with feasibility/licensing decisions explicit.",
+        "For every required format track import, editable authoring, evaluation/render, evaluated export, authored round-trip and opaque preservation separately; unresolved adapters remain open requirements.",
+        "Use independently created external fixtures, external validators where available and structural/numeric/render comparisons; preserve or report exact material, timing, topology and attribute losses.",
+        "Reject hostile paths/dependencies, invalid sizes/versions and executable metadata; verify missing-asset relink, interruption, migration and source-preserving recovery."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "OBJ/glTF subsets and evaluated GLB exports omit broad authored animation/skin/morph and other interchange families.",
+      "end_to_end_workflow": "Exchange a textured animated asset and multi-domain shot with independent external tools using documented native adapters.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m41",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.interchange.format_inventory",
+          "BP522.interchange.authored_animation",
+          "BP522.interchange.complex_assets"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M42",
+      "title": "Broader native Blender file semantics and edited export",
+      "status": "planned",
+      "dependencies": [
+        "M17",
+        "M21",
+        "M23",
+        "M28",
+        "M29",
+        "M41"
+      ],
+      "owner_role": "Native formats + geometry/shading/animation integration",
+      "acceptance_criteria": [
+        "Publish a pinned .blend version/feature corpus and implement independently parsed data-block/link/library semantics for broader selected versions and compressed input.",
+        "Evaluate supported materials/nodes, modifiers, rigs, animation and relevant scene data natively, recording unsupported simulation/add-on behavior rather than importing an inert placeholder as support.",
+        "Implement a separate edited authored-export profile with correct data-block references and explicit losses; original-byte extraction must retain its distinct name.",
+        "Verify authored/evaluated/rendered round trips against independently produced external fixtures and reference outputs, including linked libraries, missing dependencies and version migration.",
+        "Enforce bounded untrusted parsing and no embedded Python/add-on execution; arbitrary historic files and third-party add-ons remain outside any unqualified compatibility claim."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Only uncompressed Blender2.93 static small scenes are evaluated; source-byte extraction is not edited .blend export.",
+      "end_to_end_workflow": "Open, edit, animate/render and export supported nontrivial .blend scenes with explicit compatibility reports.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m42",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.interchange.blend_version_semantics",
+          "BP522.interchange.blend_edited_export"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M43",
+      "title": "Discoverable API, SDKs and isolated extensions",
+      "status": "planned",
+      "dependencies": [
+        "M13",
+        "M21",
+        "M23"
+      ],
+      "owner_role": "API + sandbox security + developer experience",
+      "acceptance_criteria": [
+        "Expose schemas, capability/version negotiation, bulk/streaming jobs, inspectable costs and cancellation across every implemented domain.",
+        "Provide maintained independent SDK/client examples and migration tools that author complete workflows without private editor APIs.",
+        "Implement typed extension registration, permissions, compatibility and an independently reviewed isolated runtime with explicit fuel/memory/data capabilities.",
+        "Pass malicious extension escape/resource tests, malformed inputs, denied-capability attempts and upgrade/downgrade compatibility corpora.",
+        "Verify retries, disconnects, stale conflicts, crash/recovery and cancellation preserve transaction guarantees; no Blender bpy/add-on runtime compatibility is implied."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Transactional CLI/ABI is strong, but domain discovery, bulk/streaming clients and a real isolated extension runtime are incomplete.",
+      "end_to_end_workflow": "Use independent clients and a constrained extension to author and inspect a full creative workflow safely.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m43",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.extensions.api_sdks",
+          "BP522.extensions.isolated_runtime",
+          "BP522.extensions.migration_tools",
+          "BP522.extensions.bpy_compatibility"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M44",
+      "title": "Authenticated collaboration and shared asset services",
+      "status": "planned",
+      "dependencies": [
+        "M19",
+        "M43"
+      ],
+      "owner_role": "Security + collaboration + storage",
+      "acceptance_criteria": [
+        "Design and implement authenticated identities, grants/revocation, project/asset ownership and durable shared-service boundaries with explicit threat and deployment models.",
+        "Support reviewed multi-client branch/merge/conflict workflows and immutable asset sharing without silently overwriting topology or authority changes.",
+        "Pass cross-tenant/authentication/revocation, malicious-client, reconnect/replay and concurrent-update tests with external security review.",
+        "Verify standalone native and browser-local work remains usable without any required remote service, and local-to-shared migration preserves provenance.",
+        "Demonstrate a recoverable multi-client author/review/merge workflow in an explicitly authorized test deployment; production deployment remains a separate user/release approval."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Trusted local scoped sessions and conservative merges are not an authenticated deployed collaboration service.",
+      "end_to_end_workflow": "Two authorized clients collaborate on branches and shared assets with visible conflicts and revocation.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m44",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.extensions.authenticated_collaboration"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M45",
+      "title": "Production asset pipeline, scale and operability",
+      "status": "planned",
+      "dependencies": [
+        "M19",
+        "M26",
+        "M29",
+        "M31",
+        "M35",
+        "M38",
+        "M41",
+        "M43"
+      ],
+      "owner_role": "Integration + performance + operations",
+      "acceptance_criteria": [
+        "Provide reusable asset/preset catalogs, dependency relink/packaging, migration and batch/headless pipeline tools with explicit provenance.",
+        "Define realistic fixed small/medium/large workload tiers for scenes, geometry, textures, rigs, simulations and media before measuring or tuning.",
+        "Measure cold load/save, edit/pick/brush/graph/scrub, render quality/time, RAM/VRAM/storage and incremental/wide edit amplification with attributable receipts.",
+        "Test storage exhaustion, process crashes, corrupt roots, interrupted exports, device loss and long jobs, including recovery after resource pressure.",
+        "Publish operational diagnostics, reproducible command/UI workflows, support/version policies, migration/export procedures and subsystem ownership candidates without inventing accepted maintainers."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Small bounded fixtures and local resource receipts do not establish large-scene, long-form or operational readiness.",
+      "end_to_end_workflow": "Run and recover a multi-domain production-sized asset/shot pipeline with inspectable resource and provenance reports.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m45",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.scene_assets.catalog_packaging",
+          "BP522.scene_assets.pipeline_migration",
+          "BP522.editor_reliability.scale_latency",
+          "BP522.editor_reliability.recovery"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
+    },
+    {
+      "id": "M46",
+      "title": "Expanded suite qualification and measured comparison",
+      "status": "planned",
+      "dependencies": [
+        "M09",
+        "M10",
+        "M12",
+        "M14",
+        "M15",
+        "M16",
+        "M17",
+        "M18",
+        "M19",
+        "M20",
+        "M21",
+        "M22",
+        "M23",
+        "M24",
+        "M25",
+        "M26",
+        "M27",
+        "M28",
+        "M29",
+        "M30",
+        "M31",
+        "M32",
+        "M33",
+        "M34",
+        "M35",
+        "M36",
+        "M37",
+        "M38",
+        "M39",
+        "M40",
+        "M41",
+        "M42",
+        "M43",
+        "M44",
+        "M45"
+      ],
+      "owner_role": "Release + all subsystem maintainers",
+      "acceptance_criteria": [
+        "Pass end-to-end hard-surface product, textured sculpted asset, animated character, groom/volume/physics shot, mixed2D/3D scene, tracked composite and synchronized edited-film workflows.",
+        "Complete the frozen original M09/M10/M12/M14 runtime/dependency/ownership gates and every new milestone criterion; blockers and unrun environments remain visible until satisfied.",
+        "Publish a fixed reference inventory with per-capability native authoring/evaluation/final-render/preview/UI/import/export axes and per-platform/backend outcomes.",
+        "Compare matched Blender reference tasks only with exact versions, scenes, settings and hardware, reporting quality/fidelity, latency, throughput, memory and uncertainty; never infer feature-percent from milestone/test totals.",
+        "Pass cross-domain property/fuzz/regression/numerical tests, dependency/provenance and security reviews, resource/recovery qualification and compatibility/migration corpora against exact release source.",
+        "Named people accept maintainer/support and release ownership; sign-off, packaging and any production publication occur only after explicit approval and successful required gates."
+      ],
+      "required_evidence": [
+        "capability_inventory.json",
+        "conformance.json",
+        "workflow.json",
+        "negative_recovery.json",
+        "resource_profile.json",
+        "review.md"
+      ],
+      "exclusions": [
+        "No automatic inheritance of Blender compatibility from the reference taxonomy",
+        "No unsupported backend, device, format or scale reported as qualified"
+      ],
+      "calendar_estimate": null,
+      "estimate_policy": "Estimate after numerical/format prototypes, measured workloads and review capacity.",
+      "baseline_limit": "Historical bounded milestone completion does not imply Blender breadth, unrestricted workflows or production parity.",
+      "end_to_end_workflow": "Qualify a coherent independent creative suite through the complete frozen workflow and comparison corpus.",
+      "completion_scope": "Planned requirements; no implementation or qualification claimed by this entry.",
+      "evidence_root": "evidence/m46",
+      "release_qualification": "M46 also requires original open M09/M10/M12/M14 gates; engine progress does not waive them.",
+      "parity_acceptance_matrix": {
+        "path": "planning/blender_parity_matrix.json",
+        "inventory_version": "blender-5.2.2-audit-expansion.1",
+        "requirement_ids": [
+          "BP522.editor_reliability.qualification_inventory"
+        ],
+        "status": "additional_open_requirements; historical milestone status and completion scope unchanged"
+      }
     }
   ],
   "evidence_root": "evidence/m00-m04",
-  "completion_profile": "Experimental foundation v0; macOS Metal and browser WebGPU runtime; Linux/Windows compile only; see evidence README for exact limits.",
-  "implementation_review": "evidence/m00-m04/review.md"
+  "completion_profile": "Historical M00\u2013M08 named experimental profiles; M09\u2013M13 bounded candidate under integrated qualification. Current Linux CPU/software-Vulkan, Windows compile, Node-Wasm and live native observations have distinct evidence. Browser/physical-device/other-OS runtime and M14 accepted maintainer ownership remain open.",
+  "implementation_review": "evidence/m00-m04/review.md",
+  "expanded_requirements": {
+    "authorized_date": "2026-09-30",
+    "baseline_commit": "cb5bc2820a33cfa30c965b7198e5a304f309a6a3",
+    "historical_contract_baseline": "878fc1a95e0ec098b8d605ee2b086d13f0fdb9dc",
+    "reference": "Blender 5.2 LTS manual taxonomy, reviewed 2026-09-30; independent native semantics, no automatic compatibility claim",
+    "reference_url": "https://docs.blender.org/manual/en/5.2/index.html",
+    "status": "planned_breadth_and_depth_expansion",
+    "new_milestones": [
+      "M15",
+      "M16",
+      "M17",
+      "M18",
+      "M19",
+      "M20",
+      "M21",
+      "M22",
+      "M23",
+      "M24",
+      "M25",
+      "M26",
+      "M27",
+      "M28",
+      "M29",
+      "M30",
+      "M31",
+      "M32",
+      "M33",
+      "M34",
+      "M35",
+      "M36",
+      "M37",
+      "M38",
+      "M39",
+      "M40",
+      "M41",
+      "M42",
+      "M43",
+      "M44",
+      "M45",
+      "M46"
+    ],
+    "priority": [
+      "M15",
+      "M16",
+      "M18",
+      "M17",
+      "M19",
+      "M21",
+      "M23",
+      "M28",
+      "M30",
+      "M32",
+      "M33"
+    ],
+    "execution_policy": "Implement dependency-ready subgates incrementally; do not wait on unrelated blocked runtime gates for engine work. Whole-milestone and release completion still require every acceptance item and dependency.",
+    "historical_status_policy": "M00\u2013M14 titles, dependencies, acceptance criteria, exclusions, evidence and open gates remain intact. New planning entries are not implemented capability claims.",
+    "common_evidence_contract": [
+      "Every capability has a finite versioned input/semantic inventory and explicit unsupported cases before completion.",
+      "Record authoring, evaluation, final render, preview, human UI, import and export independently, with native OS/hardware GPU/browser evidence separate.",
+      "Use passed/failed/blocked/not-run states; schemas, test counts, screenshots and small demos do not substitute for full criteria.",
+      "Require public transactions, native Rust computational implementations, independent positive/negative/property/numerical fixtures and cancellation/stale/recovery tests.",
+      "Pin representative workload tiers and accuracy/latency/resource thresholds before final measurement; larger caps alone do not establish scalability.",
+      "Preserve old profile bytes, fixtures and receipts; version new behavior and document migration/losses.",
+      "Resolve codec/format/numerical feasibility through explicit reviewed decisions; unresolved mandatory capabilities remain open rather than silently excluded.",
+      "No calendar promise or unmeasured Blender/Cycles/Eevee superiority/parity percentage."
+    ],
+    "reference_inventory": [
+      {
+        "family": "Scene/asset assembly",
+        "milestones": [
+          "M19",
+          "M45"
+        ]
+      },
+      {
+        "family": "Geometry representations",
+        "milestones": [
+          "M20"
+        ]
+      },
+      {
+        "family": "General modeling/modifiers",
+        "milestones": [
+          "M15",
+          "M16",
+          "M17",
+          "M18"
+        ]
+      },
+      {
+        "family": "Procedural geometry",
+        "milestones": [
+          "M21",
+          "M22"
+        ]
+      },
+      {
+        "family": "Materials/lighting/rendering",
+        "milestones": [
+          "M23",
+          "M24",
+          "M25",
+          "M26"
+        ]
+      },
+      {
+        "family": "Color/imaging",
+        "milestones": [
+          "M27"
+        ]
+      },
+      {
+        "family": "Animation/rigging",
+        "milestones": [
+          "M28",
+          "M29"
+        ]
+      },
+      {
+        "family": "UV/texture/vertex/weight paint/baking",
+        "milestones": [
+          "M30"
+        ]
+      },
+      {
+        "family": "Sculpt/retopology",
+        "milestones": [
+          "M31"
+        ]
+      },
+      {
+        "family": "Simulation and surface effects",
+        "milestones": [
+          "M32",
+          "M33",
+          "M34",
+          "M35",
+          "M22"
+        ]
+      },
+      {
+        "family": "Compositing",
+        "milestones": [
+          "M36"
+        ]
+      },
+      {
+        "family": "Mixed2D/3D drawing",
+        "milestones": [
+          "M37"
+        ]
+      },
+      {
+        "family": "Compressed video/audio",
+        "milestones": [
+          "M38"
+        ]
+      },
+      {
+        "family": "Tracking/reconstruction",
+        "milestones": [
+          "M39"
+        ]
+      },
+      {
+        "family": "Editor/accessibility/platforms",
+        "milestones": [
+          "M40"
+        ]
+      },
+      {
+        "family": "Interchange/.blend",
+        "milestones": [
+          "M41",
+          "M42"
+        ]
+      },
+      {
+        "family": "API/extensions/collaboration/ecosystem",
+        "milestones": [
+          "M43",
+          "M44",
+          "M45"
+        ]
+      },
+      {
+        "family": "Production comparison and release",
+        "milestones": [
+          "M46"
+        ]
+      }
+    ]
+  },
+  "blender_parity_expansion": {
+    "authorized_date": "2026-10-07",
+    "goal": "Long-term 100% parity against an explicitly versioned and evolving Blender application capability inventory. This audit-derived list is the complete captured gap list, not an exhaustive enumeration of every Blender behavior.",
+    "matrix_path": "planning/blender_parity_matrix.json",
+    "human_readable_path": "docs/blender_parity_roadmap.md",
+    "audit_path": "docs/reference/blender-5.2.2-parity-audit.md",
+    "inventory_version": "blender-5.2.2-audit-expansion.1",
+    "requirement_count": 104,
+    "baseline": {
+      "blender_version": "5.2.2",
+      "blender_commit": "d13f752e3b9c4f8c261cda552b1021f8bcc0382c",
+      "render_qualified_commit": "7fff667deb967728c56d539b48361323502143aa",
+      "roadmap_edit_base_commit": "97974d9323e4e15411200e5191808b997644d962",
+      "audit_library_file_id": "libfile_8e16e126c014819182bdf0916303deeb",
+      "audit_path": "docs/reference/blender-5.2.2-parity-audit.md",
+      "audit_sha256": "43a66dd8e9c2e988f7c1d005f33fe37c2c58d6f6b75894694393de6aceb15a96"
+    },
+    "qualification_gate": "M46 requires all agreed applicable parity rows and original gates; no full parity claim follows from the existing bounded milestone statuses.",
+    "preservation": "M00\u2013M46 IDs, statuses, titles, dependencies, acceptance criteria, exclusions and evidence histories preserved; additions live in the maintained companion matrix.",
+    "implementation_progress": {
+      "version": "m19-post-audit-progress.11",
+      "recorded": "2026-10-07",
+      "source_cutoff_commit": "722b7f80437e14014a74c957b5763ad1b16e496b",
+      "path": "planning/blender_parity_matrix.json",
+      "section": "implementation_progress",
+      "human_readable_path": "docs/m19_implementation_progress.md",
+      "milestones": [
+        {
+          "id": "M19",
+          "progress_status": "bounded_increments_implemented_full_milestone_open",
+          "increment_ids": [
+            "M19-A",
+            "M19-B",
+            "M19-C",
+            "M19-D",
+            "M19-CLI",
+            "M19-UI-A",
+            "M19-UI-C",
+            "M19-E",
+            "M19-UI-B",
+            "M19-UI-D",
+            "M19-UI-B2",
+            "M19-CLI-E",
+            "M19-UI-A2",
+            "M19-INTEGRATION-1",
+            "M19-UI-E",
+            "M19-APP-1",
+            "M19-UI-C2",
+            "M19-EXPORT-1",
+            "M19-CLI-INTEGRATION-1",
+            "M19-UI-A3",
+            "M19-SOURCE-1",
+            "M19-LOCAL-INSTANCES-1",
+            "M19-CAPTURED-LIBRARIES-1",
+            "M19-OWNER-PREVIEW-1",
+            "M19-NATIVE-LIBRARIES-1",
+            "M19-MEMBER-ART-1"
+          ],
+          "historical_status_unchanged": "planned",
+          "summary": "Twenty-six bounded increments include explicit native member transform/material replacement authoring and separately acknowledged ClearAll Relink losses. Transform replacements pin full values; material maps reference destination Material IDs resolved in the current table, and fresh copies clone values only at creation. Refresh remains preserve-only. Full M19 stays partial; selective correspondence and wider implementation/qualification gaps remain open, with no next implementation promise."
+        }
+      ],
+      "preservation": "47 historical milestone records and all 104 full-parity requirements/qualification axes remain unchanged; this additive record supplies current implementation detail only.",
+      "evidence_cutoff_commit": "722b7f80437e14014a74c957b5763ad1b16e496b"
+    },
+    "prerequisite_progress": {
+      "version": "m27-color-math-prerequisite-progress.1",
+      "recorded": "2026-10-07",
+      "path": "planning/blender_parity_matrix.json",
+      "section": "prerequisite_progress",
+      "human_readable_path": "docs/m27_color_math_progress.md",
+      "record_ids": [
+        "M27-COLOR-MATH-PREREQ-1"
+      ],
+      "source_commit": "3e3abcdc69e4ebd3b915e6a8204190356de24fba",
+      "meaning": "Additive fixed-size math prerequisite progress only. M27 remains planned and unqualified, with unfinished prerequisite M23; no dependency readiness, milestone completion or full-row qualification is inferred.",
+      "preservation": "Separate from the frozen M19 implementation_progress record at acceptance checkpoint 2caf3f954e919688e6a736e317258a55a1969cf7. No M19 increment, cutoff, history or acceptance-crosswalk change; original milestone records and full-row states are unchanged.",
+      "additional_records": [
+        {
+          "version": "m28-planar-chain-ik-prerequisite-progress.1",
+          "recorded": "2026-10-07",
+          "path": "planning/blender_parity_matrix.json",
+          "section": "prerequisite_progress.records",
+          "human_readable_path": "docs/m28_planar_chain_ik_progress.md",
+          "record_ids": [
+            "M28-PLANAR-CHAIN-IK-PREREQ-1"
+          ],
+          "source_commit": "57d6b02bee76a56f3a17ebace354cc43b8512dc8",
+          "meaning": "Additive geometry-free PlanarChainIkV1 direct pose and authored-Snapshot JSON reload prerequisite only. M28 remains planned and unqualified with unfinished M18; no dependency readiness, full-milestone completion or full-row qualification is inferred.",
+          "preservation": "The existing M27 prerequisite metadata and record are preserved. Frozen M19 acceptance checkpoint 2caf3f954e919688e6a736e317258a55a1969cf7, implementation progress, history, cutoffs and crosswalk are unchanged. All 47 historical milestone records and 104 full-parity row states remain unchanged."
+        }
+      ]
+    }
+  }
 }
